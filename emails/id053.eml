@@ -1,0 +1,572 @@
+Received: from BN7PR08MB4113.namprd08.prod.outlook.com (2603:10b6:a03:180::42)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR13CA0029.NAMPRD13.PROD.OUTLOOK.COM; Fri, 30 Aug 2019 04:04:03 +0000
+Received: from BN6PR08CA0055.namprd08.prod.outlook.com (2603:10b6:404:b9::17)
+ by BN7PR08MB4113.namprd08.prod.outlook.com (2603:10b6:406:92::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2199.21; Fri, 30 Aug
+ 2019 04:04:01 +0000
+Received: from BN3NAM04FT034.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::201) by BN6PR08CA0055.outlook.office365.com
+ (2603:10b6:404:b9::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2220.18 via Frontend
+ Transport; Fri, 30 Aug 2019 04:04:01 +0000
+Authentication-Results: spf=pass (sender IP is 198.71.246.125)
+ smtp.mailfrom=bounces.em.secureserver.net; calpoly.edu; dkim=pass (signature
+ was verified) header.d=em.secureserver.net;calpoly.edu; dmarc=fail
+ action=none header.from=gmail.com;compauth=pass reason=118
+Received-SPF: Pass (protection.outlook.com: domain of
+ bounces.em.secureserver.net designates 198.71.246.125 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.71.246.125;
+ helo=m494.em.secureserver.net;
+Received: from m494.em.secureserver.net (198.71.246.125) by
+ BN3NAM04FT034.mail.protection.outlook.com (10.152.92.65) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2220.16 via Frontend Transport; Fri, 30 Aug 2019 04:04:01 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=aug05em; d=em.secureserver.net;
+ h=Date:From:To:Message-ID:Subject:Mime-Version:Content-Type:
+ Content-Transfer-Encoding:List-Unsubscribe;
+ bh=dJtLtY/ecEs1bzKVHLCW2bX41fc=;
+ b=lOhR8Hq9EXRgIYlqQRp2okxxfQrheuQu5I/+fZimHPcRYpt14XTLFpnBzkZTt38s92KU50LbyB9s
+   Wd44fpTU7oIGYxM8BY5hi7JIiY2YOY/TTc8AHETQ6QZyQ8ohY1GEXeMZDH+glOz0ZfVhGfUZ9ksW
+   tQfp7Ii1XQHc7kdCyEw=
+Received: by m494.em.secureserver.net id hd2g322fcrod for <foaad@calpoly.edu>; Thu, 29 Aug 2019 21:04:01 -0700 (envelope-from <sp_257469.68792.1.91ae119469db5324855ffb93bfbedc9b@bounces.em.secureserver.net>)
+Return-Path:
+ sp_257469.68792.1.91ae119469db5324855ffb93bfbedc9b@bounces.em.secureserver.net
+Date: Thu, 29 Aug 2019 21:04:01 -0700
+From: ICTCS 2019 -  Udaipur Conference <conference.ictcs@gmail.com>
+To: foaad@calpoly.edu
+Message-ID: <N2a.257469.38613.68792.1567137841.0036447.14YJ@a2plmmsworker08.prod.iad2.gdg.mail>
+Subject: CFP : Open for Participation and Submission Now - ICTCS - 2019 (
+ December 13 - 14, Udaipur, INDIA )
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d68a030efde7_1353d786e5c9916293b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Personalized-By: Temple
+X-Mimiaid: 68792-153494107-12138531873-d30e37ff21f465f5b4aecc348e7e8b2c4e4120af
+X-Member-ID: 12138531873
+X-Feedback-ID: 153494107:madmimi
+Precedence: bulk
+X-Sable-ID: sp_257469.68792.1.91ae119469db5324855ffb93bfbedc9b
+X-Report-Abuse: You can also report abuse here:
+ https://sable.madmimi.com/abuse/new?id=257469.68792.1.91ae119469db5324855ffb93bfbedc9b
+X-Virtual-MTA: m494
+List-Unsubscribe: <mailto:sp_257469.68792.1.91ae119469db5324855ffb93bfbedc9b@unsubscribes.em.secureserver.net?subject=Unsubscribe
+ 257469.68792.1.91ae119469db5324855ffb93bfbedc9b>
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Aug 2019 04:04:01.6460
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 48d059a2-4e26-4b3e-e171-08d72cff175c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132116114416470156;(2419bed0-025d-4712-5867-08d5232011a9);()
+X-Forefront-Antispam-Report:
+ CIP:198.71.246.125;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(979002)(4636009)(2980300002)(199004)(189003)(6916009)(53366004)(2171002)(53376002)(4006050)(15188155005)(18926415008)(9686003)(16003)(126002)(486006)(733005)(33964004)(71190400001)(26005)(476003)(106002)(236005)(55176004)(2361001)(16799955002)(75640400001)(58800400005)(2351001)(82202003)(22186003)(6986002)(42186006)(76236002)(42882007)(76482006)(356004)(5660300002)(230700001)(54896002)(15974865002)(7596002)(1096003)(576704004)(966005)(7636002)(146002)(8676002)(23676004)(73392003)(336012)(6306002)(246002)(606006)(102196002)(45286004)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4113;H:m494.em.secureserver.net;FPR:;SPF:Pass;LANG:en;PTR:m494.em.secureserver.net;A:0;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT034.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 48d059a2-4e26-4b3e-e171-08d72cff175c
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(8001031)(1405096)(71702078);SRVR:BN7PR08MB4113;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4113:
+X-MS-Exchange-PUrlCount: 24
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Aug 2019 04:04:01.6189
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 48d059a2-4e26-4b3e-e171-08d72cff175c
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4113
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7315486
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2199.015
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?VkxaWGhPUTlHbzJxeldSR1RKL2REVW54aXY5QUorU3JXL3pwa1dnOE5ZdGxm?=
+ =?utf-8?B?MU9hLzNuUXJhdGZVdm9IaEJ6WVFua3kxRUppWjF4WmMrVllKbmkyYUpGbGg0?=
+ =?utf-8?B?UkYvRWRLMDRCNjFoZEdrNVRNd21haHNiamtwb0tTMjc0UTIwUk9wL0ZyaHor?=
+ =?utf-8?B?K1pPeEpSM3FiZmZqVFhSWldYQVlNVkIyOVJsY1J3ZWVEdTJuQWwzQlNiZEg5?=
+ =?utf-8?B?RUlmQ0dPc0dDT1NvNVlKUWhuNkhVNnp1bzRjbVFBVDM3TjhxYTlCd3pxaGNU?=
+ =?utf-8?B?TXVWWmxvLy9xcERmVTRSbEVFK2RaaXJxYkpKQmluN0lTaC9iOGJaNVkwSjAw?=
+ =?utf-8?B?LzJRa0kvdTc0RjVxbDhPM1V2SjdWcVpmVzU2Y0UyRUJ3YzFBblR2T3IzUEFu?=
+ =?utf-8?B?aC9mT0JrUDdYd1pxWjZJVGtlbEM4SUR2cFY0V0svU0lEd2dXdVBNN1dXR2xq?=
+ =?utf-8?B?YlpaWnZFSFdUSGNTZy9jYzQ0Qlg2NFE2VE1aQndMUVJKN1Z4RXdsNlFrVmlm?=
+ =?utf-8?B?K0Y0WmZLNm8zSHlzUldvVWVmYXdUWUJaSU1jdTcreVFzeVBENEtKdEhMbFNL?=
+ =?utf-8?B?WVBIYlNHWDlVR2pPRkRJLy90bUVZaHljb2pINmJsWVhCQWdqTVJDaktlUUN0?=
+ =?utf-8?B?UTBZYUN1eUMvT3JNazZDRnBMdGdnL3RJRkFtazBEQW80WGJwWkJTMmN3djBk?=
+ =?utf-8?B?NjhMWjNsZ2I5eFpXcnBGY3dGSWU0TkJMOGpQTmxvclFCakVlZ2JvTGx3RXVm?=
+ =?utf-8?B?cnZqZG1vczRTWVRqY1czTGVSeldFbWJSUGNYSFYyalovYmVGaXlnb1lCaU5X?=
+ =?utf-8?B?NXJhU0pQRlk1UEhYaGFxelVYLzFnTGR5cC9NeGJLRFlVY2RBNFpLZjFTTHBT?=
+ =?utf-8?B?NWdycVpJaEpzcFZWYzJBV2gwaURPRXFVRXAzV2pyeUFDUWowb3dOTE1xUjR3?=
+ =?utf-8?B?OVZuSWMyYmtiUTRkckxFT012enlZV3pNbjFDNGUvcGdRVk96MjEyN2VjQmNz?=
+ =?utf-8?B?OGkzc1B5SnAvbU9zRkh6UUNzYS9iR05hY3ZFL1JseGFSTmZReVZqSWVFNTFn?=
+ =?utf-8?B?blBEaFRzY2w4UEJKNTBNNzhPdjAva3d0Rmc3SUZKRFJWaW00cyt6ZTNiSTNE?=
+ =?utf-8?B?WVVJZHl3NWpYS29id0dkOE1sd1Y1ZjFpajUwNnFhdW9rSTRrL25Lc3Q1Y3dl?=
+ =?utf-8?B?RlRPK1dOUDNVUDVMTmdOdFVUV2lqbmZ0ZEhQcFc2YmlzUS9zc0JUN3d1RE1o?=
+ =?utf-8?B?WEErSGFWOXZRU0prNGlSMEwvMEVUUTlybXFoSVB1OEdQZC9ScVNxT2VWa0Vh?=
+ =?utf-8?B?RGxpYmM3ZDZSMDR5OE14cW9La1dKOFJleEpDS2N3dmZsNXBwN0Vib3NLSDhE?=
+ =?utf-8?B?UEJqb3R2NUhDM0lZZmdTRjc0VGNMMkorQ3hLNnRHdHRrUG5JcFNkT2s0cGVS?=
+ =?utf-8?Q?pPCEYIlk?=
+MIME-Version: 1.0
+
+----==_mimepart_5d68a030efde7_1353d786e5c9916293b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+( https://sable.madmimi.com/c/257469?id=68792.283.1.f83f694c3e090e3085893eacdf5d64c5 )
+
+Fourth International Conference on Information and Communication Technology for Competitive Strategies (ICTCS-2019) will be held at The Institution of Engineers ( India ), ULC, Udaipur, Rajasthan, India during December 13th - 14th, 2019. ICTCS-2019 will target state-of-the-art as well as emerging topics pertaining to ICT and effective strategies for its implementation for Engineering and Managerial Applications. The objective of this International conference is to provide an opportunities for the Researchers, Academicians, Industry persons and students to interact and exchange ideas, experience and expertise in the current trend and strategies for Information and Communication Technologies. Besides this, participants will also be enlightened about vast avenues, current and emerging technological developments in the field of ICT in this era and its applications, will be thoroughly explored and discussed.
+
+ Please join us at ICTCS - 2019 in Udaipur, INDIA
+==========
+" Udaipur - City of Lakes "
+==========
+
+CALL FOR PAPERS ICTCS 2019
+==========
+
+Original contributions from researchers describing their original, unpublished, research contribution which is not currently under review by another conference or journal and addressing state-of-the-art research are invited to share their work in all areas of Information and Communication Technologies and its applications in field field for engineering and management but not limited to the conference tracks.
+
+The authors are requested to submit full papers : https://sable.madmimi.com/c/257469?id=68792.287.1.03b0ed3ae8f446f28f1073195a2b6804 ( https://sable.madmimi.com/c/257469?id=68792.284.1.42462a3046cf1b2ba42c7476edd4aac4 )
+
+Conference Dates : 13th - 14th, December 2019
+
+\*\*All Accepted and selected reviewed papers will be published as a part of the Conference Proceedings by CRC Press (Taylor and Francis Group).\*\*
+==========
+
+\*\*The Conference Proceedings as well as the papers will be send for indexing and inclusion in SCOPUS, Web of Science (WOS) and Google scholar.\*\*
+==========
+
+PAPER SUBMISSION
+==========
+
+Submissions of high quality papers in all areas of ICT and its applications.The submissions are handled only through the Easy Chair website at:
+
+https://sable.madmimi.com/c/257469?id=68792.285.1.3a87ae329780685c87b0e12efdc50c45 ( https://sable.madmimi.com/c/257469?id=68792.288.1.c3344332df915c2115fac2ecacd5b904 )
+==========
+
+Last date for paper submission
+==========
+30th September, 2019 || 11:59:59 IST
+----------
+
+For any further details please visit :
+==========
+
+www.ictcs.in ( https://sable.madmimi.com/c/257469?id=68792.286.1.63e8531b5f470d5c238387b7345d1a2d )
+
+==========
+For any further details please feel free to connect with 
+Program Secretary ICTCS 2019
+==========
+
+(E) : conference.ictcs@gmail.com ( mailto:conference.ictcs@gmail.com ) || (M) : +91-72010-90504 ( tel:+917201090504 )
+
+==========
+
+unsubscribe ( https://go.madmimi.com/opt_out?pact=68792-153494107-12138531873-d30e37ff21f465f5b4aecc348e7e8b2c4e4120af&amx=12138531873 )
+
+
+----==_mimepart_5d68a030efde7_1353d786e5c9916293b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+
+<meta http-equiv=3D"x-ua-compatible" content=3D"IE=3Dedge">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+
+<title>Fourth International Conference on Information and Communication Tec=
+hnology for Competitive Strategies (ICTCS-2019)</title>
+
+<style>@font-face { font-family: 'Lato'; font-style: normal; font-weight: 4=
+00; src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gs=
+tatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype'); }@font-fac=
+e { font-family: 'Lato'; font-style: normal; font-weight: 700; src: local('=
+Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S=
+6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype'); }@font-face { font-family: '=
+Lato'; font-style: normal; font-weight: 900; src: local('Lato Black'), loca=
+l('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh50XS=
+wiPHA.ttf) format('truetype'); }@font-face { font-family: 'Roboto'; font-st=
+yle: normal; font-weight: 400; src: local('Roboto'), local('Roboto-Regular'=
+), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) for=
+mat('truetype'); }@font-face { font-family: 'Roboto'; font-style: normal; f=
+ont-weight: 900; src: local('Roboto Black'), local('Roboto-Black'), url(htt=
+ps://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfBBc9.ttf) format('t=
+ruetype'); }@font-face { font-family: 'Rubik'; font-style: normal; font-wei=
+ght: 400; src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gs=
+tatic.com/s/rubik/v9/iJWKBXyIfDnIV7nBrXk.ttf) format('truetype'); }@font-fa=
+ce { font-family: 'Rubik'; font-style: normal; font-weight: 500; src: local=
+('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/ru=
+bik/v9/iJWHBXyIfDnIV7Eyjmmd8WU.ttf) format('truetype'); }@font-face { font-=
+family: 'Rubik'; font-style: normal; font-weight: 700; src: local('Rubik Bo=
+ld'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXy=
+IfDnIV7F6iGmd8WU.ttf) format('truetype'); }@font-face { font-family: 'Satis=
+fy'; font-style: normal; font-weight: 400; src: local('Satisfy Regular'), l=
+ocal('Satisfy-Regular'), url(https://fonts.gstatic.com/s/satisfy/v10/rP2Hp2=
+yn6lkG50LoCZOIGA.ttf) format('truetype'); }</style></head>
+<body bgcolor=3D"#f5f5f5" style=3D"background-color: #f5f5f5; padding-top: =
+0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; border-top-style: none; bor=
+der-right-style: none; border-bottom-style: none; border-left-style: none; =
+border-spacing: 0px; border-collapse: collapse; vertical-align: top;"><p st=
+yle=3D"mso-hide:all;font-size:0px;background-color:transparent;position:abs=
+olute;height:1px"><img src=3D"https://sable.madmimi.com/view?id=3D257469.68=
+792.1.91ae119469db5324855ffb93bfbedc9b" alt=3D"" border=3D"0" width=3D"0" h=
+eight=3D"0"></p>
+<div class=3D"respond" style=3D"width: 600px;margin:0 auto;">
+<table width=3D"100%" bgcolor=3D"ffffff" style=3D"border-spacing: 0px; bord=
+er-collapse: collapse; vertical-align: top; width: 100%; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-rig=
+ht: 0; padding-bottom: 0; padding-left: 0; border-top-style: none; border-r=
+ight-style: none; border-bottom-style: none; border-left-style: none;">
+	<tr style=3D"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; =
+border-top-style: none; border-right-style: none; border-bottom-style: none=
+; border-left-style: none; border-spacing: 0px; border-collapse: collapse; =
+vertical-align: top;">
+		<td align=3D"center" valign=3D"top" style=3D"border-spacing: 0px; border-=
+collapse: collapse; vertical-align: top; margin-top: 0; margin-right: 0; ma=
+rgin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-b=
+ottom: 0; padding-left: 0; border-top-style: none; border-right-style: none=
+; border-bottom-style: none; border-left-style: none;">
+		<div class=3D"header-section" style=3D"width: 600px;">
+			<a target=3D"_blank" href=3D"https://sable.madmimi.com/c/257469?id=3D687=
+92.283.1.f83f694c3e090e3085893eacdf5d64c5">
+			<img src=3D"http://cascade.madmimi.com/bulk_images/7529948/head.jpg" sty=
+le=3D"border-spacing: 0px; border-collapse: collapse; vertical-align: top; =
+height: auto; outline: none; text-decoration: none; width: 600px; margin-to=
+p: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; pa=
+dding-right: 0; padding-bottom: 0; padding-left: 0; border-top-style: none;=
+ border-right-style: none; border-bottom-style: none; border-left-style: no=
+ne; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; bor=
+der-left-width: 0;">
+			</a>
+		</div>
+		</td>
+	</tr>
+</table>
+<table width=3D"100%" bgcolor=3D"BFCFFF" style=3D"border-spacing: 0px; bord=
+er-collapse: collapse; vertical-align: top; width: 100%; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-rig=
+ht: 0; padding-bottom: 0; padding-left: 0; border-top-style: none; border-r=
+ight-style: none; border-bottom-style: none; border-left-style: none;">
+	<tr style=3D"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; =
+border-top-style: none; border-right-style: none; border-bottom-style: none=
+; border-left-style: none; border-spacing: 0px; border-collapse: collapse; =
+vertical-align: top;">
+		<td align=3D"center" valign=3D"top" style=3D"border-spacing: 0px; border-=
+collapse: collapse; vertical-align: top; margin-top: 0; margin-right: 0; ma=
+rgin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-b=
+ottom: 0; padding-left: 0; border-top-style: none; border-right-style: none=
+; border-bottom-style: none; border-left-style: none;">
+		<div style=3D"padding:10px 20px;text-align:justify;">
+		<p style=3D"font-family: 'Rubik', sans-serif; font-weight: 400; line-heig=
+ht: 1.5em; font-size: 14px; color: #494980; margin-top: 10px; margin-right:=
+ 0; margin-bottom: 10px; margin-left: 0; padding-top: 0; padding-right: 0; =
+padding-bottom: 0; padding-left: 0;">Fourth International Conference on Inf=
+ormation and Communication Technology for Competitive Strategies (ICTCS-201=
+9) will be held at The Institution of Engineers ( India ), ULC, Udaipur, Ra=
+jasthan, India during December 13<sup>th</sup> - 14<sup>th</sup>, 2019. ICT=
+CS-2019 will target state-of-the-art as well as emerging topics pertaining =
+to ICT and effective strategies for its implementation for Engineering and =
+Managerial Applications. The objective of this International conference is =
+to provide an opportunities for the Researchers, Academicians, Industry per=
+sons and students to interact and exchange ideas, experience and expertise =
+in the current trend and strategies for Information and Communication Techn=
+ologies. Besides this, participants will also be enlightened about vast ave=
+nues, current and emerging technological developments in the field of ICT i=
+n this era and its applications, will be thoroughly explored and discussed.=
+</p>
+		</div>
+
+		</td>
+	</tr>
+</table>
+<table width=3D"100%" bgcolor=3D"ffffff" style=3D"border-spacing: 0px; bord=
+er-collapse: collapse; vertical-align: top; width: 100%; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-rig=
+ht: 0; padding-bottom: 0; padding-left: 0; border-top-style: none; border-r=
+ight-style: none; border-bottom-style: none; border-left-style: none; backg=
+round-image: url('http://cascade.madmimi.com/bulk_images/7529952/patterns.p=
+ng'); background-repeat: repeat; background-color: #fff;">
+	<tr style=3D"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; =
+border-top-style: none; border-right-style: none; border-bottom-style: none=
+; border-left-style: none; border-spacing: 0px; border-collapse: collapse; =
+vertical-align: top;">
+		<td align=3D"center" valign=3D"top" style=3D"border-spacing: 0px; border-=
+collapse: collapse; vertical-align: top; margin-top: 0; margin-right: 0; ma=
+rgin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-b=
+ottom: 0; padding-left: 0; border-top-style: none; border-right-style: none=
+; border-bottom-style: none; border-left-style: none;">
+			<div style=3D"padding:20px 20px;text-align:center;">
+			<h1 style=3D"display: block; font-family: 'Rubik', sans-serif; font-size=
+: 17px; font-weight: 700; margin-top: 0; margin-right: 0; margin-bottom: 0;=
+ margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 20px; pa=
+dding-left: 0;">
+			Please join us at ICTCS - 2019 in Udaipur, INDIA</h1>
+			<h2 style=3D"display: block; font-family: 'Satisfy', cursive; font-size:=
+ 40px; color: #072056; margin-top: 0; margin-right: 0; margin-bottom: 0; ma=
+rgin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0;">&quot; Udaipur - City of Lakes &quot;</h2>
+			</div>
+
+		</td>
+	</tr>
+</table>
+<table width=3D"100%" bgcolor=3D"BFCFFF" style=3D"border-spacing: 0px; bord=
+er-collapse: collapse; vertical-align: top; width: 100%; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-rig=
+ht: 0; padding-bottom: 0; padding-left: 0; border-top-style: none; border-r=
+ight-style: none; border-bottom-style: none; border-left-style: none;">
+	<tr style=3D"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; =
+border-top-style: none; border-right-style: none; border-bottom-style: none=
+; border-left-style: none; border-spacing: 0px; border-collapse: collapse; =
+vertical-align: top;">
+		<td align=3D"center" valign=3D"top" style=3D"border-spacing: 0px; border-=
+collapse: collapse; vertical-align: top; margin-top: 0; margin-right: 0; ma=
+rgin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-b=
+ottom: 0; padding-left: 0; border-top-style: none; border-right-style: none=
+; border-bottom-style: none; border-left-style: none;">
+			<div style=3D"padding:30px 20px;text-align:left;">
+			<h2 align=3D"center" style=3D"display: block; text-transform: uppercase;=
+ color: #494980; font-family: 'Roboto', sans-serif; font-size: 25px; margin=
+-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0;=
+ padding-right: 0; padding-bottom: 0; padding-left: 0;">CALL FOR PAPERS ICT=
+CS 2019</h2>
+			<p style=3D"font-family: 'Rubik', sans-serif; font-weight: 400; line-hei=
+ght: 1.5em; color: #494980; text-align: justify; font-size: 14px; margin-to=
+p: 10px; margin-right: 0; margin-bottom: 10px; margin-left: 0; padding-top:=
+ 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" align=3D"justify=
+">Original contributions from researchers describing their original, unpubl=
+ished, research contribution which is not currently under review by another=
+ conference or journal and addressing state-of-the-art research are invited=
+ to share their work in all areas of Information and Communication Technolo=
+gies and its applications in field field for engineering and management but=
+ not limited to the conference tracks.</p>
+			<p style=3D"font-family: 'Rubik', sans-serif; font-weight: 400; line-hei=
+ght: 1.5em; color: #494980; text-align: left; font-size: 14px; margin-top: =
+10px; margin-right: 0; margin-bottom: 10px; margin-left: 0; padding-top: 0;=
+ padding-right: 0; padding-bottom: 0; padding-left: 0;" align=3D"left">The =
+authors are requested to submit full papers : <a target=3D"_blank" style=3D=
+"font-size:17px;color:#494980;font-weight: 900;" href=3D"https://sable.madm=
+imi.com/c/257469?id=3D68792.284.1.42462a3046cf1b2ba42c7476edd4aac4">https:/=
+/easychair.org/conferences/?conf=3Dictcs20191</a></p>
+
+			<p style=3D"font-size: 20px; color: #494980; font-weight: 900; font-fami=
+ly: 'Rubik', sans-serif; margin-top: 10px; margin-right: 0; margin-bottom: =
+10px; margin-left: 0; padding-top: 20px; padding-right: 0; padding-bottom: =
+0; padding-left: 0;">Conference Dates  : 13<sup>th</sup> - 14<sup>th</sup>,=
+ December 2019</p>
+			</div>
+
+		</td>
+	</tr>
+</table>
+<table width=3D"100%" bgcolor=3D"ffffff" style=3D"border-spacing: 0px; bord=
+er-collapse: collapse; vertical-align: top; width: 100%; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-rig=
+ht: 0; padding-bottom: 0; padding-left: 0; border-top-style: none; border-r=
+ight-style: none; border-bottom-style: none; border-left-style: none;">
+	<tr style=3D"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; =
+border-top-style: none; border-right-style: none; border-bottom-style: none=
+; border-left-style: none; border-spacing: 0px; border-collapse: collapse; =
+vertical-align: top;">
+		<td align=3D"center" valign=3D"top" style=3D"border-spacing: 0px; border-=
+collapse: collapse; vertical-align: top; margin-top: 0; margin-right: 0; ma=
+rgin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-b=
+ottom: 0; padding-left: 0; border-top-style: none; border-right-style: none=
+; border-bottom-style: none; border-left-style: none;">
+			<div style=3D"padding:30px 20px;text-align:left;">
+				<h2 style=3D"display: block; font-family: 'Lato', sans-serif; font-weig=
+ht: 700; line-height: 1.5em; font-size: 15px; text-align: center; margin-to=
+p: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; pa=
+dding-right: 0; padding-bottom: 10px; padding-left: 0;" align=3D"center"><b=
+ style=3D"color:#102d69;font-family: 'Roboto', sans-serif;">All Accepted an=
+d selected reviewed papers will be published as a part of the Conference Pr=
+oceedings by CRC Press (Taylor and Francis Group). </b></h2>
+				<p style=3D"text-align: center; margin-top: 10px; margin-right: 0; marg=
+in-bottom: 10px; margin-left: 0; padding-top: 0; padding-right: 0; padding-=
+bottom: 0; padding-left: 0;" align=3D"center"><img src=3D"http://cascade.ma=
+dmimi.com/bulk_images/7529949/crc-press.jpg" width=3D"200" style=3D"border-=
+spacing: 0px; border-collapse: collapse; vertical-align: top; height: auto;=
+ outline: none; text-decoration: none; margin-top: 0; margin-right: 0; marg=
+in-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bot=
+tom: 0; padding-left: 0; border-top-style: none; border-right-style: none; =
+border-bottom-style: none; border-left-style: none; border-top-width: 0; bo=
+rder-right-width: 0; border-bottom-width: 0; border-left-width: 0;"></p>
+				<h2 style=3D"display: block; font-family: 'Lato', sans-serif; font-weig=
+ht: 700; line-height: 1.5em; font-size: 15px; text-align: center; margin-to=
+p: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 10px;=
+ padding-right: 0; padding-bottom: 10px; padding-left: 0;" align=3D"center"=
+><b style=3D"color:#102d69;font-family: 'Roboto', sans-serif;">The Conferen=
+ce Proceedings as well as the papers will be send for indexing and inclusio=
+n in SCOPUS, Web of Science (WOS) and Google scholar.</b></h2>
+				<p style=3D"text-align: center; margin-top: 10px; margin-right: 0; marg=
+in-bottom: 10px; margin-left: 0; padding-top: 0; padding-right: 0; padding-=
+bottom: 0; padding-left: 0;" align=3D"center"><img src=3D"http://cascade.ma=
+dmimi.com/bulk_images/7529950/conference-proceedings-logo.png" width=3D"450=
+" style=3D"border-spacing: 0px; border-collapse: collapse; vertical-align: =
+top; height: auto; outline: none; text-decoration: none; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-rig=
+ht: 0; padding-bottom: 0; padding-left: 0; border-top-style: none; border-r=
+ight-style: none; border-bottom-style: none; border-left-style: none; borde=
+r-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-=
+width: 0;"></p>
+
+			=09
+			</div>
+
+		</td>
+	</tr>
+</table>
+<table width=3D"100%" bgcolor=3D"BFCFFF" style=3D"border-spacing: 0px; bord=
+er-collapse: collapse; vertical-align: top; width: 100%; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-rig=
+ht: 0; padding-bottom: 0; padding-left: 0; border-top-style: none; border-r=
+ight-style: none; border-bottom-style: none; border-left-style: none; backg=
+round-image: url('http://cascade.madmimi.com/bulk_images/7529953/patterns.p=
+ng'); background-repeat: repeat; background-color: #BFCFFF;">
+	<tr style=3D"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; =
+border-top-style: none; border-right-style: none; border-bottom-style: none=
+; border-left-style: none; border-spacing: 0px; border-collapse: collapse; =
+vertical-align: top;">
+		<td align=3D"center" valign=3D"top" style=3D"border-spacing: 0px; border-=
+collapse: collapse; vertical-align: top; margin-top: 0; margin-right: 0; ma=
+rgin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-b=
+ottom: 0; padding-left: 0; border-top-style: none; border-right-style: none=
+; border-bottom-style: none; border-left-style: none;">
+			<div style=3D"padding:30px 20px;text-align:center;">
+			<h1 style=3D"display: block; text-transform: uppercase; color: #494980; =
+font-family: 'Roboto', sans-serif; font-size: 25px; margin-top: 0; margin-r=
+ight: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0=
+; padding-bottom: 5px; padding-left: 0;">PAPER SUBMISSION</h1>
+			<p style=3D"font-family: 'Rubik', sans-serif; font-weight: 400; line-hei=
+ght: 1.5em; color: #494980; text-align: center; font-size: 14px; margin-top=
+: 10px; margin-right: 0; margin-bottom: 10px; margin-left: 0; padding-top: =
+0; padding-right: 0; padding-bottom: 10px; padding-left: 0;" align=3D"cente=
+r">Submissions of high quality papers in all areas of ICT and its applicati=
+ons.The submissions are handled only through the Easy Chair website at:</p>
+				<h2 style=3D"display: block; color: #494980; font-family: 'Rubik', sans=
+-serif; font-size: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; =
+margin-left: 0; padding-top: 20px; padding-right: 0; padding-bottom: 0; pad=
+ding-left: 0;"><a style=3D"color:#494980;text-decoration: none;" target=3D"=
+_blank" href=3D"https://sable.madmimi.com/c/257469?id=3D68792.285.1.3a87ae3=
+29780685c87b0e12efdc50c45">http://ictcs.in/online-submission.php</a></h2>
+			</div>
+
+		</td>
+	</tr>
+</table>
+<table width=3D"100%" bgcolor=3D"ffffff" style=3D"border-spacing: 0px; bord=
+er-collapse: collapse; vertical-align: top; width: 100%; border-bottom-widt=
+h: 2px; border-bottom-color: #03268e; margin-top: 0; margin-right: 0; margi=
+n-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bott=
+om: 0; padding-left: 0; border-top-style: none; border-right-style: none; b=
+order-bottom-style: solid; border-left-style: none;">
+	<tr style=3D"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; =
+border-top-style: none; border-right-style: none; border-bottom-style: none=
+; border-left-style: none; border-spacing: 0px; border-collapse: collapse; =
+vertical-align: top;">
+		<td align=3D"center" valign=3D"top" style=3D"border-spacing: 0px; border-=
+collapse: collapse; vertical-align: top; margin-top: 0; margin-right: 0; ma=
+rgin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-b=
+ottom: 0; padding-left: 0; border-top-style: none; border-right-style: none=
+; border-bottom-style: none; border-left-style: none;">
+			<div style=3D"padding:30px 20px;text-align:center;">
+				<h2 style=3D"display: block; color: #03217c; font-family: 'Rubik', sans=
+-serif; font-weight: 400; margin-top: 0; margin-right: 0; margin-bottom: 0;=
+ margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 20px; pa=
+dding-left: 0;">Last date for paper submission</h2>
+				<h3 style=3D"display: block; color: #FF0000; font-family: 'Rubik', sans=
+-serif; font-weight: 700; font-size: 30px; margin-top: 0; margin-right: 0; =
+margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding=
+-bottom: 20px; padding-left: 0;">30<sup>th</sup> September, 2019 || 11:59:5=
+9 IST</h3>
+			</div>
+
+		</td>
+	</tr>
+</table>
+<table width=3D"100%" bgcolor=3D"BFCFFF" style=3D"border-spacing: 0px; bord=
+er-collapse: collapse; vertical-align: top; width: 100%; margin-top: 0; mar=
+gin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-rig=
+ht: 0; padding-bottom: 0; padding-left: 0; border-top-style: none; border-r=
+ight-style: none; border-bottom-style: none; border-left-style: none;">
+	<tr style=3D"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-=
+left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; =
+border-top-style: none; border-right-style: none; border-bottom-style: none=
+; border-left-style: none; border-spacing: 0px; border-collapse: collapse; =
+vertical-align: top;">
+		<td valign=3D"top" style=3D"border-spacing: 0px; border-collapse: collaps=
+e; vertical-align: top; margin-top: 0; margin-right: 0; margin-bottom: 0; m=
+argin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding=
+-left: 0; border-top-style: none; border-right-style: none; border-bottom-s=
+tyle: none; border-left-style: none;">
+			<div style=3D"padding:30px 20px;text-align:center;">
+				<h1 style=3D"display: block; color: #494980; font-family: 'Rubik', sans=
+-serif; font-weight: 400; font-size: 18px; margin-top: 0; margin-right: 0; =
+margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding=
+-bottom: 15px; padding-left: 0;">For any further details please visit :</h1=
+>
+				<h2 style=3D"display: block; color: #494980; font-family: 'Rubik', sans=
+-serif; font-weight: 400; font-size: 18px; margin-top: 0; margin-right: 0; =
+margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding=
+-bottom: 15px; padding-left: 0;">
+				<a style=3D"color: #494980;font-size:25px;text-decoration: none;" targe=
+t=3D"_blank" href=3D"https://sable.madmimi.com/c/257469?id=3D68792.286.1.63=
+e8531b5f470d5c238387b7345d1a2d">www.ictcs.in</a>
+				</h2>
+				<h1 style=3D"display: block; color: #494980; font-family: 'Rubik', sans=
+-serif; font-weight: 400; font-size: 18px; line-height: 1.5em; margin-top: =
+0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; paddi=
+ng-right: 0; padding-bottom: 20px; padding-left: 0;">For any further detail=
+s please feel free to connect with <br>Program Secretary ICTCS 2019</h1>
+
+				<h1 style=3D"display: block; color: #494980; font-family: 'Rubik', sans=
+-serif; font-weight: 400; font-size: 18px; line-height: 1.5em; margin-top: =
+0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; paddi=
+ng-right: 0; padding-bottom: 0; padding-left: 0;">(E) : <a href=3D"mailto:c=
+onference.ictcs@gmail.com" style=3D"color:#494980;">conference.ictcs@gmail.=
+com</a> || (M) : <a href=3D"tel:&#43;917201090504" style=3D"color:#494980;"=
+>&#43;91-72010-90504</a>
+</h1>
+			</div>
+
+		</td>
+	</tr>
+</table>
+</div>
+
+<div style=3D"text-align:center;font-family:sans-serif;font-size:12px;"><a =
+href=3D"https://go.madmimi.com/opt_out?pact=3D68792-153494107-12138531873-d=
+30e37ff21f465f5b4aecc348e7e8b2c4e4120af&amp;amx=3D12138531873">unsubscribe<=
+/a></div>
+<p style=3D"visibility: hidden; margin-top: 10px; margin-right: 0; margin-b=
+ottom: 10px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bott=
+om: 0; padding-left: 0;"></p>
+</body>
+</html>=
+
+----==_mimepart_5d68a030efde7_1353d786e5c9916293b--

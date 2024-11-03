@@ -1,0 +1,354 @@
+Received: from DM6PR08MB4313.namprd08.prod.outlook.com (2603:10b6:a02:a8::49)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR03CA0036.NAMPRD03.PROD.OUTLOOK.COM; Wed, 23 Oct 2019 22:21:27 +0000
+Received: from DM6PR08CA0019.namprd08.prod.outlook.com (2603:10b6:5:80::32) by
+ DM6PR08MB4313.namprd08.prod.outlook.com (2603:10b6:5:9c::30) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2367.24; Wed, 23 Oct 2019 22:21:26 +0000
+Received: from SN1NAM04FT016.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::202) by DM6PR08CA0019.outlook.office365.com
+ (2603:10b6:5:80::32) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2387.20 via Frontend
+ Transport; Wed, 23 Oct 2019 22:21:26 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.8.51)
+ smtp.mailfrom=amazonses.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=amazonses.com;calpoly.edu; dmarc=fail action=none
+ header.from=gmail.com;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of amazonses.com designates
+ 54.240.8.51 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.8.51; helo=a8-51.smtp-out.amazonses.com;
+Received: from a8-51.smtp-out.amazonses.com (54.240.8.51) by
+ SN1NAM04FT016.mail.protection.outlook.com (10.152.88.151) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2387.20 via Frontend Transport; Wed, 23 Oct 2019 22:21:26 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1571869285;
+	h=Reply-To:Message-ID:From:To:Subject:Date:MIME-Version:Content-Type:Feedback-ID;
+	bh=Nco8bOGudqHyIcWYmrxOEmNLYroJva+l6n6mG48liHQ=;
+	b=T3+Jce3rFH/hALzgf2w3CAKlJB449Tx/nCcnV3m81svlI5Z1fjsGQfEtd+E576Ww
+	5NAwP5L+I6doWMfWDQI77WXdQ6l9XIczmEm6ZgSrXvWRbm4FPNMW150MYjio4MowDZ7
+	FgXvIYJ33nmG9CE63/GECq4nPBa5xm1Ezm6JsbGo=
+Reply-To: icecce.conf@gmail.com
+Message-ID: <0100016dfab5db7e-b9570d65-afa9-4f63-9bcc-68f947afab37-000000@email.amazonses.com>
+From: "ICECCE 2020" <icecce.conf@gmail.com>
+To: <foaad@calpoly.edu>
+Subject: Call for Paper
+Date: Wed, 23 Oct 2019 22:21:25 +0000
+Content-Type: multipart/alternative;
+	boundary="ea85a530e3e28480b9697013001b6207"
+X-SES-Outgoing: 2019.10.23-54.240.8.51
+Feedback-ID: 1.us-east-1.05y5vyE3xZ3ZIy5tJeIF6SvBl7QE1yr1s5tJqPaq9s0=:AmazonSES
+Return-Path:
+ 0100016dfab5db7e-b9570d65-afa9-4f63-9bcc-68f947afab37-000000@amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 23 Oct 2019 22:21:26.1831
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ e7c1ee1a-dba5-4111-693b-08d758075812
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:54.240.8.51;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001)(4636009)(286005)(199004)(189003)(956004)(45080400002)(4006050)(71280400001)(2860700004)(26005)(42882007)(2351001)(3450700001)(76482006)(486006)(126002)(336012)(476003)(2171002)(606006)(8676002)(58800400005)(75640400001)(73392003)(1096003)(14444005)(25786009)(6506007)(22186003)(733005)(71190400001)(7116003)(9686003)(6306002)(3480700005)(7596002)(90596002)(106002)(246002)(16586007)(7636002)(236005)(22416003)(76236002)(36736006)(966005)(1617600016);DIR:INB;SFP:;SCL:5;SRVR:DM6PR08MB4313;H:a8-51.smtp-out.amazonses.com;FPR:;SPF:Pass;LANG:en;PTR:a8-51.smtp-out.amazonses.com;A:1;MX:1;CAT:SPOOF;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT016.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: e7c1ee1a-dba5-4111-693b-08d758075812
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4313:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:7219;
+X-MS-Exchange-Organization-SCL: 6
+X-Microsoft-Antispam: BCL:5;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 23 Oct 2019 22:21:26.0740
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: e7c1ee1a-dba5-4111-693b-08d758075812
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4313
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.0757002
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2387.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?windows-1254?Q?pn/fxpRtW+2BFY7llt+HsmhovQK0tfkfLaTHGUOAgMBQOjqt0ETgM+iX?=
+ =?windows-1254?Q?fM895NnnZSM2/GYL96sfuTTunPIU5cPfrPxtKk43GuG7XQGq/8dGfLw8?=
+ =?windows-1254?Q?J3ZV2VKCkQtfBQv3TU+fD5zoyxaRZ6dxpuC9h1Xx1wZJSTJ1AmFQLyF1?=
+ =?windows-1254?Q?9F0E8Dfe6pEupNISyKmPqDej/7RaR2lburLaHH3MGiiikjPHWM9GCQWa?=
+ =?windows-1254?Q?x4FdXrFvKF45UW3YjPa727Fq/b6r6paiXSyFF6A4TfSIUMRFaOpDPa1p?=
+ =?windows-1254?Q?W2W3GDzMUuMnViL3hmkWqjBUnJsmvFlvwk4i+shWKEGut3XnAgM0GXJZ?=
+ =?windows-1254?Q?QmaGEs3Aao35sFnPS9Ja7BiHZU7BmjVrkok4h3XLIdqQ2QzJEKH4qto/?=
+ =?windows-1254?Q?IgBCh/4AvlSsMfMhhB9H53mzLaqNHuugDsV5G+u0IJwKd4oc3DHM+Y/6?=
+ =?windows-1254?Q?y2zDIftNxIbcWJjasxDaXAjlBTNcMn4yHhdyIawn1+9UCyAnHBjKG4QZ?=
+ =?windows-1254?Q?iOozYJJNFNX1ERfW1acanslgjWGhNNMUYGJFYBVD3+4nPEaG6wfAWyJn?=
+ =?windows-1254?Q?OBAPZMRcFnF72xzGD/LM3uKdETtS25JIt96lfzq7BORBI+WSQ6TvrvSE?=
+ =?windows-1254?Q?mYFzhF/m+1fqJ9Bg20tg7xYDJgWaXu5xGFL3qvFI7IDnP8lkWdh6vx0K?=
+ =?windows-1254?Q?bjk8bsH5aumPIC/e4iWrc0flB6+qx9ONDpEe9ELQ2LGAE0SKvTriCp2w?=
+ =?windows-1254?Q?BdQ7oQkCbpkp1GpOZRCJ8MkXhuqOYq6YTU9Wwaem7XdlDm84aBVPf0pD?=
+ =?windows-1254?Q?I/cBvFZLBw+NgjGxIWgo/S7qNVd40/q4fFiQHHi3Gl0zCgOagrJ2M971?=
+ =?windows-1254?Q?JvR2t7ls9xmzIXW9rv+51r8A58x2ENXZsqDKoGB8njwA9qUWy6BxJn4L?=
+ =?windows-1254?Q?+hStQQ23HZUpyWQkcHJVwAULsBvOQU9IWruJQmV1/liqz4iz3SfIMVI1?=
+ =?windows-1254?Q?mpXNVxUjcp3Ji4mgSbF+GBEZnPGzHCEFOOSUWdt0aW/ElZQ/9XwlCuUJ?=
+ =?windows-1254?Q?s+tU293ln+ggFp+tPkiNW8WZERX7UHOYD+wj2P98FrlFKfVUwjs40cUJ?=
+ =?windows-1254?Q?HGBGHW5AcRlzwCfeVJlGxk+IsRN6SkE3dB1ihiaEiVzV7rkmPrtaENWQ?=
+ =?windows-1254?Q?yjrQMk2pGL1LHGqYSqqWGBcP7otQYOEsUArP+/xzP/WnkojQCImog4lf?=
+ =?windows-1254?Q?jxXnrcdbMVotNZUjO88MlUxnihyCXEPnEuVPpIIZ7zAg2zXLwfc7uEx9?=
+ =?windows-1254?Q?rQ8HGKoH3iIxzyamjSEQxwL4sZtukmUiX0EyJVo5XaJX3zUNajrLlslw?=
+ =?windows-1254?Q?fRnCpa6IDQZjqMO2EtbE0YQcrgbkeNaJxh0i4V94Idyy1RVbOaRDMVFd?=
+ =?windows-1254?Q?hc7EAYxG9msl7nbUAB53Xf7UUrLULd9P1I00oZViL++e/E9Y5G6B8JmO?=
+ =?windows-1254?Q?m/lMIvS1vkvp6BfhuE4H4uReKOoVYIK+8hBj399Lsjz/7Lz60n6rnqG6?=
+ =?windows-1254?Q?SwD6kMc5iyAe8Wqq6z4j+56COmHacHImd5JGcuLjuTQ/nz6nhkGGpfHP?=
+ =?windows-1254?Q?XPximY8Kunh6f8j6UgqpHSYSj7nQqgfwWn+PVhfKDymSiKHWAtfBYJwR?=
+ =?windows-1254?Q?iVjX4ab3qVtNMzdDEZJcH4/IV9TYom1gbfmf7laIfh7bwNdPA90IHCOF?=
+ =?windows-1254?Q?t0v4GHQ7a4WHRAr0MVhnAc7TN2aaBhmo5d/EFptfUyXIGPlHagcnRUvf?=
+ =?windows-1254?Q?CtCbpSh3POPqRdvaRIeBl3BA55viaAwNT/9pyXgvh1w1k4kYOFm1eM8Y?=
+ =?windows-1254?Q?A3lBpd5grekpXQ=3D=3D?=
+MIME-Version: 1.0
+
+--ea85a530e3e28480b9697013001b6207
+Content-Type: text/plain;
+	charset="windows-1254"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+2nd International Conference on Electrical, Communication and Computer =
+Engineering
+
+(ICECCE-2020)
+
+Istanbul, Turkey
+
+14-15 April, 2020
+
+http://www.icecce.com
+
+
+
+Dear Authors,
+
+We cordially invite you to attend and submit your papers for the IEEE =
+International=20
+Conference on Electrical, Communication, and Computer Engineering (ICECCE =
+2020),=20
+which will take place at Bilek Hotel, Istanbul, Turkey on 14-15 April =
+2020.=20
+The event will be highly international with the technical collaboration =
+of=20
+Gazi University, Ankara, Turkey, Aksaray University, Turkey, University =
+of=20
+Buner, Pakistan, International Islamic University Islamabad, Pakistan, =
+and=20
+IEEE Turkey section=2E
+
+This two-day conference will be held at the beautiful city of Istanbul. =
+ICECCE=20
+2020 aims to bring together leading academic and industrial researchers, =
+scientists,=20
+engineers and practitioners to exchange the latest research ideas, =
+methods,=20
+results, and share experiences, on all theoretical, experimental and =
+applied=20
+aspects of Electrical, Communication and Computer Engineering. ICECCE =
+2020=20
+will provide a unique interdisciplinary and multidisciplinary forum for =
+researchers,=20
+practitioners and educators to present and discuss the most recent =
+innovations,=20
+trends, practical challenges encountered and intelligent solutions =
+adopted=20
+in their respective fields
+
+The conference covers many topics under areas of Electrical, =
+Communication=20
+and Computer Engineering and can be seen at http://www.icecce.com=2E
+
+We shall be looking forward to your paper contributions and =
+participation.=20
+We hope that attending the conference will provide an opportunity to meet =
+academic=20
+and industry experts to exchange ideas about the latest technologies. We =
+are=20
+sure that your stay in the beautiful and historic city of Istanbul will =
+be=20
+very pleasant and enjoyable=2E
+
+Important Dates:
+Paper Due : 15th January, 2020Acceptance Notification : 15th February, =
+2020Camera=20
+Ready Due : 1st March, 2020
+
+Registration Deadline:
+Early Bird : 20th February, 2020
+
+Conference Dates:
+14th -15th April 2020
+
+Venue:Bilek Hotel, Istanbul, Turkey
+
+Paper Submission:
+https://easychair.org/conferences/?conf=3Dicecce2020
+
+http://www.icecce.com/call-for-papers/
+
+=A0
+
+Regards,
+Conference Organizing Team,ICECCE 2020http://www.icecce.com
+
+=A0=A0=A0
+
+Let us meet in the heart of Istanbul, the magnificent city with unique =
+beauty,=20
+history, culture, and international lifestyle, in addition to bringing =
+two=20
+continents together!
+
+Contact us:
+Athar WaseemConference Executive ChairE-mail: athar.waseem@iiu.edu.pk =
+Phone:=20
++92 334 8677790
+
+Dr. Yunus UZUNConference Technical ChairE-mail: yunusuzun38@hotmail.com =
+Phone: 
++90 532 6425237
+
+=A0
+
+=A0Unsubscribe
+
+=A0
+
+=A0
+
+--ea85a530e3e28480b9697013001b6207
+Content-Type: text/html;
+	charset="windows-1254"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
+254">
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001"></head>
+<body>
+<table style=3D"WIDTH: 600px" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"1">
+ =20
+  <tr>
+    <td width=3D"270">
+      <p align=3D"center"><img style=3D"HEIGHT: 257px; WIDTH: 162px; MARGIN=
+-LEFT: auto;=20
+      DISPLAY: block; MARGIN-RIGHT:=20
+      auto" alt=3D"" src=3D"http://www.ecres.net/icecce_logo/logo_icecce.jp=
+g" width=3D"208" height=3D"326"></p></td>
+    <td width=3D"300">
+      <center><img style=3D"MARGIN-LEFT: auto; DISPLAY: block; MARGIN-RIGHT=
+: auto" alt=3D"" src=3D"http://www.icecce.com/wp-content/uploads/2019/09/cr=
+opped-SITE-LOGO-1.jpg" width=3D"85" height=3D"76"></center>
+      <h2 style=3D"TEXT-ALIGN: center"><span style=3D"COLOR: #008000"><stro=
+ng>2<small><small>nd</small></small>=20
+      International Conference on Electrical, Communication and Computer=20
+      Engineering</strong></span></h2>
+      <h3 style=3D"TEXT-ALIGN: center"><span style=3D"COLOR: #ff0000"><stro=
+ng>(ICECCE-2020)</strong></span></h3>
+      <p style=3D"TEXT-ALIGN: center"><strong>Istanbul, Turkey</strong></p>
+      <p style=3D"TEXT-ALIGN: center"><strong>14-15 April, 2020</strong></p=
+>
+      <p style=3D"TEXT-ALIGN: center"><strong><a href=3D"http://www.icecce.=
+com">http://www.icecce.com</a></strong></p></td></tr></table>
+<table style=3D"WIDTH: 600px" border=3D"1">
+ =20
+  <tr>
+    <td>
+      <p style=3D"TEXT-ALIGN: justify"><strong>Dear Authors,</strong></p>
+      <p style=3D"TEXT-ALIGN: justify">We cordially invite you to attend an=
+d=20
+      submit your papers for the <strong> International Conference on=20
+      Electrical, Communication, and Computer Engineering (ICECCE=20
+      2020)</strong>, which will take place at Bilek Hotel, Istanbul, Turke=
+y on=20
+      14-15 April 2020. The event will be highly international with the=20
+      technical collaboration of Gazi University, Ankara, Turkey, Aksaray=20
+      University, Turkey, University of Buner, Pakistan, International Isla=
+mic=20
+      University Islamabad, Pakistan, and IEEE Turkey section.</p>
+      <p style=3D"TEXT-ALIGN: justify">ICECCE 2020 aims to bring together l=
+eading=20
+      academic and industrial researchers, scientists, engineers and=20
+      practitioners to exchange the latest research ideas, methods, results=
+, and=20
+      share experiences, on all theoretical, experimental and applied aspec=
+ts of=20
+      Electrical, Communication and Computer Engineering. ICECCE 2020 will=
+=20
+      provide a unique interdisciplinary and multidisciplinary forum for=20
+      researchers, practitioners and educators to present and discuss the m=
+ost=20
+      recent innovations, trends, practical challenges encountered and=20
+      intelligent solutions adopted in their respective fields</p>
+      <p style=3D"TEXT-ALIGN: justify">The conference covers many topics un=
+der=20
+      areas of Electrical, Communication and Computer Engineering and can b=
+e=20
+      seen at <a href=3D"http://www.icecce.com">http://www.icecce.com</a>.<=
+/p>
+      <p style=3D"TEXT-ALIGN: justify">We shall be looking forward to your =
+paper=20
+      contributions and participation. We hope that attending the conferenc=
+e=20
+      will provide an opportunity to meet academic and industry experts to=
+=20
+      exchange ideas about the latest technologies. We are sure that your s=
+tay=20
+      in the beautiful and historic city of Istanbul will be very pleasant =
+and=20
+      enjoyable.</p>
+      <p><span style=3D"COLOR: #ff0000"><strong>Important=20
+      Dates:</strong></span><br><span style=3D"COLOR: #3366ff">Paper Due :=
+=20
+      <strong>15th January, 2020</strong></span><br><span style=3D"COLOR: #=
+3366ff">Acceptance Notification : <strong>15th February,=20
+      2020</strong></span><br><span style=3D"COLOR: #3366ff">Camera Ready D=
+ue :=20
+      <strong>1st March, 2020</strong></span></p>
+      <p><span style=3D"COLOR: #ff0000"><strong>Registration=20
+      Deadline:</strong></span> <br><span style=3D"COLOR: #3366ff">Early Bi=
+rd :=20
+      <strong>20th February, 2020</strong></span></p>
+      <p><span style=3D"COLOR: #ff0000"><strong>Conference=20
+      Dates:</strong></span><br><strong><span style=3D"COLOR: #3366ff">14th=
+ -15th=20
+      April 2020</span></strong></p>
+      <p><strong><span style=3D"COLOR: #ff0000">Venue:</span></strong>=20
+      <br><strong>Bilek Hotel, Istanbul, Turkey</strong></p>
+      <p><strong><span style=3D"COLOR: #008000">Paper=20
+      Submission:</span></strong><br><a href=3D"https://easychair.org/confe=
+rences/?conf=3Dicecce2020">https://easychair.org/conferences/?conf=3Dicecce=
+2020</a></p>
+      <p><a href=3D"http://www.icecce.com/call-for-papers/">http://www.icec=
+ce.com/call-for-papers/</a></p>
+      <p>&nbsp;</p>
+      <p style=3D"TEXT-ALIGN: center"><strong>Regards,</strong><br><strong>=
+Conference=20
+      Organizing Team,</strong><br><strong>ICECCE 2020</strong><br><a href=
+=3D"http://www.icecce.com"><strong>http://www.icecce.com</strong></a></p>
+      <p>&nbsp;<img alt=3D"" src=3D"http://www.ecres.net/icecce_logo/ist1.p=
+ng" width=3D"286" height=3D"161">&nbsp;&nbsp;<img alt=3D"" src=3D"http://ww=
+w.ecres.net/icecce_logo/ist2.png" width=3D"286" height=3D"161"></p>
+      <p style=3D"TEXT-ALIGN: center"><span style=3D"COLOR: #008000"><stron=
+g>Let us=20
+      meet in the heart of Istanbul, the magnificent city with unique beaut=
+y,=20
+      history, culture, and international lifestyle, in addition to bringin=
+g two=20
+      continents together!</strong></span></p>
+      <p style=3D"TEXT-ALIGN: center"><br>&nbsp;<a href=3D"mailto:unsubscri=
+be.icecce@gmail.com">Unsubscribe</a> =20
+        </p>
+      <p>&nbsp;</p></td></tr></table>
+<p>&nbsp;</p></body></html>
+
+--ea85a530e3e28480b9697013001b6207--

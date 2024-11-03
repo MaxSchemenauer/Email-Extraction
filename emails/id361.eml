@@ -1,0 +1,267 @@
+Received: from BN3PR0801MB2242.namprd08.prod.outlook.com
+ (2603:10b6:404:4b::16) by BN8PR08MB6196.namprd08.prod.outlook.com with HTTPS
+ via BN6PR11CA0030.NAMPRD11.PROD.OUTLOOK.COM; Sun, 15 Sep 2019 04:54:13 +0000
+Received: from BN6PR08CA0071.namprd08.prod.outlook.com (2603:10b6:404:b9::33)
+ by BN3PR0801MB2242.namprd08.prod.outlook.com (2603:10b6:400:1::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2263.13; Sun, 15 Sep
+ 2019 04:54:10 +0000
+Received: from BN3NAM04FT011.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::208) by BN6PR08CA0071.outlook.office365.com
+ (2603:10b6:404:b9::33) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2263.17 via Frontend
+ Transport; Sun, 15 Sep 2019 04:54:10 +0000
+Authentication-Results: spf=none (sender IP is 209.85.160.194)
+ smtp.mailfrom=apjeas.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=apjeas-org.20150623.gappssmtp.com;calpoly.edu; dmarc=none
+ action=none header.from=apjeas.org;compauth=pass reason=106
+Received-SPF: None (protection.outlook.com: apjeas.org does not designate
+ permitted sender hosts)
+Received: from mail-qt1-f194.google.com (209.85.160.194) by
+ BN3NAM04FT011.mail.protection.outlook.com (10.152.92.149) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2263.14 via Frontend Transport; Sun, 15 Sep 2019 04:54:10 +0000
+Received: by mail-qt1-f194.google.com with SMTP id x5so7384802qtr.7
+        for <foaad@calpoly.edu>; Sat, 14 Sep 2019 21:54:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=apjeas-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=5wJ1t0pM555vM1xuFW2tast1iN/tIZq1IlLYczeu0Rw=;
+        b=PiYV5Aw0rg1y5+KIf1cyvHYqbYJ2anM3wmpoLdhHNO4eW+bO6HEvMobsUo85AVg59l
+         BdzfgOKKSabd5mmBYLnccBB0RCRR3g0uDXU2isImAgkuwK9O1X0Ls7NzUjlvAce0bgv/
+         rBkHBexwz5RFUsQPu2Bd8fq3Se8HEnxPOxxkjUZCb7LIzEHqT1JJIau7KlZSlYNQAQQd
+         +jb5/uaSu+q0Z8ImrPKOMlqUJl0Rup5wbKhYrmsirz7wBngHI5L3W35UKtvjbNZbl6zN
+         MVth32LW2ogbcc6cvujMGcAjNb7v3FoK+oSgQoInAzaI1AyCcBUhyuUf2D0cgo7+HnTf
+         +d2Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=5wJ1t0pM555vM1xuFW2tast1iN/tIZq1IlLYczeu0Rw=;
+        b=Pbvt+gfm94CbsJDQqQBXYqLHsWCtFHeqteTh5DMmWGKrzStDtR2VUxDWo6QcWpxRqj
+         vPw5KXYFChN7aM8GV7Tq68ICZs5DKOhOuduf2+kQT7kTtcQE+zeQmfE4NSQ79EIe38HB
+         6BujESuIifH0lDmrllLgK7X46FmWDSICSilbDJxcl/lx+jmKiqjM6fWCOH4xNdFqC4sx
+         9F2lMZDECqUacqlXwRVAXyIUkoWUFeiHvm9Yq56AJ2dyGjAjKODbEhd0gSImUJrayHeN
+         8IcM4nzUqoHpmMvW60ruW4rjHFuCXXIAkEq4bxmhJ9aXZotsauTpoQ2EjaXpYuTfLEc0
+         uDpQ==
+X-Gm-Message-State: APjAAAUsY4QbHbKJcw958laLQLoxZMgTr8C/IzHxQyKJsx+YkWjnYjzx
+	LksOdcVrvZLw6WcAjzXYgdbQtPUVq4aNX+vrZxcSmuegvwU=
+X-Google-Smtp-Source: APXvYqxe4lorBSuOk4MF9YtpX4lQ6+h8FmmVvf/BdlNabZtqXIRllWXIereJ4EIVFlZkFdwmfnpVQZC4yqVmkU//Of4=
+X-Received: by 2002:ac8:fd1:: with SMTP id f17mr10796332qtk.213.1568523249516;
+ Sat, 14 Sep 2019 21:54:09 -0700 (PDT)
+From: Journal member <member@apjeas.org>
+Date: Sun, 15 Sep 2019 12:53:58 +0800
+Message-ID: <CAHZV+oDgutpHpeZqYsZdwRH4FV0XuFZpfVx=KJNU338GsE0jPA@mail.gmail.com>
+Subject: Dear Pena-Rios, A; Khosmood, F, It is Our Honor to Invite You to
+ Become the Lead Guest Editor of Your Proposed Special Issue
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="0000000000001c20310592904775"
+Return-Path: member@apjeas.org
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Sep 2019 04:54:10.2120
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ f4f298ca-1d43-4957-a1b5-08d73998bf37
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132129968502140907;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.160.194;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(428003)(501614002)(31014005)(199004)(189003)(561944003)(10126004)(5660300002)(476003)(498394004)(58800400005)(733005)(16003)(2351001)(59536001)(236005)(9686003)(6306002)(71190400001)(86362001)(1096003)(606006)(22186003)(33964004)(8676002)(2361001)(486006)(75640400001)(126002)(356004)(246002)(2171002)(6666004)(8576002)(4006050)(61266001)(305945005)(7596002)(966005)(53386004)(16586007)(26005)(42186006)(336012)(95326003)(7636002)(55446002)(6916009)(167793001);DIR:INB;SFP:;SCL:1;SRVR:BN3PR0801MB2242;H:mail-qt1-f194.google.com;FPR:;SPF:None;LANG:en;PTR:mail-qt1-f194.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT011.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: f4f298ca-1d43-4957-a1b5-08d73998bf37
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(8001031)(1405096)(1407096)(1408068)(71702078);SRVR:BN3PR0801MB2242;
+X-MS-TrafficTypeDiagnostic: BN3PR0801MB2242:
+X-MS-Exchange-PUrlCount: 4
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Sep 2019 04:54:10.2100
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: f4f298ca-1d43-4957-a1b5-08d73998bf37
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN3PR0801MB2242
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.3463170
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2263.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cDBRTGhDY21qNXhRcktCZTRXMW5sUDlOL0wvMm0zTklTNjIyNWUrZHcwdng3?=
+ =?utf-8?B?dW5UMWQzOERqV3hvSGF6ZVpaR21OVHdGQ1lrQUdVRTFRYTVyeG51U2gyMWt4?=
+ =?utf-8?B?cU5jdlBIR2JiMUtHSGhENVNSNUd2VDh1VEx4RU94QVkxTlAzbW5wQnYyTXpG?=
+ =?utf-8?B?WUtnR3V0d2ZOSThUWTFucVNGazNXa3VmMFdOMXRBd2tDWC9mRkFzSVdDUjlK?=
+ =?utf-8?B?UlNQd1R4eGUvUWNXdzdMbjBNQS9NZGNqQlA4S0ZJeVdORHhyVVc3S1pPMXZx?=
+ =?utf-8?B?K1pGQWduMmw0Zi9sQTc1cVdWOU1rTFQwTFNzU0FJNjdsN0cvZmt1WDBsbWx2?=
+ =?utf-8?B?bWVkMU1vdUxRNHg0NGlVSk9ibS94NGUvdTZpWCszQTBDODFaMHBvY0F0aWNi?=
+ =?utf-8?B?cUJ4Sm5wZWI0TW5KaUpXblZ2bWVBbVg1dDBMbG96KzdxNit1VE5PaWdGcDJu?=
+ =?utf-8?B?Ukt2T3BpQVBlK1IrTU5rSS9vSlBhREhMTDdZajJ3YjVrdSs2QkYwY3Y4b2VO?=
+ =?utf-8?B?R3pnazd3OTdzNzRpTHA4VVFIMDJndUtSNUJ5bXRLdTR0ekhVY3NEWUtRWWhl?=
+ =?utf-8?B?eVBibHpKQW84d2UvMWMzL01GU0k2MmwyN0poRWJDejg1TUhDdjBsVzV2dXpw?=
+ =?utf-8?B?SG9hejlwNjZjOU1DaURaTlNKRWlkcTZYdTZyNE1zeUJpMk41WGR3NENzYURh?=
+ =?utf-8?B?MDd0akczVVVWWlFoQitBcmpkWHFZRjk2SjZQL2ltZVd3dGZFL280OFlBL2Qx?=
+ =?utf-8?B?WUUzQmcxRnpra2tYMnpsSlM5RkpOQng4SklXZndZNElGb2swdHhCUjJBRDAz?=
+ =?utf-8?B?VjRHazIwN2I3aWhET29HYUJCN2JyRzJSYkQ2QjJTK1krT2cwaTgvSU1oUnc4?=
+ =?utf-8?B?cGpKR25BTms2UEZzdTYyTlNRWGFOSGRHMUkwRW9yaVl6cUF6SENYb2ZCMkJa?=
+ =?utf-8?B?dVF0TkFFcUVkZVEzUms1WktObGo3NVJ6b0xudksrYzhtVG50dzEvSjFFQ1ly?=
+ =?utf-8?B?QlJ2Y1ViSXU5Y1Rza2pXNmtkWDc5YTh6d0pWcEJaSnA3cjMraS9zV2h4Qllh?=
+ =?utf-8?B?TW5EWFFuOGRLeklPekR6bTBvV0FUeDFsS3JGOGpVUCt1cldISiswcy83ay9n?=
+ =?utf-8?B?ejlXNkZUaUl3L1o1bmlCRldtSklkMFpMQXVDbjVYY1RsYjY4aDdTN2piK3h5?=
+ =?utf-8?B?cVVMMmJWK1graTdHSnU4YXV1Vk00bENEYmJpOFdFRkQwZXd0YkpDbEJBMzUw?=
+ =?utf-8?B?ZFVxRjJSbnZMK0x4M0owWTBxOG9jd3NCRUo5OThQTFBQdU5QM1RQQXI2bmgv?=
+ =?utf-8?B?U2pabHR4SC9FckhEL1ZNS3hyUVFWUmFCNkMyMXp3NXVpUjlFc0JNVzZQc0xV?=
+ =?utf-8?B?NnJNeThsWmR5dFE9PQ==?=
+MIME-Version: 1.0
+
+--0000000000001c20310592904775
+Content-Type: text/plain; charset="UTF-8"
+
+Being the Lead Guest Editor
+American Journal of Software Engineering and Applications
+ISSN Online: 2327-249X
+ISSN Print: 2327-2473
+Current Issue: Vol.8, No.1, 2019
+Dear Pena-Rios, A; Khosmood, F,
+We are sending you this invitation to propose a special issue on valuable
+topics within the scope of American Journal of Software Engineering and
+Applications (http://www.ajsea.org).
+Initate Special Issues
+After reading your article "Immersive Learning Technologies: Research and
+Future Directions J.UCS Special Issue" published in JOURNAL OF UNIVERSAL
+COMPUTER SCIENCE, we believe that more in-depth researches can be conducted
+around this topic. For this reason, it's our pleasure to invite you to
+propose a special issue on a topic of your interest.
+The Guides of Proposing Your Special Issues
+The written proposals that include the introduction to the special issue
+and some key topics that papers could focus upon are requested to be
+submitted by the prospective lead guest editor.
+If you have interests, please click the following link for the Proposal
+Form:
+http://www.ajsea.org/download/60Form.doc
+Your Role as the Lead Guest Editor for the Special Issue
+If your special issue proposal is adopted, you will act as the Lead Guest
+Editor.
+The Lead Guest Editor manages the entire Special Issue process, which
+comprises recruiting Guest Editors, composing a Special Issue proposal and
+regulating the peer review of submitted articles.
+Benefits of Serving as the Lead Guest Editor of Your Special Issue
+
+   1. One of your papers submitted to the special issue can enjoy free
+   publication
+   2. Receiving an electronic version of the Certificate of Honor
+   3. You'll have the chance of being promoted to the Journal's
+   Editor-in-Chief
+   4. Keeping up with the recent research achievements via the review of
+   manuscripts in your field
+
+Any questions are welcome, please feel free to contact us.
+Best regards,
+Editorial Office of American Journal of Software Engineering and
+Applications
+
+--0000000000001c20310592904775
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">
+<br><br><div style=3D"font-family:&quot;Arial&quot;;font-size:13px;line-hei=
+ght:22px;color:rgb(13,13,13);background:rgba(224,223,208,0.2) none repeat s=
+croll 0% 0%;padding:22px 170px 151px 14px;width:100%;text-align:justify"> 	=
+<div style=3D"width:740px;background:rgb(252,252,252) none repeat scroll 0%=
+ 0%;padding:16px"> 		<div style=3D"border-color:rgba(144,90,20,0.5) rgba(14=
+4,90,20,0.5) currentcolor;border-style:solid solid none;border-width:10px 1=
+0px 0px;border-radius:5px 5px 0px 0px"> 			<div style=3D"padding:8px 15px;b=
+ackground:rgb(245,245,245) none repeat scroll 0% 0%"> 				<div style=3D"dis=
+play:table-cell;vertical-align:middle;width:545px;padding-right:25px;font-w=
+eight:bold;color:rgb(13,13,13);font-size:17px;font-family:&quot;Verdana&quo=
+t;">Being the Lead Guest Editor</div> 				<div style=3D"display:table-cell;=
+vertical-align:middle"><img src=3D"http://img.ajsea.org/logo/2148.gif" styl=
+e=3D"width: 120px; max-width: 120px;" width=3D"120px;" border=3D"0"></div> =
+			</div> 			<div style=3D"background:rgb(252,252,252) none repeat scroll 0=
+% 0%;padding:5px 15px 10px"> 				<div style=3D"display:table-cell;vertical-=
+align:top;padding-right:25px"><img src=3D"http://img.ajsea.org/sc/6522.gif"=
+ style=3D"width: 100px; max-width: 100px;" width=3D"100px;" border=3D"0"></=
+div> 				<div style=3D"display:table-cell;vertical-align:top;width:565px;co=
+lor:rgb(144,90,20)"> 					<div style=3D"text-align:left;font-weight:bold;pa=
+dding-bottom:12px;font-size:16px;font-family:&quot;Arial&quot;;line-height:=
+26px;font-style:italic">American Journal of Software Engineering and Applic=
+ations</div> 					<div style=3D"font-size:13px;font-family:&quot;Arial&quot=
+;"> 						<div style=3D"font-weight:bold;padding-bottom:6px">ISSN Online: 2=
+327-249X</div> 						<div style=3D"font-weight:bold;padding-bottom:6px">ISS=
+N Print: 2327-2473</div> 						<div style=3D"font-weight:bold">Current Issu=
+e: Vol.8, No.1, 2019</div> 					</div> 				</div> 			</div> 		</div> 		<div=
+ style=3D"border-color:currentcolor rgba(144,90,20,0.3) rgba(144,90,20,0.3)=
+;border-style:none solid solid;border-width:0px 10px 10px;border-radius:0px=
+ 0px 5px 5px;padding:0px 15px"> 			<div style=3D"background:rgba(144,90,20,=
+0.1) none repeat scroll 0% 0%;border-top:3px solid rgba(144,90,20,0.7);padd=
+ing:12px 8px 10px;margin-bottom:17px"> 				<div style=3D"padding-bottom:8px=
+">Dear Pena-Rios, A; Khosmood, F,</div> 				<div>We are sending you this in=
+vitation to propose a special issue on valuable topics within the scope of =
+<span style=3D"font-style:italic">American Journal of Software Engineering =
+and Applications</span> (<a href=3D"http://www.ajsea.org" border=3D"0" targ=
+et=3D"_blank" style=3D"text-decoration:none;color:rgb(0,0,255);white-space:=
+nowrap;font-weight:bold">http://www.ajsea.org</a>).</div> 			</div> 			<div=
+ style=3D"background:rgba(144,90,20,0.1) none repeat scroll 0% 0%;border-to=
+p:3px solid rgba(144,90,20,0.7);padding:12px 8px 10px;margin-bottom:17px">	=
+ 				<div style=3D"padding-bottom:15px"> 					<div style=3D"font-weight:bol=
+d;padding-bottom:10px;font-size:16px;font-family:&quot;Arial&quot;"><div st=
+yle=3D"padding:0px;text-align:center;line-height:22px">	<div style=3D"displ=
+ay:inline-block;color:rgb(144,90,20);font-weight:bold;border:1px solid rgba=
+(144,90,20,0.5);padding:2px 10px">Initate Special Issues</div></div></div> =
+					<div>After reading your article <span style=3D"font-style:italic">&quo=
+t;Immersive Learning Technologies: Research and Future Directions J.UCS Spe=
+cial Issue&quot;</span> published in <span style=3D"font-style:italic">JOUR=
+NAL OF UNIVERSAL COMPUTER SCIENCE</span>,
+ we believe that more in-depth researches can be conducted around this=20
+topic. For this reason, it's our pleasure to invite you to propose a=20
+special issue on a topic of your interest.</div> 				</div> 				<div style=
+=3D"padding-bottom:15px"> 					<div style=3D"font-weight:bold;padding-botto=
+m:10px;font-size:16px;font-family:&quot;Arial&quot;"><div style=3D"padding:=
+0px;text-align:center;line-height:22px">	<div style=3D"display:inline-block=
+;color:rgb(144,90,20);font-weight:bold;border:1px solid rgba(144,90,20,0.5)=
+;padding:2px 10px">The Guides of Proposing Your Special Issues</div></div><=
+/div> 					<div style=3D"padding-bottom:6px">The
+ written proposals that include the introduction to the special issue=20
+and some key topics that papers could focus upon are requested to be=20
+submitted by the prospective lead guest editor.</div> 					<div>If you have=
+ interests, please click the following link for the Proposal Form:<br><a hr=
+ef=3D"http://www.ajsea.org/download/60Form.doc" border=3D"0" target=3D"_bla=
+nk" style=3D"text-decoration:none;color:rgb(0,0,255);white-space:nowrap;fon=
+t-weight:bold">http://www.ajsea.org/download/60Form.doc</a></div> 				</div=
+> 				<div> 					<div style=3D"font-weight:bold;padding-bottom:10px;font-si=
+ze:16px;font-family:&quot;Arial&quot;"><div style=3D"padding:0px;text-align=
+:center;line-height:22px">	<div style=3D"display:inline-block;color:rgb(144=
+,90,20);font-weight:bold;border:1px solid rgba(144,90,20,0.5);padding:2px 1=
+0px">Your Role as the Lead Guest Editor for the Special Issue</div></div></=
+div> 					<div>If your special issue proposal is adopted, you will act as t=
+he Lead Guest Editor.</div> 					<div style=3D"padding-bottom:8px">
+ The Lead Guest Editor manages the entire Special Issue process, which=20
+comprises recruiting Guest Editors, composing a Special Issue proposal=20
+and regulating the peer review of submitted articles.</div> 					<div style=
+=3D"padding-bottom:4px">Benefits of Serving as the Lead Guest Editor of You=
+r Special Issue</div> 					<ol style=3D"padding:0px 0px 0px 15px;margin:0px=
+;list-style-type:circle;font-weight:bold"><li><span style=3D"font-weight:no=
+rmal">One of your papers submitted to the special issue can enjoy free publ=
+ication</span></li><li><span style=3D"font-weight:normal">Receiving an elec=
+tronic version of the Certificate of Honor</span></li><li><span style=3D"fo=
+nt-weight:normal">You'll have the chance of being promoted to the Journal's=
+ Editor-in-Chief</span></li><li><span style=3D"font-weight:normal">Keeping =
+up with the recent research achievements via the review of manuscripts in y=
+our field</span></li></ol> 				</div> 			</div> 			<div style=3D"background=
+:rgba(144,90,20,0.1) none repeat scroll 0% 0%;border-top:3px solid rgba(144=
+,90,20,0.7);padding:12px 8px 10px;margin-bottom:7px">	 				<div>Any questio=
+ns are welcome, please feel free to contact us.</div> 				<div style=3D"lin=
+e-height:25px;padding-top:14px"> 					<div>Best regards, </div> 					<div>E=
+ditorial Office of <span style=3D"font-style:italic">American Journal of So=
+ftware Engineering and Applications</span></div> 				</div> 			</div> 		</d=
+iv> 	</div> </div>=20
+
+</div>
+
+--0000000000001c20310592904775--

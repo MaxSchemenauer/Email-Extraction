@@ -1,0 +1,270 @@
+Received: from CY4PR08MB3558.namprd08.prod.outlook.com (2603:10b6:a03:1d0::34)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR04CA0024.NAMPRD04.PROD.OUTLOOK.COM; Mon, 2 Dec 2019 07:59:12 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=bx+kNzX5mDklAsUBL46RHcG25froLaKWVqUSOz4roUT4jMAjDyDvD0+ppx8dG6OaaBiB6PDdbbr/VWpx39oqNItmdeKS8hvojk9YYrPSm/ClqndNnCGSJRLQEsviI0VcDbb835hmGDukqsoKq0lWo6wkqovBkMeSWZfxzSAuDuwUa/p4sdPl+rHj1k/AGQuu3KQ2J6NLQLpfDadRyf5ebUOm2I+qVfnyMMxUAUmJ8ConFvc73uS+dSpAJeneMXvl8jebHsSxLSSta4sjif8BKDMVOi0NmDZB2MYj8kJh17CSKxJuKPTmQaX1ZJvPtuUpbSJrzqtOgO29PsHp4WAlLA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=jwAPfrErrRRyEOd5O38L9KlDPXhUsgA8Hes/DjpzvLo=;
+ b=HYqpeK/RcLcF4pNn2yKVIhsDehjnoY3oyPgalKAme/XEWkmA3H/PMkK5eAYiKm8KR1PvtPioaqbPUom2b3zl0r5aXtHri+zxtehvZGSKDVhfoLgjoNYzuMXZb4ortlI6+BZYKQhjtFpaFDqDaX4kqYQP92r5cYb0EI3fMiIF2adyomac0q7gKg+zw3jZAcZSGRv/MsrbWl/YFwOZKHq7KWzE18eoLbQRcU+75i9SaE/5Q8cMx8dvhK+Scx07dVBd4zqEPTjT08iaxUGxXFINxbuIXCQ3OJDNTFwBEwErIWy7ShDd5vqwpEzrqAdncITY+mjEsyMOg0ZRrtXxEaHmzA==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 193.166.164.158) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=lists.tuni.fi;
+ dmarc=none action=none header.from=jyu.fi; dkim=fail (signature did not
+ verify) header.d=tuni.onmicrosoft.com; arc=fail (48)
+Received: from CH2PR08CA0025.namprd08.prod.outlook.com (2603:10b6:610:5a::35)
+ by CY4PR08MB3558.namprd08.prod.outlook.com (2603:10b6:910:75::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2495.18; Mon, 2 Dec
+ 2019 07:59:09 +0000
+Received: from CO1NAM04FT033.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::203) by CH2PR08CA0025.outlook.office365.com
+ (2603:10b6:610:5a::35) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2474.21 via Frontend
+ Transport; Mon, 2 Dec 2019 07:59:09 +0000
+Authentication-Results: spf=pass (sender IP is 193.166.164.158)
+ smtp.mailfrom=lists.tuni.fi; calpoly.edu; dkim=fail (signature did not
+ verify) header.d=tuni.onmicrosoft.com;calpoly.edu; dmarc=none action=none
+ header.from=jyu.fi;compauth=softpass reason=201
+Received-SPF: Pass (protection.outlook.com: domain of lists.tuni.fi designates
+ 193.166.164.158 as permitted sender) receiver=protection.outlook.com;
+ client-ip=193.166.164.158; helo=smtp1.tuni.fi;
+Received: from smtp1.tuni.fi (193.166.164.158) by
+ CO1NAM04FT033.mail.protection.outlook.com (10.152.91.232) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2495.18 via Frontend Transport; Mon, 2 Dec 2019 07:59:08 +0000
+Received: from lists.tuni.fi (lists.tuni.fi [193.166.164.155])
+	by smtp1.tuni.fi (Postfix) with ESMTP id 016227F4A2;
+	Mon,  2 Dec 2019 09:59:05 +0200 (EET)
+Received: from lists.tuni.fi (localhost [127.0.0.1])
+	by lists.tuni.fi (Postfix) with ESMTP id E0499D74;
+	Mon,  2 Dec 2019 09:59:04 +0200 (EET)
+X-Original-To: gamesnetwork@listrelay.tuni.fi
+Delivered-To: gamesnetwork@listrelay.tuni.fi
+Received: from EUR04-VI1-obe.outbound.protection.outlook.com
+ (mail-eopbgr80112.outbound.protection.outlook.com [40.107.8.112])
+ by lists.tuni.fi (Postfix) with ESMTP id 837B3D74
+ for <gamesnetwork@listrelay.tuni.fi>; Mon,  2 Dec 2019 09:58:51 +0200 (EET)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=amkVfGPaXabRV/zP3Y/RyHcb6NsZ9dhZ9C6/MN8ZJzidt84Jc88h8RDPLXYcxIGYvGLdECpDB186N5FyUS6Wt2cMHDxpt8xUc3ldtoam14cjz6pqlptCw9akgsOyytBSUvT8uYmI9AGqKQCZqlgciT68BuBGbAYFzwhglFV/a60Jd67DVXwVAnmVoKN0QXet29UXy05tncad9GY3AABzJtef+wpozXpJIjcE5lCaWolLhYLNXRC8QflyUbyy07/KSZ7ango8A4v2h68Coi2JJn+ssaAW7X0e0NbrEL7fhN/KPcWo/R7rHjevQBq6aC0rKzfV9QTbbnG2kCXOhgF/8A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=jwAPfrErrRRyEOd5O38L9KlDPXhUsgA8Hes/DjpzvLo=;
+ b=h66yFQb0gJDYren8sCnmwHwxWL4sLLnabxkIeecmlN3M900sHuG1bVQBlisX1AmYYgOBi8JEVVyOwX63m3j4XUe5HS8rco2wm8sg6qao3J0Yi7mjLGczepopRvDFI1BCozome0enrqwsb30bWYPIXnpYFFZUUdQw+pEsrAyoObaNJsdOzjcwySMqR76VtWUdI9RJMv0MflCKzXW7ezebwdwkzra61Zy9B1PN1sPRiy/2qdNdYn7+fBQjhFY/QuWt8tIqrzEzFhqXOC/R1nv3DfBa+6Yd6UPMFIwHF32yCMu+Zb3Sl8ZMLnZxSMsCMeHjDk/DYpb36cwLHFXvuRKTjA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none (sender ip is
+ 193.166.164.158) smtp.rcpttodomain=lists.tuni.fi
+ smtp.mailfrom=listserv.uta.fi; dmarc=none action=none header.from=jyu.fi;
+ dkim=none (message not signed); arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=tuni.onmicrosoft.com; 
+ s=selector2-tuni-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=jwAPfrErrRRyEOd5O38L9KlDPXhUsgA8Hes/DjpzvLo=;
+ b=ewntbW/a2jsmkcmqSDrB5Mx8ew3jcPdSOyh7+vUVlVwyABOOkb9JGGy/dioRREf/0+TmlIyEXDBsaV1nDnB8nUeou4Bwy755ahzbO1XGqXkCOzCSfBcW8SFaO86kEpAh55PzmRVpN0xnh5N65y4PdHe1CCiN6HgStUyHqIZpetM=
+Resent-From: <gamesnetwork@lists.tuni.fi>
+Received: from VI1PR08CA0261.eurprd08.prod.outlook.com (2603:10a6:803:dc::34)
+ by DB6PR0801MB1990.eurprd08.prod.outlook.com (2603:10a6:4:6c::21)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2495.21; Mon, 2 Dec
+ 2019 07:58:49 +0000
+Received: from DB3EUR04FT042.eop-eur04.prod.protection.outlook.com
+ (2a01:111:f400:7e0c::207) by VI1PR08CA0261.outlook.office365.com
+ (2603:10a6:803:dc::34) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2495.20 via Frontend
+ Transport; Mon, 2 Dec 2019 07:58:49 +0000
+Authentication-Results-Original: spf=none (sender IP is 193.166.164.158)
+ smtp.mailfrom=listserv.uta.fi; lists.tuni.fi; dkim=none (message not signed)
+ header.d=none;lists.tuni.fi; dmarc=none action=none header.from=jyu.fi;
+Received-SPF: None (protection.outlook.com: listserv.uta.fi does not designate
+ permitted sender hosts)
+Received: from smtp1.tuni.fi (193.166.164.158) by
+ DB3EUR04FT042.mail.protection.outlook.com (10.152.25.33) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2495.18 via Frontend Transport; Mon, 2 Dec 2019 07:58:48 +0000
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+ by smtp1.tuni.fi (Postfix) with ESMTPS id 650E67F3D3
+ for <gamesnetwork@lists.tuni.fi>; Mon,  2 Dec 2019 09:58:48 +0200 (EET)
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20])
+ by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id xB27wm86005097
+ (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+ for <gamesnetwork@listserv.uta.fi>; Mon, 2 Dec 2019 09:58:48 +0200
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+ by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id xB27wmYt015907
+ (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+ for <gamesnetwork@listserv.uta.fi>; Mon, 2 Dec 2019 09:58:48 +0200
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+ by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id xB27wlR0008110
+ for <gamesnetwork@listserv.uta.fi>; Mon, 2 Dec 2019 09:58:47 +0200
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Mon, 02 Dec 2019 09:58:47 +0200 (EET)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mailgw2.jyu.fi (mailgw2.jyu.fi [130.234.6.65])
+ by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id xB27wlEJ010671
+ (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-SHA bits=256 verify=NOT)
+ for <gamesnetwork@listserv.uta.fi>; Mon, 2 Dec 2019 09:58:47 +0200
+Received: from exmail.jyu.fi (exmail.jyu.fi [130.234.8.97])
+ by mailgw2.jyu.fi  with ESMTP id xB27wlwe000768-xB27wlwg000768
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-SHA bits=256 verify=FAIL)
+ for <GAMESNETWORK@LISTSERV.UTA.FI>; Mon, 2 Dec 2019 09:58:47 +0200
+Received: from exc4.ad.jyu.fi (130.234.8.166) by EXC3.ad.jyu.fi
+ (130.234.8.177) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.1.1779.2; Mon, 2 Dec 2019
+ 09:58:46 +0200
+Received: from exc4.ad.jyu.fi ([fe80::1c7f:bd25:ae33:4558]) by exc4.ad.jyu.fi
+ ([fe80::1c7f:bd25:ae33:4558%6]) with mapi id 15.01.1847.003;
+ Mon, 2 Dec 2019 09:58:46 +0200
+From: "Siitonen, Marko" <marko.siitonen@jyu.fi>
+To: "Gamesnetwork"<gamesnetwork@uta.fi>
+Thread-Topic: Call for papers: ECREA main conference, Digital Games Research
+ Section (deadline January 15, 2020)
+Thread-Index: AdWo5lIecoEWBsSNQISWRtUlBPYMAg==
+Date: Mon, 2 Dec 2019 07:58:46 +0000
+Message-ID: <38579b95a1484267a48ca2e9fed9adce@jyu.fi>
+Accept-Language: fi-FI, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+X-Greylist: Sender DNS name whitelisted, not delayed by milter-greylist-4.6.2
+ (smtp2.uta.fi [153.1.7.18]); Mon, 02 Dec 2019 09:58:47 +0200 (EET)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,L_URL_EU_TLD,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1023
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+X-EOPAttributedMessage: 1
+X-Forefront-Antispam-Report-Untrusted: CIP:193.166.164.158; IPV:NLI; CTRY:FI;
+ EFV:NLI; SFV:NSPM;
+ SFS:(10019020)(136003)(376002)(346002)(39860400002)(396003)(428003)(5142003)(199004)(189003)(7192003)(36756003)(36906005)(786003)(14444005)(498600001)(53416004)(66346011)(5660300002)(102836004)(356004)(108616005)(436003)(426003)(336012)(7696005)(42882007)(47776003)(66574012)(2486003)(23676004)(2616005)(24736004)(70586007)(70206006)(6862004)(50466002)(6306002)(14454004)(8936002)(246002)(8676002)(966005)(2906002)(26005)(7636002)(7596002)(305945005)(316002)(225293001);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:DB6PR0801MB1990; H:smtp1.tuni.fi; FPR:;
+ SPF:None; LANG:en; PTR:smtp1.tuni.fi; A:1; MX:1; 
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 862ed3fa-2c42-4efb-0f5c-08d776fd8296
+X-MS-TrafficTypeDiagnostic: DB6PR0801MB1990:|DB6PR0801MB1990:|CY4PR08MB3558:
+X-LD-Processed: fa6944af-cc7c-4cd8-9154-c01132798910,ExtFwd
+X-MS-Exchange-Transport-Forked: True
+X-Microsoft-Antispam-PRVS: <DB6PR0801MB19909EA2FE9997FDA534AA03CA430@DB6PR0801MB1990.eurprd08.prod.outlook.com>
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;OLM:9508;
+X-Forefront-PRVS: 0239D46DB6
+X-MS-Exchange-SenderADCheck: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ Vkv2bu7eu82an4bIWRn8epBLWENkfLzj4wFRfvPEndEy9+aH7CfmQAm0hTbJVJ2Kpd6BKlVLkmR62ncxPbKiOLnZVIjlQaQ5R84wqwXyJFy2oJEy1yQIVHGG2/65FVgQH+r5ZjGhKSoEIr8nT0qRT2X+mCazViWQs23bX3/8dsP74+WtGC9jALsuCQl1glWog4rnP/x99k+g6IiKrIZ+uG2r7zWOF+GkYEXF2N6fnv69KtR2/IJ2W2X58TKmGql0t9sAfgeorFvuVqxKSE8fwrljvL/2JQ52sjMeX8NN0levs4ynsGq7AvNrlyxnWwXF2NVIIFdoYiSjaV+3fg2rsK5YIFpWaoOBvJya2ARj18us1EGapHGE40/wyETdkBW3akiiEdxKu/3b9PDv85n1mlboJ+ygJ/SSd4+Bsacc3Aa6AlsK4caC6cDKVoK71s2IQ31hw1lyn4nEGHDtAhtNSRrq753q5+YLjCnhhZg9WeE=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB6PR0801MB1990
+Subject: [Gamesnetwork] Call for papers: ECREA main conference,
+ Digital Games Research Section (deadline January 15, 2020)
+X-BeenThere: gamesnetwork@lists.tuni.fi
+X-Mailman-Version: 2.1.15
+Precedence: list
+List-Id: <gamesnetwork.lists.tuni.fi>
+List-Unsubscribe: <https://lists.tuni.fi/mailman/options/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=unsubscribe>
+List-Archive: <https://lists.tuni.fi/mailman/private/gamesnetwork/>
+List-Post: <mailto:gamesnetwork@lists.tuni.fi>
+List-Help: <mailto:gamesnetwork-request@lists.tuni.fi?subject=help>
+List-Subscribe: <https://lists.tuni.fi/mailman/listinfo/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=subscribe>
+Errors-To: gamesnetwork-bounces@lists.tuni.fi
+Sender: "Gamesnetwork" <gamesnetwork-bounces@lists.tuni.fi>
+Resent-Message-Id: <20191202075904.E0499D74@lists.tuni.fi>
+Resent-Date: Mon,  2 Dec 2019 09:59:04 +0200 (EET)
+Return-Path: gamesnetwork-bounces@lists.tuni.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Dec 2019 07:59:08.5890
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 862ed3fa-2c42-4efb-0f5c-08d776fd8296
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ CO1NAM04FT033.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:193.166.164.158;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(4636009)(286005)(199004)(189003)(6262002)(176002)(146002)(7696005)(66574012)(6306002)(14454004)(58800400005)(336012)(2616005)(6392003)(356004)(8636004)(16670700002)(426003)(436003)(966005)(42882007)(102836004)(6862004)(36756003)(47776003)(7636002)(50466002)(24736004)(75640400001)(14444005)(246002)(7846003)(26005)(108616005)(15003)(8676002)(4006050)(63766006)(9036002)(6522003)(23676004)(66346011)(2486003)(19810500001)(106002)(7596002)(53416004)(305945005)(1096003)(225293001);DIR:INB;SFP:;SCL:1;SRVR:CY4PR08MB3558;H:smtp1.tuni.fi;FPR:;SPF:Pass;LANG:en;PTR:smtp1.tuni.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT033.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 28ebb02d-831e-4b9e-aabd-08d776fd76eb
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Dec 2019 07:59:08.0345
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 862ed3fa-2c42-4efb-0f5c-08d776fd8296
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY4PR08MB3558
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.0672217
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2495.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?Yjh6b25seExHN2NFR2tBSmQvMk5ZdDVBS3RiY1RnZVFsNG9DeHVVcWpVK0Rx?=
+ =?utf-8?B?eVFKa0ozaVV0dGE3TFR3RVp5NEVTSlhBRUR1a0FWM2JwdFBqYUpLT255YnQ1?=
+ =?utf-8?B?cGVMWFYrdTFQZlFLdXlzTVZKTHlKNTV1WGQzcnBwd1FiQUZRMFE0MHJ5cGpI?=
+ =?utf-8?B?dHV0VzE3MzFDcUcrQkFoU0lwdTJUK0JqV3JvNi94NndoL0VWUTBXUTBKaEp5?=
+ =?utf-8?B?NWI1VytIZDUxbHFmMXpjTnliT0Y4SllyZU0yZStjUzZ2MnFvTDlGYWRXd0hr?=
+ =?utf-8?B?NllMUTFSNTVYUUxkdzhDZzZEc0x0NjBpeEwvOHhOWTJNajdhWGtBNXVMSFFy?=
+ =?utf-8?B?ODFoMlRtMmw1YXpwbnVGYnlpblNWUE1VYitlb1JXUXhDS2RqS0w5eWVOdnBS?=
+ =?utf-8?B?Tm1NNnpsU09IY3Q4Z2pHTXZMMUV5MkwrSkkrUDJiRWFFQUFvSkI4bHd6eXdy?=
+ =?utf-8?B?SzZpNVdaR29MNjd5RFNhOFF1NjJMbkdzeE5qYXN3L1hvanVlek9uSTJsWklU?=
+ =?utf-8?B?bWRUZXZVVmNVQnkveGdvUTJ5NGZYaXVlSTJ4dWZmNnJLdEI4Y3VkWHo0Vmh6?=
+ =?utf-8?B?TGdTbm1ER0dLQTdhckVEenJuOWlpNUZQUXU4OGFsTFgwMmVlVUtiRUxSSTFh?=
+ =?utf-8?B?aEg3d3V6cXFNSVR2VkkxQnNyU08yMU4xM1NKYUErbUc3ZkFqakxmNEM4RTFJ?=
+ =?utf-8?B?YUFwSnZHTmwyRjF1dks5bnJhVm01UmtnVEtTWUZlbWFzTnJraFJYRzNZYTha?=
+ =?utf-8?B?N3ZkS2lTUy94Tm5WVGc0VEoxVEM0c0I1MzhLTldXWnFpRThneXFBd0xCYWRC?=
+ =?utf-8?B?NjNOdHladFdjdmE1alBGa2Q0MmdKSnMrR0ZDa0Z1R29jS2VXaTNpb21JMFRM?=
+ =?utf-8?B?WTJ4SUxDYS9ZWmxzUWFlWG8rellpNkVPOU1UOGJwT3hCM1Y0dE9vNjNHK1VC?=
+ =?utf-8?B?djZsS1BsT0pYa1c3VGR0WVB1SXlBQmdUeHZteXV4L2M5b0pnQWtVVTlDakRE?=
+ =?utf-8?B?ZFJNb3VWbTRlMnMvamx1Vnl3TlA1VXJ6NUwwWG9oTTZUSUNNb1J0K3JKYnZ5?=
+ =?utf-8?B?ZFFNbU5xc3V0UVlWcElZbVRkK3YxRHBBMmRPcERiei9rcjBlVXpTODkxOG0w?=
+ =?utf-8?B?OEFEV1RDV2g5c0M2WlhwOUwyUlF2ZEdmTGozVzFQeUJjbnVEZlRJenI5WmxI?=
+ =?utf-8?B?RVYvakpUTkQ4MnVxQUkvV3pVYlAzYU44T0VkZ1dIU3o2OTlPOHZpZkZaNWQ2?=
+ =?utf-8?B?MmoyQUtURTBEZmxmTUd2WWNJdUJoTTM4MHlEMDlQdzR0Sy9wUU9iei9YVnVQ?=
+ =?utf-8?B?VWRVeWxJN2VGUFhOc1BYS05LNkJRMlVKZDhIRTF0eFIzbXpPenNZOXBiYTVQ?=
+ =?utf-8?B?VGhhamhQRE94VVpyaGVHcldHSldlZTNxYzZGZFVFZDY3QlFKVFYvUGMwUHRP?=
+ =?utf-8?B?dWRtRDBzYytscDhGdTdpeDlrQ2Z5Y3NLR2hZeU9RPT0=?=
+MIME-Version: 1.0
+
+Q2FsbCBmb3IgcGFwZXJzOiANCg0KVGhlIEV1cm9wZWFuIENvbW11bmljYXRpb24gUmVzZWFyY2gg
+YW5kIEVkdWNhdGlvbiBBc3NvY2lhdGlvbiAoRUNSRUEpIGluIHBhcnRuZXJzaGlwIHdpdGggdGhl
+IFVuaXZlcnNpdHkgb2YgTWluaG8gY2FsbCBmb3IgcGFwZXJzIHRvIGJlIHByZXNlbnRlZCBhdCB0
+aGUgOHRoIEV1cm9wZWFuIENvbW11bmljYXRpb24gQ29uZmVyZW5jZSwgdG8gYmUgaGVsZCBpbiBC
+cmFnYSwgUG9ydHVnYWwsIGZyb20gMiBPY3RvYmVyIHRvIDUgT2N0b2JlciAyMDIwLg0KDQpUaGUg
+Q29uZmVyZW5jZSBoYXMgY2hvc2VuIHRoZSBrZXkgdGhlbWUg4oCYQ29tbXVuaWNhdGlvbiBhbmQg
+dHJ1c3Q6IGJ1aWxkaW5nIHNhZmUsIHN1c3RhaW5hYmxlIGFuZCBwcm9taXNpbmcgZnV0dXJlc+KA
+mQ0KDQpUaGUgRGlnaXRhbCBHYW1lcyBSZXNlYXJjaCBTZWN0aW9uIHdhbnRzIHRvIGV4dGVuZCB0
+aGUgY2FsbCB0byBhbGwgc2Nob2xhcnMgd29ya2luZyBpbiBnYW1lIHN0dWRpZXMuIFRoZSBzZWN0
+aW9uIGludml0ZXMgY29udHJpYnV0aW9ucyBkZWFsaW5nIHdpdGggZGlnaXRhbCBnYW1lcyBhcyBj
+dWx0dXJhbCBvYmplY3RzLCBkaWdpdGFsIGdhbWluZyBhcyBhIHNvY2lhbCBwcmFjdGljZSwgZGln
+aXRhbCBnYW1lcyBhcyBtZWRpYSBmb3IgY29tbXVuaWNhdGlvbiBhbmQgcmVsYXRlZCB0b3BpY3Mu
+IFBhcnRpY3VsYXIgaW50ZXJlc3QgZ29lcyB0byB1bmRlcnN0YW5kaW5nIHRoZSBjdWx0dXJhbCwg
+cHN5Y2hvbG9naWNhbCBhbmQgc29jaW9sb2dpY2FsIGltcGxpY2F0aW9ucyBvZiBkaWdpdGFsIGdh
+bWluZyBhbmQgb2YgZGlnaXRhbCBnYW1lcyBhcyBjdWx0dXJhbCBvYmplY3RzIGFuZCBtYXNzLW1h
+cmtldCBwcm9kdWN0cywgYXMgd2VsbCBhcyBzZXJpb3VzIGFwcGxpY2F0aW9ucyBvZiBkaWdpdGFs
+IGdhbWVzLiBUaGUgc2VjdGlvbiBvZmZlcnMgYW4gaW50ZXJkaXNjaXBsaW5hcnkgcGxhdGZvcm0g
+Zm9yIGV4cGxvcmluZyB0aGUgaW1wYWN0IGFuZCBtZWFuaW5nIG9mIGdhbWUgY3VsdHVyZShzKS4g
+V2Ugd2VsY29tZSBjb250cmlidXRpb25zIGRlYWxpbmcgd2l0aCB0b3BpY3MgdHJhZGl0aW9uYWxs
+eSBhc3NvY2lhdGVkIHdpdGggc3BlY2lmaWMgZmllbGRzIHN1Y2ggYXMgY29tbXVuaWNhdGlvbiwg
+YnV0IGFsc28gaHVtYW5pdGllcywgbWVkaWEgcHN5Y2hvbG9neSwgZWR1Y2F0aW9uIHNjaWVuY2Us
+IGVjb25vbWljcyBhbmQgb3RoZXJzLiBXZSBkZWxpYmVyYXRlbHkgYWltIGZvciBib3RoIHF1YWxp
+dGF0aXZlIGFuZCBxdWFudGl0YXRpdmUgd29yayBpbiB0aGUgYmVsaWVmIHRoYXQgYm90aCBkZXNl
+cnZlIGVxdWFsIGF0dGVudGlvbiBhbmQgYXJlIGFibGUgdG8gcmVpbmZvcmNlIG9uZSBhbm90aGVy
+LiBXZSBlbXBsb3kgYW4gaW5jbHVzaXZlIGRlZmluaXRpb24gb2YgZGlnaXRhbCBnYW1lcyBhcyBh
+bnkgZ2FtZSBwbGF5ZWQgb24gYW55IGRpZ2l0YWwgZGV2aWNlIGFuZCBleHBsaWNpdGx5IGRvIG5v
+dCBsaW1pdCB0aGUgc2NvcGUgZm9yIHN1Ym1pc3Npb25zIGluIHRoaXMgcmVnYXJkLiBUaGUgY2Fs
+bCBpcyBvcGVuIGZvciB3b3JrcyBkZWFsaW5nIHdpdGggYm90aCBtb3JlIHRyYWRpdGlvbmFsIGZv
+cm1zIG9mIGRpZ2l0YWwgZ2FtaW5nLCByYW5naW5nIGZyb20gbm9zdGFsZ2lhIGFuZCByZXRybyBn
+YW1pbmcgdG8gbmV3ZXIgaW5ub3ZhdGlvbnMgc3VjaCBhcyB2aXJ0dWFsIHJlYWxpdHksIGF1Z21l
+bnRlZCByZWFsaXR5LCBvciBsb2NhdGlvbi1iYXNlZCBnYW1lcy4NCg0KU2VlIHRoZSBmdWxsIGNh
+bGwgYXQgaHR0cDovL3d3dy5lY3JlYTIwMjBicmFnYS5ldS8yMDE5LzEwLzA5L2h0dHAtd3d3LWVj
+cmVhMjAyMGJyYWdhLWV1LWNhbGwtZm9yLXBhcGVycy8NCg0KRGVhZGxpbmUgZm9yIGFic3RyYWN0
+cyBpcyBKYW51YXJ5IDE1LCAyMDIwLg0KDQpPbiB0aGUgYmVoYWxmIG9mIHRoZSBEaWdpdGFsIEdh
+bWVzIFJlc2VhcmNoIFNlY3Rpb24sDQoNCk1hcmtvIFNpaXRvbmVuDQoNCg0KKioqDQpNYXJrbyBT
+aWl0b25lbg0KQXNzb2NpYXRlIFByb2Zlc3NvciwgUGhEDQpJbnRlcmN1bHR1cmFsIGFuZCBEaWdp
+dGFsIENvbW11bmljYXRpb24NCkRlcGFybWVudCBvZiBMYW5ndWFnZSBhbmQgQ29tbXVuaWNhdGlv
+biBTdHVkaWVzDQpVbml2ZXJzaXR5IG9mIEp5dsOkc2t5bMOkLCBGaW5sYW5kDQoNCnA6ICszNTgg
+NDAgNTc2IDc4NjENCmU6IG1hcmtvLnNpaXRvbmVuQGp5dS5maQ0KdDogbWFya29zaWl0b25lbg0K
+dzogaHR0cHM6Ly9tYXJrb3NpaXRvbmVuLndvcmRwcmVzcy5jb20vDQo=

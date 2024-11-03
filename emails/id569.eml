@@ -1,0 +1,314 @@
+Received: from BYAPR08MB5221.namprd08.prod.outlook.com (2603:10b6:a03:54::38)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR02CA0061.NAMPRD02.PROD.OUTLOOK.COM; Thu, 31 Oct 2019 09:39:35 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=lxNydM1aUx+Q9MIywP8q4wrB3tjNugs/pUP4uR4JVTXnJUhesXQlPv7BcXS46LpbwMtwhgHtfP/ta4j0iSOQq5ayjJBiitYhJMVAxJUjkaJCGIp/ZdkFJ3tjKujqQC7if+Emrn1L+D9LwQCZc8Rm0PjLAkVyDv9cbBPEiVAVRMZV1d5dkQBN2FMFGs15XWkDcyKP7/Vsyc6jHd45p4JGiiILzqg4mb77Y02B40egt7Lj3LHMKekcchR94SfFxZQbtKThxPoRSiNkG4+ClqfWkoX84sZSEMHAG5IQbtnK5DStnffesOdXHUYdWJn+XdKgbBAxZ9hAwBHWoLm67q9Dcg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=ChNzxYlTl6s+UXyNdnLF/eh/B5RYk/7u6l6HKtosixo=;
+ b=Vz8BUToc9N52VzRAUbdFDlwvxl4GQrgz7g+TYS0Tcd86PN4s7XUEMDQNwvmbzsKEyi5h6XRlxjtqrhdfjuqSh5dwjnpybJuMrBsbg9L4aWx5bx/K7uWio/gEPLk6jOeHgSOqNGTP87wgCKwGMUYcL2NJBNEWN1POEgmq77AOO/+5I7nGOF1S175Ul6x48pc2q/DqVB9ZdqD6pwTEUEP/8snIyI8IFzF96c51twAXMmYj+biHO/F4a58vbyfFAh1FlGVbQHsSyBhHXMaL3Rkz2j2TclZXQRyRqz8qywqCql7GRz3FzSYhNDLLdLd3dR+YH5p4ES+RQuGZN4TEJEHB6Q==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=none (sender ip is
+ 193.166.164.158) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=listserv.uta.fi;
+ dmarc=temperror action=none header.from=tuni.fi; dkim=none (message not
+ signed); arc=fail (47)
+Received: from BYAPR08CA0002.namprd08.prod.outlook.com (2603:10b6:a03:100::15)
+ by BYAPR08MB5221.namprd08.prod.outlook.com (2603:10b6:a03:71::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2387.24; Thu, 31 Oct
+ 2019 09:39:33 +0000
+Received: from CO1NAM04FT043.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::201) by BYAPR08CA0002.outlook.office365.com
+ (2603:10b6:a03:100::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2408.17 via Frontend
+ Transport; Thu, 31 Oct 2019 09:39:33 +0000
+Authentication-Results: spf=none (sender IP is 193.166.164.158)
+ smtp.mailfrom=LISTSERV.UTA.FI; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=temperror action=none
+ header.from=TUNI.FI;compauth=pass reason=105
+Received-SPF: None (protection.outlook.com: LISTSERV.UTA.FI does not designate
+ permitted sender hosts)
+Received: from smtp1.tuni.fi (193.166.164.158) by
+ CO1NAM04FT043.mail.protection.outlook.com (10.152.91.173) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2387.20 via Frontend Transport; Thu, 31 Oct 2019 09:39:32 +0000
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.tuni.fi (Postfix) with ESMTPS id B18F37F80D;
+	Thu, 31 Oct 2019 11:39:29 +0200 (EET)
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x9V0Zg6I027101;
+	Thu, 31 Oct 2019 11:39:10 +0200
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          658960 for GAMESNETWORK@LISTSERV.UTA.FI; Thu, 31 Oct 2019 11:39:08
+          +0200
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x9V9d8Z1002042 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Thu, 31 Oct 2019 11:39:08 +0200
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x9V9d8lY006509 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <gamesnetwork@listserv.uta.fi>; Thu, 31 Oct 2019 11:39:08 +0200
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x9V9d6lU000407 for
+          <gamesnetwork@listserv.uta.fi>; Thu, 31 Oct 2019 11:39:06 +0200
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Thu, 31 Oct 2019 11:39:06
+          +0200 (EET)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail1.tuni.fi (mail1.tuni.fi [193.166.164.156]) by smtp1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x9V9d624030077 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Thu, 31 Oct 2019 11:39:06 +0200
+Received: from EUR01-DB5-obe.outbound.protection.outlook.com
+          (mail-eopbgr150111.outbound.protection.outlook.com [40.107.15.111])
+          by mail1.tuni.fi (Postfix) with ESMTPS id 0DD653FB5D for
+          <GAMESNETWORK@uta.fi>; Thu, 31 Oct 2019 11:39:06 +0200 (EET)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+          b=XSC8cWVwVv7TSF4eU5uHwEmWZUd36KVYqFHq81YP3Vzq3iPdUlAfQZyr1OV32NFTfgqiZQnPi/NNq6MYI4Wk92ZADdVGvrthKipv3P/l/5LOoW2RoF0PZMONAzSSVmcT7eXaeg/kAx989PP6OfeIZi6hXPISUWPQtWFXUKN54su+uuKYuQv/JyFqwViThDUCgzwNT8gxoY/253dLKjmyQRQXGntuc7eVE4S4lrKAIP/u034/yfj1UL8PrZJyPDxu3R+pMiUh9Fe4Fms2gVVADOn+Z/9S9oy0k9I8dzPj8GHOR0EIFnXmLEEPSMGkmJfNs5mnIDzqGMc2f9OQ0oDYmg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+                       s=arcselector9901;
+                       h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+                       bh=X3VvZm2BYNvh3qqKHy9glIPXgvW/A7zMpmf2g4EyQpY=;
+                       b=QK+qnIzAASE7ZZI1MPvSRtmvWdpUEpB41qJH3+/rC3WoaRgRIWUyaBd1rj8GnEQzZbpXlvNjS+mWjsNnvH/MLGUQjUnbNL7dVtMZrMiLgDxWQuUAis0viNVJULS5MuRdU/ggjYSZaQmevHMZDW13rMlgwF8+OZT7dKKwN8aQnuBKluZXdBYVwxX1EqG2065+rzXaFxRO2DVe6ZYxxJvUdJ74763OjCq8hFHdevuV/TGWq3FS6Eh3VFEwpOm4pRm5NIH1mYhy3S5qTs9Lqf2UBY5q5uvEB2PxDdkyEgcLcl/gwAFWXKB8jv6YwV3tFcJfCCV3aCLfD7Y6I7JI0kMquA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+                         smtp.mailfrom=tuni.fi; dmarc=pass action=none
+                         header.from=tuni.fi; dkim=pass header.d=tuni.fi;
+                         arc=none
+Received: from AM0PR08MB3121.eurprd08.prod.outlook.com (52.134.95.31) by
+          AM0PR08MB2977.eurprd08.prod.outlook.com (52.134.124.141) with
+          Microsoft SMTP Server (version=TLS1_2,
+          cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2408.19; Thu,
+          31 Oct 2019 09:39:04 +0000
+Received: from AM0PR08MB3121.eurprd08.prod.outlook.com
+          ([fe80::299e:bd7a:c3ed:a5eb]) by
+          AM0PR08MB3121.eurprd08.prod.outlook.com
+          ([fe80::299e:bd7a:c3ed:a5eb%7]) with mapi id 15.20.2387.028; Thu, 31
+          Oct 2019 09:39:04 +0000
+Thread-Topic: CFP + 3rd keynote: DiGRA 2020
+Thread-Index: AdWPzi7xzjqWe2MuRDSX44MV8tCEAA==
+Accept-Language: en-GB, fi-FI, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [153.1.102.149]
+x-ms-publictraffictype: Email
+X-MS-Office365-Filtering-Correlation-Id: 4503b770-85b1-4a35-d97f-08d75de63bee
+X-MS-TrafficTypeDiagnostic: AM0PR08MB2977:|BYAPR08MB5221:
+X-MS-Exchange-PUrlCount: 10
+x-microsoft-antispam-prvs:
+ <AM0PR08MB2977353E91086541604B7225FD630@AM0PR08MB2977.eurprd08.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:10000;OLM:9508;
+x-forefront-prvs: 02070414A1
+X-Forefront-Antispam-Report-Untrusted:
+ SFV:NSPM;SFS:(10019020)(376002)(366004)(136003)(346002)(396003)(39860400002)(199004)(189003)(8676002)(786003)(316002)(15974865002)(186003)(66066001)(2906002)(8936002)(305945005)(74316002)(81156014)(76116006)(6916009)(256004)(14444005)(81166006)(64756008)(66556008)(7736002)(66446008)(66946007)(66476007)(6306002)(86362001)(14454004)(55016002)(478600001)(6506007)(30864003)(486006)(6116002)(3846002)(71190400001)(7696005)(66574012)(71200400001)(9686003)(33656002)(966005)(52536014)(5660300002)(476003)(26005)(99286004)(6436002)(25786009)(45776006)(102836004)(446594002)(18886075002);DIR:OUT;SFP:1102;SCL:1;SRVR:AM0PR08MB2977;H:AM0PR08MB3121.eurprd08.prod.outlook.com;FPR:;SPF:None;LANG:en;PTR:InfoNoRecords;A:1;MX:1;
+x-ms-exchange-senderadcheck: 1
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ 949qI2DgjJkbiezhYbN1el8qcs4NGtPTkuRFf6DVA+iNATVzgOfFC3WDEGeRonkko91LfdVwLTb95lUpwWzolVCKvqPNai1TJMoH8V0XXiYlmWnjTkf1Ccm9MFOxrH7BPsTmAHNllgYBJvn8QwBlJD4Vvozc123uCFmS/h14V7P6wm0CHTC4d2qDCe1O4JvOWLZzxtBmoGrlxxi1/0d/XcNrcUxjccYqXl+Z9uP0fExqcpwrUCFrmtOpxtB2uop5IodXg1l9MKtXGMZEiqAKEA4w0Of+ntF+rBcTTJheJBM2HpqdtMd7w6guysPlLNteDp/ZEdG8pWNoTPFSLb2XylZkBg6ZOrLwbcARRo5QqI9ORENIub+J8glkqyIW2bNSxXcfcDlx+47YoaOaQM4eqOvZ+rxzpUVZgXXHGHHNyo//G45z/WqEHxPjIfYOnO4rtCgcBDoEj7BK5XvW1CVet6ldNp4wAi+VQLL8YEMaGpk=
+x-ms-exchange-transport-forked: True
+Content-Type: text/plain; charset="iso-8859-1"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM0PR08MB2977
+X-Greylist: Sender IP whitelisted,
+            not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]);
+            Thu, 31 Oct 2019 11:39:06 +0200 (EET)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,L_BDY_CLICKSMTHNG,L_CLDAPP_NOPRVC,L_GNRC_MSGID_RGXP,L_HDR_HAS_DKIM,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1015
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from quoted-printable to 8bit by listserv.uta.fi id
+                      x9V9d8Z0002043
+Message-ID: <AM0PR08MB31218C265883355F3B2A7E94FD630@AM0PR08MB3121.eurprd08.prod.outlook.com>
+Date: Thu, 31 Oct 2019 09:39:04 +0000
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: =?iso-8859-1?Q?Frans_M=E4yr=E4_=28TAU=29?= <frans.mayra@TUNI.FI>
+Subject: [GAMESNETWORK] CFP + 3rd keynote: DiGRA 2020
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: GAMESNETWORK@LISTSERV.UTA.FI
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@LISTSERV.UTA.FI
+X-MS-Exchange-Organization-ExpirationStartTime: 31 Oct 2019 09:39:32.5584
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4503b770-85b1-4a35-d97f-08d75de63bee
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ CO1NAM04FT043.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:193.166.164.158;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(428003)(249900001)(286005)(5142003)(7192003)(176002)(189003)(199004)(66066001)(36906005)(15974865002)(6116002)(246002)(3846002)(6506007)(966005)(52536014)(30864003)(2361001)(14454004)(45776006)(2870700001)(4006050)(47776003)(66574012)(7696005)(75640400001)(2351001)(476003)(8636004)(486006)(6392003)(356004)(23756003)(7846003)(33656002)(9686003)(26005)(6306002)(2160300002)(16003)(55016002)(126002)(34206002)(50466002)(25786009)(66346011)(14444005)(42882007)(63370400001)(336012)(8676002)(305945005)(7596002)(1096003)(99286004)(43066004)(7636002)(146002)(74316002)(102836004)(7736002)(446594002);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB5221;H:smtp1.tuni.fi;FPR:;SPF:None;LANG:en;PTR:smtp1.tuni.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT043.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 738c0afb-ef4f-4e94-ce73-08d75de62b0f
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 31 Oct 2019 09:39:32.0020
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4503b770-85b1-4a35-d97f-08d75de63bee
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB5221
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.4960245
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2408.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	wl:1;pcwl:1;ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750127)(520011016)(520004050)(702028)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?iso-8859-1?Q?PugJJHRdcDqPOzMlkTPcCqR4XKy7Oqq7dkOUGBo/XuNqJNxT5rJB4KODyN?=
+ =?iso-8859-1?Q?f2JtVavh6jHVbxOCAFRQzbnJ3AckKSRca3gTLgCEekGLnPc2eprRZyp5s0?=
+ =?iso-8859-1?Q?zC98B60Qbdco5fLUPbJq5mub9lBDwyJCtTjsEKKuyg+sGdmiNpSHGfM/oJ?=
+ =?iso-8859-1?Q?OLvSNYJwAXW5N50ixebS9Qofm6UKwAVEe02Ezx/DN2wMReewYTAJCtIoC2?=
+ =?iso-8859-1?Q?m++VQVlUCH4ObZHSG4HT57/tDSmyLz902OfstXAdDq1Uc8zjnPNRsiWfNz?=
+ =?iso-8859-1?Q?5YgFmBNMHeOYntjwTn2b8erVnpLMipcAMBNx+1rXwKwMQednt3X3K7t/Qe?=
+ =?iso-8859-1?Q?/3MPqfr7+QA1HU5FM3h2zE9e6EMMuN/HGTUHRpnQSrA+2bJtvpEAzXilOA?=
+ =?iso-8859-1?Q?03bI+5W4FfcDbDuKDwNX2g3II4cft821vO1ru8IyZuX4nHJOdvOd4uSPuM?=
+ =?iso-8859-1?Q?TSlB7YR6XaGcl6dAkprXOPp/iusfxAb1n7o8OKG9wRioWkiI8Vcw7WP7oE?=
+ =?iso-8859-1?Q?Wnj6ZpqTq714aQHjnJo/wYszpeW4JYfBPPfbPR8oUZiix/4mfpVPcU2yTF?=
+ =?iso-8859-1?Q?EZYTGvSlR9q7vfvXaMww7sJAYBM10TczAefGv0ugWVRmZoxKh+LhWCf+QQ?=
+ =?iso-8859-1?Q?8fGFNSp9zEJWl83eco9Ti3e9+2T5LnuR/vodrssc/hXfh4lEPMK0qiC8TV?=
+ =?iso-8859-1?Q?3pS5t3c7bfiAjMAhFm1Msxpfu9mnFnV4GkQsJVv+qAwF2fOQtXNPyk48m9?=
+ =?iso-8859-1?Q?Io7ys71hP/1fBLzfbIO4siGI8aPzlq1JcxoiLU2SbhgY0/6cZnB2N2gqEu?=
+ =?iso-8859-1?Q?5+WqTvt4u6/rTTFiq/SwQLOTdKg6wBU365AlycO0NOnA64gOZPkt2HqtT1?=
+ =?iso-8859-1?Q?NR7UFIYrRSKW2sDNw8aaX1BfntLpNmyRBVqXysiNztdTO/X58ZKxxe7X1x?=
+ =?iso-8859-1?Q?SgRiKM7CY+KY9447BUOevLtoFOfvbCbTL+RVjXYpAc8+arjEbDzjKGmkB7?=
+ =?iso-8859-1?Q?8BDRIQmGMsMRlUDih/+cLr3Z6l8SbNrQJlnYoh+Imk6xHBFpbJo25kKHtB?=
+ =?iso-8859-1?Q?D99fZEmTXasoHueZ9PLd2fY26/S+ZNj9fMt4pyAROW+GoUgdCf/rxSD4dF?=
+ =?iso-8859-1?Q?oI2yikPh34p7lETEVuglG8oq8Ljqns8VcLQ2iNsKQqj8DQoEEA6GTh/Ykp?=
+ =?iso-8859-1?Q?QmR1ye2x2ruHSkNqJ8YO7x+kGtOfGSrvBE8=3D?=
+MIME-Version: 1.0
+
+*Call for Papers & 3rd Keynote Announcement: DiGRA 2020*
+
+Tampere, Finland (June 2-6, 2020)
+https://digra2020.org/
+
+Updates:
+- We have already announced two conference keynotes, Dr Susanna Paasonen and Dr. Kishonna Gray. Today we are happy and proud to announce the third keynote speaker, Dr. Rilla Khaled. Dr Khaled is an Associate Professor in the Department of Design and Computation Arts at Concordia University in Montréal, Canada. Dr. Khaled's research is focused on the use of interactive technologies to improve the human condition, a career-long passion that has led to diverse outcomes, including designing award-winning serious games, creating speculative prototypes of near-future technologies, developing a framework for game design specifically aimed at reflective outcomes, and working with Indigenous communities to use contemporary technologies to imagine new, inclusive futures. See: https://digra2020.org/keynotes/.
+- The conference submissions are still open - but it is less than a month to the deadline of full paper, abstract and panel submissions (29 November 2019).
+
+DiGRA 2020 will take place in Tampere, Finland from June 3rd-6th 2020. A pre-conference will be held on Tuesday, June 2nd. DiGRA 2020 is co-hosted by the Centre of Excellence in Game Culture Studies (https://coe-gamecult.org/), a joint effort of game research teams in three universities (Tampere, Turku, and Jyväskylä).
+
+The theme of DiGRA 2020 is "Play Everywhere", exploring the workings of play and games as wide-ranging cultural phenomena which have shaped many areas of society. The ludification of culture, including practices around games, play, and related phenomena have arguably broadened and diversified approaches in the field. Games pervade culture and society, play is everywhere.
+
+We encourage reflection upon how the collapse of traditional divisions between work and leisure, and between seriousness and playfulness, affect both culture in general, and play and games in particular. On the one hand, the cultural importance of playful phenomena has increased, rendering games one of the defining expressive means of contemporary society. They come with the promise of enhanced agency and participation on an unprecedented scale. On the other hand, the dominance of games and play introduces new challenges, such as the question of videogame hegemony and its global impacts.
+
+While game studies in the past has often underlined the hedonic, empowering aspects of games and play, the ludification of society also raises difficult questions around the socioeconomic and environmental cost of game culture. Who is entitled to design, play, and enjoy games and under what conditions?
+
+With the theme of "Play Everywhere", DiGRA 2020 makes space for an interdisciplinary critical debate around related question, inviting a diversity of voices. As mainstream phenomena around games and play grow, so do approaches and tactics at the margin of games culture. This creates potentials for vibrant exchange, methodical variety, and multifaceted critique. DiGRA 2020 welcomes contributions on different game formats, expressions, and phenomena both related to digital and non-digital games.
+
+We are inviting submissions for the following six tracks:
+
+- Philosophy and Theory of Play & Games: theoretical frameworks and investigations of games and play phenomena as well as meta-reflection on game studies methods and practices.
+- Game Analyses, Criticism and Interpretation: analyses, close-readings, and critical discussions of game texts.
+- Game History and Cultural Context: explorations of game histories, contemporary game cultures and regional game studies.
+- Play and Players: empirical research on play and playful behaviour, players, fandom, and game communities.
+- Game Design, Production and Distribution: reflections on making and research creation, processes of production and design, and the games market.
+- Serious Games and Education: research on games and play for learning, education and therapy, gamification, and other applications beyond game studies.
+
+There will be several special events associated with the conference, including:
+
+- PhD Consortium: Organized on the pre-conference conference day, this event will allow PhD students to discuss key issues and seek feedback from experienced scholars. It will provide opportunities for further development of research skills that will be of help to emerging scholars in achieving their academic goals.
+
+- Game History Consortium: The consortium brings together game historians and stakeholders such as museum, library, and archive professionals, as well as game company representatives to discuss current topics in game historical research, uses of history, game, gameplay, and game culture preservation, and themes such as local game histories and game industries beyond digital games. The venue is organized in collaboration with the Finnish Museum of Games (opened in January 2017) and the Finnish Game Preservation Roundtable Network.
+
+- Nordic Larp: Theory and Practice: Finland, among other Nordic countries, has a strong tradition of Live action role-playing Games (Larp), both in practice and in research attention. In conjunction with the conference, a half-day event will feature a Larp workshop and a series of talks on Nordic Larps.
+
+More thematic workshops can be proposed to the organisers (see submission guidelines below).
+
+*Important dates*
+
+- Submission opens: 1 October 2019
+- Full papers, abstracts and panels submission deadline: 29 November 2019
+- Workshop proposals submission deadline 13 December 2019
+- Announcement of review results and workshop acceptance: 20 January 2020
+- Workshop submissions deadline: 14 February 2020
+- Workshop submissions results: 18 February 2020
+- Early bird registration & program deadlines: 13 March 2020
+- Camera-ready papers & abstracts deadline: 3 April 2020
+- Conference dates: 3-6 June 2020
+
+The submissions will be handled via the EasyChair system (the link to be provided at the website later).
+
+More information will be updated into the conference website: www.digra2020.org.
+
+*Submission Guidelines*
+
+We welcome a range of contributions to DiGRA 2020: full papers, extended abstracts, panel and doctoral consortium participation, and workshop proposals.
+
+Full papers and extended abstracts will be peer-reviewed, published on the conference website and published in the conference proceedings available via open-access through the DiGRA Digital Library: http://www.digra.org/digital-library. Panel proposals will be peer-reviewed and published on the conference website, but will not be included in the conference proceedings published through the DiGRA Digital Library. Workshop proposals will be selected by the conference organizers based on non-anonymous submissions.
+
+All except workshop submissions should be made via EasyChair, which opens on 1st October 2019. Workshop proposals should be sent directly to the conference email.
+
+Authors are asked to direct questions to the program chairs Sabine Harrer, Tomasz Z. Majkowski and Hanna Wirman.
+
+- Full Paper:
+
+Full papers are expected to be 5000-7000 words plus references, submitted as anonymized pdf on DiGRA Submission Template. Submissions must be original, which means that they have not been published or are under peer review elsewhere.
+
+Full papers are peer-reviewed publications of original game studies research, presenting mature, complete research. Authors must present accepted full papers at the DiGRA conference. Accepted manuscripts will appear in the Proceedings of the 2019 DiGRA International Conference, which is published in the open access DiGRA Digital Library.
+
+- Extended Abstract:
+
+The suggested length for an extended abstract is 500-800 words, with a maximum of 1000 words, excluding references (only key references should be included), submitted as anonymized pdf using the DiGRA Submission Template. Give a short description in the abstract field of the conference management system, but there is no need for extended abstracts to contain an abstract.
+
+The purpose of an extended abstract is to demonstrate a contribution interesting to DiGRA audiences. An extended abstract might describe a study or research program that is underway, but might also describe a pending program of research. It might outline findings, or it might establish and discuss a research question. It might describe the study's method or methodology, or it might focus on outcomes and results. It might describe work that is planned, work that is in progress, or work that has been completed.
+
+Accepted extended abstracts will appear in open access DiGRA Digital Library.
+
+- PhD Consortium Submission:
+
+Selection for the PhD consortium will be based on an extended abstract based on ongoing PhD research project, with a maximum of 1000 words, excluding references (see Extended Abstract guidelines, above). They should be submitted to PhD Consortium track, as NON-anonymized pdf, with a short description in the abstract field of the conference management system (there is no need for a doctoral consortium application to have an abstract). Submissions must use the DiGRA 2019 submission template.
+
+- Panel:
+
+A panel session will typically occupy a single conference session and have a duration of 80 to 90 minutes. Panel proposals should have a maximum length of 1000 words, excluding references, plus a 100 word biography of each participant. They should include: the focus or topic of the panel; a description of why the topic will be of interest or relevant to DiGRA attendees; a list of confirmed participants and a description of their background and expertise. Panel proposals will be peer-reviewed.
+
+Panels should be submitted as pdfs on DiGRA Submission Template (optional).
+
+- Workshop:
+
+The conference workshops are three to six hours long sessions focused on a particular game-related topic. Workshops provide an opportunity for new ideas, theories and trends to be presented and discussed. Workshops can also be practical tutorials.
+
+Concise workshop proposals of no more than 1000 words (excluding bibliography) should include major objectives and expected outcomes of the workshop, the justification for the workshop informed by current trends and research, the format and activities planned for the workshop, the organizers' background, the anticipated number of participants and the way they will be selected.
+
+Please note that the submission  should not be anonymous as the organizers' background is very important in the decision-making process for workshops.
+
+Submit workshop proposals directly by email to by 13 December 2019.
+
+- Number of submissions per author:
+
+Authors cannot submit more than two papers and/or extended abstracts at DiGRA 2020, including PhD Consortium submissions. An individual can be co-authors on as many full papers and extended abstracts as they like, but cannot submit more than two as main author/presenter. If the limit is exceeded, only the two first submissions will be reviewed.
+
+The limit does not include participation in panels or workshops.
+
+Please follow the latest news and possible updates to these guidelines at: www.digra2020.org.
+
+Welcome to Tampere!
+
+On behalf of the organising team;
+-- 
+   Frans Mäyrä, Professor, ITC/COMS/TRIM/Gamelab, TUNI.fi
+   Director, Centre of Excellence in Game Culture Studies
+   ** mail: ITC, 33014 Tampere University, Finland **
+   ** frans.mayra@tuni.fi / fransmayra@gmail.com **
+   https://coe-gamecult.org www.fransmayra.fi www.unet.fi
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=GAMESNETWORK&A=1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html

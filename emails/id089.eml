@@ -1,0 +1,316 @@
+Received: from BN6PR08MB3554.namprd08.prod.outlook.com (2603:10b6:404:4c::30)
+ by BN8PR08MB6196.namprd08.prod.outlook.com with HTTPS via
+ BN6PR03CA0068.NAMPRD03.PROD.OUTLOOK.COM; Tue, 29 Oct 2019 07:24:30 +0000
+Received: from BYAPR08CA0033.namprd08.prod.outlook.com (2603:10b6:a03:100::46)
+ by BN6PR08MB3554.namprd08.prod.outlook.com (2603:10b6:405:69::79) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2387.24; Tue, 29 Oct
+ 2019 07:24:28 +0000
+Received: from CO1NAM04FT050.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::204) by BYAPR08CA0033.outlook.office365.com
+ (2603:10b6:a03:100::46) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2387.23 via Frontend
+ Transport; Tue, 29 Oct 2019 07:24:28 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ CO1NAM04FT050.mail.protection.outlook.com (10.152.91.145) with Microsoft SMTP
+ Server id 15.20.2387.20 via Frontend Transport; Tue, 29 Oct 2019 07:24:27
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id DAC902E1A23; Tue, 29 Oct 2019 03:22:52 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org DAC902E1A23
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1572333772;
+	bh=QETcMJApBoJc9vf6ru5Wl1mTKY9IxcQ6u1LW9uKko+c=;
+	h=Date:To:Subject:From:From;
+	b=tOczhUTg9zz1W8awJUE6m1EWgNvcAuwg6AFPmhXg7CnEsJtT8M8K/FVgAB5dj+z7J
+	 VL2BGH+HoF+Ahit8+6EU7+n9T8/gM8DLyF1tDJobGkniVKi2X+OMxMfyxdEC0NEkDM
+	 8qaZ2gKr6ltvDLekWmi7lvFsfKo91mUNcCX5IO+g=
+Date: Tue, 29 Oct 2019 03:22:52 -0400
+To: foaad@calpoly.edu
+Subject: CFP: IEEE CPS: Conference on Big Data & Data Science
+ (CSCI-ISBD'19: Dec. 5-7, 2019, USA); Deadline: Nov 5
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20191029072252.DAC902E1A23@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Oct 2019 07:24:27.2160
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ b609cdc9-872d-4a5d-4038-08d75c4107f2
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BN6PR08MB3554;H:world-comp.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT050.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: b609cdc9-872d-4a5d-4038-08d75c4107f2
+X-MS-TrafficTypeDiagnostic: BN6PR08MB3554:
+X-MS-Exchange-PUrlCount: 12
+X-MS-Oob-TLC-OOBClassifiers: OLM:7219;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Oct 2019 07:24:27.1139
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b609cdc9-872d-4a5d-4038-08d75c4107f2
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN6PR08MB3554
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.3496777
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2387.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?3aYCNk7PDyve96izwT7y4mXuc11miaQz12MwF8tprjrZg2qs7taNeys1U2Xi?=
+ =?us-ascii?Q?rZixwMm4xuNoLrxCo6aIXYL6ZDdt0MUacBr6+hMegyxC+2j8bFWA0peGNGtt?=
+ =?us-ascii?Q?GCxrrcKdBr25vvftJU0r7CMKpffW16Ni5/V7pbIFD9P0q4Moy/Q7IopavG2B?=
+ =?us-ascii?Q?7hy14gx5Ko9zKvn9rvA6D5wGTcDXo4gHpBNmby1DNxOBU+zfqi4YUiJi8vkJ?=
+ =?us-ascii?Q?ab34RKpopHo0o+S+jPDP1+wjIdZyxQI0/7kcAcR3GJfZpsm3CgpPfZDReQHb?=
+ =?us-ascii?Q?Rty7aQgHpeWlwsrXHal3vVRXujDgQ2SLkU9y7hwQaX4JqFqBDUDpI7FUo62W?=
+ =?us-ascii?Q?jB40RU4k1C0TFdLuWEyOWwSeY3+7dluh5SHAb4nfrE3HQYys0rE7956MGYsh?=
+ =?us-ascii?Q?S7x2D+D5/x96/B4XVJGLZyYoIdE64Bt/Mt7RuQBL9+cOahDiquK6v0KC+vyg?=
+ =?us-ascii?Q?AbdboGLGXYBBuRpYJmpgBEJcKqWiicDj0L3X2uzNj8M8AdR1WM43Uoxaxnz/?=
+ =?us-ascii?Q?tPOxSg4iy0O38cDViVsaxwi8bx82O1dcWIB27U3SuKepB7XZ7UtEdyew4AOF?=
+ =?us-ascii?Q?PRChH8n8YXsBaAcm83k9bPN10aM39dhgQ9N1pT/4gQ6DTCqbv0K4unkYHoVH?=
+ =?us-ascii?Q?xqwQsbNVcYiWK5dvkHj+MufJDLrZZ/0zA2xwvp+cWmYq8nJdA0GLnPyeB8Cb?=
+ =?us-ascii?Q?qyYUTbqsCTpWkSRRYRmEJBBNCcVyFRAVGfWJs24QdCWDhVTUUdu3gfLQCTos?=
+ =?us-ascii?Q?nieaU3AJMFLp3skFw67c4OZp4pkAcjLalloSQ34nBXp1/4SohiuIoVQmSoCR?=
+ =?us-ascii?Q?C9kjlL0IcjvqLiaYG0zEwMplPS4jvCxq6RD0hqC5Y6aH0yq0hRABbsF2SxwX?=
+ =?us-ascii?Q?cZvWIouM+/uGCVIRKwXnh+CMfr6ZfM6JtHPrFyEoIHwkzPNKez4vQ4vWyZdJ?=
+ =?us-ascii?Q?rBZohefNB0w2EFosXEiyOMN1M9E2cgrPNCele3mte7MnpJ3gCOIKBpS7pVYX?=
+ =?us-ascii?Q?XqriyXu4dmjSjiF6cUYrvlVlx7vOFHSnVkS11nKVvzFDbteB8DvNgwT/nqhO?=
+ =?us-ascii?Q?dM/zdsWjlmOVLJnI+SUkbqerDRt/rElHyxKjhHt9xtEicukXk6Tgs4Q1ck/8?=
+ =?us-ascii?Q?DJKldRmTUXXecYj39p0O67kdMm3KmUFinWabYwekWXdXsXfIQjjezoLAd59H?=
+ =?us-ascii?Q?sh6fhV3PIMFdQZVchQXVeH4U6t68VDMhbuD4/V4WE4zx8EZDpq4K+j5JWjJH?=
+ =?us-ascii?Q?/ZyGyVq6lkK904E8q7qvGS/QxIVuu97enzSEQw64Jrvj7l5/QaOuUjJQ+Gaa?=
+ =?us-ascii?Q?H3LePr6D5t33CKrDJ7KpY6/o/Ge/tz5TzeAwfg3IKuQVZda/5VIq1KkZ+zzC?=
+ =?us-ascii?Q?kC1PSX5vBQcPm85XgJvYKzxh6nzX7MJTcZQ90MFOB9wfTTZrvEMzHWJjv8YE?=
+ =?us-ascii?Q?bEPMF71OWCCZceZ6F5E1EPUcWn4N8jb8ZjoNrguMB0a2CgZMNl9UUA=3D=3D?=
+MIME-Version: 1.0
+
+
+                   CALL FOR LATE BREAKING PAPERS
+            Paper Submission Deadline: November 5, 2019
+
+        International Symposium on BIG DATA & DATA SCIENCE
+
+          (CSCI-ISBD: December 5-7, 2019, Las Vegas, USA)
+    https://americancse.org/events/csci2019/Symposiums/csci_isbd 
+
+                        Joint Conferences
+         https://americancse.org/events/csci2019/Symposiums 
+
+                        IEEE Xplore entry
+  https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+All accepted papers will be published in the proceedings of the 2019
+International Conference on Computational Science & Computational
+Intelligence ( CSCI: https://americancse.org/events/csci2019 ).
+Since its inception, all CSCI proceedings have always been approved
+and included into IEEE Xplore indexation/digital-library citation
+index databases.
+
+SCOPE AND LIST OF TOPICS:
+
+   ALGORITHMS FOR BIG DATA:
+   Data and Information Fusion; Algorithms (including Scalable methods);
+   Natural Language Processing; Signal Processing; Simulation and
+   Modeling; Data-Intensive Computing; Parallel Algorithms; Testing
+   Methods; Multidimensional Big Data; Multi-linear Subspace Learning;
+   Sampling Methodologies; and Streaming.
+
+   BIG DATA FUNDAMENTALS:
+   Novel Computational Methodologies; Algorithms for Enhancing Data
+   Quality; Models and Frameworks for Big Data; Graph Algorithms and
+   Big Data; Computational Science; and Computational Intelligence.
+
+   DATA SCIENCE:
+   Conversion of Data to Information; Conversion of Data to Knowledge;
+   Data Mining; Information Mining; Predictive Analytics; Knowledge
+   Discovery; Cloud Computing; Databases and Information Integration;
+   Signal Processing; Natural Language Processing; Information
+   Retrieval Methods; and Information Visualization.
+
+   INFRASTRUCTURES FOR BIG DATA & DATA SCIENCE:
+   Cloud Based Infrastructures (applications, storage & computing
+   resources); Grid and Stream Computing for Big Data; High
+   Performance Computing, Including Parallel & Distributed Processing;
+   Autonomic Computing; Cyber-infrastructures and System Architectures;
+   Programming Models and Environments to Support Big Data; Software
+   and Tools for Big Data; Big Data Open Platforms; Emerging
+   Architectural Frameworks for Big Data; Paradigms and Models for
+   Big Data beyond Hadoop/MapReduce, ...
+
+   BIG DATA & DATA SCIENCE MANAGEMENT AND FRAMEWORKS:
+   Database and Web Applications; Federated Database Systems;
+   Distributed Database Systems; Distributed File Systems; Distributed
+   Storage Systems; Knowledge Management and Engineering; Massively
+   Parallel Processing (MPP) Databases; Novel Data Models; Data
+   Preservation and Provenance; Data Protection Methods; Data
+   Integrity and Privacy Standards and Policies; Novel Data Management
+   Methods; Crowdsourcing; Stream Data Management; and Scientific Data
+   Management.
+
+   BIG DATA SEARCH:
+   Multimedia and Big Data; Social Networks; Web Search and Information
+   Extraction; Scalable Search Architectures; Cleaning Big Data (noise
+   reduction), Acquisition & Integration; Visualization Methods for
+   Search; Time Series Analysis; Recommendation Systems; and Graph
+   Based Search and Similar Technologies.
+
+   SECURITY & PRIVACY IN THE ERA OF DATA SCIENCE & BIG DATA:
+   Cryptography; Threat Detection Using Big Data Analytics; Privacy
+   Threats of Big Data; Privacy Preserving Big Data Collection;
+   Intrusion Detection; Socio-economical Aspect of Big Data in the
+   Context of Privacy and Security.
+
+   APPLICATIONS OF BIG DATA:
+   Big Data as a Service; Big Data Analytics in e-Government and
+   Society; Applications in Science, Engineering, Healthcare,
+   Visualization, Business, Education, Security, Humanities,
+   Bioinformatics, Health Informatics, Medicine, Finance, Law,
+   Transportation, Retailing, Telecommunication, all Search-based
+   applications, ...
+
+PUBLISHER:
+
+   IEEE CPS: https://www.computer.org/conferences/cps 
+   All accepted papers will be published in the proceedings of the 2019
+   International Conference on Computational Science & Computational
+   Intelligence ( CSCI: https://americancse.org/events/csci2019 ).
+   Since its inception, all CSCI proceedings have always been approved
+   and included into IEEE Xplore indexation/digital-library citation
+   index databases. Past conference proceedings can be accessed via
+   IEEE Xplore Digital Library at:
+   Volume I (2014):  https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6822065 
+   Volume II (2014): https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6822285 
+   Volume (2015):    https://ieeexplore.ieee.org/xpl/conhome/7420813/proceeding 
+   Volume (2016):    https://ieeexplore.ieee.org/xpl/conhome/7879541/proceeding 
+   Volume (2017):    https://ieeexplore.ieee.org/xpl/conhome/8554238/proceeding 
+   Volune (2018):    Approved & Confirmed for indexation/publication in IEEE Xplore
+                     (will appear in IEEE Xplore in October/November, 2019)
+
+   Since the proceedings will be published soon after the conference
+   by IEEE CPS, we are quite FLEXIBLE with paper submission deadline.
+   WE HAVE A REVOLVING DEADLINE: ie, papers will be refereed within
+   48 hours from the date of submission using our fast-track evaluation
+   system (FTE) where referees receive a small honorarium pay for their
+   services.
+
+TYPE OF SUBMISSIONS/PAPERS (Late Breaking Papers):
+
+ - Full/Regular Research Papers (maximum of 6 pages):
+   Regular Research Papers should provide detail original research
+   contributions. They must report new research results that represent
+   a contribution to the field; sufficient details and support for
+   the results and conclusions should also be provided. The work
+   presented in regular papers are expected to be at a stage of
+   maturity that with some additional work can be published as journal
+   papers.
+
+ - Short Papers (maximum of 4 pages):
+   Short papers report on ongoing research projects. They should provide
+   overall research methodologies with some results. The work presented
+   in short papers are expected to be at a stage of maturity that with
+   some additional work can be published as regular papers.
+
+ - Poster Papers (maximum of 2 pages):
+   Poster papers report on ongoing research projects that are still in
+   their infancy (i.e., at very early stages). Such papers tend to
+   provide research methodologies without yet concrete results.
+
+REVIEW PROCESS
+
+   Each paper will be peer-reviewed by 2 to 4 peers (except for papers that
+   are philosophical in nature - such papers would be considered for panel
+   discussions.) Confidentiality of submitted material will be maintained.
+   Papers will be evaluated on the basis of originality, impact, significance,
+   quality of research, quality of writing, and contribution to conference
+   program and diversity. Papers whose authors include one or more members
+   of the program committee will be evaluated using the double-blinded
+   review process. Authors whose papers are not selected for publication
+   can submit a rebuttal letter; rebuttals will be evaluated by 4 members
+   of the Program Committee.
+
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+   https://americancse.org/events/csci2019/paper_submission 
+
+
+DEADLINES - DATES:
+
+   November 5, 2019:     Submission of Late Breaking Papers
+                         https://american-cse.org/ 
+   November 7, 2019:     Notification of acceptance/rejection
+                         Two days after the date of submission but by
+                         no later than November 7, 2019
+   November 20, 2019:    Final papers & Author Registrations
+
+   December 5-7, 2019:   International Symposium on BIG DATA & DATA SCIENCE
+                         (CSCI-ISBD: December 5-7, 2019, USA)
+              https://americancse.org/events/csci2019/Symposiums/csci_isbd 
+                         CSCI-ISBD will be held in conjunction with other
+                         affiliated research events; for more information,
+                         see https://americancse.org/events/csci2019 
+
+
+DEMOGRAPHY HISTORY (based on 2014 through 2019 participation data):
+
+   In the past, about 42% of the attendees have been from outside
+   USA; from 59 nations. 56% of registrants have been from academia,
+   32% from industry; 11% from government agencies and research labs;
+   and 1% unknown. The conference has had participants, speakers,
+   authors affiliated with over 154 different universities; including
+   many from the top 40 ranked institutions; major IT corporations,
+   including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+   Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+   Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+   Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+   Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+   BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+   Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+   major corporations, including, Exxon Mobil, JPMorgan Chase,
+   Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+   Petroleum Group, Aerospace Electronic Technology (China), Max
+   Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+   (France), Forschungszentrum Juelich (Germany), Secured Smart
+   Electric Vehicle (Korea), ...; government research agencies and
+   national laboratories, including, NSF, NIH National Institutes of
+   Health, US Air Force (multiple research labs), NSA National Security
+   Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+   Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+   Lab, US National Cancer Institute, Swedish Defence Research Agency,
+   NIST US National Institute of Standards and Technology, U.S.
+   Geological Survey, US National Library of Medicine, US Air Force
+   (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+   Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+   Army, Korea Internet & Security Agency, Suez Canal Research Center,
+   Okinawa Bureau (Japan), Canadian Medical Protective Association,
+   Osong Medical Innovation Foundation (Korea), National Institute of
+   Informatics (Japan), ...; and three Venture Capitalists and nine
+   Intellectual Property attorneys.
+
+CONTACT:
+
+   Questions and inquiries should be sent to:
+   Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.

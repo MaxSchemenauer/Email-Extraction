@@ -1,0 +1,555 @@
+Received: from BN7PR08MB3954.namprd08.prod.outlook.com (2603:10b6:a03:74::44)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0067.NAMPRD05.PROD.OUTLOOK.COM; Wed, 12 Feb 2020 09:54:28 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=J+1YPNTbD8Kp5c73412C1bRHNp5T+ITeX06OCybrWeBf6lSd4pRRHDq4hjQGSUswHph/KA115oxSDJcH5smRXLYI+wSJaNHEcyK3PF3n+maQ/GKBYNHKzOgwxgnzv47l5mgf05JGhSlA9h6ian3Pmh94HW0hzg/Q1OFvphgK6wbX+jGO+EwhyTNrwDKGBF2MHxo7064T/L/rkrje9AJTBr1KYhQpQX4XeIw19ZBO0LV5ebfAFXjFqVsGXtVOdXxeikNHPRdLSGreI5soPrToc5f+vfssJ5XIdtra/qNLSdygmgSkV5JmskOkb3/9Gq7f8LU8gUGq6lPpJFMLxGlBAw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=gKx4hDXMMVmPdiYpranMlIc0zA78tmyLaYBnaWyMHS4=;
+ b=l6pXJGvOYE2j5xyFNF8g/mc4qjifMYbXUT7+UrY9CVEbTJlsRP2WtYqO2y12zzebb9Foo/Xc7BjugUnPQQGAykiMd8LCoB8969g30cPGHITQTEnSXDIPFRfVSIH+ZvDq0q28uRHQdedgxobigj+1x007HMJ7gH0GbxdUKU/8B7wjlkQy1noNkhDX2azRv1EPho1yozKhrSbFDcQWTjw3Dp2OTSGcdGrI5CYWZiXyb6mJEp3GRvPq0IJesPRzzbndTalVdNJPIoWb4am7oXJeB+6/9HfJmn5PibJrSUgKlodjD+stdmKLExDo1JAOf3Wmb3fP0ur4yKQG8fuuBEWQcA==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 193.166.164.158) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=lists.tuni.fi;
+ dmarc=fail (p=none sp=quarantine pct=100) action=none header.from=gmail.com;
+ dkim=fail (signature did not verify) header.d=tuni.onmicrosoft.com; dkim=fail
+ (body hash did not verify) header.d=gmail.com; arc=fail (47)
+Received: from BN6PR08CA0083.namprd08.prod.outlook.com (2603:10b6:404:b6::21)
+ by BN7PR08MB3954.namprd08.prod.outlook.com (2603:10b6:406:85::26) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2707.23; Wed, 12 Feb
+ 2020 09:54:26 +0000
+Received: from BN3NAM04FT029.eop-NAM04.prod.protection.outlook.com
+ (2603:10b6:404:b6:cafe::cf) by BN6PR08CA0083.outlook.office365.com
+ (2603:10b6:404:b6::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2729.22 via Frontend
+ Transport; Wed, 12 Feb 2020 09:54:26 +0000
+Authentication-Results: spf=pass (sender IP is 193.166.164.158)
+ smtp.mailfrom=lists.tuni.fi; calpoly.edu; dkim=fail (signature did not
+ verify) header.d=tuni.onmicrosoft.com;calpoly.edu; dmarc=fail action=none
+ header.from=gmail.com;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of lists.tuni.fi designates
+ 193.166.164.158 as permitted sender) receiver=protection.outlook.com;
+ client-ip=193.166.164.158; helo=smtp1.tuni.fi;
+Received: from smtp1.tuni.fi (193.166.164.158) by
+ BN3NAM04FT029.mail.protection.outlook.com (10.152.92.148) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2729.22 via Frontend Transport; Wed, 12 Feb 2020 09:54:25 +0000
+Received: from lists.tuni.fi (lists.tuni.fi [193.166.164.155])
+	by smtp1.tuni.fi (Postfix) with ESMTP id 91E917F4FC;
+	Wed, 12 Feb 2020 11:54:22 +0200 (EET)
+Received: from lists.tuni.fi (localhost [127.0.0.1])
+	by lists.tuni.fi (Postfix) with ESMTP id 7756737DB;
+	Wed, 12 Feb 2020 11:54:22 +0200 (EET)
+X-Original-To: gamesnetwork@listrelay.tuni.fi
+Delivered-To: gamesnetwork@listrelay.tuni.fi
+Received: from EUR01-DB5-obe.outbound.protection.outlook.com
+ (mail-eopbgr150102.outbound.protection.outlook.com [40.107.15.102])
+ by lists.tuni.fi (Postfix) with ESMTP id BD86829E0
+ for <gamesnetwork@listrelay.tuni.fi>; Wed, 12 Feb 2020 11:54:20 +0200 (EET)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=NPUxSv4BvbzK/4uXf42tzmE3bYmRKFVBLI0bFay9dxuDx4wrOLhynxx1A4KL8boygSwg46pf0mithItOguW2PFrg5EtS91L4CoRQTvJ+kCW87PGZ4guxzoOZzrUHqcrof1WuAC6w3wWvI+u85H7jCIbyZs9beG8VpWRZZVxN2hVQYddA5nuJW84X+Zvs+lzJ2+jBg5c2OheTvG3IJiVbqnc/+dVH76EwlTlBS1sQgApDEFZIfTh30pSxiwN3RETZKRHs/sq5HpzJ5N8QJkKaKEkGHMck9HltFb3eoaH5ZP+g3oC7trxrk7yWJBcJCBu6mY5QYsbzPSg97nWRRJ4n9A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=sz35HEvxCEK68HqfBCKN5Djwhz1SfVYbIcUwpnEZOuo=;
+ b=ab83kv2EUVQ/Wo4Xbi1dIvmeyIe1Sx+jnAetOVqNcWl0ssVxRVphTLJ9D1DInKkX+1XmCnoVdmK8ofAxyo9TH6PKmXC06dtB6pJlgpAbopMUm1+hgGVzxX0H0mYJMTgEHLL8Lad45d6V16T8fX7AxGpSr5Mcw4iedcX6VjpywYNdq1EvMFAeod4djK0/z1FV8HKIaTBx051lOAzlc5QuynXjHGaFjCVd3sGUFnk2jeqFNIiv34bdf94KlJnZeJs/cQFt0VSXWQSXe9lSB54BhwywIKPQkZ21J/mqHe4G7cpJ+wvWWYjPDpjymGLBcc1OjIosS9PFD+E08sGKN24cIw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=tuni.onmicrosoft.com; 
+ s=selector2-tuni-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=sz35HEvxCEK68HqfBCKN5Djwhz1SfVYbIcUwpnEZOuo=;
+ b=cnlEedz7xmK87NS4BMrZxX7CiVixRI0zl8qJw/gyqyoV+eTUK4QkB4r50y9Uqpdp+C1swK/KqsW4S7eqVGTxls8zHWqRnc2yK2q5N3rz8hQShgUek9Uw/Qj0L5Nx57it/3D5ouPuvdVKAynWjAWB/OZUCjlS2b8rA1l9qN10HHY=
+Resent-From: <gamesnetwork@lists.tuni.fi>
+Received: from DB6PR0802CA0041.eurprd08.prod.outlook.com (2603:10a6:4:a3::27)
+ by DB7PR08MB3817.eurprd08.prod.outlook.com (2603:10a6:10:77::31) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2707.26; Wed, 12 Feb
+ 2020 09:54:19 +0000
+Received: from DB3EUR04FT008.eop-eur04.prod.protection.outlook.com
+ (2a01:111:f400:7e0c::208) by DB6PR0802CA0041.outlook.office365.com
+ (2603:10a6:4:a3::27) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2729.22 via Frontend
+ Transport; Wed, 12 Feb 2020 09:54:19 +0000
+Authentication-Results-Original: spf=softfail (sender IP is 193.166.164.157)
+ smtp.mailfrom=gmail.com; lists.tuni.fi; dkim=pass (signature was verified)
+ header.d=gmail.com;lists.tuni.fi; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ gmail.com discourages use of 193.166.164.157 as permitted sender)
+Received: from mail2.tuni.fi (193.166.164.157) by
+ DB3EUR04FT008.mail.protection.outlook.com (10.152.24.117) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2729.22 via Frontend Transport; Wed, 12 Feb 2020 09:54:19 +0000
+Received: from mail-qt1-f181.google.com (mail-qt1-f181.google.com
+ [209.85.160.181])
+ by mail2.tuni.fi (Postfix) with ESMTPS id CD816A30C3
+ for <GAMESNETWORK@uta.fi>; Wed, 12 Feb 2020 00:05:30 +0200 (EET)
+Received: by mail-qt1-f181.google.com with SMTP id d9so42873qte.12
+ for <GAMESNETWORK@uta.fi>; Tue, 11 Feb 2020 14:05:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=sz35HEvxCEK68HqfBCKN5Djwhz1SfVYbIcUwpnEZOuo=;
+ b=W+Lc7QK2X8Ne7NpDhEADjJOhq0/VXhahF5qI6xdqOnZv+rLrLlEKdnT4/FTgAG6SKJ
+ UmMN6TJQ8r8WF/lL6prh43kRUiYca1ImYaJbuLKwxYDrV1v05x54+vHVIxd8oRPdSw5v
+ FrFJq68mhpaIL7hqhd3aZpgHchNrOC7omRzYS40ku5M16bsI/Hj/8PPECuyeRzbpIpRJ
+ lr3QXpJcqdTvOzIHN5q7ha0YC2EtFxPvZ+5oKKflKMvq0SrdmtOkvdfVPnLOrCcPdMXh
+ Z+MVq9eo32bMiZK56USx1GqvsNuL+SnHzLMo3H8xZt+OP5SiNB1zOJRELeIkTiQYe2Ur
+ R+7A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=sz35HEvxCEK68HqfBCKN5Djwhz1SfVYbIcUwpnEZOuo=;
+ b=eQCojBe/Ki2cWnv9bGxL205qM/T7beTAeLg3mEIo16IjRZVoCkZ8gCE2R8r2Rsxwyc
+ HNAGwiYhms695/QIrjCLUFEvzyjNZ1cmy5XQXHctpmaM+kG8JlgkxAyFBNmHnvvb3orO
+ 6GRnn8DmLPu0Z18eAl2PNv7c4cb5Es0VnfrIEXOXhml9Qp8QbT6jUPPQS1JvwgNIIQhZ
+ 8x/tFi4wdjI+y+xUHPOzNDSB70NBDSlzm3V1uxCfHFlKvv2z2Ggk4+E4sr3UzsotVifw
+ nH5Ec2Gw9gEp3ro5MZXpIHsfYnJfcekIENNUDtyMOrO2WUUN+Garss7LlkGBGKMJURQi
+ aPMw==
+X-Gm-Message-State: APjAAAWm0ubiDD4yZnK0ih7s6OiBgsLR1hCKH2VPe+BmSDeqYE/e3OEX
+ c+QMO0WOCB8xxWdtW0DoJoO8jpNSga7lPirzXF0=
+X-Google-Smtp-Source: APXvYqy7JQirAYpT/a3A0rcCnBASMhadv48XOefwBtGJ4/7575HRxbg4WKPMcJJhaTEhv//wh6kVGBtWlxExAPeSxV8=
+X-Received: by 2002:ac8:4e2c:: with SMTP id d12mr4547263qtw.219.1581458729369; 
+ Tue, 11 Feb 2020 14:05:29 -0800 (PST)
+References: <CAEk6Ec_BTfv+ETS7j3LLE7KkWxLUNeUZDr=ZgFsYLxfyd1+uKg@mail.gmail.com>
+In-Reply-To: <CAEk6Ec_BTfv+ETS7j3LLE7KkWxLUNeUZDr=ZgFsYLxfyd1+uKg@mail.gmail.com>
+From: Micael Sousa <micaelssousa@gmail.com>
+Date: Tue, 11 Feb 2020 22:05:17 +0000
+Message-ID: <CAHHzi-gzw4zFFNyBke93BTPCvw=Lrh-SnwAbutwyrfnLEdf7pA@mail.gmail.com>
+To: Aaron Trammell <mobilestudios@gmail.com>
+X-EOPAttributedMessage: 1
+X-Forefront-Antispam-Report-Untrusted: CIP:193.166.164.157; IPV:; CTRY:FI;
+ EFV:NLI; SFV:NSPM;
+ SFS:(10019020)(4636009)(39860400002)(376002)(346002)(396003)(136003)(189003)(199004)(70586007)(8676002)(73392003)(68406010)(2160300002)(82202003)(6636002)(336012)(26005)(33964004)(36906005)(316002)(66574012)(498600001)(786003)(5660300002)(6862004)(4326008)(76482006)(55446002)(7636002)(356004)(2906002)(86362001)(246002)(7596002)(6666004)(42186006)(966005)(54886006);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:DB7PR08MB3817; H:mail2.tuni.fi; FPR:;
+ SPF:SoftFail; LANG:en; PTR:mail2.tuni.fi; MX:1; A:1; 
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 2a02013a-fa85-4b82-d2f3-08d7afa18b53
+X-MS-TrafficTypeDiagnostic: DB7PR08MB3817:|DB7PR08MB3817:|BN7PR08MB3954:
+X-LD-Processed: fa6944af-cc7c-4cd8-9154-c01132798910,ExtFwd
+X-MS-Exchange-Transport-Forked: True
+X-Microsoft-Antispam-PRVS: <DB7PR08MB3817B0A884F2CB67DE3421D6DC1B0@DB7PR08MB3817.eurprd08.prod.outlook.com>
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;OLM:9508;
+X-Forefront-PRVS: 0311124FA9
+X-MS-Exchange-SenderADCheck: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ KJY8IogNs54vk14tiCWXlnkIGNLY0TbfxPtnFib+6Hn0Wa/DORmQUEXFZ/LSwmQ0I0TRXTe0u+6BllW1Ft+5kNZah4qfZq+8atuah83j/Q8LGdddYQ78nOs/Ze1eGfYXFNKTcDi693u/2hLmI3cFQDkm2bf3AVObH1LUxmi5GKH33xKg9Nur8nuXUwWUjPFggkPd9ghTVvvUmAyDVBQiLJunMkEzJvdAXYZBkGjwbGrBreyrheOWvaGEok9B/E7yItdZYXosp4DTfmYEC62IQ7OCAfPNbtFdYGewpYdmymZ1Iu6kqUxlamb7dHNtgRAyiEgneGbz3hHF5O2oyj++3boslappfpR3aB9kX0XT2BOcgTjYFdkuuAMuK+i2zRJiA4OriJiP2Unn7GHt9q7BVBzC89HqftwYdCJdO3ViUryghy0FAd7TW0MF/Rs9mP8l+DFbgZAa89G9W97lLwR7tD13r6/Ff55LWB4NR1Z68zfTyeMfCsqQItZp8rZOvN8fS/n/hupKByxWN2zEVcRuvO8PAiOXyqeiOWgElqz25MUI+wTCfWRKKQG5fm/KsjozPgRSi17BdGm2yKa5BoAHT/Xu0eZ8ct6X4UzgFGHywJy12o3LtIo+hsd6JGZhUdMGnwaR8Hux2AiAf+FnDA2kKBcT5L4As7/6gY+GrAF0rXGMohaq32aeal+FsQksln0x
+X-ExternalRecipientOutboundConnectors: fa6944af-cc7c-4cd8-9154-c01132798910
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB7PR08MB3817
+Cc: Games Research Network <GAMESNETWORK@uta.fi>
+Subject: Re: [Gamesnetwork] <3 <3 CFP: GENeration Analog: The Tabletop Games
+ and Education Conference <3 <3 DUE 2/14 <3 <3
+X-BeenThere: gamesnetwork@lists.tuni.fi
+X-Mailman-Version: 2.1.15
+Precedence: list
+List-Id: <gamesnetwork.lists.tuni.fi>
+List-Unsubscribe: <https://lists.tuni.fi/mailman/options/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=unsubscribe>
+List-Archive: <https://lists.tuni.fi/mailman/private/gamesnetwork/>
+List-Post: <mailto:gamesnetwork@lists.tuni.fi>
+List-Help: <mailto:gamesnetwork-request@lists.tuni.fi?subject=help>
+List-Subscribe: <https://lists.tuni.fi/mailman/listinfo/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=subscribe>
+Content-Type: multipart/mixed; boundary="===============8535922781898316080=="
+Errors-To: gamesnetwork-bounces@lists.tuni.fi
+Sender: "Gamesnetwork" <gamesnetwork-bounces@lists.tuni.fi>
+Resent-Message-Id: <20200212095422.7756737DB@lists.tuni.fi>
+Resent-Date: Wed, 12 Feb 2020 11:54:22 +0200 (EET)
+Return-Path: gamesnetwork-bounces@lists.tuni.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Feb 2020 09:54:25.8336
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 2a02013a-fa85-4b82-d2f3-08d7afa18b53
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ BN3NAM04FT029.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:193.166.164.158;IPV:;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(286005)(189003)(199004)(8676002)(63766006)(58800400005)(75640400001)(76482006)(4326008)(7846003)(6862004)(9036002)(44144004)(19810500001)(6666004)(1096003)(16670700002)(2160300002)(33964004)(8636004)(73392003)(246002)(42882007)(82202003)(336012)(4006050)(42186006)(36906005)(55446002)(7596002)(26005)(6636002)(966005)(7636002)(66574012)(54886006);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB3954;H:smtp1.tuni.fi;FPR:;SPF:Pass;LANG:en;PTR:smtp1.tuni.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT029.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 7c9b4e81-05ba-44ed-95e9-08d7afa18765
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Feb 2020 09:54:25.4613
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 2a02013a-fa85-4b82-d2f3-08d7afa18b53
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB3954
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.0090053
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2729.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?L29rUHhzRFJrekNSTmlrRk91Rk5zdGtpcVhSdVh1Vkgyc3ZYbTRjdHlLaGp5?=
+ =?utf-8?B?dHVTQUVGWFFrTDJzMjFJSStubVhOd2lzZVVUQTQ5RmI5ZXRqNTV1WlJ5K3NR?=
+ =?utf-8?B?R0R3UkRSUFUwY2tBTWd4dnVpcnBxYTFxVWhXazNXNW1NSGdIbzVVeENGZEtP?=
+ =?utf-8?B?ZnJYSU13a3VUNHdCR0txenVkK0ZGVFhINDB3NkkzTk5JTDJJcFpJYjRYbzRq?=
+ =?utf-8?B?anYyTzlWN0V0cFNkdWtmYytRendVM29MVWI1NlA3Y2grM3RMZEcxaVg3RE0y?=
+ =?utf-8?B?OXdGTndtN0FLYTZsT1RqOTNxTk1YeEJQR3Rabmc2cHMzL0ovcllYYmhPWUdH?=
+ =?utf-8?B?Qlg3VjgzdWtkNENxczd6K0JTR2hyR0ZacnhST2VyUWV2OWdVbTRqK3E3UCtL?=
+ =?utf-8?B?NnBXdEY4My9TNGppMjc0QlJacHp1bGlPbnlzd21UWEk1MXZLQ3g5N2ttVlln?=
+ =?utf-8?B?VFZoVjJwNDNWeUpnTjFkUW13QTFESzVxcXEzMkR1QnpQYmwvMTFKMDcvN0pJ?=
+ =?utf-8?B?N1Q3bU5LT2o5L3ZBMFhuWDZ6RlRPUDJhK1lQZDRMWUFYSVFGQm5uQ1pkRlJM?=
+ =?utf-8?B?RHQvY0FEMzlmSGdQRFZ6akRKdERBakFBSkRYVkRMemhOWGJHYklVU0FWK2lv?=
+ =?utf-8?B?bU9uS1pnOFlQdXk4aUYxa2x3elFRaDhBejRvWjhDOG4xQVJZS0RKTzZaR0Jp?=
+ =?utf-8?B?eG5CWWpHRjdXb1E3d1FXaFA4R1FNcmRrSWsrYjE0eUN0TFJHZzU5V0lkaHZM?=
+ =?utf-8?B?aytHUTRWcjlFRktXbGZzNVk1ZEx4MDM0RlFnamFxUksxZCsxeXd3R2V2bFBE?=
+ =?utf-8?B?OGhyMXltZFl1MGVuaG9pWHI3MjF3MHpZVjhtaHYvQkZsVjhZczk5Y200endu?=
+ =?utf-8?B?Nm9VdTJnT214Q1g2a0xsT1VxdDFkQ0NwVmRhN3FaekF4dHM5NHpycUl1bnp2?=
+ =?utf-8?B?bFRxZEdRZHJVeEVmVkkya2czRlphZWljaDVsdnVnZHdkNDF4bkFaMFZtNkto?=
+ =?utf-8?B?TmFZYzIzN2RDN3F5bHo4dmJkZ2hNcWlaUGpkUEtGR2NFMEhxNXNJejJyazJP?=
+ =?utf-8?B?QzlGZmRKWFVObHNrdVI1OHU3di8vUUFrMjVGNHFXVk5mTWFWcUY1bjZLcXdC?=
+ =?utf-8?B?UC9mRnNpVlluaDR5dGxmdHB3VFdIZzdBL1BIMGJlN1R0ZU1pZ2xsN1hpMWFv?=
+ =?utf-8?B?VVpIZ05aRFQxRUV4TFpBKys5blVKOUpkTmtXamM0NUx4QW5GZ3pjRGp5d0tJ?=
+ =?utf-8?B?SGRVTHQ0dnVSMlZuMk0vTGltaHhmcWpDa3pYR2p1RVI1cm43alZOa3BnSUZF?=
+ =?utf-8?B?Ynp3cGs3MzExZGhtTUNKVW9RQTVyVG5XK2pROW9ScUhnVFFIVTZTQlUrUmFt?=
+ =?utf-8?B?aWx1YXJXTUhYYmNFa1NXcG5QZ1QreTlPenQ5VzE3ZGg5NkpYekRiS2RmcXlD?=
+ =?utf-8?B?NXc3TmFUR3VWMnYxOFJQL2JwWnM3dXhtZEE5cVJ0cXRDOHhxb2VEaHM0aHlQ?=
+ =?utf-8?B?Vm1yeXk3anRJNVgzSjlzUlI2MXBzdFAvWmFRSkxzS1hoNjZBZ3JoQkxsMW50?=
+ =?utf-8?B?L1AvTVpneXlJZUdxUzc2dys2MitBRlNjNHBuS2dBSFVqUDZNaWNyMWRzOFZX?=
+ =?utf-8?B?TnRrRjhDRkhlL0hjYmltZHJzNi8ySGVHaENSUDNmaEFkNCtWZlVqeUM3TDI0?=
+ =?utf-8?B?d3FXL2Z2L2w5U1EzME1mZ3FvaFFkQzFwTmVSK2NhZmcyTk5qSWZnUEhxQnNx?=
+ =?utf-8?B?MXRmQktDU3hjOW9zM0E1RExmQUQ0cVN1VDAvNTBWZU1xSy9WdWp4eU1Felpa?=
+ =?utf-8?B?TnlKNnJselhVeWlwQ2tmR01Ta1I1MElzQmc1Nm92bHVvOU02WG1wT3VIVExM?=
+ =?utf-8?B?R2NDWVJmTCtiK1QwWHVETFA4THJadVhaK3N1cjZNUktUaHc9PQ==?=
+MIME-Version: 1.0
+
+--===============8535922781898316080==
+Content-Type: multipart/alternative; boundary="000000000000ca82ca059e540deb"
+
+--000000000000ca82ca059e540deb
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello. I am interested but I can't attend gencon... Best regards. MS
+
+A ter=C3=A7a, 11/02/2020, 21:54, Aaron Trammell <mobilestudios@gmail.com>
+escreveu:
+
+> Hey all,
+>
+> Apologies for cross-posting. Last call for the GENeration Analog CFP. Hop=
+e
+> to see you all at GenCon this year. Please forward on and see the attache=
+d
+> note on travel and lodging.
+>
+> Cheers,
+> Aaron
+>
+> HEADER: CFP: GENeration Analog: The Tabletop Games and Education Conferen=
+ce
+>
+> Educators, scholars, and designers of all backgrounds are invited to join
+> us for our inaugural analog games summit at GenCon 2020.
+>
+> Sponsored by Game In Lab
+> <https://www.game-in-lab.org/en/game-in-lab-game-research-program/> and A=
+nalog
+> Game Studies, GENeration Analog bridges theory and practice in the hobby
+> games industry. We are also excited to announce that Scott Nicholson and =
+Elizabeth
+> Hargrave will be joining us as keynotes to discuss the importance of
+> analog games as a hobby, as activism, and as a scholarly field.
+>
+> GenCon has long served as the crossroads of the analog game industry in
+> North America. Its size and scope have expanded as hobby board games, car=
+d
+> & dice games, and role-playing games are being published at an astonishin=
+g
+> rate, with crowdfunding and enthusiastic design communities leading the
+> way. Alongside them, however, stride teachers and academics who see the
+> benefit of such games in teaching and researching topics from cell biolog=
+y,
+> to geography, to medieval ethics. Thanks to parallel work being done
+> annually within numerous game studies conferences across the world, an
+> exciting convergence of global game culture and local innovation is takin=
+g
+> place right before our eyes. It only makes sense for us to meet where so
+> many tabletop & live-action game players meet: GenCon.
+>
+> We invite scholars, teachers, graduate students, and the intellectually
+> curious to submit proposals for Game in Lab, a one-day conference to be
+> held at GenCon 2020 in Indianapolis, IN. The topic is =E2=80=9CAnalog Gam=
+es &
+> Education=E2=80=9D and can be interpreted broadly. We intend to bring tog=
+ether
+> those working on non-digital games (and their digital hybrids) to build
+> connections and advance a pedagogy for understanding analog games. The
+> conference format will consist of engaging panel presentations of selecte=
+d
+> papers, circulated in advance. We seek thoughtful work from authors at an=
+y
+> stage of their academic careers.
+>
+> Proposals for papers will include:
+> * An abstract no longer than 300 words
+>
+> Papers could potentially cover (but are not limited to):
+> =E2=80=94Teaching subject material through analog games
+> =E2=80=94Analog games as historical texts
+> =E2=80=94Procedural rhetoric in analog games
+> =E2=80=94Representation in game art and mechanics
+> =E2=80=94Social tensions in analog games
+> =E2=80=94Analog games and performance
+> =E2=80=94Quantitative reasoning through analog games
+> =E2=80=94Platform studies and analog games
+> =E2=80=94Decolonization, anti-racism, and activism in analog games
+> =E2=80=94The consequences of classification within analog games
+> =E2=80=94Analog/digital hybridity in games
+> =E2=80=94Economic analyses of distribution and publishing in the analog g=
+ames
+> industry
+>
+> Submit materials to analoggamestudiesjournal@gmail.com with =E2=80=9CGame=
+ in Lab=E2=80=9D
+> somewhere in the subject line.
+>
+> Abstracts Due: February 14th, 2020
+> Abstracts Acceptance Notice: March 15th, 2020
+> Full Papers Due: July 1st, 2020
+> Actual Conference Date: July 29th, 2020
+>
+> *Check out our travel FAQ to learn more about travel to Gen Con!*
+> <http://analoggamestudies.org/generation-analog-travel-faq/>
+>
+> *This conference is jointly sponsored by Game in Lab, and the Analog Game
+> Studies Editorial Board.  Game in Lab
+> <https://www.game-in-lab.org/en/game-in-lab-game-research-program/>, the
+> board games research supporting program, is the result of a collaboration
+> between Asmodee Research and the Innovation Factory. Asmodee Research is =
+a
+> department of Asmodee Group, promoting the development and valorization o=
+f
+> gaming as a source of societal value.
+>
+>
+> --
+> Aaron Trammell
+> Assistant Professor
+> Department of Informatics
+> UC Irvine
+> 732.673.3879
+> trammell@uci.edu
+>
+> My online resume/CV: aarontrammell.com <http://www.aarontrammell.com>
+>
+> Editor-in-Chief of *Analog Game Studies <http://analoggamestudies.org/>*
+> Co-Founder and Multimedia Editor of *Sounding Out!: The Sound Studies
+> Blog <http://www.soundstudiesblog.com>*
+> Editorial Board: *Games and Culture*
+> <http://www.sagepub.com/journals/Journal201757/boards#tabview=3Dboards>
+>
+>
+>
+> Gamesnetwork@lists.tuni.fi is the discussion list of DiGRA, the Digital
+> Games Research Association. You can unsubscribe, edit your subscription
+> address, etc. at the web interface:
+> https://lists.tuni.fi/mailman/listinfo/gamesnetwork
+
+--000000000000ca82ca059e540deb
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"auto">Hello. I am interested but I can't attend gencon... Best re=
+gards. MS</div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gma=
+il_attr">A ter=C3=A7a, 11/02/2020, 21:54, Aaron Trammell &lt;<a href=3D"mai=
+lto:mobilestudios@gmail.com">mobilestudios@gmail.com</a>&gt; escreveu:<br><=
+/div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-le=
+ft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr">Hey all,<div><br></div><div>Apologies for cros=
+s-posting. Last call for the GENeration Analog CFP. Hope to see you all at =
+GenCon this year. Please forward on and see the attached note on travel and=
+ lodging.&nbsp;</div><div><br></div><div>Cheers,</div><div>Aaron</div><div>=
+<br></div><div><div><font face=3D"arial, sans-serif">HEADER: CFP: GENeratio=
+n Analog: The Tabletop Games and Education Conference</font></div><div><fon=
+t face=3D"arial, sans-serif"><br></font></div><div><p style=3D"border:0px;m=
+argin:0px 0px 24px;outline:0px;padding:0px;vertical-align:baseline;color:rg=
+b(43,43,43)"><span style=3D"border:0px;font-style:inherit;margin:0px;outlin=
+e:0px;padding:0px;vertical-align:baseline"><font face=3D"arial, sans-serif"=
+>Educators, scholars, and designers of all backgrounds are invited to join =
+us for our&nbsp;<span style=3D"border:0px;font-style:inherit;font-weight:70=
+0;margin:0px;outline:0px;padding:0px;vertical-align:baseline">inaugural ana=
+log games summit</span>&nbsp;<span style=3D"border:0px;font-style:inherit;f=
+ont-weight:700;margin:0px;outline:0px;padding:0px;vertical-align:baseline">=
+at GenCon 2020</span>.</font></span></p><p style=3D"border:0px;margin:0px 0=
+px 24px;outline:0px;padding:0px;vertical-align:baseline;color:rgb(43,43,43)=
+"><font face=3D"arial, sans-serif"><span style=3D"border:0px;font-style:inh=
+erit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">Sponsored =
+by&nbsp;</span><a href=3D"https://www.game-in-lab.org/en/game-in-lab-game-r=
+esearch-program/" style=3D"color:rgb(36,137,13);border:0px;font-style:inher=
+it;margin:0px;outline:0px;padding:0px;vertical-align:baseline" target=3D"_b=
+lank" rel=3D"noreferrer"><span style=3D"font-weight:700"><span style=3D"fon=
+t-style:italic">Game In Lab</span></span></a><span style=3D"border:0px;font=
+-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">=
+&nbsp;and&nbsp;</span><span style=3D"font-weight:700"><span style=3D"font-s=
+tyle:italic">Analog Game Studies</span></span><span style=3D"border:0px;fon=
+t-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline"=
+>, GENeration Analog bridges theory and practice in the hobby games industr=
+y. We are also excited to announce that&nbsp;<span style=3D"border:0px;font=
+-style:inherit;font-weight:700;margin:0px;outline:0px;padding:0px;vertical-=
+align:baseline">Scott Nicholson</span>&nbsp;and&nbsp;<span style=3D"border:=
+0px;font-style:inherit;font-weight:700;margin:0px;outline:0px;padding:0px;v=
+ertical-align:baseline">Elizabeth Hargrave</span>&nbsp;will be joining us a=
+s keynotes to discuss the importance of analog games as a hobby, as activis=
+m, and as a scholarly field.</span></font></p><p style=3D"border:0px;margin=
+:0px 0px 24px;outline:0px;padding:0px;vertical-align:baseline;color:rgb(43,=
+43,43)"><span style=3D"border:0px;font-style:inherit;margin:0px;outline:0px=
+;padding:0px;vertical-align:baseline"><font face=3D"arial, sans-serif">GenC=
+on has long served as the crossroads of the analog game industry in North A=
+merica. Its size and scope have expanded as hobby board games, card &amp; d=
+ice games, and role-playing games are being published at an astonishing rat=
+e, with crowdfunding and enthusiastic design communities leading the way. A=
+longside them, however, stride teachers and academics who see the benefit o=
+f such games in teaching and researching topics from cell biology, to geogr=
+aphy, to medieval ethics. Thanks to parallel work being done annually withi=
+n numerous game studies conferences across the world, an exciting convergen=
+ce of global game culture and local innovation is taking place right before=
+ our eyes. It only makes sense for us to meet where so many tabletop &amp; =
+live-action game players meet: GenCon.</font></span></p><p style=3D"border:=
+0px;margin:0px 0px 24px;outline:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(43,43,43)"><span style=3D"border:0px;font-style:inherit;margin:0px;o=
+utline:0px;padding:0px;vertical-align:baseline"><font face=3D"arial, sans-s=
+erif">We invite scholars, teachers, graduate students, and the intellectual=
+ly curious to submit proposals for Game in Lab, a one-day conference to be =
+held at GenCon 2020 in Indianapolis, IN. The topic is =E2=80=9CAnalog Games=
+ &amp; Education=E2=80=9D and can be interpreted broadly. We intend to brin=
+g together those working on non-digital games (and their digital hybrids) t=
+o build connections and advance a pedagogy for understanding analog games. =
+The conference format will consist of engaging panel presentations of selec=
+ted papers, circulated in advance. We seek thoughtful work from authors at =
+any stage of their academic careers.</font></span></p><p style=3D"border:0p=
+x;margin:0px 0px 24px;outline:0px;padding:0px;vertical-align:baseline;color=
+:rgb(43,43,43)"><font face=3D"arial, sans-serif"><span style=3D"border:0px;=
+font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseli=
+ne">Proposals for papers will include:<br></span><span style=3D"border:0px;=
+font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseli=
+ne">* An abstract no longer than 300 words<br></span></font></p><p style=3D=
+"border:0px;margin:0px 0px 24px;outline:0px;padding:0px;vertical-align:base=
+line;color:rgb(43,43,43)"><font face=3D"arial, sans-serif"><span style=3D"b=
+order:0px;font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-al=
+ign:baseline">Papers could potentially cover (but are not limited to):<br>=
+=E2=80=94Teaching subject material through analog games<br>=E2=80=94Analog =
+games as historical texts<br>=E2=80=94Procedural rhetoric in analog games<b=
+r>=E2=80=94Representation in game art and mechanics<br>=E2=80=94Social tens=
+ions in analog games<br></span><span style=3D"border:0px;font-style:inherit=
+;margin:0px;outline:0px;padding:0px;vertical-align:baseline">=E2=80=94Analo=
+g games and performance<br></span><span style=3D"border:0px;font-style:inhe=
+rit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">=E2=80=94Qu=
+antitative reasoning through analog games<br></span><span style=3D"border:0=
+px;font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:bas=
+eline">=E2=80=94Platform studies and analog games<br></span><span style=3D"=
+border:0px;font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-a=
+lign:baseline">=E2=80=94Decolonization, anti-racism, and activism in analog=
+ games<br></span><span style=3D"border:0px;font-style:inherit;margin:0px;ou=
+tline:0px;padding:0px;vertical-align:baseline">=E2=80=94The consequences of=
+ classification within analog games<br></span><span style=3D"border:0px;fon=
+t-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline"=
+>=E2=80=94Analog/digital hybridity in games<br></span><span style=3D"border=
+:0px;font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:b=
+aseline">=E2=80=94Economic analyses of distribution and publishing in the a=
+nalog games industry</span><span style=3D"border:0px;font-style:inherit;mar=
+gin:0px;outline:0px;padding:0px;vertical-align:baseline"><br></span><span s=
+tyle=3D"border:0px;font-style:inherit;margin:0px;outline:0px;padding:0px;ve=
+rtical-align:baseline"><br></span><span style=3D"border:0px;font-style:inhe=
+rit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">Submit mate=
+rials to&nbsp;</span><a href=3D"mailto:analoggamestudiesjournal@gmail.com" =
+style=3D"color:rgb(36,137,13);border:0px;font-style:inherit;margin:0px;outl=
+ine:0px;padding:0px;vertical-align:baseline" target=3D"_blank" rel=3D"noref=
+errer"><span style=3D"border:0px;font-style:inherit;margin:0px;outline:0px;=
+padding:0px;vertical-align:baseline">analoggamestudiesjournal@gmail.com</sp=
+an></a><span style=3D"border:0px;font-style:inherit;margin:0px;outline:0px;=
+padding:0px;vertical-align:baseline">&nbsp;with =E2=80=9CGame in Lab=E2=80=
+=9D somewhere in the subject line.</span></font></p><p style=3D"border:0px;=
+margin:0px 0px 24px;outline:0px;padding:0px;vertical-align:baseline;color:r=
+gb(43,43,43)"><font face=3D"arial, sans-serif"><span style=3D"border:0px;fo=
+nt-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline=
+">Abstracts Due: February 14</span><span style=3D"border:0px;font-style:inh=
+erit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">th</span><=
+span style=3D"border:0px;font-style:inherit;margin:0px;outline:0px;padding:=
+0px;vertical-align:baseline">, 2020<br></span><span style=3D"border:0px;fon=
+t-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline"=
+>Abstracts Acceptance Notice: March 15</span><span style=3D"border:0px;font=
+-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">=
+th</span><span style=3D"border:0px;font-style:inherit;margin:0px;outline:0p=
+x;padding:0px;vertical-align:baseline">, 2020<br></span><span style=3D"bord=
+er:0px;font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align=
+:baseline">Full Papers Due: July 1</span><span style=3D"border:0px;font-sty=
+le:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">st</=
+span><span style=3D"border:0px;font-style:inherit;margin:0px;outline:0px;pa=
+dding:0px;vertical-align:baseline">, 2020<br></span><span style=3D"border:0=
+px;font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:bas=
+eline">Actual Conference Date: July 29</span><span style=3D"border:0px;font=
+-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">=
+th</span><span style=3D"border:0px;font-style:inherit;margin:0px;outline:0p=
+x;padding:0px;vertical-align:baseline">, 2020</span></font></p><p style=3D"=
+border:0px;margin:0px 0px 24px;outline:0px;padding:0px;vertical-align:basel=
+ine;color:rgb(43,43,43)"><font face=3D"arial, sans-serif"><span style=3D"bo=
+rder:0px;font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-ali=
+gn:baseline"><a href=3D"http://analoggamestudies.org/generation-analog-trav=
+el-faq/" target=3D"_blank" rel=3D"noreferrer"><b>Check out our travel FAQ t=
+o learn more about travel to Gen Con!</b></a></span></font></p><p style=3D"=
+border:0px;margin:0px 0px 24px;outline:0px;padding:0px;vertical-align:basel=
+ine;color:rgb(43,43,43)"><font face=3D"arial, sans-serif"><span style=3D"bo=
+rder:0px;font-style:inherit;margin:0px;outline:0px;padding:0px;vertical-ali=
+gn:baseline">*This conference is jointly sponsored by Game in Lab, and the&=
+nbsp;</span><span style=3D"font-style:italic"><span style=3D"border:0px;fon=
+t-style:inherit;margin:0px;outline:0px;padding:0px;vertical-align:baseline"=
+>Analog Game Studies</span></span><span style=3D"border:0px;font-style:inhe=
+rit;margin:0px;outline:0px;padding:0px;vertical-align:baseline">&nbsp;Edito=
+rial Board.&nbsp;&nbsp;</span><span style=3D"border:0px;font-style:inherit;=
+margin:0px;outline:0px;padding:0px;vertical-align:baseline"><a href=3D"http=
+s://www.game-in-lab.org/en/game-in-lab-game-research-program/" style=3D"col=
+or:rgb(36,137,13);border:0px;font-style:inherit;margin:0px;outline:0px;padd=
+ing:0px;vertical-align:baseline" target=3D"_blank" rel=3D"noreferrer">Game =
+in Lab</a>, the board games research supporting program, is the result of a=
+ collaboration between Asmodee Research and the Innovation Factory. Asmodee=
+ Research is a department of Asmodee Group, promoting the development and v=
+alorization of gaming as a source of societal value.</span></font></p></div=
+></div><div><h1 style=3D"border:0px;font-style:inherit;font-weight:300;marg=
+in:0px 0px 12px;outline:0px;padding:0px;vertical-align:baseline;clear:both;=
+line-height:1.0909090909;text-transform:uppercase;text-align:center"><br></=
+h1><div><br></div>-- <br><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D=
+"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">Aar=
+on Trammell<div>Assistant Professor</div><div>Department of Informatics</di=
+v><div>UC Irvine<br><div>732.673.3879</div><div><a href=3D"mailto:trammell@=
+uci.edu" target=3D"_blank" rel=3D"noreferrer">trammell@uci.edu</a><br><br>M=
+y online resume/CV: <a href=3D"http://www.aarontrammell.com" target=3D"_bla=
+nk" rel=3D"noreferrer">aarontrammell.com</a><br></div><div><br></div><div>E=
+ditor-in-Chief of&nbsp;<i><a href=3D"http://analoggamestudies.org/" target=
+=3D"_blank" rel=3D"noreferrer">Analog Game Studies</a></i><br>Co-Founder an=
+d Multimedia Editor of <i><a href=3D"http://www.soundstudiesblog.com" targe=
+t=3D"_blank" rel=3D"noreferrer">Sounding Out!: The Sound Studies Blog</a></=
+i></div><div>Editorial Board: <a href=3D"http://www.sagepub.com/journals/Jo=
+urnal201757/boards#tabview=3Dboards" target=3D"_blank" rel=3D"noreferrer"><=
+i>Games and Culture</i></a><br></div><div><br><br><br></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div>
+<a href=3D"mailto:Gamesnetwork@lists.tuni.fi" target=3D"_blank" rel=3D"nore=
+ferrer">Gamesnetwork@lists.tuni.fi</a> is the discussion list of DiGRA, the=
+ Digital Games Research Association. You can unsubscribe, edit your subscri=
+ption address, etc. at the web interface:<br>
+<a href=3D"https://lists.tuni.fi/mailman/listinfo/gamesnetwork" rel=3D"nore=
+ferrer noreferrer" target=3D"_blank">https://lists.tuni.fi/mailman/listinfo=
+/gamesnetwork</a></blockquote></div>
+
+--000000000000ca82ca059e540deb--
+
+--===============8535922781898316080==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Gamesnetwork@lists.tuni.fi is the discussion list of DiGRA, the Digital Games Research Association. You can unsubscribe, edit your subscription address, etc. at the web interface:
+https://lists.tuni.fi/mailman/listinfo/gamesnetwork
+--===============8535922781898316080==--

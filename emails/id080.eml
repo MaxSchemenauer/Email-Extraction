@@ -1,0 +1,242 @@
+Received: from BN8PR08MB6355.namprd08.prod.outlook.com (2603:10b6:a03:40::31)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0018.NAMPRD04.PROD.OUTLOOK.COM; Mon, 30 Sep 2019 02:14:14 +0000
+Received: from SN4PR0801CA0002.namprd08.prod.outlook.com
+ (2603:10b6:803:29::12) by BN8PR08MB6355.namprd08.prod.outlook.com
+ (2603:10b6:408:da::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2305.15; Mon, 30 Sep
+ 2019 02:14:12 +0000
+Received: from BN3NAM04FT010.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::206) by SN4PR0801CA0002.outlook.office365.com
+ (2603:10b6:803:29::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2305.17 via Frontend
+ Transport; Mon, 30 Sep 2019 02:14:12 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ BN3NAM04FT010.mail.protection.outlook.com (10.152.92.117) with Microsoft SMTP
+ Server id 15.20.2305.15 via Frontend Transport; Mon, 30 Sep 2019 02:14:12
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id 7C5AD2E1052; Sun, 29 Sep 2019 22:13:10 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org 7C5AD2E1052
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1569809590;
+	bh=+XAyDfYftxiK2R4q3reLqvSW2wk8R+sZ7o5z9ihkNcE=;
+	h=Date:To:Subject:From:From;
+	b=o5iztDNkflIs73sx9gn6PHTlIGOpyHeWHI6SwTm/j3lkn51/FjoQZuvuRJ/+V6l1Q
+	 mG6cDhJ5PYz/pPW9fKxu4NSigK0cFWzvQdqbNkCL+Ftqoq6zeDfEQcEUH0NGCq7uM7
+	 oTGTjdqvyJA27YB93Eau0oJ1zPoOwxVh7kW3+RtY=
+Date: Sun, 29 Sep 2019 22:13:10 -0400
+To: foaad@calpoly.edu
+Subject: CFP: IEEE CPS: Conf on Artificial Intelligence (Dec. 5-7, 2019,
+ USA); Deadline: October 6
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20190930021310.7C5AD2E1052@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Sep 2019 02:14:12.2568
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 25f34d97-1410-4b4a-237a-08d7454be296
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(91214003)(199004)(189003)(476003)(1096003)(4006050)(97876018)(569274001)(70486001)(246002)(14444005)(45080400002)(486006)(305945005)(9686003)(126002)(6306002)(8676002)(5660300002)(103686004)(336012)(16003)(966005)(6266002)(23726003)(42882007)(58126008)(47776003)(230700001)(42186006)(2361001)(2351001)(356004)(6916009)(7636002)(75640400001)(86362001)(26005)(1076003)(8266002)(33656002)(50466002)(2171002)(40036005)(36756003)(66574012)(106002)(79816003)(14776007);DIR:INB;SFP:;SCL:1;SRVR:BN8PR08MB6355;H:world-comp.org;FPR:;SPF:Pass;LANG:en;PTR:mail.world-comp.org;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT010.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 25f34d97-1410-4b4a-237a-08d7454be296
+X-MS-TrafficTypeDiagnostic: BN8PR08MB6355:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:7691;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Sep 2019 02:14:12.1017
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 25f34d97-1410-4b4a-237a-08d7454be296
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN8PR08MB6355
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6749850
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2305.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?MNpiaiPkvW0vfuldsoov1Lx142foB6a4OqrS/zp8UddlB+aScFVAJFUVYfSR?=
+ =?us-ascii?Q?QeXYuFC6ACP4S6Bn6dAk8O7DqmQL0F7ZzMs0aBW0kwow/o4oKQ+4a9nEF8Jj?=
+ =?us-ascii?Q?U9rHzzQIq0DOC9Fw5jbA3Auny2elP+fUhma+qzpYhgDaaZ6iYWImgBMkcalB?=
+ =?us-ascii?Q?k2vUlKBXk86ZSEA98/2+NIhO2QXjWdDbrTSh4k2P0D/c2c3G0OKVTCMj/jZ+?=
+ =?us-ascii?Q?gBjjBc97KLqDPbLIYCVlAEFuf/xywYUaPy8Dx7CON1CIYSWlEDdSJfJp7wn8?=
+ =?us-ascii?Q?uls8Q/9/ZGp9pOB3IcxRhrkB3EcNsCcUtThQGas6/667zAoOyIPo/8ZmlEVh?=
+ =?us-ascii?Q?4zzqC4bW659Ufx73PCly+dNkqZcW7JlMmoiGpLXnBQn4RKUoX4L3YvTeoFmA?=
+ =?us-ascii?Q?pqPsx6X2nMP5jXSm7ra95xMuBz9eYNwKKCbBfmgEef2woO/ty9Lg/OSEv2oH?=
+ =?us-ascii?Q?6sNYXJJboJVpOJoyCuur9CzctL0d8jOHh6QuAxLiSCBaBecaR8sio8W7d0iU?=
+ =?us-ascii?Q?l5N500aU6en+IN8HFsdnua85pMaa3yZgor9YIcQsa075utIqsd+c85O+07YX?=
+ =?us-ascii?Q?OpRFcz4WZ1J1lE22hbjk7RUMMntuGy2bHRyR01VXVLv7YBnM2TwxoWR+wK5n?=
+ =?us-ascii?Q?Dxw2c/12XCjf87VutsCAEFD0NeVoYQV3lVgoMPXns34bJrY4AbmZMTuVwfHE?=
+ =?us-ascii?Q?Sk4gY/i7bZr/5w2ZHadug33c3rNpCDfb2TUVxjZ7JmGT3HK4m3/6dWEpvULH?=
+ =?us-ascii?Q?HNIO0/1l5AsPo+R/WbuEuy5rhS6ugknAo6G4pb8qNcaNcErgesgAPJa4FAiL?=
+ =?us-ascii?Q?OkqHYMony08yBsi4P9UA9LuW3yquYxIIUqE1FX1fJi9VikVH10AtI/y7dgmf?=
+ =?us-ascii?Q?Aavq+c/859NSoyEz44GgUjlMwj8F8QT7twq59uXW9AM8+kgM42M5uPlVHigv?=
+ =?us-ascii?Q?nMrplzyBLoq4gaar572KB6o9yTyFSAKayfSd87OOSxFSUPrfSm4dchJX5q+G?=
+ =?us-ascii?Q?hjhs7f/tB11+z61fQyX7tx6bIQ=3D=3D?=
+MIME-Version: 1.0
+
+
+CALL  FOR  PAPERS:
+     Paper Submission Deadline: October 6, 2019
+
+INTERNATIONAL SYMPOSIUM ON ARTIFICIAL INTELLIGENCE
+     (CSCI-ISAI: December 5-7, 2019, Las Vegas, USA)
+     https://americancse.org/events/csci2019/Symposiums/csci_isai 
+
+PUBLISHER:
+     IEEE CPS: https://www.computer.org/conferences/cps 
+     All accepted papers will be published in the proceedings
+     of the 2019 International Conference on Computational
+     Science & Computational Intelligence
+     ( CSCI: https://americancse.org/events/csci2019 ).
+     IEEE Xplore entry:
+     https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+     Since its inception, all CSCI proceedings have always been
+     approved and included into IEEE Xplore indexation/
+     digital-library citation index databases.
+
+SCOPE AND LIST OF TOPICS:
+
+     PROLOGUE:
+     Artificial Intelligence (AI) is the science and engineering of making
+     intelligent machines and systems. This is an important multi-disciplinary
+     field which is now an essential part of technology industry, providing
+     the heavy lifting for many of the most challenging problems in
+     computational science. Since Machine Learning has strong ties with AI,
+     this symposium also covers the field of Machine Learning. The list of
+     topics below is by no means meant to be exhaustive.
+
+     ARTIFICIAL INTELLIGENCE:
+     Brain models, Brain mapping, Cognitive science; Natural language
+     processing; Fuzzy logic and soft computing; Software tools for AI; Expert
+     systems; Decision support systems; Automated problem solving; Knowledge
+     discovery; Knowledge representation; Knowledge acquisition; Knowledge-
+     intensive problem solving techniques; Knowledge networks and management;
+     Intelligent information systems; Intelligent data mining and farming;
+     Intelligent web-based business; Intelligent agents; Intelligent networks;
+     Intelligent databases; Intelligent user interface; AI and evolutionary
+     algorithms; Intelligent tutoring systems; Reasoning strategies;
+     Distributed AI algorithms and techniques; Distributed AI systems and
+     architectures; Neural networks and applications; Heuristic searching
+     methods; Languages and programming techniques for AI; Constraint-based
+     reasoning and constraint programming; Intelligent information fusion;
+     Learning and adaptive sensor fusion; Search and meta-heuristics; Multi-
+     sensor data fusion using neural and fuzzy techniques; Integration of
+     AI with other technologies; Evaluation of AI tools; Social intelligence
+     (markets and computational societies); Social impact of AI; Emerging
+     technologies; and Applications (including: computer vision, signal
+     processing, military, surveillance, robotics, medicine, pattern
+     recognition, face recognition, finger print recognition, finance and
+     marketing, stock market, education, emerging applications, ...).
+
+     MACHINE LEARNING:
+     Statistical learning theory; Unsupervised and Supervised Learning;
+     Multivariate analysis; Hierarchical learning models; Relational
+     learning models; Bayesian methods; Meta learning; Stochastic
+     optimization; Simulated annealing; Heuristic optimization techniques;
+     Neural networks; Reinforcement learning; Multi-criteria reinforcement
+     learning; General Learning models; Multiple hypothesis testing;
+     Decision making; Markov chain Monte Carlo (MCMC) methods; Non-
+     parametric methods; Graphical models; Gaussian graphical models;
+     Bayesian networks; Particle filter; Cross-Entropy method; Ant colony
+     optimization; Time series prediction; Fuzzy logic and learning;
+     Inductive learning and applications; Grammatical inference; Graph
+     kernel and graph distance methods; Graph-based semi-supervised
+     learning; Graph clustering; Graph learning based on graph
+     transformations; Graph learning based on graph grammars; Graph
+     learning based on graph matching; Information-theoretical approaches
+     to graphs; Motif search; Network inference; Aspects of knowledge
+     structures; Computational Intelligence; Knowledge acquisition and
+     discovery techniques; Induction of document grammars; General
+     Structure-based approaches in information retrieval, web authoring,
+     information extraction, and web content mining; Latent semantic
+     analysis; Aspects of natural language processing; Intelligent
+     linguistic; Aspects of text technology; Biostatistics; High-
+     throughput data analysis; Computational Neuroscience; and
+     Computational Statistics.
+
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+     https://americancse.org/events/csci2019/paper_submission 
+
+
+DEADLINES - DATES:
+
+     October 6, 2019:      Submission of Papers
+                           https://american-cse.org/ 
+     October 18, 2019:     Notification of acceptance (+/- 2 days)
+     October 30, 2019:     Final papers & Author Registrations
+     December 5-7, 2019:   The International Symposium on Artificial
+                           Intelligence (CSCI-ISAI)
+            https://americancse.org/events/csci2019/Symposiums/csci_isai 
+                           CSCI-ISAI will be held in conjunction with other
+                           affiliated research events; for more information,
+                           see https://americancse.org/events/csci2019 
+
+
+DEMOGRAPHY HISTORY (based on 2014 through 2018 participation data):
+
+     In the past, about 42% of the attendees have been from outside
+     USA; from 59 nations. 56% of registrants have been from academia,
+     32% from industry; 11% from government agencies and research labs;
+     and 1% unknown. The conference has had participants, speakers,
+     authors affiliated with over 154 different universities; including
+     many from the top 40 ranked institutions; major IT corporations,
+     including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+     Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+     Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+     Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+     Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+     BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+     Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+     major corporations, including, Exxon Mobil, JPMorgan Chase,
+     Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+     Petroleum Group, Aerospace Electronic Technology (China), Max
+     Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+     (France), Forschungszentrum Juelich (Germany), Secured Smart
+     Electric Vehicle (Korea), ...; government research agencies and
+     national laboratories, including, NSF, NIH National Institutes of
+     Health, US Air Force (multiple research labs), NSA National Security
+     Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+     Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+     Lab, US National Cancer Institute, Swedish Defence Research Agency,
+     NIST US National Institute of Standards and Technology, U.S.
+     Geological Survey, US National Library of Medicine, US Air Force
+     (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+     Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+     Army, Korea Internet & Security Agency, Suez Canal Research Center,
+     Okinawa Bureau (Japan), Canadian Medical Protective Association,
+     Osong Medical Innovation Foundation (Korea), National Institute of
+     Informatics (Japan), ...; and three Venture Capitalists and nine
+     Intellectual Property attorneys.
+
+CONTACT:
+
+     Questions and inquiries should be sent to:
+     Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.

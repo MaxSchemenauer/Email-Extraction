@@ -1,0 +1,493 @@
+Received: from BN7PR08MB4273.namprd08.prod.outlook.com (2603:10b6:a03:40::14)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0001.NAMPRD04.PROD.OUTLOOK.COM; Thu, 10 Oct 2019 05:08:54 +0000
+Received: from DM3PR08CA0014.namprd08.prod.outlook.com (2603:10b6:0:52::24) by
+ BN7PR08MB4273.namprd08.prod.outlook.com (2603:10b6:406:ff::23) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2327.24; Thu, 10 Oct 2019 05:08:52 +0000
+Received: from BN3NAM04FT038.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::202) by DM3PR08CA0014.outlook.office365.com
+ (2603:10b6:0:52::24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2347.17 via Frontend
+ Transport; Thu, 10 Oct 2019 05:08:52 +0000
+Authentication-Results: spf=pass (sender IP is 167.89.100.243)
+ smtp.mailfrom=em9156.ijesrt.info; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ijesrt.info;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=ijesrt.info;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of em9156.ijesrt.info
+ designates 167.89.100.243 as permitted sender)
+ receiver=protection.outlook.com; client-ip=167.89.100.243;
+ helo=o3.6n.shared.sendgrid.net;
+Received: from o3.6n.shared.sendgrid.net (167.89.100.243) by
+ BN3NAM04FT038.mail.protection.outlook.com (10.152.92.242) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256) id
+ 15.20.2347.16 via Frontend Transport; Thu, 10 Oct 2019 05:08:52 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=ijesrt.info; 
+	h=content-type:from:mime-version:reply-to:subject:to:list-unsubscribe; 
+	s=s1; bh=SKWpLcvWyf7O3RE0d88ODNi3Mnw=; b=Wwpz0XknjAgtRUnChM5Qd1p
+	acC4bCJgfigSngXK+6jMvA9/Fq/CfhAWeRgEBYxDIHhuIr+FgSGtV3jBMifYpL/9
+	5VWVukSX3ZHTyke+6CZ1CcG6BYC0+mRuAyCqtugNH8CsDK/Ve23qKHiDXeWpmzX0
+	kKQAG9tyf+h9ZIYJ4yVg=
+Content-Type: multipart/alternative; boundary=98fc3db055cf4f44b3e8b798b2db236e48f932943f22b32252f14d159f93
+Date: Thu, 10 Oct 2019 05:08:51 +0000 (UTC)
+From: "Editor IJRSM" <ijrsm@ijesrt.info>
+Reply-To: editorijrsm@gmail.com
+Subject: Call for International  Conference  Online VOl. 6 Iss 9 2019 (IMPACT FACTOR : 3.765)(INDEXED:THOMSON REUTERS ENDNOTE)
+To: foaad@calpoly.edu
+Message-ID: <ZxPY3ejwSoqsLcyXAEftsw@ismtpd0001p1iad2.sendgrid.net>
+List-Unsubscribe: <mailto:unsubscribe@em9156.ijesrt.info?subject=https://u9553424.ct.sendgrid.net/asm/unsubscribe/*q*user_id=9553424*a*data=p1DG4Rgzz3rxxn0qqNS_89WgxoPLXvWYKYFZoVjyiiPeyw3BoyKO5_DhLHSm8OCv37Vzkt27xUhvfD7BLQ_mstRGX5hlu8Obx52BKNMcEFUSCNDvi5yTQ86ynLmZDE1z3kwiiboqeJtwYQEC-TcQ2wnGrez5csOKHANPK4bkdCVMOQUyqUJrZMbBHSyVg-PMInk3uZHFulRkK65EeFidB6sCeXVFxA5XxUZyCHapIVPJ12hCrK0YtX1JAeeszVZAWpgt8ii97KOxM19Uak9EDkiOynqHGLLBjvEX0LN3cn3aoHqvb50BzZ27A3BRqyoquk5owpxhtZULeFLyd2nX43Bn3PtH0v4SlCa0t3GcNlTBgje5mS16qUTpXHell7xgH1U2HoVvLUkHTIh8cmGW4uXEf_-QE9KGOz_SoWVy9YvkUGnoD3kSCqRCYAGa0r-N2ql0mz_R0T0wKlt61e7E930dn2pszDthq6SmZ9j4obA1BIWSwLn_1C5y1nw4kPzh1kcYKPmunSQSxXiLNSnbHpWYzZwkMrCtTr6qcLnAR6o=>
+X-SG-EID: 7hD2CnSvqiJDLto7n5DrawagaUNn6UdwaXUXEKlUI5nI0ZN8JVvRAKkwMIrv6h8Htvv01Yy3IkkGGc
+ HYs09o/w48pzmnyxmSD3pIK8cJQBj6du7G+ETpMI2AIpfjzLnJEAO4FQm0Ykm4KqgXY2ZgAR64GVaa
+ WDqUQCL0QX+0sajYS/ofzSx3rNC+rDwgZ7jPUj2aYL5L5HJDNuVKCFEHYpqbvnXGAgBZq0gzVwjnxu
+ Q=
+X-SG-ID: Z2FxZazunBjVeNuNdzHDqrF8mxuCpi0krmont6YQrP05/KFqJJgHHC6xMCw7DiwTm1sVfg7W92bsBg
+ vhsaLMmHtIpoTCzayJCVw6QSKssSbtO/O4wy9cQWP1IJnAAbcWUxewLyr4U1r/Tld0FFjy/NPIwvzR
+ 2g3B2bnvdNZimrI=
+Return-Path: bounces+9553424-4f61-foaad=calpoly.edu@em9156.ijesrt.info
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Oct 2019 05:08:52.1542
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 69559c34-097d-4d40-1510-08d74d3ff139
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:167.89.100.243;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(286005)(189003)(199004)(10533003)(336012)(26005)(146002)(1096003)(606006)(966005)(18926415008)(246002)(8676002)(28505004)(16586007)(2171002)(2351001)(476003)(126002)(22416003)(36736006)(10126004)(956004)(43066004)(2160300002)(486006)(19627405001)(106002)(76236002)(2361001)(7636002)(7596002)(6306002)(4006050)(16799955002)(22186003)(58800400005)(6916009)(71190400001)(2860700004)(6486002)(236005)(356004)(21004)(75640400001)(25786009)(6512007)(9686003)(6506007)(33964004)(733005)(15188155005);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4273;H:o3.6n.shared.sendgrid.net;FPR:;SPF:Pass;LANG:en;PTR:o3.6n.shared.sendgrid.net;MX:1;A:0;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT038.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 69559c34-097d-4d40-1510-08d74d3ff139
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4273:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Oob-TLC-OOBClassifiers: OLM:2657;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:6;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Oct 2019 05:08:52.0241
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 69559c34-097d-4d40-1510-08d74d3ff139
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4273
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5268251
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?OEdEYVFiTGk3SmNCNHhXYmJwMWhYMHJCYkF0U2JxdE5yWElscnVjejRQZ3NZ?=
+ =?utf-8?B?ck55ZDk1eEo2RDZtbFFleUtNS3lxRFNCQmRWZ05Ic2xiOGRaS0hSQ1RVNDRW?=
+ =?utf-8?B?Y2VtZVhwbEowcDcrdWVLcWpQbTliLytZUlVtS3R1VHNEL0Jrelp4MUhReVVD?=
+ =?utf-8?B?ZStYSVprbGJ6QVBhKzZMM2tZZlVqNlhWTlVUdkNBYzdNZVhnVjBMMHhvaWV0?=
+ =?utf-8?B?bFBBVGh6U0dtV2NiWDArVTRPK1VDa2lRQUl5eXAzTjlncjlIdEZaOGc4dTg0?=
+ =?utf-8?B?OXNTeURpcmUxM3BzdHkyaU9CR0R1eFcrNi9GSDBRMytCamhUd3Y4K1Q4RDF2?=
+ =?utf-8?B?dTYzSVdiMExZWFYwUnpNczhwU0cxdWlUR283Rm1oTWkyTUx2MUhwN0FTZ0Z0?=
+ =?utf-8?B?bStoT0pJRHVpTER0bUtubzhESGFEc0NHaHg4aDdBdUJDUlczY0NJVWpUZ2tP?=
+ =?utf-8?B?RXZ1L2tqa1htSFZ4dEYvL0lyOHhzbkVEU1FPZ2d2aEdhcWtMOXd3L1MrYXRE?=
+ =?utf-8?B?Slg4anJKejRkbjk3cmI5VmdBZUJsNHIraW5Kdzlhc2Rmdnd0bk9PYXNRaFAv?=
+ =?utf-8?B?azlCUFlWSExDNDZQa0RYeGtSWjVPUE10Yld5Y3dUVmpRS2hLOVFlNWhhNlhO?=
+ =?utf-8?B?NG5KSk43WW1jSHY5OUh1RTRXRklYVTYzY2l0UHViSmRaZWl5RzRZcEtTVTU5?=
+ =?utf-8?B?TERyVXFNNG5lUzNZMjh1bThPcTBxdkRWZnJkRFQ4aTZyUDJsMTVHak5JZXlB?=
+ =?utf-8?B?c2lXOVptTjN2ZVJKcXRDakhHS0xNd2VKSCtKMnBBSWFDdUxGNW54K3g1UGhm?=
+ =?utf-8?B?K0szcXRIaWNvY1VrRVhWZXdVVmIwem1NaEgrUDd1dUZmOGQwcHh0ekZZSDlO?=
+ =?utf-8?B?dTc4L1BuSVc2Q3d5dFpNdExNbFNHRTRnanJlSUxvTWUxTUxERGJ1czZLd2lv?=
+ =?utf-8?B?VUNtM3J1aUk1RGNvWTJBYXViMWlRVUJBa3Vob3RYQ05Id3Z0NGVlTFZ2Z0Rx?=
+ =?utf-8?B?RlFSYXVzMnhYMU0rblljcjdFZVVjL1dQSlo3WGQ0UWZwbzZDNXhURXJmODI0?=
+ =?utf-8?B?Z25XdVllR1NLbkl6OFlSVFB4ZDNFTm8zc2w3VEV0NlpBV1Bad1NjaUk2MXJp?=
+ =?utf-8?B?a1RLNDB2a1dsOWltaGVnUXA3YklpUzQyaGtzT1lqV1A1bVg5NnF0a2NkeUJ1?=
+ =?utf-8?B?b3QvL0Z4SEZtdG0zMmJOU01MNHd2cE1xT0lSRVl3ZGIwWHhLa0V2cHl5bzlP?=
+ =?utf-8?B?eGQ2V0xTSEtSM1lEM1BJUE05TTdZODRNZHJRVG5QWFhQdm90N05TQ0hTNXVu?=
+ =?utf-8?B?amtaZzdrMkFDTytHZUMrWTlUaG9sbE4rOG9tU1J6b2I2RTgvcG1HQ3FPNUpr?=
+ =?utf-8?Q?2F/g+N5Lb96UyWpNQ1VMrmENuBs95uFU=3D?=
+MIME-Version: 1.0
+
+--98fc3db055cf4f44b3e8b798b2db236e48f932943f22b32252f14d159f93
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Dear Author / Researcher
+
+International Journal of Research science and Management
+
+[IJRSM=C2=A0Call=C2=A0for=C2=A0paper Volume=C2=A06 Issue 10, October=C2=A0-=
+2019 issue]
+
+International journal of Research science and Management-=C2=A0IJRSM=C2=A0w=
+elcomes the original research article, review=C2=A0papers=C2=A0and short=C2=
+=A0papers=C2=A0for the issue of=C2=A0August 2019. Manuscripts submitted to =
+this journal will be deemed as they have not been published and are not und=
+er consideration for publication elsewhere.
+
+Submit your article:=C2=A0editorijrsm@gmail.com mailto:editorijrsm@gmail.co=
+m=C2=A0=C2=A0or
+
+Click to submit online:=C2=A0http://ijrsm.com/submit_manuscript_online.php =
+http://ijrsm.com/submit_manuscript_online.php=C2=A0=C2=A0
+
+Submit your=C2=A0paper=C2=A0in the form of Mircrosoft word format ( .doc or=
+ .docx ) , if you were used latex then send it PDF format.
+
+Click here to download the=C2=A0Copyrights form=C2=A0 http://www.ijrsm.com/=
+issues%20pdf%20file/IJRSM_copyright.pdf=C2=A0and=C2=A0Paper=C2=A0Template h=
+ttp://www.ijrsm.com/issues%20pdf%20file/IJRSM_Manuscript.docx
+
+Submission Deadline
+
+15th=C2=A0October 2019
+
+Publication Date
+
+28th=C2=A0October=C2=A02019
+
+Publication Charges
+
+Indian Author(s)Rs 1500/- upto 3 authors, after 3 authors charges will be R=
+s 500/author Rs 300/author for Hard copy of certificate.Foreign Author(s)$ =
+80 USD upto 6 Authors=C2=A0Papers=C2=A0are published upon acceptance, regar=
+dless of the Regular Issue publication date.=C2=A0
+
+Editor=C2=A0
+
+International journal of Research science and Management
+
+Indore, India
+
+editorijrsm@gmail.com mailto:editorijrsm@gmail.com
+
+Unsubscribe https://u9553424.ct.sendgrid.net/asm/unsubscribe/?user_id=3D955=
+3424&data=3Dp1DG4Rgzz3rxxn0qqNS_89WgxoPLXvWYKYFZoVjyiiPeyw3BoyKO5_DhLHSm8OC=
+v37Vzkt27xUhvfD7BLQ_mstRGX5hlu8Obx52BKNMcEFUSCNDvi5yTQ86ynLmZDE1z3kwiiboqeJ=
+twYQEC-TcQ2wnGrez5csOKHANPK4bkdCVMOQUyqUJrZMbBHSyVg-PMInk3uZHFulRkK65EeFidB=
+6sCeXVFxA5XxUZyCHapIVPJ12hCrK0YtX1JAeeszVZAWpgt8ii97KOxM19Uak9EDkiOynqHGLLB=
+jvEX0LN3cn3aoHqvb50BzZ27A3BRqyoquk5owpxhtZULeFLyd2nX43Bn3PtH0v4SlCa0t3GcNlT=
+Bgje5mS16qUTpXHell7xgH1U2HoVvLUkHTIh8cmGW4uXEf_-QE9KGOz_SoWVy9YvkUGnoD3kSCq=
+RCYAGa0r-N2ql0mz_R0T0wKlt61e7E930dn2pszDthq6SmZ9j4obA1BIWSwLn_1C5y1nw4kPzh1=
+kcYKPmunSQSxXiLNSnbHpWYzZwkMrCtTr6qcLnAR6o=3D=
+
+--98fc3db055cf4f44b3e8b798b2db236e48f932943f22b32252f14d159f93
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html data-editor-version=3D"2" class=3D"=
+sg-campaigns" xmlns=3D"http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, minimum-scale=3D1, maximum-scale=3D1"><!--[if !mso]><!-->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge"><!--<![endif=
+]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <style type=3D"text/css">
+      body {width: 600px;margin: 0 auto;}
+      table {border-collapse: collapse;}
+      table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+      img {-ms-interpolation-mode: bicubic;}
+    </style>
+    <![endif]-->
+
+    <style type=3D"text/css">
+      body, p, div {
+        font-family: arial;
+        font-size: 14px;
+      }
+      body {
+        color: #000000;
+      }
+      body a {
+        color: #1188E6;
+        text-decoration: none;
+      }
+      p { margin: 0; padding: 0; }
+      table.wrapper {
+        width:100% !important;
+        table-layout: fixed;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      img.max-width {
+        max-width: 100% !important;
+      }
+      .column.of-2 {
+        width: 50%;
+      }
+      .column.of-3 {
+        width: 33.333%;
+      }
+      .column.of-4 {
+        width: 25%;
+      }
+      @media screen and (max-width:480px) {
+        .preheader .rightColumnContent,
+        .footer .rightColumnContent {
+            text-align: left !important;
+        }
+        .preheader .rightColumnContent div,
+        .preheader .rightColumnContent span,
+        .footer .rightColumnContent div,
+        .footer .rightColumnContent span {
+          text-align: left !important;
+        }
+        .preheader .rightColumnContent,
+        .preheader .leftColumnContent {
+          font-size: 80% !important;
+          padding: 5px 0;
+        }
+        table.wrapper-mobile {
+          width: 100% !important;
+          table-layout: fixed;
+        }
+        img.max-width {
+          height: auto !important;
+          max-width: 480px !important;
+        }
+        a.bulletproof-button {
+          display: block !important;
+          width: auto !important;
+          font-size: 80%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .columns {
+          width: 100% !important;
+        }
+        .column {
+          display: block !important;
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    </style>
+    <!--user entered Head Start-->
+   =20
+     <!--End Head user entered-->
+  </head>
+  <body>
+    <center class=3D"wrapper" data-link-color=3D"#1188E6" data-body-style=
+=3D"font-size: 14px; font-family: arial; color: #000000; background-color: =
+#ffffff;">
+      <div class=3D"webkit">
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"10=
+0%" class=3D"wrapper" bgcolor=3D"#ffffff">
+          <tr>
+            <td valign=3D"top" bgcolor=3D"#ffffff" width=3D"100%">
+              <table width=3D"100%" role=3D"content-container" class=3D"out=
+er" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                <tr>
+                  <td width=3D"100%">
+                    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">
+                      <tr>
+                        <td>
+                          <!--[if mso]>
+                          <center>
+                          <table><tr><td width=3D"600">
+                          <![endif]-->
+                          <table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"width: 100%; max-width:600px;" align=3D"cent=
+er">
+                            <tr>
+                              <td role=3D"modules-container" style=3D"paddi=
+ng: 0px 0px 0px 0px; color: #000000; text-align: left;" bgcolor=3D"#ffffff"=
+ width=3D"100%" align=3D"left">
+                               =20
+    <table class=3D"module preheader preheader-hide" role=3D"module" data-t=
+ype=3D"preheader" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"display: none !important; mso-hide: all; visibility: hidden=
+; opacity: 0; color: transparent; height: 0; width: 0;">
+      <tr>
+        <td role=3D"module-content">
+          <p></p>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 018px 18px 018px;line-height:22px;text-al=
+ign:inherit;" height=3D"100%" valign=3D"top" bgcolor=3D"">
+            <div>
+<div><strong>Dear Author / Researcher</strong></div>
+
+<div>&nbsp;</div>
+
+<div><strong>International Journal of Research science and Management</stro=
+ng></div>
+
+<div>&nbsp;</div>
+
+<div><strong>[IJRSM&nbsp;Call&nbsp;for&nbsp;paper Volume&nbsp;6 Issue 10, <=
+/strong><span style=3D"color: rgb(0, 0, 0); font-family: arial; font-size: =
+14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps=
+: normal; font-weight: 400;">October&nbsp;</span><strong>-<wbr>2019 issue]<=
+/strong></div>
+
+<div>&nbsp;</div>
+
+<div>International journal of Research science and Management-&nbsp;IJRSM&n=
+bsp;welcomes the original research article, review&nbsp;papers&nbsp;and sho=
+rt&nbsp;papers&nbsp;for the issue of&nbsp;August 2019. Manuscripts submitte=
+d to this journal will be deemed as they have not been published and are no=
+t under consideration for publication elsewhere.</div>
+
+<div>&nbsp;</div>
+
+<div><span style=3D"font-size:16px;"><strong>Submit your article:&nbsp;<a h=
+ref=3D"mailto:editorijrsm@gmail.com" target=3D"_blank">editorijrsm@gmail.co=
+m</a><wbr>&nbsp;&nbsp;or</strong></span></div>
+
+<div><span style=3D"font-size:16px;"><strong>Click to submit online:&nbsp;<=
+a data-saferedirecturl=3D"https://www.google.com/url?q=3DSG-TEMP-URL-TAG0X&=
+amp;source=3Dgmail&amp;ust=3D1564130903474000&amp;usg=3DAFQjCNEPApWSUtMAzxZ=
+-s2Uv_TZtcDp3Gw" href=3D"http://ijrsm.com/submit_manuscript_online.php" tar=
+get=3D"_blank">http://ijrsm.com/<wbr>submit_manuscript_online.php</a>&nbsp;=
+&nbsp;</strong></span></div>
+
+<div>&nbsp;</div>
+
+<ul>
+	<li>Submit your&nbsp;paper&nbsp;in the form of Mircrosoft word format ( .d=
+oc or .docx ) , if you were used latex then send it PDF format.</li>
+</ul>
+
+<div>&nbsp;</div>
+
+<div><strong>Click here to download the&nbsp;<a data-saferedirecturl=3D"htt=
+ps://www.google.com/url?q=3Dhttp://www.ijrsm.com/issues%2520pdf%2520file/IJ=
+RSM_copyright.pdf&amp;source=3Dgmail&amp;ust=3D1564130903474000&amp;usg=3DA=
+FQjCNGkV62XuGvVZDHAJU4yEwnaFwahYw" href=3D"https://u9553424.ct.sendgrid.net=
+/wf/click?upn=3DMF-2BoG-2FKH0gByOieM7H-2Fp6TCYSI1ujNKoHl7rcfe8O7b4jW3uyayS6=
+dBAF-2B8RyT3bUTsZc9LJCTNoo2cAuI9cYYLD0aJQYKAacpgXYOdVKaE-3D_7zRxtiYDTGBGqDW=
+lp0jwu-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCxFuEffOdhUIXlBHKgG-2Bd-2F182=
+Vy0chsixRwEQvtCGc3tCA-2B4RHg9WTyWq4Yc2WQvX6E0eYfhVCsApX8xlHTxlnsKjeqNN4zQLF=
+r7dZKr8oZzHLi5Cm-2FafboKdwa5Tt4wULB0XeMGMK-2Fso1rogD-2B6bJBlJ3guxXhYdGxRH3-=
+2BbdWA2dUfb0ptFuvi6FIS-2F-2BHjsx9fSICCpA0YsFxVI50rW1iCe8x5A5mDwwPXf-2BUBo8O=
+Zgh3LWmLIf9pe4FjzM0aqiqjBJURWj-2Bk93OiS9S9W7ba-2FjgNRGlhgWYD395moYDvVbtsG7S=
+t9HPpCSLSSG8teQQ6IsopEYsNso6Cdsf89PbX7Fbf42Q-3D-3D" target=3D"_blank">Copyr=
+ights form&nbsp;</a>&nbsp;and&nbsp;<a data-saferedirecturl=3D"https://www.g=
+oogle.com/url?q=3Dhttp://www.ijrsm.com/issues%2520pdf%2520file/IJRSM_Manusc=
+ript.docx&amp;source=3Dgmail&amp;ust=3D1564130903474000&amp;usg=3DAFQjCNFiY=
+h232JIoBV-hUO37RzPhDrgoDg" href=3D"https://u9553424.ct.sendgrid.net/wf/clic=
+k?upn=3DMF-2BoG-2FKH0gByOieM7H-2Fp6TCYSI1ujNKoHl7rcfe8O7b4jW3uyayS6dBAF-2B8=
+RyT3bYHqO7tQ3Xg2g1-2Fql8V4YBzXcmsLd8Po9hsSFbZWzHsI-3D_7zRxtiYDTGBGqDWlp0jwu=
+-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCxFuEffOdhUIXlBHKgG-2Bd-2F182Vy0chs=
+ixRwEQvtCGc3tCA-2B4RHg9WTyWq4Yc2WQvX6E0eYfhVCsApX8xlHTxlnsKjeqNN4zQLFr7dZKr=
+8oZzHLi5Cm-2FafboKdwa5Tt4wULB0XeMxLHWzLt7RGo-2BRzgXmc18kQ2NiRegjuVB6nuLa585=
+zguGSoXv5342eVuxiLyGZ2sIX4dz9aHa5UZkhR0w1T-2BT97tErTYN4plefAfAp-2BG6zxPWNhn=
+8CsYyv-2BRRXVqXfzyYROafxHS8qCwV7d52RbkCV-2F2fi0WbK4QebALhdbQtvx10I6B884Fp7W=
+ay46yXMu5XdRe76psNj-2B45ofzO2FRF4w-3D-3D" target=3D"_blank">Paper&nbsp;Temp=
+late</a></strong></div>
+
+<div>&nbsp;</div>
+
+<table border=3D"1" cellpadding=3D"0" cellspacing=3D"0" width=3D"0">
+	<tbody>
+		<tr>
+			<td>
+			<div><strong>Submission Deadline</strong></div>
+			</td>
+			<td>
+			<div>15<sup>th</sup>&nbsp;October 2019</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<div><strong>Publication Date</strong></div>
+			</td>
+			<td>
+			<div>28<sup>th</sup>&nbsp;<span style=3D"color: rgb(0, 0, 0); font-famil=
+y: arial; font-size: 14px; font-style: normal; font-variant-ligatures: norm=
+al; font-variant-caps: normal; font-weight: 400;">October&nbsp;</span>2019<=
+/div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>&nbsp;</div>
+
+<div><strong>Publication Charges</strong></div>
+
+<div>Indian Author(s)Rs 1500/- upto 3 authors, after 3 authors charges will=
+ be Rs 500/author Rs 300/author for Hard copy of certificate.Foreign Author=
+(s)$ 80 USD upto 6 Authors&nbsp;Papers&nbsp;are published upon acceptance, =
+regardless of the Regular Issue publication date.&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div><strong>Editor&nbsp;<br>
+International journal of Research science and Management</strong></div>
+
+<div>Indore, India</div>
+
+<div><a href=3D"mailto:editorijrsm@gmail.com" target=3D"_blank">editorijrsm=
+@gmail.com</a></div>
+</div>
+        </td>
+      </tr>
+    </table>
+  <div data-role=3D"module-unsubscribe" class=3D"module unsubscribe-css__un=
+subscribe___2CDlR" role=3D"module" data-type=3D"unsubscribe" style=3D"color=
+:#444444;font-size:12px;line-height:20px;padding:16px 16px 16px 16px;text-a=
+lign:center"><p style=3D"font-family:Editor IJRSM;font-size:12px;line-heigh=
+t:20px"><a class=3D"Unsubscribe--unsubscribeLink" href=3D"https://u9553424.=
+ct.sendgrid.net/asm/unsubscribe/?user_id=3D9553424&amp;data=3Dp1DG4Rgzz3rxx=
+n0qqNS_89WgxoPLXvWYKYFZoVjyiiPeyw3BoyKO5_DhLHSm8OCv37Vzkt27xUhvfD7BLQ_mstRG=
+X5hlu8Obx52BKNMcEFUSCNDvi5yTQ86ynLmZDE1z3kwiiboqeJtwYQEC-TcQ2wnGrez5csOKHAN=
+PK4bkdCVMOQUyqUJrZMbBHSyVg-PMInk3uZHFulRkK65EeFidB6sCeXVFxA5XxUZyCHapIVPJ12=
+hCrK0YtX1JAeeszVZAWpgt8ii97KOxM19Uak9EDkiOynqHGLLBjvEX0LN3cn3aoHqvb50BzZ27A=
+3BRqyoquk5owpxhtZULeFLyd2nX43Bn3PtH0v4SlCa0t3GcNlTBgje5mS16qUTpXHell7xgH1U2=
+HoVvLUkHTIh8cmGW4uXEf_-QE9KGOz_SoWVy9YvkUGnoD3kSCqRCYAGa0r-N2ql0mz_R0T0wKlt=
+61e7E930dn2pszDthq6SmZ9j4obA1BIWSwLn_1C5y1nw4kPzh1kcYKPmunSQSxXiLNSnbHpWYzZ=
+wkMrCtTr6qcLnAR6o=3D">Unsubscribe</a></p></div>
+                              </td>
+                            </tr>
+                          </table>
+                          <!--[if mso]>
+                          </td></tr></table>
+                          </center>
+                          <![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </center>
+ =20
+<img src=3D"https://u9553424.ct.sendgrid.net/wf/open?upn=3D7zRxtiYDTGBGqDWl=
+p0jwu-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCxFuEffOdhUIXlBHKgG-2Bd-2F182V=
+y0chsixRwEQvtCGc3tCA-2B4RHg9WTyWq4Yc2WQvX6E0eYfhVCsApX8xlHTxlnsKjeqNN4zQLFr=
+7dZKr8oZzHLi5Cm-2FafboKdwa5Tt4wULB0XeMVIwli72CB-2BhDbTpwWZIs-2BZKaM-2FBvB-2=
+BJ-2FaEj2KqjH61xyOCLQl1sCogvB-2BNFgMVtPNJtE0p4f1gky0OelGTrdqpvI9-2B7i5A-2F6=
+EaZxyCXCyZOdL22XWjDGGn3A1FZ8T5Lo-2BQwTsj-2FpC0TtN23-2FbpouRZe8GpDS2YTKwuf42=
+UuUfiRWZQNiRgii8aLLnvJD03hM6F56qonzjEUiYSTyH62TBtrl86de34g-2F206cyvtT9qc-3D=
+" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !impor=
+tant;width:1px !important;border-width:0 !important;margin-top:0 !important=
+;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !import=
+ant;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !i=
+mportant;padding-left:0 !important;">
+</body>
+</html>
+
+--98fc3db055cf4f44b3e8b798b2db236e48f932943f22b32252f14d159f93--

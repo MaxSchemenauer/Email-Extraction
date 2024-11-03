@@ -1,0 +1,386 @@
+Received: from SN6PR08MB4703.namprd08.prod.outlook.com (2603:10b6:a02:ee::35)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR02CA0022.NAMPRD02.PROD.OUTLOOK.COM; Wed, 11 Sep 2019 14:00:36 +0000
+Received: from CY4PR08CA0030.namprd08.prod.outlook.com (2603:10b6:903:151::16)
+ by SN6PR08MB4703.namprd08.prod.outlook.com (2603:10b6:805:97::33) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2263.13; Wed, 11 Sep
+ 2019 14:00:34 +0000
+Received: from CO1NAM04FT029.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::205) by CY4PR08CA0030.outlook.office365.com
+ (2603:10b6:903:151::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2241.15 via Frontend
+ Transport; Wed, 11 Sep 2019 14:00:34 +0000
+Authentication-Results: spf=pass (sender IP is 209.119.5.133)
+ smtp.mailfrom=LISTSERV.ACM.ORG; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=bestguesspass action=none
+ header.from=acm.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of LISTSERV.ACM.ORG
+ designates 209.119.5.133 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.119.5.133;
+ helo=acm-x.mta.lsoft.us;
+Received: from acm-x.mta.lsoft.us (209.119.5.133) by
+ CO1NAM04FT029.mail.protection.outlook.com (10.152.90.172) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2263.14 via Frontend Transport; Wed, 11 Sep 2019 14:00:33 +0000
+Return-Path:
+ owner-nolist-ACMLPX-190724Y-ov8ia944*foaad**CALPOLY*-EDU@LISTSERV.ACM.ORG
+Received: from [209.119.0.3] ([209.119.0.3:52466] helo=LOIRE)
+	by tesla.dc.lsoft.com (envelope-from <owner-nolist-ACMLPX-190724Y-ov8ia944*foaad**CALPOLY*-EDU@listserv.acm.org>)
+	(ecelerity 4.2.38.62370 r(:)) with ESMTP
+	id 11/CB-22886-EFDF87D5; Wed, 11 Sep 2019 10:00:30 -0400
+To: foaad@CALPOLY.EDU
+Date: Wed, 11 Sep 2019 10:00:02 -0400 (EDT)
+From: "Sartaj Sahni, ACM CSUR Editor-in-Chief" <pubs@acm.org>
+Message-ID: <53885-1879134008.39.1568210418714@ORANGE.hosting.lsoft.com>
+Subject: ACM CSUR Call for Papers
+Content-Type: multipart/alternative;
+ boundary="----=_Part_35_566795591.1568210403078"
+X-MS-Exchange-Organization-ExpirationStartTime: 11 Sep 2019 14:00:34.1654
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ead25072-bad5-43d6-ea3d-08d736c06a52
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:209.119.5.133;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(286005)(5142003)(189003)(199004)(51815007)(7596002)(606006)(75640400001)(18926415008)(2171002)(16003)(16586007)(106002)(246002)(76236002)(7636002)(6916009)(8676002)(9686003)(71190400001)(6306002)(6666004)(356004)(236005)(956004)(966005)(4006050)(2361001)(2351001)(486006)(26005)(336012)(126002)(85226003)(1096003)(733005)(298455003)(476003)(225293001);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4703;H:acm-x.mta.lsoft.us;FPR:;SPF:Pass;LANG:en;PTR:acm-x.mta.lsoft.us;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT029.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: ead25072-bad5-43d6-ea3d-08d736c06a52
+X-Microsoft-Antispam:
+ BCL:3;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(4709080)(1414054)(71702078);SRVR:SN6PR08MB4703;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4703:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 11 Sep 2019 14:00:33.7140
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ead25072-bad5-43d6-ea3d-08d736c06a52
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4703
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8469161
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2263.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?iso-8859-1?Q?hC0U2Sbd9npP3HkNhEmYwciYeO6UZ13Cmjy8NUkVlCmK7G06DTqH69qrTo?=
+ =?iso-8859-1?Q?rwu2wtyYUJzgOWxv6Vf4f643K3IRH7RbwbJVHsBObqtytTkYuU0ZZDfeTe?=
+ =?iso-8859-1?Q?B96u2uWaUGGGTFYATAlIt2aXf6BYJrc9kvV83qV6jBOKRbYXAqI4uMJbqj?=
+ =?iso-8859-1?Q?yoYvssSfeHInAbOag3i8TWs6Deabq+McZbWAQvkxm8K3dKqgcNFqDydLHQ?=
+ =?iso-8859-1?Q?iSdraIFZ4gWgHKPxMu0iwDWibI6fma2gW5BJEU60XOvK4QfqzqrMOdR8Af?=
+ =?iso-8859-1?Q?1w7nPaPICNd606nsTWb5lrOMb2SUBgvXPn7YfCVe0WkH0KptPo+mNVN7FS?=
+ =?iso-8859-1?Q?jPlEu1eb7WIMKaQxhqc+qwkIoUBKgyr1jnw/x0mGmpF+4M5PrIHecZGgyr?=
+ =?iso-8859-1?Q?fmCkKQWoj/keJAGOxZUv3IXAEFYchSPFhXZ+DeqtotgzqAtZBJgiM3S+1A?=
+ =?iso-8859-1?Q?DSHWSjysMJ8smIC0+Q4oV5yWShmeZwCE2ItiIAojX8QxLF8wsXzKtGwBD8?=
+ =?iso-8859-1?Q?hmNMmiVmlvAIfhohMsAe0CMbr/bF1wMktluxgjAk9p0fXPJrDsv2jh43Bn?=
+ =?iso-8859-1?Q?RJIzoezlt702zwEYVoNKLUVyXgRpHfFy7XbhSLoeilJi7Q61er4vFiiuIr?=
+ =?iso-8859-1?Q?3wsdtzZcJDTybBO9Q8enYAHnSYwKOP/sP+JF34LSzcaPmkSZc/LA4Xr6yO?=
+ =?iso-8859-1?Q?BGPrTLMC69qg84pMtL9HFxwV7teIZYkkdOG3nkIlYurQrau7ZGeI6bNEMo?=
+ =?iso-8859-1?Q?TQfgJteYbfNjyjRdejaOCnpbqiKaYwZm8InScfBAcLEJwXsz8hLVdarEfa?=
+ =?iso-8859-1?Q?43fSrtl3Gux6+IB9ZNrhoLOI2xRD7DQGlLTGXOkrAOoJkruO9+nwpV7PF7?=
+ =?iso-8859-1?Q?q2JspGOEKLEUCIebmwqUR8I3nITB+SdOSZYW6dpH0Wf9JVGjfLuXeEY8Jb?=
+ =?iso-8859-1?Q?hPwkUDibf9Q51U/bMr/rlxcrQjnY+Ov4hGDEOfGKDTY9FRjWSzGrg3XRPs?=
+ =?iso-8859-1?Q?j0tw5PHW7udtKkbq0pLN+YPP9aFFXB3QfrocnEP8xeyB+XzZIfukb4taXo?=
+ =?iso-8859-1?Q?y5QufWmMjnuDm3YJ+cf0uNI=3D?=
+MIME-Version: 1.0
+
+------=_Part_35_566795591.1568210403078
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+CALL FOR PAPERS    =20
+     =20
+ACM Computing Surveys  =20
+Integration of computer science and engineering knowledge  =20
+2018 Journal Impact Factor: 6.131  =20
+     =20
+Editor-in-Chief   =20
+Sartaj Sahni, University of Florida    =20
+    =20
+----------------------------------------------------------------------    =
+=20
+     =20
+Information For Contributors  =20
+  =20
+ACM Computing Surveys (CSUR) publishes comprehensive, readable tutorials an=
+d survey papers that give guided tours through the literature and explain t=
+opics to those who seek to learn the basics of areas outside their specialt=
+ies. These carefully planned and presented introductions are also an excell=
+ent way for professionals to develop perspectives on, and identify trends i=
+n, complex technologies. Recent issues have covered image understanding, so=
+ftware reusability, and object and relational database topics.  =20
+  =20
+Both surveys and tutorials must develop a framework or overall view of an a=
+rea that integrates the existing literature. Frequently, such a framework e=
+xposes topics that need additional research; a good Computing Surveys artic=
+le can fill such a void, but that is not its major purpose. Basically, a Co=
+mputing Surveys article answers the questions, "What is currently known abo=
+ut this area, and what does it mean to researchers and practitioners?" It s=
+hould supply the basic knowledge to enable new researchers to enter the are=
+a, current researchers to continue developments, and practitioners to apply=
+ the results.  =20
+  =20
+Invitation  =20
+  =20
+The Editor-in-Chief (https://csur.acm.org/editorial.cfm) welcomes suggestio=
+ns for topics and questions about contemplated submissions. Potential autho=
+rs should consult the Author Guidelines at https://csur.acm.org/authors.cfm=
+.  =20
+  =20
+For further information and to submit your manuscript, please visit https:/=
+/csur.acm.org.  =20
+  =20
+----------------------------------------------------------------------    =
+=20
+Associate Editors  =20
+  =20
+  * Vijay Atluri, Rutgers University
+  * Chandrajit Bajaj, University of Texas at Austin
+  * Azzedine Boukerche, University of Ottawa
+  * Jonathan Bowen, London South Bank University
+  * Longbing Cao, University of Technology Sydney
+  * Sharat Chandran, Indian Institute of Technology
+  * Jinjun Chen, Swinburne University of Technology
+  * Yeh-Ching Chung, National Tsing Hua University
+  * Antonio Corradi, Universit=E0 di Bologna
+  * Mario Dantas, Federal University of Juiz de Fora (UFJF)
+  * Eliezer Dekel, IBM
+  * Yuguang "Michael" Fang, University of Florida
+  * Wen Gao, Peking University
+  * Teofilo Gonzalez, University of California Santa Barbara
+  * Mei Hong, Institute of Software
+  * Paolo Ienne, =C9cole Polytechnique F=E9d=E9rale de Lausanne
+  * S. Sitharama Iyengar, Florida International University
+  * Samee U. Khan, North Dakota State University
+  * Mehdi Kharrazi, Sharif University of Technology
+  * Kin Leung, Imperial College London
+  * Mark Liao, Academia Sinica
+  * Rainer Lienhart, Universit=E4t Augsburg
+  * Pasquale Malacaria, Queen Mary University of London
+  * Miroslaw Malek, University of Lugano (USI)
+  * Wenji Mao, Institute of Automation
+  * Dinesh Mehta, Colorado School of Mines
+  * Michela Milano, University of Bologna
+  * Alessandro Moschitti, University of Trento
+  * Mirco Musolesi, University College London
+  * Ahmed Mostefaoui, University of Franche-Comt=E9
+  * Manish Parashar, Rutgers University
+  * Gabriella Pasi, Universit=E0 degli Studi di Milano-Bicocca
+  * Sanguthevar Rajasekaran, University of Connecticut
+  * Robbert van Ranesse, Cornell University
+  * Sanjay Ranka, University of Florida
+  * Louiqa Raschid, University of Maryland
+  * Pierangela Samarati, Universit=E0 degli Studi de Milano
+  * Hamid Sarbazi-Azad, Sharif University of Technology & IPM
+  * Guna Seetharaman, Air Force Research Lab
+  * Sandeep Sen, Indian Institute of Technology Delhi
+  * Scott F. Smith, The Johns Hopkins University
+  * Ram Sriram, National Institute of Standards and Technology
+  * Carlos A. Varela, Rensselaer Polytechnic Institute
+  * Shie-Yuan Wang, National Chiao Tung University
+  * Damon Woodard, University of Florida
+  * Yuanyuan Yang, Stony Brook University (SUNY)
+  * Fran=E7ois Yvon, Universit=E9 Paris-Sud
+  * Albert Zomaya, University of Sydney
+  =20
+=20
+------------------------------------------------------------------------   =
+ =20
+   =20
+To stop receiving emails about publishing in ACM journals, unsubscribe at: =
+        =20
+https://optout.acm.org/unsubscribe.cfm?re=3Dfoaad@calpoly.edu&rl=3DCFP   =
+=20
+    =20
+Association for Computing Machinery             =20
+1601 Broadway, 10th Floor, New York, NY 10019, USA              =20
+Copyright 2019, ACM, Inc.   =20
+------=_Part_35_566795591.1568210403078
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+    <title>Call for Papers</title>
+    <meta name=3D"googlebot" content=3D"noindex, noarchive, nofollow">
+
+
+  </head>
+ =20
+  <body style=3D"font-family: verdana, tahoma, geneva, arial; font-size: 12=
+px; line-height: 1.2; color: #333333; text-align:center"><!--[if gte mso 15=
+]><table border=3D'0' cellpadding=3D'0' cellspacing=3D'0' width=3D'100%' al=
+ign=3D'left'><tr><td><![endif]-->
+ =20
+  <table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"2" wi=
+dth=3D"670">
+  =09
+    	<tbody><tr><td>
+       =20
+        	<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"670">
+            	<tbody><tr align=3D"left" valign=3D"top">
+                	<td colspan=3D"2" height=3D"10"></td>
+                </tr>
+
+				<tr align=3D"left" valign=3D"top">
+                	<!-- main body -->  =20
+					<td width=3D"650" style=3D"padding: 10px;">
+						<!-- header --><img src=3D"http://www.acm.org/binaries/content/galler=
+y/acm/plone-images/acm_logo1.gif" width=3D"250" height=3D"" border=3D"0" al=
+ign=3D"right" alt=3D""></a><img src=3D"http://www.acm.org/binaries/content/=
+gallery/acm/newsletters/csur-impact-starburst.png" width=3D"150" height=3D"=
+" border=3D"0" align=3D"right" alt=3D""><br>
+   <div style=3D"font-family: verdana, arial; font-size: 14px; font-weight:=
+ lighter; color: #000000;">CALL FOR PAPERS<br>  </div>   <br>         =20
+<div style=3D"font-family: verdana, arial; font-size: 18px; font-weight: bo=
+lder; color: #000000;">ACM Computing Surveys<br></div>
+	<div style=3D"font-family: verdana, arial; font-size: 14px; font-weight: l=
+ighter; color: #000000;"><em>Integration of computer science and engineerin=
+g knowledge</em></div>
+<br>
+						<div style=3D"font-family: verdana, arial; font-size: 12px; font-weig=
+ht: light; color: #000000;"><b>Editor-in-Chief</b></div>
+
+	<div style=3D"font-family: verdana, arial; font-size: 12px; font-weight: n=
+ormal; color: #000000; line-height: 1.5em;"><b>Sartaj Sahni</b>, University=
+ of Florida
+<br>
+</div><br>
+
+<!-- end of header --><hr><br>
+
+<div style=3D"font-family: verdana, arial; font-size: 13px; font-weight: no=
+rmal; color: #000000;"><strong>Information For Contributors</strong></div>
+<!-- story -->
+	<div style=3D"font-family: verdana, arial; font-size: 12px; font-weight: n=
+ormal; color: #000000; line-height: 1.5em; vertical-align:top;">
+
+<br>
+		<img src=3D"http://www.acm.org/binaries/content/gallery/acm/newsletters/c=
+sur-cover-rgb.jpg" alt=3D"" width=3D"160" height=3D"" vspace=3D"10" hspace=
+=3D"20" border=3D"0" align=3D"right"><em>ACM Computing Surveys</em> (CSUR) =
+publishes comprehensive, readable tutorials and survey papers that give gui=
+ded tours through the literature and explain topics to those who seek to le=
+arn the basics of areas outside their specialties. These carefully planned =
+and presented introductions are also an excellent way for professionals to =
+develop perspectives on, and identify trends in, complex technologies. Rece=
+nt issues have covered image understanding, software reusability, and objec=
+t and relational database topics.<br><br>
+
+		Both surveys and tutorials must develop a framework or overall view of an=
+ area that integrates the existing literature. Frequently, such a framework=
+ exposes topics that need additional research; a good&nbsp;<em>Computing Su=
+rveys</em>&nbsp;article can fill such a void, but that is not its major pur=
+pose. Basically, a&nbsp;<em>Computing Surveys</em>&nbsp;article answers the=
+ questions, &quot;What is currently known about this area, and what does it=
+ mean to researchers and practitioners?&quot; It should supply the basic kn=
+owledge to enable new researchers to enter the area, current researchers to=
+ continue developments, and practitioners to apply the results.
+<br><br>
+<b>Invitation</b><br><br>
+
+The&nbsp;<a href=3D"https://orange.hosting.lsoft.com/trk/click?ref=3Dznwrbb=
+rs9_6-2176fx31ce90x023292&amp;">Editor-in-Chief</a> welcomes suggestions fo=
+r topics and questions about contemplated submissions. Potential authors sh=
+ould consult the&nbsp;<a href=3D"https://orange.hosting.lsoft.com/trk/click=
+?ref=3Dznwrbbrs9_6-2176fx31ce91x023292&amp;">Author Guidelines</a>.
+
+<br><br>
+For further information and to submit your manuscript, please visit <a href=
+=3D"https://orange.hosting.lsoft.com/trk/click?ref=3Dznwrbbrs9_6-2176fx31ce=
+92x023292&amp;">csur.acm.org</a>.<br><br>
+		<b>Associate Editors</b><br>
+
+		<ul>
+<li>Vijay Atluri, Rutgers University</li>
+<li>Chandrajit Bajaj, University of Texas at Austin</li>
+<li>Azzedine Boukerche, University of Ottawa</li>
+<li>Jonathan Bowen, London South Bank University</li>
+<li>Longbing Cao, University of Technology Sydney</li>
+<li>Sharat Chandran, Indian Institute of Technology</li>
+<li>Jinjun Chen, Swinburne University of Technology</li>
+<li>Yeh-Ching Chung, National Tsing Hua University</li>
+<li>Antonio Corradi, Universit=E0 di Bologna</li>
+<li>Mario Dantas, Federal University of Juiz de Fora (UFJF)</li>
+<li>Eliezer Dekel, IBM</li>
+<li>Yuguang &quot;Michael&quot; Fang, University of Florida</li>
+<li>Wen Gao, Peking University</li>
+<li>Teofilo Gonzalez, University of California Santa Barbara</li>
+<li>Mei Hong, Institute of Software</li>
+<li>Paolo Ienne, =C9cole Polytechnique F=E9d=E9rale de Lausanne</li>
+<li>S. Sitharama Iyengar, Florida International University</li>
+<li>Samee U. Khan, North Dakota State University</li>
+<li>Mehdi Kharrazi, Sharif University of Technology</li>
+<li>Kin Leung, Imperial College London</li>
+<li>Mark Liao, Academia Sinica</li>
+<li>Rainer Lienhart, Universit=E4t Augsburg</li>
+<li>Pasquale Malacaria, Queen Mary University of London</li>
+<li>Miroslaw Malek, University of Lugano (USI)</li>
+<li>Wenji Mao, Institute of Automation</li>
+<li>Dinesh Mehta, Colorado School of Mines</li>
+<li>Michela Milano, University of Bologna</li>
+<li>Alessandro Moschitti, University of Trento</li>
+<li>Mirco Musolesi, University College London</li>
+<li>Ahmed Mostefaoui, University of Franche-Comt=E9</li>
+<li>Manish Parashar, Rutgers University</li>
+<li>Gabriella Pasi, Universit=E0 degli Studi di Milano-Bicocca</li>
+<li>Sanguthevar Rajasekaran, University of Connecticut</li>
+<li>Robbert van Ranesse, Cornell University</li>
+<li>Sanjay Ranka, University of Florida</li>
+<li>Louiqa Raschid, University of Maryland</li>
+<li>Pierangela Samarati, Universit=E0 degli Studi de Milano</li>
+<li>Hamid Sarbazi-Azad, Sharif University of Technology &amp; IPM</li>
+<li>Guna Seetharaman, Air Force Research Lab</li>
+<li>Sandeep Sen, Indian Institute of Technology Delhi</li>
+<li>Scott F. Smith, The Johns Hopkins University</li>
+<li>Ram Sriram, National Institute of Standards and Technology</li>
+<li>Carlos A. Varela, Rensselaer Polytechnic Institute</li>
+<li>Shie-Yuan Wang, National Chiao Tung University</li>
+<li>Damon Woodard, University of Florida</li>
+<li>Yuanyuan Yang, Stony Brook University (SUNY)</li>
+<li>Fran=E7ois Yvon, Universit=E9 Paris-Sud</li>
+<li>Albert Zomaya, University of Sydney</li>
+		</ul>
+=09
+
+<hr>
+
+<table border=3D"0" cellpadding=3D"0px" width=3D"700">=09
+		<tr>
+			<td colspan=3D"2">
+						</td></tr>
+						</table>
+			  =20
+<!-- story -->      =20
+
+	<div style=3D"font-family: verdana, tahoma, geneva, arial; font-size: 10px=
+; font-weight: bolder; color: #505050; text-align:center"><a href=3D"https:=
+//optout.acm.org/unsubscribe.cfm?re=3Dfoaad@calpoly.edu&amp;rl=3DCFP">UNSUB=
+SCRIBE</a> to stop receiving emails about publishing in ACM journals.<br><b=
+r>
+Association for Computing Machinery, 1601 Broadway, 10th Floor, New York, N=
+Y 10019, USA<br>=20
+Copyright 2019, ACM, Inc.                                  =20
+                      =20
+                    </div><!-- end of story -->
+                    </div></td><!-- end of main body -->
+                  =20
+				</tr>
+            </tbody></table>
+			</div></div></div></td>
+		</tr>
+	</tbody></table>
+=09
+</td></tr></tbody></table><!--[--><img src=3D"https://orange.hosting.lsoft.=
+com/trk/open?ref=3Dznwrbbrs9_6-2176fx023292" width=3D"1" height=3D"1"><!--]=
+--><!--[if gte mso 15]></td></tr></table><![endif]--></body></html>=
+
+------=_Part_35_566795591.1568210403078--

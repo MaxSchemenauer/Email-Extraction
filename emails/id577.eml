@@ -1,0 +1,474 @@
+Received: from BYAPR08MB4982.namprd08.prod.outlook.com (2603:10b6:a03:54::42)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR02CA0065.NAMPRD02.PROD.OUTLOOK.COM; Thu, 6 Jun 2019 13:39:02 +0000
+Received: from MWHPR08CA0038.namprd08.prod.outlook.com (2603:10b6:300:c0::12)
+ by BYAPR08MB4982.namprd08.prod.outlook.com (2603:10b6:a03:6a::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.12; Thu, 6 Jun
+ 2019 13:38:59 +0000
+Received: from BN3NAM04FT034.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::203) by MWHPR08CA0038.outlook.office365.com
+ (2603:10b6:300:c0::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1943.17 via Frontend
+ Transport; Thu, 6 Jun 2019 13:38:59 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ BN3NAM04FT034.mail.protection.outlook.com (10.152.92.65) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1943.19 via Frontend Transport; Thu, 6 Jun 2019 13:38:58 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x56DcukH014580
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <foaad@CALPOLY.EDU>; Thu, 6 Jun 2019 16:38:56 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x56Dctrq026452
+	for <foaad@CALPOLY.EDU>; Thu, 6 Jun 2019 16:38:55 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Thu, 06 Jun 2019 16:38:55 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x56DctAi018076
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <foaad@CALPOLY.EDU>; Thu, 6 Jun 2019 16:38:55 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x56Buduf002739
+	for <foaad@CALPOLY.EDU>; Thu, 6 Jun 2019 16:38:55 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          312658 for GAMESNETWORK@LISTSERV.UTA.FI; Thu, 6 Jun 2019 16:38:17
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x56DSHVw022390 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Thu, 6 Jun 2019 16:28:17 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x56DSHVS015709
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <gamesnetwork@uta.fi>; Thu, 6 Jun 2019 16:28:17 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x56DSE6r012542 for
+          <gamesnetwork@uta.fi>; Thu, 6 Jun 2019 16:28:14 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Thu, 06 Jun 2019 16:28:14
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-oi1-f171.google.com (mail-oi1-f171.google.com
+          [209.85.167.171]) by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x56DSDrn010711 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <gamesnetwork@uta.fi>; Thu, 6 Jun 2019 16:28:14 +0300
+Received: by mail-oi1-f171.google.com with SMTP id y6so1557150oix.2 for
+          <gamesnetwork@uta.fi>; Thu, 06 Jun 2019 06:28:14 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=qemV08CT47eWHN5s/9DldmhaUTw6iXJAQ6Hy1crAUN0=;
+                         b=gyis5+PBTx8rpAxV5HBYtpbx0djCtAvl8PMByzsvFXDJwJalmLfr8gOuXJB1r+lapE
+                         3GYsYZLyDyHJ7jZGMZN+yyHVcpY30CnfFBpU4Sk9Vma9CrCWGIKlyJrg1asdg+1c56+Q
+                         f6q5qZyA/6SZR8WTDDgUv0eUwvEsh5YSMHFYld7Khuc5/IckUhqw4wrulNHYc6NLpgtq
+                         K1npMBIK8pAvP6VbBx0Xo315EpTzo9zocriYK1YXprn9F0ECd5SmE5gXosv3rhmKujWa
+                         oKKfygiHo87biXCuk80OqWwkU8ZVsxlrTpaBc8KmkGXuVx0GtCUeeA4uQp3eISqFvIlD
+                         7AJw==
+X-Gm-Message-State: APjAAAVo7zqwCzpwLCc2gQ9bh6crlbkouTpmIHneZP0RdHG1j3h+IFG2
+                    /iArnXBmkF8yNy6j5HZ5NH/bhd9FDXFfP3Ldgim770rO
+X-Google-Smtp-Source: APXvYqxTy28niyjZ306eZmiBlz7Qvn7kltOudf249mhg6Z4YdMqkT2r8uMJlW+6mfLDkEkYpDgjD4EKr6DZqc4QnCmA=
+X-Received: by 2002:aca:cf58:: with SMTP id f85mr27850oig.28.1559827692381;
+            Thu, 06 Jun 2019 06:28:12 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="00000000000083e99f058aa7afd2"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Thu, 06 Jun 2019 16:38:55 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_SMALL_FONT2,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1021
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CAAJaXtDDRfY-haekNaCHpB3XCv49wtwSt1H6VK8PGgTzupyriQ@mail.gmail.com>
+Date: Thu, 6 Jun 2019 15:27:43 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: =?UTF-8?Q?Bakk_=C3=81gnes?= <bakkagnes@GMAIL.COM>
+Subject: [GAMESNETWORK] CFP: Zip-Scene Conference
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork*foaad**CALPOLY*-EDU@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Jun 2019 13:38:58.5854
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ a838bee6-5444-47cd-5914-08d6ea845407
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(286005)(176002)(189003)(199004)(50854003)(45074003)(7192003)(33964004)(40036005)(43066004)(106002)(95326003)(498394004)(606006)(7636002)(7596002)(305945005)(15974865002)(6306002)(561944003)(59536001)(45776006)(6666004)(71190400001)(55176004)(356004)(55446002)(84326002)(75640400001)(146002)(66574012)(4006050)(21615005)(1096003)(6862004)(82202003)(42186006)(61266001)(14444005)(16586007)(966005)(236005)(26005)(7846003)(66346011)(8576002)(76482006)(42882007)(336012)(486006)(16003)(246002)(476003)(126002)(8676002)(53386004)(73392003)(6392003)(30864003);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4982;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT034.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: a838bee6-5444-47cd-5914-08d6ea845407
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4982;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4982:
+X-MS-Exchange-PUrlCount: 8
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Jun 2019 13:38:58.0800
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a838bee6-5444-47cd-5914-08d6ea845407
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4982
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.0819995
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1943.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?MUdsd01FMUdRQmxBdXc2REJtQ0plNXBJb3loVThEU3l6T2xkVnk2UUMweG9R?=
+ =?utf-8?B?QUhWZ0lPMUd5cHl1MFpTcGxkRDdIaGlEdm5xTXpkSHNKUU5lTG8vNHhBYTA5?=
+ =?utf-8?B?VmxOSFBFYkptYlEwb2JZaGcvRkorOHNLYWpRbTZDZ1dNWitIdTBpdVNHMGJM?=
+ =?utf-8?B?eHRiRGxCMkFqVmpDTVM0WEU0cFFObVFKZG1ZVUJKTFIrMEc3R2FhTk9EdG1k?=
+ =?utf-8?B?c1dFRXN2NUZ5cmpUNzhXNXYyeU4xeHhxd3UxNXRHLyt6WEdrVzYwTjB1amxs?=
+ =?utf-8?B?SzFYOGFQakRwQVF5TSt0YzJKcFA1YmJmWXhLMVNTTWZUMlhtRFNRalFMUE9p?=
+ =?utf-8?B?U29YL3MvVkgwZFJNZUhLM0lzQ0EvRTQrdi94MlRXTXhVMy9rMGR3Vll5cTVq?=
+ =?utf-8?B?ZG1iWHNlZnZWQ3V5VDdpbzJFRFZHTVJodmdxdTAweng3U3BlQms4WHNyRHpB?=
+ =?utf-8?B?SmFZYTczRHZQbldiZ3NBL1JDd3BRNi9wNjZTL3AxckVXblU2Wk9mL2puaHBD?=
+ =?utf-8?B?Z0hZRXBSR2N1dFZDQXozYzZiSHJsUXgwWmE0TVoySkMxT2RiODJnTk8ranFO?=
+ =?utf-8?B?Nnl6ZlJsTTlIY0pIYjU4ZUw0UzhVMTF4R09MYXp5UW5XckxyTEZzRVV6VG9t?=
+ =?utf-8?B?Zi92czFLSG1jWFNVakVka0ZoNnpISGRzOFdBMVF4TURlY1JEaDVRd1RLVG5t?=
+ =?utf-8?B?QUkxTjF2ZWJNektIS0tzcVBROHpMajRXODRBOXd5SkVzdk9mU0l6Y2MrNEVp?=
+ =?utf-8?B?RjF4NlIzMHp1MzR1WHFLTTFxRmZsWXlXSXNRSGF2NUhwMDVpdWdrcGl1UVVF?=
+ =?utf-8?B?K1JTaEtOUW05Mk9GRUhDOTBxU1h0S3dScEJRNUZLcVBDL0FHWjA4ZVNlY0NG?=
+ =?utf-8?B?blIwNmNrTmpCdjVUK1JzeWtKdmRudkFjL0VhM3RZNloyOXVxeVJ0QTRLTTgw?=
+ =?utf-8?B?M2NodjZVVXljZmF3Rlo2MzltZ2t0eCtiL0lXdHVoUjNqSGlobTlkcldTWXNn?=
+ =?utf-8?B?dmVRNGoweG54S1JFRTF0RmZNVFVSaXFNYjRZS2NkRWJUcXkyMy9CSzVOcWly?=
+ =?utf-8?B?NWVsTStDclkxYU5aMmtWd3ROZnlXc2pDTFVUSDZDWitrbFViTFdGUHdqY0NB?=
+ =?utf-8?B?MGt5NkVHT29vYjg2SHNLN2xFSEZyWmhmVGhQVk5pVy9WZThOQjZucXdtSlBN?=
+ =?utf-8?B?NHFySDFzcHhCbjF0Rnp6dHMxc2xRYXdxdHNab25DWUtka2N6TXZ6L1R1Y2ZV?=
+ =?utf-8?B?RVk4ay9odERMQ0EwUDQzemVYOHNwaTJxT0U5MmhmME1Ud3dwUXBBTFZUMFc3?=
+ =?utf-8?Q?fw/DTSzReoDNTl8d5IdPZlbBZudOyH6j37?=
+MIME-Version: 1.0
+
+--00000000000083e99f058aa7afd2
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Call for Papers for*
+
+*II. Zip-Scene Conference on Analogue and Digital Immersive Spaces*
+*Budapest, 10-12 November, 2019*
+Moholy-Nagy University of Art and Design
+*Application deadline: 17th of June*
+
+New digital tools provide novel opportunities for interactive digital
+narratives (IDN) in mixed reality environments, performance art and
+analogue immersive spaces. But does this mean that we can tell existing
+stories in a better way in these environments? Or should we change our way
+of thinking about how we perceive our world in order to create more
+comprehensive narrative experiences? In a recent keynote (ICIDS 2018
+conference) Janet H. Murray =E2=80=93 author of the groundbreaking volume H=
+amlet on
+Holodeck =E2=80=93 the Future of Narrative in Cyberspace (1997/2016), remin=
+ds us
+that =E2=80=9Ca kaleidoscopic habit of thinking=E2=80=9D can help us =E2=80=
+=9Cenvision a more
+integrated transformational future=E2=80=9D and =E2=80=9Copen up the possib=
+ility of
+expanding our understanding of the world and our cognitive capacity=E2=80=
+=9D
+(Murray, 2018:17). To better grasp the complexity of the world, it is
+important to enhance emerging artistic practices in order to create
+opportunities for critical reflection while acknowledging the changed
+relationship between creators and audiences turned
+participants/prosumers/experiencers.
+
+This conference aims to investigate whether XR/extended reality (VR/AR/MR)
+works will acquire a status comparable to film, performing arts and video
+games in the near future. On this basis, we are looking forward to papers
+that address narrative experiences enabled by XR and especially VR
+technologies. Papers should address either one or several of the following
+questions:
+
+What kind of narratives can be used to create possibility spaces in such
+immersive productions?
+How much engagement with and control over the narrative path is desirable
+for the audience turned participants?
+What design strategies can guide these participatory experiences: for
+example, live performers, orchestrators, and set designers using the
+sensorium of New Horror (see Ndalianis, 2012) or somaesthetic design
+concepts (see H=C3=B6=C3=B6k, 2018) to create novel forms of immersion in t=
+hese
+environments?
+What kind of design strategies can we use to provide a satisfying level of
+agency to participant audiences and provide opportunities for co-creation?
+What is the current status of interactive digital narrative experiences,
+have they completed their evolution from being media of attraction (see
+Rouse, 2016) or there is still a long way for them to go in order to find
+the right direction?
+What can we learn from a comparison of site-specific live arts productions
+with those of VR projects?
+How can we explore free-form play and rule-based gaming as different types
+of performances within mixed-reality theatre and immersive theatre?
+
+In addition, we want to challenge established storytelling strategies and
+instead more thoroughly analyze ways of creating engaging experiences:
+
+What kind of principles of video game design do XR productions make use of
+(e.g. puzzle dependency charts and plot-shaped level design - see Short,
+2019)?
+What design strategies createed the experience of full immersivity and
+presence for their users-turned-participants (see 2018/4 issue of the
+journal of Performance Arts and Digital Media).
+
+Further developing Murray=E2=80=99s perspective on the =E2=80=98kaleidoscop=
+ic habit=E2=80=99, we
+expect presentations that engage with the practice of transdisciplinary
+creators to adapt video game mechanics, various sensorium settings and
+interactive narrative design strategies in order to create fully immersive
+environments. Possible analyzes can be on topics such as overall aesthetics
+authorial affordances, design principles and conventions (Koenitz et al,
+2018) as well as the audience=E2=80=99s experience (especially engagement a=
+nd
+empowering mechanisms) and, last but not least, as interactive narratives.
+Some possible perspectives include Murray=E2=80=99s affordances and aesthet=
+ic
+qualities of the digital medium, Bogost=E2=80=99s procedural rhetoric, Kwas=
+tek=E2=80=99s
+=E2=80=9Caesthetics of interactivity=E2=80=9D, somaesthetic design concepts=
+ (H=C3=B6=C3=B6k), guiding
+strategies based on New Horror=E2=80=99s sensorium (Ndalianis, 2012) the
+trajectories offered by them (based on Benford-Giannachi=E2=80=99s concept)=
+ and
+interactive narrative systems (Koenitz, 2015).
+
+*Conference themes:*
+Interactive storytelling methods
+Interactive videos
+Video games
+Location-based technology (with augmented reality)
+Virtual reality experiences&movies
+Augmented reality in interactive storytelling
+Games-based performing arts practices using new technology tools
+Interactive Museum
+Immersive environments (media archeology and phenomenological approach)
+Transmedia storytelling
+
+Proposals may be for a paper or a panel and should be related to at least
+one of the conference themes. *Deadline for submitting the proposals is
+June 17, 2019. Please send us your abstract (max 350 words) and a short bio
+(max. 300 words) to the address: zipscene@mome.hu <zipscene@mome.hu> and
+please in CC: bakk@mome.hu <bakk@mome.hu>. The papers will be reviewed by
+the conference committee. If your proposal will be accepted you will be
+given 20 minutes for your presentation.*
+
+
+*Registration fee: EUR 50*
+The organizers cannot cover travel, accommodation and lodging costs. Upon
+request we can provide you invitation letter.
+
+
+*For Whom*
+The conference addresses scientific researchers, game professionals,
+programmers, artists, scholars and professionals from the field of
+performing arts, game studies, interactive storytellers, experience
+designers, narrative designers, VR-professionals and philosophers concerned
+with the conference topics. The conference aims to bring together emerging
+scholars, professionals and creators in order to create a joint platform
+which would later help individuals to understand and to develop these types
+of productions.
+
+*Confirmed keynote speakers:*
+Pola Borkiewicz (PL) - Institute of Psychology of the Polish Academy of
+Science&Academy of Fine Art, Warsaw
+Rebecca Rouse (USA) - Rensselaer Polytechnic Institute - Troy, NY
+Mathieu Triclot (FR) - University of Technology of Belfort-Montb=C3=A9liard
+
+
+*Organised by:*zip-scene.com
+Moholy-Nagy University of Art and Design Budapest
+
+
+*Strategic partner:*Sapientia Hungarian University of Transylvania,
+Department of Film, Photography and Media
+Code and Soda Company/Random Error Studio https://randomerror.studio
+Verzio Human Rights Documentary Film Festival www.verzio.org
+
+
+*Supported by:*National Cultural Fund (NKA), International Visegrad Fund,
+Wac=C5=82aw Felczak Foundation
+Consultant on behalf of ARDIN:
+Hartmut Koenitz
+
+If you have any further question, please don't hesitate to write me:
+bakk@mome.hu
+Hope to see you here!
+Best wishes,
+=C3=81gnes
+
+--=20
+*Zip-Scene Conference on Immersive Storytelling 2019
+<http://zip-scene.mome.hu>, **November 10-12 @Moholy-Nagy University of Art
+and Design, Budapest*
+
+
+
+*Interested in performing arts&game design&new tech? Check out my blog:
+zip-scene.com <http://zip-scene.com> or for random updates follow it on
+Facebook <https://www.facebook.com/zipsceneonline/>.*
+Telefon: +36 70 383 28 47 // Skype: zoldjadviga
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--00000000000083e99f058aa7afd2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div><br></div><div><b>Call for Papers for</b></div><b>II. Z=
+ip-Scene Conference on Analogue and Digital Immersive Spaces<br></b><div><b=
+>Budapest, 10-12 November, 2019</b></div><div>Moholy-Nagy University of Art=
+ and Design<br><b>Application deadline: 17th of June</b><div><br>New digita=
+l tools provide novel opportunities for interactive digital narratives (IDN=
+) in mixed reality environments, performance art and analogue immersive spa=
+ces. But does this mean that we can tell existing stories in a better way i=
+n these environments? Or should we change our way of thinking about how we =
+perceive our world in order to create more comprehensive narrative experien=
+ces? In a recent keynote (ICIDS 2018 conference) Janet H. Murray =E2=80=93 =
+author of the groundbreaking volume Hamlet on Holodeck =E2=80=93 the Future=
+ of Narrative in Cyberspace (1997/2016), reminds us that =E2=80=9Ca kaleido=
+scopic habit of thinking=E2=80=9D can help us =E2=80=9Cenvision a more inte=
+grated transformational future=E2=80=9D and =E2=80=9Copen up the possibilit=
+y of expanding our understanding of the world and our cognitive capacity=E2=
+=80=9D (Murray, 2018:17). To better grasp the complexity of the world, it i=
+s important to enhance emerging artistic practices in order to create oppor=
+tunities for critical reflection while acknowledging the changed relationsh=
+ip between creators and audiences turned participants/prosumers/experiencer=
+s.<br><br>This conference aims to investigate whether XR/extended reality (=
+VR/AR/MR) works will acquire a status comparable to film, performing arts a=
+nd video games in the near future. On this basis, we are looking forward to=
+ papers that address narrative experiences enabled by XR and especially VR =
+technologies. Papers should address either one or several of the following =
+questions:<br><br>What kind of narratives can be used to create possibility=
+ spaces in such immersive productions?<br>How much engagement with and cont=
+rol over the narrative path is desirable for the audience turned participan=
+ts?<br>What design strategies can guide these participatory experiences: fo=
+r example, live performers, orchestrators, and set designers using the sens=
+orium of New Horror (see Ndalianis, 2012) or somaesthetic design concepts (=
+see H=C3=B6=C3=B6k, 2018) to create novel forms of immersion in these envir=
+onments?<br>What kind of design strategies can we use to provide a satisfyi=
+ng level of agency to participant audiences and provide opportunities for c=
+o-creation?<br>What is the current status of interactive digital narrative =
+experiences, have they completed their evolution from being media of attrac=
+tion (see Rouse, 2016) or there is still a long way for them to go in order=
+ to find the right direction?<br>What can we learn from a comparison of sit=
+e-specific live arts productions with those of VR projects?<br>How can we e=
+xplore free-form play and rule-based gaming as different types of performan=
+ces within mixed-reality theatre and immersive theatre?<br><br>In addition,=
+ we want to challenge established storytelling strategies and instead more =
+thoroughly analyze ways of creating engaging experiences:<br><br>What kind =
+of principles of video game design do XR productions make use of (e.g. puzz=
+le dependency charts and plot-shaped level design - see Short, 2019)?<br>Wh=
+at design strategies createed the experience of full immersivity and presen=
+ce for their users-turned-participants (see 2018/4 issue of the journal of =
+Performance Arts and Digital Media).<br><br>Further developing Murray=E2=80=
+=99s perspective on the =E2=80=98kaleidoscopic habit=E2=80=99, we expect pr=
+esentations that engage with the practice of transdisciplinary creators to =
+adapt video game mechanics, various sensorium settings and interactive narr=
+ative design strategies in order to create fully immersive environments. Po=
+ssible analyzes can be on topics such as overall aesthetics authorial affor=
+dances, design principles and conventions (Koenitz et al, 2018) as well as =
+the audience=E2=80=99s experience (especially engagement and empowering mec=
+hanisms) and, last but not least, as interactive narratives. Some possible =
+perspectives include Murray=E2=80=99s affordances and aesthetic qualities o=
+f the digital medium, Bogost=E2=80=99s procedural rhetoric, Kwastek=E2=80=
+=99s =E2=80=9Caesthetics of interactivity=E2=80=9D, somaesthetic design con=
+cepts (H=C3=B6=C3=B6k), guiding strategies based on New Horror=E2=80=99s se=
+nsorium (Ndalianis, 2012) the trajectories offered by them (based on Benfor=
+d-Giannachi=E2=80=99s concept) and interactive narrative systems (Koenitz, =
+2015).<br><br><b>Conference themes:</b><br>Interactive storytelling methods=
+<br>Interactive videos<br>Video games<br>Location-based technology (with au=
+gmented reality)<br>Virtual reality experiences&amp;movies<br>Augmented rea=
+lity in interactive storytelling<br>Games-based performing arts practices u=
+sing new technology tools<br>Interactive Museum<br>Immersive environments (=
+media archeology and phenomenological approach)<br>Transmedia storytelling<=
+br><br>Proposals may be for a paper or a panel and should be related to at =
+least one of the conference themes. <b>Deadline for submitting the proposal=
+s is June 17, 2019. Please send us your abstract (max 350 words) and a shor=
+t bio (max. 300 words) to the address: <a href=3D"mailto:zipscene@mome.hu">=
+zipscene@mome.hu</a> and please in CC: <a href=3D"mailto:bakk@mome.hu">bakk=
+@mome.hu</a>. The papers will be reviewed by the conference committee. If y=
+our proposal will be accepted you will be given 20 minutes for your present=
+ation.</b><br><br><b>Registration fee: EUR 50<br></b><br>The organizers can=
+not cover travel, accommodation and lodging costs. Upon request we can prov=
+ide you invitation letter.<br><br><b><br>For Whom</b><br>The conference add=
+resses scientific researchers, game professionals, programmers, artists, sc=
+holars and professionals from the field of performing arts, game studies, i=
+nteractive storytellers, experience designers, narrative designers, VR-prof=
+essionals and philosophers concerned with the conference topics. The confer=
+ence aims to bring together emerging scholars, professionals and creators i=
+n order to create a joint platform which would later help individuals to un=
+derstand and to develop these types of productions.<br><br><b>Confirmed key=
+note speakers:</b><br>Pola Borkiewicz (PL) - Institute of Psychology of the=
+ Polish Academy of Science&amp;Academy of Fine Art, Warsaw<br>Rebecca Rouse=
+ (USA) - Rensselaer Polytechnic Institute - Troy, NY<br>Mathieu Triclot (FR=
+) - University of Technology of Belfort-Montb=C3=A9liard<br><br><b>Organise=
+d by:<br></b><a href=3D"http://zip-scene.com">zip-scene.com</a>&nbsp;&nbsp;=
+<br>Moholy-Nagy University of Art and Design Budapest<br><br><b>Strategic p=
+artner:<br></b>Sapientia Hungarian University of Transylvania, Department o=
+f Film, Photography and Media<br>Code and Soda Company/Random Error Studio =
+<a href=3D"https://randomerror.studio">https://randomerror.studio</a><br>Ve=
+rzio Human Rights Documentary Film Festival <a href=3D"http://www.verzio.or=
+g">www.verzio.org</a><br><br><b>Supported by:<br></b>National Cultural Fund=
+ (NKA), International Visegrad Fund, Wac=C5=82aw Felczak Foundation<br>Cons=
+ultant on behalf of ARDIN:<br>Hartmut Koenitz</div><div><br></div><div>If y=
+ou have any further question, please don't hesitate to write me: <a href=3D=
+"mailto:bakk@mome.hu">bakk@mome.hu</a></div><div>Hope to see you here!</div=
+><div>Best wishes,</div><div>=C3=81gnes<br><div><br></div>-- <br><div dir=
+=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div =
+dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div><font size=3D"1"><b><a href=3D"http://=
+zip-scene.mome.hu" target=3D"_blank"><span style=3D"font-family:&quot;Times=
+ New Roman&quot;"></span>Zip-Scene Conference on Immersive Storytelling 201=
+9</a>,&nbsp;</b></font><b style=3D"font-size:x-small">November 10-12 @Mohol=
+y-Nagy University of Art and Design, Budapest</b></div><div><br><font size=
+=3D"1"><b>Interested in performing arts&amp;game design&amp;new tech? Check=
+ out my blog: <a href=3D"http://zip-scene.com" target=3D"_blank">zip-scene.=
+com</a>&nbsp;or for random updates follow it on <a href=3D"https://www.face=
+book.com/zipsceneonline/" target=3D"_blank">Facebook</a>.<br><br></b></font=
+></div><div><font size=3D"1">Telefon: &#43;36 70 383 28 47 // Skype: zoldja=
+dviga<b><br></b></font></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--00000000000083e99f058aa7afd2--

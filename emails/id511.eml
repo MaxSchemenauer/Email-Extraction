@@ -1,0 +1,280 @@
+Received: from BYAPR08MB4982.namprd08.prod.outlook.com (2603:10b6:a03:74::28)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0051.NAMPRD05.PROD.OUTLOOK.COM; Fri, 7 Jun 2019 21:21:26 +0000
+Received: from MWHPR08CA0056.namprd08.prod.outlook.com (2603:10b6:300:c0::30)
+ by BYAPR08MB4982.namprd08.prod.outlook.com (2603:10b6:a03:6a::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.12; Fri, 7 Jun
+ 2019 21:21:24 +0000
+Received: from BN3NAM04FT018.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::206) by MWHPR08CA0056.outlook.office365.com
+ (2603:10b6:300:c0::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1943.18 via Frontend
+ Transport; Fri, 7 Jun 2019 21:21:24 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ BN3NAM04FT018.mail.protection.outlook.com (10.152.92.162) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1943.19 via Frontend Transport; Fri, 7 Jun 2019 21:21:23 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x57LHvKt025345
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Sat, 8 Jun 2019 00:17:58 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x57LHvfd028408;
+	Sat, 8 Jun 2019 00:17:57 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Sat, 08 Jun 2019 00:17:57 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x57LHuv9015511
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Sat, 8 Jun 2019 00:17:56 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x57Fuit8026752;
+	Sat, 8 Jun 2019 00:17:56 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          319100 for GAMESNETWORK@LISTSERV.UTA.FI; Sat, 8 Jun 2019 00:17:46
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x57LHkJI007019 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Sat, 8 Jun 2019 00:17:46 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x57LHkCk025189
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <gamesnetwork@uta.fi>; Sat, 8 Jun 2019 00:17:46 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x57LHkhX018126 for
+          <gamesnetwork@uta.fi>; Sat, 8 Jun 2019 00:17:46 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Sat, 08 Jun 2019 00:17:46
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-pl1-f173.google.com (mail-pl1-f173.google.com
+          [209.85.214.173]) by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x57LHiTc006943 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <gamesnetwork@uta.fi>; Sat, 8 Jun 2019 00:17:45 +0300
+Received: by mail-pl1-f173.google.com with SMTP id c5so1272408pll.11 for
+          <gamesnetwork@uta.fi>; Fri, 07 Jun 2019 14:17:45 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:reply-to:subject:to:cc:references:from
+                         :message-id:disposition-notification-to:date:user-agent:mime-version
+                         :in-reply-to:content-language:content-transfer-encoding;
+                         bh=3ESSgy4Qesia6E6ZLMBV7ACDwbnatYA3VNFwPzlQNY8=;
+                         b=hpiZtIiTTbQTDDaitzgQHL0vNa/sxewTL3CYc/X1PxCqsas4sqU3m300sI48Thbnft
+                         0BH5ihSUevuUW1hDH74DnNO2UkA3Z6g4YogMd15ilQZfsu5GF1+yNs0qB4xKDD+x4ZFp
+                         XB0fAaM4VwRRLUSzqUsxYAUAccdkddNXumsE6dyLEE8POo1cq1kGhQrh/y/LTqLDJ8js
+                         8KkmBdoxyt2RrMcWnaFCcQv+J9wYRF4NqEEM6nNNOqLsQecKcSMuu4l86k3lJPoBHaLC
+                         n/c5CR6IBGmpagGGtdD8/948kPEUmy7Gcf4D/oatSMcvhU7O3LN4flM0PWtJxdF3JmqY
+                         cfGw==
+X-Gm-Message-State: APjAAAU9TVsvrzzg6X7TEJWfH1XfARbX7hdPgMguZUz7o/scWaIb2VWu
+                    NbAuwWlKchqRuPVa7bisoLlDdlDyGxA=
+X-Google-Smtp-Source: APXvYqxmhhjRvsmsfgRcjwyPVGuKUML31vxxL5fKb1gcy+a0P9HLjcmBWqclWwtmzCnWKLCIWQinkQ==
+X-Received: by 2002:a17:902:341:: with SMTP id 59mr4588369pld.20.1559942263628;
+            Fri, 07 Jun 2019 14:17:43 -0700 (PDT)
+Received: from [192.168.50.254] ([172.83.58.186]) by smtp.gmail.com with
+          ESMTPSA id 85sm5993789pgb.52.2019.06.07.14.17.42 (version=TLS1_2
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Fri, 07 Jun 2019
+          14:17:43 -0700 (PDT)
+References: <0920307898158744.WA.feng.zhu.9gmail.com@listserv.uta.fi>
+            <01f69add-4b83-9ef1-ee5a-0d38271e15b6@ucalgary.ca>
+            <CAEvfOSsqbzt298-EaFGsMs2B3M4KCMaFDKAjpK7DPwxsytNM-w@mail.gmail.com>
+            <CALMoE73=3_y=L+AJ=99oGCv9fPJZCnG9JD7MEYsuKe-U6V6Gjw@mail.gmail.com>
+            <5cfa6a74.1c69fb81.11a8b.c1dc@mx.google.com>
+            <CAB=Oymr6VEVZK_pdcU8UXxEtiAAHtu2AvBN_9X9ZYzu7adaWjA@mail.gmail.com>
+            <975131de-2fec-a33d-07e4-984a4613716f@ucalgary.ca>
+            <CADYJ5w8dypq-+SjSpCTorSrYOKbf9LMSb_cGGPSCDRKpjs66Lg@mail.gmail.com>
+            <CAEvfOSvEREAcSpFhBJzy8tnKYFLEb937T4fbF2rqDu4HtSzr5Q@mail.gmail.com>
+            <FC965A24-479B-4229-A9FE-862CC32E8B0D@gmail.com>
+            <CADYJ5w9_qNmQQGqUEiyUnJoc2v0rwwvZheCw962tFpRvQXAPgw@mail.gmail.com>
+            <ac0f98ed-1e68-d3e0-b692-73bc6f1f6b75@gmail.com>
+            <CAEvfOSuAL6rRPvHG9HPNeEo91ASeRXXywpu=b8zPpiAAMjvO7Q@mail.gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
+            Thunderbird/60.7.0
+Content-Type: text/html; charset="utf-8"
+Content-Language: en-CA
+Content-Transfer-Encoding: quoted-printable
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Sat, 08 Jun 2019 00:17:57 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,MAILING_LIST_MULTI,MIME_HTML_ONLY,MIME_QP_LONG_LINE,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1014
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <c98fb9fa-3990-c224-5ece-6db6917ff0fa@gmail.com>
+Date: Fri, 7 Jun 2019 15:17:40 -0600
+Reply-To: <becker.minkhollow@gmail.com>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: "K.Becker (gmail)" <becker.minkhollow@GMAIL.COM>
+Subject: Re: [GAMESNETWORK] CFP: The Aesthetics of Computer Games
+Comments: To: Alesja Serada <alesja.serada@gmail.com>
+Comments: cc: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+In-Reply-To: <CAEvfOSuAL6rRPvHG9HPNeEo91ASeRXXywpu=b8zPpiAAMjvO7Q@mail.gmail.com>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Jun 2019 21:21:23.9403
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d0be59d2-7bf4-4374-474a-08d6eb8e17f6
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(286005)(199004)(176002)(189003)(7192003)(40036005)(60626007)(43066004)(106002)(95326003)(55176004)(356004)(23846002)(59536001)(65806001)(53546011)(7636002)(7596002)(236005)(76176011)(966005)(6862004)(6306002)(23676004)(2486003)(31686004)(606006)(55446002)(75640400001)(19273905006)(6246003)(64126003)(4006050)(54896002)(21615005)(587094005)(82202003)(65956001)(3450700001)(61266001)(1096003)(22416003)(2860700004)(14444005)(58126008)(26005)(8676002)(956004)(66346011)(60616004)(7846003)(76482006)(486006)(16003)(42882007)(336012)(2616005)(476003)(126002)(77096007)(426003)(446003)(11346002)(53386004)(53376002)(229853002)(50466002)(246002)(36756003)(73392003)(6392003)(31696002)(8746002)(146002)(65826007)(563064011);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4982;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT018.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: d0be59d2-7bf4-4374-474a-08d6eb8e17f6
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4982;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4982:
+X-MS-Exchange-PUrlCount: 12
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Jun 2019 21:21:23.4319
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d0be59d2-7bf4-4374-474a-08d6eb8e17f6
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4982
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.2611265
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1965.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TWZFV1B6c1Q0T3h6SUpRZzh3SkZpZ2c3YjR0UjBrL2NldWkzMXNOTzgxdUNC?=
+ =?utf-8?B?TTF1b2VCOC9HSEJIeDFYN3BpbWlCSFZOTHEvMVViK25kR2gwcmQ2MTlNejE4?=
+ =?utf-8?B?aC9rdXlnWDl5cmxxazVabkdjYzcrRDBkM05iVkNQd1AyWkloQ0c5UGN4clBT?=
+ =?utf-8?B?dnpzMVNqWHdlRlpkUWltNi9SbXRjV2FrY3ZmT1ZzL3FxQ1ZBNUp2andkUnJN?=
+ =?utf-8?B?UlFwT3dQTWlpRUQ5UTlWbE5xMzlVK1VRK3FjQWRNR29STW5LekVSNXJuNG9x?=
+ =?utf-8?B?NitsbUNaWDlpek1GbjdvMWNzYzMzYkVCQ1R5ZndjdzlyVmZWUHd6UHdoVEZ4?=
+ =?utf-8?B?dmJPbWU3bVhlUElSYVpiVHlJa1N3TFlHSk1GSHZxK05kMG5Lek5NWTR0akZK?=
+ =?utf-8?B?dUhaam9GeEhHL1lnSUY2NVZuZVdIMGxiSHV2RVZwODBrU1IwQktKQ1N0VnZG?=
+ =?utf-8?B?VWZPd0pLRHlac3dMZ1RnR3FKSTh2NStJU3Z0bXZ2azJkbHd1UElLZllNczdD?=
+ =?utf-8?B?M1J2cFQ1Z0VuNnh1WjN0K3dZbmprS3hpeUhSZkJLWUlaZFh1OTRQajNCK3pl?=
+ =?utf-8?B?MUhzZ2s4ZUhTM2EyS3QzeGdkYnhYLzRKQm11bHNpTE1wQmlrdkQ4bG40V3JB?=
+ =?utf-8?B?Wi9nNzJ6MVFmb0FQd2NjTyt4NXdSRWtzWUJGS0p3SmdtcGRPSlZnVUN6TWpm?=
+ =?utf-8?B?eEdyNlRoNDdqRUozL1NDc0JPWTNRK2M5WmdzUHM3TXBXTGthcU5SZWFEV1RN?=
+ =?utf-8?B?MFBFbGI2bjBsb3djeThPSDJ2K0NwL2xSd3BKbUlpcC85Ni9NUlUvRTd6Z1JX?=
+ =?utf-8?B?ZUpCcW5KY2g1KzBaVytUSG1WY1BhcEVDUEVtRWQvS01BRWZFc2dwR1oyRWlK?=
+ =?utf-8?B?cWo4K2E3U2h1SnYyOG5GNHdoeldydEZmOXJUSnhUMDJNOTh4Z2dtU3dIbXhI?=
+ =?utf-8?B?a1hGeXpnczluVm1vU2h0amlJaC91UzN5ZmptQnFPRTNDc25icUlsV3lwNnpR?=
+ =?utf-8?B?a0FkYXdvSzhNV2xVSzlINnFXTUl4R09mU0o1TnFNU0pINUMzRjJyMVlDanpV?=
+ =?utf-8?B?WlBkei8zMDYzTnprRjlveWFFaTFhVDR1T2RueDJWNzc2K1NBRW95cFcwV0Uz?=
+ =?utf-8?B?L3ZqcGtDRldibDJUVnpaSzFFcGJWYnFSWHdvS2tsNXJlWUhFQ2Nhck5TRHVv?=
+ =?utf-8?B?MHNBR1JLSFhwWFhYRlpuN0ZDYXhnMnBpeWtaMGFLTTdIY1BWSnR3QnZpc3pj?=
+ =?utf-8?B?bUprL1R3WWllVUtOSkdHekVrOHh5R0lua3dpNTBVTnM1d1VZMmZPTVhlYyt4?=
+ =?utf-8?Q?9Ylt/+L6bsvXszFjFt572sgBg0GWoa82nk?=
+MIME-Version: 1.0
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+  </head>
+  <body text=3D"#000000" bgcolor=3D"#FFFFFF">
+    <div class=3D"moz-cite-prefix">On 6/7/2019 1:45 PM, Alesja Serada
+      wrote:<br>
+    </div>
+    <blockquote type=3D"cite" cite=3D"mid:CAEvfOSuAL6rRPvHG9HPNeEo91ASeRXXy=
+wpu=3Db8zPpiAAMjvO7Q@mail.gmail.com">The
+      EU already tried it with Belarus. That project failed. A new class
+      of conference guests emerged really quickly - those who are
+      professionals at fundraising but don't actually contribute to any
+      community. So, no funding for Belarusians now - if the system can
+      be exploited, it will be exploited, and especially with funding.</blo=
+ckquote>
+    <p><font face=3D"Helvetica, Arial, sans-serif">Okay, Fair point.</font>=
+</p>
+    <p><font face=3D"Helvetica, Arial, sans-serif">That said, we are GAME
+        scholars.<br>
+        We know what to do when this happens.<br>
+        When someone games the system in ways we don't want, we change
+        the rules and try it again. ;-)</font><br>
+    </p>
+    <div class=3D"moz-signature"><span style=3D"font-size:11.0pt;font-famil=
+y:Century Gothic, Arial,
+        Sans-Serif;color:gray">
+        <b>Katrin Becker, PhD</b></span>
+      <i><span style=3D"font-size:10.0pt;font-family:Century Gothic,
+          Arial, Sans-Serif;
+          color:maroon">(sent from gmail)</span></i><br>
+      <span style=3D"font-size:10.0pt;font-family:Century Gothic, Arial,
+        Sans-Serif;color:gray"><b>President, <a href=3D"http://minkhollowme=
+dia.ca/">Mink Hollow Media</a></b></span><br>
+      <span style=3D"font-size:10.0pt;font-family:Century Gothic, Arial,
+        Sans-Serif;color:gray"><b>Adjunct Professor, <a href=3D"http://www.=
+mtroyal.ca">Mount Royal University</a></b>
+        (Calgary, AB, Canada)</span><br>
+      <b><span style=3D"font-size:10.0pt;font-family:Century Gothic,
+          Arial, Sans-Serif;color:gray">Author:</span></b>
+      <span style=3D"font-size:10.0pt;font-family:Century Gothic, Arial,
+        Sans-Serif;color:gray"> <a href=3D"http://minkhollow.ca/MagicBullet=
+"> Choosing and Using
+          Digital Games in the Classroom =E2=80=93 A Practical Guide</a>,
+        Springer, 2016</span><br>
+      <b><span style=3D"font-size:10.0pt;font-family:Century Gothic,
+          Arial, Sans-Serif;color:gray">and </span></b>
+      <span style=3D"font-size:10.0pt;font-family:Century Gothic, Arial,
+        Sans-Serif;color:gray"> <a href=3D"https://leanpub.com/guidetosimul=
+ationsandgames"> The
+          Guide to Computer Simulations and Games</a>, Wiley, 2011</span><b=
+r>
+      <span style=3D"font-size:10.0pt;font-family:Century Gothic, Arial,
+        Sans-Serif;color:gray"><b>Owner <a href=3D"http://minkhollowmediafa=
+rm.ca/">Mink Hollow Farm</a></b></span><br>
+      <br>
+      <span style=3D"margin-right:3.1pt"><span style=3D"font-size:10.0pt;
+          font-family:Century Gothic, Arial, Sans-Serif;color:gray">
+          E-mail: <a href=3D"mailto:becker@minkhollow.ca">becker@minkhollow=
+.ca</a><a>
+            HomePage: </a><a href=3D"http://minkhollow.ca/becker">http://mi=
+nkhollow.ca/becker</a>
+          Blog: <a href=3D"http://beckerblog.ca">http://beckerblog.ca</a>
+          Books: <a href=3D"http://books.minkhollow.ca">http://books.minkho=
+llow.ca</a>
+          Amazon: <a href=3D"http://amazon.com/author/kbecker">http://amazo=
+n.com/author/kbecker</a>
+        </span>
+        <br>
+        <i><span style=3D"font-size:10.0pt;font-family:Century Gothic,
+            Arial, Sans-Serif;
+            color:green">I have found the missing link between the
+            higher ape and civilized man - it is we. - Konrad Lorenz</span>=
+</i><br>
+      </span></div>
+    <br>
+  </body>
+</html>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>

@@ -1,0 +1,192 @@
+Received: from BN7PR08MB4435.namprd08.prod.outlook.com (2603:10b6:a03:12b::26)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR07CA0085.NAMPRD07.PROD.OUTLOOK.COM; Tue, 15 Oct 2019 11:51:27 +0000
+Received: from MWHPR08CA0047.namprd08.prod.outlook.com (2603:10b6:300:c0::21)
+ by BN7PR08MB4435.namprd08.prod.outlook.com (2603:10b6:406:f1::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.21; Tue, 15 Oct
+ 2019 11:51:24 +0000
+Received: from BN3NAM04FT039.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::209) by MWHPR08CA0047.outlook.office365.com
+ (2603:10b6:300:c0::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16 via Frontend
+ Transport; Tue, 15 Oct 2019 11:51:23 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.9.7)
+ smtp.mailfrom=amazonses.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=amazonses.com;calpoly.edu; dmarc=none action=none
+ header.from=academics-scitus.com;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of amazonses.com designates
+ 54.240.9.7 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.9.7; helo=a9-7.smtp-out.amazonses.com;
+Received: from a9-7.smtp-out.amazonses.com (54.240.9.7) by
+ BN3NAM04FT039.mail.protection.outlook.com (10.152.93.3) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2347.16 via Frontend Transport; Tue, 15 Oct 2019 11:51:23 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1571140283;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Feedback-ID;
+	bh=iAPiteT4DXNU96BQNdh1xZpd4/WAj28BXkKC4dq2d7g=;
+	b=lJA6sShcCpfP03C1aVnL0wJ2kRpHxebq4zStvOVNUk7EJeaYKNdl2Igo9uFtsljo
+	/JeAOHluyoMQ2u0WeW4EWptiuuLJU4Yl27Tdtcv+1bT9dDlyBYS/ft6dR1n5C/QS+yf
+	jvIf7rwpuSa22Pj89g8DHGwR4XKZ4IXd3eywdzkI=
+Date: Tue, 15 Oct 2019 11:51:23 +0000
+To: California Polytechnic State University-San Luis Obispo <foaad@calpoly.edu>
+From: Scitus Academics <newsletter@academics-scitus.com>
+Reply-To: Scitus Academics <info@scitusacademics.com>
+Subject: The reference to references
+Message-ID: <0100016dcf422a97-822791fc-6dd8-4024-9605-f2074c0d35f7-000000@email.amazonses.com>
+X-Mailer: Sendy (https://sendy.co)
+List-Unsubscribe: <http://e2b2.in/unsubscribe/RmDkSDApMsVMApuVrG48a0WEWDpDIZN1mLC2mvdcaT8/bC8roloHAA6SjM0p0976328w/zuyt7c2pBHJh8YpGyYabrA>
+Content-Type: text/html; charset=UTF-8
+X-SES-Outgoing: 2019.10.15-54.240.9.7
+Feedback-ID: 1.us-east-1.n6ZynaX2gNPbYbMdP88b7Pc7q7xCMk2rOkVtFzgk53I=:AmazonSES
+Return-Path:
+ 0100016dcf422a97-822791fc-6dd8-4024-9605-f2074c0d35f7-000000@amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Oct 2019 11:51:23.6208
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d0047e78-7686-455a-2a9d-08d7516600af
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:54.240.9.7;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BN7PR08MB4435;H:a9-7.smtp-out.amazonses.com;FPR:;SPF:None;LANG:en;CAT:SPOOF;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT039.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: d0047e78-7686-455a-2a9d-08d7516600af
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4435:
+X-MS-Exchange-PUrlCount: 4
+X-MS-Oob-TLC-OOBClassifiers: OLM:6108;
+X-MS-Exchange-Organization-SCL: 6
+X-Microsoft-Antispam: BCL:2;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Oct 2019 11:51:23.6018
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d0047e78-7686-455a-2a9d-08d7516600af
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4435
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.9190633
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?b3UzY1RGa3ErV2RvY29hTTN2bTNZZ0h1bllGSmQzRXZaaGRobHUxSWk2c2pS?=
+ =?utf-8?B?b2ptQlpFSFlqUDg5Sy91YUExcEhUeldhZXIxcEhMY21Ba0RsYkw1LzQ5MTBW?=
+ =?utf-8?B?Nm5uZzFVZnR0SXBlSVdKZk5HSW1yckN5WTMyVXQwWlZaVDJ1bHJKMzBHOG41?=
+ =?utf-8?B?SnFlY0xFaVprNlMvOW9PMUNoNWQ4MTJSUkVpeWowcGY0b212UjdsUWNSS2RP?=
+ =?utf-8?B?YXNyNm84Tk1sa2RhbzlrdGJEQXhmQ09HQkpvWDBOLzROTU43YmVZMlkycWd3?=
+ =?utf-8?B?MlZ1amRWL3B4MUQ3U1JMVFgvdFo5TkRteVNPNFlkOE1NaTZmNkYzR1BtUTEr?=
+ =?utf-8?B?QWJLUHphVlBxNEViNjN4RTBrNUQwNmMwUWlYdEp4ckFWQTBuR2llVEZvYnVS?=
+ =?utf-8?B?REVnUS9BdXVIa0dmRTJrMGw4TW0rNkRKYTVKZnVvTXE1OWl0MzJFNHo3cksv?=
+ =?utf-8?B?ZXQvNDY4SjZRVzF2WXpYMXlBdERPZmxFWDVNOW9aNzFLN1lORXFuQ3lXOWlD?=
+ =?utf-8?B?c01IcHVJREdkRnc2cEpIMTVKRHVPM0M5UXB3WU1WSzhGckVqVEp4VEJUa3VK?=
+ =?utf-8?B?TERWZEExZi9ucUFMVDlGV3VXcnlBU2VaVXZpUVRxR01BeVJ6VHRJYmJHdUlM?=
+ =?utf-8?B?OUVHQktOS2JCc25YaHY0dzRPZTR0WHRmbTIyS1VQVFJ2Z3hhZFVURXJQUlhV?=
+ =?utf-8?B?VXhtZjArRmtLT3RzcG45UkNVNnVROExQNDZYYlBGZkt2L1B5aStZTENTaDhm?=
+ =?utf-8?B?bUpKV0lLUGRaTUlLaGVlb0Qza2xzUVU4RXhoWGRJZnVSZ2RiaGJtZ2JlS0Yx?=
+ =?utf-8?B?VFJ3SmhZOUtNYVQ4VjZBamNEbU54emtsUnd5cG4xVm1QZUpBZU9FSHdZNFVD?=
+ =?utf-8?B?WGttSFhnRDdvZzRDem9jd25rQlNESWFteXlKZUVPRERla29TYmtHV2NKY3NT?=
+ =?utf-8?B?dmE0dXdGTUxkYjBkQ0FJMU1ZZTFqelZRMDlXVk5SdW9TcnB5UVRpdkx6T1dS?=
+ =?utf-8?B?MzRTcmJHd3pqakd4Q25aYjZTeDBBZEc5bE9oOUovbmtvR2ovMjdGUkhSUjl5?=
+ =?utf-8?B?cWd4UURValB5d2ZFZG5QUmxvcXlOSFFBSWdCNFFwaDF0bWgwUlFBODVsaWV3?=
+ =?utf-8?B?QlZJMWhyTmtnQ2tKc0YzR2pSaWI3SEk5MkVtQWlDTDRMUEpHT0owV2hZdm9N?=
+ =?utf-8?B?c1d5WjdWSEF4N2RhVkxoSmhzMHVXOHJFVnN1bldYY3lseXFURzg3bVZGUjN4?=
+ =?utf-8?B?T3B3ZHhZMm93L3BXMmNLMDFZYUJjOTZNbVJmMkU4TDlTMWw2dlV2Yko1NjZa?=
+ =?utf-8?B?UXhwVy9mb2dyU2wvd3FOTGU1YXpyNjB0WnhaaE1qTUgvWno1NmRzWXlZZEpW?=
+ =?utf-8?B?T3NDcml2VTlkaDVWcnRDRUR3bVh3K21FbkFzZVZFcjFrcjBDWitaWm9Hc2Yw?=
+ =?utf-8?B?MzdNUzFTR0p6eUQ4ZEFab0VsT3F5VDBLditvVGJJa1V4bGorM3RuWEhLa3pp?=
+ =?utf-8?B?aHRheWhqMnBtV0p0WXh2K3BOOVBrbTN4eHh6VzY2b0lOTzBCbmdzM201ZU95?=
+ =?utf-8?B?bTVZdXlBbmFJeG52NGNpNjZZYVAwVlc0ZVVvQloxSUhlSmYvQWpzNjA0Q2sz?=
+ =?utf-8?B?SlByRldsak0vQ1hFUnRYVmNvVDE1SXJlVm1kdnFlQzJrMnlrRk1WYjJ0KzZW?=
+ =?utf-8?B?Q0hRRG84M0UzbWFKS0Y0ZUxieFFTdzczRW9DUjFHbS8wVWVCM3ZVR2NKRUZo?=
+ =?utf-8?B?eUlvR2xUSUZpYVdIUVZiTUhUbWJROHp1Y1ZDVlViQ1hxOUU3bVM2eG1rVXdJ?=
+ =?utf-8?B?SGJjYWVSZ09VRnFpWnQ3bm1wYndveldBYXprbVNuMk9rRlhxNnNzdVVyMit0?=
+ =?utf-8?B?NFhxSGMrYWNjU1c1SFJYN1p0VmtKeWpVMHNjTWMxMlVXcXYzUFVnU1VhaGVp?=
+ =?utf-8?B?Y0w2cnliZzFreXBLdWp4am5kK1BCYnlDN29qdHNpVjkzZC91RWhvUFNGVy83?=
+ =?utf-8?B?WEZDQXQ5VmlCVy91Sng4eEVkejlUU1lYTDY0cnc5RTRFcVBobWpvaytqM2I5?=
+ =?utf-8?B?eFRUa3dHMFpBQThzSzdVb3lpclFGNVBjUXRSNVM2NUxzajdPQzd1WXFPZ1Vp?=
+ =?utf-8?B?S0c4bTNHR1RVME5xdG4vQUdHckpHUXhSTkc0UEZCUlpUa1pzdFo0b0NvOGZH?=
+ =?utf-8?B?YldsRjcwTTduQmRBSGh6QnNMdWFqbXEvRUE4c2d3V1JDM2NCN0FLb2tlbkp2?=
+ =?utf-8?B?aTZNZ0czVnBmL0xzd29RSmFod1BDSWxSOTNQUnNuZFAxeHdyT2k1YmdXelcr?=
+ =?utf-8?B?dE1pTnJXd2ZXc092eVNQcFcwUm5jMmdDRnJWblB6MWl4TmNQMExFWkoyN0lJ?=
+ =?utf-8?Q?cHvIlWhtFDwUEo4u6g4v+T6jOJDQ2tKaxbwE4?=
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>SCITUS ACADEMICS LLC</title>
+	<style type="text/css">p{ margin-left:10px; margin-right:10px;
+}
+	</style>
+</head>
+<body style="margin:0; padding:10px 0; background-color:#f8f8f8; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="main-table" style="background-color:#fff; border-left:1px solid #ccc; border-right:1px solid #ccc;" width="600">
+	<tbody>
+		<tr>
+			<td border="0"><img height="85" src="https://www.scitusacademics.com/emailer/header.jpg" width="600"></td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;"><strong><span style="color:#006400;"><span style="font-family:helvetica neue;">Hello,</span></span></strong></p>
+
+			<p style="text-align: justify;"><span style="font-size:16px;"><span style="font-family:helvetica neue;"><span style="color:#006400;"><strong>Haruki Murakami</strong>&nbsp; once said,&nbsp;“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.”&nbsp;&nbsp;</span></span></span></p>
+
+			<p style="text-align: justify;"><span style="font-size:16px;"><span style="font-family:helvetica neue;"><span style="color:#006400;">Many textbooks fail to meet academic needs are commonplace in educational institutes. The weaknesses of textbooks are counterbalanced by reference books.</span></span></span></p>
+
+			<p style="text-align: justify;"><span style="font-size:16px;"><span style="font-family:helvetica neue;"><span style="color:#006400;">We at Scitus Academics deal with reference books. Our books cover a plethora of subjects, from management to applied and pure sciences. We ensure that our books are in conformation to the academic curricula of different institutions or universities. The books we publish are a perfect mélange of theories, information, examples and exercise problems in lucid language.</span></span></span></p>
+
+			<p style="text-align: justify;"><span style="font-size:16px;"><span style="font-family:helvetica neue;"><span style="color:#006400;">If you are a research scholar in search of good references or if you represent a university or an institution and want the best for the online book repository of your respective institution, look no further.&nbsp;<em>Your search ends here at&nbsp;<strong>Scitus Academics</strong></em>, the solution to all your ‘book’ worries. We are a book publishing house with a rich online book storehouse which is getting richer by the day.</span></span></span></p>
+
+			<p style="text-align: justify;"><span style="font-size:16px;"><span style="font-family:helvetica neue;"><span style="color:#006400;">Quoting Rahm Emanuel, “we have come a long way and we have a little further to go”, Scitus Academics ‘have come a long way’ and have been serving clients of different nationalities. However, we have a long way to travel; we aim to extend the reach of Scitus Academics to the nook and corner of the world, encompassing clients from all parts of the world. Introduction of our own ‘book merch’ is also in the bucket-list.</span></span></span></p>
+
+			<p style="text-align: justify;"><span style="font-size:16px;"><span style="font-family:helvetica neue;"><span style="color:#006400;">What distinguishes us from the rest in the market you ask? We are adaptable, flexible and multifaceted, so are our books. Being at their versatile best, our books are qualified to be adopted as reference books at different educational levels.</span></span></span></p>
+
+			<p style="text-align: justify;"><span style="font-size:16px;"><span style="font-family:helvetica neue;"><span style="color:#006400;">Lastly, our books are not heavy on the pocket, rest assured of that.</span></span></span></p>
+
+			<p style="text-align: justify;">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<table background="https://www.scitusacademics.com/emailer/footer.jpg" border="0" cellpadding="0" cellspacing="0" height="242px" valign="bottom" width="600">
+				<tbody>
+					<tr>
+						<td width="50%">
+						<p align="justify"><span style="font-family:helvetica neue;"><span style="color:#006400;"><span style="font-size:12px;">Best regards,<br>
+						<strong>SCITUS ACADEMICS LLC</strong></span></span></span></p>
+
+						<p align="justify"><span style="font-family:helvetica neue;"><span style="color:#006400;"><span style="font-size:12px;">3 Germay Dr.<br>
+						Ste 4 - 4314<br>
+						Wilmington DE 19804<br>
+						United States of America</span></span></span></p>
+
+						<p align="justify"><span style="font-family:helvetica neue;"><strong><a href="http://e2b2.in/l/XjGKqM7LuYsPvUg763892ldD892Q/qaw45wQLyWdxXez8IvD8KQ/zuyt7c2pBHJh8YpGyYabrA" target="_blank">https://www.scitusacademics.com/</a></strong></span></p>
+						</td>
+						<td width="50%">&nbsp;</td>
+					</tr>
+					<tr>
+						<td><strong><span style="font-family:helvetica neue;"><span style="color:#0000FF;">For orders and enquiries, please contact</span><br>
+						<a href="mailto:sales@scitusacademics.com" style="color:#000;"><span style="color:#0000FF;">sales@scitusacademics.com</span></a></span></strong></td>
+						<td>
+						<p><span style="font-family:helvetica neue;"><span style="font-size:12px;"><strong><span style="color:#006400;">You can download Catalog &amp; List of Titles by clicking the link -</span><span style="color:#006400;"><a href="http://e2b2.in/l/XjGKqM7LuYsPvUg763892ldD892Q/s0JjILq4Q4lP05t892kddlVA/zuyt7c2pBHJh8YpGyYabrA" target="_blank">Catalog</a>&nbsp; &amp;&nbsp;&nbsp;<a href="http://e2b2.in/l/XjGKqM7LuYsPvUg763892ldD892Q/7MgWOqq0763JYFV8GF9763L3nw/zuyt7c2pBHJh8YpGyYabrA">Excelic Catalouge</a></span></strong></span></span></p>
+
+						<p><span style="font-family:helvetica neue;"><span style="color:#006400;"><strong>Copyright © 2019 Scitus Academics LLC.</strong></span></span></p>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" colspan="2"><span style="font-size:16px;"><span style="font-family:helvetica neue;"><strong><span style="color:#006400;">You can<span style="background-color:#FFD700;"> </span></span><a href="http://e2b2.in/unsubscribe/RmDkSDApMsVMApuVrG48a0WEWDpDIZN1mLC2mvdcaT8/bC8roloHAA6SjM0p0976328w/zuyt7c2pBHJh8YpGyYabrA" target="_blank"><span style="color:#006400;"><span style="background-color:#FFD700;">unsubscribe</span></span></a><span style="color:#006400;"> from this list or update subscription preferences</span></strong></span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+<img src="http://e2b2.in/t/zuyt7c2pBHJh8YpGyYabrA/XjGKqM7LuYsPvUg763892ldD892Q" alt="" style="width:1px;height:1px;">

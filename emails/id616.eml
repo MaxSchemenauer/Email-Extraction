@@ -1,0 +1,897 @@
+Received: from BN6PR08MB2802.namprd08.prod.outlook.com (2603:10b6:a03:117::21)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0044.NAMPRD08.PROD.OUTLOOK.COM; Tue, 8 Oct 2019 17:06:53 +0000
+ARC-Seal: i=3; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=pass;
+ b=MuQj08xWxKXaX68b0/vJxuVfI76vzL7qHvkC1Q9ska7vh+JFmNGZaJsUJ21SBYCBiTFJgvzEqdW8lh9dAoxY3KziG1FNoEl8IhZMsgFYoP/7qmm0FYAHrgw8W8kiqUlPGOX6rSJv7LMyYLZV9MXBcczxb8IPJuxTL89ty0LBKPQPzsty+orreM8IGxal/LGRgY4rKXh7FVd/5onLrjJXrBsfDqYEGytZZOQnl1L+syZNJc/TAx8fZcElWt93/ctlVieyM7/8qrIX5EndyAGTd3BMRVs2d5s7lo7ZbOZvXIfgU7P7e5LDp2ZXDRzBl79ECn8WRtvj92CtTSX9yytaFA==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=OaZr6Jtnqrbw/iI9DAwQAmnMzlgQnZVowZ9Pj3vgZTg=;
+ b=dNLumellUArl6otCg5dCyn2MOCBui4gKachlNzfzQz/CeEQugJ+4+molYs2QxNpTawd6FVVsZlOU1U8kmuysYZBi0Bw3tMpd3JAhTxz0Nr3Vrixh0mloZ5mtMigAKe8QHLcLMIb4IBr139ET1xYR5sWxqD3bybpeeTaUJxWBOe6xmjdCwvqWpRChxWUYKSYrWTMDwd57e6fFqm3SQ2UNHEGDr6G7OC+0a8Bqg7UwkgnJfmJU4twF42hr+nSFPaq9X2NPvgAGKCVlPXMiQXIRm4/h2kQdfbIdUUJ14wrJQKMKbD9wDvak33p0kadPtP8UKCeHum20M3ri5UOkrjejrw==
+ARC-Authentication-Results: i=3; mx.microsoft.com 1; spf=neutral (sender ip is
+ 209.85.210.71) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=hevga.org;
+ dmarc=none action=none header.from=hevga.org; dkim=pass (signature was
+ verified) header.d=hevga-org.20150623.gappssmtp.com; arc=pass (0 oda=0
+ ltdi=1)
+Received: from SN6PR08CA0003.namprd08.prod.outlook.com (2603:10b6:805:66::16)
+ by BN6PR08MB2802.namprd08.prod.outlook.com (2603:10b6:404:125::7) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2305.20; Tue, 8 Oct
+ 2019 17:06:51 +0000
+Received: from SN1NAM04FT034.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::205) by SN6PR08CA0003.outlook.office365.com
+ (2603:10b6:805:66::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2327.25 via Frontend
+ Transport; Tue, 8 Oct 2019 17:06:51 +0000
+Authentication-Results: spf=neutral (sender IP is 209.85.210.71)
+ smtp.mailfrom=hevga.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=hevga-org.20150623.gappssmtp.com;calpoly.edu; dmarc=none action=none
+ header.from=hevga.org;compauth=pass reason=106
+Received-SPF: Neutral (protection.outlook.com: 209.85.210.71 is neither
+ permitted nor denied by domain of hevga.org)
+Received: from mail-ot1-f71.google.com (209.85.210.71) by
+ SN1NAM04FT034.mail.protection.outlook.com (10.152.88.156) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2327.20 via Frontend Transport; Tue, 8 Oct 2019 17:06:51 +0000
+Received: by mail-ot1-f71.google.com with SMTP id h13sf7884893otk.20
+        for <foaad@calpoly.edu>; Tue, 08 Oct 2019 10:06:51 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1570554410; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=iQtC5Fe5VhwvstBUMlHfWWavLTcyx/zzN0qOD5BTT+3aIagvYbtl874aj29a+p8VjG
+         CGKUCGN/i0YvHvAaC19dQmpoFXi6XDO3k9x53Q8pGfn74QqPzQmBdhOmoGAp4+iSR83h
+         1Bki56pF61DqwKoioZ8UxeHBjfT/4yHRGkYWghZVSzI6l2LtP2vd4SW4yQB/EmzDuznA
+         IlwRlCtPCbBg/y3fSNxfVZV8Im4BIyrqGduRFfnhWqlY+rMcbqkxwHUrq623ur3aYBj1
+         mqD7Tre4UR0GpBVXg8jLQA0IYl6eOZyj8SFBAjvN+JLSdWrDjujxCIJdXCycgOkjyW7u
+         O2Gg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:dkim-signature;
+        bh=OaZr6Jtnqrbw/iI9DAwQAmnMzlgQnZVowZ9Pj3vgZTg=;
+        b=GL97i2dVJtUBupXecslEzGV2JSVFwWFRXcM9qMxFGchgIwK5usCvuyta0JxqSR4rel
+         jTXEwT5CWBPzOC8rDtgkO2ws9vbdCrvr7fOoJMW7r+thyWQuqQbrnGu/Q1YomPynfDyK
+         vPwr1Y4LDyrgTKigkzXWoA6v4DguCdQGqci7wzAuv64ohGVmo1vtlI2D1I4DjjFS3eJE
+         W1yuTSWxHNUfHP7LAatbx7ljt4aC7OshV8aHDftsvrsaGas0xYduMJSTwpZwozykV3ol
+         c8089he32vW2uzd8jCidKdxMnAyR22bUgaqiqCsXo+f+tU4+EEab7/DRTHo+/j9uVJid
+         6QzQ==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hevga-org.20150623.gappssmtp.com header.s=20150623 header.b=eiglcy9n;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by domain of jonathan@hevga.org) smtp.mailfrom=jonathan@hevga.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=hevga-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=OaZr6Jtnqrbw/iI9DAwQAmnMzlgQnZVowZ9Pj3vgZTg=;
+        b=NE/S5Cj3D8s+6jSPLRbu0uAnAjDNsz8+9+fPA63lPjn5pFHcnnn3ExwyKzFyeK52wv
+         wBs8PWQNopuAulJxfYbVIXyhIcbry8hdpMCga1D3oinCINqI+D17rLI+LrirBkJz6+Nm
+         qDNRdw09XZERRPW0oNyvEv/nZQcrb7cLP/ReqVu6sIyRvh5i1+4u5xOeDywfm2uzzU0b
+         0JesxR/8oLUXfevb5lF/yAP3zwjz/VJts4B1hxBncwRjsRwLGbBhK1SzFlc9G83Wb7dD
+         txcHtneGzDTJnLQ/NKZqkO2pSvu2LB1lNm5uuXAiobLImcx7Em62Z0vseYFE9rQ0bSjk
+         DXOw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=OaZr6Jtnqrbw/iI9DAwQAmnMzlgQnZVowZ9Pj3vgZTg=;
+        b=eoIRm+9Zh3D5kiJuIjajrxRn+KpCaCMWkRJe73CyXCwMDhN1elkpTnOkU4dvLSoMzo
+         5ryHBHmvc+os5RxSR9Khwyyz3iuTd96JCrweJLH3DxK+DUNyoWVLUe96hqtWwt1/0Ljj
+         Xpcn/Biwo9n1s6eDTk+OxvnCZyMre+YXRMPDm8MGbfeqW7c3WcOpMT5W9VSEWtcisK2U
+         8lJUuJpLe45IGboAQrKRspwaXuKJdXK5aSCGYGGaskTsq3oOYY647QBDejeNlxlWzOAj
+         QJ4pof/4qk6RGdDHmrBZUJN0zyLEjeMp16Zofkv+vIm7Op6UAJCGXYa1oFTLbH6YiORE
+         87kQ==
+X-Gm-Message-State: APjAAAWqEH1ZNatPP0RkJ2r7wB/2yNP91sYw1Ff6Y3Acc92wGROfz0Nx
+	H+4CDCO0b/PFnS2IXwfUz5L6dg==
+X-Google-Smtp-Source: APXvYqwXA4rDT3rqzYCVBR2VhKagvgbIOA7UGWJMuoR12M7scaLN/Zzak/9g2T4t2xwZgWUpN7amoQ==
+X-Received: by 2002:aca:cc96:: with SMTP id c144mr4851616oig.72.1570554410361;
+        Tue, 08 Oct 2019 10:06:50 -0700 (PDT)
+X-BeenThere: members@hevga.org
+Received: by 2002:aca:5886:: with SMTP id m128ls766319oib.14.gmail; Tue, 08
+ Oct 2019 10:06:49 -0700 (PDT)
+X-Received: by 2002:a05:6808:3bc:: with SMTP id n28mr4680988oie.67.1570554409374;
+        Tue, 08 Oct 2019 10:06:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1570554409; cv=none;
+        d=google.com; s=arc-20160816;
+        b=j46By1JdmyS57q598d7Ha/aJtYhc7Myko0eqzQFC52HlihzqSYER9xufhYYE3IWbu4
+         G+liv+TZfImTQX/1iXlaM7nA0DMtzYEp3Nj/1W4XzKsm31VJAY4FwcQgUYXQT6fGtAsi
+         OMfkPqLOpFPV0xefw280R8QgRHmZ+UpPVi4ybzyS9oyqPHllzVj0mzYWp5X4OkmoPi9X
+         f7h62nivDt5k9FpnGq652Nh9rDFVcZaj3z4qtp/+NGW/sCU+3GX5ISf7EKfF8tSxbU8q
+         IQQ/JZ8vUWrfjnPwpsg/1ZxfiHZ/ZPE29gO4f60dV0ICrDp/i6B3Er7qzxIkmTcVLg/7
+         v1gA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=hu9daqMXpKVIlXCUx/8LL16t7ZIw4qj3e7Qg9Sium/I=;
+        b=l+7KtmrMjdlHAczWraUBFbLuehOpq11MRBZNpdZR/0FcwGg8BD6evbQ1hg1C81PiTA
+         77x1D3JO3XMgMpU3DiT/Hhtj11JaJIe0zCYR75eQ6vwq25Q9J+DgX5LV2M0PVwmLwaMK
+         dlT4H/gUGPKc05LATQ5r0USUXjsYlCVPQTmmzB4tByAD9MuAikGeh+TWSDftugp3UHr1
+         hqJNMes7rBhi+sCmhSPR/2wVM6uemXOM6G7aPN71lcsTTJ6CpslCZ1xfq6x2xwZ+5C6N
+         2jFzJo6ZrQW9fkoLoTFVJ0Ct6CfaljnqxBy1xtazrpC3DpTlX1DvZTc3x8u9Yw3tYh14
+         FhLg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hevga-org.20150623.gappssmtp.com header.s=20150623 header.b=eiglcy9n;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by domain of jonathan@hevga.org) smtp.mailfrom=jonathan@hevga.org
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id l4sor8730938otq.68.2019.10.08.10.06.49
+        for <members@hevga.org>
+        (Google Transport Security);
+        Tue, 08 Oct 2019 10:06:49 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by domain of jonathan@hevga.org) client-ip=209.85.220.41;
+X-Received: by 2002:a05:6830:17c7:: with SMTP id p7mr25148155ota.314.1570554408864;
+        Tue, 08 Oct 2019 10:06:48 -0700 (PDT)
+Received: from mail-ot1-f48.google.com (mail-ot1-f48.google.com. [209.85.210.48])
+        by smtp.gmail.com with ESMTPSA id z5sm5329717oto.77.2019.10.08.10.06.48
+        for <members@hevga.org>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 08 Oct 2019 10:06:48 -0700 (PDT)
+Received: by mail-ot1-f48.google.com with SMTP id z6so14686906otb.2
+        for <members@hevga.org>; Tue, 08 Oct 2019 10:06:48 -0700 (PDT)
+X-Received: by 2002:a9d:62c2:: with SMTP id z2mr25289698otk.119.1570554407917;
+ Tue, 08 Oct 2019 10:06:47 -0700 (PDT)
+References: <DM5PR02MB3307CB57FD56C7B475A2E16EB39A0@DM5PR02MB3307.namprd02.prod.outlook.com>
+In-Reply-To: <DM5PR02MB3307CB57FD56C7B475A2E16EB39A0@DM5PR02MB3307.namprd02.prod.outlook.com>
+From: Jonathan Elmergreen <jonathan@hevga.org>
+Date: Tue, 8 Oct 2019 13:06:36 -0400
+X-Gmail-Original-Message-ID: <CANrSdkT2_YChGtidomA32fkLKW0oxuBgSas=86DrzQ2qxWvDEg@mail.gmail.com>
+Message-ID: <CANrSdkT2_YChGtidomA32fkLKW0oxuBgSas=86DrzQ2qxWvDEg@mail.gmail.com>
+Subject: [HEVGA] Fwd: Open Call: The ICIDS 2019 Art Exhibition
+To: Members <members@hevga.org>
+Content-Type: multipart/alternative; boundary="000000000000959f54059469312e"
+X-Original-Sender: jonathan@hevga.org
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@hevga-org.20150623.gappssmtp.com header.s=20150623
+ header.b=eiglcy9n;       spf=neutral (google.com: 209.85.220.41 is neither
+ permitted nor denied by domain of jonathan@hevga.org) smtp.mailfrom=jonathan@hevga.org
+Precedence: list
+Mailing-list: list members@hevga.org; contact members+owners@hevga.org
+List-ID: <members.hevga.org>
+X-Spam-Checked-In-Group: members@hevga.org
+X-Google-Group-Id: 1058314601267
+List-Post: <https://groups.google.com/a/hevga.org/group/members/post>, <mailto:members@hevga.org>
+List-Help: <https://support.google.com/a/hevga.org/bin/topic.py?topic=25838>, <mailto:members+help@hevga.org>
+List-Archive: <https://groups.google.com/a/hevga.org/group/members/>
+List-Unsubscribe: <mailto:googlegroups-manage+1058314601267+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/hevga.org/group/members/subscribe>
+Return-Path: members+bncBCVMHCW6QMEBBKUE6PWAKGQEAK6TJFI@hevga.org
+X-MS-Exchange-Organization-ExpirationStartTime: 08 Oct 2019 17:06:51.0961
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d8cb0cbf-01ba-4c64-71aa-08d74c11e972
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132150280111001099;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.210.71;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(166001)(176002)(189003)(199004)(146002)(8576002)(55446002)(8676002)(5660300002)(1096003)(6862004)(4006050)(61266001)(476003)(446003)(33964004)(6666004)(76176011)(30864003)(126002)(606006)(486006)(356004)(246002)(26005)(11346002)(76796012)(14444005)(95326003)(16586007)(410100003)(71190400001)(336012)(9686003)(966005)(75640400001)(6636002)(498394004)(19810500001)(42186006)(59536001)(733005)(305945005)(236005)(7596002)(6306002)(7636002)(16003)(531144003);DIR:INB;SFP:;SCL:1;SRVR:BN6PR08MB2802;H:mail-ot1-f71.google.com;FPR:;SPF:Neutral;LANG:en;PTR:mail-ot1-f71.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT034.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: d8cb0cbf-01ba-4c64-71aa-08d74c11e972
+X-MS-TrafficTypeDiagnostic: BN6PR08MB2802:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 Oct 2019 17:06:51.0921
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d8cb0cbf-01ba-4c64-71aa-08d74c11e972
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN6PR08MB2802
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.9216960
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2327.004
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZjFUYy9SUG0xc1h5bGVQTWltSkFqMmlDTHBLeXBXY2JXb05VQzlWRzZ5WFFS?=
+ =?utf-8?B?US9qTUladFJqejFNNWJVUWNWZnRDTDVHRjRiYW1rcW55YWxWNWp1V01MVWx1?=
+ =?utf-8?B?UW9oK0ZSdjVOMzczMExjV1F5Y0x5T2RobjgvamR2ekcyWG9LOUJKbWVBVEhu?=
+ =?utf-8?B?WEZyRmtVSThreHpXcnhWRXVLajVZVEswOTV3alA0a3cyZGVkeHE0YndpWi9Y?=
+ =?utf-8?B?S3lyL3huUm1RMVdJaGFJMVRjbXlNSm8yd2d3Ny9sUlNiQmhUS2wzb09zbzdT?=
+ =?utf-8?B?OGIzcERyR3R0Tms2bDZvZTdPdDgyRGRXdzdOdlhmTWRVM0ZMU2llNmpsdHJC?=
+ =?utf-8?B?UEUvQVd2MU9UVXN4YmZhR0tZVEQ4eGhIVVFSSkNwc3JIT2g5SVNXd3hQaGJR?=
+ =?utf-8?B?T2lSVDhHQUdXODE0dFhHc3MzK3prUm9YR3l0VXRzQWg5VjNQU1g3WjJzZ3JP?=
+ =?utf-8?B?SWR4U0Y3TURGcVdmTWVmbTVTalZKTG1FdFh5ZllNeDQ0QTROQWVpZnRZa0NC?=
+ =?utf-8?B?YWtmVHpMN0VJU0ViTFc0eG9NbkllMXVqQWtHaWVKWnduYVVoTDVPeldDVEMv?=
+ =?utf-8?B?SFRzMDhVTXNGUUY1TEdHSUhjZ3UvTStiekxneWpERnpaU3Z2SzJhTzlPQXNW?=
+ =?utf-8?B?emV5UEx3TzJUaHJCQlBSM0dPb3dTdi9pcWdKQ1QvZ2tlTE5XQVpwRGtzc21J?=
+ =?utf-8?B?OWVSakhsMU1MMHAwTFRjbzhzUHRkQVZ1T3ZreEN0MXdyUFpiK0U4TitXdEpX?=
+ =?utf-8?B?YWxPYXJLZWFiTEdmQTc5TWU4c1BtL2VHT05uMVJ6anNnaldLK09FaFpzcUYy?=
+ =?utf-8?B?VmltazAyc0lPL3NoMUU0WUZZYyt4b09nTEtNZ05hZWV4NUxyeTNEYnQrUFlY?=
+ =?utf-8?B?aHBmYjJKMC9tdUx4QmM1aWRuQjIxYkRzKzlNaDYrTDlnU0kzQnRBTzBYZXF2?=
+ =?utf-8?B?MUFmQU9UTk5DL25WcFVONG1FMWNHTFhwTnhMSjI2S0NRckRWNnE5cHdkZTNR?=
+ =?utf-8?B?cDA3VmlMOEt1SjM0bmVjNFVWbHYvdVY4YVJzb0RIeTd4L0V5bm5Eam0yV1ds?=
+ =?utf-8?B?bTdBUnA2a2dqU1hwZ09kQ3B1U0ZaT0tieFAzcVpWV3lkMXIvY041K2lzTlQ5?=
+ =?utf-8?B?KzFiR0RSejI0YnJNSWxzVjNqRlgrRktnaEZKNVNVRVowcVlIeExKZ1AzT3VD?=
+ =?utf-8?B?WkNkK2VxdzR2amZwVThrelRXV2IvUVV0MVh6Rk92QU5HNXNHdXlSWk11akJ3?=
+ =?utf-8?B?RzRqTmJiVEtaNWN2dThtYTVYUE5EWFIzWUtiRkJXODN0VDFzYURWaGQxZ1dl?=
+ =?utf-8?B?eUN4RzltUXZJTFVMOEhHajVjTzhRbkNTVVNtWm9nZ0hORVIzdEFNRk5JT0V6?=
+ =?utf-8?B?RGJFbGdGRzJiTy9iSVMwam43NVkxQ2lmTWFqcGhnMk1yVUpuaDhnQkNOdmVC?=
+ =?utf-8?B?RCtLMzljd2kzUHpZNGxJSzJ4MkpyZEdiaHluQzZBPT0=?=
+MIME-Version: 1.0
+
+--000000000000959f54059469312e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+See below for opportunity at the International Conference on Interactive
+Digital Storytelling (ICIDS) Art Exhibit. Deadline Sunday, October 13.
+
+*****
+
+Opportunity Description:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* International Deadline: October 13, 2019 - The ICIDS 2019 Art Exhibition
+- Link to prospectus: https://icids.eae.utah.edu/art-exhibit/
+<https://icids.eae.utah.edu/art-exhibit/> - Link to submission form:
+https://forms.gle/Pi4wCPK6tPqKEWCT9 <https://forms.gle/Pi4wCPK6tPqKEWCT9> -
+Link to Main Conference Page: https://icids.eae.utah.edu/
+<https://icids.eae.utah.edu/> - Accepted artists will receive a code for
+early registration discount   About: The conference has a long-standing
+tradition of bringing together theoretical and practical approaches in an
+interdisciplinary dialogue. This year, the exhibition will be held in
+connection with the ICIDS conference in Snowbird Ski & Summer Resort,
+Little Cottonwood Canyon in the Magpie Gallery. The art exhibition will be
+held in conjunction with the academic conference, which runs from 19 =E2=80=
+=93 23
+of November, with the opening taking place on November 20th at 6 pm (MST).
+A printed catalog of descriptions of the work and artist=E2=80=99s statemen=
+ts with
+supporting images will be given to exhibitors and conference attendees at
+the opening of the exhibition. The ICIDS 2019 Art Exhibition offers the
+opportunity for artists to present artworks relevant to the field of
+interactive storytelling through the broad lens of the curated theme: The
+Expression of Emotion in Humans and Technology. The curatorial theme is
+intended to inspire (as opposed to constrain) creativity in the imagination
+and expression of the artist. About the Curatorial Theme: The Expression of
+Emotions in Humans and Technology Charles Darwin argued almost 150 years
+ago, the Universal Nature of Expression; which is to say that, =E2=80=9Cthe=
+ young
+and the old of widely different races, both with man and animals, express
+the same state of mind by the same movements.=E2=80=9D As technology, robot=
+ics, and
+artificial intelligence advances, it seems appropriate to ask how will we
+interpret and understand expressions of emotion from technology?
+Interactive digital storytelling is poised to radically eclipse the
+traditional bounds of traditional linear story arcs. Artificial
+intelligence, machine learning and technological advances in human sensory
+immersion offer us a glimpse into the not too distant future of the
+cultural impact of communication, entertainment, and algorithmic emotional
+expression.  Taking a cue from Darwin=E2=80=99s seminal work in =E2=80=9CTh=
+e Expression of
+the Emotions in Man and Animals,=E2=80=9D this exhibition encourages the ar=
+tist to
+explore the concepts of The Expression of Emotion in Humans and Technology.
+Submitting artists are encouraged to cross disciplines, technologies,
+and/or global societies to explore the impact on human experience through
+the following or relevant questions: - The advancement of synthetic
+imagery, complex avatars, AI mimicry and enhanced portrayal of human beings
+via social media and emerging technologies beg the question of what is real
+and what is morally and ethically acceptable? Who and what should we trust?
+- What is the relationship between humans and technology and between AI
+agents?  How might Human to AI and AI to AI interactions provide a basis
+for conveying emotional understanding and empathy? What perspectives may we
+gain about humanity through our cultural assimilation with technology? - -
+In the social media arena, sociologists are studying the impacts of online
+interaction as opposed to person to person contact. What are the moral,
+emotional, physiological, and psychological implications of integrating AI
+and machine learning process and decisions into our communication, leisure,
+learning, and social experiences? - - VR is available to the masses, and as
+AR and Mixed Reality platforms continue to develop, will the future of
+communication and socialization consist of society adorned en masse with
+headsets and tactile feedback attire? How should we envision our future
+interaction with technology as we move beyond the keyboard and mouse?
+Submissions to the Art Exhibit The ICIDS Art Exhibition welcomes proposals
+for interactive digital storytelling artworks that explore the curatorial
+theme, The Expression of Emotion in Humans and Technology, and that engage
+with the challenge of combining computational digital media and
+storytelling. Artworks can include, but are not limited to: - screen-based
+computational works - web-based works - interactive installations -
+augmented, virtual, and mixed reality - mobile and location-based works -
+computer games - interactive documentaries - transmedia works =E2=80=A6and =
+any
+other artistic works that involve some combination of computational and/or
+rule-based system and interactive storytelling.  Artworks must be completed
+by the time of the exhibition, and not at the concept stage.
+Works-in-progress or technology demonstrations are more appropriate for the
+academic conference demonstration track and should be submitted there.
+Submitted works will be reviewed by a jury, and selected works will be
+exhibited in the exhibition space and included in the online exhibition
+catalogue. To submit artwork for consideration, participants must complete
+the following form:   https://forms.gle/Pi4wCPK6tPqKEWCT9
+<https://forms.gle/Pi4wCPK6tPqKEWCT9> Criteria for Selection We are looking
+for novel, thought-provoking, evocative, sensor-rich interactive art
+experiences created by a diverse and broad group of creative practitioners.
+The selection will be based on the criteria listed below in order of
+priority. 1. Creativity: original or innovative use of interactive media,
+articulating the relationships between interactivity and storytelling. 2.
+Strength of the concept: depth, coherence, and originality. 3. Relevance to
+the theme: demonstrates the ability to shed light on, elaborate, or
+personalize the exhibition theme =E2=80=9CThe Expression of Emotion in Huma=
+ns and
+Technology.=E2=80=9D 4. Feasibility: ease of installation (or provides clea=
+r
+guidance for installation) Note: consider restrictions of set-up time,
+resources. 5. Durability: work should be able to withstand users=E2=80=99 a=
+ctive
+interaction. IMPORTANT DATES October 13, 2019 Submission deadline October
+16, 2019 Artist notified (via email) October 19, 2019 Accepted artist,
+respond with agreement November 15, 2019 Shipped work must arrive November
+19, 2019 Installation of Artwork by organizers November 20, 2019 Opening
+Night November 23, 2019 Closing of Art Exhibition November 25, 2019 Artwork
+returned to artist Contact Information For questions, please email the Art
+Exhibit Curators Ryan Bown (ryan.bown@eae.utah.edu
+<ryan.bown@eae.utah.edu>) and Brian Salisbury (salisbury@eae.utah.edu
+<salisbury@eae.utah.edu>). Curators Chair, Ryan Bown (University of Utah,
+US) Co-Chair, Brian Salisbury (University of Utah, US) Jury Members Jessica
+Bedingfield Curator and Community Outreach, Davis Arts Council Davis, UT,
+USA Suzanne Freyadis, MA IGDA edSIG, Chair Portland, OR, USA Al Johnstone,
+MFA Associate Instructor, EAE, University of Utah Salt Lake City, UT, USA *
+--=20
+
+--
+*Jonathan Elmergreen *| *Executive Director*
+Higher Education Video Game Alliance
+Pronouns: he/him/his
+hevga.org | jonathan@hevga.org <jonathan@higheredgames.org>
+@theHEVGA <https://twitter.com/thehevga> | Facebook
+<https://www.facebook.com/hevga/>
+855.304.3842
+
+--=20
+To unsubscribe from this group, send a blank email to members+unsubscribe@h=
+evga.org
+---=20
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to members+unsubscribe@hevga.org.
+
+--000000000000959f54059469312e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv><div dir=3D"auto">See below for opportunity at the&nbsp;<span style=3D"f=
+ont-family:Calibri,Helvetica,sans-serif;background-color:rgb(255,255,255)">=
+International Conference on Interactive Digital Storytelling (ICIDS) Art Ex=
+hibit. Deadline Sunday, October 13.&nbsp;</span></div><div dir=3D"auto"><sp=
+an style=3D"color:rgb(51,51,51);font-family:Arial;font-size:12pt;font-weigh=
+t:700;background-color:rgb(255,255,255)"><br></span></div><div dir=3D"auto"=
+><font color=3D"#333333" face=3D"Arial"><span style=3D"background-color:rgb=
+(255,255,255)"><b>***</b></span></font></div><div dir=3D"auto"><span style=
+=3D"color:rgb(51,51,51);font-family:Arial;font-size:12pt;font-weight:700;ba=
+ckground-color:rgb(255,255,255)"><br></span></div><div dir=3D"auto"><span s=
+tyle=3D"color:rgb(51,51,51);font-family:Arial;font-size:12pt;font-weight:70=
+0;background-color:rgb(255,255,255)">Opportunity Description:</span></div><=
+/div><div><div class=3D"gmail_quote"><div dir=3D"ltr"><div style=3D"font-fa=
+mily:Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0);backgroun=
+d-color:rgb(255,255,255)"><b style=3D"font-weight:normal">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">International Deadline: October=
+ 13, 2019 - The ICIDS
+ 2019 Art Exhibition</span></p>
+<br>
+<ul style=3D"margin-top:0;margin-bottom:0">
+<li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:400;c=
+olor:rgb(0,0,0)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"color:rgb(51,51,51);background-color:rgb(255,255,255)">Link =
+to prospectus:
+</span><a href=3D"https://icids.eae.utah.edu/art-exhibit/" target=3D"_blank=
+"><span style=3D"text-decoration:underline;color:rgb(17,85,204);background-=
+color:rgb(255,255,255)">https://icids.eae.utah.edu/art-exhibit/</span></a><=
+/p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(0,0,0)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"color:rgb(51,51,51);background-color:rgb(255,255,255)">Link =
+to submission form:
+</span><a href=3D"https://forms.gle/Pi4wCPK6tPqKEWCT9" target=3D"_blank"><s=
+pan style=3D"text-decoration:underline;color:rgb(17,85,204);background-colo=
+r:rgb(255,255,255)">https://forms.gle/Pi4wCPK6tPqKEWCT9</span></a></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(0,0,0)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"color:rgb(51,51,51);background-color:rgb(255,255,255)">Link =
+to Main Conference Page:
+</span><a href=3D"https://icids.eae.utah.edu/" target=3D"_blank"><span styl=
+e=3D"text-decoration:underline;color:rgb(17,85,204);background-color:rgb(25=
+5,255,255)">https://icids.eae.utah.edu/</span></a></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">Accepted artists will rec=
+eive a code for early registration discount&nbsp;&nbsp;</span></p>
+</li></ul>
+<br>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">About:</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">The conference has a long-stand=
+ing tradition of bringing
+ together theoretical and practical approaches in an interdisciplinary dial=
+ogue. This year, the exhibition will be held in connection with the ICIDS c=
+onference in Snowbird Ski &amp; Summer Resort, Little Cottonwood Canyon in =
+the Magpie Gallery. The art exhibition
+ will be held in conjunction with the academic conference, which runs from =
+19 =E2=80=93 23 of November, with the opening taking place on November 20th=
+ at 6 pm (MST). A printed catalog of descriptions of the work and artist=E2=
+=80=99s statements with supporting images will be
+ given to exhibitors and conference attendees at the opening of the exhibit=
+ion.</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">The ICIDS 2019 Art Exhibition o=
+ffers the opportunity
+ for artists to present artworks relevant to the field of interactive story=
+telling through the broad lens of the curated theme:
+</span><span style=3D"font-size:12pt;font-family:Arial;font-weight:700;colo=
+r:rgb(51,51,51);background-color:rgb(255,255,255)">The Expression of Emotio=
+n in Humans and Technology.</span><span style=3D"font-size:12pt;font-family=
+:Arial;font-weight:400;color:rgb(51,51,51);background-color:rgb(255,255,255=
+)">
+ The curatorial theme is intended to inspire (as opposed to constrain) crea=
+tivity in the imagination and expression of the artist.</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">About the Curatorial Theme: The=
+ Expression of Emotions
+ in Humans and Technology</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Charles Darwin argued almost 15=
+0 years ago, the Universal
+ Nature of Expression; which is to say that, =E2=80=9Cthe young and the old=
+ of widely different races, both with man and animals, express the same sta=
+te of mind by the same movements.=E2=80=9D As technology, robotics, and art=
+ificial intelligence advances, it seems appropriate
+ to ask how will we interpret and understand expressions of emotion from te=
+chnology?</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Interactive digital storytellin=
+g is poised to radically
+ eclipse the traditional bounds of traditional linear story arcs. Artificia=
+l intelligence, machine learning and technological advances in human sensor=
+y immersion offer us a glimpse into the not too distant future of the cultu=
+ral impact of communication, entertainment,
+ and algorithmic emotional expression.&nbsp;</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Taking a cue from Darwin=E2=80=
+=99s seminal work in =E2=80=9CThe Expression
+ of the Emotions in Man and Animals,=E2=80=9D this exhibition encourages th=
+e artist to explore the concepts of
+</span><span style=3D"font-size:12pt;font-family:Arial;font-weight:700;colo=
+r:rgb(51,51,51);background-color:rgb(255,255,255)">The Expression of Emotio=
+n in Humans and Technology</span><span style=3D"font-size:12pt;font-family:=
+Arial;font-weight:400;color:rgb(51,51,51);background-color:rgb(255,255,255)=
+">.
+ Submitting artists are encouraged to cross disciplines, technologies, and/=
+or global societies to explore the impact on human experience through the f=
+ollowing or relevant questions:</span></p>
+<br>
+<ul style=3D"margin-top:0;margin-bottom:0">
+<li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:400;c=
+olor:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">The advancement of synthe=
+tic imagery, complex avatars, AI mimicry and enhanced portrayal of human be=
+ings via social media and emerging
+ technologies beg the question of what is real and what is morally and ethi=
+cally acceptable? Who and what should we trust?</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">What is the relationship =
+between humans and technology and between AI agents?&nbsp; How might Human =
+to AI and AI to AI interactions provide
+ a basis for conveying emotional understanding and empathy? What perspectiv=
+es may we gain about humanity through our cultural assimilation with techno=
+logy?</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<br>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">In the social media arena=
+, sociologists are studying the impacts of online interaction as opposed to=
+ person to person contact. What
+ are the moral, emotional, physiological, and psychological implications of=
+ integrating AI and machine learning process and decisions into our communi=
+cation, leisure, learning, and social experiences?</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<br>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">VR is available to the ma=
+sses, and as AR and Mixed Reality platforms continue to develop, will the f=
+uture of communication and socialization
+ consist of society adorned en masse with headsets and tactile feedback att=
+ire? How should we envision our future interaction with technology as we mo=
+ve beyond the keyboard and mouse?</span></p>
+</li></ul>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Submissions to the Art Exhibit<=
+/span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">The ICIDS Art Exhibition welcom=
+es proposals for interactive
+ digital storytelling artworks that explore the curatorial theme, </span><s=
+pan style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(51,=
+51,51);background-color:rgb(255,255,255)">The Expression of Emotion in Huma=
+ns and Technology</span><span style=3D"font-size:12pt;font-family:Arial;fon=
+t-weight:400;color:rgb(51,51,51);background-color:rgb(255,255,255)">,
+ and that engage with the challenge of combining computational digital medi=
+a and storytelling.</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Artworks can include, but are n=
+ot limited to:</span></p>
+<br>
+<ul style=3D"margin-top:0;margin-bottom:0">
+<li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:400;c=
+olor:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">screen-based computationa=
+l works</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">web-based works</span></p=
+>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">interactive installations=
+</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">augmented, virtual, and m=
+ixed reality</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">mobile and location-based=
+ works</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">computer games</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">interactive documentaries=
+</span></p>
+</li><li dir=3D"ltr" style=3D"font-size:12pt;font-family:Arial;font-weight:=
+400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:rgb(255,255,255)">transmedia works</span></=
+p>
+</li></ul>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">=E2=80=A6and any other artistic=
+ works that involve some combination
+ of computational and/or rule-based system and interactive storytelling.&nb=
+sp;</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Artworks must be completed by t=
+he time of the exhibition,
+ and not at the concept stage.&nbsp; Works-in-progress or technology demons=
+trations are more appropriate for the academic conference demonstration tra=
+ck and should be submitted there.&nbsp; Submitted works will be reviewed by=
+ a jury, and selected works will be exhibited
+ in the exhibition space and included in the online exhibition catalogue.</=
+span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">To submit artwork for considera=
+tion, participants must
+ complete the following form:&nbsp;&nbsp;</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<a href=3D"https://forms.gle/Pi4wCPK6tPqKEWCT9" target=3D"_blank"><span sty=
+le=3D"font-size:12pt;font-family:Arial;font-weight:400;text-decoration:unde=
+rline;color:rgb(17,85,204);background-color:rgb(255,255,255)">https://forms=
+.gle/Pi4wCPK6tPqKEWCT9</span></a></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Criteria for Selection</span></=
+p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">We are looking for novel, thoug=
+ht-provoking, evocative,
+ sensor-rich interactive art experiences created by a diverse and broad gro=
+up of creative practitioners. The selection will be based on the criteria l=
+isted below in order of priority.</span></p>
+<br>
+<ol style=3D"margin-top:0;margin-bottom:0">
+<li dir=3D"ltr" style=3D"list-style-type:decimal;font-size:12pt;font-family=
+:Arial;font-weight:400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-weight:700;background-color:rgb(255,255,255)">Creativit=
+y:</span><span style=3D"background-color:rgb(255,255,255)"> original or inn=
+ovative use of interactive media,
+ articulating the relationships between interactivity and storytelling.</sp=
+an></p>
+</li><li dir=3D"ltr" style=3D"list-style-type:decimal;font-size:12pt;font-f=
+amily:Arial;font-weight:400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-weight:700;background-color:rgb(255,255,255)">Strength =
+of the concept:</span><span style=3D"background-color:rgb(255,255,255)"> de=
+pth, coherence, and originality.</span></p>
+</li><li dir=3D"ltr" style=3D"list-style-type:decimal;font-size:12pt;font-f=
+amily:Arial;font-weight:400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-weight:700;background-color:rgb(255,255,255)">Relevance=
+ to the theme:</span><span style=3D"background-color:rgb(255,255,255)"> dem=
+onstrates the ability to shed
+ light on, elaborate, or personalize the exhibition theme =E2=80=9CThe Expr=
+ession of Emotion in Humans and Technology.=E2=80=9D</span></p>
+</li><li dir=3D"ltr" style=3D"list-style-type:decimal;font-size:12pt;font-f=
+amily:Arial;font-weight:400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-weight:700;background-color:rgb(255,255,255)">Feasibili=
+ty:
+</span><span style=3D"background-color:rgb(255,255,255)">ease of installati=
+on (or provides clear guidance for installation) Note: consider restriction=
+s of set-up time, resources.</span></p>
+</li><li dir=3D"ltr" style=3D"list-style-type:decimal;font-size:12pt;font-f=
+amily:Arial;font-weight:400;color:rgb(51,51,51)">
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-weight:700;background-color:rgb(255,255,255)">Durabilit=
+y:</span><span style=3D"background-color:rgb(255,255,255)"> work should be =
+able to withstand users=E2=80=99 active
+ interaction.</span></p>
+</li></ol>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">IMPORTANT DATES</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">October 13, 2019</span><span st=
+yle=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(51,51,51)=
+;background-color:rgb(255,255,255)"><span>
+</span></span><span style=3D"font-size:12pt;font-family:Arial;font-weight:4=
+00;color:rgb(51,51,51);background-color:rgb(255,255,255)"><span></span></sp=
+an><span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rg=
+b(51,51,51);background-color:rgb(255,255,255)">Submission
+ deadline</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">October 16, 2019</span><span st=
+yle=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(51,51,51)=
+;background-color:rgb(255,255,255)"><span>
+</span></span><span style=3D"font-size:12pt;font-family:Arial;font-weight:4=
+00;color:rgb(51,51,51);background-color:rgb(255,255,255)"><span></span></sp=
+an><span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rg=
+b(51,51,51);background-color:rgb(255,255,255)">Artist
+ notified (via email)</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">October 19, 2019</span><span st=
+yle=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(51,51,51)=
+;background-color:rgb(255,255,255)"><span>
+</span></span><span style=3D"font-size:12pt;font-family:Arial;font-weight:4=
+00;color:rgb(51,51,51);background-color:rgb(255,255,255)"><span></span></sp=
+an><span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rg=
+b(51,51,51);background-color:rgb(255,255,255)">Accepted
+ artist, respond with agreement</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">November 15, 2019</span><span s=
+tyle=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(51,51,51=
+);background-color:rgb(255,255,255)"><span>
+</span></span><span style=3D"font-size:12pt;font-family:Arial;font-weight:4=
+00;color:rgb(51,51,51);background-color:rgb(255,255,255)"><span></span></sp=
+an><span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rg=
+b(51,51,51);background-color:rgb(255,255,255)">Shipped
+ work must arrive</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">November 19, 2019</span><span s=
+tyle=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(51,51,51=
+);background-color:rgb(255,255,255)"><span>
+</span></span><span style=3D"font-size:12pt;font-family:Arial;font-weight:4=
+00;color:rgb(51,51,51);background-color:rgb(255,255,255)"><span></span></sp=
+an><span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rg=
+b(51,51,51);background-color:rgb(255,255,255)">Installation
+ of Artwork by organizers</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">November 20, 2019</span><span s=
+tyle=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(51,51,51=
+);background-color:rgb(255,255,255)"><span>
+</span></span><span style=3D"font-size:12pt;font-family:Arial;font-weight:4=
+00;color:rgb(51,51,51);background-color:rgb(255,255,255)"><span></span></sp=
+an><span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rg=
+b(51,51,51);background-color:rgb(255,255,255)">Opening
+ Night</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">November 23, 2019</span><span s=
+tyle=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(51,51,51=
+);background-color:rgb(255,255,255)"><span>
+</span></span><span style=3D"font-size:12pt;font-family:Arial;font-weight:4=
+00;color:rgb(51,51,51);background-color:rgb(255,255,255)"><span></span></sp=
+an><span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rg=
+b(51,51,51);background-color:rgb(255,255,255)">Closing
+ of Art Exhibition</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">November 25, 2019</span><span s=
+tyle=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(51,51,51=
+);background-color:rgb(255,255,255)"><span>
+</span></span><span style=3D"font-size:12pt;font-family:Arial;font-weight:4=
+00;color:rgb(51,51,51);background-color:rgb(255,255,255)"><span></span></sp=
+an><span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rg=
+b(51,51,51);background-color:rgb(255,255,255)">Artwork
+ returned to artist</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Contact Information</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">For questions, please email the=
+ Art Exhibit Curators
+ Ryan Bown (<a href=3D"mailto:ryan.bown@eae.utah.edu" target=3D"_blank">rya=
+n.bown@eae.utah.edu</a>) and Brian Salisbury (<a href=3D"mailto:salisbury@e=
+ae.utah.edu" target=3D"_blank">salisbury@eae.utah.edu</a>).</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Curators</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Chair, Ryan Bown (University of=
+ Utah, US)</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Co-Chair, Brian Salisbury (Univ=
+ersity of Utah, US)</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:700;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Jury Members</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Jessica Bedingfield</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Curator and Community Outreach,=
+ Davis Arts Council</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Davis, UT, USA</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Suzanne Freyadis, MA</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">IGDA edSIG, Chair</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Portland, OR, USA</span></p>
+<br>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Al Johnstone, MFA</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Associate Instructor, EAE, Univ=
+ersity of Utah</span></p>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"font-size:12pt;font-family:Arial;font-weight:400;color:rgb(5=
+1,51,51);background-color:rgb(255,255,255)">Salt Lake City, UT, USA</span><=
+/p>
+</b></div>
+</div>
+
+</div></div>-- <br><div dir=3D"ltr" class=3D"gmail_signature" data-smartmai=
+l=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div><br></div><div style=3D"font-size:12.8px"=
+><span style=3D"font-size:x-small">--</span><br></div><div style=3D"font-si=
+ze:12.8px"><font size=3D"1"><b>Jonathan Elmergreen&nbsp;</b>|&nbsp;</font><=
+b style=3D"font-size:12.8px"><font size=3D"1">Executive Director</font></b>=
+</div><div style=3D"font-size:12.8px"><span style=3D"font-size:x-small">Hig=
+her Education Video Game Alliance</span><br></div><div style=3D"font-size:1=
+2.8px"><span style=3D"font-size:x-small">Pronouns: he/him/his</span><span s=
+tyle=3D"font-size:x-small"><br></span></div><div style=3D"font-size:12.8px"=
+><font size=3D"1"><a href=3D"http://hevga.org/" target=3D"_blank">hevga.org=
+</a></font>&nbsp;<span style=3D"font-size:x-small">|</span><span style=3D"f=
+ont-size:12.8px">&nbsp;</span><span style=3D"font-size:x-small"><a href=3D"=
+mailto:jonathan@higheredgames.org" target=3D"_blank">jonathan@hevga.org</a>=
+</span></div><div style=3D"font-size:12.8px"><span style=3D"font-size:x-sma=
+ll"><a href=3D"https://twitter.com/thehevga" target=3D"_blank">@theHEVGA</a=
+>&nbsp;| <a href=3D"https://www.facebook.com/hevga/" target=3D"_blank">Face=
+book</a></span><br></div><div style=3D"font-size:12.8px"><span style=3D"fon=
+t-size:x-small">855.304.3842</span></div><div style=3D"font-size:12.8px"><b=
+r></div><div style=3D"font-size:12.8px"><img src=3D"https://docs.google.com=
+/uc?id=3D0B-0qrHMoxvThSUxoMUNlWHB0MlU&amp;export=3Ddownload" width=3D"96" h=
+eight=3D"48"></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div>
+
+<p></p>
+
+-- <br>
+To unsubscribe from this group, send a blank email to members&#43;unsubscri=
+be@hevga.org<br>
+--- <br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:members&#43;unsubscribe@hevga.org">members&#43;un=
+subscribe@hevga.org</a>.<br>
+
+--000000000000959f54059469312e--

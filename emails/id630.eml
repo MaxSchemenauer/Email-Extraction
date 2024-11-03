@@ -1,0 +1,418 @@
+Received: from BYAPR08MB5781.namprd08.prod.outlook.com (2603:10b6:a02:80::32)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0019.PROD.EXCHANGELABS.COM; Sun, 15 Sep 2019 14:47:48 +0000
+Received: from DM6PR08CA0035.namprd08.prod.outlook.com (2603:10b6:5:80::48) by
+ BYAPR08MB5781.namprd08.prod.outlook.com (2603:10b6:a03:11d::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2263.17; Sun, 15 Sep
+ 2019 14:47:45 +0000
+Received: from CO1NAM04FT006.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::206) by DM6PR08CA0035.outlook.office365.com
+ (2603:10b6:5:80::48) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2157.18 via Frontend
+ Transport; Sun, 15 Sep 2019 14:47:44 +0000
+Authentication-Results: spf=none (sender IP is 129.24.210.214)
+ smtp.mailfrom=LIST.UNM.EDU; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=none action=none
+ header.from=UNM.EDU;compauth=pass reason=105
+Received-SPF: None (protection.outlook.com: LIST.UNM.EDU does not designate
+ permitted sender hosts)
+Received: from smtp.unm.edu (129.24.210.214) by
+ CO1NAM04FT006.mail.protection.outlook.com (10.152.90.104) with Microsoft SMTP
+ Server (version=TLS1_0, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2263.14 via Frontend Transport; Sun, 15 Sep 2019 14:47:44 +0000
+Received: from IT153HUB04.colleges.ad.unm.edu (2002:8118:d2d7::8118:d2d7) by
+ IT153HUB05.colleges.ad.unm.edu (2002:8118:d2d6::8118:d2d6) with Microsoft
+ SMTP Server (TLS) id 14.3.301.0; Sun, 15 Sep 2019 08:47:43 -0600
+Received: from callisto.unm.edu (64.106.76.43) by
+ IT153HUB04.colleges.ad.unm.edu (192.168.83.138) with Microsoft SMTP Server id
+ 14.3.301.0; Sun, 15 Sep 2019 08:47:42 -0600
+Received: by LIST.UNM.EDU (LISTSERV-TCP/IP release 16.0) with spool id
+ 37760838          for MI-CONFERENCE-L@LIST.UNM.EDU; Sat, 14 Sep 2019 10:47:39
+ -0600
+Approved-By: noradg@UNM.EDU
+Received: from NAM05-CO1-obe.outbound.protection.outlook.com
+          (mail-co1nam05lp2055.outbound.protection.outlook.com [104.47.48.55])
+          by callisto.unm.edu (8.14.4/8.14.4) with ESMTP id x8EGb5Cc092518 for
+          <MI-Conference-L@unm.edu>; Sat, 14 Sep 2019 10:37:05 -0600
+Received: from DM6PR07MB5930.namprd07.prod.outlook.com (20.179.104.145) by
+          DM6PR07MB7083.namprd07.prod.outlook.com (10.141.170.137) with
+          Microsoft SMTP Server (version=TLS1_2,
+          cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2263.17; Sat,
+          14 Sep 2019 16:37:04 +0000
+Received: from DM6PR07MB5930.namprd07.prod.outlook.com
+          ([fe80::6c30:42e5:386e:348e]) by
+          DM6PR07MB5930.namprd07.prod.outlook.com
+          ([fe80::6c30:42e5:386e:348e%5]) with mapi id 15.20.2263.023; Sat, 14
+          Sep 2019 16:37:04 +0000
+Thread-Topic: 2019 Mentoring Post-Conference Workshops
+Thread-Index: AQHVaxqk9QOWOly7mUGHCZhoyL+gxw==
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [129.24.168.114]
+x-clientproxiedby: CY4PR01CA0015.prod.exchangelabs.com (2603:10b6:903:1f::25)
+                   To DM6PR07MB5930.namprd07.prod.outlook.com
+                   (2603:10b6:5:182::17)
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-publictraffictype: Email
+X-MS-Office365-Filtering-Correlation-Id: 953a685b-6dc1-4f65-7449-08d739ebab1b
+X-Microsoft-Antispam-Untrusted:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(8989299)(5600166)(711020)(4605104)(1401327)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(2017052603328)(7193020);SRVR:DM6PR07MB7083;
+X-MS-TrafficTypeDiagnostic: DM6PR07MB7083:|BYAPR08MB5781:
+X-MS-Exchange-PUrlCount: 12
+x-ms-oob-tlc-oobclassifiers: OLM:4941;OLM:4714;
+X-Forefront-Antispam-Report-Untrusted:
+ SFV:SKI;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:DM6PR07MB7083;H:DM6PR07MB5930.namprd07.prod.outlook.com;FPR:;SPF:None;LANG:en;
+X-Microsoft-Antispam-Message-Info-Original:
+ sRTSDHGefGcMsU+g7Cx/2vrj9HTktwwHaBpvAWc3+yFUWlr41ZXudfLgPhb4Cb7zVUEEIEDyiib3cU36tQYe1q/CXnk4JPxiXm5x6Thm0n4e9LB7lJVlmY/Yrcuz54bMBrPOGAjkrunPJePr2a/YNaMr50eepZqEW10K6WkJ2tBbn0PsR2uZk1AUZHgpHjwTHRN4pyEMCnn76asZlCuGgteXGnMFOz/qRGd84iTqOYRvqFpvFwRkiT9LIuSz11C6npnw3KJuiyAq2dlyqd0X64NZN3ILShiwl9pS1igdhTEd5UXTGlbTeumsn392UTyqj89OXX6SHcLjDL/elI++BHxuMadHmDxt+9K63buN52urH2bGDbXhpF1Dl3v8ItoT
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/alternative;
+	boundary="_000_DM6PR07MB5930952FAA8D9D151994B5F6D9B20DM6PR07MB5930namp_"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR07MB7083
+X-OrganizationHeadersPreserved: DM6PR07MB7083.namprd07.prod.outlook.com
+Message-ID: <DM6PR07MB5930952FAA8D9D151994B5F6D9B20@DM6PR07MB5930.namprd07.prod.outlook.com>
+Date: Sat, 14 Sep 2019 16:37:04 +0000
+Reply-To: Mentoring Institute - Conference <MI-CONFERENCE-L@LIST.UNM.EDU>
+Sender: Mentoring Institute - Conference <MI-CONFERENCE-L@LIST.UNM.EDU>
+From: The Mentoring Institute <mentor@UNM.EDU>
+Subject: [MI-CONFERENCE-L] 2019 Mentoring Post-Conference Workshops
+Comments: To: "MI-Conference-L@unm.edu" <MI-Conference-L@unm.edu>
+To: <MI-CONFERENCE-L@LIST.UNM.EDU>
+Precedence: list
+List-Help: <mailto:LISTSERV@LIST.UNM.EDU?body=INFO%20MI-CONFERENCE-L>
+List-Unsubscribe: <mailto:MI-CONFERENCE-L-unsubscribe-request@LIST.UNM.EDU>
+List-Subscribe: <mailto:MI-CONFERENCE-L-subscribe-request@LIST.UNM.EDU>
+List-Owner: <mailto:MI-CONFERENCE-L-request@LIST.UNM.EDU>
+Return-Path: owner-mi-conference-l*foaad**CALPOLY*-EDU@LIST.UNM.EDU
+X-CrossPremisesHeadersFiltered: IT153HUB04.colleges.ad.unm.edu
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Sep 2019 14:47:44.7015
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 953a685b-6dc1-4f65-7449-08d739ebab1b
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ CO1NAM04FT006.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:129.24.210.214;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(428003)(286005)(189003)(199004)(7192003)(176002)(336012)(75432002)(16586007)(7696005)(33964004)(43066004)(476003)(733005)(126002)(6392003)(55016002)(6306002)(54896002)(99286004)(33656002)(9686003)(236005)(16003)(7846003)(6862004)(2171002)(486006)(10126004)(71190400001)(356004)(25786009)(14454004)(1096003)(146002)(66066001)(52536014)(26005)(4006050)(3846002)(6116002)(102836004)(6506007)(386003)(606006)(2160300002)(75640400001)(88552002)(246002)(2351001)(74316002)(76236002)(7736002)(8676002)(58800400005);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB5781;H:smtp.unm.edu;FPR:;SPF:None;LANG:en;PTR:it153hub05.unm.edu;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT006.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 470d3c30-defb-470e-91eb-08d73931c685
+X-Microsoft-Antispam:
+ BCL:7;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(710020)(711020)(4605104)(1404068)(71702078)(7193020);SRVR:BYAPR08MB5781;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Sep 2019 14:47:44.3162
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 953a685b-6dc1-4f65-7449-08d739ebab1b
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB5781
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.7165558
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2263.022
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944703077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?Wkw4TUJPNkhRQWR3QVVZN0RtNEhsbzRTTkpyYStaWkhJeU9HaHJDMDd2VU9k?=
+ =?utf-8?B?VjVFU3doUUNjTDhoMUJTMjRtU0VLSXBpc1VCM0YwTjNja3BicHpmb0FEd0xy?=
+ =?utf-8?B?YWlia1JiY3M4RlZDV0xFQ01EKzZhU3IwOWg1OGoxeWttTU1DM09yZk9QMER6?=
+ =?utf-8?B?aUlxMUJvVWNmbEpUY3dXU1l3R0szakFyYXdML0NCR0RWQlRhMnJoTzFvekUw?=
+ =?utf-8?B?bGRCQSs5bXZhRnI0bFVaa2Y0QVRPTEJydWNrcHFNWExZTUdHdDF2NzNaUW9O?=
+ =?utf-8?B?TFBreWo0N2xFVjdCM0JZTFhtcVRMS040TU44MUErTkpYZFdlWURvYWFZdVdO?=
+ =?utf-8?B?NVp5SFRTOWpwRGVwTDA2eWx0NGlWSnVueFFLNGFrL3cwM3BHZm9mcW1IemtG?=
+ =?utf-8?B?V3VnMUxxNkx1TWFsbmgyQzVwT3V6OVJSb3gwOGIwUHcyMGJBam54K2xiaFp5?=
+ =?utf-8?B?WFZxZlNJMW1uVTVENkhHNnF1QzJqVERJMnhkTzhIRmZqVlkyWDV4dnkyYkJI?=
+ =?utf-8?B?OG9sRDFBRnV2TzNwdWZRVXJpNG1zUWVDZkR6UWpGaUYwRXdaQm81QWxIbmxi?=
+ =?utf-8?B?RDI5WHlwTDQ0d1ZHbEYzZTVYbW9HbHhoMmhuQXRUQjVQOHNsbWpLZHhIcXVp?=
+ =?utf-8?B?OCtCUkhHRlc3SnEzc1liSkxPZzVtSXZiZ0ZiQzd4ZG9tc0FwdXlaN1doWUp3?=
+ =?utf-8?B?S1FKV2R0QUo0OEJVY0JQaTgwdDBPVWhrdFprNVpUcXhFQVRUZFZXSVJZV085?=
+ =?utf-8?B?cTlmWlMzNGNybU9YZ0czaWNWeTJ0WnFJc0VZSDJyQ2VRZVBjcldob1R5eE44?=
+ =?utf-8?B?eEJOK3QrcWwybU1MaGVjUlpPMkpNZ25VeENrUHJtZ0lGSUZocmtLUGFUbjJj?=
+ =?utf-8?B?bzR5RndGOEV5Z2RDOWpDTjZPK0k1SkxyY000cWFyV1EyU3FMSjBVRkExcTJ5?=
+ =?utf-8?B?WnlOWWNuTUliRW5rcFlHaEVSckhsTEIzZm9QL1cyVE55VWZrTnNGNEh2MDFx?=
+ =?utf-8?B?UlBzUUhVRC9zUktGQU83d2ZWY1IxaGRyS3ZienUycEcrZVFRUWpmZTlheklV?=
+ =?utf-8?B?NmIvQjljS3h0eVFnaWtzL2QvZzVJNTNJWHpaRXBnTGlhRHJONzFOL2lhNlEz?=
+ =?utf-8?B?ckZ0eEFZZnh3OU82dDVEN0xJQkw0d2Z0VXk0cGtDK2VCRzdVOXVYMHl3Mk12?=
+ =?utf-8?B?QjlUMm1hV1VqODlXTHFKQjJsSW1TQzVXZkFkcTVHakt4OC9YZko4N3c2ZXN0?=
+ =?utf-8?B?MHFXcWo5aExZZE53TU9tYmM0NnVQa2VyaDd3Q21WYU9iTlpyQmRydEpmVlZy?=
+ =?utf-8?B?Sm12bEc0S0JzMjV3Uk1qSmtBYmVNMWVCankwRmQraDhLeFp2d3ZhN1A3WWov?=
+ =?utf-8?B?ZmJBdkwwVk41LzVlOVFPYjJ6b1Ewd0hqMkpEZGhaeHo2dWFkZHo1bk1KeENi?=
+ =?utf-8?B?RFhYS2RJTXBzZjBwQVVYbXVhaVd3MkR4SmxraTRnPT0=?=
+MIME-Version: 1.0
+
+--_000_DM6PR07MB5930952FAA8D9D151994B5F6D9B20DM6PR07MB5930namp_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+W1RoZSBVbml2ZXJzaXR5IG9mIE5ldyBNZXhpY28gfCBNZW50b3JpbmcgSW5zdGl0dXRlXTxodHRw
+czovL21lbnRvci51bm0uZWR1Lz4gICBbTWVudG9yaW5nIEluc3RpdHV0ZSBvbiBGYWNlYm9va10g
+PGh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9tZW50b3JVTk0+ICBbTWVudG9yaW5nIEluc3RpdHV0
+ZSBvbiBUd2l0dGVyXSA8aHR0cHM6Ly90d2l0dGVyLmNvbS9VTk1fTWVudG9yaW5nPiAgW01lbnRv
+cmluZyBJbnN0aXR1dGUgb24gTGlua2VkSW5dIDxodHRwOi8vd3d3LmxpbmtlZGluLmNvbS9jb21w
+YW55LzMyMDA2MTc/dHJrPXByb2YtZXhwLWNvbXBhbnktbmFtZT4NCg0KVEhFIFVOSVZFUlNJVFkg
+T0YgTkVXIE1FWElDTw0KDQoxMnRoIEFubnVhbCBNZW50b3JpbmcgQ29uZmVyZW5jZQ0KVG93YXJk
+cyBUaGUgU2NpZW5jZSBvZiBNZW50b3JpbmcNCg0KTW9uZGF5LCBPY3RvYmVyIDIxc3QgLSBGcmlk
+YXksIE9jdG9iZXIgMjV0aCwgMjAxOSB8IEFsYnVxdWVycXVlLCBOZXcgTWV4aWNvDQoNCg0KDQpU
+aGUgTWVudG9yaW5nIEluc3RpdHV0ZSBhdCBVTk0gaXMgcGxlYXNlZCB0byBhbm5vdW5jZSB0aGUg
+UG9zdC1Db25mZXJlbmNlIHdvcmtzaG9wcyBmb3IgdGhlIDEydGggQW5udWFsIE1lbnRvcmluZyBD
+b25mZXJlbmNlLiBJZiB5b3UgaGF2ZSBkaWZmaWN1bHQgbG9hZGluZyBvciByZWFkaW5nIHRoaXMg
+YW5ub3VuY2VtZW50LCB5b3UgbWF5IGZpbmQgbW9yZSBpbmZvcm1hdGlvbiBhYm91dCBvdXIgV29y
+a3Nob3AgTGVhZGVycyBhbmQgUGxlbmFyeSBTcGVha2VycyBoZXJlPGh0dHBzOi8vbWVudG9yLnVu
+bS5lZHUvY29uZmVyZW5jZS9zcGVha2Vycz4hDQoNCllvdSBjYW4gcmVnaXN0ZXIgdG8gdGhlIHBy
+ZS1jb25mZXJlbmNlIHdvcmtzaG9wcywgdGhlIGNvbmZlcmVuY2UsIGFuZCB0aGUgcG9zdC1jb25m
+ZXJlbmNlIHdvcmtzaG9wcyBpbmRlcGVuZGVudGx5IG9yIGJldHRlciwgam9pbiB1cyBmb3IgYWxs
+IG9mIHRoZW0hDQoNClJlZ2lzdGVyIG5vdyE8aHR0cHM6Ly9tZW50b3IudW5tLmVkdS9jb25mZXJl
+bmNlL3JlZ2lzdGVyPg0KDQpbTWVudG9yaW5nIEluc3RpdHV0ZSBDb25mZXJlbmNlIDIwMTkgUHJl
+LUNvbmZlcmVuY2UgU3BlYWtlcnMgRmx5ZXJdPGh0dHBzOi8vbWVudG9yLnVubS5lZHUvY29uZmVy
+ZW5jZS9yZWdpc3Rlcj4NCltodHRwczovL21lbnRvci51bm0uZWR1L2ltZy9pY29ucy9zb2NpYWwv
+ZmFjZWJvb2sucG5nXTxodHRwczovL3d3dy5mYWNlYm9vay5jb20vbWVudG9yVU5NPiBbaHR0cHM6
+Ly9tZW50b3IudW5tLmVkdS9pbWcvaWNvbnMvc29jaWFsL3R3aXR0ZXIucG5nXSA8aHR0cHM6Ly9o
+dHRwczovL3R3aXR0ZXIuY29tL1VOTV9NZW50b3Jpbmc+ICBbaHR0cHM6Ly9tZW50b3IudW5tLmVk
+dS9pbWcvaWNvbnMvc29jaWFsL2xpbmtlZGluLnBuZ10gPGh0dHA6Ly93d3cubGlua2VkaW4uY29t
+L2NvbXBhbnkvMzIwMDYxNz90cms9cHJvZi1leHAtY29tcGFueS1uYW1lPg0KRmluZCB0aGUgTWVu
+dG9yaW5nIEluc3RpdHV0ZSBvbiBzb2NpYWwgbWVkaWENCg0KQ2xpY2sgaGVyZSB0byB1bnN1YnNj
+cmliZSBmcm9tIG91ciBlbWFpbCBsaXN0IHRocm91Z2ggb3VyIHdlYnNpdGU8aHR0cHM6Ly9tZW50
+b3IudW5tLmVkdS9jb25mZXJlbmNlL21haWxpbmdfbGlzdC91bnN1YnNjcmliZT4NCg0KVGhlIE1l
+bnRvcmluZyBJbnN0aXR1dGUNCg0KMTcxNiBMYXMgTG9tYXMgUmQgTkUNCkFsYnVxdWVycXVlLCBO
+TSA4NzEwNg0KKDUwNSkgMjc3LTEzMzANCg==
+
+--_000_DM6PR07MB5930952FAA8D9D151994B5F6D9B20DM6PR07MB5930namp_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+Content-ID: <920B88A893F5AE40B31546F5571EFEA0@namprd07.prod.outlook.com>
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><b=
+r>
+<hr>
+<p align=3D"center">To unsubscribe from the MI-CONFERENCE-L list, click the=
+ following
+<a href=3D"https://list.unm.edu/cgi-bin/wa?TICKET=3DNzM3MzQ2IGZvYWFkQENBTFB=
+PTFkuRURVIE1JLUNPTkZFUkVOQ0UtTKn%2BDB7525bI&amp;c=3DSIGNOFF" target=3D"_bla=
+nk">link</a>
+<br>
+</p>
+<!DOCTYPE HTML>
+<html style=3D"background: #EDEDED; height: 100%; font-family: Helvetica, A=
+rial, sans-serif;">
+<head style=3D"font-family: Helvetica, Arial, sans-serif;">
+
+<title style=3D"font-family: Helvetica, Arial, sans-serif;">2019 Mentoring =
+Post-Conference Workshops</title>
+</head>
+<body style=3D"height: 100%; margin: 0px; font-family: Helvetica, Arial, sa=
+ns-serif;">
+<table bgcolor=3D"#EDEDED" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" style=3D"height: 100%; font-family: Helvetica, Arial, sans-=
+serif;">
+<tbody style=3D"font-family: Helvetica, Arial, sans-serif;">
+<tr style=3D"font-family: Helvetica, Arial, sans-serif;">
+<td style=3D"vertical-align: top; padding: 15px 0px; font-family: Helvetica=
+, Arial, sans-serif;">
+<table width=3D"750" bgcolor=3D"#FFFFFF" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"margin-left: auto; margin-right: auto; border: 1px =
+solid #DDDDDD; background: #FFFFFF; width: 750px; font-family: Helvetica, A=
+rial, sans-serif;">
+<tbody style=3D"font-family: Helvetica, Arial, sans-serif;">
+<tr style=3D"font-family: Helvetica, Arial, sans-serif;">
+<td style=3D"border-bottom: 1px solid #DDDDDD; font-family: Helvetica, Aria=
+l, sans-serif; vertical-align: top;">
+<span style=3D"font-family: Helvetica, Arial, sans-serif;">
+<table width=3D"100%" border=3D"0" style=3D"padding: 10px; border-collapse:=
+ separate; font-family: Helvetica, Arial, sans-serif;">
+<tbody>
+<tr style=3D"font-family: Helvetica, Arial, sans-serif;">
+<td style=3D"padding: 15px; vertical-align: middle; font-family: Helvetica,=
+ Arial, sans-serif;">
+<a class=3D"image" href=3D"https://mentor.unm.edu/" style=3D"font-family: H=
+elvetica, Arial, sans-serif; color: #ba0c2f; display: inline-block; padding=
+: 0; margin: 0;"><img src=3D"https://mentor.unm.edu/img/mentoring_institute=
+_logo.png" width=3D"350" alt=3D"The University of New Mexico | Mentoring In=
+stitute" style=3D"font-family: Helvetica, Arial, sans-serif; max-width: 100=
+%; display: block; margin: 0;"></a>
+</td>
+<td style=3D"text-align: right; padding: 15px; vertical-align: middle; font=
+-family: Helvetica, Arial, sans-serif;">
+<a class=3D"image" href=3D"https://www.facebook.com/mentorUNM" style=3D"fon=
+t-family: Helvetica, Arial, sans-serif; color: #ba0c2f; display: inline-blo=
+ck; padding: 0; margin: 0;"><img src=3D"https://mentor.unm.edu/img/icons/so=
+cial/facebook.png" width=3D"35" height=3D"35" alt=3D"Mentoring Institute on=
+ Facebook" style=3D"border: none; font-family: Helvetica, Arial, sans-serif=
+; max-width: 100%; display: block; margin: 0;"></a>
+<a class=3D"image" href=3D"https://twitter.com/UNM_Mentoring" style=3D"font=
+-family: Helvetica, Arial, sans-serif; color: #ba0c2f; display: inline-bloc=
+k; padding: 0; margin: 0;">
+<img src=3D"https://mentor.unm.edu/img/icons/social/twitter.png" width=3D"3=
+5" height=3D"35" alt=3D"Mentoring Institute on Twitter" style=3D"border: no=
+ne; font-family: Helvetica, Arial, sans-serif; max-width: 100%; display: bl=
+ock; margin: 0;"></a>
+<a class=3D"image" href=3D"http://www.linkedin.com/company/3200617?trk=3Dpr=
+of-exp-company-name" style=3D"font-family: Helvetica, Arial, sans-serif; co=
+lor: #ba0c2f; display: inline-block; padding: 0; margin: 0;">
+<img src=3D"https://mentor.unm.edu/img/icons/social/linkedin.png" width=3D"=
+35" height=3D"35" alt=3D"Mentoring Institute on LinkedIn" style=3D"border: =
+none; font-family: Helvetica, Arial, sans-serif; max-width: 100%; display: =
+block; margin: 0;"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</span></td>
+</tr>
+<tr style=3D"font-family: Helvetica, Arial, sans-serif;">
+<td style=3D"padding: 15px; font-family: Helvetica, Arial, sans-serif; vert=
+ical-align: top;">
+<div style=3D"font-family: Helvetica, Arial, sans-serif;">
+<center style=3D"font-family: Helvetica, Arial, sans-serif;">
+<p style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 15px; col=
+or: #555555; margin-bottom: 10px; line-height: 22px;">
+THE UNIVERSITY OF NEW MEXICO</p>
+<h3 style=3D"font-family: 'Vitesse', &quot;Times New Roman&quot;, serif; fo=
+nt-weight: 700; color: #4B5052; font-size: 22px; line-height: 1.1; margin-t=
+op: 18px; margin-bottom: 11px;">
+12th Annual Mentoring Conference</h3>
+<h2 class=3D"red" style=3D"font-family: 'Vitesse', &quot;Times New Roman&qu=
+ot;, serif; font-weight: 700; color: #AB2534; font-size: 25px; line-height:=
+ 1.1; margin-top: 18px; margin-bottom: 11px;">
+Towards The Science of Mentoring</h2>
+<p style=3D"text-align: -webkit-center; -webkit-text-stroke-width: 0px; mar=
+gin-bottom: 10px; font-family: Helvetica, Arial, sans-serif; font-size: 15p=
+x; color: #555555; line-height: 22px;">
+Monday, October 21st - Friday, October 25th, 2019 | Albuquerque, New Mexico=
+</p>
+<p style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 15px; col=
+or: #555555; margin-bottom: 10px; line-height: 22px;">
+&nbsp;</p>
+<p style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 15px; col=
+or: #555555; margin-bottom: 10px; line-height: 22px;">
+<span style=3D"font-family: Helvetica, Arial, sans-serif;">The Mentoring In=
+stitute at UNM is pleased to announce the Post-Conference workshops for the=
+ 12th Annual Mentoring Conference<b style=3D"font-family: Helvetica, Arial,=
+ sans-serif;">.
+</b>If you have difficult loading or reading this announcement, you </span>=
+may find more information about our Workshop Leaders and Plenary Speakers
+<a href=3D"https://mentor.unm.edu/conference/speakers" style=3D"color: Blue=
+; font-family: Helvetica, Arial, sans-serif;">
+here</a>!</p>
+<p style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 15px; col=
+or: #555555; margin-bottom: 10px; line-height: 22px;">
+You can register to the pre-conference workshops, the conference, and the p=
+ost-conference workshops independently or better, join us for all of them!<=
+/p>
+<p style=3D"font-family: Helvetica, Arial, sans-serif; font-size: 15px; col=
+or: #555555; margin-bottom: 10px; line-height: 22px;">
+<a href=3D"https://mentor.unm.edu/conference/register" style=3D"color: Blue=
+; font-family: Helvetica, Arial, sans-serif;">Register now!</a></p>
+</center>
+</div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"margin-bot=
+tom: 10px; font-family: Helvetica, Arial, sans-serif;" width=3D"100%">
+<tbody style=3D"font-family: Helvetica, Arial, sans-serif;">
+<tr style=3D"font-family: Helvetica, Arial, sans-serif;">
+<td style=3D"font-family: Helvetica, Arial, sans-serif; vertical-align: top=
+;"><span style=3D"font-family: Helvetica, Arial, sans-serif;"><a href=3D"ht=
+tps://mentor.unm.edu/conference/register" style=3D"font-family: Helvetica, =
+Arial, sans-serif; color: #ba0c2f;"><img alt=3D"Mentoring Institute Confere=
+nce 2019 Pre-Conference Speakers Flyer" src=3D"https://mentor.unm.edu/conte=
+nt/images/POST_FINAL.jpg" width=3D"100%" style=3D"font-family: Helvetica, A=
+rial, sans-serif; max-width: 100%; display: block; margin: 0;"></a>
+</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr style=3D"font-family: Helvetica, Arial, sans-serif;">
+<td style=3D"border-top: 1px solid #DDDDDD; font-family: Helvetica, Arial, =
+sans-serif; vertical-align: top;">
+<span style=3D"font-family: Helvetica, Arial, sans-serif;">
+<table width=3D"100%" border=3D"0" style=3D"padding: 10px; border-collapse:=
+ separate; font-family: Helvetica, Arial, sans-serif;">
+<tbody>
+<tr style=3D"font-family: Helvetica, Arial, sans-serif;">
+<td style=3D"vertical-align: top; padding: 15px; font-family: Helvetica, Ar=
+ial, sans-serif;">
+<a class=3D"image" href=3D"https://www.facebook.com/mentorUNM" style=3D"fon=
+t-family: Helvetica, Arial, sans-serif; color: #ba0c2f; display: inline-blo=
+ck; padding: 0; margin: 0;"><img src=3D"https://mentor.unm.edu/img/icons/so=
+cial/facebook.png" width=3D"25" height=3D"25" alt=3D"" style=3D"font-family=
+: Helvetica, Arial, sans-serif; max-width: 100%; display: block; margin: 0;=
+"></a>
+<a class=3D"image" href=3D"https://https://twitter.com/UNM_Mentoring" style=
+=3D"font-family: Helvetica, Arial, sans-serif; color: #ba0c2f; display: inl=
+ine-block; padding: 0; margin: 0;">
+<img src=3D"https://mentor.unm.edu/img/icons/social/twitter.png" width=3D"2=
+5" height=3D"25" alt=3D"" style=3D"font-family: Helvetica, Arial, sans-seri=
+f; max-width: 100%; display: block; margin: 0;"></a>
+<a class=3D"image" href=3D"http://www.linkedin.com/company/3200617?trk=3Dpr=
+of-exp-company-name" style=3D"font-family: Helvetica, Arial, sans-serif; co=
+lor: #ba0c2f; display: inline-block; padding: 0; margin: 0;">
+<img src=3D"https://mentor.unm.edu/img/icons/social/linkedin.png" width=3D"=
+25" height=3D"25" alt=3D"" style=3D"font-family: Helvetica, Arial, sans-ser=
+if; max-width: 100%; display: block; margin: 0;"></a>
+<div style=3D"font-weight: bold; color: #858585; font-size: 11px; font-fami=
+ly: Helvetica, Arial, sans-serif;">
+Find the Mentoring Institute on social media </div>
+<!--      <p style=3D"font-weight:bold; color:#858585; font-size: 11px; mar=
+gin-top: 0; margin-bottom: 0">
+        <a style=3D"color: inherit; font-size: inherit;" href=3D"https://me=
+ntor.unm.edu/conference/mailing_list/subscribe">Click here to subscribe to =
+our email list</a>
+      </p>--><!--<p style=3D"font-weight:bold; color:#858585; font-size: 11=
+px;"> To unsubscribe please click the link at the bottom of the email.</p>-=
+->
+<p style=3D"font-weight: bold; color: #858585; font-size: 11px; margin-top:=
+ 0; margin-bottom: 0; font-family: Helvetica, Arial, sans-serif; line-heigh=
+t: 22px;">
+<a style=3D"color: inherit; font-size: inherit; font-family: Helvetica, Ari=
+al, sans-serif;" href=3D"https://mentor.unm.edu/conference/mailing_list/uns=
+ubscribe">Click here to unsubscribe from our email list through our website=
+</a>
+</p>
+</td>
+<td style=3D"vertical-align: top; padding: 15px; text-align: right; font-fa=
+mily: Helvetica, Arial, sans-serif;">
+<div style=3D"display: inline-block; text-align: left; font-family: Helveti=
+ca, Arial, sans-serif;">
+<div style=3D"font-weight: bold; line-height: 15px; color: #777; font-size:=
+ 13px; margin: 0 0 10px; font-family: Helvetica, Arial, sans-serif;">
+The Mentoring Institute</div>
+<p style=3D"line-height: 17px; color: #777; font-size: 11px; margin: 0; fon=
+t-family: Helvetica, Arial, sans-serif; margin-bottom: 10px;">
+1716 Las Lomas Rd NE<br style=3D"font-family: Helvetica, Arial, sans-serif;=
+">
+Albuquerque, NM 87106<br style=3D"font-family: Helvetica, Arial, sans-serif=
+;">
+(505) 277-1330 </p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+<br>
+<hr>
+<p align=3D"center">To unsubscribe your email from the MI-CONFERENCE-L list=
+, click
+<a href=3D"https://list.unm.edu/cgi-bin/wa?TICKET=3DNzM3MzQ2IGZvYWFkQENBTFB=
+PTFkuRURVIE1JLUNPTkZFUkVOQ0UtTKn%2BDB7525bI&amp;c=3DSIGNOFF" target=3D"_bla=
+nk">here</a>
+<br>
+</p>=
+
+--_000_DM6PR07MB5930952FAA8D9D151994B5F6D9B20DM6PR07MB5930namp_--

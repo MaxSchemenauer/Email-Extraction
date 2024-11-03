@@ -1,0 +1,439 @@
+Received: from BYAPR08MB4983.namprd08.prod.outlook.com (2603:10b6:a03:c0::26)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0013.NAMPRD05.PROD.OUTLOOK.COM; Wed, 31 Jul 2019 09:16:26 +0000
+Received: from DM6PR08CA0010.namprd08.prod.outlook.com (2603:10b6:5:80::23) by
+ BYAPR08MB4983.namprd08.prod.outlook.com (2603:10b6:a03:6a::28) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2115.15; Wed, 31 Jul 2019 09:16:22 +0000
+Received: from SN1NAM04FT055.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::201) by DM6PR08CA0010.outlook.office365.com
+ (2603:10b6:5:80::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.13 via Frontend
+ Transport; Wed, 31 Jul 2019 09:16:22 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ SN1NAM04FT055.mail.protection.outlook.com (10.152.89.20) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2115.10 via Frontend Transport; Wed, 31 Jul 2019 09:16:20 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x6V9CD82001921
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Wed, 31 Jul 2019 12:12:13 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x6V9CCsN009643;
+	Wed, 31 Jul 2019 12:12:12 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Wed, 31 Jul 2019 12:12:12 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x6V9CB8R009910
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Wed, 31 Jul 2019 12:12:11 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x6V3m8ik009093;
+	Wed, 31 Jul 2019 12:11:48 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          411541 for GAMESNETWORK@LISTSERV.UTA.FI; Wed, 31 Jul 2019 12:11:46
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6V9BkjS020126 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Wed, 31 Jul 2019 12:11:46 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x6V9Bj6p001862
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@uta.fi>; Wed, 31 Jul 2019 12:11:46 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6V9BiCR012611 for
+          <GAMESNETWORK@uta.fi>; Wed, 31 Jul 2019 12:11:44 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Wed, 31 Jul 2019 12:11:44
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-wm1-f42.google.com (mail-wm1-f42.google.com
+          [209.85.128.42]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x6V9Bieq011955 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Wed, 31 Jul 2019 12:11:44 +0300
+Received: by mail-wm1-f42.google.com with SMTP id s3so59921888wms.2 for
+          <GAMESNETWORK@uta.fi>; Wed, 31 Jul 2019 02:11:44 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:from:mime-version:subject:message-id:date:to;
+                         bh=Z9WpyjL7YhAoUaqnF9ggQMSYdNjcw+RMVgmP/0aBsy4=;
+                         b=D0+BTIlI00QoECQ1uI5RyZ4JaFfj4U3r3D7JkUSzCW2shwgwG9QZ9QZ8yiVjF1ON5h
+                         7dOkD+Nte6mACYKQvRRpLv20RaJBmLfLq0fN7trroIkdb0lFqrZnAl2TdpeXpJHUCD+G
+                         V+4+uf/zCVOpDPItMN8PAaw8t2ilSlt89bu4alLwEfuxO5ZSwY4wFsfuiJmR4TPHkCwF
+                         +vhnAuk1LglUt6iXxhkZv+q++tt1M86M6DPDqd3TBMnK4TDr6L9uLV1hr96QqMtuJK8r
+                         sJpAPbttS5r0Eun/bxP8qkG+ZO0CjCFsoY3suKznrAmf5RoElV0xCJnpx/b7/BehSjYW
+                         ibmw==
+X-Gm-Message-State: APjAAAUTn153gS/tn1Z85poCwAPAxpEYNdsMzRlFQtYNOfTq4xCJ/OAw
+                    I5AXSZomex8K5PDIfhx7mOftnVWpaz8=
+X-Google-Smtp-Source: APXvYqyd+F4PFEEN7YF5EIuf5UWi54qiqjbw+0MfhuoM8c8OVrXoIy1Nccy+3jH5Hctt138n5Nn9Dw==
+X-Received: by 2002:a1c:f409:: with SMTP id z9mr39698417wma.176.1564564302969;
+            Wed, 31 Jul 2019 02:11:42 -0700 (PDT)
+Received: from [192.168.1.11] (av1-84-91-21-85.netvisao.pt. [84.91.21.85]) by
+          smtp.gmail.com with ESMTPSA id
+          h14sm66538704wrs.66.2019.07.31.02.11.42 for <GAMESNETWORK@uta.fi>
+          (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+          Wed, 31 Jul 2019 02:11:42 -0700 (PDT)
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_E05E14FE-CEB2-4507-8F98-B93FC2C57815"
+X-Mailer: Apple Mail (2.3445.9.1)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Wed, 31 Jul 2019 12:12:12 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1022
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <4A778571-5BC9-4156-A115-2D9E23E57654@gmail.com>
+Date: Wed, 31 Jul 2019 10:09:29 +0100
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Nelson Zagalo <nzagalo@GMAIL.COM>
+Subject: [GAMESNETWORK] VJ 2019 Deadline Extended to August 20, 2019
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 31 Jul 2019 09:16:21.5269
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ a343681f-6c5a-468e-49a6-08d71597c0cf
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(3000300001)(286005)(189003)(199004)(7192003)(176002)(4006050)(16586007)(60616004)(7846003)(66574012)(55176004)(26005)(54896002)(75640400001)(106002)(426003)(6392003)(60626007)(55446002)(356004)(15974865002)(73392003)(82202003)(71190400001)(336012)(33964004)(42882007)(6306002)(16003)(6666004)(236005)(76482006)(59536001)(8676002)(486006)(66346011)(1096003)(50226002)(57306001)(7596002)(606006)(146002)(7636002)(43066004)(956004)(69556001)(6862004)(53386004)(40036005)(476003)(14444005)(21615005)(966005)(2616005)(126002)(33656002)(61266001)(36756003)(95326003)(246002);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4983;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT055.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: a343681f-6c5a-468e-49a6-08d71597c0cf
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4983;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4983:
+X-MS-Exchange-PUrlCount: 8
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 31 Jul 2019 09:16:20.8934
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a343681f-6c5a-468e-49a6-08d71597c0cf
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4983
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.2876310
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?VTQ3cXZ2elY5ejE1cU9JczFMa1NsdEkrT3hqL2xYRm42R04vNlA3VEd0VW5y?=
+ =?utf-8?B?WmpvL1U2anBmLzdiTWZKb3VvYnk5bE1XLzJ4clNXZmhlOHZDMzRneWxXUkNt?=
+ =?utf-8?B?aE1JYnNYVnhHLzAzMFJHRGVIT0VEWnhoTzRocnU1ajFqeCtzMmtJcnhLd1VH?=
+ =?utf-8?B?SEY1S1NUWFM0MUtEUlQ0NkdUM1cwUDNKc3dvWGp3QU43UDNPZTlub1ZkcGxk?=
+ =?utf-8?B?NzRFMFE5SUpCVWNVNXhibXJPdHRJcUtXa3psd1FoajhiYW1EanJqcUJzNWJx?=
+ =?utf-8?B?WldjWU92MHhtUVJWK3gxalkyOTNqRnRZbklqUitLelNPYkRiUXJoelN5dldX?=
+ =?utf-8?B?U1NnYjNGY2JETHNMdFFZckpVYWJYaVVXUVZDN0x0M1BSeGRCL0M3b0ViUmoz?=
+ =?utf-8?B?OC9yQ1ZUdS91U28rR09ib3RWSTVFSi9XRUVkcGxyQ3Rac1ZJbFZvQUd4VjAv?=
+ =?utf-8?B?Q0IwdFkvaVlUMUhsR0xXdDVqWkRGTHJzQkwxSDIyYzVYLzBDaFI5cnVXRThm?=
+ =?utf-8?B?YTFCVG1mQ1dxMG10emVUckZBU1J6NnY2ZUtIeUdQdTFDTW9SMmFidlhoMGJR?=
+ =?utf-8?B?VlBrT1kwaDhIZGk2bTRxNkVySGl3Z3VONFJHR1VHUXBhQWV5cHZrYlNkYW9D?=
+ =?utf-8?B?aFdTMkFXL1JUeEVoM296cW8wREp1ejgvYURma29YM1E3a2RFU05MUDJJdFB6?=
+ =?utf-8?B?NVd4aktjQ0hHaVovRlcwVHdDLzRWbTl0dWZ4SmlUSFZwWGF5RitFZXlNNmRw?=
+ =?utf-8?B?TWVQNEJYY0V3cTI0eDY0aExpL25TNmVFOGJzbzV1d2RpR0w1aTJpTnJ1R1BU?=
+ =?utf-8?B?MDJ5LzcvUCtteDhrcmx5aStYelRUM3RQemtxLzVudFVGRWtJbG1YY1UxbDg2?=
+ =?utf-8?B?b3hNTU1NU1pSVnJ4U0l1M1ROTWt4SG9IamZEeUxGcHlFeXQrb2swSDlFc3NQ?=
+ =?utf-8?B?VS9yN1NZWVY1WGV6VEJRN1RvckExcU1XT3R3a2crWFMxejRjaXZHTEdsQWxO?=
+ =?utf-8?B?dzVmODlScFJFczF2RVJZR2pXRThmTnVDL0N0VHl3dHMrU3hQU2ZJVHJRcjF2?=
+ =?utf-8?B?YkgvVzRxYWFPa0JDZS9NMkpITXdHM2lwanRsVUtHUlZsOVc2T2FxM0tKblAr?=
+ =?utf-8?B?c0ZhRXpOenhCajRLSXZYOFlBSE1TYnZOZnZObHB6aDBCNG84bFVHemZ4S1Fj?=
+ =?utf-8?B?UE9lbHlFQmluU0NZb2pmQWQ4N2hVWGt4dEVXRkg4azZxRWFWamN4UlNHS3h3?=
+ =?utf-8?B?eHBWN0xJQm9nd3VlMEcxSXhYckpHUzRFdTZMaGVVeVFYR3hJNko4Z25jNWpW?=
+ =?utf-8?B?VXo5bVRnYm5WVVNEN01rcUFIQTFTeURXcmJXYjEvL2JYTTJpMzBJYitiQ1pS?=
+ =?utf-8?B?a3hzNzdORzQrbnFsY0ZRWWNmeFBab3BzQk53Um5HdGFSMC9mSzkvMjI3RVQ2?=
+ =?utf-8?B?UXBDaFQyRW5FSHJqRlZlRDZJNFppYUdWTFhEbXl3PT0=?=
+MIME-Version: 1.0
+
+--Apple-Mail=_E05E14FE-CEB2-4507-8F98-B93FC2C57815
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Due to numerous requests, the VJ 2019 Call for Papers Deadline has been =
+extended. =20
+
+Full and Short paper submissions are now due on 20 July, 2019.=20
+
+Note, this will be the only extension; we will not be extending the =
+deadline further due to publisher constraints.
+
+=
+**************************************************************************=
+**
+*** VJ 2019: 11th Conference on Videogame Sciences and Arts ***
+=
+**************************************************************************=
+**
+
+27-29 November 2019, Aveiro, Portugal
+http://videojogos2019.web.ua.pt/ <http://videojogos2019.web.ua.pt/>
+
+
+*** SCOPE ***
+
+Ten years, and ten years more
+
+The 11th Conference on Videogame Sciences and Arts will be held on =
+November 27-29, organised by the Departament of Communication and Art of =
+the University of Aveiro, and the Society of Video Games Sciences =
+(SPCV). The annual conferences of the SPCV promote the scientific =
+gathering of researchers in Portugal. These conferences are attended by =
+researchers and professionals in the expanded field of videogames =E2=80=94=
+ Multimedia, Communication, Technology, Education, Psychology and Arts =
+=E2=80=94 to disseminate work and exchange experiences between the =
+academic community and with the industry.
+
+In 2009 the conference was held at University of Aveiro. 2019 will mark =
+the coming back after 10 years. We intend then to show a thorough =
+roadmap of the evolution of the national and international game research =
+during these 10 years, as also ideas and speculations for the next 10 =
+years.=20
+
+Also, this time we plan going full international, using as working =
+language English, for the CFP, the website, as the Proceedings. =
+Therefore, if you've never participated in one Videojogos, this may be =
+the best time to do it. We are calling for papers on games research from =
+all over the world.
+
+
+*** TOPICS ***
+
+We welcome research proposals, long and short papers, and demos. All =
+presenting new scientific results, innovative technologies, best =
+practices, or improvements to existing techniques and approaches in the =
+multidisciplinary research field of Games Research.=20
+
+Suggested research topics for contributions include, but are not limited =
+to:
+
+Tabletop Games
+Hybrid Games
+Gamification
+Technology
+Aesthetics=20
+Culture=20
+Development=20
+Learning=20
+Methodology=20
+Design=20
+Criticism=20
+Transmedia=20
+Narrative=20
+Serious Games
+e-Sports
+
+
+*** SUBMISSIONS ***
+
+Papers (short and full) must be in English. Only submissions that =
+receive high ratings in the review process will be selected for =
+publication by the Program Committee.=20
+
+All submissions should follow the Springer Communications in Computer =
+and Information Science (CCIS) format (see =E2=80=9CInformation for =
+Authors of Springer Computer Science Proceedings=E2=80=9D at =
+https://www.springer.com/gp/computer-science/lncs/conference-proceedings-g=
+uidelines =
+<https://www.springer.com/gp/computer-science/lncs/conference-proceedings-=
+guidelines>) use the Word Template =
+https://resource-cms.springernature.com/springer-cms/rest/v1/content/71175=
+06/data/v1 =
+<https://resource-cms.springernature.com/springer-cms/rest/v1/content/7117=
+506/data/v1>.
+
+Link for submission: https://easychair.org/my/conference?conf=3Dvj2019 =
+<https://easychair.org/my/conference?conf=3Dvj2019>
+
+
+*** IMPORTANT DATES ***
+
+Submission deadline (full and short paper): August 20, 2019
+
+Author notification of the review: September 20, 2019
+
+Submission of the print-ready version: October 1, 2019
+
+VJ2019 conference: November 27-29, 2019
+
+
+*** PUBLICATION ***
+
+Full papers: 12-15 pages=20
+Short papers: < 12 pages
+
+The proceedings are planned to be published by Springer in their =
+Communications in Computer and Information Science series, pending of =
+final approval.
+
+The Communications in Computer and Information Science is a book =
+proceedings series by Springer and Indexed by SCOPUS, SCImago, and ISI =
+Proceedings. More info at https://www.springer.com/series/7899 =
+<https://www.springer.com/series/7899>
+
+
+*** KEYNOTES ***
+
+Ernest W. Adams is a  game designer and professor at the University of =
+Uppsala, Sweden, with an extensive professional activity in the field of =
+digital games, having published "Fundamentals of Game Design" (2014) and =
+"Game Mechanics: Advanced Game Design" (2012)
+
+More to be announced soon...
+
+
+*** Contacts ***
+Ana Veloso, aiv@ua.pt <mailto:aiv@ua.pt>
+Nelson Zagalo, nzagalo@ua.pt <mailto:nzagalo@ua.pt>
+
+
+*** Organisation ***
+DigiMedia =E2=80=93 Digital Media and Interaction
+University of Aveiro - Portugal
+Sociedade Portuguesa de Ci=C3=AAncias dos Videojogos
+
+
+*** Support ***
+University of Aveiro
+American Corner
+FCT - Funda=C3=A7=C3=A3o para a Ci=C3=AAncia e a Tecnologia=
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--Apple-Mail=_E05E14FE-CEB2-4507-8F98-B93FC2C57815
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; line-b=
+reak: after-white-space;" class=3D""><div class=3D"">Due to numerous reques=
+ts, the VJ 2019 Call for Papers Deadline has been extended. &nbsp;<br class=
+=3D""><br class=3D"">Full and Short paper submissions are now due on 20 Jul=
+y, 2019.&nbsp;<br class=3D""><br class=3D"">Note, this will be the only ext=
+ension; we will not be extending the deadline further due to publisher cons=
+traints.</div><div class=3D""><br class=3D""></div>************************=
+****************************************************<br class=3D"">*** VJ 2=
+019: 11th Conference on Videogame Sciences and Arts ***<br class=3D"">*****=
+***********************************************************************<br =
+class=3D""><br class=3D"">27-29 November 2019, Aveiro, Portugal<br class=3D=
+""><a href=3D"http://videojogos2019.web.ua.pt/" class=3D"">http://videojogo=
+s2019.web.ua.pt/</a><br class=3D""><br class=3D""><br class=3D"">*** SCOPE =
+***<br class=3D""><br class=3D"">Ten years, and ten years more<br class=3D"=
+"><br class=3D"">The 11th Conference on Videogame Sciences and Arts will be=
+ held on November 27-29, organised by the Departament of Communication and =
+Art of the University of Aveiro, and the Society of Video Games Sciences (S=
+PCV). The annual conferences of the SPCV promote the scientific gathering o=
+f researchers in Portugal. These conferences are attended by researchers an=
+d professionals in the expanded field of videogames =E2=80=94 Multimedia, C=
+ommunication, Technology, Education, Psychology and Arts =E2=80=94 to disse=
+minate work and exchange experiences between the academic community and wit=
+h the industry.<br class=3D""><br class=3D"">In 2009 the conference was hel=
+d at University of Aveiro. 2019 will mark the coming back after 10 years. W=
+e intend then to show a thorough roadmap of the evolution of the national a=
+nd international game research during these 10 years, as also ideas and spe=
+culations for the next 10 years.&nbsp;<br class=3D""><br class=3D"">Also, t=
+his time we plan going full international, using as working language Englis=
+h, for the CFP, the website, as the Proceedings. Therefore, if you've never=
+ participated in one Videojogos, this may be the best time to do it. We are=
+ calling for papers on games research from all over the world.<br class=3D"=
+"><br class=3D""><br class=3D"">*** TOPICS ***<br class=3D""><br class=3D""=
+>We welcome research proposals, long and short papers, and demos. All prese=
+nting new scientific results, innovative technologies, best practices, or i=
+mprovements to existing techniques and approaches in the multidisciplinary =
+research field of Games Research.&nbsp;<br class=3D""><br class=3D"">Sugges=
+ted research topics for contributions include, but are not limited to:<br c=
+lass=3D""><br class=3D"">Tabletop Games<br class=3D"">Hybrid Games<br class=
+=3D"">Gamification<br class=3D"">Technology<br class=3D"">Aesthetics&nbsp;<=
+br class=3D"">Culture&nbsp;<br class=3D"">Development&nbsp;<br class=3D"">L=
+earning&nbsp;<br class=3D"">Methodology&nbsp;<br class=3D"">Design&nbsp;<br=
+ class=3D"">Criticism&nbsp;<br class=3D"">Transmedia&nbsp;<br class=3D"">Na=
+rrative&nbsp;<br class=3D"">Serious Games<div class=3D"">e-Sports<br class=
+=3D""><br class=3D""><br class=3D"">*** SUBMISSIONS ***<br class=3D""><br c=
+lass=3D"">Papers (short and full) must be in English. Only submissions that=
+ receive high ratings in the review process will be selected for publicatio=
+n by the Program Committee.&nbsp;<br class=3D""><br class=3D"">All submissi=
+ons should follow the Springer Communications in Computer and Information S=
+cience (CCIS) format (see =E2=80=9CInformation for Authors of Springer Comp=
+uter Science Proceedings=E2=80=9D at&nbsp;<a href=3D"https://www.springer.c=
+om/gp/computer-science/lncs/conference-proceedings-guidelines" class=3D"">h=
+ttps://www.springer.com/gp/computer-science/lncs/conference-proceedings-gui=
+delines</a>) use the Word Template&nbsp;<a href=3D"https://resource-cms.spr=
+ingernature.com/springer-cms/rest/v1/content/7117506/data/v1" class=3D"">ht=
+tps://resource-cms.springernature.com/springer-cms/rest/v1/content/7117506/=
+data/v1</a>.<br class=3D""><br class=3D"">Link for submission:&nbsp;<a href=
+=3D"https://easychair.org/my/conference?conf=3Dvj2019" class=3D"">https://e=
+asychair.org/my/conference?conf=3Dvj2019</a><br class=3D""><br class=3D""><=
+br class=3D"">*** IMPORTANT DATES ***<br class=3D""><br class=3D"">Submissi=
+on deadline (full and short paper): August 20, 2019<br class=3D""><br class=
+=3D"">Author notification of the review: September 20, 2019<br class=3D""><=
+br class=3D"">Submission of the print-ready version: October 1, 2019<br cla=
+ss=3D""><br class=3D"">VJ2019 conference: November 27-29, 2019<br class=3D"=
+"><br class=3D""><br class=3D"">*** PUBLICATION ***<br class=3D""><br class=
+=3D"">Full papers: 12-15 pages&nbsp;<br class=3D"">Short papers: &lt; 12 pa=
+ges<br class=3D""><br class=3D"">The proceedings are planned to be publishe=
+d by Springer in their Communications in Computer and Information Science s=
+eries, pending of final approval.<br class=3D""><br class=3D"">The Communic=
+ations in Computer and Information Science is a book proceedings series by =
+Springer and Indexed by SCOPUS, SCImago, and ISI Proceedings. More info at&=
+nbsp;<a href=3D"https://www.springer.com/series/7899" class=3D"">https://ww=
+w.springer.com/series/7899</a><br class=3D""><br class=3D""><br class=3D"">=
+*** KEYNOTES ***<br class=3D""><br class=3D"">Ernest W. Adams is a &nbsp;ga=
+me designer and professor at the University of Uppsala, Sweden, with an ext=
+ensive professional activity in the field of digital games, having publishe=
+d &quot;Fundamentals of Game Design&quot; (2014) and &quot;Game Mechanics: =
+Advanced Game Design&quot; (2012)<br class=3D""><br class=3D"">More to be a=
+nnounced soon...<br class=3D""><br class=3D""><br class=3D"">*** Contacts *=
+**<br class=3D"">Ana Veloso,&nbsp;<a href=3D"mailto:aiv@ua.pt" class=3D"">a=
+iv@ua.pt</a><br class=3D"">Nelson Zagalo,&nbsp;<a href=3D"mailto:nzagalo@ua=
+.pt" class=3D"">nzagalo@ua.pt</a><br class=3D""><br class=3D""><br class=3D=
+"">*** Organisation ***<br class=3D"">DigiMedia =E2=80=93 Digital Media and=
+ Interaction<br class=3D"">University of Aveiro - Portugal<br class=3D"">So=
+ciedade Portuguesa de Ci=C3=AAncias dos Videojogos<br class=3D""><br class=
+=3D""><br class=3D"">*** Support ***<br class=3D"">University of Aveiro<br =
+class=3D"">American Corner<br class=3D"">FCT - Funda=C3=A7=C3=A3o para a Ci=
+=C3=AAncia e a Tecnologia</div></body></html>--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--Apple-Mail=_E05E14FE-CEB2-4507-8F98-B93FC2C57815--

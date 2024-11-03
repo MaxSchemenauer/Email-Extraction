@@ -1,0 +1,417 @@
+Received: from SN6PR08MB5566.namprd08.prod.outlook.com (2603:10b6:a03:117::15)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0038.NAMPRD08.PROD.OUTLOOK.COM; Wed, 12 Feb 2020 10:09:47 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=ZjksQWnHCRY2Csxzl/MKeuDYE/TH1BUL0iYADbwQRpepFwDnIfTwYlzF3Xoah9XJp4Z7639XoROgqXkrx5bZfSXFsFA46yPWgq9LY7mK4lEMpduLZmedD5VEI72/vlfMkZPfC5OSDdT5z93czNeu4gTYss/oqxdyuhgeYk77Y3WR5rLDGLK+mu1Ij3K2V2EwPEA4FRibgH5EQ5WqtTKrS25LOZQCwfRwO1xCSicWWEqOkzCqKXf5BmADDjJWwmnqQUQTBG26B9/xI3QVXPRUcM9DXPG7oqJkjrZSXddlvChRwxR24poq1+TN8hKTLccLti+LuB3y9xPw44MXr4bphQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=ma1U0ck1rdLBW+ZeYjS7lkY3MQ3gb8avrLeOI2aUd7s=;
+ b=nS6DEcKdiFAK/zC9APE19k/81tiw0JBHpDzMh4A+yqjlsFTA5kU8fQ9MPN03IoCgoGPcoCGuvHlqlynHz9ee9kWXIcCyA9mJI4IvR2qlGMe9bWDJcVYBke4opQlu4XBmPXICde/25i7fX2JY8PhCb7jZYuMcKs9ZqeTIh+hx7xEgwj/+uK/4IWV+xclS+PvjqakLSChbpaF8yFKLeaPObaV/wdD/f4g3XUtcfNO2mlKS5sCrJ4uAqbirWgu0v/7aSp9Wl2sZOSWtznZe17L2fcCtmWAsr3Mv9YRcL4l1tIpDEoPbYYRhxyhuh5NvtwESqrsBlAq2qv4Vm7nYR/tG3w==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 193.166.164.159) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=lists.tuni.fi;
+ dmarc=bestguesspass action=none header.from=tuni.fi; dkim=fail (signature did
+ not verify) header.d=tuni.onmicrosoft.com; arc=fail (47)
+Received: from BN4PR11CA0005.namprd11.prod.outlook.com (2603:10b6:403:1::15)
+ by SN6PR08MB5566.namprd08.prod.outlook.com (2603:10b6:805:f8::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2707.28; Wed, 12 Feb
+ 2020 10:09:45 +0000
+Received: from BN3NAM04FT019.eop-NAM04.prod.protection.outlook.com
+ (2603:10b6:403:1:cafe::ec) by BN4PR11CA0005.outlook.office365.com
+ (2603:10b6:403:1::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2707.25 via Frontend
+ Transport; Wed, 12 Feb 2020 10:09:45 +0000
+Authentication-Results: spf=pass (sender IP is 193.166.164.159)
+ smtp.mailfrom=lists.tuni.fi; calpoly.edu; dkim=fail (signature did not
+ verify) header.d=tuni.onmicrosoft.com;calpoly.edu; dmarc=bestguesspass
+ action=none header.from=tuni.fi;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of lists.tuni.fi designates
+ 193.166.164.159 as permitted sender) receiver=protection.outlook.com;
+ client-ip=193.166.164.159; helo=smtp2.tuni.fi;
+Received: from smtp2.tuni.fi (193.166.164.159) by
+ BN3NAM04FT019.mail.protection.outlook.com (10.152.92.173) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2729.22 via Frontend Transport; Wed, 12 Feb 2020 10:09:44 +0000
+Received: from lists.tuni.fi (lists.tuni.fi [193.166.164.155])
+	by smtp2.tuni.fi (Postfix) with ESMTP id 4F7F150E;
+	Wed, 12 Feb 2020 12:09:43 +0200 (EET)
+Received: from lists.tuni.fi (localhost [127.0.0.1])
+	by lists.tuni.fi (Postfix) with ESMTP id 347DE2988;
+	Wed, 12 Feb 2020 12:09:43 +0200 (EET)
+X-Original-To: gamesnetwork@listrelay.tuni.fi
+Delivered-To: gamesnetwork@listrelay.tuni.fi
+Received: from EUR04-HE1-obe.outbound.protection.outlook.com
+ (mail-eopbgr70135.outbound.protection.outlook.com [40.107.7.135])
+ by lists.tuni.fi (Postfix) with ESMTP id DCA9B2988
+ for <gamesnetwork@listrelay.tuni.fi>; Wed, 12 Feb 2020 12:09:41 +0200 (EET)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=V04cpt7rkcnRluMUkrKadHmkVM40Om1+K0JNvuKeQm7YroEOOCTRLxZA8XSvUuChQNNq0a/kCWm0Du+KG4yEeLZJ6ugnNq54J4JYaYhslmZfD3aq9gfnQB7WfETfoH4F4tA9HsxQAi0+Cn0/hoaR0AGJvkHXmAFT5AGV9ybjgR5ZkzAd0L5jn6W3v63nN4vVLAVqls3jykajqfISS+Xv/lWwGp+F8p3LuabgaRry4xzpiaFbkui2mzGU83/M53CnguvJkLtM+y01i+ZkXJtJCEyV7tz850uURL8lyEl+9Iyzdx7JThzSwqdP15bdZ8m5jaPnrVJCkxnEMGe49rOkPA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=57OmIH21CtDrlAHJnhNH/MqkuXwnXrc8wbBennpGDuQ=;
+ b=T/plRdwas0F9oTqMj6XhDhsrIslOhUxedReJVk0dDEhBMpnhjOWTJTTqRq80TrnMplxs7K0d/SHWJHL80fW4PnZP9G1WyK4qpv8FwdVsXiCdpI06gmonEsoly0f3ehE+b0WzNBAhoZ9tmq6SpUQNx87ty932EqqlthJwqNqC1JzBkkf28LNZHIHrekV8+ZV+OnRcZ2T4BbJEf6mt9SudCKHoMRDevbvJINQu91xpsZ8oqfXJzSAwtvLglnItAheSCCsJAnqTpTJnbZ21Sqdk9Iv8c+4jWqQFIq7d9Wah2pVsEU+p3zp95FmEiSojYjkKe0v+PQ5ToYEBZMfpcIUM3g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=tuni.fi; dmarc=pass action=none header.from=tuni.fi; dkim=pass
+ header.d=tuni.fi; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=tuni.onmicrosoft.com; 
+ s=selector2-tuni-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=57OmIH21CtDrlAHJnhNH/MqkuXwnXrc8wbBennpGDuQ=;
+ b=HW42BGs7/UcaQS7ZdJam2GVZh/+LS7f0qoHQ1VWtuqOpk1xXaEoh/1VjrxrZw683FNo9jYpfBHjurgXOmAxd6qU5LHeNdyNlAk4BQCgTan2so78noUASmiEV1SqnJu8f8p6ewmAz5us3i2AlTjdASDTUlTYFd3pqegnJC3CynA4=
+Authentication-Results-Original: spf=none (sender IP is )
+ smtp.mailfrom=ville.kankainen@tuni.fi; 
+Received: from AM6PR08MB3237.eurprd08.prod.outlook.com (52.135.167.19) by
+ AM6PR08MB3687.eurprd08.prod.outlook.com (20.178.91.214) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2707.21; Wed, 12 Feb 2020 10:09:40 +0000
+Received: from AM6PR08MB3237.eurprd08.prod.outlook.com
+ ([fe80::b95c:a7ea:63e9:ed9]) by AM6PR08MB3237.eurprd08.prod.outlook.com
+ ([fe80::b95c:a7ea:63e9:ed9%7]) with mapi id 15.20.2707.030; Wed, 12 Feb 2020
+ 10:09:40 +0000
+To: "gamesnetwork@lists.tuni.fi" <gamesnetwork@lists.tuni.fi>
+From: Ville Kankainen <ville.kankainen@tuni.fi>
+Message-ID: <7c041f0e-69e5-071f-0a13-bd6d8b698a2f@tuni.fi>
+Date: Wed, 12 Feb 2020 12:09:38 +0200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
+ Thunderbird/68.4.2
+X-ClientProxiedBy: HE1PR07CA0015.eurprd07.prod.outlook.com
+ (2603:10a6:7:67::25) To AM6PR08MB3237.eurprd08.prod.outlook.com
+ (2603:10a6:209:4c::19)
+Received: from [192.168.10.176] (88.115.10.73) by
+ HE1PR07CA0015.eurprd07.prod.outlook.com (2603:10a6:7:67::25) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2750.6 via Frontend Transport; Wed, 12 Feb 2020 10:09:39 +0000
+X-Originating-IP: [88.115.10.73]
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 00df9653-0d30-4319-f231-08d7afa3af41
+X-MS-TrafficTypeDiagnostic: AM6PR08MB3687:|AM6PR08MB3687:|SN6PR08MB5566:
+X-LD-Processed: fa6944af-cc7c-4cd8-9154-c01132798910,ExtFwd
+X-MS-Exchange-Transport-Forked: True
+X-Microsoft-Antispam-PRVS: <AM6PR08MB3687B1C014F1148764440D1CEB1B0@AM6PR08MB3687.eurprd08.prod.outlook.com>
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;OLM:9508;
+X-Forefront-PRVS: 0311124FA9
+X-Forefront-Antispam-Report-Untrusted: SFV:NSPM;
+ SFS:(10019020)(4636009)(39860400002)(376002)(366004)(396003)(136003)(346002)(189003)(199004)(16526019)(31696002)(66476007)(86362001)(66556008)(66946007)(956004)(31686004)(5660300002)(2616005)(36756003)(44832011)(6862004)(81156014)(8676002)(966005)(81166006)(52116002)(8936002)(6486002)(186003)(2906002)(26005)(16576012)(33964004)(478600001)(316002)(786003)(15398625002);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:AM6PR08MB3687;
+ H:AM6PR08MB3237.eurprd08.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ PTR:InfoNoRecords; MX:1; A:1; 
+Received-SPF: None (protection.outlook.com: tuni.fi does not designate
+ permitted sender hosts)
+X-MS-Exchange-SenderADCheck: 1
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ dkND9MyMEHq1YFipeAT2F0Db+y7wUTGtXA4k8pvxpS5Zcy/VXRLpreLdV3X7zqPvfbuD4DLJRQ362j+L0k5jhBd3UOjemAdiAnq8A92WDSoA8dUsyM0//Z2ETH75ZcgWIuF245FmvX74NhAYb6AowjtcivQIZBXQgOq+1kae698tNycQI607qLce36KksHGgu/AB663aNPD77VbVnHTf2zILddopj8A52Ms1PBYgCWuN5G1pFzKQNN7LlOqBAVqzWqfCdG9aivYa13Ta53SswHq4D25WlqzlRGDpv4bPc/+oNwWffwfPg8kjJ7MC7pbzffumRGCvudRw57He23Ya4eRPdsISPOSqqxDJzIY78wgGMEGoQKkchxAdNfz5dC2Eht8biDqxOLJ5wzeB7+rHp4eNzLIrs+uF6RwECn8eXJuxABu6cub6l4Bm9XC2h9iAvmwqX0tvcmZ3XFycwJ/r/ftZXn37bnf+asnQWSd4x2hpvmfzfjIAb7rDsPfip9POz2YTbJutKvXvWID3M8Am+tG9SLmdPORsoy1AFhv3y8fcQMPbj2L2KOQhJen0DnlCQCfQLCpNKRwi24VMSsR+uA==
+X-MS-Exchange-AntiSpam-MessageData: 72THkaiezwxdm8mBQlxxZGpDMFFTQvrUoEX42KcEG5yDrarZTkc+Gpsc4CG853D9COe79+oOU1bIxCKWKbAq203sdIs5YrZ3zI65y0Hnr9CfHF8VvX592X2Qc7/W7ATa185rbQoKpbswN77yvgoV2w==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM6PR08MB3687
+Subject: [Gamesnetwork] CFP: Ropecon 2020 Academic Seminar: Playing at the
+	End of the World
+X-BeenThere: gamesnetwork@lists.tuni.fi
+X-Mailman-Version: 2.1.15
+Precedence: list
+List-Id: <gamesnetwork.lists.tuni.fi>
+List-Unsubscribe: <https://lists.tuni.fi/mailman/options/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=unsubscribe>
+List-Archive: <https://lists.tuni.fi/mailman/private/gamesnetwork/>
+List-Post: <mailto:gamesnetwork@lists.tuni.fi>
+List-Help: <mailto:gamesnetwork-request@lists.tuni.fi?subject=help>
+List-Subscribe: <https://lists.tuni.fi/mailman/listinfo/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=subscribe>
+Content-Type: multipart/mixed; boundary="===============5893774088591251379=="
+Errors-To: gamesnetwork-bounces@lists.tuni.fi
+Sender: "Gamesnetwork" <gamesnetwork-bounces@lists.tuni.fi>
+Return-Path: gamesnetwork-bounces@lists.tuni.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Feb 2020 10:09:45.1079
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 00df9653-0d30-4319-f231-08d7afa3af41
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ BN3NAM04FT019.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:193.166.164.159;IPV:;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(4636009)(286005)(189003)(199004)(336012)(2616005)(7596002)(44832011)(956004)(7636002)(31686004)(356004)(75640400001)(966005)(9036002)(1096003)(44144004)(16526019)(8636004)(33964004)(6862004)(36906005)(36756003)(26005)(16576012)(2160300002)(31696002)(4006050)(6486002)(246002)(16670700002)(19810500001)(7846003)(15398625002);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB5566;H:smtp2.tuni.fi;FPR:;SPF:Pass;LANG:en;PTR:smtp2.tuni.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT019.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ fd9469bf-4556-4ef1-8050-08d7afa3ac39
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Feb 2020 10:09:44.8391
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 00df9653-0d30-4319-f231-08d7afa3af41
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB5566
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.2655952
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2729.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?RHZJaThOWlpUUEJQdHZBeWUvcmluSVl0c3ZRcDRIN21ra25SNUxWYXQ5N2dp?=
+ =?utf-8?B?cUNtQ3dQMThBRWhoQUxDOGNjYzVSdDVBb3p3eUN4LzhGWExKQWh1V2NkZ3Bz?=
+ =?utf-8?B?SmZrWjVFTEI0RkxlR2oxZENmc3BJSkwzSWtNWkp6UUlCV2FaTnY2ak12ZjFa?=
+ =?utf-8?B?Z1haY3dsdWNFVFEwYmxqdDNCUGFkUXRwS1FwSUxtdUR4cG1zQzliRS9OVlF6?=
+ =?utf-8?B?WEl2ZDZjNHRNMi9kR28veXk2REZUUmJIcXZZQkVFeklIa2FUZENJN1RUdzdX?=
+ =?utf-8?B?L2FTRGlmTkFFMWV2dk1lMTR2WmRHMnhoYjlpZVI2Y25ydmw2cjcrVE9HQ1lN?=
+ =?utf-8?B?VjhraEdDTkQ0d3N3QThodW9XMzh3ZDdQRGpJZDJiOGl2UXp5NXVNMDZnSEVP?=
+ =?utf-8?B?TlZMOU4xbFVqMGR1eVZyTFFUSXh5eW8yeWNDMllLbHFBNUlCWUsrQTMzMEty?=
+ =?utf-8?B?V0hrNmpXbGNEUjFJeWVhNW44YnBxcS9TWHFFWGJIbVQ5akgwZmNzcXhoTmpH?=
+ =?utf-8?B?RkRxUldTMU5GT3QyZTVSWmZHam1wb2lSemZMNXNveXBoWjFhOUNxdDVlT1FT?=
+ =?utf-8?B?ZXFUWFFBNlBvNkZoNkpqcW4vM2hKZXVIOG9TcTV5bnNQU2RVZzBLaXlpRmdN?=
+ =?utf-8?B?SXA1OUdPdUwxQ1B2OHV5TXFSaDM3a3RWcmJ2b0l2cVBvbDh0enVRM0RSZFNE?=
+ =?utf-8?B?cDRERlByWitHcWp1TjU4Z0VEdXJLMndTK1VHMkJleWdQYTdvczZPdTFFTmpY?=
+ =?utf-8?B?UmJ5SlVXMlZkSFFScUcyVGRiWVh0Qk5BRGlwRGl0SG5KblJvUGNEMVhZSFpp?=
+ =?utf-8?B?ZHhkWTZmNVBubXhLU3lZYmhqUDdSd2RscHZTbXc1bERpMGcrc3Y2aC8zMS8z?=
+ =?utf-8?B?QURXL2JML2FTUGJiUUlkUW9FK3RrNGFBT0JCejhHN2h2TkFyY281QmhLR2R4?=
+ =?utf-8?B?MkRHdEZzY0VHd0ZWTkxXMnplSHV4MFNlSkdaL1N6cEFCc3ZvdUUzRFdFdlF3?=
+ =?utf-8?B?Z3UyMnlpMitNaVpQVlNCL3YvYzAzRUpYOGhuRGYxbXZmMWF1cXp0SWQwOTdr?=
+ =?utf-8?B?R2UwY294ODM2Z2NLUkdNR092aGtWN1hHRjdjbi84UE05MXlvUlgvc2g3dnk0?=
+ =?utf-8?B?QjI2SXlIWkdOQTUxVmRMRktoRTZ1WmRKZ0F6RTlyYnBKeTFYMDlOMGR6L2FW?=
+ =?utf-8?B?NC9RYlFrTy9FSFJwZWJSRWdJUlBwRFE1TmlSN3VTdllNSUhFeUJuN0Y1eDhE?=
+ =?utf-8?B?MVg2WlRqMDUwUDRGd3ZSYzRPSkdqdW5KWUVNcCt4eFpFSnF6YXp3ZzJ4bW1W?=
+ =?utf-8?B?K3VXRUwwNnRRdmZpTkM2VTNGRmJDZXd0a0tnUG02ajY2bTRBWDJEUldMejFX?=
+ =?utf-8?B?SWg3b2MzUXNhbENCMzN0V25YL2Nybkc3QjRRd0xDYXdXNFpGTU1haGcvT1F2?=
+ =?utf-8?B?RFpRa1hPdko0MXlXZ0dsYkdCekl3RHBYYU1iL0FxWmNFYlRMUEhlelZydFF5?=
+ =?utf-8?B?U1oya2ZOeVhYdDBMcm56MWE4NWc0aGRUMVIwWDQwRG9RT3hLNGhkLzFFRVpl?=
+ =?utf-8?B?NWJCaW4zVGdVbnk1RFdPM2s0NWw5TS9vVlM3ajBLenpGTWR0eGRWM3BxQzFi?=
+ =?utf-8?B?STdTTUNsUjNwbGc4anFkbXNGalVRV29mRkVMMzM5amkrWmZwejhSTDJXdXE0?=
+ =?utf-8?B?MVRJNjNxNkFMcmd6T2p5VDZNUU8vbUFFNnZhc29TZHBJbjRRcHZmWTkxM09K?=
+ =?utf-8?B?ZmloS21IVmpqN0EvTWpOVXNjUUN4MFZOVDRHMU5ZUmdvOFZ0L2Y2WVV2bXZj?=
+ =?utf-8?B?UFp5Z1l2Z040c2FhSTZMNmJJTjEwcHdMMmdLTlM1ajRDS05uNDdkODJYY2py?=
+ =?utf-8?Q?icRtXZXP2FXfj?=
+MIME-Version: 1.0
+
+--===============5893774088591251379==
+Content-Type: multipart/alternative;
+ boundary="------------7430D934CF850BAB1FE553C5"
+
+--------------7430D934CF850BAB1FE553C5
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+*CFP: Ropecon 2020 Academic Seminar: Playing at the End of the World *
+https://2020.ropecon.fi/academic-seminar/
+Full cfp: 
+https://2020.ropecon.fi/wp-content/uploads/2020/02/CFP_Academic_Seminar_Ropecon_2020_2.pdf
+
+----------------------------------------------------------------
+*Important dates:*
+
+Abstract deadline: May 03, 2020
+Notification of acceptance: May 17, 2020
+Full (Working) Paper deadline: July 19, 2020
+----------------------------------------------------------------
+
+In games, the world is often ending. Gehenna is nigh in /Vampire: The 
+Masquerade/, collapse of civilization threatens in /Pandemic/ and 
+/Arkham Horror/, and almost every superhero game is about saving the 
+world. Or maybe the world has already ended and we are trying to deal 
+with that in the Wasteland of the /Fallout /series, or in the annual/Old 
+Town/ larp and convention. With the current environmental crisis, the 
+end of the world is also more real than ever. We must prepare for 
+unprecedented changes in our lifestyle if we want to minimize the 
+catastrophic effects of climate change. How is the current situation 
+dealt with in games? Does the environmental change affect the game 
+industry? Can games be used to educate people about this dire situation? 
+How has the end of the world been depicted in these games? The theme of 
+Ropecon 2020 and its Academic Seminar is “The End of the World”
+
+We invite you to present on topics related to the end of the world. The 
+list of possible topics includes but is not limited to:
+
+• Apocalyptic and post-apocalyptic themes in games
+• Losing in games
+• Character death in role-playing games
+• Post-play activities in board games / role-playing games / larp
+• Disappearing genres / games / gaming cultures
+• What happens when a campaign ends / server goes down?
+• Game heritage
+• Lapsed players
+• The effects of climate crisis on game culture / development
+• Climate crisis as a theme / mechanic
+
+Playing at the End of the World is the 3rd annual Academic Seminar of 
+Ropecon, organised as collaboration between Ropecon ry and the Centre of 
+Excellence in Game Culture Studies (2018–2025). The emphasis of the 
+event is on multiplayer games that players engage in while being 
+physically co-located, as that is also the focus of Ropecon. Ropecon is 
+a large, independent convention devoted to role-playing games, larps, 
+board games, miniature wargames, collectible card games, cosplay, and 
+the like. The convention has been running annually since 1994.
+
+The focus of the seminar is on working papers and the presentations 
+should encourage discussion, instead of repeating the information 
+presented in the papers. We want to encourage peer-to-peer discussion to 
+refine and develop the papers further. Every paper will be presented for 
+10 minutes and discussed for 20 minutes. The sessions will be open for 
+all Academic Seminar of Ropecon 2020 ticket holders, but the 
+presentations should be drafted with an academic audience in mind. We 
+welcome submissions from younger scholars and PhD candidates as well as 
+from more established researchers. The seminar is in discussion with a 
+journal for the best papers to be invited to be further developed for 
+publication in a special journal issue.
+
+*Submission guidelines*
+
+The papers to be presented will be chosen based on extended abstract 
+review. The abstracts should be 500–1000 words (plus references). 
+Abstracts should be delivered in PDF format. Full papers are distributed 
+to all participants prior to the event in order to facilitate 
+discussion. Our aim is that all participants can familiarise themselves 
+with the papers in advance. Therefore, the maximum length for a full 
+paper is 5000 words (plus references).
+
+Submissions should be sent to: academic.program@ropecon.fi
+
+*Organisers
+*General Chair: Mr. Ville Kankainen, Tampere University Game Research 
+Lab, Aalto University, Ropecon 2020 Programme Team
+Programme Chair: Dr. Jonne Arjoranta, Center of Excellence in Game 
+Culture Studies
+
+Further information and inquiries: academic.program@ropecon.fi
+
+More information about the Ropecon convention can be found here: 
+https://2020.ropecon.fi/homepage/
+
+
+
+--------------7430D934CF850BAB1FE553C5
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <p><font size="&#43;1"><b>CFP: Ropecon 2020 Academic Seminar: Playing at
+          the End of the World </b></font><br>
+      <a href="https://2020.ropecon.fi/academic-seminar/">https://2020.ropecon.fi/academic-seminar/</a><br>
+      Full cfp: <a href="https://2020.ropecon.fi/wp-content/uploads/2020/02/CFP_Academic_Seminar_Ropecon_2020_2.pdf">https://2020.ropecon.fi/wp-content/uploads/2020/02/CFP_Academic_Seminar_Ropecon_2020_2.pdf</a></p>
+    <p>----------------------------------------------------------------<br>
+      <b>Important dates:</b></p>
+    <p>Abstract deadline: May 03, 2020
+      <br>
+      Notification of acceptance: May 17, 2020
+      <br>
+      Full (Working) Paper deadline: July 19, 2020<br>
+      ----------------------------------------------------------------<br>
+    </p>
+    <p>In games, the world is often ending. Gehenna is nigh in <i>Vampire:
+        The Masquerade</i>,
+      collapse of civilization threatens in <i>Pandemic</i> and <i>Arkham
+        Horror</i>, and almost every
+      superhero game is about saving the world. Or maybe the world has
+      already ended and
+      we are trying to deal with that in the Wasteland of the <i>Fallout
+      </i>series, or in the annual<i>
+        Old Town</i> larp and convention. With the current environmental
+      crisis, the end of the
+      world is also more real than ever. We must prepare for
+      unprecedented changes in our
+      lifestyle if we want to minimize the catastrophic effects of
+      climate change. How is the
+      current situation dealt with in games? Does the environmental
+      change affect the game
+      industry? Can games be used to educate people about this dire
+      situation? How has the
+      end of the world been depicted in these games? The theme of
+      Ropecon 2020 and its
+      Academic Seminar is “The End of the World”<br>
+      <br>
+      We invite you to present on topics related to the end of the
+      world. The list of possible topics includes but is not limited to:<br>
+      <br>
+      • Apocalyptic and post-apocalyptic themes in games<br>
+      • Losing in games<br>
+      • Character death in role-playing games<br>
+      • Post-play activities in board games / role-playing games / larp<br>
+      • Disappearing genres / games / gaming cultures<br>
+      • What happens when a campaign ends / server goes down?<br>
+      • Game heritage<br>
+      • Lapsed players<br>
+      • The effects of climate crisis on game culture / development<br>
+      • Climate crisis as a theme / mechanic<br>
+    </p>
+    <p>Playing at the End of the World is the 3rd annual Academic
+      Seminar of Ropecon,
+      organised as collaboration between Ropecon ry and the Centre of
+      Excellence in Game
+      Culture Studies (2018–2025). The emphasis of the event is on
+      multiplayer games that
+      players engage in while being physically co-located, as that is
+      also the focus of Ropecon.
+      Ropecon is a large, independent convention devoted to role-playing
+      games, larps, board
+      games, miniature wargames, collectible card games, cosplay, and
+      the like. The convention
+      has been running annually since 1994. <br>
+    </p>
+    <p>The focus of the seminar is on working papers and the
+      presentations should encourage
+      discussion, instead of repeating the information presented in the
+      papers. We want to
+      encourage peer-to-peer discussion to refine and develop the papers
+      further. Every paper
+      will be presented for 10 minutes and discussed for 20 minutes. The
+      sessions will be open
+      for all Academic Seminar of Ropecon 2020 ticket holders, but the
+      presentations should be
+      drafted with an academic audience in mind. We welcome submissions
+      from younger
+      scholars and PhD candidates as well as from more established
+      researchers. The seminar
+      is in discussion with a journal for the best papers to be invited
+      to be further developed
+      for publication in a special journal issue.</p>
+    <p><b>Submission guidelines</b>
+      <br>
+    </p>
+    <p>The papers to be presented will be chosen based on extended
+      abstract review. The
+      abstracts should be 500–1000 words (plus references). Abstracts
+      should be delivered in
+      PDF format. Full papers are distributed to all participants prior
+      to the event in order to
+      facilitate discussion.
+      Our aim is that all participants can familiarise themselves with
+      the papers in advance.
+      Therefore, the maximum length for a full paper is 5000 words (plus
+      references). <br>
+    </p>
+    <p>Submissions should be sent to: <a class="moz-txt-link-abbreviated" href="mailto:academic.program@ropecon.fi">academic.program@ropecon.fi</a> <br>
+    </p>
+    <p><b>Organisers<br>
+      </b>General Chair: Mr. Ville Kankainen, Tampere University Game
+      Research Lab, Aalto
+      University, Ropecon 2020 Programme Team
+      <br>
+      Programme Chair: Dr. Jonne Arjoranta, Center of Excellence in Game
+      Culture Studies <br>
+    </p>
+    <p>Further information and inquiries: <a class="moz-txt-link-abbreviated" href="mailto:academic.program@ropecon.fi">academic.program@ropecon.fi</a><br>
+    </p>
+    <p>More information about the Ropecon convention can be found here:
+      <a href="https://2020.ropecon.fi/homepage/">https://2020.ropecon.fi/homepage/</a></p>
+    <p><br>
+    </p>
+  </body>
+</html>
+
+--------------7430D934CF850BAB1FE553C5--
+
+--===============5893774088591251379==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Gamesnetwork@lists.tuni.fi is the discussion list of DiGRA, the Digital Games Research Association. You can unsubscribe, edit your subscription address, etc. at the web interface:
+https://lists.tuni.fi/mailman/listinfo/gamesnetwork
+--===============5893774088591251379==--

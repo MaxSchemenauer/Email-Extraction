@@ -1,0 +1,1240 @@
+Received: from BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:a03:f4::44)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR11CA0103.NAMPRD11.PROD.OUTLOOK.COM; Thu, 27 Jun 2019 09:50:07 +0000
+Received: from DM6PR08CA0021.namprd08.prod.outlook.com (2603:10b6:5:80::34) by
+ BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:408:28::30) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2008.16; Thu, 27 Jun 2019 09:50:06 +0000
+Received: from SN1NAM04FT028.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::208) by DM6PR08CA0021.outlook.office365.com
+ (2603:10b6:5:80::34) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2008.15 via Frontend
+ Transport; Thu, 27 Jun 2019 09:50:06 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.8.16)
+ smtp.mailfrom=amazonses.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=icat19.com;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=icat19.com;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of amazonses.com designates
+ 54.240.8.16 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.8.16; helo=a8-16.smtp-out.amazonses.com;
+Received: from a8-16.smtp-out.amazonses.com (54.240.8.16) by
+ SN1NAM04FT028.mail.protection.outlook.com (10.152.88.113) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2032.15 via Frontend Transport; Thu, 27 Jun 2019 09:50:05 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=53ricrbq6d3afjhkfkq7fenqxmo5i733; d=icat19.com; t=1561629005;
+	h=Date:To:From:Reply-to:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type;
+	bh=ufq5ZuCzR091sVjrrw1XpiAHagez4Rfh7Bt4Ov2hEnc=;
+	b=VHcFBYQ7YYxiLy5Q2VlijyrE0NZl2ybeaNp9MC/AOP0o7UhWIAefTFcYEjgKq4MV
+	jwe0j+540olrVcw3JmJnrdHfZECp9FsFYlQcv35l0D1V+7Zr3+miWyh55WvF8v79ngu
+	ct3cqBLtyrgQj4Y7pg8xma409WNcPJrY8ooEBJFA=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1561629005;
+	h=Date:To:From:Reply-to:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Feedback-ID;
+	bh=ufq5ZuCzR091sVjrrw1XpiAHagez4Rfh7Bt4Ov2hEnc=;
+	b=PnoK9qWuMLQqRLFIPMtuW7gD56tYukS0zlO7djnrAzS7AvcmI3Afl71jtEOdyUHO
+	J3Xob5hb+SORUKQfigItD7wzDKovSxJyN5aXOwhh7kf2eareylTwGhONnImp3lESW6G
+	NCRZ49wXBXyorUx4R7fFCRx4dUq9iX4e+PYMQXa8=
+Date: Thu, 27 Jun 2019 09:50:04 +0000
+To: Noname <foaad@calpoly.edu>
+From: ICAT 2019 <info@icat19.com>
+Reply-to: ICAT 2019 <info@icat19.com>
+Subject: Call for Paper, ICAT19, 26-30 August, Bosnia and Herzegovina, Sarajevo
+Message-ID: <0100016b98579442-ed4d494b-a854-4e48-9fcb-d5eff7d18b70-000000@email.amazonses.com>
+X-Mailer: PHPMailer 5.1 (phpmailer.sourceforge.net)
+List-Unsubscribe: <http://www.icat19.com/send/unsubscribe/3d0GoQQkUnpbMcfEae1F9bFORrarbjtQeb0PfSQshME/R892p0xU36RL3XUdt7WHEhRA/IL6IMnoQ7639892W1l2tzGmLcw>
+Content-Type: multipart/alternative;
+	boundary="b1_864a01730dbcf7a59281a88acccac220"
+X-SES-Outgoing: 2019.06.27-54.240.8.16
+Feedback-ID: 1.us-east-1.udb8UQMozU0hyLoLnSVaZnKZKI0EBKZ/V7n+7muR1wc=:AmazonSES
+Return-Path:
+ 0100016b98579442-ed4d494b-a854-4e48-9fcb-d5eff7d18b70-000000@amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 27 Jun 2019 09:50:05.8988
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ fa503ad3-a0a7-40b7-6cad-08d6fae4d562
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:54.240.8.16;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(2980300002)(286005)(171004002)(189003)(199004)(476003)(246002)(956004)(19630485002)(7596002)(126002)(8676002)(25786009)(486006)(16586007)(1096003)(146002)(7636002)(106002)(75640400001)(6486002)(336012)(53346004)(50226002)(3820100002)(53386004)(42882007)(14444005)(66574012)(36736006)(6506007)(16003)(6916009)(733005)(3450700001)(6512007)(7066003)(23466002)(19627405001)(966005)(2171002)(81686011)(4006050)(413944005)(43066004)(90596002)(6306002)(71190400001)(356004)(76236002)(71280400001)(26005)(9686003)(606006)(53946003)(236005)(579004)(13224275004)(12968915004);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4980;H:a8-16.smtp-out.amazonses.com;FPR:;SPF:Pass;LANG:en;PTR:a8-16.smtp-out.amazonses.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT028.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: fa503ad3-a0a7-40b7-6cad-08d6fae4d562
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1414054)(71702078);SRVR:BN7PR08MB4980;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4980:
+X-MS-Exchange-PUrlCount: 16
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 27 Jun 2019 09:50:05.7583
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: fa503ad3-a0a7-40b7-6cad-08d6fae4d562
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4980
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.2027254
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2008.006
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077);
+X-Microsoft-Antispam-Message-Info:
+	0EthHVFqTiMykCc2iK9T9+x0y5J0OMtgYkht3UuXbdYctudVRmEjkEZ3zCR+O9RyeF1g6Zw9fp01gs5M/O7GyCKWuymGaqu4sl3plcWbBz2o2JkJYAvc26zYQbIVIIBg3uQCZA6MYbePKpY4aneCEyyIXtTXzK5wK6w9Ceq624qpv2A6eGkXL0s+M0FDS3uL4gmbbUtELae52NdLedIuq8P4cPaWmLeGXuLKVcjYkYyc3zECARw/og/FAKu8lClpaaGa6QmOi40wdFIjpAzQm9EetU8mQgOxwAaV3zN4nc9KwwxFGDaDtSVaAXldgzQUkaC+dqjeLndffUeS0dR/qlyfzMeeyOGk5ELD7sRixIa5hVVBYAv1ux+Rq5BVUI2laweYNVCLng8JlZ4YGDYXxe0kJR4D9NL5dJNYdpidtuYVFFi2UIJLWW77VPJgAO0w/oZDGJX5XZddbKjEWuwKfDOft4usJzr3zA4mKLmWSmjlezF4W54dl4pRBYiSFkVa50h0yRZiJrP3dSUwbDyx18tUTtFGbg/s25V9AMawmKhNBz4tATF3T4TwlkzpkmA/LSJXpGrxX+/FvrKnxNJL9rQT9Bg/p/9rHfc4jko38HaLGlqvMut9TWP97LwPk2eh2RySPDFTDIKN7dFio6yCNwU07K0ueSREhHp1xfmYFQmvKeNHDbSeGvHXEJYbyi3057E4uBQU7AMRe8Kd5/Ji1t8TU360znDt3e62imrWYMgoAZ+ju94pUlDEWZuUxMSvpXulPQLSpbSRkrMw6IABuKTPCqfPcN+fdrJnEKUPy4ClAc0badpkuGDiNLHhvNq0ZEKX0OLDT6McRH29eEiHAGrM8RDLkbV5D5U44NZmDBnXqraQcnFU1oFY/9mbMQ5c77USGfLsb1nDMMObPv7gXDQSf94TypxhGPUZm8piqM4=
+MIME-Version: 1.0
+
+--b1_864a01730dbcf7a59281a88acccac220
+Content-Type: text/plain; charset = "UTF-8"
+Content-Transfer-Encoding: 8bit
+
+ 
+			 
+		
+		
+			
+			
+				
+					
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												View in browser
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		 
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		Dear colleagues ,
+																	
+																	
+																		 
+																	
+																	
+																		
+																		
+																		
+																		
+																		8th International Conference on Advanced Technologies (ICAT&#39;19) will be organized by Mother Teresa Women&#39;s University, Selcuk University and together with other collaborating universities from the region on August 26-30, 2019 in Sarajevo Bosnia and Herzegovina.
+
+																		The main objective of ICAT&#39;19 is to present the latest research and results of scientists related to Computer Sicences, Electrical & Electronics, Energy Technologies, Manufacturing Technologies, Mechatronics and Biomedical Technologies. This conferences provides opportunities for the different areas delegates to exchange new ideas and application experiences face to face, to establish business or research relations and to find global partners for future collaboration. We hope that the conferences results constituted significant contribution to the knowledge in these up to date scientific field. The organizing committee of conference is pleased to invite prospective authors to submit their original manuscripts to ICAT&#39;19.
+
+																		All full paper submissions will be double blind and peer reviewed and evaluated based on originality, technical and/or research content/depth, correctness, relevance to conference, contributions, and readability.
+
+																		 
+
+																		Important Dates
+																		Dates of the Conference: August 26-30, 2019
+																		Deadline for Abstract Submission: June 30, 2019
+																		Notification of Acceptance: Within 10 days after the submission
+																		Payment for Conference Fee: Upon receiving acceptance letter
+																		Deadline for payments: July 05, 2019
+																		 
+
+																		Conference Topics
+																		BIOMEDICAL ENGINEERING
+																		COMPUTER ENGINEERING
+																		ELECTRICAL AND ELECTRONICS ENGINEERING
+																		MECHANICAL ENGINEERING
+																		MECHATRONIC ENGINEERING
+																		METALLURGICAL AND MATERIALS ENGINEERING
+																		
+																		
+																		
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		
+																	
+																	
+																		 
+																	
+																	
+																		Social Activities
+																	
+																	
+																		 
+																	
+																	
+																		
+																		
+																		Sarajevo City Tour - Visit to Tunnel of Hope 
+
+																		Mostar - Blagaj - Pocitelj Tours
+																		
+																		
+																	
+																
+															
+															
+															
+															
+																
+																	
+																		
+																	
+																	
+																		 
+																	
+																	
+																		Venue
+																	
+																	
+																		 
+																	
+																	
+																		
+																		
+																		SARAJEVO, BOSNIA AND HERZEGOVINA
+
+																		 
+																		
+																		
+																	
+																
+															
+															
+															
+															
+																
+																	
+																		
+																	
+																	
+																		 
+																	
+																	
+																		Website
+																	
+																	
+																		 
+																	
+																	
+																		
+																		
+																		http://www.icat2019.com
+																		
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		Selected Papers
+																	
+																	
+																		 
+																	
+																	
+																		
+																		
+																		Selected papers presented in the conference will be published one of the following journals:
+
+																		International Journal of Intelligent Systems and Applications in Engineering (IJISAE)
+
+																		International Journal of Applied Mathematics, Electronics and Computers (IJAMEC)
+
+																		International Journal of Energy Applications and technology (IJEAT)
+																		
+																		We hope this conference will be of your interest.
+
+																		 
+																		Best regards,
+																		ICAT&#39;19 Organizing Committee
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+							
+								
+									
+									
+										
+											
+												
+											
+										
+									
+									
+								
+							
+						
+						
+					
+					
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+												
+												CONTACT
+												The Secretary office of ICAT&#39;19 will collect contributions and finish daily organizing work. All paper review process will be completed by Program Committee Member and invited experts. If you have any question, please feel free to contact.
+												
+												ICAT&#39;19 Editorial Office - Contact Us
+
+												Address: Nikole Šopa 9, 71210 Ilidža Sarajevo, 
+												Bosnia and Herzegovina
+												E-mail : info@icat2019.com
+												Phone : +387 33 836 622
+												Web : http://www.icat2019.com
+
+												 
+
+												This email was sent to foaad@calpoly.edu
+
+												 
+												
+												
+
+												Unsubscribe here
+												
+											
+											
+												 
+											
+											
+												
+												
+												 
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+					
+					
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+												© 2019 ICAT
+												
+												
+											
+											
+												 
+
+
+--b1_864a01730dbcf7a59281a88acccac220
+Content-Type: text/html; charset = "UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no">
+	<title>ICAT19 Call for Papers - Sarajevo , 26-28 August 2019</title>
+	<style type="text/css">/* Resets */
+        .ReadMsgBody { width: 100%; background-color: #ebebeb;}
+        .ExternalClass {width: 100%; background-color: #ebebeb;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
+        body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+        body {margin:0; padding:0;}
+        .yshortcuts a {border-bottom: none !important;}
+        .rnb-del-min-width{ min-width: 0 !important; }
+        /* Add new outlook css start */
+        .templateContainer{
+            max-width:590px !important;
+            width:auto !important;
+        }
+        /* Add new outlook css end */
+
+        /* Image width by default for 3 columns */
+        img[class="rnb-col-3-img"] {
+        max-width:170px;
+        }
+
+        /* Image width by default for 2 columns */
+        img[class="rnb-col-2-img"] {
+        max-width:264px;
+        }
+
+        /* Image width by default for 2 columns aside small size */
+        img[class="rnb-col-2-img-side-xs"] {
+        max-width:180px;
+        }
+
+        /* Image width by default for 2 columns aside big size */
+        img[class="rnb-col-2-img-side-xl"] {
+        max-width:350px;
+        }
+
+        /* Image width by default for 1 column */
+        img[class="rnb-col-1-img"] {
+        max-width:550px;
+        }
+
+        /* Image width by default for header */
+        img[class="rnb-header-img"] {
+        max-width:590px;
+        }
+
+        /* Ckeditor line-height spacing */
+        .rnb-force-col p, ul, ol{margin:0px!important;}
+        .rnb-del-min-width p, ul, ol{margin:0px!important;}
+        /* tmpl-2 preview */
+        .rnb-tmpl-width{ width:100%!important;}
+        /* tmpl-11 preview */
+        .rnb-social-width{padding-right:15px!important;}
+        /* tmpl-11 preview */
+        .rnb-social-align{float:right!important;}
+        @media only screen and (min-width:590px){
+        /* mac fix width */
+        .templateContainer{width:590px !important;}
+        }
+		@media screen and (max-width: 360px){
+        /* yahoo app fix width "tmpl-2 tmpl-10 tmpl-13" in android devices */
+		.rnb-yahoo-width{ width:360px!important;}				
+		}	
+
+        @media screen and (max-width: 480px) {
+        td[class="rnb-container-padding"] {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        }
+
+        /* force container nav to (horizontal) blocks */
+        td[class="rnb-force-nav"] {
+        display: block;
+        }
+        }
+
+        @media only screen and (max-width : 600px) {
+
+        /* center the address & social icons */
+        .rnb-text-center {text-align:center !important;}
+
+        /* force container columns to (horizontal) blocks */
+        td[class~="rnb-force-col"] {
+        display: block;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        }
+        table[class~="rnb-container"] {
+         width: 100% !important;
+        }
+
+        table[class="rnb-btn-col-content"] {
+        width: 100% !important;
+        }
+        table[class="rnb-col-3"] {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+
+        /* change left/right padding and margins to top/bottom ones */
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        /*border-bottom: 1px solid #eee;*/
+        }
+
+        table[class="rnb-last-col-3"] {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+        }
+
+        table[class="rnb-col-2"] {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+
+        /* change left/right padding and margins to top/bottom ones */
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        /*border-bottom: 1px solid #eee;*/
+        }
+
+        table[class="rnb-col-2-noborder-onright"] {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+
+        /* change left/right padding and margins to top/bottom ones */
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        }
+
+        table[class="rnb-col-2-noborder-onleft"] {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+
+        /* change left/right padding and margins to top/bottom ones */
+        margin-top: 10px;
+        padding-top: 10px;
+        }
+
+        table[class="rnb-last-col-2"] {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+        }
+
+        table[class="rnb-col-1"] {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+        }
+
+        img[class="rnb-col-3-img"] {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img[class="rnb-col-2-img"] {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img[class="rnb-col-2-img-side-xs"] {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img[class="rnb-col-2-img-side-xl"] {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img[class="rnb-col-1-img"] {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img[class="rnb-header-img"] {
+        /**max-width:none !important;**/
+        width:100% !important;
+        margin:0 auto;
+        }
+
+        img[class="rnb-logo-img"] {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        td[class="rnb-mbl-float-none"] {
+        float:inherit !important;
+        }
+
+		.img-block-center{text-align:center!important;}
+
+		.logo-img-center
+		{
+			float:inherit!important;
+		}
+
+        /* tmpl-11 preview */
+        .rnb-social-align{margin:0 auto!important; float:inherit!important;}
+    }
+	</style>
+	<!--[if gte mso 11]><style type="text/css">table{border-spacing: 0; }table td {border-collapse: separate;}</style><![endif]--><!--[if !mso]><!-->
+	<style type="text/css">table{border-spacing: 0;} table td {border-collapse: collapse;}
+	</style>
+	<!--<![endif]--><!--[if gte mso 15]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+</head>
+<body>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="main-template" style="background-color:#ffffff;" width="100%">
+	<tbody>
+		<tr style="display:none !important; font-size:1px; mso-hide: all;">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center" valign="top"><!--[if gte mso 9]>
+                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="590" style="width:590px;">
+                        <tr>
+                        <td align="center" valign="top" width="590" style="width:590px;">
+                        <![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="max-width:590px!important; width: 590px;" width="100%">
+				<tbody>
+					<tr>
+						<td align="center" bgcolor="#ffffff" style="background-color:#ffffff;" valign="top">
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width rnb-tmpl-width" id="Layout_0" name="Layout_0" style="min-width:590px; background-color:#ffffff" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" style="min-width: 590px; background-color: rgb(255, 255, 255);" valign="top">
+									<table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: rgb(71, 105, 148);" width="100%">
+										<tbody>
+											<tr>
+												<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="center" height="20" style="font-size: 13px; color: rgb(255, 255, 255); font-weight: normal; text-align: center; font-family: Arial, Helvetica, sans-serif;"><span style="text-decoration: none;"><a href="http://www.icat19.com/send/w/G81TyJT9axl763OAEOwfp6iA/R892p0xU36RL3XUdt7WHEhRA/IL6IMnoQ7639892W1l2tzGmLcw" target="_blank"><span style="color:#FFFF00;">View in browser</span></a></span></td>
+											</tr>
+											<tr>
+												<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" style="background-color:#ffffff;" valign="top">
+						<div><!--[if mso]>
+				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+				<tr>
+				<![endif]--><!--[if mso]>
+				<td valign="top" width="590" style="width:590px;">
+				<![endif]-->
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_1" name="Layout_1" style="min-width:100%; background-color:#ffffff;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#ffffff" class="rnb-del-min-width" style="background-color: #ffffff;" valign="top">
+									<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="max-width: 100%; min-width: 100%; background-color: rgb(255, 255, 255); border-radius: 0px; padding-left: 0px; padding-right: 0px; border-collapse: separate;" width="100%">
+										<tbody>
+											<tr>
+												<td height="2" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="left" bgcolor="#ffffff" class="rnb-container-padding" style="background-color: #ffffff;" valign="top">
+												<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+													<tbody>
+														<tr>
+															<td align="center" valign="top">
+															<table align="center" border="0" cellpadding="0" cellspacing="0" class="logo-img-center" ng-class="{'logo-img-center':col.td.align}">
+																<tbody>
+																	<tr>
+																		<td align="center" valign="middle"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/cIMM2jiiLz66KGbs7z55hA/IL6IMnoQ7639892W1l2tzGmLcw" target="_blank"><img alt="ICAT18" border="0" class="rnb-logo-img" hspace="0" src="http://img.mailinblue.com/1405804/images/rnb/original/5c08153dab4ce24cd84d902f.png" style="max-width:590px;" vspace="0" width="590"> </a></td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="2" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+				</td>
+				<![endif]--><!--[if mso]>
+				</tr>
+				</table>
+				<![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" style="background-color:#ffffff;" valign="top">
+						<div><!--[if mso]>
+				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+				<tr>
+				<![endif]--><!--[if mso]>
+				<td valign="top" width="590" style="width:590px;">
+				<![endif]-->
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_2" name="Layout_2" style="min-width:100%; background-color:#ffffff;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#ffffff" class="rnb-del-min-width" style="background-color: #ffffff;" valign="top">
+									<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="mso-img-content-block rnb-container" style="max-width: 100%; min-width: 100%; table-layout: fixed; background-color: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padding-left: 20px; padding-right: 20px;" width="100%">
+										<tbody>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="left" bgcolor="#ffffff" class="rnb-container-padding" style="background-color: #ffffff;" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col" style="padding-right: 0px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+																<tbody>
+																	<tr>
+																		<td style="font-size:18px; font-family:Arial,Helvetica,sans-serif; color:#999; font-weight:bold; text-align:left;"><span style="color:#999; font-weight:bold;">Dear </span>colleagues<span style="color:#999; font-weight:bold;">&nbsp;,</span></td>
+																	</tr>
+																	<tr>
+																		<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:13px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#555;">
+																		<div>
+																		<div>
+																		<div style="line-height: 200%; text-align: justify;">
+																		<div><span style="font-size:14px;"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/cIMM2jiiLz66KGbs7z55hA/IL6IMnoQ7639892W1l2tzGmLcw" style="text-decoration: none; color: rgb(0, 95, 186);"><strong>8th International Conference on Advanced Technologies (ICAT'19)</strong></a> will be organized by </span><span style="font-size:14px;">Mother Teresa Women's University, Selcuk University and together with other collaborating universities from the region on<strong> <span style="color:#FF0000;">August 26-30, 2019 in Sarajevo Bosnia and Herzegovina.</span></strong></span></div>
+
+																		<div><span style="font-size:14px;">The main objective of ICAT'19 is to present the latest research and results of scientists related to <span style="color:#FF0000;"><em><strong>Computer Sicences, Electrical &amp; Electronics, Energy Technologies, Manufacturing Technologies, Mechatronics and Biomedical Technologies</strong></em></span>. This conferences provides opportunities for the different areas delegates to exchange new ideas and application experiences face to face, to establish business or research relations and to find global partners for future collaboration. We hope that the conferences results constituted significant contribution to the knowledge in these up to date scientific field. The organizing committee of conference is pleased to invite prospective authors to submit their original manuscripts to ICAT'19.</span></div>
+
+																		<div><span style="font-size:14px;">All full paper submissions will be double blind and peer reviewed and evaluated based on originality, technical and/or research content/depth, correctness, relevance to conference, contributions, and readability.</span></div>
+
+																		<div>&nbsp;</div>
+
+																		<div><span style="font-size:14px;"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/oHYlQ763PysKx19mHbEKQjAQ/IL6IMnoQ7639892W1l2tzGmLcw"><strong>Important Dates</strong></a><br>
+																		Dates of the Conference: <span style="color:#FF0000;"><strong>August 26-30, 2019</strong></span><br>
+																		<strong><span style="color:#FF0000;">Deadline for Abstract Submission: June 30, 2019</span></strong><br>
+																		Notification of Acceptance: Within 10 days after the submission<br>
+																		Payment for Conference Fee: Upon receiving acceptance letter<br>
+																		Deadline for payments: July 05, 2019</span><br>
+																		&nbsp;</div>
+
+																		<div><span style="font-size:14px;"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/gAOKaSABVzY1yOjbatvSdQ/IL6IMnoQ7639892W1l2tzGmLcw"><strong>Conference Topics</strong></a><br>
+																		BIOMEDICAL ENGINEERING<br>
+																		COMPUTER ENGINEERING<br>
+																		ELECTRICAL AND ELECTRONICS ENGINEERING<br>
+																		MECHANICAL ENGINEERING<br>
+																		MECHATRONIC ENGINEERING<br>
+																		METALLURGICAL AND MATERIALS ENGINEERING</span></div>
+																		</div>
+																		</div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+				</td>
+				<![endif]--><!--[if mso]>
+				</tr>
+				</table>
+				<![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" style="background-color:#ffffff;" valign="top">
+						<div><!--[if mso]>
+				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+				<tr>
+				<![endif]--><!--[if mso]>
+				<td valign="top" width="590" style="width:590px;">
+				<![endif]-->
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_6" name="Layout_6" style="min-width:100%; background-color:#ffffff;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#ffffff" class="rnb-del-min-width" style="background-color: #ffffff;" valign="top">
+									<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="mso-three-img-block rnb-container" style="max-width: 100%; min-width: 100%; table-layout: fixed; background-color: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padding-left: 0px; padding-right: 0px;" width="100%">
+										<tbody>
+											<tr>
+												<td height="6" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="left" bgcolor="#ffffff" class="rnb-container-padding" style="background-color: #ffffff;" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col" style="padding-right: 20px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-3" valign="top" width="183">
+																<tbody>
+																	<tr>
+																		<td align="left" class="img-block-center" valign="top" width="100%"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/QSHXYO763USZ6NpwZ9X4USuQ/IL6IMnoQ7639892W1l2tzGmLcw"><img alt="" border="0" class="rnb-col-3-img" hspace="0" src="http://img.mailinblue.com/1405804/images/rnb/original/5c081700d51b9c4fe743d4cd.png" style="vertical-align: top; max-width: 287px;" vspace="0" width="170"></a></td>
+																	</tr>
+																	<tr>
+																		<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:18px; font-family:Arial,Helvetica,sans-serif; color:#999; font-weight:bold; text-align:left;"><span style="color:#999; font-weight:bold;">Social Activities</span></td>
+																	</tr>
+																	<tr>
+																		<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:13px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#555;">
+																		<div>
+																		<div><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/TYAE892lI1F2TiX2EGNh1Xxg/IL6IMnoQ7639892W1l2tzGmLcw" style="text-decoration: none; color: rgb(153, 153, 153);"><strong>Sarajevo City Tour - Visit to Tunnel of Hope </strong></a></div>
+
+																		<div><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/IfGnj763yCNCrwUczSd034ow/IL6IMnoQ7639892W1l2tzGmLcw" style="text-decoration: none; color: rgb(153, 153, 153);"><strong>Mostar - Blagaj - Pocitelj Tours</strong></a></div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+															<td class="rnb-force-col" style="padding-right: 20px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-3" valign="top" width="183">
+																<tbody>
+																	<tr>
+																		<td align="left" class="img-block-center" valign="top" width="100%"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/QSHXYO763USZ6NpwZ9X4USuQ/IL6IMnoQ7639892W1l2tzGmLcw"><img alt="" border="0" class="rnb-col-3-img" hspace="0" src="http://img.mailinblue.com/1405804/images/rnb/original/5c08185fc3bc3848f3716ce1.jpg" style="vertical-align: top; max-width: 395px;" vspace="0" width="170"></a></td>
+																	</tr>
+																	<tr>
+																		<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:18px; font-family:Arial,Helvetica,sans-serif; color:#999; font-weight:bold; text-align:left;"><span style="color:#999; font-weight:bold;">Venue</span></td>
+																	</tr>
+																	<tr>
+																		<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:13px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#555;">
+																		<div>
+																		<div><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/TYAE892lI1F2TiX2EGNh1Xxg/IL6IMnoQ7639892W1l2tzGmLcw" style="text-decoration: none; color: rgb(153, 153, 153);"><span style="font-size:12px;"><strong>SARAJEVO, BOSNIA AND HERZEGOVINA</strong></span></a></div>
+
+																		<div><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/TYAE892lI1F2TiX2EGNh1Xxg/IL6IMnoQ7639892W1l2tzGmLcw" style="text-decoration: none; color: rgb(153, 153, 153);">&nbsp;</a></div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+															<td class="rnb-force-col" style="padding-right: 0px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-last-col-3" valign="top" width="184">
+																<tbody>
+																	<tr>
+																		<td align="left" class="img-block-center" valign="top" width="100%"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/cIMM2jiiLz66KGbs7z55hA/IL6IMnoQ7639892W1l2tzGmLcw"><img alt="" border="0" class="rnb-col-3-img" hspace="0" src="http://img.mailinblue.com/1405804/images/rnb/original/5c0818c6d51b9c4e9f34f100.jpg" style="vertical-align: top; max-width: 226px;" vspace="0" width="170"></a></td>
+																	</tr>
+																	<tr>
+																		<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:18px; font-family:Arial,Helvetica,sans-serif; color:#999; font-weight:bold; text-align:left;"><span style="color:#999; font-weight:bold;">Website</span></td>
+																	</tr>
+																	<tr>
+																		<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:13px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#555;">
+																		<div>
+																		<div><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/cIMM2jiiLz66KGbs7z55hA/IL6IMnoQ7639892W1l2tzGmLcw" style="text-decoration: none; color: rgb(0, 95, 186);"><strong style="text-decoration: none; color: rgb(0, 95, 186);">http://www.icat2019.com</strong></a></div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="18" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+				</td>
+				<![endif]--><!--[if mso]>
+				</tr>
+				</table>
+				<![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" style="background-color:#ffffff;" valign="top">
+						<div><!--[if mso]>
+				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+				<tr>
+				<![endif]--><!--[if mso]>
+				<td valign="top" width="590" style="width:590px;">
+				<![endif]-->
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_5" name="Layout_5" style="min-width:100%; background-color:#ffffff;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#ffffff" class="rnb-del-min-width" style="background-color: #ffffff;" valign="top">
+									<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="mso-img-content-block rnb-container" style="max-width: 100%; min-width: 100%; table-layout: fixed; background-color: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padding-left: 20px; padding-right: 20px;" width="100%">
+										<tbody>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="left" bgcolor="#ffffff" class="rnb-container-padding" style="background-color: #ffffff;" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col" style="padding-right: 0px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+																<tbody>
+																	<tr>
+																		<td style="font-size:18px; font-family:Arial,Helvetica,sans-serif; color:#999; font-weight:bold; text-align:left;"><span style="color:#999; font-weight:bold;">Selected Papers</span></td>
+																	</tr>
+																	<tr>
+																		<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:13px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#555;">
+																		<div>
+																		<div style="line-height:200%;"><span style="font-size:14px;">Selected papers presented in the conference will be published one of the following journals:</span></div>
+
+																		<div style="line-height:200%;"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/GV201tCJIs8vxVuwM4jK0w/IL6IMnoQ7639892W1l2tzGmLcw">International Journal of Intelligent Systems and Applications in Engineering (IJISAE)</a></div>
+
+																		<div style="line-height:200%;"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/j1Z9cWjuuiP3FyumdeP74g/IL6IMnoQ7639892W1l2tzGmLcw">International Journal of Applied Mathematics, Electronics and Computers (IJAMEC)</a></div>
+
+																		<div style="line-height:200%;"><a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/Ul3klF0ddt2r763rsOCgDFig/IL6IMnoQ7639892W1l2tzGmLcw" style="font-size: 14px; line-height: 200%; text-decoration: none; color: rgb(0, 95, 186);">International Journal of Energy Applications and technology (IJEAT)</a></div>
+																		<br>
+																		<span style="font-size: 14px; background-color: transparent;">We hope this conference will be of your interest.</span></div>
+
+																		<div style="line-height:200%;">&nbsp;<br>
+																		<strong><span style="font-size:14px;">Best regards,<br>
+																		ICAT'19 Organizing Committee</span></strong></div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+				</td>
+				<![endif]--><!--[if mso]>
+				</tr>
+				</table>
+				<![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" style="background-color:#ffffff;" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_" name="Layout_" style="min-width:590px; background-color:#ffffff;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#ffffff" class="rnb-del-min-width" style="min-width:590px; background-color:#ffffff;" valign="top">
+									<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" height="30" style="background-color:#ffffff;" width="100%">
+										<tbody>
+											<tr>
+												<td height="30" valign="top"><img alt="" height="30" src="http://img.mailinblue.com/new_images/rnb/rnb_space.gif" style="display:block; max-height:30px; max-width:20px;" width="20"></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" style="background-color:#ffffff;" valign="top">
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width rnb-tmpl-width" id="Layout_3" name="Layout_3" style="min-width:590px; background-color:#ffffff;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#555" class="rnb-del-min-width" style="min-width:590px; background-color: #555;" valign="top">
+									<table align="center" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="padding-right:20px; padding-left:20px;" width="590">
+										<tbody>
+											<tr>
+												<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td>
+												<div style="font-size:13px; color:#919191; font-weight:normal; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+												<div>
+												<div><strong>CONTACT</strong><br>
+												The Secretary office of ICAT'19 will collect contributions and finish daily organizing work. All paper review process will be completed by Program Committee Member and invited experts. If you have any question, please feel free to contact.<br>
+												<br>
+												ICAT'19 Editorial Office - Contact Us</div>
+
+												<div>Address:&nbsp;Nikole Šopa 9, 71210 Ilidža Sarajevo,&nbsp;<br>
+												Bosnia and Herzegovina<br>
+												E-mail : <a href="mailto:info@icat2019.com" style="text-decoration: none; color: rgb(57, 118, 237);">info@icat2019.com</a><br>
+												Phone : &#43;387 33 836 622<br>
+												Web : <a href="http://www.icat19.com/send/l/G81TyJT9axl763OAEOwfp6iA/cIMM2jiiLz66KGbs7z55hA/IL6IMnoQ7639892W1l2tzGmLcw" style="text-decoration: none; color: rgb(57, 118, 237);">http://www.icat2019.com</a></div>
+
+												<div>&nbsp;</div>
+
+												<div>This email was sent to <strong>foaad@calpoly.edu</strong></div>
+
+												<div>&nbsp;</div>
+												</div>
+												</div>
+
+												<div style="font-size:13px; font-weight:normal; text-align:center; font-family:Arial,Helvetica,sans-serif;"><strong><a href="http://www.icat19.com/send/unsubscribe/3d0GoQQkUnpbMcfEae1F9bFORrarbjtQeb0PfSQshME/R892p0xU36RL3XUdt7WHEhRA/IL6IMnoQ7639892W1l2tzGmLcw" target="_blank">Unsubscribe here</a></strong></div>
+												</td>
+											</tr>
+											<tr>
+												<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td>
+												<div style="text-align:center;">
+												<div style="font-family:Arial, Helvetica, sans-serif;color:#aaaaaa;opacity:0.8">&nbsp;</div>
+												</div>
+												</td>
+											</tr>
+											<tr>
+												<td height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" style="background-color:#ffffff;" valign="top">
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width rnb-tmpl-width" id="Layout_4" name="Layout_4" style="min-width:590px; background-color:#ffffff;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#333" class="rnb-del-min-width" style="min-width:590px; background-color: #333;" valign="top">
+									<table align="center" border="0" cellpadding="0" cellspacing="0" class="rnb-container rnb-yahoo-width" style="padding-right:20px; padding-left:20px;" width="590">
+										<tbody>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size:13px; color:#919191; font-weight:normal; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+												<div>
+												<div>© 2019 ICAT</div>
+												</div>
+												</td>
+											</tr>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--[if gte mso 9]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]--></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+<img src="http://www.icat19.com/send/t/IL6IMnoQ7639892W1l2tzGmLcw/G81TyJT9axl763OAEOwfp6iA" alt="">
+
+
+
+--b1_864a01730dbcf7a59281a88acccac220--

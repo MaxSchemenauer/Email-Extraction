@@ -1,0 +1,995 @@
+Received: from DM6PR08MB4986.namprd08.prod.outlook.com (2603:10b6:a03:117::21)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0044.NAMPRD08.PROD.OUTLOOK.COM; Sat, 29 Jun 2019 15:34:06 +0000
+Received: from BYAPR08CA0027.namprd08.prod.outlook.com (2603:10b6:a03:100::40)
+ by DM6PR08MB4986.namprd08.prod.outlook.com (2603:10b6:5:4b::31) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2032.18; Sat, 29 Jun
+ 2019 15:34:04 +0000
+Received: from SN1NAM04FT036.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::201) by BYAPR08CA0027.outlook.office365.com
+ (2603:10b6:a03:100::40) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2032.17 via Frontend
+ Transport; Sat, 29 Jun 2019 15:34:03 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=EAE.UTAH.EDU;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ SN1NAM04FT036.mail.protection.outlook.com (10.152.89.149) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2032.15 via Frontend Transport; Sat, 29 Jun 2019 15:34:02 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x5TFV33a000634
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Sat, 29 Jun 2019 18:31:03 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x5TFV2Kh003462;
+	Sat, 29 Jun 2019 18:31:02 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Sat, 29 Jun 2019 18:31:02 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x5TFV1jh020482
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Sat, 29 Jun 2019 18:31:02 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x5TFUfPm029388;
+	Sat, 29 Jun 2019 18:30:41 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          378623 for GAMESNETWORK@LISTSERV.UTA.FI; Sat, 29 Jun 2019 18:30:41
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x5TFKf7p028072 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <GAMESNETWORK@listserv.uta.fi>; Sat, 29 Jun 2019 18:20:41 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x5TFKfQj031450
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@listserv.uta.fi>; Sat, 29 Jun 2019
+          18:20:41 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x5TFKdQJ004757 for
+          <GAMESNETWORK@listserv.uta.fi>; Sat, 29 Jun 2019 18:20:39 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Sat, 29 Jun 2019 18:20:39
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-io1-f47.google.com (mail-io1-f47.google.com
+          [209.85.166.47]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x5TFKb2v027410 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@listserv.uta.fi>; Sat, 29 Jun 2019 18:20:39 +0300
+Received: by mail-io1-f47.google.com with SMTP id k8so19033362iot.1 for
+          <GAMESNETWORK@listserv.uta.fi>; Sat, 29 Jun 2019 08:20:38 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:from:mime-version:date:subject:message-id:to;
+                         bh=KGh5eY0xn0BVhBrhZeXm/Wuholp5qhjacPIe4GS8NyM=;
+                         b=AKTxFwO6L5USJcKxdBPUC/UXkwWb2HVn+7z06IGLs+UtoDshFhYFqAIrJ1m/8rq/fz
+                         81k4SrbVoxAR7z2G94dnWACdTse9m1OmUAdGAL8nRjJQFzv3qMhd9h2PR/A19oC5fvHo
+                         JcIr2HGlz+gkc6i5pEc5WEP5hVAtHChtaF+Q9LMOjNvoqscpc8TAz/QjgmwUTps5nONs
+                         TGrSyoIyTU79QHccXqKwqzLL4M9bV96e5TXjr6JvJZssLmcrAuCudmaYkW5YyG6ysd6F
+                         2KkqB8vRNKBNs/bXp1dQ9ZFMb5+1mBlKz4oatSnbIevMZt8SpzRZIAFmEzhoIMGvQt+Y
+                         tNmA==
+X-Gm-Message-State: APjAAAWH6fZWk/fZFxJBxCe8wwd5WsTBO8dbfZmbuV4VM2s7PeN4oDT0
+                    geOayIasGFIoAnpAuzCxi9s+zLW/eXS9Yg==
+X-Google-Smtp-Source: APXvYqywY5bCjxS/sOVLDGMsoaZA8BjxHzJ+sjXXPtuwDQqhupdk/WeV8TCRC1cbWh4/+33m/Di6DA==
+X-Received: by 2002:a02:ce92:: with SMTP id y18mr18214865jaq.40.1561821636606;
+            Sat, 29 Jun 2019 08:20:36 -0700 (PDT)
+Received: from [192.168.1.12] (c-24-10-237-81.hsd1.ut.comcast.net.
+          [24.10.237.81]) by smtp.gmail.com with ESMTPSA id
+          h19sm5130686iol.65.2019.06.29.08.20.34 (version=TLS1_2
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Sat, 29 Jun 2019
+          08:20:35 -0700 (PDT)
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_F0DD2CA5-E3C1-4258-BC9A-6E4C7CBD8900"
+X-Mailer: Apple Mail (2.3273)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Sat, 29 Jun 2019 18:31:02 +0300 (EEST)
+X-Spam-Level: xx-----
+X-Spam-Report: BAYES_00,HTML_MESSAGE,L_BDY_PHNNUMRE1a,L_HDR_HAS_DKIM,URIBL_BLOCKED
+X-Spam-Status: NO ; -25
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <3496C61A-C215-49E6-8CCE-04FE7ED459D2@eae.utah.edu>
+Date: Sat, 29 Jun 2019 09:20:35 -0600
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: "Rogelio E. Cardona-Rivera" <rogelio@EAE.UTAH.EDU>
+Subject: [GAMESNETWORK] 2nd Call for Papers: Art Exhibit, Doctoral Consortium, and Workshops
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Jun 2019 15:34:02.9410
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3595a662-919d-42f6-a87e-08d6fca736d8
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(3000300001)(286005)(199004)(7192003)(176002)(189003)(30864003)(476003)(126002)(95326003)(6862004)(356004)(33656002)(40036005)(21615005)(956004)(66346011)(42882007)(71190400001)(2616005)(50226002)(336012)(14444005)(325944009)(7846003)(6392003)(966005)(486006)(43066004)(15974865002)(6306002)(75640400001)(7636002)(4006050)(77096007)(7596002)(26005)(74826001)(146002)(59536001)(246002)(733005)(55176004)(16003)(53386004)(53376002)(60626007)(236005)(1096003)(57306001)(606006)(53946003)(88552002)(106002)(16586007)(33964004)(8676002)(60616004)(69556001)(225293001)(579004)(559001);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB4986;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT036.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 3595a662-919d-42f6-a87e-08d6fca736d8
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:DM6PR08MB4986;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4986:
+X-MS-Exchange-PUrlCount: 14
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Jun 2019 15:34:02.3125
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3595a662-919d-42f6-a87e-08d6fca736d8
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4986
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.5990946
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2032.008
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cWdYbnQyZEd1azdITzJHUENBZnVEMklnV0NjSW5lYkd2QTNyOC85RUdnQUZQ?=
+ =?utf-8?B?Mk82c3Q5WnI4aEcxOWRJME83ZjZ6MmRWRmJNSW5BWEkwNkNmeGl2eGp0QW52?=
+ =?utf-8?B?NERXa2hMWVlRVVNmd2xKclpWcnljOGhGcjhQaUpweitIS2EzV1EvN1M3VjJU?=
+ =?utf-8?B?OEN1R0pFZGJyTVM4QnNjZjNENDNtY3gyUFRHRG1CRUxBOWc0dHRqMExENk84?=
+ =?utf-8?B?RStMWmsyK2QxMVZrVzNiZjU2WENZUmtwOXNCNDJWMTNGL0J6cmJvWU91K21P?=
+ =?utf-8?B?anFnZDZqVStWZEF4b0Y0WnIzNndwQTkzMi9SNmdFZ2tGZnZjTUR0S0paMWxJ?=
+ =?utf-8?B?Q3d3Y01XUy9OaEZ5NXhBRjBpYzlPSkxlbzhDekpKTEZwZ3FxUzBYK0ZMWHVw?=
+ =?utf-8?B?WE9TNmJmS1lJdndXR1ZIN1Iwa1VYZnRVRTN2cXVidm80bVFvOFp4UUxnOEph?=
+ =?utf-8?B?QWUxOVNSeUlaUXZ2Y1VxbjZLTlFSbmhpNE14dERvQkZPSDVXb3VWaS9SQXYv?=
+ =?utf-8?B?c3BqWHhxWVFpYmROUUQwMnVaQ284UVJ4ZmZTNjVQQ1grazFiVjkxU3M3V29P?=
+ =?utf-8?B?TytmNzVzUDdSeU1NN01odCs2T0U5VENGNk8wNEVhSTVpcFNlN0pvTXZ0dHJT?=
+ =?utf-8?B?UzBwRDdYQkIxR0FiSzNNZVgyU2lHZmxBK1BOWnJOcGVCcWk0V3l6RjZWdjJL?=
+ =?utf-8?B?NllEUXVzbVdrZ3NYdy9ReGZ1VFh1ditFZDNleGFINHVvcnZXR1liaHNjWk84?=
+ =?utf-8?B?ZUZkSzU5ek5vVzdaK09wODB6MEtUZURpbXk1WDhTeDVYZVNIaEUzZC9YM1Z5?=
+ =?utf-8?B?OENDTHJIZmhmcTdWcmZzSjVHUUhzOStNZmZxT014V0JUNW1mQmdybDdHL3BZ?=
+ =?utf-8?B?Tm05WjFab3VTRy91cjBGMVJTbG9TYzV1VGV2WSszNkVNUUVmSEdLd2dwbFdP?=
+ =?utf-8?B?b295ank3Rmhqa2xwOFpXSk1uaHhrQmNnc05CaW1tdDlxYnFQcmd3aTByb2dL?=
+ =?utf-8?B?MmFxekdtTzdNOUhjV3c2ejUyZEppS2Y1SUpqdXUzV0pNVWdFM0dFM2Q4emZy?=
+ =?utf-8?B?MWlPM240U29vYTNON3VSOENoUjd6OEJCMkhaTGpHeFpYcDVVRG9QdjIyTzZa?=
+ =?utf-8?B?Mm9qcWkxTTFVcit5Tm0yYkNoVjJJc3JWN3hCTnVwQVhCVWhQakJIL2RNUW1H?=
+ =?utf-8?B?cVhqbkswWEhseU1BNnNOKzVyL2FOcVE2ZkZWVFNqWGtFMllHRlFDN0VxeWxv?=
+ =?utf-8?B?VFVMMS9qMVh4NnQvYnBYUVkrU1YxbFgvNXRwQmFDSmRwQkZnQ3JHYVdsUnBC?=
+ =?utf-8?Q?5lLat2f1rgPATH0poFzwZWem7EhuaLOEXV?=
+MIME-Version: 1.0
+
+--Apple-Mail=_F0DD2CA5-E3C1-4258-BC9A-6E4C7CBD8900
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Conference website: https://icids.eae.utah.edu =
+<https://icids.eae.utah.edu/>
+ICIDS is the premier conference for researchers and practitioners =
+concerned with studying digital interactive forms of narrative from a =
+variety of perspectives, including theoretical, technological, and =
+applied design lenses. The annual conference is an interdisciplinary =
+gathering that combines technology-focused approaches with =
+humanities-inspired theoretical inquiry, empirical research and artistic =
+expression.
+
+In this call, we are delighted to announce the request for participation =
+for the ICIDS 2019 Art Exhibit, Workshops, and Doctoral Consortium!
+
+REMINDER: MAIN CONFERENCE PAPERS DUE SOON!
+As a reminder, we are still accepting submissions to the ICIDS 2019 Main =
+Conference program on several topics in and around interactive =
+storytelling.  This year=E2=80=99s organizers take this edition as an =
+opportunity to expand on previously identified topics, related to this =
+year=E2=80=99s special theme:
+
+Design Foundations, Innovations, and Practices
+This year=E2=80=99s conference features a special theme of =E2=80=9CDesign=
+ Foundations, Innovations, and Practices.=E2=80=9D In addition to the =
+topics covered by previous iterations of ICIDS, the conference program =
+will feature topic areas that focus on principles of design, =
+advancements in the design lifecycle, and design process case studies =
+for interactive storytelling.
+
+Important Dates
+Deadlines for this call are posted below, for your convenience:
+(All deadlines are specified as Anywhere on Earth time =
+<https://en.wikipedia.org/wiki/Anywhere_on_Earth> unless otherwise =
+noted.)
+Paper & Poster submission: 	July 12th, 2019
+Initial Notification: 		August 23rd, 2019
+Author Rebuttals: 		August 30th, 2019
+Final notifications: 		September 6th, 2019
+Camera-ready submission: 	September 13th, 2019
+
+More details of this call have been posted on the ICIDS 2019 conference =
+website: http://icids.eae.utah.edu/call-for-papers/ =
+<http://icids.eae.utah.edu/call-for-papers/>. The submission portal for =
+conference papers is: easychair.org/conferences/?conf=3Dicids2019 =
+<http://easychair.org/conferences/?conf=3Dicids2019>
+THE ART EXHIBIT AT ICIDS 2019
+About
+The conference has a long-standing tradition of bringing together =
+theoretical and practical approaches in an interdisciplinary dialogue. =
+This year, the exhibition will be held in connection with the ICIDS =
+conference in Snowbird Ski & Summer Resort, Little Cottonwood Canyon in =
+the Magpie Gallery. The art exhibition will be held in conjunction with =
+the academic conference, which runs from 19 =E2=80=93 23 of November, =
+with the opening taking place on November 20th at 6 pm (MST). A printed =
+catalog of descriptions of the work and artist=E2=80=99s statements with =
+supporting images will be given to exhibitors and conference attendees =
+at the opening of the exhibition.
+
+The ICIDS 2019 Art Exhibition offers the opportunity for artists to =
+present artworks relevant to the field of interactive storytelling =
+through the broad lens of the curated theme: The Expression of Emotion =
+in Humans and Technology. The curatorial theme is intended to inspire =
+(as opposed to constrain) creativity in the imagination and expression =
+of the artist.
+
+More information about the theme and submission guidelines can be found =
+on the website here: https://icids.eae.utah.edu/art-exhibit/ =
+<https://icids.eae.utah.edu/art-exhibit/>
+=20
+Important Dates
+September 15, 2019		Submission deadline
+September 24, 2019		Artist notified (via email)
+September 29, 2019		Accepted artist, respond with agreement
+November 15, 2019		Shipped work must arrive
+November 19, 2019		Installation of Artwork by organizers
+November 20, 2019		Opening night
+November 23, 2019		Closing of Art Exhibition
+November 25, 2019		Artwork returned to artist
+Curators
+Ryan Bown (University of Utah, US)
+Brian Salisbury (University of Utah, US)
+THE WORKSHOPS AT ICIDS 2019
+Workshops afford participants a smaller, more intimate setting where =
+they can share ideas and learn from each other=E2=80=99s research. =
+Topics for the workshops change each year, and the limited seating =
+capacity and relaxed atmosphere allow for interpersonal interaction. We =
+are now inviting proposals for workshops to be celebrated at ICIDS 2019. =
+These will be celebrated on the first day of the conference, November 19 =
+2019.
+
+More information about workshops and submission guidelines can be found =
+here: https://icids.eae.utah.edu/workshops/ =
+<https://icids.eae.utah.edu/workshop-and-tutorials/>
+Important Dates
+July 15, 2019                      Submission deadline
+July 29, 2019                      Notifications sent out
+
+Chair
+Jichen Zhu (Drexel University, US)
+THE ICIDS 2019 DOCTORAL CONSORTIUM
+About
+The Doctoral Consortium is an opportunity for PhD students in areas =
+related to the topics of ICIDS to present their research work, at a =
+stage where feedback from the community might be beneficial. Students =
+will discuss the work with experts in the area and with peers in a =
+friendly atmosphere where discussion and contributions will be =
+encouraged. Students should have defined their research plan, and can be =
+in intermediate or advanced stages of their research. Regardless of how =
+far along the students are in their research, the work should still be =
+in-progress and malleable enough to take advantage of the feedback from =
+the Doctoral Consortium.
+
+More information about the doctoral consortium and submission guidelines =
+can be found here: https://icids.eae.utah.edu/doctoral-consortium/ =
+<https://icids.eae.utah.edu/doctoral-consortium/>
+Important Dates
+August 1, 2019                      Submission deadline
+August 27, 2019                    Notification of acceptance
+September 13, 2019		Camera-ready copy due
+November 19 - 23, 2019	Doctoral consortium celebration (throughout the =
+conference)
+
+Chair
+Ben Samuel (University of New Orleans, US)
+
+For general questions, please email the ICIDS Program Chairs by using =
+the following email address: icids2019program@gmail.com =
+<mailto:icids2019program@gmail.com>
+We look forward to seeing your contributions at ICIDS 2019!
+=E2=80=94 Rogelio
+[On behalf of myself and my co-chair, Anne Sullivan (Georgia Institute =
+of Technology, USA)]
+
+--
+
+	Rogelio E. Cardona-Rivera, Ph.D. (Pronouns: he/him, they/them)
+Assistant Professor and Director, Laboratory for Quantitative Experience =
+Design
+Entertainment Arts and Engineering, School of Computing
+The University of Utah
+Mobile 919-798-9011
+http://qed.cs.utah.edu
+http://rogel.io
+
+
+
+
+
+
+
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--Apple-Mail=_F0DD2CA5-E3C1-4258-BC9A-6E4C7CBD8900
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; -webki=
+t-line-break: after-white-space;" class=3D""><span id=3D"docs-internal-guid=
+-4f00c9b0-7fff-84e6-bc3f-91ed45b745e8" class=3D""><h3 dir=3D"ltr" style=3D"=
+font-family: -webkit-standard; line-height: 1.38; margin-top: 16pt; margin-=
+bottom: 4pt;" class=3D""><span style=3D"font-size: 11pt; font-family: Arial=
+; font-variant-ligatures: normal; font-variant-east-asian: normal; font-var=
+iant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cl=
+ass=3D"">Conference website: </span><span style=3D"text-decoration: underli=
+ne; font-size: 11pt; font-family: Arial; color: rgb(17, 85, 204); font-vari=
+ant-ligatures: normal; font-variant-east-asian: normal; font-variant-positi=
+on: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><a=
+ href=3D"https://icids.eae.utah.edu/" style=3D"text-decoration: none;" clas=
+s=3D"">https://icids.eae.utah.edu</a></span></h3><div style=3D"font-family:=
+ -webkit-standard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"=
+ class=3D""><span style=3D"font-size: 11pt; font-family: Arial; font-varian=
+t-ligatures: normal; font-variant-east-asian: normal; font-variant-position=
+: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">ICID=
+S is the premier conference for researchers and practitioners concerned wit=
+h studying digital interactive forms of narrative from a variety of perspec=
+tives, including theoretical, technological, and applied design lenses. The=
+ annual conference is an interdisciplinary gathering that combines technolo=
+gy-focused approaches with humanities-inspired theoretical inquiry, empiric=
+al research and artistic expression.</span></div><br class=3D""><div style=
+=3D"font-family: -webkit-standard; line-height: 1.38; margin-top: 0pt; marg=
+in-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-family: Ar=
+ial; font-variant-ligatures: normal; font-variant-east-asian: normal; font-=
+variant-position: normal; vertical-align: baseline; white-space: pre-wrap;"=
+ class=3D"">In this call, we are delighted to announce the request for part=
+icipation for the ICIDS 2019 Art Exhibit, Workshops, and Doctoral Consortiu=
+m!</span></div><br class=3D""><div style=3D"font-family: -webkit-standard; =
+line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span s=
+tyle=3D"font-size: 12pt; font-family: Arial; font-weight: 700; font-variant=
+-ligatures: normal; font-variant-east-asian: normal; font-variant-position:=
+ normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">REMIN=
+DER: MAIN CONFERENCE PAPERS DUE SOON!</span></div><div style=3D"font-family=
+: -webkit-standard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;=
+" class=3D""><span style=3D"font-size: 11pt; font-family: Arial; font-varia=
+nt-ligatures: normal; font-variant-east-asian: normal; font-variant-positio=
+n: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">As =
+a reminder, we are still accepting submissions to the ICIDS 2019 Main Confe=
+rence program on several topics in and around interactive storytelling.&nbs=
+p; This year=E2=80=99s organizers take this edition as an opportunity to ex=
+pand on previously identified topics, related to this year=E2=80=99s specia=
+l theme:</span></div><br class=3D""><div style=3D"font-family: -webkit-stan=
+dard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><=
+span style=3D"font-size: 11pt; font-family: Arial; font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; ver=
+tical-align: baseline; white-space: pre-wrap;" class=3D"">Design Foundation=
+s, Innovations, and Practices</span></div><div style=3D"font-family: -webki=
+t-standard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-size: 11pt; font-family: Arial; font-variant-liga=
+tures: normal; font-variant-east-asian: normal; font-variant-position: norm=
+al; vertical-align: baseline; white-space: pre-wrap;" class=3D"">This year=
+=E2=80=99s conference features a special theme of =E2=80=9CDesign Foundatio=
+ns, Innovations, and Practices.=E2=80=9D In addition to the topics covered =
+by previous iterations of ICIDS, the conference program will feature topic =
+areas that focus on principles of design, advancements in the design lifecy=
+cle, and design process case studies for interactive storytelling.</span></=
+div><br class=3D""><h2 dir=3D"ltr" style=3D"font-family: -webkit-standard; =
+line-height: 1.38; margin-top: 5pt; margin-bottom: 5pt;" class=3D""><span s=
+tyle=3D"font-size: 12pt; font-family: Arial; font-weight: 400; font-style: =
+italic; font-variant-ligatures: normal; font-variant-east-asian: normal; fo=
+nt-variant-position: normal; vertical-align: baseline; white-space: pre-wra=
+p;" class=3D"">Important Dates</span></h2><div style=3D"font-family: -webki=
+t-standard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-size: 11pt; font-family: Arial; font-variant-liga=
+tures: normal; font-variant-east-asian: normal; font-variant-position: norm=
+al; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Deadlines =
+for this call are posted below, for your convenience:</span><span style=3D"=
+font-size: 11pt; font-family: Arial; font-variant-ligatures: normal; font-v=
+ariant-east-asian: normal; font-variant-position: normal; vertical-align: b=
+aseline; white-space: pre-wrap;" class=3D""><br class=3D""></span><span sty=
+le=3D"font-size: 11pt; font-family: Arial; font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; vertical-al=
+ign: baseline; white-space: pre-wrap;" class=3D"">(All deadlines are specif=
+ied as </span><a href=3D"https://en.wikipedia.org/wiki/Anywhere_on_Earth" s=
+tyle=3D"text-decoration: none;" class=3D""><span style=3D"font-size: 11pt; =
+font-family: Arial; color: rgb(17, 85, 204); font-variant-ligatures: normal=
+; font-variant-east-asian: normal; font-variant-position: normal; text-deco=
+ration: underline; vertical-align: baseline; white-space: pre-wrap;" class=
+=3D"">Anywhere on Earth time</span></a><span style=3D"font-size: 11pt; font=
+-family: Arial; font-variant-ligatures: normal; font-variant-east-asian: no=
+rmal; font-variant-position: normal; vertical-align: baseline; white-space:=
+ pre-wrap;" class=3D""> unless otherwise noted.)</span></div><ul style=3D"f=
+ont-family: -webkit-standard; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><li dir=3D"ltr" style=3D"list-style-type: none; font-size: 11pt; font=
+-family: Arial; font-variant-ligatures: normal; font-variant-east-asian: no=
+rmal; font-variant-position: normal; vertical-align: baseline; white-space:=
+ pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin-=
+bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-variant-ligat=
+ures: normal; font-variant-east-asian: normal; font-variant-position: norma=
+l; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Paper &amp;=
+ Poster submission: </span><span style=3D"font-size: 11pt; font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><span sty=
+le=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></span><span styl=
+e=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-east-asi=
+an: normal; font-variant-position: normal; vertical-align: baseline; white-=
+space: pre-wrap;" class=3D"">July 12th, 2019</span></div></li><li dir=3D"lt=
+r" style=3D"list-style-type: none; font-size: 11pt; font-family: Arial; fon=
+t-variant-ligatures: normal; font-variant-east-asian: normal; font-variant-=
+position: normal; vertical-align: baseline; white-space: pre;" class=3D""><=
+div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-=
+variant-east-asian: normal; font-variant-position: normal; vertical-align: =
+baseline; white-space: pre-wrap;" class=3D"">Initial Notification: </span><=
+span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant=
+-east-asian: normal; font-variant-position: normal; vertical-align: baselin=
+e; white-space: pre-wrap;" class=3D""><span style=3D"white-space: pre;" cla=
+ss=3D"Apple-tab-span">	</span></span><span style=3D"font-size: 11pt; font-v=
+ariant-ligatures: normal; font-variant-east-asian: normal; font-variant-pos=
+ition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""=
+><span style=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></span>=
+<span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-varian=
+t-east-asian: normal; font-variant-position: normal; vertical-align: baseli=
+ne; white-space: pre-wrap;" class=3D"">August 23rd, 2019</span></div></li><=
+li dir=3D"ltr" style=3D"list-style-type: none; font-size: 11pt; font-family=
+: Arial; font-variant-ligatures: normal; font-variant-east-asian: normal; f=
+ont-variant-position: normal; vertical-align: baseline; white-space: pre;" =
+class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom:=
+ 0pt;" class=3D""><span style=3D"font-size: 11pt; font-variant-ligatures: n=
+ormal; font-variant-east-asian: normal; font-variant-position: normal; vert=
+ical-align: baseline; white-space: pre-wrap;" class=3D"">Author Rebuttals: =
+</span><span style=3D"font-size: 11pt; font-variant-ligatures: normal; font=
+-variant-east-asian: normal; font-variant-position: normal; vertical-align:=
+ baseline; white-space: pre-wrap;" class=3D""><span style=3D"white-space: p=
+re;" class=3D"Apple-tab-span">	</span></span><span style=3D"font-size: 11pt=
+; font-variant-ligatures: normal; font-variant-east-asian: normal; font-var=
+iant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cl=
+ass=3D""><span style=3D"white-space: pre;" class=3D"Apple-tab-span">	</span=
+></span><span style=3D"font-size: 11pt; font-variant-ligatures: normal; fon=
+t-variant-east-asian: normal; font-variant-position: normal; vertical-align=
+: baseline; white-space: pre-wrap;" class=3D"">August 30th, 2019</span></di=
+v></li><li dir=3D"ltr" style=3D"list-style-type: none; font-size: 11pt; fon=
+t-family: Arial; font-variant-ligatures: normal; font-variant-east-asian: n=
+ormal; font-variant-position: normal; vertical-align: baseline; white-space=
+: pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin=
+-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-variant-liga=
+tures: normal; font-variant-east-asian: normal; font-variant-position: norm=
+al; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Final noti=
+fications: </span><span style=3D"font-size: 11pt; font-variant-ligatures: n=
+ormal; font-variant-east-asian: normal; font-variant-position: normal; vert=
+ical-align: baseline; white-space: pre-wrap;" class=3D""><span style=3D"whi=
+te-space: pre;" class=3D"Apple-tab-span">	</span></span><span style=3D"font=
+-size: 11pt; font-variant-ligatures: normal; font-variant-east-asian: norma=
+l; font-variant-position: normal; vertical-align: baseline; white-space: pr=
+e-wrap;" class=3D""><span style=3D"white-space: pre;" class=3D"Apple-tab-sp=
+an">	</span></span><span style=3D"font-size: 11pt; font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; ver=
+tical-align: baseline; white-space: pre-wrap;" class=3D"">September 6th, 20=
+19</span></div></li><li dir=3D"ltr" style=3D"list-style-type: none; font-si=
+ze: 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-=
+east-asian: normal; font-variant-position: normal; vertical-align: baseline=
+; white-space: pre;" class=3D""><div style=3D"line-height: 1.38; margin-top=
+: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font=
+-variant-ligatures: normal; font-variant-east-asian: normal; font-variant-p=
+osition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D=
+"">Camera-ready submission: </span><span style=3D"font-size: 11pt; font-var=
+iant-ligatures: normal; font-variant-east-asian: normal; font-variant-posit=
+ion: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><=
+span style=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></span><s=
+pan style=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-=
+east-asian: normal; font-variant-position: normal; vertical-align: baseline=
+; white-space: pre-wrap;" class=3D"">September 13th, 2019</span></div></li>=
+</ul><br class=3D""><div style=3D"font-family: -webkit-standard; line-heigh=
+t: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"fo=
+nt-size: 11pt; font-family: Arial; font-variant-ligatures: normal; font-var=
+iant-east-asian: normal; font-variant-position: normal; vertical-align: bas=
+eline; white-space: pre-wrap;" class=3D"">More details of this call have be=
+en posted on the ICIDS 2019 conference website: </span><a href=3D"http://ic=
+ids.eae.utah.edu/call-for-papers/" style=3D"text-decoration: none;" class=
+=3D""><span style=3D"font-size: 11pt; font-family: Arial; color: rgb(17, 85=
+, 204); font-variant-ligatures: normal; font-variant-east-asian: normal; fo=
+nt-variant-position: normal; text-decoration: underline; vertical-align: ba=
+seline; white-space: pre-wrap;" class=3D"">http://icids.eae.utah.edu/call-f=
+or-papers/</span></a><span style=3D"font-size: 11pt; font-family: Arial; fo=
+nt-variant-ligatures: normal; font-variant-east-asian: normal; font-variant=
+-position: normal; vertical-align: baseline; white-space: pre-wrap;" class=
+=3D"">. The submission portal for conference papers is: </span><a href=3D"h=
+ttp://easychair.org/conferences/?conf=3Dicids2019" style=3D"text-decoration=
+: none;" class=3D""><span style=3D"font-size: 11pt; font-family: Arial; col=
+or: rgb(17, 85, 204); font-variant-ligatures: normal; font-variant-east-asi=
+an: normal; font-variant-position: normal; text-decoration: underline; vert=
+ical-align: baseline; white-space: pre-wrap;" class=3D"">easychair.org/conf=
+erences/?conf=3Dicids2019</span></a></div><br class=3D""><h1 dir=3D"ltr" st=
+yle=3D"font-family: -webkit-standard; line-height: 1.3679999999999999; marg=
+in-top: 5pt; margin-bottom: 5pt;" class=3D""><span style=3D"font-size: 12pt=
+; font-family: Arial; font-variant-ligatures: normal; font-variant-east-asi=
+an: normal; font-variant-position: normal; vertical-align: baseline; white-=
+space: pre-wrap;" class=3D"">THE ART EXHIBIT AT ICIDS 2019</span></h1><h2 d=
+ir=3D"ltr" style=3D"font-family: -webkit-standard; line-height: 1.38; margi=
+n-top: 5pt; margin-bottom: 5pt;" class=3D""><span style=3D"font-size: 12pt;=
+ font-family: Arial; font-weight: 400; font-style: italic; font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">About</sp=
+an></h2><div style=3D"font-family: -webkit-standard; line-height: 1.38; mar=
+gin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11p=
+t; font-family: Arial; font-variant-ligatures: normal; font-variant-east-as=
+ian: normal; font-variant-position: normal; vertical-align: baseline; white=
+-space: pre-wrap;" class=3D"">The conference has a long-standing tradition =
+of bringing together theoretical and practical approaches in an interdiscip=
+linary dialogue. This year, the exhibition will be held in connection with =
+the ICIDS conference in </span><span style=3D"font-size: 11pt; font-family:=
+ Arial; font-weight: 700; font-variant-ligatures: normal; font-variant-east=
+-asian: normal; font-variant-position: normal; vertical-align: baseline; wh=
+ite-space: pre-wrap;" class=3D"">Snowbird Ski &amp; Summer Resort, Little C=
+ottonwood Canyon in the Magpie Gallery</span><span style=3D"font-size: 11pt=
+; font-family: Arial; font-variant-ligatures: normal; font-variant-east-asi=
+an: normal; font-variant-position: normal; vertical-align: baseline; white-=
+space: pre-wrap;" class=3D"">. The art exhibition will be held in conjuncti=
+on with the academic conference, which runs from 19 =E2=80=93 23 of Novembe=
+r, with </span><span style=3D"font-size: 11pt; font-family: Arial; font-wei=
+ght: 700; font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: pre-w=
+rap;" class=3D"">the opening taking place on November 20th at 6 pm (MST)</s=
+pan><span style=3D"font-size: 11pt; font-family: Arial; font-variant-ligatu=
+res: normal; font-variant-east-asian: normal; font-variant-position: normal=
+; vertical-align: baseline; white-space: pre-wrap;" class=3D"">. A printed =
+catalog of descriptions of the work and artist=E2=80=99s statements with su=
+pporting images will be given to exhibitors and conference attendees at the=
+ opening of the exhibition.</span></div><br class=3D""><div style=3D"font-f=
+amily: -webkit-standard; line-height: 1.38; margin-top: 0pt; margin-bottom:=
+ 0pt;" class=3D""><span style=3D"font-size: 11pt; font-family: Arial; font-=
+variant-ligatures: normal; font-variant-east-asian: normal; font-variant-po=
+sition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"=
+">The ICIDS 2019 Art Exhibition offers the opportunity for artists to prese=
+nt artworks relevant to the field of interactive storytelling through the b=
+road lens of the curated theme: </span><span style=3D"font-size: 11pt; font=
+-family: Arial; font-weight: 700; font-style: italic; font-variant-ligature=
+s: normal; font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D"">The Expression=
+ of Emotion in Humans and Technology</span><span style=3D"font-size: 11pt; =
+font-family: Arial; font-variant-ligatures: normal; font-variant-east-asian=
+: normal; font-variant-position: normal; vertical-align: baseline; white-sp=
+ace: pre-wrap;" class=3D"">. The curatorial theme is intended to inspire (a=
+s opposed to constrain) creativity in the imagination and expression of the=
+ artist.</span></div><br class=3D""><div style=3D"font-family: -webkit-stan=
+dard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><=
+span style=3D"font-size: 11pt; font-family: Arial; font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; ver=
+tical-align: baseline; white-space: pre-wrap;" class=3D"">More information =
+about the theme and submission guidelines can be found on the website here:=
+ </span><a href=3D"https://icids.eae.utah.edu/art-exhibit/" style=3D"text-d=
+ecoration: none;" class=3D""><span style=3D"font-size: 11pt; font-family: A=
+rial; color: rgb(17, 85, 204); font-variant-ligatures: normal; font-variant=
+-east-asian: normal; font-variant-position: normal; text-decoration: underl=
+ine; vertical-align: baseline; white-space: pre-wrap;" class=3D"">https://i=
+cids.eae.utah.edu/art-exhibit/</span></a></div><p dir=3D"ltr" style=3D"font=
+-family: -webkit-standard; line-height: 1.38; margin-top: 0pt; margin-botto=
+m: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-family: Arial; fon=
+t-variant-ligatures: normal; font-variant-east-asian: normal; font-variant-=
+position: normal; vertical-align: baseline; white-space: pre-wrap;" class=
+=3D"">&nbsp;</span></p><h2 dir=3D"ltr" style=3D"font-family: -webkit-standa=
+rd; line-height: 1.38; margin-top: 5pt; margin-bottom: 5pt;" class=3D""><sp=
+an style=3D"font-size: 12pt; font-family: Arial; font-weight: 400; font-sty=
+le: italic; font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D"">Important Dates</span></h2><ul style=3D"font-family: -we=
+bkit-standard; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><li dir=3D"=
+ltr" style=3D"list-style-type: disc; font-size: 11pt; font-family: Arial; f=
+ont-variant-ligatures: normal; font-variant-east-asian: normal; font-varian=
+t-position: normal; vertical-align: baseline; white-space: pre;" class=3D""=
+><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" cla=
+ss=3D""><span style=3D"font-size: 11pt; font-variant-ligatures: normal; fon=
+t-variant-east-asian: normal; font-variant-position: normal; vertical-align=
+: baseline; white-space: pre-wrap;" class=3D"">September 15, 2019</span><sp=
+an style=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-e=
+ast-asian: normal; font-variant-position: normal; vertical-align: baseline;=
+ white-space: pre-wrap;" class=3D""><span style=3D"white-space: pre;" class=
+=3D"Apple-tab-span">	</span></span><span style=3D"font-size: 11pt; font-var=
+iant-ligatures: normal; font-variant-east-asian: normal; font-variant-posit=
+ion: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><=
+span style=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></span><s=
+pan style=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-=
+east-asian: normal; font-variant-position: normal; vertical-align: baseline=
+; white-space: pre-wrap;" class=3D"">Submission deadline</span></div></li><=
+li dir=3D"ltr" style=3D"list-style-type: disc; font-size: 11pt; font-family=
+: Arial; font-variant-ligatures: normal; font-variant-east-asian: normal; f=
+ont-variant-position: normal; vertical-align: baseline; white-space: pre;" =
+class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom:=
+ 0pt;" class=3D""><span style=3D"font-size: 11pt; font-variant-ligatures: n=
+ormal; font-variant-east-asian: normal; font-variant-position: normal; vert=
+ical-align: baseline; white-space: pre-wrap;" class=3D"">September 24, 2019=
+</span><span style=3D"font-size: 11pt; font-variant-ligatures: normal; font=
+-variant-east-asian: normal; font-variant-position: normal; vertical-align:=
+ baseline; white-space: pre-wrap;" class=3D""><span style=3D"white-space: p=
+re;" class=3D"Apple-tab-span">	</span></span><span style=3D"font-size: 11pt=
+; font-variant-ligatures: normal; font-variant-east-asian: normal; font-var=
+iant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cl=
+ass=3D""><span style=3D"white-space: pre;" class=3D"Apple-tab-span">	</span=
+></span><span style=3D"font-size: 11pt; font-variant-ligatures: normal; fon=
+t-variant-east-asian: normal; font-variant-position: normal; vertical-align=
+: baseline; white-space: pre-wrap;" class=3D"">Artist notified (via email)<=
+/span></div></li><li dir=3D"ltr" style=3D"list-style-type: disc; font-size:=
+ 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-eas=
+t-asian: normal; font-variant-position: normal; vertical-align: baseline; w=
+hite-space: pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0=
+pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-va=
+riant-ligatures: normal; font-variant-east-asian: normal; font-variant-posi=
+tion: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">=
+September 29, 2019</span><span style=3D"font-size: 11pt; font-variant-ligat=
+ures: normal; font-variant-east-asian: normal; font-variant-position: norma=
+l; vertical-align: baseline; white-space: pre-wrap;" class=3D""><span style=
+=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></span><span style=
+=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D""><span style=3D"white-space: pre;" class=3D"Appl=
+e-tab-span">	</span></span><span style=3D"font-size: 11pt; font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Accepted =
+artist, respond with agreement</span></div></li><li dir=3D"ltr" style=3D"li=
+st-style-type: disc; font-size: 11pt; font-family: Arial; font-variant-liga=
+tures: normal; font-variant-east-asian: normal; font-variant-position: norm=
+al; vertical-align: baseline; white-space: pre;" class=3D""><div style=3D"l=
+ine-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span st=
+yle=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-east-a=
+sian: normal; font-variant-position: normal; vertical-align: baseline; whit=
+e-space: pre-wrap;" class=3D"">November 15, 2019</span><span style=3D"font-=
+size: 11pt; font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D""><span style=3D"white-space: pre;" class=3D"Apple-tab-spa=
+n">	</span></span><span style=3D"font-size: 11pt; font-variant-ligatures: n=
+ormal; font-variant-east-asian: normal; font-variant-position: normal; vert=
+ical-align: baseline; white-space: pre-wrap;" class=3D""><span style=3D"whi=
+te-space: pre;" class=3D"Apple-tab-span">	</span></span><span style=3D"font=
+-size: 11pt; font-variant-ligatures: normal; font-variant-east-asian: norma=
+l; font-variant-position: normal; vertical-align: baseline; white-space: pr=
+e-wrap;" class=3D"">Shipped work must arrive</span></div></li><li dir=3D"lt=
+r" style=3D"list-style-type: disc; font-size: 11pt; font-family: Arial; fon=
+t-variant-ligatures: normal; font-variant-east-asian: normal; font-variant-=
+position: normal; vertical-align: baseline; white-space: pre;" class=3D""><=
+div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-=
+variant-east-asian: normal; font-variant-position: normal; vertical-align: =
+baseline; white-space: pre-wrap;" class=3D"">November 19, 2019</span><span =
+style=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-east=
+-asian: normal; font-variant-position: normal; vertical-align: baseline; wh=
+ite-space: pre-wrap;" class=3D""><span style=3D"white-space: pre;" class=3D=
+"Apple-tab-span">	</span></span><span style=3D"font-size: 11pt; font-varian=
+t-ligatures: normal; font-variant-east-asian: normal; font-variant-position=
+: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><spa=
+n style=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></span><span=
+ style=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-eas=
+t-asian: normal; font-variant-position: normal; vertical-align: baseline; w=
+hite-space: pre-wrap;" class=3D"">Installation of Artwork by organizers</sp=
+an></div></li><li dir=3D"ltr" style=3D"list-style-type: disc; font-size: 11=
+pt; font-family: Arial; font-variant-ligatures: normal; font-variant-east-a=
+sian: normal; font-variant-position: normal; vertical-align: baseline; whit=
+e-space: pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt;=
+ margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-varia=
+nt-ligatures: normal; font-variant-east-asian: normal; font-variant-positio=
+n: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Nov=
+ember 20, 2019</span><span style=3D"font-size: 11pt; font-variant-ligatures=
+: normal; font-variant-east-asian: normal; font-variant-position: normal; v=
+ertical-align: baseline; white-space: pre-wrap;" class=3D""><span style=3D"=
+white-space: pre;" class=3D"Apple-tab-span">	</span></span><span style=3D"f=
+ont-size: 11pt; font-variant-ligatures: normal; font-variant-east-asian: no=
+rmal; font-variant-position: normal; vertical-align: baseline; white-space:=
+ pre-wrap;" class=3D""><span style=3D"white-space: pre;" class=3D"Apple-tab=
+-span">	</span></span><span style=3D"font-size: 11pt; font-variant-ligature=
+s: normal; font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D"">Opening night<=
+/span></div></li><li dir=3D"ltr" style=3D"list-style-type: disc; font-size:=
+ 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-eas=
+t-asian: normal; font-variant-position: normal; vertical-align: baseline; w=
+hite-space: pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0=
+pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-va=
+riant-ligatures: normal; font-variant-east-asian: normal; font-variant-posi=
+tion: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">=
+November 23, 2019</span><span style=3D"font-size: 11pt; font-variant-ligatu=
+res: normal; font-variant-east-asian: normal; font-variant-position: normal=
+; vertical-align: baseline; white-space: pre-wrap;" class=3D""><span style=
+=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></span><span style=
+=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D""><span style=3D"white-space: pre;" class=3D"Appl=
+e-tab-span">	</span></span><span style=3D"font-size: 11pt; font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Closing o=
+f Art Exhibition</span></div></li><li dir=3D"ltr" style=3D"list-style-type:=
+ disc; font-size: 11pt; font-family: Arial; font-variant-ligatures: normal;=
+ font-variant-east-asian: normal; font-variant-position: normal; vertical-a=
+lign: baseline; white-space: pre;" class=3D""><div style=3D"line-height: 1.=
+38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-si=
+ze: 11pt; font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: pre-w=
+rap;" class=3D"">November 25, 2019</span><span style=3D"font-size: 11pt; fo=
+nt-variant-ligatures: normal; font-variant-east-asian: normal; font-variant=
+-position: normal; vertical-align: baseline; white-space: pre-wrap;" class=
+=3D""><span style=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></=
+span><span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-v=
+ariant-east-asian: normal; font-variant-position: normal; vertical-align: b=
+aseline; white-space: pre-wrap;" class=3D""><span style=3D"white-space: pre=
+;" class=3D"Apple-tab-span">	</span></span><span style=3D"font-size: 11pt; =
+font-variant-ligatures: normal; font-variant-east-asian: normal; font-varia=
+nt-position: normal; vertical-align: baseline; white-space: pre-wrap;" clas=
+s=3D"">Artwork returned to artist</span></div></li></ul><h1 dir=3D"ltr" sty=
+le=3D"font-family: -webkit-standard; line-height: 1.38; margin-top: 20pt; m=
+argin-bottom: 6pt;" class=3D""><span style=3D"font-size: 12pt; font-family:=
+ Arial; font-weight: 400; font-style: italic; font-variant-ligatures: norma=
+l; font-variant-east-asian: normal; font-variant-position: normal; vertical=
+-align: baseline; white-space: pre-wrap;" class=3D"">Curators</span></h1><d=
+iv style=3D"font-family: -webkit-standard; line-height: 1.38; margin-top: 0=
+pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-fa=
+mily: Arial; font-variant-ligatures: normal; font-variant-east-asian: norma=
+l; font-variant-position: normal; vertical-align: baseline; white-space: pr=
+e-wrap;" class=3D"">Ryan Bown (University of Utah, US)</span></div><div sty=
+le=3D"font-family: -webkit-standard; line-height: 1.38; margin-top: 0pt; ma=
+rgin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-family: =
+Arial; font-variant-ligatures: normal; font-variant-east-asian: normal; fon=
+t-variant-position: normal; vertical-align: baseline; white-space: pre-wrap=
+;" class=3D"">Brian Salisbury (University of Utah, US)</span></div><h1 dir=
+=3D"ltr" style=3D"font-family: -webkit-standard; line-height: 1.38; margin-=
+top: 20pt; margin-bottom: 6pt;" class=3D""><span style=3D"font-size: 12pt; =
+font-family: Arial; font-variant-ligatures: normal; font-variant-east-asian=
+: normal; font-variant-position: normal; vertical-align: baseline; white-sp=
+ace: pre-wrap;" class=3D"">THE WORKSHOPS AT ICIDS 2019</span></h1><div styl=
+e=3D"font-family: -webkit-standard; line-height: 1.38; margin-top: 0pt; mar=
+gin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11.5pt; font-family:=
+ Arial; color: rgb(33, 33, 33); font-variant-ligatures: normal; font-varian=
+t-east-asian: normal; font-variant-position: normal; vertical-align: baseli=
+ne; white-space: pre-wrap;" class=3D"">Workshops afford participants a smal=
+ler, more intimate setting where they can share ideas and learn from each o=
+ther=E2=80=99s research. Topics for the workshops change each year, and the=
+ limited seating capacity and relaxed atmosphere allow for interpersonal in=
+teraction. We are now inviting proposals for workshops to be celebrated at =
+ICIDS 2019. These will be celebrated on the first day of the conference, No=
+vember 19 2019.</span></div><br class=3D""><div style=3D"font-family: -webk=
+it-standard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-size: 11.5pt; font-family: Arial; color: rgb(33, =
+33, 33); font-variant-ligatures: normal; font-variant-east-asian: normal; f=
+ont-variant-position: normal; vertical-align: baseline; white-space: pre-wr=
+ap;" class=3D"">More information about workshops and submission guidelines =
+can be found here: </span><a href=3D"https://icids.eae.utah.edu/workshop-an=
+d-tutorials/" style=3D"text-decoration: none;" class=3D""><span style=3D"fo=
+nt-size: 11.5pt; font-family: Arial; color: rgb(17, 85, 204); font-variant-=
+ligatures: normal; font-variant-east-asian: normal; font-variant-position: =
+normal; text-decoration: underline; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">https://icids.eae.utah.edu/workshops/</span></a></div=
+><br class=3D""><h2 dir=3D"ltr" style=3D"font-family: -webkit-standard; lin=
+e-height: 1.38; margin-top: 5pt; margin-bottom: 5pt;" class=3D""><span styl=
+e=3D"font-size: 12pt; font-family: Arial; font-weight: 400; font-style: ita=
+lic; font-variant-ligatures: normal; font-variant-east-asian: normal; font-=
+variant-position: normal; vertical-align: baseline; white-space: pre-wrap;"=
+ class=3D"">Important Dates</span></h2><ul style=3D"font-family: -webkit-st=
+andard; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><li dir=3D"ltr" st=
+yle=3D"list-style-type: disc; font-size: 11pt; font-family: Arial; font-var=
+iant-ligatures: normal; font-variant-east-asian: normal; font-variant-posit=
+ion: normal; vertical-align: baseline; white-space: pre;" class=3D""><div s=
+tyle=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""=
+><span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-varia=
+nt-east-asian: normal; font-variant-position: normal; vertical-align: basel=
+ine; white-space: pre-wrap;" class=3D"">July 15, 2019&nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Submission deadline<=
+/span></div></li><li dir=3D"ltr" style=3D"list-style-type: disc; font-size:=
+ 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-eas=
+t-asian: normal; font-variant-position: normal; vertical-align: baseline; w=
+hite-space: pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0=
+pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-va=
+riant-ligatures: normal; font-variant-east-asian: normal; font-variant-posi=
+tion: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">=
+July 29, 2019&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; Notifications sent out</span></div></li></ul><br class=3D"">=
+<h2 dir=3D"ltr" style=3D"font-family: -webkit-standard; line-height: 1.38; =
+margin-top: 5pt; margin-bottom: 5pt;" class=3D""><span style=3D"font-size: =
+12pt; font-family: Arial; font-weight: 400; font-style: italic; font-varian=
+t-ligatures: normal; font-variant-east-asian: normal; font-variant-position=
+: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Chai=
+r</span></h2><div style=3D"font-family: -webkit-standard; line-height: 1.38=
+; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size=
+: 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-ea=
+st-asian: normal; font-variant-position: normal; vertical-align: baseline; =
+white-space: pre-wrap;" class=3D"">Jichen Zhu (Drexel University, US)</span=
+></div><h1 dir=3D"ltr" style=3D"font-family: -webkit-standard; line-height:=
+ 1.38; margin-top: 20pt; margin-bottom: 6pt;" class=3D""><span style=3D"fon=
+t-size: 12pt; font-family: Arial; font-variant-ligatures: normal; font-vari=
+ant-east-asian: normal; font-variant-position: normal; vertical-align: base=
+line; white-space: pre-wrap;" class=3D"">THE ICIDS 2019 DOCTORAL CONSORTIUM=
+</span></h1><h2 dir=3D"ltr" style=3D"font-family: -webkit-standard; line-he=
+ight: 1.38; margin-top: 5pt; margin-bottom: 5pt;" class=3D""><span style=3D=
+"font-size: 12pt; font-family: Arial; font-weight: 400; font-style: italic;=
+ font-variant-ligatures: normal; font-variant-east-asian: normal; font-vari=
+ant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cla=
+ss=3D"">About</span></h2><div style=3D"font-family: -webkit-standard; line-=
+height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=
+=3D"font-size: 11pt; font-family: Arial; font-variant-ligatures: normal; fo=
+nt-variant-east-asian: normal; font-variant-position: normal; vertical-alig=
+n: baseline; white-space: pre-wrap;" class=3D"">The Doctoral Consortium is =
+an opportunity for PhD students in areas related to the topics of ICIDS to =
+present their research work, at a stage where feedback from the community m=
+ight be beneficial. Students will discuss the work with experts in the area=
+ and with peers in a friendly atmosphere where discussion and contributions=
+ will be encouraged. Students should have defined their research plan, and =
+can be in intermediate or advanced stages of their research. Regardless of =
+how far along the students are in their research, the work should still be =
+in-progress and malleable enough to take advantage of the feedback from the=
+ Doctoral Consortium.</span></div><br class=3D""><div style=3D"font-family:=
+ -webkit-standard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"=
+ class=3D""><span style=3D"font-size: 11pt; font-family: Arial; font-varian=
+t-ligatures: normal; font-variant-east-asian: normal; font-variant-position=
+: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">More=
+ information about the doctoral consortium and submission guidelines can be=
+ found here: </span><a href=3D"https://icids.eae.utah.edu/doctoral-consorti=
+um/" style=3D"text-decoration: none;" class=3D""><span style=3D"font-size: =
+11pt; font-family: Arial; color: rgb(17, 85, 204); font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; tex=
+t-decoration: underline; vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">https://icids.eae.utah.edu/doctoral-consortium/</span></a></div>=
+<br class=3D""><h2 dir=3D"ltr" style=3D"font-family: -webkit-standard; line=
+-height: 1.38; margin-top: 5pt; margin-bottom: 5pt;" class=3D""><span style=
+=3D"font-size: 12pt; font-family: Arial; font-weight: 400; font-style: ital=
+ic; font-variant-ligatures: normal; font-variant-east-asian: normal; font-v=
+ariant-position: normal; vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">Important Dates</span></h2><ul style=3D"font-family: -webkit-sta=
+ndard; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><li dir=3D"ltr" sty=
+le=3D"list-style-type: disc; font-size: 11pt; font-family: Arial; font-vari=
+ant-ligatures: normal; font-variant-east-asian: normal; font-variant-positi=
+on: normal; vertical-align: baseline; white-space: pre;" class=3D""><div st=
+yle=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D"">=
+<span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-varian=
+t-east-asian: normal; font-variant-position: normal; vertical-align: baseli=
+ne; white-space: pre-wrap;" class=3D"">August 1, 2019&nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Submission deadline<=
+/span></div></li><li dir=3D"ltr" style=3D"list-style-type: disc; font-size:=
+ 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-eas=
+t-asian: normal; font-variant-position: normal; vertical-align: baseline; w=
+hite-space: pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0=
+pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-va=
+riant-ligatures: normal; font-variant-east-asian: normal; font-variant-posi=
+tion: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">=
+August 27, 2019&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; Notification of acceptance</span></div></li><li dir=3D"ltr" style=
+=3D"list-style-type: disc; font-size: 11pt; font-family: Arial; font-varian=
+t-ligatures: normal; font-variant-east-asian: normal; font-variant-position=
+: normal; vertical-align: baseline; white-space: pre;" class=3D""><div styl=
+e=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><s=
+pan style=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-=
+east-asian: normal; font-variant-position: normal; vertical-align: baseline=
+; white-space: pre-wrap;" class=3D"">September 13, 2019</span><span style=
+=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D""><span style=3D"white-space: pre;" class=3D"Appl=
+e-tab-span">	</span></span><span style=3D"font-size: 11pt; font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><span sty=
+le=3D"white-space: pre;" class=3D"Apple-tab-span">	</span></span><span styl=
+e=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-east-asi=
+an: normal; font-variant-position: normal; vertical-align: baseline; white-=
+space: pre-wrap;" class=3D"">Camera-ready copy due</span></div></li><li dir=
+=3D"ltr" style=3D"list-style-type: disc; font-size: 11pt; font-family: Aria=
+l; font-variant-ligatures: normal; font-variant-east-asian: normal; font-va=
+riant-position: normal; vertical-align: baseline; white-space: pre;" class=
+=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;=
+" class=3D""><span style=3D"font-size: 11pt; font-variant-ligatures: normal=
+; font-variant-east-asian: normal; font-variant-position: normal; vertical-=
+align: baseline; white-space: pre-wrap;" class=3D"">November 19 - 23, 2019<=
+/span><span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-=
+variant-east-asian: normal; font-variant-position: normal; vertical-align: =
+baseline; white-space: pre-wrap;" class=3D""><span style=3D"white-space: pr=
+e;" class=3D"Apple-tab-span">	</span></span><span style=3D"font-size: 11pt;=
+ font-variant-ligatures: normal; font-variant-east-asian: normal; font-vari=
+ant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cla=
+ss=3D"">Doctoral consortium celebration (throughout the conference)</span><=
+/div></li></ul><br class=3D""><h2 dir=3D"ltr" style=3D"font-family: -webkit=
+-standard; line-height: 1.38; margin-top: 5pt; margin-bottom: 5pt;" class=
+=3D""><span style=3D"font-size: 12pt; font-family: Arial; font-weight: 400;=
+ font-style: italic; font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D"">Chair</span></h2><div style=3D"font-family: -we=
+bkit-standard; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" cla=
+ss=3D""><span style=3D"font-size: 12pt; font-family: Arial; font-variant-li=
+gatures: normal; font-variant-east-asian: normal; font-variant-position: no=
+rmal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Ben Samu=
+el (University of New Orleans, US)</span></div><br class=3D""><div style=3D=
+"font-family: -webkit-standard; line-height: 1.38; margin-top: 0pt; margin-=
+bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-family: Arial=
+; font-variant-ligatures: normal; font-variant-east-asian: normal; font-var=
+iant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cl=
+ass=3D"">For general questions, please email the ICIDS Program Chairs </spa=
+n><span style=3D"font-size: 11pt; font-family: Arial; font-variant-ligature=
+s: normal; font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D"">by using the f=
+ollowing email address: </span><span style=3D"text-decoration: underline; f=
+ont-size: 11pt; font-family: Arial; color: rgb(17, 85, 204); font-variant-l=
+igatures: normal; font-variant-east-asian: normal; font-variant-position: n=
+ormal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><a href=
+=3D"mailto:icids2019program@gmail.com" class=3D"">icids2019program@gmail.co=
+m</a></span></div><br class=3D""><div style=3D"font-family: -webkit-standar=
+d; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><spa=
+n style=3D"font-size: 11pt; font-family: Arial; font-variant-ligatures: nor=
+mal; font-variant-east-asian: normal; font-variant-position: normal; vertic=
+al-align: baseline; white-space: pre-wrap;" class=3D"">We look forward to s=
+eeing your contributions at ICIDS 2019!</span></div><div style=3D"line-heig=
+ht: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><font face=3D"Ar=
+ial" class=3D""><span style=3D"font-size: 14.666666984558105px; white-space=
+: pre-wrap;" class=3D"">=E2=80=94 Rogelio</span></font></div><div style=3D"=
+line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><font f=
+ace=3D"Arial" class=3D""><span style=3D"font-size: 14.666666984558105px; wh=
+ite-space: pre-wrap;" class=3D"">[On behalf of myself and my co-chair, Anne=
+ Sullivan (Georgia Institute of Technology, USA)]</span></font></div><div s=
+tyle=3D"font-family: -webkit-standard; line-height: 1.38; margin-top: 0pt; =
+margin-bottom: 0pt;" class=3D""><br class=3D""></div></span><div class=3D""=
+>
+<div style=3D"color: rgb(0, 0, 0); letter-spacing: normal; text-align: star=
+t; text-indent: 0px; text-transform: none; white-space: normal; word-spacin=
+g: 0px; -webkit-text-stroke-width: 0px; word-wrap: break-word; -webkit-nbsp=
+-mode: space; -webkit-line-break: after-white-space;" class=3D""><div style=
+=3D"color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-in=
+dent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -w=
+ebkit-text-stroke-width: 0px; word-wrap: break-word; -webkit-nbsp-mode: spa=
+ce; -webkit-line-break: after-white-space;" class=3D""><div style=3D"color:=
+ rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px;=
+ text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text=
+-stroke-width: 0px; word-wrap: break-word; -webkit-nbsp-mode: space; -webki=
+t-line-break: after-white-space;" class=3D""><div style=3D"color: rgb(0, 0,=
+ 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-tran=
+sform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-wi=
+dth: 0px; word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-bre=
+ak: after-white-space;" class=3D""><div cz-shortcut-listen=3D"true" style=
+=3D"word-wrap: break-word; -webkit-line-break: after-white-space;" class=3D=
+""><div class=3D"">--<br class=3D""><br class=3D""><table width=3D"100%" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D""><tbody class=3D""=
+><tr class=3D""><td width=3D"110" valign=3D"top" class=3D""><img src=3D"htt=
+p://umc.utah.edu/u-email-signatures/blockU.gif" alt=3D"Block U Logo" width=
+=3D"110" height=3D"76" class=3D""></td><td valign=3D"top" class=3D""><font =
+size=3D"3" style=3D"font-family: Arial; color: rgb(102, 102, 102);" class=
+=3D"">Rogelio E. Cardona-Rivera, Ph.D. (Pronouns: he/him, they/them)<br cla=
+ss=3D""></font><font size=3D"2" style=3D"font-family: Arial; color: rgb(102=
+, 102, 102); font-style: italic;" class=3D"">Assistant Professor and Direct=
+or, Laboratory for Quantitative Experience Design<br class=3D""></font><fon=
+t size=3D"2" style=3D"font-family: Arial; color: rgb(153, 153, 153);" class=
+=3D"">Entertainment Arts and Engineering, School of Computing<br class=3D""=
+>The University of Utah<br class=3D"">Mobile 919-798-9011<br class=3D""><u =
+class=3D""><a href=3D"http://qed.cs.utah.edu" class=3D"">http://qed.cs.utah=
+.edu</a><br class=3D"">http://rogel.io</u></font><br class=3D""></td></tr><=
+/tbody></table></div></div><br class=3D"Apple-interchange-newline"></div><b=
+r class=3D"Apple-interchange-newline"></div><br class=3D"Apple-interchange-=
+newline"></div><br class=3D"Apple-interchange-newline"></div><br class=3D"A=
+pple-interchange-newline"><br class=3D"Apple-interchange-newline">
+</div>
+<br class=3D""></body></html>--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--Apple-Mail=_F0DD2CA5-E3C1-4258-BC9A-6E4C7CBD8900--

@@ -1,0 +1,192 @@
+Received: from BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:a03:60::32)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR07CA0055.NAMPRD07.PROD.OUTLOOK.COM; Tue, 18 Jun 2019 01:44:12 +0000
+Received: from DM6PR08CA0030.namprd08.prod.outlook.com (2603:10b6:5:80::43) by
+ BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:408:28::30) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1987.12; Tue, 18 Jun 2019 01:44:10 +0000
+Received: from BN3NAM04FT012.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::205) by DM6PR08CA0030.outlook.office365.com
+ (2603:10b6:5:80::43) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1965.16 via Frontend
+ Transport; Tue, 18 Jun 2019 01:44:10 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=fail (body hash did not verify)
+ header.d=uta.fi;CALPOLY.EDU; dmarc=pass action=none
+ header.from=uta.fi;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ BN3NAM04FT012.mail.protection.outlook.com (10.152.92.169) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1987.11 via Frontend Transport; Tue, 18 Jun 2019 01:44:09 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x5I1eEvN032297
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Tue, 18 Jun 2019 04:40:14 +0300
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=uta.fi; s=mail;
+	t=1560822018; bh=wP8WtmZVgc+8FYSdNM9wKi9H2fs=; l=3722;
+	h=Date:Reply-To:From:Subject:To:List-Help:List-Unsubscribe:
+	 List-Subscribe:List-Owner:List-Archive;
+	b=krffYSxj19bjyMDk5nYpbH1FqfD3x8NXXIjoAltrhWoH2fYT7KMGHH2oJ0Dsg5bDw
+	 jdHdMeEDGPhQPshBse/56P0jfCmdYuDD0m82qFLtv5fto+G5AHhRTkNEhKkar7fg7q
+	 GFscq7yqlb81SsTJiX+skGcdY7h6bYroTEf5K9Hk=
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x5I1eDcG023193;
+	Tue, 18 Jun 2019 04:40:13 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Tue, 18 Jun 2019 04:40:13 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x5I1eDoK009944
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Tue, 18 Jun 2019 04:40:13 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x5I0ZHnp023917;
+	Tue, 18 Jun 2019 04:39:53 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          348170 for GAMESNETWORK@LISTSERV.UTA.FI; Tue, 18 Jun 2019 04:39:31
+          +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x5I0ZHnZ023917 for
+          <GAMESNETWORK@LISTSERV.UTA.FI>; Tue, 18 Jun 2019 04:39:31 +0300
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from quoted-printable to 8bit by listserv.uta.fi id
+                      x5I1dVnV032270
+Message-ID: <5249327228713095.WA.kpapangelisme.com@listserv.uta.fi>
+Date: Tue, 18 Jun 2019 04:39:31 +0300
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Konstantinos Papangelis
+              <0000008fb7a34d9f-dmarc-request@uta.fi>
+Subject: [GAMESNETWORK] Call for Papers - Audio Mostly 2019 - DEADLINE EXTENDED 24th of June (final)
+To: "Gamesnetwork"<gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Tue, 18 Jun 2019 04:40:13 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: ALL_TRUSTED,AWL,BAYES_00,FROM_LOCAL_HEX,FROM_STARTS_WITH_NUMS,MAILING_LIST_MULTI,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1061
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 18 Jun 2019 01:44:09.8074
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 52da7d48-a452-4258-2e4c-08d6f38e7548
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(979002)(3000300001)(176002)(7192003)(189003)(199004)(53416004)(55016002)(356004)(6306002)(26005)(305945005)(7596002)(23676004)(6392003)(7636002)(47776003)(74482002)(103116003)(7846003)(77096007)(58800400005)(2870700001)(16003)(106002)(966005)(55176004)(5660300002)(43066004)(426003)(76506005)(66346011)(50466002)(14444005)(15974865002)(7696005)(126002)(7126003)(4006050)(5820100001)(486006)(336012)(476003)(8676002)(146002)(75640400001)(246002)(40036005)(1096003)(6862004)(36756003)(225293001)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4980;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT012.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 52da7d48-a452-4258-2e4c-08d6f38e7548
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(1402095)(71702078);SRVR:BN7PR08MB4980;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4980:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 Jun 2019 01:44:09.4131
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 52da7d48-a452-4258-2e4c-08d6f38e7548
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4980
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.4033139
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1987.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?M1pmZ1l4MWlNSjZJZ290YzZZeGZSQmlNSW05aktzbEwvRUxoR0o2WHV4WVVH?=
+ =?utf-8?B?MUdyalNneTZXcVUrN0s4dEZIOGplK1gzSWdSRlVhZHZYR3JIUllpRUJRekZR?=
+ =?utf-8?B?M09iVnVWSUR4UGZyOXBydFE2czNmeFJ4bmdSajlQTjlCVTRDbi9WWWVQOSty?=
+ =?utf-8?B?aDBNOTlEVDh6QXBIK2FaMkNXT0ViK0FZUC9UWDJnSy94UTBoT1JkbnNoblRj?=
+ =?utf-8?B?emx4ZzVsL25YVWRha1BBRTV6azhueXNBTDN1NFN3K0o1TG5Id1E5aXZlMGJF?=
+ =?utf-8?B?WURUZ2g2cEJOQS9nN2N4ajhIYUNZZHU2MTErb0JYZEZpdjlRMGkvdEdKeGlD?=
+ =?utf-8?B?b0Z4OGFYZ3F1aGlZTExQbHluQmJTSGVEZlRNazM5eStRZEE1azNvSURLdlBw?=
+ =?utf-8?B?b2IySFJJVGk2dTNXNzdwQ3pCOTNMbUVUaHNRNG5oZkt4dEZJamFjM2pIRnVS?=
+ =?utf-8?B?bVkwc1FCcmlFRmJuOEN1V3pmVkhBNDJKb2YvcWZmUlFBd0hnQmdya0Y0WmZF?=
+ =?utf-8?B?M21aY2J1cC9GSlBCZlRnZVNlRWMvbFZubVhta2p4bTBvK3ZybVBxVmdYNW9t?=
+ =?utf-8?B?Wjc1YmV4YjZQWEQrNHd3V0RrZkR5RXljVytQeldZM2xQS3VaYnVkUDh4a1My?=
+ =?utf-8?B?UUhyczk1QnVyc1dHMklYNVVsOEJKWERUdzhydUtSQVZRbDBDTDV0V1MwRzY0?=
+ =?utf-8?B?TzlHUkFCaXhRMmtPWk9Xbkc0amNTRy9TZkFDZ0NUTDFLSGtHcjhXaURvWXI0?=
+ =?utf-8?B?NG5ocVJxaFZzdXNlNUxkNmlQRmlld0FOOWVWcWRlM0sxUm9lTXRHcXNpVXZT?=
+ =?utf-8?B?ak9GQ3d2R3o0R1IrMVdpR3pGU3FMRWMzaGh0L2RsVzBEYm82WnBRcjllU0hQ?=
+ =?utf-8?B?Ukc4N1d2T2NBWXBUcldtSDRrZ0grcUVWQXZ4QTZ0azBmQlJVSm82WnBUQndT?=
+ =?utf-8?B?cHlNdEpFMkpkaEtDVkdPQ2duZ0Z0Qzg0eVVRV2gvQXRJQnZvZEtYLzkrUUpC?=
+ =?utf-8?B?YW5vUzNOSFBYYUYwYlVSYVRTSVFPVVBkUVpBMERxVWtnUVR0T08zcUJSb0Zh?=
+ =?utf-8?B?cSt3bGliU01wZVlxWG44WFhickpCT3VmTHU3MmY0ZTlVWjBKT1lNSEg2VDM4?=
+ =?utf-8?B?Sjc0YURxSzlSUENxY0VCL2tMZEh1Z0pmTUVQdnk4ZStuS3AyTnRZL29FS0k5?=
+ =?utf-8?B?d1lXZjVXbGl5SzhYYW5XTFFUZ0JZRTNDeDNnK01veXg3U0FRRnRCRHFpeGxw?=
+ =?utf-8?B?bzlUTnZ2aTlzTmpvTmpDd3pRMktMcElzZlNSZjJRcWlhMGVSTWg2bDBSeEpl?=
+ =?utf-8?B?THBjQndobkhIVHdhQ0NWMFNwQkp2SWJGNFhYNDN4b0pqREVJWHRCd1hQQTBi?=
+ =?utf-8?B?dDJHVzhWSEQwWFE9PQ==?=
+MIME-Version: 1.0
+
+Call for Papers - Audio Mostly 2019 - DEADLINE EXTENDED 24th of June (final)
+
+The Audio Mostly (www.audiomostly.com) conference series is interested in sound Interaction Design & Human-Computer Interaction (HCI) in general. Audio Mostly will take place from the 18th to 20th of September 2019 at the University of Nottingham in the city of Nottingham in the UK. The conference provides a space to reflect on the role of sound/music in our lives and how to understand, develop and design systems which relate to sound and music. The special theme for the conference this year is ‘A Journey in Sound’. This year the theme of the conference is open to interpretation, but people might think about the following, in relation to the theme:
+
+•             Gamic sonic experiences
+•             Sonic aspects of digital stories, documentaries and archives
+•             The soundtrack to our lives. Archiving and sharing sound
+•             The emotional potential of a sound, how might this be used to support interaction
+•             The different uses of sound and music across different settings
+•             The re-use of recollections and memories by composers and sound designers
+•             The development of musical tools that can let us express our experiences over time
+•             Socio-technical uses of AI create highly personalised soundtracks that respond to one’s context
+•             Adaptive sound and music use in journeys, time and the creative use of data
+
+We encourage original regular papers (oral/poster presentation) addressing the conference theme or other topics from the list provided below. We welcome multidisciplinary approaches involving fields such as music informatics, information and communication technologies, sound design, music performance, visualisation, composition, perception/cognition and aesthetics.
+
+•             Accessibility
+•             Aesthetics
+•             Affective computing applied to sound/music
+•             AI, HCI and Music
+•             Acoustics and Psychoacoustics
+•             Auditory display and sonification
+•             Augmented and virtual reality with or for sound and music
+•             Computational musicology
+•             Critical approaches to interaction, design and sound
+•             Digital augmentation (e.g. musical instruments, stage, studio, audiences, performers, objects)
+•             Digital music libraries
+•             Ethnographic studies
+
+For more information and other topics please see: https://audiomostly.com/2019/call/cfp/
+The Audio Mostly 2019 proceedings will be published by the Association for Computing Machinery (ACM) (awaiting approval) and made available through their digital library. Regular papers, posters and demos/installations will be double-blind peer reviewed. It is envisaged that there will be a special issue of a journal relating to the conference, as with previous years.
+
+Dates 
+
+•             Submission Deadline: 24th of June (final)
+•             Acceptance: Mid to Late July 2019
+•             Camera Ready: Mid  August 2019
+•             Conference: 18th to 20th of September at the University of Nottingham in the city of Nottingham in the UK
+
+Submission Site
+
+•             https://easychair.org/conferences/?conf=am2019
+
+Contact
+
+For more information or questions, please contact either Konstantinos Papangelis at k.papangelis@liverpool.ac.uk or the Paper and Poster Chairs: Adrian Hazzard – adrian.hazzard@nottingham.ac.uk Elizabeth Kelly –elizabeth.kelly@nottingham.ac.uk
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=GAMESNETWORK&A=1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html

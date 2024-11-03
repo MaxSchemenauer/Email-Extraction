@@ -1,0 +1,264 @@
+Received: from BL0PR08MB5427.namprd08.prod.outlook.com (2603:10b6:a03:80::41)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR11CA0064.NAMPRD11.PROD.OUTLOOK.COM; Thu, 26 Sep 2019 13:19:09 +0000
+Received: from BYAPR08CA0052.namprd08.prod.outlook.com (2603:10b6:a03:117::29)
+ by BL0PR08MB5427.namprd08.prod.outlook.com (2603:10b6:208:5a::25) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2284.21; Thu, 26 Sep
+ 2019 13:19:07 +0000
+Received: from SN1NAM04FT004.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::204) by BYAPR08CA0052.outlook.office365.com
+ (2603:10b6:a03:117::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2199.21 via Frontend
+ Transport; Thu, 26 Sep 2019 13:19:07 +0000
+Authentication-Results: spf=none (sender IP is 209.85.219.194)
+ smtp.mailfrom=jccee.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=jccee-org.20150623.gappssmtp.com;calpoly.edu; dmarc=none action=none
+ header.from=jccee.org;compauth=pass reason=106
+Received-SPF: None (protection.outlook.com: jccee.org does not designate
+ permitted sender hosts)
+Received: from mail-yb1-f194.google.com (209.85.219.194) by
+ SN1NAM04FT004.mail.protection.outlook.com (10.152.88.171) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2305.15 via Frontend Transport; Thu, 26 Sep 2019 13:19:07 +0000
+Received: by mail-yb1-f194.google.com with SMTP id u15so822544ybm.6
+        for <foaad@calpoly.edu>; Thu, 26 Sep 2019 06:19:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=jccee-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=03gz74O8gZ7QSgBUtgMqd9AVoj24hg3uPXkghpQhul8=;
+        b=tC3CpRMAoH2yOfvTeFYnsUT9Yg+lfLv0vSlBj5jJ3vnnPx6tW46go2Oisg/bth7vFs
+         nvH03A22DWxoLVMvc0hbAOTNqFUAgnRkXbhoNu0w8pZ+oZ6ZfUMogfpe2xrWKhbOGV9B
+         hih17O7Ufa+TdQGs0iuWXxPrJYPdBog0wV0myGcgeVD4ywWC8zLXtR3L5YervPSRFS9J
+         FxI8QoGC4WjkwqVjv2bMnxiC1IHRU+8p3O2WNkHv4Cc7kARe0HG2wRipzyOnj7/iALGO
+         cihWWb0e9Sp0TQHLUbNiux+QlG2Btm7EXZ+75g7Fe4C0R+Y1wrJIGC/b42N82Na9zNYf
+         /9vQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=03gz74O8gZ7QSgBUtgMqd9AVoj24hg3uPXkghpQhul8=;
+        b=cMurtX4H3Yat0EUOTv7UpgZUkcuL+aJoojsbc/drZJ4NW6oAYgfFht/Dy/8Vf+nnP3
+         Y4jsuynBw3LbUKH0/Q5FlOjNWZvkP/gaFXB/X4fnNDn659SSPFu8APHkJ8V9rXTsbejJ
+         OUNlOw8/TfacI76gkanRIzBgmNJZ6xnrQ3fXt545bmEkSoh8FOntF8ljnGv2l8f7t5Z7
+         CEf1c5W9FNR4p8NQoiSjug9ocn3u9SPkd9E42Ozu8Nw01W7Uf8rm7tVqN84ioODcc8Iz
+         P8voiIUBT4IWqra8vzYpDu69PPXH2HWp5TC/sRi0maN+DwiAIPzrEwxhC+SCPLqKKX3n
+         bu4A==
+X-Gm-Message-State: APjAAAV3vcIGIcCUDSAO1bP8hyS6KF5r37zaNmXIZ+Bjcde7aJIquBHB
+	9RQxPP7ZOqBlNL7EF4RPCGGdfWZnP0Yyt1fMyvkUBBLbTwQ=
+X-Google-Smtp-Source: APXvYqwxEtpRv0LqYegbC4DiW99drBRxM80XdTxcm2Fv3zaqkVXZwco5ixpbjoP+zIIrp+aeNbvKFX32WhwBxo0S+5k=
+X-Received: by 2002:a25:bd8d:: with SMTP id f13mr2096457ybh.305.1569503945955;
+ Thu, 26 Sep 2019 06:19:05 -0700 (PDT)
+From: J Issue <issue@jccee.org>
+Date: Thu, 26 Sep 2019 21:18:54 +0800
+Message-ID: <CAKi4mDy184N=STJcSEM874RqeD8tsvrdF84C7+3d83gaLzmbCA@mail.gmail.com>
+Subject: Dear Pena-Rios, A; Khosmood, F: An Invitation from Mathematics and
+ Computer Science: Submit Your Paper to the Journal
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="0000000000002c270d0593749d11"
+Return-Path: issue@jccee.org
+X-MS-Exchange-Organization-ExpirationStartTime: 26 Sep 2019 13:19:07.2349
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ b9ab8d20-1878-4a95-afc1-08d742841c31
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132139775472379142;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.219.194;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(428003)(31014005)(199004)(189003)(126002)(476003)(58800400005)(33964004)(16003)(59536001)(95326003)(966005)(486006)(71190400001)(336012)(22186003)(1096003)(26005)(5660300002)(6916009)(4006050)(6666004)(356004)(16586007)(42186006)(2171002)(7636002)(61266001)(75640400001)(7596002)(305945005)(2361001)(2351001)(8676002)(8576002)(55446002)(236005)(86362001)(246002)(9686003)(606006)(6306002)(498394004)(167793001)(516124003);DIR:INB;SFP:;SCL:1;SRVR:BL0PR08MB5427;H:mail-yb1-f194.google.com;FPR:;SPF:None;LANG:en;PTR:mail-yb1-f194.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT004.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: b9ab8d20-1878-4a95-afc1-08d742841c31
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600167)(711020)(4605104)(8001031)(1405096)(1407096)(1408068)(71702078);SRVR:BL0PR08MB5427;
+X-MS-TrafficTypeDiagnostic: BL0PR08MB5427:
+X-MS-Exchange-PUrlCount: 2
+X-MS-Oob-TLC-OOBClassifiers: OLM:7219;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Sep 2019 13:19:07.2319
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b9ab8d20-1878-4a95-afc1-08d742841c31
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL0PR08MB5427
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.4831515
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2284.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?aTc2cDRNUjNDZGFXVllNeUlYQjR2aGRuQWtzaDg3THBGRm00cDgvQ05JMS9v?=
+ =?utf-8?B?d0JFWk9HRC9IaktoSCtlRDJudEk0blIvN2oySWtQVkRSYlg1K25HMFJCNzFC?=
+ =?utf-8?B?WmZVQUJjVndJSGY0NkRDMERKQWtJQ1ZJMStMYVM5TDNaNU82MW1ybmFQeEZN?=
+ =?utf-8?B?RElacEdQdU1lZXlMM08wc0l2azVUVnBoUDF4dWx6eDM4WlFQeU54WWlYQU1D?=
+ =?utf-8?B?NDYyeTNaM2t0bmlsL1FNM1Z2ZjdnMlNDRW1BdnJsVHg5K29Ea2oyeUt4Y3JC?=
+ =?utf-8?B?eWR1TUM4THhyZW0zRXFIR3VYVkw5YnJvK012ejh3U3lPUHhMQm03YmxpcmNk?=
+ =?utf-8?B?cXlDN0FabFBGRnpEZE55MUhvTGxhWFpTWGVVQ1pzb1dqejZ1WHpIeC9yTTda?=
+ =?utf-8?B?Y09kTEk3RDlZOG9yWUc5Y28vRENkSDh4RzY1eHlNaVZBdnNNbkFNUkszWm1O?=
+ =?utf-8?B?ZlIxT3BTK1NoZGNBaDVLRkFONkEva3o4Rjl5bjlabHVNdDIyVHFRdmJ3eEla?=
+ =?utf-8?B?aDRDQlVFbG9kRTlCbEs2M0xPREREL3NhaEs2blZ5emU4djNlODZvLzFXNjJj?=
+ =?utf-8?B?S2xrWXdZWExreU5kbGxuYTVHMVpKeVZLSXQzWWpqZGZjYVdiN2MzbVhiZ0tR?=
+ =?utf-8?B?KzNoQ2QvKzZSMEFEMHhQVVVpOHlndXU4NGpOK3lmb1R5a1gxTWxQYzVzdGEx?=
+ =?utf-8?B?eXYvakZ4MlZCTnVvSE0zUkhVQ0dmcWMzRmNYaGZ1Z0ZwL29SRUMyQStJUGRx?=
+ =?utf-8?B?VUlaN1BrVkpRaUR2MnpxeDd4SXdTSy94VTltN25kMCsvdlhwVW00Sm13R01r?=
+ =?utf-8?B?ZDN6SGdISUV6M3hpZ2VBSHlleXVqUkRSMFRnWnJUMUYvUGFFRVV2NW13V1R6?=
+ =?utf-8?B?L3YvYXFrRTk5SzE5M0N5bGswMTYvUXZGVlRqaEJ5b1NZWlFNMitKa011cUtN?=
+ =?utf-8?B?eHR6dy9FTGlMeEhXakRqRDhGV3BRSFNpUklWWGV3ZmxIMkVWaE9NMGNXVVQ5?=
+ =?utf-8?B?QWZUVU5pUGs3OUQyNFpmVTgyRWl0aytTOHBaMVc0eW9qWldpbXhWQjlJbFZx?=
+ =?utf-8?B?MG11bktHMW4rNUlmUVd0YllMb1RiNEhrdFZHY1RBMDFFSGdRa1RIVGduM0cr?=
+ =?utf-8?B?SHhaVXJtbVVRMzcra1RKTGlQOVdKSENPdkF4Sk0zeHhvT282MHU3S1dUUUhB?=
+ =?utf-8?B?ajJvd1JCQzlkUDdncStJTnNuTGZFQk9lc2sydWdWQUJYSmpWWFhsTjAyL3Bo?=
+ =?utf-8?B?RXhmR2RLck1EYmZrZjVsK3YyWDNxMElpdSt1NmtzSk5tUkdKV1hvNzVKMW9E?=
+ =?utf-8?B?NitNZnhGcm1pOEtCOE1od1I1amt1amJ1RXg0NnJFaVV3MktDSU5zVUJVNTZn?=
+ =?utf-8?Q?UAGgzijJHLGusrveQ+mAoWW9yQ03UfXg=3D?=
+MIME-Version: 1.0
+
+--0000000000002c270d0593749d11
+Content-Type: text/plain; charset="UTF-8"
+
+Mathematics and Computer Science
+ISSN Online: 2575-6028, ISSN Print: 2575-6036
+Current Issue: Vol.4, No.2, 2019
+Dear Pena-Rios, A; Khosmood, F,
+We are very glad to read the published article "Immersive Learning
+Technologies: Research and Future Directions J.UCS Special Issue". We think
+that Mathematics and Computer Science is in line with your research field.
+The journal's Editorial Board are inviting you to contribute your valuable
+unpublished research articles to our journal for publication.
+Fast Publication Service
+01
+Fast Publication Service
+We can release your article online within 4-6 weeks since the submission
+date.
+02
+Quickly Reply
+We deliver the authors timely feedback about each and every submission, and
+we will deliver prompt replies for every question asked by our authors.
+03
+Valuable Revision Suggestion
+Each submitted paper will be carefully scrutinized by more than 3 peer
+reviewers from all over the world. Authors will receive helpful suggestions
+from our Professional Reviewers to assist them in further improvement of
+their papers.
+How to Submit your Paper
+
+   1. Kindly check out the requirements for manuscript preparation and
+   manuscript template at: http://www.mathcomputer.org/submission
+   2. Get your paper prepared according to the template.
+   3. Register and submit your article via the submission system.
+
+Recommended Journals
+Over 300 journals in our platform are provided for authors to choose
+covering disciplines like Materials Synthesis, Microbiology, Cardiology,
+Green Energy, Data Technology, Arts, Manufacturing Systems, Sustainability,
+English Language, Applications, etc.
+Learning more journals, please feel free to visit:
+http://www.mathcomputer.org/journals
+American Journal of Electrical and Computer Engineering
+Mathematical Modelling and Applications
+American Journal of Computer Science and Technology
+International Journal of Theoretical and Applied Mathematics
+Science Journal of Applied Mathematics and Statistics
+Regards,
+Amelia Ford
+Assistant from Editorial Office of Mathematics and Computer Science
+
+--0000000000002c270d0593749d11
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><br style=3D"color:rgb(0,0,0);font-family:&quot;Microsoft Ya=
+Hei&quot;;font-size:medium"><br style=3D"color:rgb(0,0,0);font-family:&quot=
+;Microsoft YaHei&quot;;font-size:medium"><div style=3D"font-family:Arial;fo=
+nt-size:13px;line-height:22px;color:rgb(1,0,0);background:rgba(224,223,218,=
+0.2);padding:26px 149px 98px 22px;width:1346.39px;text-align:justify"><div =
+style=3D"width:800px;background:rgb(255,254,255)"><div style=3D"background:=
+rgb(144,86,22)"><div style=3D"text-align:left;padding:10px 27px;color:rgb(2=
+55,254,255)"><div style=3D"font-size:15px;font-family:Verdana;font-weight:b=
+old;line-height:26px;padding-bottom:8px">Mathematics and Computer Science</=
+div><div style=3D"font-family:Verdana"><div style=3D"font-weight:bold;paddi=
+ng-bottom:4px">ISSN Online: 2575-6028, ISSN Print: 2575-6036</div><div styl=
+e=3D"font-weight:bold">Current Issue: Vol.4, No.2, 2019</div></div></div><d=
+iv style=3D"margin:0px 13px;padding:14px 14px 0px;background:rgb(255,254,25=
+5);line-height:13px;border-radius:5px 5px 0px 0px">Dear Pena-Rios, A; Khosm=
+ood, F,</div></div><div style=3D"padding:12px 27px 22px"><div>We are very g=
+lad to read the published article &quot;<span style=3D"font-style:italic">I=
+mmersive Learning Technologies: Research and Future Directions J.UCS Specia=
+l Issue</span>&quot;. We think that&nbsp;<span style=3D"font-style:italic">=
+Mathematics and Computer Science</span>&nbsp;is in line with your research =
+field. The journal's Editorial Board are inviting you to contribute your va=
+luable unpublished research articles to our journal for publication.</div><=
+/div><div style=3D"padding:0px 27px 18px"><div style=3D"display:table-cell;=
+vertical-align:top;width:400px;padding-right:26px"><div style=3D"font-famil=
+y:Verdana;font-size:14px;padding-bottom:16px"><div style=3D"padding:0px;tex=
+t-align:left;line-height:22px"><div style=3D"display:inline-block;backgroun=
+d:rgba(144,86,22,0.9);font-weight:bold;color:rgb(255,255,252);padding:4px 8=
+px;margin-bottom:5px">Fast Publication Service</div></div></div><div style=
+=3D"padding-bottom:12px"><div style=3D"display:table-cell;vertical-align:to=
+p;padding-right:8px"><div style=3D"width:16px;height:16px;background:rgb(14=
+4,86,22);color:rgb(255,254,255);padding:0px 4px;text-align:center;line-heig=
+ht:16px;font-size:12px">01</div></div><div style=3D"display:table-cell;vert=
+ical-align:top"><div style=3D"padding-bottom:5px;font-weight:bold">Fast Pub=
+lication Service</div><div>We can release your article online within 4-6 we=
+eks since the submission date.</div></div></div><div style=3D"padding-botto=
+m:12px"><div style=3D"display:table-cell;vertical-align:top;padding-right:8=
+px"><div style=3D"width:16px;height:16px;background:rgb(144,86,22);color:rg=
+b(255,254,255);padding:0px 4px;text-align:center;line-height:16px;font-size=
+:12px">02</div></div><div style=3D"display:table-cell;vertical-align:top"><=
+div style=3D"padding-bottom:5px;font-weight:bold">Quickly Reply</div><div>W=
+e deliver the authors timely feedback about each and every submission, and =
+we will deliver prompt replies for every question asked by our authors.</di=
+v></div></div><div><div style=3D"display:table-cell;vertical-align:top;padd=
+ing-right:8px"><div style=3D"width:16px;height:16px;background:rgb(144,86,2=
+2);color:rgb(255,254,255);padding:0px 4px;text-align:center;line-height:16p=
+x;font-size:12px">03</div></div><div style=3D"display:table-cell;vertical-a=
+lign:top"><div style=3D"padding-bottom:5px;font-weight:bold">Valuable Revis=
+ion Suggestion</div><div>Each submitted paper will be carefully scrutinized=
+ by more than 3 peer reviewers from all over the world. Authors will receiv=
+e helpful suggestions from our Professional Reviewers to assist them in fur=
+ther improvement of their papers.</div></div></div></div><div style=3D"disp=
+lay:table-cell;vertical-align:top;width:340px"><div style=3D"padding-bottom=
+:16px;font-family:Verdana;font-size:14px"><div style=3D"padding:0px;text-al=
+ign:left;line-height:22px"><div style=3D"display:inline-block;background:rg=
+ba(144,86,22,0.9);font-weight:bold;color:rgb(252,252,252);padding:4px 8px;m=
+argin-bottom:5px">How to Submit your Paper</div></div></div><div><ol style=
+=3D"padding:0px 0px 0px 16px;margin:0px;list-style-type:hebrew;text-align:l=
+eft"><li style=3D"padding-bottom:12px">Kindly check out the requirements fo=
+r manuscript preparation and manuscript template at:&nbsp;<a href=3D"http:/=
+/www.mathcomputer.org/submission" border=3D"0" target=3D"_blank" style=3D"t=
+ext-decoration-line:none;color:rgb(0,15,255);white-space:nowrap;font-weight=
+:bold">http://www.mathcomputer.org/submission</a></li><li style=3D"padding-=
+bottom:12px">Get your paper prepared according to the template.</li><li>Reg=
+ister and submit your article via the submission system.</li></ol></div></d=
+iv></div><div style=3D"padding:0px 27px 18px"><div style=3D"font-family:Ver=
+dana;font-size:14px"><div style=3D"padding:0px;text-align:left;line-height:=
+22px"><div style=3D"display:inline-block;background:rgba(144,86,22,0.9);fon=
+t-weight:bold;color:rgb(252,252,252);padding:4px 8px;margin-bottom:5px">Rec=
+ommended Journals</div></div></div><div style=3D"padding:14px 0px"><div sty=
+le=3D"padding-bottom:15px">Over 300 journals in our platform are provided f=
+or authors to choose covering disciplines like Materials Synthesis, Microbi=
+ology, Cardiology, Green Energy, Data Technology, Arts, Manufacturing Syste=
+ms, Sustainability, English Language, Applications, etc.</div><div style=3D=
+"padding:0px">Learning more journals, please feel free to visit:&nbsp;<a hr=
+ef=3D"http://www.mathcomputer.org/journals" border=3D"0" target=3D"_blank" =
+style=3D"text-decoration-line:none;color:rgb(0,15,255);white-space:nowrap;f=
+ont-weight:bold">http://www.mathcomputer.org/journals</a></div></div><div s=
+tyle=3D"line-height:13px;font-weight:bold"><div style=3D"padding-bottom:12p=
+x">American Journal of Electrical and Computer Engineering</div><div style=
+=3D"padding-bottom:12px">Mathematical Modelling and Applications</div><div =
+style=3D"padding-bottom:12px">American Journal of Computer Science and Tech=
+nology</div><div style=3D"padding-bottom:12px">International Journal of The=
+oretical and Applied Mathematics</div><div>Science Journal of Applied Mathe=
+matics and Statistics</div></div></div><div style=3D"background:rgb(144,86,=
+22);padding:10px 27px;color:rgb(255,254,255);line-height:28px;text-align:le=
+ft"><div>Regards,</div><div>Amelia Ford</div><div>Assistant from Editorial =
+Office of&nbsp;<span style=3D"font-style:italic">Mathematics and Computer S=
+cience</span></div></div></div></div></div>
+
+--0000000000002c270d0593749d11--

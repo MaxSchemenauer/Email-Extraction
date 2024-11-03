@@ -1,0 +1,390 @@
+Received: from SN6PR08MB5311.namprd08.prod.outlook.com (2603:10b6:a03:117::27)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0050.NAMPRD08.PROD.OUTLOOK.COM; Fri, 30 Aug 2019 14:11:14 +0000
+ARC-Seal: i=3; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=pass;
+ b=Gi1OsmqkxkFpRt0THlIFn5/R4+d2AHDiZLyX4/tWWRjlEKuJCNadEegMy9gkUBsI6frqr0sBi3+rrFhBfTCrvFordKxOh9DQ7Zf57NNLRONJguw4us1ExTo/quWLX+GdoG04ATQ2mIzWquFLnW/C0vyssIahqHEM8oSvJEXR1uo/uUoLLFcXuBFBU/XoBHWlGeBDs4WDRahASffCukE7gQJdn0kSZXLMbMLsTXQ0Z7ZwFrpCm8VAHnrUgQ20HpreodAry8tCvXlSanSwG5L05V6F2ZNtYIAPAwihBczLoRQEA6Ns0ShqjJEaZrrEz4R9fxDIOavQuuDx88ophUqSmQ==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=GNAVBZWdjmRtcFzvRtP3XcdSfBuDnK3QVC5AMDQG9Hk=;
+ b=Ol4m/VZpBu/pgSTMA7EXg0ZhYJFwfP5MkMT5HTSL5J3vBks2lN4GBlfg6tQAUbVJ3lZjVb7r155eohCKN4H63dL/JRHDfXxXuDdQjyqyeLIU2Tc8yMXL/38dvoOxxhowEM8WYK72jxfzNXXCKKTKp3sPZZA5QhQbv9pjfH3bbovlFcgaGaD6/kM23KipdBHj2D77kRqMJ6VM3l+M+J5VkM8w6wh6td88h9STOtouwKeEx/PVZo9D2HmPON8J+NWqNFqGevKS4GQoqiaYUmneJRy2KESBmwwb5fssd9ee7cYbId1OPOUcX9bdYtFLyYOaX9sJDownaq2vPX1VpF+Row==
+ARC-Authentication-Results: i=3; mx.microsoft.com 1; spf=neutral (sender ip is
+ 209.85.161.69) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=hevga.org;
+ dmarc=fail (p=none sp=none pct=100) action=none header.from=arch.tamu.edu;
+ dkim=pass (signature was verified) header.d=hevga-org.20150623.gappssmtp.com;
+ arc=pass (0 oda=0 ltdi=1)
+Received: from MWHPR08CA0033.namprd08.prod.outlook.com (2603:10b6:301:5f::46)
+ by SN6PR08MB5311.namprd08.prod.outlook.com (2603:10b6:805:9f::17) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2178.18; Fri, 30 Aug
+ 2019 14:11:13 +0000
+Received: from BN3NAM04FT029.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::200) by MWHPR08CA0033.outlook.office365.com
+ (2603:10b6:301:5f::46) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2199.21 via Frontend
+ Transport; Fri, 30 Aug 2019 14:11:13 +0000
+Authentication-Results: spf=neutral (sender IP is 209.85.161.69)
+ smtp.mailfrom=hevga.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=hevga-org.20150623.gappssmtp.com;calpoly.edu; dmarc=fail action=none
+ header.from=arch.tamu.edu;compauth=pass reason=106
+Received-SPF: Neutral (protection.outlook.com: 209.85.161.69 is neither
+ permitted nor denied by domain of hevga.org)
+Received: from mail-yw1-f69.google.com (209.85.161.69) by
+ BN3NAM04FT029.mail.protection.outlook.com (10.152.92.148) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2220.16 via Frontend Transport; Fri, 30 Aug 2019 14:11:12 +0000
+Received: by mail-yw1-f69.google.com with SMTP id e12sf5202882ywe.6
+        for <foaad@calpoly.edu>; Fri, 30 Aug 2019 07:11:12 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1567174271; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=IMzcgaVwVSs8m6ALWtIHf1t9th5aHYJoAatSwkJk8sADDY/MP4gu/XeQTXpZ+Vljra
+         YZnmcCXkiGMue8E3i7pRwqa6rH60TeSbmA8hXYuH4e6UJtOqLSVF39TvyLdCecPAHFf6
+         CmQ7tLRKD4CniHjseWvXfoRMtGpfMf4D1Vwkz4gMjP06wUvJYLDxRxwZo7WseHkFee/F
+         ATymnM5KWCGj2PihcY239bevZD7gJQJSfiXKz+IQ+LQns7Tr1ws6WQWwm3XeRNv+csns
+         /va97N/Xv7NMJc6NVpZzdELjSaebsXGNXQAP+Ng2n5B8CbUTNWOOvjjss+yS3ce/gAVZ
+         9vxA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:mime-version:content-language
+         :accept-language:message-id:date:thread-index:thread-topic:subject
+         :to:from:dkim-signature;
+        bh=GNAVBZWdjmRtcFzvRtP3XcdSfBuDnK3QVC5AMDQG9Hk=;
+        b=y+O/eJ/zVFx75P4OACLhSeCAa0laz1NxQntLjzNpZMDm7t/DPAxZ6UT0tG3ghEz8le
+         pA0V/+0TeJxCbJMJ5lgUZBW9W8lT/F85vTjckaAxuFkEeq5UrabocACH9jBRV9CU59go
+         Pam7PXwrVr893K+85/R0v3F6fVBhoi0eVsNNb5zUuuoF1xgVcI52kKuvsnXuW4vsA4rE
+         3xpIyAFGfKz17VrssNGfFBmP2krfIJUtIHhMY1WNkBrqTeHdMztVfXAEy0tOZQSBNSrz
+         Mh0kczJO2OrYKcSLrH/qhafD98vuBbMCB9hprGcxdCojmQ0cEBFnWMt9+8dGZiyelxRV
+         oIIw==
+ARC-Authentication-Results: i=2; mx.google.com;
+       spf=neutral (google.com: 148.163.139.245 is neither permitted nor denied by best guess record for domain of manink@arch.tamu.edu) smtp.mailfrom=manink@arch.tamu.edu;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=tamu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=hevga-org.20150623.gappssmtp.com; s=20150623;
+        h=from:to:subject:thread-topic:thread-index:date:message-id
+         :accept-language:content-language:mime-version:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:list-unsubscribe;
+        bh=GNAVBZWdjmRtcFzvRtP3XcdSfBuDnK3QVC5AMDQG9Hk=;
+        b=CNTxAAK7Vi22LINyPa9uGtL0QwlVUrQDTh1/q7NC2f2Neh5Cjp/GU4+tOXpRsWsO9D
+         c7Sm3RIdgu2fBIplxb9E6YNxr29uB2APgxUSHGV4QDLWk8uKPs8Vf9XT3WsJnYi90SNY
+         6u4r6Ny8f44EUbw/QxTv+JmB1rd8maXSsSKxD8sHT+SIYYRuadwj0AJ3e2B7lcrmbEPx
+         dycF41H6siDZxeGlAOXWEs2vqn1LlX4HC1gW2pfpSG+Ub6GM+NPJsbycJPWxEyBtsPfV
+         USXHroEjCVjUtu9FrpwSrl59VXS9laHzFfU1Myqb1cKWtpWanXGqPHlteYC68zQw7Sbo
+         BWpw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:to:subject:thread-topic:thread-index:date
+         :message-id:accept-language:content-language:mime-version
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-unsubscribe;
+        bh=GNAVBZWdjmRtcFzvRtP3XcdSfBuDnK3QVC5AMDQG9Hk=;
+        b=CQKY9pjCaotEDAGPaPf6DNA5WJDj/li8TQ4f99GzDl0ALYuzX+6WwxIKneqXafSXbI
+         SbKMy6foPR32+TP1UeFdDjequ4ts7vNiq6F/HGhljliBT3ma14mjdH/q6IclI2OCkKIF
+         Pjwv/pfnnvjOczzkSegWlr55x1+J3mwgGK3BB1JplDv4OwtKd9rdjJu/cYLTIICwFoVk
+         2A13u6S5jRfwxElw24Bqnd5K4Kt4k8zCbwF35K6u4Yp7gFCs8YazEvjgDahr/NNFpLmT
+         TbAJPLgwlVilfaVNizyRoxVmz3zO9jkmpF0fecMuPrCTbE9rIw2RRo7do5nSkfhmYdZa
+         dLbg==
+X-Gm-Message-State: APjAAAXKJx16mSqkFnUzas2s2ETcYSDlnG8oWURgfrSU6c00zfFfBdmP
+	j36kdaz19UyXaS8GNjvF4Rnmww==
+X-Google-Smtp-Source: APXvYqwu/7Q755R4fPh2fI9OROEbBls6OXN5ljCFc1QpXykWSsaERD6bl8PaRqchm2UE1MtCp06j+A==
+X-Received: by 2002:a25:d48c:: with SMTP id m134mr11089193ybf.107.1567174271626;
+        Fri, 30 Aug 2019 07:11:11 -0700 (PDT)
+X-BeenThere: members@hevga.org
+Received: by 2002:a25:dcc8:: with SMTP id y191ls498235ybe.13.gmail; Fri, 30
+ Aug 2019 07:11:10 -0700 (PDT)
+X-Received: by 2002:a25:ef05:: with SMTP id g5mr11981223ybd.473.1567174270695;
+        Fri, 30 Aug 2019 07:11:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1567174270; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Htq/q+U4mROLRLs2+2/qahkcxc6Uke0EGPcTPVhP+HXZyC9NH42XoQpVWmsnrDfduX
+         cimoZ5pTfmi600iwyih2P0eDiQIk9UmvBcdAyj74OZTfvtPPwcVe9zutLMnWovZU7ggR
+         +bw7oHHMD9i/QhkXSPtOir4JapwsDNlxwtzkuIkXScKcThtKk0DaYuxoGE0JH2el0Dz/
+         L+wEwQoCPH/UNEWOPkvzlSNTjGbEsAok/BQviYigDXXk4Zf7XKfY0Yg62FQHk2DcixXR
+         zbchT+/B5W8I2yLHYUfy4i9JqZxZ/l9Ug2qyTJHa10rAaPn5jfb1OTHq2bHWFzPVNbXv
+         /YcA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from;
+        bh=qitrfwCHKoddBr3pjnY4TgQqEoKpZvLVr28FGrGzUJ0=;
+        b=tBxWQidxAL2BPRXbA7fbaVly2GQCor8fZ2mDNgVnVLqTVl7OKpHNtijjoDhDZiJr0s
+         ds3RUWgoKGK73v/jEi3LW0mKW5CzLgwe/7l/UNQpu70miIDvVYmlfeMC7eActg4OAF2O
+         ItbKHk3MWo1PiiEaYkV7HxPQQ3ly05K4BAPnPw20Py7OF2ubm8qlDpltlQvhvRix11C+
+         NCInJapnLY6qIjICBD8Jbo5Ej0S5c7gE/6ovLUV89M7BNvWCKmD5k9VSc386/9+A3xl6
+         qlWqo6PefmavDz0AhqaDz1mTfl6btC5/86mr+zMs9ncwYptiFnte80TjCVmND0PfjkuH
+         8BuA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 148.163.139.245 is neither permitted nor denied by best guess record for domain of manink@arch.tamu.edu) smtp.mailfrom=manink@arch.tamu.edu;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=tamu.edu
+Received: from mx0b-00178102.pphosted.com (mx0b-00178102.pphosted.com. [148.163.139.245])
+        by mx.google.com with ESMTPS id u65si2205306ybf.33.2019.08.30.07.11.10
+        for <members@hevga.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 30 Aug 2019 07:11:10 -0700 (PDT)
+Received-SPF: neutral (google.com: 148.163.139.245 is neither permitted nor denied by best guess record for domain of manink@arch.tamu.edu) client-ip=148.163.139.245;
+Received: from pps.filterd (m0169869.ppops.net [127.0.0.1])
+	by mx0b-00178102.pphosted.com (8.16.0.42/8.16.0.42) with SMTP id x7UDxdkx009913
+	for <members@hevga.org>; Fri, 30 Aug 2019 09:11:10 -0500
+Received: from exchange.tamu.edu (exch-2p-snat-pool-1.itio.tamu.edu [165.91.23.67])
+	by mx0b-00178102.pphosted.com with ESMTP id 2unutda98u-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT)
+	for <members@hevga.org>; Fri, 30 Aug 2019 09:11:10 -0500
+Received: from exch-3p-mbx-t4.services.ads.tamu.edu (192.168.147.31) by
+ exch-3p-mbx-w2.services.ads.tamu.edu (192.168.147.9) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
+ 15.1.1779.2; Fri, 30 Aug 2019 09:11:09 -0500
+Received: from exch-3p-mbx-t4.services.ads.tamu.edu ([192.168.147.31]) by
+ exch-3p-mbx-t4.services.ads.tamu.edu ([192.168.147.31]) with mapi id
+ 15.01.1779.002; Fri, 30 Aug 2019 09:11:09 -0500
+From: Andre Thomas <manink@arch.tamu.edu>
+To: "members@hevga.org" <members@hevga.org>
+Subject: [HEVGA] Chillennium 2019
+Thread-Topic: Chillennium 2019
+Thread-Index: AdVfPCiCx3IRi13jQfa/4UYPRXo60Q==
+Date: Fri, 30 Aug 2019 14:11:09 +0000
+Message-ID: <152c427e700d4286869725b0d064a41d@arch.tamu.edu>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [208.180.231.161]
+Content-Type: multipart/alternative;
+	boundary="_000_152c427e700d4286869725b0d064a41darchtamuedu_"
+X-Proofpoint-Spam-Reason: safe
+X-Original-Sender: manink@arch.tamu.edu
+X-Original-Authentication-Results: mx.google.com;       spf=neutral
+ (google.com: 148.163.139.245 is neither permitted nor denied by best guess
+ record for domain of manink@arch.tamu.edu) smtp.mailfrom=manink@arch.tamu.edu;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=tamu.edu
+Precedence: list
+Mailing-list: list members@hevga.org; contact members+owners@hevga.org
+List-ID: <members.hevga.org>
+X-Spam-Checked-In-Group: members@hevga.org
+X-Google-Group-Id: 1058314601267
+List-Post: <https://groups.google.com/a/hevga.org/group/members/post>, <mailto:members@hevga.org>
+List-Help: <https://support.google.com/a/hevga.org/bin/topic.py?topic=25838>, <mailto:members+help@hevga.org>
+List-Archive: <https://groups.google.com/a/hevga.org/group/members/>
+List-Unsubscribe: <mailto:googlegroups-manage+1058314601267+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/hevga.org/group/members/subscribe>
+Return-Path: members+bncBDLL3HPA7IFBB764UTVQKGQEFY62HNI@hevga.org
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Aug 2019 14:11:12.2902
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 92ffa3be-9220-41df-0884-08d72d53e9b8
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132116478722922165;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.161.69;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(166001)(176002)(189003)(199004)(59656003)(108616005)(486006)(146002)(476003)(2616005)(33964004)(58800400005)(1096003)(126002)(8676002)(24736004)(356004)(1730700003)(16586007)(95326003)(336012)(59286002)(59646003)(88552002)(413944005)(14454004)(19810500001)(26005)(16003)(236005)(5660300002)(54896002)(6306002)(6116002)(3846002)(4006050)(790700001)(75640400001)(606006)(102836004)(7636002)(42882007)(59536001)(2501003)(71190400001)(5640700003)(7736002)(246002)(76796012)(66066001)(6862004)(7596002)(2351001)(79990200002)(2394004)(531144003);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB5311;H:mail-yw1-f69.google.com;FPR:;SPF:Neutral;LANG:en;PTR:mail-yw1-f69.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT029.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 92ffa3be-9220-41df-0884-08d72d53e9b8
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(1124261)(8001031)(1405096)(1407096)(1408068)(71702078)(7193020);SRVR:SN6PR08MB5311;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB5311:
+X-MS-Exchange-PUrlCount: 9
+X-MS-Oob-TLC-OOBClassifiers: OLM:7691;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Aug 2019 14:11:12.2611
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 92ffa3be-9220-41df-0884-08d72d53e9b8
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB5311
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.1088339
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2199.015
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cE1kcFJhREtQaE1VMjBScFJGeVk4cEhRdW1LY1NxQTlkK0c3bVVCM1RRU1l3?=
+ =?utf-8?B?ZWNZamYyNlBLSldUa1V3Q0xmV09yTlIrTkJQR3E0YWp0cEtGSkpUUzM3U2Y4?=
+ =?utf-8?B?aXhPSGwrRGhjWXJMVGVTaEdtSTRVRUlBREJyWWFSM0g5UkNlRVpNbzBnWXlt?=
+ =?utf-8?B?TU1VZU1YUEJqYlhjeUJLdTJ4eG5RQU9uVkpjc25NM1NGV1RTSnJUSGdqSzA5?=
+ =?utf-8?B?NzFyUU40dExSaDZaN3FsY2hFc3d3NjRsaW4yTHdxeWMrdkZwcjRJVi9ES2dB?=
+ =?utf-8?B?ckNBeFRXaFJoYzJpRHpsajdsL0drMTRrN2ZCSmdnYmZmd2FmNFAreXZXNkxD?=
+ =?utf-8?B?VEhUM2ljRm9SQWxGWC91RU9aTDR6MjF2REZTRllObFp0N2llK1BjSERIUUFF?=
+ =?utf-8?B?aXlHZ1RvK3F6R3V2MktSK0lydmMvU01tWU55WVM1RHVWWmliYkR6anY3RnZF?=
+ =?utf-8?B?TUMrQkVYeksrbzJYTnBqMGVXb3JsaDJPRDBsb1ZQZGpRQ2JnT3ZOekRqWU1G?=
+ =?utf-8?B?REZLM0FuR2hxV21FQ3duT1hBUVR0Y24vbTFSd3FiSUZCYUhSSjBiQ1dYdFFx?=
+ =?utf-8?B?NkhlSm5aTU5JWGpWYzVXTUYvK3BDZU5UZDJVV3lvTnJ1Q21UcHVlRWd6bFFF?=
+ =?utf-8?B?dXp5V1RubGVtckxsdVFGbzV0eEh6c1dlc0ZFRkVwc1lvMTJpdmNtY2wxL1gv?=
+ =?utf-8?B?WVZ3OHZRZmJhNXVxR01ueEpZQzVuTWxudUVobnBHSFRzZ1k5ZXFZN3Rxa05v?=
+ =?utf-8?B?NGJjdjRLMERtRThQOGVZUmhneDFDRzVzRGJneGRpQTVsZTRzQnpic1RVd1ZT?=
+ =?utf-8?B?clk3cCs0TzJvMGRBSFdiK2UzM2hYYnV0SmtxbFczcFBQQm1Ld2E5ZFRudXQz?=
+ =?utf-8?B?M0ZMSThaRGF4aCtmdDVLVnZVbTE2VkxuQnlBQnVTQmZHeXJHTjB5TFJrMkR0?=
+ =?utf-8?B?VnIxOE91UnZlS2dOZXlORmJWckJaVGxHMWEraHZGeDQwd1FuUnFHV05McWdN?=
+ =?utf-8?B?NkM3aHg2cGpXVDljYW9rNkpRMEt4ZkNqSm1LSWt5bm5jdDRReVh1Slh3WnVG?=
+ =?utf-8?B?WlRlVHZKMlh3SFRjKzdMVGpralpQd2RvNHBBSTRUOCtWRi8zSEdNVU1WQTJJ?=
+ =?utf-8?B?bEZUZmJybmVpL05zZ2NicXJ0Z0pEVEJaN2x1Y1hxcWcxK2lWUHRrTTBDNUVU?=
+ =?utf-8?B?VHgxN21LakNGa0pWdmZ0T1F1WmFkWE9WRWJIenRXTkRyQUFuSXM3NDR3anBq?=
+ =?utf-8?B?QUt0NnllS25KeFppVVUwWkM1MitzVnRwQ3dvbUF6dnVPU1pxQVpuZWhNRjJa?=
+ =?utf-8?B?ZWxZcGtuVmw5SXJHTDFUb2c0TDl2cXArc01YUWEyeFRxN2JzZW9pcEJGcFBE?=
+ =?utf-8?B?WUpnT3dBb3daUFRlN3hSQUhGMTFOb05tZys3a0Z2QnJaTmFLZndtVDNqWUln?=
+ =?utf-8?Q?RqLxzPz1?=
+MIME-Version: 1.0
+
+--_000_152c427e700d4286869725b0d064a41darchtamuedu_
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear HEVGA members,
+
+Only one week left to register for the biggest in-person student game jam. =
+Please share with your students, we have mentors from major game companies,=
+ like EA<https://www.facebook.com/EA/?ref=3Dgs&__tn__=3D%2CdK-R-R&eid=3DARB=
+VANyewS0aMLTM6m_bbmyYwQQ3tpMSeaSPzkGR42YRgGQYzivW0e2ZOhl9VyU4RmdEReWD1m0EF9=
+mK&fref=3Dgs&dti=3D390633317808066&hc_location=3Dgroup>, BioWare<https://ww=
+w.facebook.com/BioWare/?ref=3Dgs&__tn__=3D%2CdK-R-R&eid=3DARACmIBt5DTChmiMY=
+-SZbg-Y0ZRmk4O9urh9aJg_EGeXXTtVXpdCMK4BZFrNxr1qlgWArD7MQg9XUWs8&fref=3Dgs&d=
+ti=3D390633317808066&hc_location=3Dgroup>, Insomniac Games<https://www.face=
+book.com/insomniacgames/?ref=3Dgs&__tn__=3D%2CdK-R-R&eid=3DARBI5f8yjgzRzCOq=
+pS_wOZedmVa885HwBhrTwdPjmiNNk4YwvuXcyi1Q8Kz7AykGJgrtrdjVMQT_rq7Z&fref=3Dgs&=
+dti=3D390633317808066&hc_location=3Dgroup>, Amazon<https://www.facebook.com=
+/Amazon/?ref=3Dgs&__tn__=3D%2CdK-R-R&eid=3DARD8uaRYyAy2r0GkOJa74JM-nwguQf8o=
+BvZlYEa0_5Fm5GirbJgcPlbGI0LwtJDegApBygI_vKWONd7W&fref=3Dgs&dti=3D3906333178=
+08066&hc_location=3Dgroup>, BluePoint Games<https://www.facebook.com/Bluepo=
+int-Games-196082807117165/?ref=3Dgs&__tn__=3D%2CdK-R-R&eid=3DARDTqK9z_iqDx_=
+4QFJafY4q1nKHcBeAwgOFRD76iH5W3RTdQRjAiDyD1xMebANgoY7vVZr39hWsfKMFz&fref=3Dg=
+s&dti=3D390633317808066&hc_location=3Dgroup>, Unity, EPIC to name but a few=
+, all helping students for the whole weekend.
+No experience necessary for the students, there will be workshops by Unity =
+and EPIC before the jam. We have teams from all over the US and 2 teams fro=
+m China. Great food, great prizes and lots of fun. [Registration Link<https=
+://secure.touchnet.com/C21490_ustores/web/classic/product_detail.jsp?PRODUC=
+TID=3D7426>]
+
+cheers
+
+Andr=C3=A9
+
+--=20
+To unsubscribe from this group, send a blank email to members+unsubscribe@h=
+evga.org
+---=20
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to members+unsubscribe@hevga.org.
+
+--_000_152c427e700d4286869725b0d064a41darchtamuedu_
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Dear HEVGA members,<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"color:#1D2=
+129">Only one week left to register for the biggest in-person student game =
+jam. Please share with your students, we have mentors from major game compa=
+nies, like
+<a href=3D"https://www.facebook.com/EA/?ref=3Dgs&amp;__tn__=3D%2CdK-R-R&amp=
+;eid=3DARBVANyewS0aMLTM6m_bbmyYwQQ3tpMSeaSPzkGR42YRgGQYzivW0e2ZOhl9VyU4RmdE=
+ReWD1m0EF9mK&amp;fref=3Dgs&amp;dti=3D390633317808066&amp;hc_location=3Dgrou=
+p">
+<span style=3D"color:#385898;text-decoration:none">EA</span></a>, <a href=
+=3D"https://www.facebook.com/BioWare/?ref=3Dgs&amp;__tn__=3D%2CdK-R-R&amp;e=
+id=3DARACmIBt5DTChmiMY-SZbg-Y0ZRmk4O9urh9aJg_EGeXXTtVXpdCMK4BZFrNxr1qlgWArD=
+7MQg9XUWs8&amp;fref=3Dgs&amp;dti=3D390633317808066&amp;hc_location=3Dgroup"=
+>
+<span style=3D"color:#385898;text-decoration:none">BioWare</span></a>, <a h=
+ref=3D"https://www.facebook.com/insomniacgames/?ref=3Dgs&amp;__tn__=3D%2CdK=
+-R-R&amp;eid=3DARBI5f8yjgzRzCOqpS_wOZedmVa885HwBhrTwdPjmiNNk4YwvuXcyi1Q8Kz7=
+AykGJgrtrdjVMQT_rq7Z&amp;fref=3Dgs&amp;dti=3D390633317808066&amp;hc_locatio=
+n=3Dgroup">
+<span style=3D"color:#385898;text-decoration:none">Insomniac Games</span></=
+a>, <a href=3D"https://www.facebook.com/Amazon/?ref=3Dgs&amp;__tn__=3D%2CdK=
+-R-R&amp;eid=3DARD8uaRYyAy2r0GkOJa74JM-nwguQf8oBvZlYEa0_5Fm5GirbJgcPlbGI0Lw=
+tJDegApBygI_vKWONd7W&amp;fref=3Dgs&amp;dti=3D390633317808066&amp;hc_locatio=
+n=3Dgroup">
+<span style=3D"color:#385898;text-decoration:none">Amazon</span></a>, <a hr=
+ef=3D"https://www.facebook.com/Bluepoint-Games-196082807117165/?ref=3Dgs&am=
+p;__tn__=3D%2CdK-R-R&amp;eid=3DARDTqK9z_iqDx_4QFJafY4q1nKHcBeAwgOFRD76iH5W3=
+RTdQRjAiDyD1xMebANgoY7vVZr39hWsfKMFz&amp;fref=3Dgs&amp;dti=3D39063331780806=
+6&amp;hc_location=3Dgroup">
+<span style=3D"color:#385898;text-decoration:none">BluePoint Games</span></=
+a>, </span>
+<span style=3D"color:#2F5597;mso-style-textfill-fill-color:#2F5597;mso-styl=
+e-textfill-fill-alpha:100.0%">Unity, EPIC
+</span><span style=3D"color:#1D2129">to name but a few, all helping student=
+s for the whole weekend.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"color:#1D2=
+129">No experience necessary for the students, there will be workshops by U=
+nity and EPIC before the jam. We have teams from all over the US and 2 team=
+s from China. Great food, great prizes
+ and lots of fun</span><span style=3D"font-size:10.5pt;color:#1D2129">. [</=
+span><span style=3D"font-size:10.5pt"><a href=3D"https://secure.touchnet.co=
+m/C21490_ustores/web/classic/product_detail.jsp?PRODUCTID=3D7426">Registrat=
+ion Link</a>]<span style=3D"color:#1D2129"><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">cheers<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Andr=C3=A9<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+<p></p>
+
+-- <br>
+To unsubscribe from this group, send a blank email to members&#43;unsubscri=
+be@hevga.org<br>
+--- <br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:members&#43;unsubscribe@hevga.org">members&#43;un=
+subscribe@hevga.org</a>.<br>
+
+--_000_152c427e700d4286869725b0d064a41darchtamuedu_--

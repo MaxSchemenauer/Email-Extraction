@@ -1,0 +1,654 @@
+Received: from DM6PR08MB4987.namprd08.prod.outlook.com (2603:10b6:a02:80::43)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0030.PROD.EXCHANGELABS.COM; Wed, 17 Jul 2019 04:39:45 +0000
+Received: from DM6PR08CA0010.namprd08.prod.outlook.com (2603:10b6:5:80::23) by
+ DM6PR08MB4987.namprd08.prod.outlook.com (2603:10b6:5:4b::32) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2073.14; Wed, 17 Jul 2019 04:39:40 +0000
+Received: from SN1NAM04FT044.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::202) by DM6PR08CA0010.outlook.office365.com
+ (2603:10b6:5:80::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2073.10 via Frontend
+ Transport; Wed, 17 Jul 2019 04:39:40 +0000
+Authentication-Results: spf=pass (sender IP is 106.10.244.211)
+ smtp.mailfrom=yahoo.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=yahoo.com;calpoly.edu; dmarc=pass action=none
+ header.from=yahoo.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of yahoo.com designates
+ 106.10.244.211 as permitted sender) receiver=protection.outlook.com;
+ client-ip=106.10.244.211; helo=sonic312-21.consmr.mail.sg3.yahoo.com;
+Received: from sonic312-21.consmr.mail.sg3.yahoo.com (106.10.244.211) by
+ SN1NAM04FT044.mail.protection.outlook.com (10.152.89.63) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2052.18 via Frontend Transport; Wed, 17 Jul 2019 04:39:39 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1563338377; bh=45A0iLZ2mXlaYlAgMlrRwnOWfVqZK/xOCITPF3iV1kM=; h=Date:From:To:Subject:References:From:Subject; b=RVVcg4DZYyO4BcMniyQVOS427v6dHW49eVUENl+O1vYx/J0PI73P45razG5ZFwE7Nj+fuCAC+IM/OAA/XvTWnmk0RJBX5oXhS1n537/mzW+PLDb7+x8jwa3esQV5sPaExLAkzp+bhsH1bmvy8BrXv9pLzZ8EgFcC+d5dwNTUF2tPxTYOVfPggE6KpA6rQCKpRDy+R7WsO1zQswY0q3WOUz6Atnje8VstM9OPfnnLb3qGiPOzRnu2ew5oeVZVxfAAwxbEJqK9/bWuEcUMRZfX/2l6aMDE57dPBBetzPnW7qn/9gWR5CLkNhYaHiI5AyndYuarHe7mO+mP0xfB7xR4ug==
+X-YMail-OSG: yH5e7cMVM1nZNrDF5SVH71y9h992VN61LkEqFRw0RfCDPcuBG20stIGZj.FTNj3
+ BwvZA4RL.gE7mT64_tC4fjCDGszru_i.UMVgzDZkd9hU8j25UDPASo4J9Rog.KiBaszZNfvIneGO
+ 6QPb9bP1fpfNfKMu1Pqr9gG4BXxZkKMAqU.AXtTYfckiy95YRFbqUlgM6xzaHvpjsGYvw3bLRbre
+ YJrAZ0tk7N8yJ_N6.B.H63WXPD9Nw.5x47ScN7DtGKqHdQJvo4IerpKTt5vjA797g1rUY0l5xwCu
+ l4ZGIg.GT6SCzl4xW6nTRAlpFeGIoa16QWgEvjh3RK45Z4_L599_TCYciyMJO0RXVXzoStj1xmAT
+ QpxBBxJPNg3emjkhm4HgT4d1Wmr3Bp5cX4J4xoADcZzVOZ_KIczU0AoP79exQAO_PXJArNBOryJh
+ S8h6lbFcrwjFkWlbYJtUShx2uO6cqXTXAlTtfEzCZ1imdJl1ljdtqSB8lrfjCYjGRGZ2POnPJYVv
+ AeCnRa8B_AYoKr23PhPH0qkdLX3dSqsnbylL4q7dGmAnN.ydWdRZs1hz.zByDglHw5PYTvtCKkN.
+ 4pjhCednApMvOiIXqEcn7DDNC.Lb2ZbynqFapGoHzMRa3qG5re1pl8xoknqC_HuYvx475ELGNMoj
+ W7tUNQ2zq4jxkMb88pMRFvlbbpzvInmNhTKoNP2gLaQEX6SzYRPa7BHbidgOPAFjnFYsHsltMKm0
+ ArGznrsHchUGytZmPala_WHmjOwqhwdOy.DEQrp_6ebWZrk03gGj8SAKTnxiGgpzbhmxqa_28eTl
+ BbzkXS9oYst.GJKut0vKCqaR2Pl4RDCLQTIF8uk9VvcQ3ptIFmWRuKyjbs_uMaNzch8kB.T5LsDD
+ 66gccz5Tev9dA2J6Il9kahBfW9g0oagy32Lb6dlPE_G7ro.75rzS5rVWVofGK7NWPUdMxg9ihYGV
+ JRhbdlBIwaYFF4APSVWjNn5vxk3EiEWQRRysf1GtJydJ.usDqFFGMZgpCtHcRinbV9y74c8STa1f
+ wcIuXaKcNAWj.Ivr5sjwr59aZuW.0O35RLotQCXW0jDL1ZqP2n_pMkhWZHE47p9rKPUZQo9YiQQy
+ VSGz7X5tUb4sdKVl5VhbAvgPK2zhftQu0W.QpU2pTmJ4pN3ym8rLbhoHNEv..34q.QVUqIqI.HJ9
+ lf4VVtP39I56agzLaIV1VZnBCsa1EPHWhiNr82SD4xFQ0yMdxpuKxSfjA4yhQK75hdG0Z
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic312.consmr.mail.sg3.yahoo.com with HTTP; Wed, 17 Jul 2019 04:39:37 +0000
+Date: Wed, 17 Jul 2019 04:39:33 +0000 (UTC)
+From: published journals <journals2018@yahoo.com>
+To: "journals2018@yahoo.com" <journals2018@yahoo.com>
+Message-ID: <472755597.2159161.1563338373843@mail.yahoo.com>
+Subject: Fast publication/call for paper
+Content-Type: multipart/alternative;
+	boundary="----=_Part_2159160_205600442.1563338373840"
+References: <472755597.2159161.1563338373843.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.13991 YMailNorrin Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0
+Content-Length: 31073
+Return-Path: journals2018@yahoo.com
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Jul 2019 04:39:40.6034
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 966cfd0d-7ff6-4892-e149-08d70a70c81a
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:106.10.244.211;IPV:NLI;CTRY:SG;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(286005)(199004)(189003)(71190400001)(3480700005)(7596002)(6862004)(966005)(85226003)(37276005)(4006050)(7636002)(6666004)(2501003)(446003)(15974865002)(476003)(126002)(426003)(88526003)(75640400001)(336012)(356004)(6200100001)(14444005)(50226002)(1096003)(5640700003)(34766002)(1361003)(6306002)(82202003)(2351001)(106002)(86362001)(33964004)(16003)(53376002)(26005)(246002)(11686005)(486006)(8676002)(76176011)(16586007)(62882003);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB4987;H:sonic312-21.consmr.mail.sg3.yahoo.com;FPR:;SPF:Pass;LANG:en;PTR:sonic312-21.consmr.mail.sg3.yahoo.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT044.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 966cfd0d-7ff6-4892-e149-08d70a70c81a
+X-Microsoft-Antispam:
+ BCL:5;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:DM6PR08MB4987;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4987:
+X-MS-Exchange-PUrlCount: 2
+X-MS-Oob-TLC-OOBClassifiers: OLM:6108;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Jul 2019 04:39:39.7669
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 966cfd0d-7ff6-4892-e149-08d70a70c81a
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4987
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.5729469
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2073.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077);
+X-Microsoft-Antispam-Message-Info:
+	Jq/8p4s8Q1tieZ7qBHmvWIsy65o+zrN3JmwISjP1af45+aLPvosiUFH2CUjJqaK/cAPjcwuCbWBphKAjvgKGjcgio4un5z2R75FRCC2FONIKTyEZAktsd7kZWox79q6uGG6df4MIcxYAdeAyKg0kEqO8MWMB/OdKTuXrAE/R+PNt3IkJwPEbTuohBtQVxWLpM/JpJaxHchbQPLV217hmcDSGi9aqokibSdOr/WBO1hYAwkaqpnLTT160D1bhhrUFWn7g1b9XtrBNjYyIqI1lr2o3+dykNbPAb+8J892dni1nY3+vMH4sp3+yu5vaDo7lSk3kZy8KV9nSUeZw5fs7WQrosisiWb/tokNqPVfnJ5NPPejBoiJvRdZrKLnUJGqAgyegbHxwE6AgPq7S/IM8PlP3EnyT5ATzaXidpREoJp9IUKTv7nIr08aLyn4O7CA3gzvOULReaFCr89KdvvMFVFTFdHdCaTEVezUlpG5vnNbvJ7fUa8k2Vkg7WgLYi1/g2SlB9UmZruhj9Vo6a1CzA2dMG7CDKGubwaKAhsXeHH2iyOePLZd2Umu7TrooX/16XuGjM1C8MNmnsjoc9g5xeqxAIjquV0h9L/z5v3WnK7lNjftLfHUsmepYZl3y1zJ4DpAWIvdvZyiYQDGiOJB+LRIGZuKo7g/CrKuz52xV19LX8iLYXq64LtgVKH0pj5cG2NZmHqSeWCo1tr4kurvqpmx1zW4v7qJcHcVps28BMydBW+6cHCA4rmv+vJxGoYFHzfy4A2HbePcOohkm/Gy8UdDIpslelZE33ZXDVCQ6gZTLee7Acsr7ZMFhdz7O9E9iFL/+U9jkm+sGCFULiror3K7i7IwGG/SxPteeJZzW9EYR4escIS+vbEb/dSdLY7CshEvmQxNhLx8e57hHYJ+nv/rpna8x+wKKb5uDCDCzwRm3S4P4BW0BgXpqU3e/cVdD
+MIME-Version: 1.0
+
+------=_Part_2159160_205600442.1563338373840
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+International Journal Of Information Research And Review
+
+
+
+
+www.ijirr.com
+
+ISSN(Online):=C2=A02349-9141
+
+Topics & Discipline: Alldisciplines of Science, Engineering and Technology,=
+ Medicine, Social Sciences
+
+Journal Impact Factor 2018: 5.325
+
+This journalcovers all the current issues and practices in the field of lib=
+rary,information and management, information production; economics of infor=
+mation;information user's needs and seeking patterns; information sources a=
+ndservices; information and knowledge management; library and information s=
+cienceeducation; curriculum framework; curriculum development; training, re=
+search anddevelopment in LIS education; digital library; technological adva=
+ncement;collection development and management etc. This journal keeps profe=
+ssionalsabreast of the current research and development in the field of lib=
+rary,information and management (LIM).
+
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 FAST PUBLICATION: INDEXING JOURN=
+AL
+
+=C2=A0
+
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Volume-06, Issue-07, July-2019
+
+Notification of Acceptance:=C2=A0Within 12 Hours
+
+Publication Time:=C2=A0Within 24 to 48 Hours
+
+E-Certificates:=C2=A0Immediately after publication
+
+Publication Frequency: 12 Issues per Year
+
+Submit your Research and Review articles to:articles@ijirr.com
+
+http://ijirr.com/submit-article
+
+With regards
+
+Editor =E2=80=93 InternationalJournal of Information Research and Review
+
+=C2=A0
+
+Contact-ijirr.com@gmail.com, articles@ijirr.com
+
+
+------=_Part_2159160_205600442.1563338373840
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body><div class=3D"yahoo-style-wrap" style=3D"font-family:Helvetica N=
+eue, Helvetica, Arial, sans-serif;font-size:16px;"><div dir=3D"ltr" data-se=
+tdir=3D"false"><div><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val=3D"Cambria Math"/>
+   <m:brkBin m:val=3D"before"/>
+   <m:brkBinSub m:val=3D"--"/>
+   <m:smallFrac m:val=3D"off"/>
+   <m:dispDef/>
+   <m:lMargin m:val=3D"0"/>
+   <m:rMargin m:val=3D"0"/>
+   <m:defJc m:val=3D"centerGroup"/>
+   <m:wrapIndent m:val=3D"1440"/>
+   <m:intLim m:val=3D"subSup"/>
+   <m:naryLim m:val=3D"undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState=3D"false" DefUnhideWhenUsed=3D"true"
+  DefSemiHidden=3D"true" DefQFormat=3D"false" DefPriority=3D"99"
+  LatentStyleCount=3D"267">
+  <w:LsdException Locked=3D"false" Priority=3D"0" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Normal"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"heading 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 7"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 8"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 9"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 7"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 8"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 9"/>
+  <w:LsdException Locked=3D"false" Priority=3D"35" QFormat=3D"true" Name=3D=
+"caption"/>
+  <w:LsdException Locked=3D"false" Priority=3D"10" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Title"/>
+  <w:LsdException Locked=3D"false" Priority=3D"1" Name=3D"Default Paragraph=
+ Font"/>
+  <w:LsdException Locked=3D"false" Priority=3D"11" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtitle"/>
+  <w:LsdException Locked=3D"false" Priority=3D"22" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Strong"/>
+  <w:LsdException Locked=3D"false" Priority=3D"20" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"59" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Table Grid"/>
+  <w:LsdException Locked=3D"false" UnhideWhenUsed=3D"false" Name=3D"Placeho=
+lder Text"/>
+  <w:LsdException Locked=3D"false" Priority=3D"1" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"No Spacing"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" UnhideWhenUsed=3D"false" Name=3D"Revisio=
+n"/>
+  <w:LsdException Locked=3D"false" Priority=3D"34" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"List Paragraph"/>
+  <w:LsdException Locked=3D"false" Priority=3D"29" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Quote"/>
+  <w:LsdException Locked=3D"false" Priority=3D"30" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Quote"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"19" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"21" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"31" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Reference"/>
+  <w:LsdException Locked=3D"false" Priority=3D"32" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Reference"/>
+  <w:LsdException Locked=3D"false" Priority=3D"33" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Book Title"/>
+  <w:LsdException Locked=3D"false" Priority=3D"37" Name=3D"Bibliography"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" QFormat=3D"true" Name=3D=
+"TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-ansi-language:EN-IN;}
+</style>
+<![endif]-->
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-top:0in;margin-right:9.0p=
+t;margin-bottom:0in;margin-left:0in;margin-bottom:.0001pt;text-align:center=
+;line-height:normal" align=3D"center"><b><u><span style=3D"font-size:16.0pt=
+;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-fa=
+mily:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color:black=
+;mso-themecolor:text1" lang=3D"EN-IN">International Journal Of Information =
+Research And Review</span></u></b></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-top:0in;margin-right:9.0p=
+t;margin-bottom:0in;margin-left:0in;margin-bottom:.0001pt;text-align:center=
+;line-height:normal" align=3D"center"><b><u><span style=3D"font-size:16.0pt=
+;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-fa=
+mily:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color:black=
+;mso-themecolor:text1" lang=3D"EN-IN"><span style=3D"text-decoration:none">=
+<br></span></span></u></b></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-top:0in;margin-right:9.0p=
+t;margin-bottom:0in;margin-left:0in;margin-bottom:.0001pt;text-align:center=
+;line-height:normal" align=3D"center"><b><u><span style=3D"font-size:12.0pt=
+;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-bidi-font-famil=
+y:&quot;Times New Roman&quot;;color:black;mso-themecolor:text1" lang=3D"EN-=
+IN">www.ijirr.com</span></u></b><b><u><span style=3D"font-size:16.0pt;font-=
+family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&=
+quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color:black;mso-t=
+hemecolor:text1" lang=3D"EN-IN"></span></u></b></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto;text-align:center;line-height:normal" align=3D"center"><=
+span style=3D"font-size:12.0pt;font-family:&quot;Verdana&quot;,&quot;sans-s=
+erif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-fon=
+t-family:Helvetica;color:black;mso-themecolor:text1" lang=3D"EN-IN">ISSN
+(Online):&nbsp;2349-9141</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto;margin-left:.25in;text-align:center;line-height:normal" =
+align=3D"center"><span style=3D"font-size:12.0pt;font-family:&quot;Verdana&=
+quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&=
+quot;;mso-bidi-font-family:Helvetica;color:black;mso-themecolor:text1" lang=
+=3D"EN-IN">Topics &amp; Discipline: </span><span style=3D"font-size:12.0pt;=
+font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-fam=
+ily:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&=
+quot;;color:black;mso-themecolor:text1" lang=3D"EN-IN">All
+disciplines of Science, Engineering and Technology, Medicine, Social Scienc=
+es</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto;margin-left:.25in;text-align:center;line-height:normal" =
+align=3D"center"><span style=3D"font-size:12.0pt;font-family:&quot;Verdana&=
+quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&=
+quot;;mso-bidi-font-family:Helvetica;color:black;mso-themecolor:text1" lang=
+=3D"EN-IN">Journal Impact Factor 2018: 5.325</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto;margin-left:.25in;line-height:normal"><span style=3D"fon=
+t-size:12.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fa=
+reast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetic=
+a;color:black;mso-themecolor:text1" lang=3D"EN-IN">This journal
+covers all the current issues and practices in the field of library,
+information and management, information production; economics of informatio=
+n;
+information user's needs and seeking patterns; information sources and
+services; information and knowledge management; library and information sci=
+ence
+education; curriculum framework; curriculum development; training, research=
+ and
+development in LIS education; digital library; technological advancement;
+collection development and management etc. This journal keeps professionals
+abreast of the current research and development in the field of library,
+information and management (LIM).</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-bottom:0in;margin-bottom:=
+.0001pt;text-align:justify;line-height:normal"><span style=3D"font-size:12.=
+0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font=
+-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color:bl=
+ack;mso-themecolor:text1" lang=3D"EN-IN"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp; </span>FAST PUBLICATION: INDEXING JOURNAL</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-bottom:0in;margin-bottom:=
+.0001pt;text-align:justify;line-height:normal"><span style=3D"font-size:12.=
+0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font=
+-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color:bl=
+ack;mso-themecolor:text1" lang=3D"EN-IN">&nbsp;</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-bottom:0in;margin-bottom:=
+.0001pt;text-align:justify;line-height:normal"><b><span style=3D"font-size:=
+12.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-f=
+ont-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color=
+:black;mso-themecolor:text1" lang=3D"EN-IN"><span>&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp; </span>Volume-06, Issue-07, </span></b><b><span style=3D"font-size:12=
+.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-fon=
+t-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New R=
+oman&quot;;color:black;mso-themecolor:text1" lang=3D"EN-IN">July</span></b>=
+<b><span style=3D"font-size:12.0pt;font-family:&quot;Verdana&quot;,&quot;sa=
+ns-serif&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black=
+;mso-themecolor:text1" lang=3D"EN-IN">-2019</span></b><span style=3D"font-s=
+ize:12.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-farea=
+st-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;c=
+olor:black;mso-themecolor:text1" lang=3D"EN-IN"></span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto;margin-left:.25in;text-align:justify;line-height:normal"=
+><span style=3D"font-size:12.0pt;font-family:&quot;Verdana&quot;,&quot;sans=
+-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-f=
+ont-family:Helvetica;color:black;mso-themecolor:text1" lang=3D"EN-IN">Notif=
+ication of Acceptance<b>:&nbsp;</b>Within 12 Hours</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto;margin-left:.25in;text-align:justify;line-height:normal"=
+><span style=3D"font-size:12.0pt;font-family:&quot;Verdana&quot;,&quot;sans=
+-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-f=
+ont-family:Helvetica;color:black;mso-themecolor:text1" lang=3D"EN-IN">Publi=
+cation Time<b>:&nbsp;</b>Within 24 to 48 Hours</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto;margin-left:.25in;text-align:justify;line-height:normal"=
+><span style=3D"font-size:12.0pt;font-family:&quot;Verdana&quot;,&quot;sans=
+-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-f=
+ont-family:Helvetica;color:black;mso-themecolor:text1" lang=3D"EN-IN">E-Cer=
+tificates<b>:&nbsp;</b>Immediately after publication</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto;margin-left:.25in;text-align:justify;line-height:normal"=
+><span style=3D"font-size:12.0pt;font-family:&quot;Verdana&quot;,&quot;sans=
+-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-f=
+ont-family:Helvetica;color:black;mso-themecolor:text1" lang=3D"EN-IN">Publi=
+cation Frequency: 12 Issues per Year</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-bottom:12.0pt;text-align:=
+justify;line-height:normal"><span style=3D"font-size:12.0pt;font-family:&qu=
+ot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times=
+ New Roman&quot;;mso-bidi-font-family:Helvetica;color:black;mso-themecolor:=
+text1" lang=3D"EN-IN">Submit your Research and Review articles to:
+articles@ijirr.com<br>
+<br>
+http://ijirr.com/submit-article<br>
+<br>
+With regards</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-bottom:0in;margin-bottom:=
+.0001pt;text-align:justify;line-height:normal"><span style=3D"font-size:12.=
+0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font=
+-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color:bl=
+ack;mso-themecolor:text1" lang=3D"EN-IN">Editor =E2=80=93 International
+Journal of Information Research and Review</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-bottom:0in;margin-bottom:=
+.0001pt;text-align:justify;line-height:normal"><span style=3D"font-size:12.=
+0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font=
+-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color:bl=
+ack;mso-themecolor:text1" lang=3D"EN-IN">&nbsp;</span></p>
+
+<p class=3D"ydp26602062MsoNormal" style=3D"margin-bottom:0in;margin-bottom:=
+.0001pt;text-align:justify;line-height:normal"><span style=3D"font-size:12.=
+0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font=
+-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Helvetica;color:bl=
+ack;mso-themecolor:text1" lang=3D"EN-IN">Contact-
+ijirr.com@gmail.com, articles@ijirr.com</span></p>
+
+</div><div><br></div></div></div></body></html>=
+
+------=_Part_2159160_205600442.1563338373840--

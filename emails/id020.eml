@@ -1,0 +1,361 @@
+Received: from BN7PR08MB6052.namprd08.prod.outlook.com (2603:10b6:a03:40::30)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0017.NAMPRD04.PROD.OUTLOOK.COM; Tue, 10 Sep 2019 14:00:12 +0000
+Received: from DM5PR08CA0026.namprd08.prod.outlook.com (2603:10b6:4:60::15) by
+ BN7PR08MB6052.namprd08.prod.outlook.com (2603:10b6:408:36::17) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2241.20; Tue, 10 Sep 2019 14:00:10 +0000
+Received: from CO1NAM04FT045.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::205) by DM5PR08CA0026.outlook.office365.com
+ (2603:10b6:4:60::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2241.15 via Frontend
+ Transport; Tue, 10 Sep 2019 14:00:10 +0000
+Authentication-Results: spf=pass (sender IP is 209.119.5.133)
+ smtp.mailfrom=LISTSERV.ACM.ORG; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=bestguesspass action=none
+ header.from=acm.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of LISTSERV.ACM.ORG
+ designates 209.119.5.133 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.119.5.133;
+ helo=acm-x.mta.lsoft.us;
+Received: from acm-x.mta.lsoft.us (209.119.5.133) by
+ CO1NAM04FT045.mail.protection.outlook.com (10.152.91.195) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2241.14 via Frontend Transport; Tue, 10 Sep 2019 14:00:08 +0000
+Return-Path:
+ owner-nolist-ACMLPX-190808BH-ov8ia944*foaad**CALPOLY*-EDU@LISTSERV.ACM.ORG
+Received: from [209.119.0.3] ([209.119.0.3:56895] helo=LOIRE)
+	by tesla.dc.lsoft.com (envelope-from <owner-nolist-ACMLPX-190808BH-ov8ia944*foaad**CALPOLY*-EDU@listserv.acm.org>)
+	(ecelerity 4.2.38.62370 r(:)) with ESMTP
+	id 1A/08-22886-36CA77D5; Tue, 10 Sep 2019 10:00:03 -0400
+To: foaad@CALPOLY.EDU
+Date: Tue, 10 Sep 2019 10:00:01 -0400 (EDT)
+From: "Kevin Crowston, ACM TSC Editor-in-Chief" <pubs@acm.org>
+Message-ID: <2175-325572386.60.1568124003218@ORANGE.hosting.lsoft.com>
+Subject: ACM TSC Call for Papers
+Content-Type: multipart/alternative;
+ boundary="----=_Part_58_58833731.1568124001873"
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Sep 2019 14:00:09.7990
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ a00a0a9e-1d15-493a-276e-08d735f73163
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:209.119.5.133;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(979002)(4636009)(2980300002)(286005)(189003)(199004)(5142003)(298455003)(606006)(9686003)(6306002)(26005)(16586007)(16003)(236005)(106002)(18926415008)(75640400001)(14444005)(356004)(85226003)(76236002)(71190400001)(4006050)(2171002)(1096003)(966005)(336012)(476003)(126002)(2361001)(6916009)(51815007)(66574012)(8676002)(246002)(733005)(2351001)(486006)(7636002)(7596002)(956004)(225293001)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB6052;H:acm-x.mta.lsoft.us;FPR:;SPF:Pass;LANG:en;PTR:acm-x.mta.lsoft.us;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT045.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: a00a0a9e-1d15-493a-276e-08d735f73163
+X-Microsoft-Antispam:
+ BCL:3;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(4709080)(1414054)(71702078);SRVR:BN7PR08MB6052;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB6052:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Sep 2019 14:00:08.4689
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a00a0a9e-1d15-493a-276e-08d735f73163
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB6052
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.4265855
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2263.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?bgLQR0n07dLFZOm5UefX4Avql46hhspA+MnaFx+7h7I85nRmB9A42tnp?=
+ =?Windows-1252?Q?lR+9vEokzI3nd0fRwbG5FnAVv+Aq75rWgk8ttYwOfPJZew7WHqtx+/T4?=
+ =?Windows-1252?Q?H1/GYVdMvjnFkRdaTlD9yjGRbrlsjqYIPQzzPK7xFQXsB0UPgkILMWck?=
+ =?Windows-1252?Q?/xhFrXDMS1f/2kuytwIH7WltmNy9tAuwQna99A5ZHSNf2fCjUX0rpV+G?=
+ =?Windows-1252?Q?X/W5OMqfY9KjnW9qVux6FD2tnqhEZAC7/ENb/41dmqpnVTT3PzhN2FcP?=
+ =?Windows-1252?Q?li4HUaqxCtACq9vLU/n3cK9T/5pZeMaZ11iDNCu28WF5n5pk2Y4zPi2V?=
+ =?Windows-1252?Q?jZlUPd3FQqlfDQDWTFAgN/UqoMRxz74jXUxkw5gDxO61FBu00ACtQHWu?=
+ =?Windows-1252?Q?I61+2dBy8qcTE84KBwr5RxqgyWdJzJipHZWQvbRH+wu1uVmNScyq03lw?=
+ =?Windows-1252?Q?KEJ96vj+fmT8phh+Up9TPMC1/xAnh/a18H+tDbteGRT0ar8+CLjsp3Ft?=
+ =?Windows-1252?Q?gDSy8Mqz4R1/VhY0yUwx+0kQPKZ37z4Zzjrk/lrW7A2EsC/IaGeyLMMG?=
+ =?Windows-1252?Q?JLYow+bQWZJMLCSBxjCyEKKqXDlD/aD/UNFiDr27w72W8ZyHhaFCOQbh?=
+ =?Windows-1252?Q?GtQuZZ1NcwQYhqz/Hg5HsDoZ1/ZflF7LwEpBT6wLvgLizaDyRZyguhV6?=
+ =?Windows-1252?Q?TRAsOJGLo82K8ZZHOcHs3TMzJyheK4KeQvHx5CJDH2fM1sIuImzU4t1r?=
+ =?Windows-1252?Q?6HoQL3CPisrNNgXWWTz53WfqyG3Gcl2hKmbWfOjyEGwweInkYqKjqkmJ?=
+ =?Windows-1252?Q?6PtaEid/k3VSJ9NmL6d2EYbQ9GRFPYlTrvercEuhnqPQ3v0vMyo3VB+t?=
+ =?Windows-1252?Q?yWN/oVGlrE0KmILM+q9GUAjek2oQvmQB5RyO2A6OkYIWD/Bwe7T20tDS?=
+ =?Windows-1252?Q?GwstttVrEuGj54iL5YFHn5y2Gb68MMAYnFIVP+8u81t8fKEGUbA1pUnT?=
+ =?Windows-1252?Q?54+y6mkIRlmm++JX4dMr86Cc8Q9JKhWZ6aoAqDhVv3qXRzmEP4F9YbZW?=
+ =?Windows-1252?Q?DxMNX2CCvBLY+aGH89GZrC/dOWRztjXC+9cBzWiY31arvHNVmJXRQCxY?=
+ =?Windows-1252?Q?HdA=3D?=
+MIME-Version: 1.0
+
+------=_Part_58_58833731.1568124001873
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+CALL FOR PAPERS   =20
+    =20
+ACM Transactions on Social Computing      =20
+       =20
+Editor-in-Chief   =20
+- Kevin Crowston, Syracuse University, USA        =20
+           =20
+-----------------------------------------------------------------------    =
+=20
+Information For Contributors   =20
+   =20
+ACM Transactions on Social Computing (TSC) seeks to publish work that cover=
+s the full spectrum of social computing including theoretical, empirical, s=
+ystems, and design research contributions. The editorial perspective is tha=
+t social computing is fundamentally about computing systems and techniques =
+in which users interact, directly or indirectly, with what they believe to =
+be other users or other users' contributions. TSC welcomes research employi=
+ng a wide range of methods to advance the tools, techniques, understanding,=
+ and practice of social computing, including: theoretical, algorithmic, emp=
+irical, experimental, qualitative, quantitative, ethnographic, design, and =
+engineering research. Social computing will continue to be shaped by founda=
+tional algorithmic, econometric, psychological, sociological, and social sc=
+ience research and these broad based perspectives will continue to have a p=
+rofound influence on how social computing systems are designed, built and h=
+ow they grow.   =20
+   =20
+TSC particularly solicits research that designs, implements or studies syst=
+ems that mediate social interactions among users, or that develops or studi=
+es theory or techniques for application in those systems. Examples of such =
+social computing systems include, but are not limited to: instant messaging=
+, blogs, wikis, social networks, social tagging, social recommenders, colla=
+borative editors and shared repositories.  =20
+  =20
+To illustrate the scope, we provide examples of research covered within TSC=
+:  =20
+  =20
+Theoretical  =20
+  * Foundational algorithmic analyses that account for human and machine da=
+ta and runtime complexity.  =20
+  * The influence of scale; how differing scales of human and machine parti=
+cipation changes the designs and adoptions of systems.  =20
+  =20
+Empirical  =20
+  * Motivations for contributing to and participating in social computing s=
+ystems, both intrinsic and extrinsic.  =20
+  * Communications patterns in online communication forums.  =20
+  * Ethnographic studies of social computing in situ.  =20
+  =20
+Policy  =20
+  * Social impacts of social computing use, such as Internet addiction or s=
+pread of misinformation, leading to recommendations to mitigate harms and e=
+nhance benefits.  =20
+  * Ethical and policy issues in social computing.  =20
+  =20
+Design  =20
+  * Tools that help users understand the individual and collective roles of=
+ participants in social computing systems.  =20
+  * Algorithms for personalization within a social computing context, inclu=
+ding recommender systems and social matchmaking systems.  =20
+  * Security and privacy mechanisms-both formal and interactive-related to =
+social computing data and systems.  =20
+  * The roles of artificial agents (aka bots) in social computing spaces, i=
+ncluding the design, creation and management of those agents relative to so=
+cial interactions within a social computing system.  =20
+  =20
+Systems  =20
+  * System architectures and infrastructure for developing social computing=
+ platforms.  =20
+  * Micro-tasking systems based on techniques for decomposing complex activ=
+ities into recomposable tasks that can be completed by mixtures of people a=
+nd machines.  =20
+  * Crowdsourcing, collaborative content creation, productive social gaming=
+ or citizen science systems that include mechanisms to aggregate individual=
+ contributions for a collective goal.  =20
+  =20
+Methodological  =20
+  * Algorithms and approaches for extracting knowledge from social computin=
+g usage data and artifacts.  =20
+  =20
+To submit your manuscript, visit https://mc.manuscriptcentral.com/tsc or co=
+ntact the Editor-in-Chief at crowston@syr.edu.  =20
+  =20
+------------------------------------------------------------------------   =
+ =20
+   =20
+To stop receiving emails about publishing in ACM journals, unsubscribe at: =
+        =20
+https://optout.acm.org/unsubscribe.cfm?re=3Dfoaad@calpoly.edu&rl=3DCFP   =
+=20
+    =20
+Association for Computing Machinery             =20
+1601 Broadway, 10th Floor, New York, NY 10019-7434, USA              =20
+Copyright 2019, ACM, Inc.   =20
+------=_Part_58_58833731.1568124001873
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+    <title>Call for Papers</title>
+    <meta name=3D"googlebot" content=3D"noindex, noarchive, nofollow">
+
+
+  </head>
+ =20
+  <body style=3D"font-family: verdana, tahoma, geneva, arial; font-size: 12=
+px; line-height: 1.2; color: #333333; text-align:center"><!--[if gte mso 15=
+]><table border=3D'0' cellpadding=3D'0' cellspacing=3D'0' width=3D'100%' al=
+ign=3D'left'><tr><td><![endif]-->
+ =20
+  <table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"2" wi=
+dth=3D"670">
+  =09
+    	<tbody><tr><td>
+       =20
+        	<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"670">
+            	<tbody><tr align=3D"left" valign=3D"top">
+                	<td colspan=3D"2" height=3D"10"></td>
+                </tr>
+
+				<tr align=3D"left" valign=3D"top">
+                	<!-- main body -->  =20
+					<td width=3D"650" style=3D"padding: 10px;">
+						<!-- header --><img src=3D"http://www.acm.org/binaries/content/galler=
+y/acm/plone-images/acm_logo1.gif" width=3D"250" height=3D"" border=3D"0" al=
+ign=3D"right" alt=3D""></a><br>
+   <div style=3D"font-family: verdana, arial; font-size: 14px; font-weight:=
+ lighter; color: #000000;">CALL FOR PAPERS<br>  </div>   <br>         =20
+					<div style=3D"font-family: verdana, arial; font-size: 18px; font-weigh=
+t: bolder; color: #000000;line-height: 1.5em;">ACM Transactions on Social C=
+omputing<br></div>
+	<!--<div style=3D"font-family: verdana, arial; font-size: 14px; font-weigh=
+t: normal; color: #000000;"><em></em><br>--><br>
+	=09
+		<div style=3D"font-family: verdana, arial; font-size: 11px; color: #00000=
+0; line-height: 1.4em;"><strong>Editor-in-Chief</strong>
+
+	<br>
+			<b>Kevin Crowston</b>, Syracuse University, USA<br><br>
+
+</div>
+
+<!-- end of header --><hr>
+						<!--<img src=3D"http://www.acm.org/binaries/content/gallery/acm/newsl=
+etters/JPG" alt=3D"" width=3D"150" height=3D"" vspace=3D"10" hspace=3D"20" =
+border=3D"0" align=3D"right"><br>-->
+
+<div style=3D"font-family: verdana, arial; font-size: 12px; font-weight: no=
+rmal; color: #000000; line-height: 1.7em; vertical-align:top;">
+<!-- story --><br>
+	<b>Information For Contributors</b><br><br>
+<em>ACM Transactions on Social Computing</em> (TSC) seeks to publish work t=
+hat covers the full spectrum of social computing including theoretical, emp=
+irical, systems, and design research contributions. The editorial perspecti=
+ve is that social computing is fundamentally about computing systems and te=
+chniques in which users interact, directly or indirectly, with what they be=
+lieve to be other users or other users' contributions. TSC welcomes researc=
+h employing a wide range of methods to advance the tools, techniques, under=
+standing, and practice of social computing, including: theoretical, algorit=
+hmic, empirical, experimental, qualitative, quantitative, ethnographic, des=
+ign, and engineering research. Social computing will continue to be shaped =
+by foundational algorithmic, econometric, psychological, sociological, and =
+social science research and these broad based perspectives will continue to=
+ have a profound influence on how social computing systems are designed, bu=
+ilt and how they grow.<br><br>
+=09
+TSC particularly solicits research that designs, implements or studies syst=
+ems that mediate social interactions among users, or that develops or studi=
+es theory or techniques for application in those systems. Examples of such =
+social computing systems include, but are not limited to: instant messaging=
+, blogs, wikis, social networks, social tagging, social recommenders, colla=
+borative editors and shared repositories.<br><br>
+=09
+To illustrate the scope, we provide examples of research covered within TSC=
+:<br><br>
+=09
+Theoretical
+	<ul>
+	<li>Foundational algorithmic analyses that account for human and machine d=
+ata and runtime complexity.</li>
+<li>The influence of scale; how differing scales of human and machine parti=
+cipation changes the designs and adoptions of systems.</li>
+		</ul>
+=09
+Empirical
+	<ul>
+<li>Motivations for contributing to and participating in social computing s=
+ystems, both intrinsic and extrinsic.</li>
+<li>Communications patterns in online communication forums.</li>
+<li>Ethnographic studies of social computing in situ.</li>
+	</ul>
+Policy
+		<ul>
+<li>Social impacts of social computing use, such as Internet addiction or s=
+pread of misinformation, leading to recommendations to mitigate harms and e=
+nhance benefits.</li>
+<li>Ethical and policy issues in social computing.</li>
+	</ul>
+Design
+			<ul>
+<li>Tools that help users understand the individual and collective roles of=
+ participants in social computing systems.</li>
+<li>Algorithms for personalization within a social computing context, inclu=
+ding recommender systems and social matchmaking systems.</li>
+<li>Security and privacy mechanisms&#8212;both formal and interactive&#8212=
+;related to social computing data and systems.</li>
+<li>The roles of artificial agents (aka bots) in social computing spaces, i=
+ncluding the design, creation and management of those agents relative to so=
+cial interactions within a social computing system.</li>
+	</ul>
+Systems
+				<ul>
+<li>System architectures and infrastructure for developing social computing=
+ platforms.</li>
+<li>Micro-tasking systems based on techniques for decomposing complex activ=
+ities into recomposable tasks that can be completed by mixtures of people a=
+nd machines.</li>
+<li>Crowdsourcing, collaborative content creation, productive social gaming=
+ or citizen science systems that include mechanisms to aggregate individual=
+ contributions for a collective goal.</li>
+	</ul>
+Methodological
+					<ul>
+<li>Algorithms and approaches for extracting knowledge from social computin=
+g usage data and artifacts.</li></ul><br>
+
+To submit your manuscript, visit <a href=3D"https://orange.hosting.lsoft.co=
+m/trk/click?ref=3Dznwrbbrs9_6-2173ax3166adx01030&amp;">mc.manuscriptcentral=
+.com/tsc</a> or contact the Editor-in-Chief at <a href=3D"crowston@syr.edu"=
+>crowston@syr.edu</a>.<br><br>
+<hr>
+
+<table border=3D"0" cellpadding=3D"0px" width=3D"700">=09
+		<tr>
+			<td colspan=3D"2">
+						</td></tr>
+						</table>
+			  =20
+<!-- story -->      =20
+
+	<div style=3D"font-family: verdana, tahoma, geneva, arial; font-size: 10px=
+; font-weight: bolder; color: #505050; text-align:center"><a href=3D"https:=
+//optout.acm.org/unsubscribe.cfm?re=3Dfoaad@calpoly.edu&amp;rl=3DCFP">UNSUB=
+SCRIBE</a> to stop receiving emails about publishing in ACM journals.<br><b=
+r>
+Association for Computing Machinery<br> 1601 Broadway, 10th Floor, New York=
+, NY 10019-7434, USA<br>=20
+Copyright 2019, ACM, Inc.                                  =20
+                      =20
+                    </div><!-- end of story -->
+                    </div></td><!-- end of main body -->
+                  =20
+				</tr>
+            </tbody></table>
+			</div></div></div></td>
+		</tr>
+	</tbody></table>
+=09
+</td></tr></tbody></table><!--[--><img src=3D"https://orange.hosting.lsoft.=
+com/trk/open?ref=3Dznwrbbrs9_6-2173ax01030" width=3D"1" height=3D"1"><!--]-=
+-><!--[if gte mso 15]></td></tr></table><![endif]--></body></html>=
+
+------=_Part_58_58833731.1568124001873--

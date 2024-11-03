@@ -1,0 +1,558 @@
+Received: from BY5PR08MB6199.namprd08.prod.outlook.com (2603:10b6:a03:94::16)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0039.PROD.EXCHANGELABS.COM; Fri, 16 Aug 2019 07:04:15 +0000
+Received: from CH2PR08CA0019.namprd08.prod.outlook.com (2603:10b6:610:5a::29)
+ by BY5PR08MB6199.namprd08.prod.outlook.com (2603:10b6:a03:1e8::9) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2178.16; Fri, 16 Aug
+ 2019 07:04:13 +0000
+Received: from CO1NAM04FT058.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::202) by CH2PR08CA0019.outlook.office365.com
+ (2603:10b6:610:5a::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2157.18 via Frontend
+ Transport; Fri, 16 Aug 2019 07:04:12 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.196)
+ smtp.mailfrom=gmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=gmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.208.196 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.196; helo=mail-lj1-f196.google.com;
+Received: from mail-lj1-f196.google.com (209.85.208.196) by
+ CO1NAM04FT058.mail.protection.outlook.com (10.152.91.93) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2178.16 via Frontend Transport; Fri, 16 Aug 2019 07:04:12 +0000
+Received: by mail-lj1-f196.google.com with SMTP id t14so4415225lji.4
+        for <foaad@calpoly.edu>; Fri, 16 Aug 2019 00:04:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=5ZTUx0raT0jvRKIWQmpbjZ/rpBhx8MkFlQXwpeklR2s=;
+        b=kSRtrJBky1BG17+1Ed4CKpfbPJnjFdWwypVImhmZOf6L8HSXvEOiMJwZ/DZPc8NZqM
+         M5t64q4bgg9dKNqc+yOL5Lp167FS45XCEOLAR30deMMsYMvItuGtm3IW+rn5zVS4CJ7u
+         erHvyJkoqeOZJankPyblBacjCiFMFZcUtZe2M1HdhEIN5a0z/TuL2UFMYI4YMeoJDgug
+         Ro3hFTRDGDRHzgn/v02B8O5nQ/ZDd1nEQl7HZlnybLP9VgOYytiSqP7ObTmIKrU8T3BB
+         7G3zEKEMUh0A7z7VjFAgvXO4Nz1+z1wldTWDsTBaFtX+YnFPir4ZpTkrp4EPvzJUEIqg
+         BDMw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=5ZTUx0raT0jvRKIWQmpbjZ/rpBhx8MkFlQXwpeklR2s=;
+        b=GBjMHBLyuK+b1dSuGMzreV1YSzT9/ArNBx71Ab1t15VMzrH9sqaIGocnyjtD5cEfEO
+         U7PnkI7wm4i0f4wQTe8dpBJf+46oYe7EQwXf6Z8Ap7apjL4eyJ4Q1u9AhsQu2OtdZLtb
+         34m1Eq/6btQvDSoqohES2Eg6VDvHME/U9WIybL2FaGsMsbQmkHcZo1AEUnPSjNpmrSA2
+         7WlsQ4p8km6RyHv4CnxZPWFvOXkfOfGPZfwFcByDqFuWg4kEI27ZULFeMzXNq6imScxd
+         Q6IxYooLav7m4N8DTgfcgh8Od2eR/RuB2TrZqfnTh+q4teAjJRMhbh+FjWwwoH59mbuk
+         Dlaw==
+X-Gm-Message-State: APjAAAXITj9U8RY7S1VeieLhsWNfYz5iopyeTWBm1SxjC8x/teG/hryT
+	PjmLKjLtFnuqdMuOfCc8cJ5hj45HVnnbnkdJgdZqYyo3
+X-Google-Smtp-Source: APXvYqyErhvTrWueE+pTZ5JqMc1w3PU8anpCZO7DYUrVXacED+BT1sdZ6L1lB7vqahULYfPpMyO2aebhIV3XG5/7vaU=
+X-Received: by 2002:a2e:7018:: with SMTP id l24mr4588945ljc.165.1565939050648;
+ Fri, 16 Aug 2019 00:04:10 -0700 (PDT)
+From: ijarcs publications <ijarcsp@gmail.com>
+Date: Fri, 16 Aug 2019 12:34:07 +0530
+Message-ID: <CABBK+=cbLkzSFdSi5K7vo11+Jq1R5OXoX2Ze46-14K+hP09KUQ@mail.gmail.com>
+Subject: IJARCS Volume 10 Issue 4, July-August 2019 Notification
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="000000000000da99090590369872"
+Return-Path: ijarcsp@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 16 Aug 2019 07:04:12.6560
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 0b4d0440-fbcf-4b77-9a06-08d72217f171
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132104126526590795;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.196;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(2980300002)(209900001)(10913002)(31014005)(10533003)(199004)(189003)(2420400007)(15650500001)(8576002)(246002)(5660300002)(86362001)(7596002)(305945005)(75640400001)(236005)(6916009)(7636002)(498394004)(6306002)(4006050)(58800400005)(486006)(82202003)(26005)(476003)(126002)(73392003)(22186003)(33964004)(336012)(42186006)(53386004)(2171002)(1096003)(606006)(71190400001)(356004)(5070765005)(16586007)(6666004)(16003)(95326003)(76482006)(14444005)(2361001)(15974865002)(2351001)(61266001)(2160300002)(8676002)(55446002)(59536001)(16350225007)(106002)(6606295002);DIR:INB;SFP:;SCL:1;SRVR:BY5PR08MB6199;H:mail-lj1-f196.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-lj1-f196.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT058.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 0b4d0440-fbcf-4b77-9a06-08d72217f171
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:BY5PR08MB6199;
+X-MS-TrafficTypeDiagnostic: BY5PR08MB6199:
+X-MS-Exchange-PUrlCount: 2
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 Aug 2019 07:04:12.6320
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0b4d0440-fbcf-4b77-9a06-08d72217f171
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY5PR08MB6199
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8010621
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2178.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cHJCSHJhQUVDWEN0c3JzRGlmeHVZOXFSUmdVK21TRHVuSDJ6elVDblFsaWNV?=
+ =?utf-8?B?VmxIS1dDQVhod3gwajB3eUFUcFRnbHJQZ0Vrd2IxQUs2TTB3cU9GeHY2OU9i?=
+ =?utf-8?B?SUQ2TWtwMERTZVVMaUJSZGZWSVJPdWJ4SmJnTHlsbmJzUnFwbXB0d1IxRzR2?=
+ =?utf-8?B?VUFkNW5VVTM3QnZERENUU3BJTmpSdldVUzdIS3ArR1RBdzRBK3JaOXAxRmRG?=
+ =?utf-8?B?N0pCZkNkUS9pMzFyU3UydUdVSUEwaGhHeEdMUjdzUVVic2NOc0Y5c0h6TVhm?=
+ =?utf-8?B?bEVZc3VWUnF3Z3JBcjgvUVRWcERLR2JjMlR1U3dYZnNGWTRlRmF3OEZtdTk2?=
+ =?utf-8?B?RmhIR3FUZTc0Rk92emZLbFBDMkd2L0RDWFIrOHFVcjZmZThMR3VUOWt6TjVN?=
+ =?utf-8?B?RktYWGJ2Mlh3SWV4eWhjNjFBOVJsd054R3UzOUlMNFpCTTltMEZXSGRmb1A5?=
+ =?utf-8?B?YU5zcXlVZDdNdDdOZzFPdURvZUF0dGtGbU1kTWQwNjJlY0VQUXFNOGFkZkFR?=
+ =?utf-8?B?SXJHUk03SG82NDkvMVFxWUtjbUV0TCtwUXZwZ1VQK1MyUFVzdkdLSU8wWVB2?=
+ =?utf-8?B?MllHaXNBWTFodXYvckFUMlV4czhWc09KS0RZQWJQNFFWc0tCcXg2REo4K2oz?=
+ =?utf-8?B?YVg1U045SStDMGo0bW1ZbWtIQ3IyRzE5cFZ5SVJRbEtsbzUzZ1RyOXVyN3Jp?=
+ =?utf-8?B?VmJJZHZNc1RPQ0VQZlFkRE1mTmI4c3ZBaWtWb3FtSFhjaG03SjYyQXlxbUtS?=
+ =?utf-8?B?eTRLaDU5czdZdVErVjBTcldQdjN2WS91VVhtTThqNEFNb0Ruc2FvNzRFeEFK?=
+ =?utf-8?B?b2kvaUJKMGdxWUoxeDk0c2FhbitHNGdWb3Jqb3YwSGxmTGpZaVc3U3FNUW5E?=
+ =?utf-8?B?VEJVTTdQZHQwSGtEN0xTZ203OGxsam8rdVJDVFdaL0Vnd09rTjA5TThnV3Zv?=
+ =?utf-8?B?SGJpVUs3NEdNZnlxUC96VUtIRzA5bzVxTzVKRGpza1BwM2NYdE5qaUhxRmJN?=
+ =?utf-8?B?WGtBN1EralpiNGsydTVta2trQ2EzY0xZNHVIdTlpZWlDSnZkMnJtQlNrOVhX?=
+ =?utf-8?B?SGc5ZWVOMWJvdlNZcSs0Q09VbUptMm5ZcGNpSGNHSVZES084c3RYTm4vODdk?=
+ =?utf-8?B?cmt1dmFLaXlydmxMTzlVd3U5eXJkdTA3ZGNoZ1VTVVVYT1NuVExCWXZHbFF5?=
+ =?utf-8?B?UGl3Q1M0MFFldTY5RllRdmNjM2dpQ3hpQytKbVZEZUR2d1VUaU1YSkVQLzls?=
+ =?utf-8?B?S3RqbktMZFNMUUgzOEpJVUpsVHJIdU1ZeWRqeGtDS2cvMFNrYSs0SFc1RDNE?=
+ =?utf-8?B?MjkzeWtqcmtuSUhyd09YL0srRzJMa2RQTG4wa2gyOUxlVlA4QU5aa3Y3Vm00?=
+ =?utf-8?B?QkdEcE9vQ2lwSzlNK1lzYVBCVEVlVlA5Q2M3aE1UUGpmaWxsQmE2RWhHWThS?=
+ =?utf-8?B?OEVkTy9rYzl2SmF5a3cxUDdWd1FIMkJMa1JIZ25BPT0=?=
+MIME-Version: 1.0
+
+--000000000000da99090590369872
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*IJARCS Volume 10 Issue 4, July-August  2019  Notification*
+
+
+
+*I**nternational **J**ournal of **A**dvanced **R**esearch in **C**omputer *
+*S**cience (www.ijarcs.info <http://www.ijarcs.info>)*
+
+(IJARCS is now indexed in: *CROSSREF*, EBSCO HOST Index Copernicus, Open J
+Gate, Electronic Journal Library, New Jour, Science central.com, Ulrichs We=
+b,
+Dayang Journal System and many more under process)
+
+*Impact Factors: ICV: 66.64, SJIF: 5.845, ISRA JIF: 3.727, RGIF: 0.29, GIF:
+0.7659*
+
+******** Free DOI no for all published manuscript (July-August 2017
+onwards)*****
+
+
+
+Dear colleagues,
+
+
+
+*International Journal of Advanced Research in Computer Science (IJARCS)* i=
+s
+a CROSSREF indexed, scholarly online, open access, peer-reviewed,
+interdisciplinary, bimonthly, and fully refereed journal focusing on
+theories, methods and applications in computer science and relevant fields.
+It is an international scientific journal that aims to contribute to the
+constant scientific research and training, so as to promote research in the
+field of computer science.
+
+
+
+The journal covers all areas of computer science, like computer
+engineering, computer security, biometrics and bioinformatics, database
+management system Artificial Intelligence, Software Engineering,
+information technology, computational mathematics, and other relevant
+fields. We publish *original research papers, review articles, case
+studies, survey reports and technical notes.*
+
+
+
+*For indexing and impact factors, please visit our website.*
+
+
+
+*Please visit current issue for latest TOC.*
+
+
+
+Please find below the schedule for the launch of Next Issue.
+
+*Volume- 10, Issue- 4, July-August 2019*
+
+*Last date of paper submission*
+
+*10 **August-**-2019*
+
+*Author notification*
+
+*Within 3 days after submission*
+
+*Launch of issue*
+
+*20 **August**-2019*
+
+*Distribution of certificates*
+
+*30 August - 2019*
+
+
+
+
+*Key Features*
+
+=C2=B7         Authors can use IJARCS Sample paper template available onlin=
+e at
+www.ijarcs.info.
+
+=C2=B7         Authors can submit manuscript through online submission
+procedure, available at our website.
+
+=C2=B7         If you are not comfortable with online submission system you=
+ can
+directly mail us your manuscript at ijarcs@gmail.com and
+submission.ijarcs@gmail.com.
+
+=C2=B7         We also provide manuscript preparation support. If you are
+preparing manuscript first time then you can submit your raw paper to us,
+we will help you in paper formatting.
+
+=C2=B7         Free DOI no for all published manuscript (July-August 2017
+onwards).
+
+--000000000000da99090590369872
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0i=
+n 0.0001pt;line-height:15.3333px;background:rgb(219,229,241);font-size:10pt=
+;font-family:&quot;Times New Roman&quot;,serif"><u><span style=3D"font-size=
+:12pt;line-height:18.4px;font-family:Cambria,serif;color:rgb(31,73,125)">IJ=
+ARCS Volume 10 Issue 4, July-August &nbsp;2019&nbsp;&nbsp;Notification</spa=
+n></u><b><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambr=
+ia,serif"></span></b></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0=
+001pt;line-height:15.3333px;background-image:initial;background-position:in=
+itial;background-size:initial;background-repeat:initial;background-origin:i=
+nitial;background-clip:initial;text-align:justify;font-size:10pt;font-famil=
+y:&quot;Times New Roman&quot;,serif"><span style=3D"font-size:12pt;line-hei=
+ght:18.4px;font-family:Cambria,serif;color:rgb(64,64,64)">&nbsp;</span></p>=
+<p class=3D"MsoNormal" align=3D"center" style=3D"margin:0in 0in 0.0001pt;te=
+xt-align:center;font-size:10pt;font-family:&quot;Times New Roman&quot;,seri=
+f"><b><span style=3D"font-size:14pt;color:rgb(0,102,0)">I</span></b><b><spa=
+n style=3D"font-size:12pt;color:rgb(0,102,0)">nternational&nbsp;</span></b>=
+<b><span style=3D"font-size:14pt;color:rgb(0,102,0)">J</span></b><b><span s=
+tyle=3D"font-size:12pt;color:rgb(0,102,0)">ournal of&nbsp;</span></b><b><sp=
+an style=3D"font-size:14pt;color:rgb(0,102,0)">A</span></b><b><span style=
+=3D"font-size:12pt;color:rgb(0,102,0)">dvanced&nbsp;</span></b><b><span sty=
+le=3D"font-size:14pt;color:rgb(0,102,0)">R</span></b><b><span style=3D"font=
+-size:12pt;color:rgb(0,102,0)">esearch in&nbsp;</span></b><b><span style=3D=
+"font-size:14pt;color:rgb(0,102,0)">C</span></b><b><span style=3D"font-size=
+:12pt;color:rgb(0,102,0)">omputer&nbsp;</span></b><b><span style=3D"font-si=
+ze:14pt;color:rgb(0,102,0)">S</span></b><b><span style=3D"font-size:12pt;co=
+lor:rgb(0,102,0)">cience (<a href=3D"http://www.ijarcs.info">www.ijarcs.inf=
+o</a>)</span></b><span style=3D"font-size:12pt;font-family:Arial,sans-serif=
+"></span></p><p class=3D"MsoNormal" align=3D"center" style=3D"margin:0in 0i=
+n 0.0001pt;text-align:center;font-size:10pt;font-family:&quot;Times New Rom=
+an&quot;,serif"><span style=3D"font-size:12pt">(IJARCS is now<b>&nbsp;</b>i=
+ndexed in:&nbsp;<b>CROSSREF</b>, EBSCO HOST&nbsp;</span><span style=3D"font=
+-size:12pt;color:rgb(99,36,35)">Index Copernicus, Open J Gate</span><span s=
+tyle=3D"font-size:12pt">, Electronic Journal Library,&nbsp;</span><span sty=
+le=3D"font-size:12pt;color:rgb(99,36,35)">New Jour</span><span style=3D"fon=
+t-size:12pt">, Science <a href=3D"http://central.com">central.com</a>,&nbsp=
+;</span><span style=3D"font-size:12pt;color:rgb(99,36,35)">Ulrichs Web</spa=
+n><span style=3D"font-size:12pt">, Dayang Journal System and many more unde=
+r process)</span><span style=3D"font-size:12pt;font-family:Arial,sans-serif=
+"></span></p><p align=3D"center" style=3D"margin:0in 0in 0.0001pt;text-alig=
+n:center;background-image:initial;background-position:initial;background-si=
+ze:initial;background-repeat:initial;background-origin:initial;background-c=
+lip:initial;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><=
+b><span style=3D"font-size:10pt;font-family:Verdana,sans-serif;color:red">I=
+mpact Factors: ICV: 66.64, SJIF: 5.845, ISRA JIF: 3.727, RGIF: 0.29, GIF: 0=
+.7659</span></b><span style=3D"font-family:Arial,sans-serif"></span></p><p =
+class=3D"gmail-MsoListParagraph" style=3D"margin:0in 0in 0.0001pt 0.5in;bac=
+kground-image:initial;background-position:initial;background-size:initial;b=
+ackground-repeat:initial;background-origin:initial;background-clip:initial;=
+text-align:justify;font-size:10pt;font-family:&quot;Times New Roman&quot;,s=
+erif"><b><i><span style=3D"font-size:12pt;font-family:Cambria,serif">*****<=
+/span></i></b><b><span style=3D"font-size:12pt;font-family:Cambria,serif">&=
+nbsp;Free DOI no for all published manuscript (July-August 2017 onwards)***=
+*</span></b><b><span style=3D"font-size:12pt;font-family:Cambria,serif"></s=
+pan></b></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-he=
+ight:15.3333px;background-image:initial;background-position:initial;backgro=
+und-size:initial;background-repeat:initial;background-origin:initial;backgr=
+ound-clip:initial;text-align:justify;font-size:10pt;font-family:&quot;Times=
+ New Roman&quot;,serif"><b><span style=3D"font-size:12pt;line-height:18.4px=
+;font-family:Cambria,serif">&nbsp;</span></b></p><p class=3D"MsoNormal" sty=
+le=3D"margin:0in 0in 0.0001pt;line-height:15.3333px;background-image:initia=
+l;background-position:initial;background-size:initial;background-repeat:ini=
+tial;background-origin:initial;background-clip:initial;text-align:justify;f=
+ont-size:10pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D=
+"font-size:12pt;line-height:18.4px;font-family:Cambria,serif;color:rgb(64,6=
+4,64)">Dear colleagues,&nbsp;</span><b><span style=3D"font-size:12pt;line-h=
+eight:18.4px;font-family:Cambria,serif"></span></b></p><p class=3D"MsoNorma=
+l" style=3D"margin:0in 0in 0.0001pt;line-height:15.3333px;background-image:=
+initial;background-position:initial;background-size:initial;background-repe=
+at:initial;background-origin:initial;background-clip:initial;text-align:jus=
+tify;font-size:10pt;font-family:&quot;Times New Roman&quot;,serif"><span st=
+yle=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif">&nbsp;<=
+b></b></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;li=
+ne-height:15.3333px;background-image:initial;background-position:initial;ba=
+ckground-size:initial;background-repeat:initial;background-origin:initial;b=
+ackground-clip:initial;text-align:justify;font-size:10pt;font-family:&quot;=
+Times New Roman&quot;,serif"><strong><span style=3D"font-size:12pt;line-hei=
+ght:18.4px;font-family:Cambria,serif;color:black;background-image:initial;b=
+ackground-position:initial;background-size:initial;background-repeat:initia=
+l;background-origin:initial;background-clip:initial">International Journal =
+of Advanced Research in Computer Science (IJARCS)</span></strong><span clas=
+s=3D"gmail-apple-converted-space"><span style=3D"font-size:12pt;line-height=
+:18.4px;font-family:Cambria,serif;color:black;background-image:initial;back=
+ground-position:initial;background-size:initial;background-repeat:initial;b=
+ackground-origin:initial;background-clip:initial">&nbsp;</span></span><span=
+ style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif;color=
+:black;background-image:initial;background-position:initial;background-size=
+:initial;background-repeat:initial;background-origin:initial;background-cli=
+p:initial">is a CROSSREF indexed, scholarly online, open access, peer-revie=
+wed, interdisciplinary, bimonthly, and fully refereed journal focusing on t=
+heories, methods and applications in computer science and relevant fields. =
+It is an international scientific journal that aims to contribute to the co=
+nstant scientific research and training, so as to promote research in the f=
+ield of computer science.</span></p><p class=3D"MsoNormal" style=3D"margin:=
+0in 0in 0.0001pt;line-height:15.3333px;background-image:initial;background-=
+position:initial;background-size:initial;background-repeat:initial;backgrou=
+nd-origin:initial;background-clip:initial;text-align:justify;font-size:10pt=
+;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"font-size:12=
+pt;line-height:18.4px;font-family:Cambria,serif;color:black"><br><br><span =
+style=3D"background-image:initial;background-position:initial;background-si=
+ze:initial;background-repeat:initial;background-origin:initial;background-c=
+lip:initial">The journal covers all areas of computer science, like compute=
+r engineering, computer security, biometrics and bioinformatics, database m=
+anagement system Artificial Intelligence, Software Engineering, information=
+ technology, computational mathematics, and other relevant fields. We publi=
+sh<span class=3D"gmail-apple-converted-space">&nbsp;</span><strong>original=
+ research papers, review articles, case studies, survey reports and technic=
+al notes.</strong></span></span></p><p class=3D"MsoNormal" style=3D"margin:=
+0in 0in 0.0001pt;line-height:15.3333px;background-image:initial;background-=
+position:initial;background-size:initial;background-repeat:initial;backgrou=
+nd-origin:initial;background-clip:initial;text-align:justify;font-size:10pt=
+;font-family:&quot;Times New Roman&quot;,serif"><strong><span style=3D"font=
+-size:12pt;line-height:18.4px;font-family:Cambria,serif;color:black;backgro=
+und-image:initial;background-position:initial;background-size:initial;backg=
+round-repeat:initial;background-origin:initial;background-clip:initial">&nb=
+sp;</span></strong></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.000=
+1pt;line-height:15.3333px;background-image:initial;background-position:init=
+ial;background-size:initial;background-repeat:initial;background-origin:ini=
+tial;background-clip:initial;text-align:justify;font-size:10pt;font-family:=
+&quot;Times New Roman&quot;,serif"><strong><span style=3D"font-size:12pt;li=
+ne-height:18.4px;font-family:Cambria,serif;color:black;background-image:ini=
+tial;background-position:initial;background-size:initial;background-repeat:=
+initial;background-origin:initial;background-clip:initial">For indexing and=
+ impact factors, please visit our website.</span></strong></p><p class=3D"M=
+soNormal" style=3D"margin:0in 0in 0.0001pt;line-height:15.3333px;background=
+-image:initial;background-position:initial;background-size:initial;backgrou=
+nd-repeat:initial;background-origin:initial;background-clip:initial;text-al=
+ign:justify;font-size:10pt;font-family:&quot;Times New Roman&quot;,serif"><=
+strong><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria=
+,serif;color:black;background-image:initial;background-position:initial;bac=
+kground-size:initial;background-repeat:initial;background-origin:initial;ba=
+ckground-clip:initial">&nbsp;</span></strong></p><p class=3D"MsoNormal" sty=
+le=3D"margin:0in 0in 0.0001pt;line-height:15.3333px;background-image:initia=
+l;background-position:initial;background-size:initial;background-repeat:ini=
+tial;background-origin:initial;background-clip:initial;text-align:justify;f=
+ont-size:10pt;font-family:&quot;Times New Roman&quot;,serif"><strong><span =
+style=3D"font-size:13pt;line-height:19.9333px;font-family:Cambria,serif;col=
+or:rgb(31,73,125);background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial">Please visit current issue for latest TOC.</span></st=
+rong></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-heigh=
+t:15.3333px;background-image:initial;background-position:initial;background=
+-size:initial;background-repeat:initial;background-origin:initial;backgroun=
+d-clip:initial;text-align:justify;font-size:10pt;font-family:&quot;Times Ne=
+w Roman&quot;,serif"><strong><span style=3D"font-size:13pt;line-height:19.9=
+333px;font-family:Cambria,serif;color:rgb(31,73,125);background-image:initi=
+al;background-position:initial;background-size:initial;background-repeat:in=
+itial;background-origin:initial;background-clip:initial">&nbsp;</span></str=
+ong></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height=
+:15.3333px;background-image:initial;background-position:initial;background-=
+size:initial;background-repeat:initial;background-origin:initial;background=
+-clip:initial;text-align:justify;font-size:10pt;font-family:&quot;Times New=
+ Roman&quot;,serif"><span style=3D"font-size:12pt;line-height:18.4px;font-f=
+amily:Cambria,serif">Please find below the schedule for the launch of</span=
+><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif=
+;color:red">&nbsp;Next Issue.</span><b><span style=3D"font-size:12pt;line-h=
+eight:18.4px;font-family:Cambria,serif"></span></b></p><p class=3D"MsoNorma=
+l" align=3D"center" style=3D"margin:0in 0in 12pt;text-align:center;line-hei=
+ght:15.3333px;background-image:initial;background-position:initial;backgrou=
+nd-size:initial;background-repeat:initial;background-origin:initial;backgro=
+und-clip:initial;font-size:10pt;font-family:&quot;Times New Roman&quot;,ser=
+if"><b><span style=3D"font-size:14pt;line-height:21.4667px;font-family:Camb=
+ria,serif;color:red;background-image:initial;background-position:initial;ba=
+ckground-size:initial;background-repeat:initial;background-origin:initial;b=
+ackground-clip:initial">Volume- 10, Issue- 4, July-August 2019</span></b><b=
+><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif=
+"></span></b></p><div align=3D"center"><table class=3D"gmail-MsoNormalTable=
+" border=3D"1" cellspacing=3D"0" cellpadding=3D"0" width=3D"539" style=3D"w=
+idth:404.5pt;background-image:initial;background-position:initial;backgroun=
+d-size:initial;background-repeat:initial;background-origin:initial;backgrou=
+nd-clip:initial"><tbody><tr style=3D"height:15.65pt"><td width=3D"252" styl=
+e=3D"width:188.95pt;border:1pt inset rgb(204,204,204);padding:0in 0in 0in 6=
+.25pt;height:15.65pt"><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001=
+pt;line-height:15.3333px;text-align:justify;font-size:10pt;font-family:&quo=
+t;Times New Roman&quot;,serif"><b><span style=3D"font-size:12pt;line-height=
+:18.4px;font-family:Cambria,serif;color:red">Last date of&nbsp;paper&nbsp;s=
+ubmission</span></b><b><span style=3D"font-size:12pt;line-height:18.4px;fon=
+t-family:Cambria,serif"></span></b></p></td><td width=3D"287" style=3D"widt=
+h:215.55pt;border:1pt inset rgb(204,204,204);padding:0in 0in 0in 6.25pt;hei=
+ght:15.65pt"><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-h=
+eight:15.3333px;text-align:justify;font-size:10pt;font-family:&quot;Times N=
+ew Roman&quot;,serif"><b><span style=3D"font-size:12pt;line-height:18.4px;f=
+ont-family:Cambria,serif;color:red">10<sup>&nbsp;</sup></span></b><b><span =
+style=3D"font-size:14pt;line-height:21.4667px;font-family:Cambria,serif;col=
+or:red;background-image:initial;background-position:initial;background-size=
+:initial;background-repeat:initial;background-origin:initial;background-cli=
+p:initial">August-</span></b><b><span style=3D"font-size:12pt;line-height:1=
+8.4px;font-family:Cambria,serif;color:red">-2019</span></b><b><span style=
+=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif"></span></b=
+></p></td></tr><tr style=3D"height:15.65pt"><td width=3D"252" style=3D"widt=
+h:188.95pt;border:1pt inset rgb(204,204,204);padding:0in 0in 0in 6.25pt;hei=
+ght:15.65pt"><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-h=
+eight:15.3333px;text-align:justify;font-size:10pt;font-family:&quot;Times N=
+ew Roman&quot;,serif"><b><span style=3D"font-size:12pt;line-height:18.4px;f=
+ont-family:Cambria,serif;color:red">Author notification</span></b><b><span =
+style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif"></spa=
+n></b></p></td><td width=3D"287" style=3D"width:215.55pt;border:1pt inset r=
+gb(204,204,204);padding:0in 0in 0in 6.25pt;height:15.65pt"><p class=3D"MsoN=
+ormal" style=3D"margin:0in 0in 0.0001pt;line-height:15.3333px;text-align:ju=
+stify;font-size:10pt;font-family:&quot;Times New Roman&quot;,serif"><b><spa=
+n style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif;colo=
+r:red">Within 3 days after submission</span></b><b><span style=3D"font-size=
+:12pt;line-height:18.4px;font-family:Cambria,serif"></span></b></p></td></t=
+r><tr style=3D"height:15.65pt"><td width=3D"252" style=3D"width:188.95pt;bo=
+rder:1pt inset rgb(204,204,204);padding:0in 0in 0in 6.25pt;height:15.65pt">=
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:15.3333=
+px;text-align:justify;font-size:10pt;font-family:&quot;Times New Roman&quot=
+;,serif"><b><span style=3D"font-size:12pt;line-height:18.4px;font-family:Ca=
+mbria,serif;color:red">Launch of issue</span></b><b><span style=3D"font-siz=
+e:12pt;line-height:18.4px;font-family:Cambria,serif"></span></b></p></td><t=
+d width=3D"287" style=3D"width:215.55pt;border:1pt inset rgb(204,204,204);p=
+adding:0in 0in 0in 6.25pt;height:15.65pt"><p class=3D"MsoNormal" style=3D"m=
+argin:0in 0in 0.0001pt;line-height:15.3333px;text-align:justify;font-size:1=
+0pt;font-family:&quot;Times New Roman&quot;,serif"><b><span style=3D"font-s=
+ize:12pt;line-height:18.4px;font-family:Cambria,serif;color:red">20&nbsp;</=
+span></b><b><span style=3D"font-size:14pt;line-height:21.4667px;font-family=
+:Cambria,serif;color:red;background-image:initial;background-position:initi=
+al;background-size:initial;background-repeat:initial;background-origin:init=
+ial;background-clip:initial">August</span></b><b><span style=3D"font-size:1=
+2pt;line-height:18.4px;font-family:Cambria,serif;color:red">-2019</span></b=
+><b><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,se=
+rif"></span></b></p></td></tr><tr style=3D"height:15.65pt"><td width=3D"252=
+" style=3D"width:188.95pt;border:1pt inset rgb(204,204,204);padding:0in 0in=
+ 0in 6.25pt;height:15.65pt"><p class=3D"MsoNormal" style=3D"margin:0in 0in =
+0.0001pt;line-height:15.3333px;text-align:justify;font-size:10pt;font-famil=
+y:&quot;Times New Roman&quot;,serif"><b><span style=3D"font-size:12pt;line-=
+height:18.4px;font-family:Cambria,serif;color:red">Distribution of certific=
+ates</span></b></p></td><td width=3D"287" style=3D"width:215.55pt;border:1p=
+t inset rgb(204,204,204);padding:0in 0in 0in 6.25pt;height:15.65pt"><p clas=
+s=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:15.3333px;text=
+-align:justify;font-size:10pt;font-family:&quot;Times New Roman&quot;,serif=
+"><b><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,s=
+erif;color:red">30<sup>&nbsp;</sup>August - 2019</span></b></p></td></tr></=
+tbody></table></div><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0=
+in 0in 0.0001pt;line-height:15.3333px;background-image:initial;background-p=
+osition:initial;background-size:initial;background-repeat:initial;backgroun=
+d-origin:initial;background-clip:initial;font-size:10pt;font-family:&quot;T=
+imes New Roman&quot;,serif"><span style=3D"font-size:12pt;line-height:18.4p=
+x;font-family:Cambria,serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b></b></span></p><=
+p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:15.3333p=
+x;background-image:initial;background-position:initial;background-size:init=
+ial;background-repeat:initial;background-origin:initial;background-clip:ini=
+tial;text-align:justify;font-size:10pt;font-family:&quot;Times New Roman&qu=
+ot;,serif"><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cam=
+bria,serif;color:rgb(204,0,0)"><br></span><i><span style=3D"font-size:12pt;=
+line-height:18.4px;font-family:Cambria,serif">Key Features</span></i><b><sp=
+an style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif"></=
+span></b></p><p class=3D"gmail-MsoListParagraphCxSpFirst" style=3D"margin:0=
+in 0in 0.0001pt 0.5in;line-height:15.3333px;background-image:initial;backgr=
+ound-position:initial;background-size:initial;background-repeat:initial;bac=
+kground-origin:initial;background-clip:initial;text-align:justify;font-size=
+:10pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"font-si=
+ze:12pt;line-height:18.4px;font-family:Symbol">=C2=B7<span style=3D"font-va=
+riant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;fon=
+t-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style=
+=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,serif">Authors ca=
+n use IJARCS Sample&nbsp;paper&nbsp;template available online at&nbsp;</spa=
+n><a href=3D"http://www.ijarcs.info/" target=3D"_blank"><span style=3D"font=
+-size:12pt;line-height:18.4px;font-family:Cambria,serif">www.ijarcs.info</s=
+pan></a><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambri=
+a,serif">.</span><span style=3D"font-size:12pt;line-height:18.4px;font-fami=
+ly:Cambria,serif"></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" =
+style=3D"margin:0in 0in 0.0001pt 0.5in;line-height:15.3333px;background-ima=
+ge:initial;background-position:initial;background-size:initial;background-r=
+epeat:initial;background-origin:initial;background-clip:initial;text-align:=
+justify;font-size:10pt;font-family:&quot;Times New Roman&quot;,serif"><span=
+ style=3D"font-size:12pt;line-height:18.4px;font-family:Symbol">=C2=B7<span=
+ style=3D"font-variant-numeric:normal;font-variant-east-asian:normal;font-s=
+tretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New =
+Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><=
+/span><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambria,=
+serif">Authors can submit manuscript through online submission procedure, a=
+vailable at our website.</span><span style=3D"font-size:12pt;line-height:18=
+.4px;font-family:Cambria,serif"></span></p><p class=3D"gmail-MsoListParagra=
+phCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.5in;line-height:15.3333px;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;text-align:justify;font-size:10pt;font-family:&quot;Times New Roman&quot=
+;,serif"><span style=3D"font-size:12pt;line-height:18.4px;font-family:Symbo=
+l">=C2=B7<span style=3D"font-variant-numeric:normal;font-variant-east-asian=
+:normal;font-stretch:normal;font-size:7pt;line-height:normal;font-family:&q=
+uot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;</span></span><span style=3D"font-size:12pt;line-height:18.4px;font-f=
+amily:Cambria,serif;color:rgb(192,80,77)">If you are not comfortable with o=
+nline submission system you can directly mail us your manuscript at&nbsp;</=
+span><a href=3D"mailto:ijarcs@gmail.com" target=3D"_blank"><span style=3D"f=
+ont-size:12pt;line-height:18.4px;font-family:Cambria,serif">ijarcs@gmail.co=
+m</span></a><span style=3D"font-size:12pt;line-height:18.4px;font-family:Ca=
+mbria,serif">&nbsp;and&nbsp;</span><span style=3D"font-size:12pt;line-heigh=
+t:18.4px;font-family:Cambria,serif;color:blue;background-image:initial;back=
+ground-position:initial;background-size:initial;background-repeat:initial;b=
+ackground-origin:initial;background-clip:initial">&nbsp;</span><a href=3D"m=
+ailto:submission.ijarcs@gmail.com" target=3D"_blank"><span style=3D"font-si=
+ze:12pt;line-height:18.4px;font-family:Cambria,serif">submission.ijarcs@gma=
+il.com</span></a><span style=3D"font-size:12pt;line-height:18.4px;font-fami=
+ly:Cambria,serif;color:rgb(192,80,77)">.</span><span style=3D"font-size:12p=
+t;line-height:18.4px;font-family:Cambria,serif"></span></p><p class=3D"gmai=
+l-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.5in;line-h=
+eight:15.3333px;background-image:initial;background-position:initial;backgr=
+ound-size:initial;background-repeat:initial;background-origin:initial;backg=
+round-clip:initial;text-align:justify;font-size:10pt;font-family:&quot;Time=
+s New Roman&quot;,serif"><span style=3D"font-size:12pt;line-height:18.4px;f=
+ont-family:Symbol">=C2=B7<span style=3D"font-variant-numeric:normal;font-va=
+riant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:norma=
+l;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;</span></span><span style=3D"font-size:12pt;line-heig=
+ht:18.4px;font-family:Cambria,serif">We also provide manuscript preparation=
+ support. If you are preparing manuscript first time then you can submit yo=
+ur raw&nbsp;paper&nbsp;to us, we will help you in&nbsp;paper&nbsp;formattin=
+g.</span><span style=3D"font-size:12pt;line-height:18.4px;font-family:Cambr=
+ia,serif"></span></p><p class=3D"gmail-MsoListParagraphCxSpLast" style=3D"m=
+argin:0in 0in 0.0001pt 0.5in;line-height:15.3333px;background-image:initial=
+;background-position:initial;background-size:initial;background-repeat:init=
+ial;background-origin:initial;background-clip:initial;text-align:justify;fo=
+nt-size:10pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"=
+line-height:15.3333px;font-family:Symbol">=C2=B7<span style=3D"font-variant=
+-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;font-siz=
+e:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style=3D"f=
+ont-size:12pt;line-height:18.4px;font-family:Cambria,serif">Free DOI no for=
+ all published manuscript (July-August 2017 onwards).</span></p></div>
+
+--000000000000da99090590369872--

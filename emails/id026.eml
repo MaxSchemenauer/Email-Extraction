@@ -1,0 +1,200 @@
+Received: from DM6PR08MB4665.namprd08.prod.outlook.com (2603:10b6:a03:80::47)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR11CA0070.NAMPRD11.PROD.OUTLOOK.COM; Thu, 5 Sep 2019 20:08:05 +0000
+Received: from DM6PR08CA0040.namprd08.prod.outlook.com (2603:10b6:5:1e0::14)
+ by DM6PR08MB4665.namprd08.prod.outlook.com (2603:10b6:5:fc::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2199.21; Thu, 5 Sep
+ 2019 20:08:04 +0000
+Received: from SN1NAM04FT040.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::203) by DM6PR08CA0040.outlook.office365.com
+ (2603:10b6:5:1e0::14) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2241.15 via Frontend
+ Transport; Thu, 5 Sep 2019 20:08:04 +0000
+Authentication-Results: spf=pass (sender IP is 140.98.200.39)
+ smtp.mailfrom=bmsmail2.ieee.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ieee.org;calpoly.edu; dmarc=pass action=none
+ header.from=ieee.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of bmsmail2.ieee.org
+ designates 140.98.200.39 as permitted sender)
+ receiver=protection.outlook.com; client-ip=140.98.200.39;
+ helo=smtppav03.ieee.org;
+Received: from smtppav03.ieee.org (140.98.200.39) by
+ SN1NAM04FT040.mail.protection.outlook.com (10.152.89.1) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2241.14 via Frontend Transport; Thu, 5 Sep 2019 20:08:04 +0000
+Received: from sblpav23.ieee.org (dct-lb-sweb-23.ieee.org [140.98.23.254])
+	by smtppav03.ieee.org (8.14.7/8.14.7) with ESMTP id x85K79AP031078
+	for <foaad@calpoly.edu>; Thu, 5 Sep 2019 16:08:03 -0400
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtppav03.ieee.org x85K79AP031078
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ieee.org; s=mail;
+	t=1567714083; bh=U5xi0YkQbf52sXTZrmEWVUC1EmAa6HSN0LxZC+vR0xQ=;
+	h=To:Subject:From:Reply-To:From;
+	b=rAkMfriM8ctH3YjVWY+nNMheAZQ/XNtXa+Cey9ZCweOjMs29yDfdzgexjkRepZe1L
+	 vyaDDXDtzDL+xMS8Z57vMGvR8FbmUwW/9Ae+UG+66CTm8CzxWxmRrJRI8ThcBCh+dT
+	 Jcl7bloLbZr8ftLw84GlwsvXlmioEG3ffuQolA5U=
+Date: Thu, 5 Sep 2019 16:08:03 -0400
+To: <foaad@calpoly.edu>
+Sender: "IEEE eNotice"<enotice@ieee.org>
+Subject: CALL FOR PAPERS: 19th IEEE International Symposium on Signal Processing and Information Technology (ISSPIT 2019)
+From: "IEEE eNotice"<enotice@ieee.org>
+Reply-To: no_reply_enotice@ieee.org
+Message-ID: <SEMA-CR-1-6HWBXIP@bmsmail2.ieee.org>
+Content-Type: text/html;	charset="UTF-8"
+Return-Path: SEMA-CR-1-6HWBXIP@bmsmail2.ieee.org
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Sep 2019 20:08:04.6040
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 17c1eafd-0ef0-4218-55b8-08d7323cc2ee
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:140.98.200.39;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(286005)(189003)(199004)(13624006)(6916009)(1096003)(126002)(476003)(4006050)(956004)(8676002)(486006)(75640400001)(246002)(575854001)(50466002)(106002)(606006)(336012)(7636002)(966005)(36906005)(7596002)(16586007)(53416004)(426003)(43066004)(356004)(6392003)(7846003)(7066003)(23846002)(23676004)(236005)(6306002)(14444005)(733005)(2351001)(33656002)(2171002)(5820100001)(16003)(26005)(225293001);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB4665;H:smtppav03.ieee.org;FPR:;SPF:Pass;LANG:en;PTR:smtppav03.ieee.org;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT040.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 17c1eafd-0ef0-4218-55b8-08d7323cc2ee
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:DM6PR08MB4665;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4665:
+X-MS-Exchange-PUrlCount: 9
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Sep 2019 20:08:04.4008
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 17c1eafd-0ef0-4218-55b8-08d7323cc2ee
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4665
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:00.8998841
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2241.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?QVUxNjFYcmVCWVF4bko0aE1MRTdvbmt3SHJFMjJ4eEI4VnF3ZDRibWozTzN0?=
+ =?utf-8?B?UmVYenNCM3lEbm5hREpPV0lOUXoxaHlpRlF6ejVWK0NnNmx4SUEwb3J2ekdD?=
+ =?utf-8?B?a2lrbWlOeEE3MFBPVHVxWjF2L01rd2JxKzByQ0JEWm01MXRKbmRDdm0wTEx5?=
+ =?utf-8?B?cFZPczZBQXo2NHZZQTZXNW1TRkNycEw0YXUrT0k5SUpBTG1oVlhTcmNvMVFM?=
+ =?utf-8?B?SmdWV0plWURKZGRBUlZUbHR4eTErUnQyNE5ocGRGb1EzTnZraHgwYXgwWDlj?=
+ =?utf-8?B?QjZQZGdEMjFwRjNyTmFDdHdmeWplQjUzN0ZyV1RLLzhSWnFhRzFLVmpieGla?=
+ =?utf-8?B?YW1pU2ZHMyt4bG44MDJ6WnpMc2JINmorV2hVZnJoYVY0Vlp5eUVlZ1l6aUVW?=
+ =?utf-8?B?a3J4MitacDJDOE1ZTE9DaDV0bmZaYy9hNGxXa2lWVmFnSEpzTGh1MUNkL2tH?=
+ =?utf-8?B?Wk9Cd0VaSndzNXF1eHlVMGxJM0lpaDY0bmdrR3NpaFB1VWVtWnMzWmVaZVU2?=
+ =?utf-8?B?WHdkZDk5b1RLa3c1QVNTZi9ld2hQYzF6YWlUR1ZTQnU4cFlVQ0I1NW4vK2d6?=
+ =?utf-8?B?RFBLMWdGTUhML3A3eitUSU1EQlRHYjZNa25xSG1XU1V5RFR2bGpPV2J5V2V1?=
+ =?utf-8?B?N1o4Z1lWRE80K3ZkMEt5NCs4eG8yaEp4VFdIODFtQkFPeU9ZTjV5SFR6Szcx?=
+ =?utf-8?B?a25td3VZYlVJRGlOcjVZVEYvSXdraXVqTWFCTmZoZDc4alFLY0VqcXRTcUNn?=
+ =?utf-8?B?SS9SZDZPWTV0ekpHVUpVQ3BDSjNGbGtRQlo4MElad3N5UVJVTFZCRndrOVZQ?=
+ =?utf-8?B?K0NNNUZXOVcwaXlnT0JxaWxEQTJEMXhLSlRoNjIvWTlZWTh5WE1ha1FYSTZU?=
+ =?utf-8?B?RTRwQ0REY2lTWHdlWXhla0N5SDVma0pyVmxqdSthV09nUUFCemp6Uk1QRURz?=
+ =?utf-8?B?UmVyanNDU3cxUW5VUzAxY2IydW9BR2I4alEreVZQVldDNWIvbnp5akptaDFl?=
+ =?utf-8?B?UHBjRTR4eVVvVWpIODdsNWpxSllzUkVoQkRQUFR1ZnpDYWZ6OGc5cDk4aU9u?=
+ =?utf-8?B?ZlV4RTBPNStlMlVrUkVIalVHOGYrbCtGbThMSEptbStadDlUQTBHd25OQVVj?=
+ =?utf-8?B?T0xQaXVjTStlVE9qTG0zUzFhWnFURnpyb3krQVNzU3h0OWtUek4zVm1EUlFO?=
+ =?utf-8?B?eVVNN0lOK2dtY0NKZzdjbUltaFNjK3huQlI1UzloYThPQ2pydjV6ajJWaHVS?=
+ =?utf-8?B?ZHZTS2ZnMjZ0UWhNbkdGVkQ2Q2FXUU1LWlhBbnlEd1MwMWxUU1dYTWZlVE1j?=
+ =?utf-8?B?YnpCM3o3ZjB2YVk2R3F6S2hna28vdUUrOVV1dGFoL0JpN2lpalJTcEN4NnBj?=
+ =?utf-8?Q?YaI+Ff/yCrhbJ8xsqWjrm8+zRssUfqBg=3D?=
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>IEEE eNotice</title>
+
+  
+  
+  <style type="text/css">
+<!--
+#entete {        text-align: center; 
+}
+#image_centre {        text-align:center; 
+}
+#logos {  float:right; 
+  padding:10px;                  
+}
+#pied {        text-align:center; 
+}
+#topics {        padding:5px;               
+}
+-->
+  </style>
+</head><body style="font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+<table align="center" border="0" cellpadding="5" width="800">
+
+  <tbody>
+    <tr>
+      <td><img alt="Banner" src="http://www.isspit.org/isspit/2019/images/banner.jpg" width="640"></td>
+    </tr>
+    <tr>
+      <td>
+      <br>
+      We are pleased to invite you to 19th IEEE International Symposium on 
+	  Signal Processing and Information Technology (ISSPIT 2019).<br>
+	  <br>
+	  The symposium is sponsored by IEEE Signal Processing Society and IEEE 
+	  Computer Society and will be held at Ajman University, Ajman (20 minutes 
+	  driving from Dubai), UAE on 10-12 December 2019. Papers presented in 
+	  ISSPIT 2019 will be submitted for publication in the Proceedings of IEEE 
+	  ISSPIT 2019, IEEE Xplore digital library and they are Scopus Indexed.<br>
+	  <br>
+	  Authors are invited to submit papers describing original, previously 
+	  unpublished work, not currently under review by another conference, 
+	  workshop, or a journal. Full papers (up to 6 camera-ready two-column pages 
+	  in IEEE format) should present novel perspectives within the general scope 
+	  of the conference.<br>
+	  <br>
+	  For information and registration, please visit the following link:<br>
+	  <br>
+	  http://www.isspit.org/isspit/2019/<br>
+	  <br>
+	  Important dates:<br>
+	  o Paper submission deadline: 30 September 2019.<br>
+	  o Notification of acceptance: 30 October 2019.<br>
+	  o Final paper (camera ready): 15 November 2019.<br>
+	  <br>
+	  For any further information, contact a.tawfik@ajman.ac.ae<br>
+	  <br class="Apple-interchange-newline">
+      <br>
+      <br>
+      </td>
+    </tr>
+      <tr>
+      <td bgcolor="#069">
+      <p style="font-size: x-small"><span style="color: #FFFFFF">IEEE Computer Society: https://computer.org/<br>
+	  <br style="color: #FFFFFF">
+	  <br style="color: #FFFFFF">
+	  To unsubscribe from all mailings, use your IEEE Account to update your 
+	  &quot;<a href="http://bmsmail2.ieee.org:80/ctd/lu?RID=1-6HWBXIP&amp;CON=1-2DJZ3ZE&amp;PRO=&amp;AID=&amp;OID=1-6HWB4UM&amp;CID=1-6HWAWZ1&amp;COID=1-6HWB4V7&amp;T=https%3a%2f%2fwww.ieee.org%2fieee-privacyportal%2fapp%2fibp&amp;Z=602f5d765327e628df087c61afdad39&amp;TN=ieee.org%2fieee-privacyportal%2fapp%2fibp&amp;RT=Clicked&#43;On&#43;URL"><span style="color: #FFFFFF">Communication 
+	  Preferences</span></a>&quot; <br>
+	  <br>
+	  Unsubscribe from ISSPIT eNotices: <a href="http://bmsmail2.ieee.org:80/ctd/listsub?RID=1-6HWBXIP&amp;CON=1-2DJZ3ZE&amp;PRO=&amp;AID=&amp;OID=1-6HWB4UM&amp;CID=1-6HWAWZ1&amp;COID=1-6HWB4V7&amp;RT=Unsubscribe&#43;from&#43;List&amp;LC=ENU&amp;LID=1-UJN8XL&amp;LN=1&#43;Subscription&#43;List">Unsubscribe from List</a><br>
+	  <br>
+	  Subscribe to ISSPIT&nbsp; eNotices: <a href="http://bmsmail2.ieee.org:80/ctd/listsub?RID=1-6HWBXIP&amp;CON=1-2DJZ3ZE&amp;PRO=&amp;AID=&amp;OID=1-6HWB4UM&amp;CID=1-6HWAWZ1&amp;COID=1-6HWB4V7&amp;RT=Subscribe&#43;to&#43;List&amp;LC=ENU&amp;LID=1-UJN8XL&amp;LN=1&#43;Subscription&#43;List">Subscribe to List</a></span><br>
+	  </p>
+      </td>
+      </tr>
+	  <tr>
+      <td> <br>
+	  <br>
+	  <strong>IEEE</strong><br>
+	  445 Hoes Lane<br>
+	  Piscataway, NJ 08854 USA<br>
+	  &#43;1 800 678 4333 (toll free, US &amp; Canada)<br>
+	  &#43;1 732 981 0060 (Worldwide)<br>
+	  <br>
+	  For more information or questions regarding your IEEE membership or IEEE 
+	  Web Account, please direct your inquiries to the<span>&nbsp;</span><a href="http://bmsmail2.ieee.org:80/ctd/lu?RID=1-6HWBXIP&amp;CON=1-2DJZ3ZE&amp;PRO=&amp;AID=&amp;OID=1-6HWB4UM&amp;CID=1-6HWAWZ1&amp;COID=1-6HWB4V7&amp;T=https%3a%2f%2fwww.ieee.org%2fabout%2fcontact.html&amp;Z=5879b9fce66fac1f79de1d62bec99215&amp;TN=ieee.org%2fabout%2fcontact.html&amp;RT=Clicked&#43;On&#43;URL">IEEE 
+	  Contact Center</a>.</td>
+      </tr>
+    <tr>
+      <td> &nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</body></html>

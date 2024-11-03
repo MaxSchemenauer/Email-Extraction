@@ -1,0 +1,469 @@
+Received: from BYAPR08MB4982.namprd08.prod.outlook.com (2603:10b6:a03:1e0::12)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BY5PR03CA0002.NAMPRD03.PROD.OUTLOOK.COM; Fri, 7 Jun 2019 19:49:24 +0000
+Received: from BYAPR08CA0053.namprd08.prod.outlook.com (2603:10b6:a03:117::30)
+ by BYAPR08MB4982.namprd08.prod.outlook.com (2603:10b6:a03:6a::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.12; Fri, 7 Jun
+ 2019 19:49:23 +0000
+Received: from CO1NAM04FT003.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::200) by BYAPR08CA0053.outlook.office365.com
+ (2603:10b6:a03:117::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1943.17 via Frontend
+ Transport; Fri, 7 Jun 2019 19:49:23 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ CO1NAM04FT003.mail.protection.outlook.com (10.152.90.83) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1943.19 via Frontend Transport; Fri, 7 Jun 2019 19:49:22 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x57JjsOM009780
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Fri, 7 Jun 2019 22:45:54 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x57Jjrjo029985;
+	Fri, 7 Jun 2019 22:45:53 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Fri, 07 Jun 2019 22:45:53 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x57JjqPd009369
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Fri, 7 Jun 2019 22:45:52 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x57Fuico026752;
+	Fri, 7 Jun 2019 22:45:51 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          318643 for GAMESNETWORK@LISTSERV.UTA.FI; Fri, 7 Jun 2019 22:45:51
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x57Jjpuj026162 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Fri, 7 Jun 2019 22:45:51 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x57JjpQK013462
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <gamesnetwork@uta.fi>; Fri, 7 Jun 2019 22:45:51 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x57Jjo4i029975 for
+          <gamesnetwork@uta.fi>; Fri, 7 Jun 2019 22:45:50 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Fri, 07 Jun 2019 22:45:50
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-qt1-f177.google.com (mail-qt1-f177.google.com
+          [209.85.160.177]) by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x57JjnAl031177 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <gamesnetwork@uta.fi>; Fri, 7 Jun 2019 22:45:50 +0300
+Received: by mail-qt1-f177.google.com with SMTP id n11so1558107qtl.5 for
+          <gamesnetwork@uta.fi>; Fri, 07 Jun 2019 12:45:49 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:references:in-reply-to:from:date :message-id:subject:to:cc;
+                         bh=GOESl/Uso8PQHVZogomjAdRIrOasOXC5f/rug15GWFU=;
+                         b=P4he+iWiYgOM5F/Lf3MPs0LXzRDnMSyBOObq6SfJ+l3aoBTkS2xrkb6OBh35pj0SB9
+                         hz2iE3KIQC+VQNfxeR0plR+Zn/lgwxsWyNSEj527D6F/m2pOTBjYGvD3Apfq5CVyzagJ
+                         Sp16sULcA+DVAlArWA6EOHqns5ilsiMeiOWnoUy1KAqBzjnKWm4dXjE6L76EmWywq8g2
+                         ZwKTwDg86wJwcdDD5omIJNFvuKJoxzYg3rK3G0ffQMMnCUmsVbb+tsR5f8CYIMKJT0lx
+                         ODkQlUpKLXpev1li1zQvCJZ1Ki1HcjB2ax15DKiUSblzmLr5vocjNL0ueNNhEs8CBab0
+                         6XLA==
+X-Gm-Message-State: APjAAAXG9LLPqu/ZEMrLe0jwPYuDE0djPwp7NZsNkgljdnqDqA9UOCJQ
+                    sqh5q6UT03ZL+CPKUlNWkHjrJ9Fwu+s2jPoP/W8=
+X-Google-Smtp-Source: APXvYqztcjtRvNQNCmmWV44rNTQyMQLESyHtqz//aeVU3+b+rNTyqt/tVkKCLs6ufGFK40vSmeBaOgk28EkZkcKL7zE=
+X-Received: by 2002:a0c:d4f4:: with SMTP id y49mr18280988qvh.238.1559936747785;
+            Fri, 07 Jun 2019 12:45:47 -0700 (PDT)
+References: <0920307898158744.WA.feng.zhu.9gmail.com@listserv.uta.fi>
+            <01f69add-4b83-9ef1-ee5a-0d38271e15b6@ucalgary.ca>
+            <CAEvfOSsqbzt298-EaFGsMs2B3M4KCMaFDKAjpK7DPwxsytNM-w@mail.gmail.com>
+            <CALMoE73=3_y=L+AJ=99oGCv9fPJZCnG9JD7MEYsuKe-U6V6Gjw@mail.gmail.com>
+            <5cfa6a74.1c69fb81.11a8b.c1dc@mx.google.com>
+            <CAB=Oymr6VEVZK_pdcU8UXxEtiAAHtu2AvBN_9X9ZYzu7adaWjA@mail.gmail.com>
+            <975131de-2fec-a33d-07e4-984a4613716f@ucalgary.ca>
+            <CADYJ5w8dypq-+SjSpCTorSrYOKbf9LMSb_cGGPSCDRKpjs66Lg@mail.gmail.com>
+            <CAEvfOSvEREAcSpFhBJzy8tnKYFLEb937T4fbF2rqDu4HtSzr5Q@mail.gmail.com>
+            <FC965A24-479B-4229-A9FE-862CC32E8B0D@gmail.com>
+            <CADYJ5w9_qNmQQGqUEiyUnJoc2v0rwwvZheCw962tFpRvQXAPgw@mail.gmail.com>
+            <ac0f98ed-1e68-d3e0-b692-73bc6f1f6b75@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000b95221058ac11358"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Fri, 07 Jun 2019 22:45:53 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_CLICKSMTHNG,L_BDY_PHNNUMRE1a,L_BDY_POLITE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1016
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+Message-ID: <CAEvfOSuAL6rRPvHG9HPNeEo91ASeRXXywpu=b8zPpiAAMjvO7Q@mail.gmail.com>
+Date: Fri, 7 Jun 2019 22:45:33 +0300
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Alesja Serada <alesja.serada@GMAIL.COM>
+Subject: Re: [GAMESNETWORK] CFP: The Aesthetics of Computer Games
+Comments: To: becker.minkhollow@gmail.com
+Comments: cc: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+In-Reply-To: <ac0f98ed-1e68-d3e0-b692-73bc6f1f6b75@gmail.com>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Jun 2019 19:49:23.4766
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 6e8348e8-31f1-4bcb-5d01-08d6eb813d82
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(286005)(189003)(7192003)(176002)(199004)(6862004)(14444005)(4006050)(6246003)(1096003)(61266001)(42186006)(587094005)(21615005)(82202003)(19273905006)(246002)(53376002)(53386004)(11346002)(446003)(229853002)(66574012)(6392003)(73392003)(146002)(498394004)(8576002)(486006)(76482006)(7846003)(5070765005)(66346011)(8676002)(26005)(126002)(476003)(16003)(336012)(42882007)(44832011)(15974865002)(305945005)(7596002)(7636002)(236005)(59536001)(53546011)(966005)(76176011)(6306002)(16586007)(43066004)(40036005)(33964004)(95326003)(106002)(356004)(55176004)(71190400001)(6666004)(55446002)(75640400001)(84326002)(606006)(563064011);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4982;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT003.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: 6e8348e8-31f1-4bcb-5d01-08d6eb813d82
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4982;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4982:
+X-MS-Exchange-PUrlCount: 12
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Jun 2019 19:49:22.6936
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6e8348e8-31f1-4bcb-5d01-08d6eb813d82
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4982
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.1611734
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1965.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?MDhPemtFWHM0amlPUk5YV0RMdTR3bTZHWm9VNHJSamVUTW1MSnRXell0UFZz?=
+ =?utf-8?B?WUREalN2UnJSTXJmcUlZWk9WZG1vaW9JbHRRMFdNY3J3LytDQXQrdWQzaU50?=
+ =?utf-8?B?S3EvZUZsalFzM0VTRzJhTERxRHpVcFBMa0xQSWE2OHRvYzQ3WFFVWGFKS2pw?=
+ =?utf-8?B?TDJkS2xibW1weGRTWjZxeUE4TW11aHduTkRPTEcwazI5UkRiZHhISm5xN1RW?=
+ =?utf-8?B?VHJKL2dLL3Zvakx6b1JUenhJK2dkNW5lenM3SnFDNlFDTEF3WEZtQk1LSjQ5?=
+ =?utf-8?B?K3I1eWowYlY4cjN3UG5WakJiYTEzRFA3MTNsa0ZCZG9DbHZHQmlLdU1wOVpQ?=
+ =?utf-8?B?WnBNZUQ0N3N2aVNKWkN1MGtJVlFtenZyK0NPbHhjRG5YR2RiY2Z6ZVpaZWFt?=
+ =?utf-8?B?UmJ6NjBoY2RaNnNJalZ2NFFWNzVJMVNTTnF5MXRzNlBXK29jRlRnRDViWE9w?=
+ =?utf-8?B?TksyRGlHKzhXcG16RVljbDZ1Q2FMK0RRUCt3TUQ4ZUZjcHRpSGx0TVR0OEk3?=
+ =?utf-8?B?MnpKcitNeHNUSm1uaVlqMXNvNVV1bGt0dld1eVlWdlJ0bGlXWjB3eldhdUFs?=
+ =?utf-8?B?ZUsxSSttWWtJaVVvVEk1d2lBdG5zaFdqN2ZLOFVHS0lIRWNLa2hOQ1ZjMU9U?=
+ =?utf-8?B?T2ZKektHVkpOKzE5L295b2NwWHQzYmdPN0JTVkIxQ0lWUWo2NE1IbG04MFRL?=
+ =?utf-8?B?YS9rWEVWN0xLaG1aMnJMMjRkdUF3em4zM2MwdDhYRW5majhDN3dqaWJxaW50?=
+ =?utf-8?B?QVBaYWNESGdXWXBLeE82djF0SnEvaGIzQjFxTW5nRG9adDgvc3NkeTErZHVl?=
+ =?utf-8?B?OGlzckxjM3VRNXVrNktpUGlpUlUxR2RFczRjT2pFVXhaMFBuZjE4OTZFWkJh?=
+ =?utf-8?B?UlRYdVYzaDEvRUk0TExrMG5OMlNpeEdzNVFYSWwxa0VPS3F0TU9WSGJ6ZHhR?=
+ =?utf-8?B?bzl6azY2ZWJ2YTdGa3FrdTVwQUU4bkozczI1ZjkzUGEwV2Z6ZWs0NS9JRGpI?=
+ =?utf-8?B?eHR6VWNITEhUQmpuRlk0RGV1SWZjRE9qcUFtN1ZocjBMRXZVSnk4S0NySVAw?=
+ =?utf-8?B?ZmkvVUt0blpqQkMxSGdwOVBZN2hRVzUyM2l1T3AzS2RPZjRQMkgwM3I3OXN6?=
+ =?utf-8?B?YWZWYlVLRXZsTHhQNkxRa21FSzNzSm9vbnYyVmZ2bnpIazdZcVQxN1BURDhZ?=
+ =?utf-8?B?Y01oMFlCUzdlaHFXRjdpWElhNGJ5SW80eVp3MmNmQXZtdzJCYzV3U1d5N1JN?=
+ =?utf-8?B?S21GTSt1Z2hBVVhYamdyWHkrWUEyRVAzOFNPSGpIQmptSXdrTDZtNWlpRHky?=
+ =?utf-8?Q?c6OFEfmM4kRO4LJOFAEqfVetyEc7UL8Inm?=
+MIME-Version: 1.0
+
+--000000000000b95221058ac11358
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+The EU already tried it with Belarus. That project failed. A new class of
+conference guests emerged really quickly - those who are professionals at
+fundraising but don't actually contribute to any community. So, no funding
+for Belarusians now - if the system can be exploited, it will be exploited,
+and especially with funding.
+
+On Fri, Jun 7, 2019 at 10:41 PM K.Becker (gmail) <
+becker.minkhollow@gmail.com> wrote:
+
+> I think if we REALLY want to make a statement, then we need to only hold
+> conferences in places that do NOT have problematic discriminatory laws.
+> Instead, we need to hold them as close as possible to those places, and
+> then raise funds to help make it possible for students and other precario=
+us
+> faculty from those nearby countries to attend.
+>
+> Holding a conference in a place that officially outlaws LGBTQ people also
+> means that the papers submitted to the conference must be censored, becau=
+se
+> any kind of unbiased research related to LGBTQ issues is also likely to b=
+e
+> dangerous. That's NOT what scholarship is supposed to be about.
+> *Katrin Becker, PhD* *(sent from gmail)*
+> *President, Mink Hollow Media <http://minkhollowmedia.ca/>*
+> *Adjunct Professor, Mount Royal University <http://www.mtroyal.ca>*
+> (Calgary, AB, Canada)
+> *Author:* Choosing and Using Digital Games in the Classroom =E2=80=93 A P=
+ractical
+> Guide <http://minkhollow.ca/MagicBullet>, Springer, 2016
+> *and * The Guide to Computer Simulations and Games
+> <https://leanpub.com/guidetosimulationsandgames>, Wiley, 2011
+> *Owner Mink Hollow Farm <http://minkhollowmediafarm.ca/>*
+>
+> E-mail: becker@minkhollow.ca HomePage: http://minkhollow.ca/becker Blog:
+> http://beckerblog.ca Books: http://books.minkhollow.ca Amazon:
+> http://amazon.com/author/kbecker
+> *I have found the missing link between the higher ape and civilized man -
+> it is we. - Konrad Lorenz*
+> On 6/7/2019 1:23 PM, Carl Therrien wrote:
+>
+> Dear Michael,
+>
+> I'm just trying to think of solutions that would make participants feel
+> safe to submit. People on location know best if they could be held
+> accountable for the presentations made by participants outside the countr=
+y.
+> It might seem a bit paranoid to think the government would go to the exte=
+nt
+> of intercepting and listening if it is not presented as LGBT related, but
+> in such a context it would not be surprising that authorities pay close
+> attention to any event in academia and be very proactive about holding
+> people accountable. I trust orgnizers know best about this.
+>
+> Again, no easy solutions. It is hard to balance the benefits for the loca=
+l
+> communities of having these conferences be hosted in parts of the world
+> with violent regimes and the need to be as inclusive as possible for ever=
+y
+> instalment of the conference.
+>
+> Best,
+>
+> *Carl Therrien*
+> Professeur agr=C3=A9g=C3=A9
+> Universit=C3=A9 de Montr=C3=A9al
+> T=C3=A9l=C3=A9phone: 514 343 6111 poste 3677
+> Bureau: C-2138
+>
+> D=C3=A9partement d'histoire de l'art et d'=C3=A9tudes cin=C3=A9matographi=
+ques
+> C.P. 6128, succursale Centre-ville
+> Montr=C3=A9al (Qu=C3=A9bec) CANADA
+> H3C 3J7
+>
+> -- Gamesnetwork, discussion list of Digital Games Research Association,
+> www.digra.org Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to
+> LISTSERV@UTA.FI from your subscribed email account. Web interface to
+> subscribe and manage your subscription:
+> https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 . The list
+> archive is available online at:
+> https://listserv.uta.fi/archives/gamesnetwork.html
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--000000000000b95221058ac11358
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">The EU already tried it with Belarus. That project failed. A=
+ new class of conference guests emerged really quickly - those who are prof=
+essionals at fundraising but don't actually contribute to any community. So=
+, no funding for Belarusians now - if the system can be exploited, it will =
+be exploited, and especially with funding.</div><br><div class=3D"gmail_quo=
+te"><div dir=3D"ltr" class=3D"gmail_attr">On Fri, Jun 7, 2019 at 10:41 PM K=
+.Becker (gmail) &lt;<a href=3D"mailto:becker.minkhollow@gmail.com">becker.m=
+inkhollow@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204)=
+;padding-left:1ex">
+ =20
+   =20
+ =20
+  <div bgcolor=3D"#FFFFFF">
+    <p><font face=3D"Helvetica, Arial, sans-serif">I think if we REALLY
+        want to make a statement, then we need to only hold conferences
+        in places that do NOT have problematic discriminatory laws.
+        Instead, we need to hold them as close as possible to those
+        places, and then raise funds to help make it possible for
+        students and other precarious faculty from those nearby
+        countries to attend.</font></p>
+    <p><font face=3D"Helvetica, Arial, sans-serif">Holding a conference in
+        a place that officially outlaws LGBTQ people also means that the
+        papers submitted to the conference must be censored, because any
+        kind of unbiased research related to LGBTQ issues is also likely
+        to be dangerous. That's NOT what scholarship is supposed to be
+        about.</font><br>
+    </p>
+    <div class=3D"gmail-m_5877947846685845221moz-signature"><span style=3D"=
+font-size:11pt;font-family:&quot;Century Gothic&quot;,Arial,sans-serif;colo=
+r:gray">
+        <b>Katrin Becker, PhD</b></span>
+      <i><span style=3D"font-size:10pt;font-family:&quot;Century Gothic&quo=
+t;,Arial,sans-serif;color:maroon">(sent from gmail)</span></i><br>
+      <span style=3D"font-size:10pt;font-family:&quot;Century Gothic&quot;,=
+Arial,sans-serif;color:gray"><b>President, <a href=3D"http://minkhollowmedi=
+a.ca/" target=3D"_blank">Mink Hollow Media</a></b></span><br>
+      <span style=3D"font-size:10pt;font-family:&quot;Century Gothic&quot;,=
+Arial,sans-serif;color:gray"><b>Adjunct Professor, <a href=3D"http://www.mt=
+royal.ca" target=3D"_blank">Mount Royal University</a></b>
+        (Calgary, AB, Canada)</span><br>
+      <b><span style=3D"font-size:10pt;font-family:&quot;Century Gothic&quo=
+t;,Arial,sans-serif;color:gray">Author:</span></b>
+      <span style=3D"font-size:10pt;font-family:&quot;Century Gothic&quot;,=
+Arial,sans-serif;color:gray"> <a href=3D"http://minkhollow.ca/MagicBullet" =
+target=3D"_blank"> Choosing and Using
+          Digital Games in the Classroom =E2=80=93 A Practical Guide</a>,
+        Springer, 2016</span><br>
+      <b><span style=3D"font-size:10pt;font-family:&quot;Century Gothic&quo=
+t;,Arial,sans-serif;color:gray">and </span></b>
+      <span style=3D"font-size:10pt;font-family:&quot;Century Gothic&quot;,=
+Arial,sans-serif;color:gray"> <a href=3D"https://leanpub.com/guidetosimulat=
+ionsandgames" target=3D"_blank"> The
+          Guide to Computer Simulations and Games</a>, Wiley, 2011</span><b=
+r>
+      <span style=3D"font-size:10pt;font-family:&quot;Century Gothic&quot;,=
+Arial,sans-serif;color:gray"><b>Owner <a href=3D"http://minkhollowmediafarm=
+.ca/" target=3D"_blank">Mink Hollow Farm</a></b></span><br>
+      <br>
+      <span style=3D"margin-right:3.1pt"><span style=3D"font-size:10pt;font=
+-family:&quot;Century Gothic&quot;,Arial,sans-serif;color:gray">
+          E-mail: <a href=3D"mailto:becker@minkhollow.ca" target=3D"_blank"=
+>becker@minkhollow.ca</a><a>
+            HomePage: </a><a href=3D"http://minkhollow.ca/becker" target=3D=
+"_blank">http://minkhollow.ca/becker</a>
+          Blog: <a href=3D"http://beckerblog.ca" target=3D"_blank">http://b=
+eckerblog.ca</a>
+          Books: <a href=3D"http://books.minkhollow.ca" target=3D"_blank">h=
+ttp://books.minkhollow.ca</a>
+          Amazon: <a href=3D"http://amazon.com/author/kbecker" target=3D"_b=
+lank">http://amazon.com/author/kbecker</a>
+        </span>
+        <br>
+        <i><span style=3D"font-size:10pt;font-family:&quot;Century Gothic&q=
+uot;,Arial,sans-serif;color:green">I have found the missing link between th=
+e
+            higher ape and civilized man - it is we. - Konrad Lorenz</span>=
+</i><br>
+      </span></div>
+    <div class=3D"gmail-m_5877947846685845221moz-cite-prefix">On 6/7/2019 1=
+:23 PM, Carl Therrien
+      wrote:<br>
+    </div>
+    <blockquote type=3D"cite">
+     =20
+      <div dir=3D"ltr">Dear Michael,
+        <div><br>
+        </div>
+        <div>I'm just trying to think of solutions that would make
+          participants feel safe to submit. People on location know best
+          if they could be held accountable for the presentations made
+          by participants outside the country. It might seem a bit
+          paranoid to think the government would go to the extent of
+          intercepting and listening if it is not presented as LGBT
+          related, but in such a context it would not be surprising that
+          authorities pay close attention to any event in academia and
+          be very proactive about holding people accountable. I trust
+          orgnizers know best about this.<br>
+          <br>
+          Again, no easy solutions. It is hard to balance the benefits
+          for the local communities of having these conferences be
+          hosted in parts of the world with violent regimes and the need
+          to be as inclusive as possible for every instalment of the
+          conference.&nbsp;</div>
+        <div><br>
+          Best,</div>
+        <div><br clear=3D"all">
+          <div>
+            <div dir=3D"ltr" class=3D"gmail-m_5877947846685845221gmail_sign=
+ature">
+              <div dir=3D"ltr">
+                <div>
+                  <div dir=3D"ltr">
+                    <div>
+                      <div dir=3D"ltr">
+                        <div>
+                          <div dir=3D"ltr"><font face=3D"georgia, serif"><s=
+pan style=3D"font-size:small"><b>Carl Therrien</b><br>
+                              </span>Professeur agr=C3=A9g=C3=A9<br>
+                              Universit=C3=A9 de Montr=C3=A9al<span style=
+=3D"font-size:small"></span></font><br>
+                            <font face=3D"georgia, serif"><span style=3D"fo=
+nt-size:small"><span><font face=3D"georgia, serif"><span style=3D"font-size=
+:13px;color:rgb(51,51,51);line-height:17px">T=C3=A9l=C3=A9phone:
+                                      514 343 6111 poste 3677</span></font>=
+</span></span></font><br>
+                            <font face=3D"georgia, serif"><span style=3D"fo=
+nt-size:small"><span><font face=3D"georgia, serif"><span style=3D"font-size=
+:13px;color:rgb(51,51,51);line-height:17px">Bureau:
+                                      C-2138<br>
+                                      <br>
+                                    </span></font></span>D=C3=A9partement
+                                d'histoire de l'art et d'=C3=A9tudes
+                                cin=C3=A9matographiques</span><br style=3D"=
+font-size:small">
+                            </font>
+                            <div><font face=3D"georgia, serif"><span style=
+=3D"font-size:13px;color:rgb(51,51,51);line-height:17px">C.P.
+                                  6128, succursale Centre-ville&nbsp;</span=
+><br style=3D"font-size:13px;color:rgb(51,51,51);line-height:17px">
+                                <span style=3D"font-size:13px;color:rgb(51,=
+51,51);line-height:17px">Montr=C3=A9al
+                                  (Qu=C3=A9bec) CANADA&nbsp;</span><br styl=
+e=3D"font-size:13px;color:rgb(51,51,51);line-height:17px">
+                                <span style=3D"font-size:13px;color:rgb(51,=
+51,51);line-height:17px">H3C
+                                  3J7</span></font><br>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </blockquote>
+  </div>
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI" target=3D"_blank">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+</blockquote></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--000000000000b95221058ac11358--

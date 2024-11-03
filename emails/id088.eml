@@ -1,0 +1,212 @@
+Received: from BN6PR08MB2612.namprd08.prod.outlook.com (2603:10b6:a03:1e0::14)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR03CA0004.NAMPRD03.PROD.OUTLOOK.COM; Thu, 10 Oct 2019 20:46:33 +0000
+Received: from MWHPR08CA0022.namprd08.prod.outlook.com (2603:10b6:301:5f::35)
+ by BN6PR08MB2612.namprd08.prod.outlook.com (2603:10b6:404:c0::8) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.19; Thu, 10 Oct
+ 2019 20:46:33 +0000
+Received: from SN1NAM04FT024.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::201) by MWHPR08CA0022.outlook.office365.com
+ (2603:10b6:301:5f::35) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16 via Frontend
+ Transport; Thu, 10 Oct 2019 20:46:32 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ SN1NAM04FT024.mail.protection.outlook.com (10.152.88.106) with Microsoft SMTP
+ Server id 15.20.2347.16 via Frontend Transport; Thu, 10 Oct 2019 20:46:32
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id 4D7162E1490; Thu, 10 Oct 2019 16:45:18 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org 4D7162E1490
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1570740318;
+	bh=MwwvnaZl7krCNDn17HjrRkaIyHlefr9VEf56j7E4jEQ=;
+	h=Date:To:Subject:From:From;
+	b=Mw13gtDFJXobsLB1izIAI6i4dP7SJjMSJK3HxvvwDFtEvodSTKxwis13iw+zmjAPZ
+	 4QmjI78C8cAINxTjk2y7fFsQePewuk0LNuvBODdhH5Fdt3LIyj2m70T33X/fQovbAG
+	 shRJzn5pXzXs2h59+oJspdLdA9XY5tzxiq2ChIHg=
+Date: Thu, 10 Oct 2019 16:45:18 -0400
+To: foaad@calpoly.edu
+Subject: CFP: IEEE CPS: Conf on Social Network Analysis, Social Media and
+ Mining (CSCI-ISNA'19: Dec. 5-7, 2019, USA); Deadline: October 21
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20191010204518.4D7162E1490@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Oct 2019 20:46:32.1825
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d1c0d0f3-9c1c-42f7-1d3e-08d74dc2eed0
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BN6PR08MB2612;H:world-comp.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT024.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: d1c0d0f3-9c1c-42f7-1d3e-08d74dc2eed0
+X-MS-TrafficTypeDiagnostic: BN6PR08MB2612:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Oct 2019 20:46:32.0544
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d1c0d0f3-9c1c-42f7-1d3e-08d74dc2eed0
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN6PR08MB2612
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8867756
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?ZFmNa6ESRpL1F1U17cmkPvkPHoMC3UF6PlJaoehsUvwmSg8bAkx30VMoMBEW?=
+ =?us-ascii?Q?jXMb0nDnz5Rw6dl/q2eAtyWSF7Rf5+HOuT2Iq8tZ/kL05ML6X852rO9omNTF?=
+ =?us-ascii?Q?FHXAgGrkEEzxrzy5nZcVRHBo72cXzUjwyaCUxc0fhReDO7RKli8Ny4SJPd+u?=
+ =?us-ascii?Q?SLFl2uGcv5K3piSKwqsSFZihSesCMiftcuJV+9ZRmcc8IEkhaHu8jBXVv9XP?=
+ =?us-ascii?Q?IIhxLlTuFrV3hRE3BO025B2w+/1wBM7a5A5OpS5UUrl4UHoSmiiFqYThKvhF?=
+ =?us-ascii?Q?ahj/TUhLzQvjmJrA75EmTPOvuLB1LPukPl+ZmEoeYwZjDIhV8o4m3oFW8Ula?=
+ =?us-ascii?Q?ISZkD2xq4Zv7NJwmF5mFIdlSTznJP+tVAxpUQa09OybYBWXFEVURkfmGbBWk?=
+ =?us-ascii?Q?FQCH6xhDyfe9i+hqA2/Cv/Zd7nqFT8lmKv49HzZB4urYqJ96Tiy3j0OoMsVQ?=
+ =?us-ascii?Q?qnhmETokXtLZBgnXYsL6bBL3OFUnGLwpG2zMXg0Y88r2nKbx/UW6EITDMZAl?=
+ =?us-ascii?Q?1NFEnfSEY6385sNDHkfHr//Q7eM7sSStdHHXetpn7F7pjcW9S/7aUpRjutgW?=
+ =?us-ascii?Q?kbmJydapOGbl56QLS5zyXcNJlfZ2qjZFVrVUGrxatr5DVY8bUAAGwXjqmwAU?=
+ =?us-ascii?Q?IAF6aBp5CjeEg4wWAXU80G4jASgfrY+3oBqCJX/1zZoi+J+7Nep69mxSWMA4?=
+ =?us-ascii?Q?F5qdyt2ySIeLNQHLSHhbnML5ywoL/JmVO9f1V0rMw3WmtpNCqhqix9NyKbRb?=
+ =?us-ascii?Q?x66uHlEPEL7gEV7IcK9/msK5ImU/ILUjNs+KTS92Wu7kfvcYff6DLlaCXo52?=
+ =?us-ascii?Q?zzu9YsCVnpjW80OH8yCm+Zm4aYjX9+ah2D15SNCg0AbeGhrXdee57cd9iftQ?=
+ =?us-ascii?Q?6G7C612EY/OArYaG8lqEES938h2TMYl87LeS0WQOEZg7L0FWZSqgnKE8gKPU?=
+ =?us-ascii?Q?WpgbUC6DAipyJqRt4vIg8D4ZnD/GqD+vuuk0NnBKvJTZDwmgwLqHnGhs9BNZ?=
+ =?us-ascii?Q?/jHuTgdtfeyVwnU6iL9OuP9geLmsn2CVrFPQhJcpYSwFTDY+Ucv82SAZVoJ6?=
+ =?us-ascii?Q?y4HX4RD1vkG+OOHIjCKYZonxl3DRfUAXVt/B28zmtJlTpXB6M7L2mUIXliVN?=
+ =?us-ascii?Q?fD4Odm9Ns9vDrVXMdKXW3H1QpTDF3zslnqDaT0CGZnfg//19J7pTkkuDCsxF?=
+ =?us-ascii?Q?xxwWpYbM7A3gFcNMvjVfRkGDN7+nN/fBPH8NVeKV7c24yTTbGVM1Yo4AxuF8?=
+ =?us-ascii?Q?q9ACQKktJYPfrRRQco02iSsBJPQ6QX9evJuVeRK8sf7bz8dhdKSr5slhtxaF?=
+ =?us-ascii?Q?gxTu7kwVCde0phwrmM72x7gZCeejNf5xAX/5OUlXCrxyxtwczP1WaDiHDBfU?=
+ =?us-ascii?Q?41Z8Zqia/uqkGVPZIyMA3UsTGrWlCQV7UI/GeRJSjKMcKnNaGjBgXqVnRfEC?=
+ =?us-ascii?Q?jxWvrxHJfP9uc34YFLdvQgMHtpGxvYl5?=
+MIME-Version: 1.0
+
+                          CALL  FOR  PAPERS
+
+International Symposium on SOCIAL NETWORK ANALYSIS, SOCIAL MEDIA, & MINING
+
+          (CSCI-ISNA: December 5-7, 2019, Las Vegas, USA)
+     https://americancse.org/events/csci2019/Symposiums/csci_isna 
+
+     Extended Deadline for Submission of Papers: October 21, 2019
+
+                         IEEE Xplore entry:
+   https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+ ======================================================================
+
+SCOPE AND LIST OF TOPICS:
+     Topics of interest include, but are not limited to the following:
+
+     Social Network Design; Social Media Design; Information Retrieval
+     in Social Contexts; Information Retrieval in Political Contexts;
+     Identification and Prevention of Fake News on Networks; Community
+     Discovery and Methods; Social Media in Marketing; Social Network
+     Mining; Graph Based Algorithms; Community Networks and Impact
+     Analysis; Network Structure Analysis; Security and Privacy in
+     Social Networks; Efficient Algorithms for Social Computing; Social
+     Network Behaviors; Reputation and Trust Analysis in Social Media;
+     Social Influence and Impacts; Big Data Analysis on Social Networks;
+     Novel Services on Social Network Platforms; Social Simulation and
+     Computational Models; Anomaly Detection in Social Networks;
+     Application of Social Network Mining; Network Complexity; Dark web,
+     Darknets, and Related Issues; Data Models for Social Media; Novel
+     Social Network Architectures; and Information Fusion.
+
+
+PUBLISHER:
+     IEEE CPS: https://www.computer.org/conferences/cps 
+     All accepted papers will be published in the proceedings
+     of the 2019 International Conference on Computational
+     Science & Computational Intelligence
+     ( CSCI: https://americancse.org/events/csci2019 ).
+     Since its inception, all CSCI proceedings have always been
+     approved and included into IEEE Xplore indexation/
+     digital-library citation index databases.
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+     https://americancse.org/events/csci2019/paper_submission 
+
+
+DEADLINES - DATES:
+
+     October 21, 2019:     EXTENDED deadline for Submission of Papers
+                           https://american-cse.org/ 
+     October 28, 2019:     Notification of acceptance (+/- 2 days)
+     November 8, 2019:     Final papers & Author Registrations
+
+     December 5-7, 2019:   The International Symposium on Social Network
+                           Analysis, Social Media, & Mining (CSCI-ISNA)
+               https://americancse.org/events/csci2019/Symposiums/csci_isna 
+                           CSCI-ISNA will be held in conjunction with other
+                           affiliated research events; for more information,
+                           see https://americancse.org/events/csci2019 
+
+
+DEMOGRAPHY HISTORY (based on 2014 through 2019 participation data):
+
+     In the past, about 42% of the attendees have been from outside
+     USA; from 59 nations. 56% of registrants have been from academia,
+     32% from industry; 11% from government agencies and research labs;
+     and 1% unknown. The conference has had participants, speakers,
+     authors affiliated with over 154 different universities; including
+     many from the top 40 ranked institutions; major IT corporations,
+     including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+     Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+     Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+     Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+     Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+     BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+     Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+     major corporations, including, Exxon Mobil, JPMorgan Chase,
+     Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+     Petroleum Group, Aerospace Electronic Technology (China), Max
+     Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+     (France), Forschungszentrum Juelich (Germany), Secured Smart
+     Electric Vehicle (Korea), ...; government research agencies and
+     national laboratories, including, NSF, NIH National Institutes of
+     Health, US Air Force (multiple research labs), NSA National Security
+     Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+     Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+     Lab, US National Cancer Institute, Swedish Defence Research Agency,
+     NIST US National Institute of Standards and Technology, U.S.
+     Geological Survey, US National Library of Medicine, US Air Force
+     (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+     Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+     Army, Korea Internet & Security Agency, Suez Canal Research Center,
+     Okinawa Bureau (Japan), Canadian Medical Protective Association,
+     Osong Medical Innovation Foundation (Korea), National Institute of
+     Informatics (Japan), ...; and three Venture Capitalists and nine
+     Intellectual Property attorneys.
+
+CONTACT:
+
+     Questions and inquiries should be sent to:
+     Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.

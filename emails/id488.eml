@@ -1,0 +1,542 @@
+Received: from SN6PR08MB4990.namprd08.prod.outlook.com (2603:10b6:a03:74::20)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0043.NAMPRD05.PROD.OUTLOOK.COM; Mon, 29 Jul 2019 13:32:40 +0000
+Received: from CY4PR08CA0045.namprd08.prod.outlook.com (2603:10b6:903:151::31)
+ by SN6PR08MB4990.namprd08.prod.outlook.com (2603:10b6:805:6e::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2115.15; Mon, 29 Jul
+ 2019 13:32:39 +0000
+Received: from CO1NAM04FT041.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::209) by CY4PR08CA0045.outlook.office365.com
+ (2603:10b6:903:151::31) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2115.14 via Frontend
+ Transport; Mon, 29 Jul 2019 13:32:39 +0000
+Authentication-Results: spf=pass (sender IP is 167.89.100.226)
+ smtp.mailfrom=em7272.ijesrt.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ijesrt.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=ijesrt.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of em7272.ijesrt.org
+ designates 167.89.100.226 as permitted sender)
+ receiver=protection.outlook.com; client-ip=167.89.100.226;
+ helo=o3.lv30n.shared.sendgrid.net;
+Received: from o3.lv30n.shared.sendgrid.net (167.89.100.226) by
+ CO1NAM04FT041.mail.protection.outlook.com (10.152.91.18) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256) id
+ 15.20.2115.10 via Frontend Transport; Mon, 29 Jul 2019 13:32:38 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=ijesrt.org; 
+	h=content-type:from:mime-version:reply-to:subject:to:list-unsubscribe; 
+	s=s1; bh=PobHQm+No0TKbdIbvxh3EkBLU/M=; b=dOtLMZu8s/azZfBgTBYW9rY
+	HkeV6EwfEaIgJJWRKaotf100luHjQ9ioYD/Y7zY9KFQajmR4rB3aEMq0paDdos2z
+	aXL5hizyB2Xe9YLFh8u6F9/sYXbGbTaUJ0JImR3kDmExZSzgkRIuXjHNsFzvoTW6
+	azqJG7tUVSh2zBwMOuDg=
+Content-Type: multipart/alternative; boundary=5c81ff7ebab187077a9e61e5b37ef2d46e8c7b6fa21274ed33a7528ddac2
+Date: Mon, 29 Jul 2019 12:18:46 +0000
+From: "Editor  IJESRT" <articles@ijesrt.org>
+Reply-To: articles@ijesrt.com
+Subject: Manuscript Submission  Online  Vol. 8, Issue 8 Impact Factor: 5.164 (Indexed: Thomson Reuters Researcher ID)
+To: foaad@calpoly.edu
+Message-ID: <I3lJeY8nSmuBUdil-PANQA@ismtpd0040p1mdw1.sendgrid.net>
+List-Unsubscribe: <mailto:unsubscribe@em7272.ijesrt.org?subject=https://u9553424.ct.sendgrid.net/asm/unsubscribe/*q*user_id=9553424*a*data=44TY52e2EfCgFn5YR62zO0qP8LkPbUlN9U_p5yek-ncvPjxtkYiZGBQ1lCC5bdHLk8ARH-QD8pulaPfF3MpM9wdKIzDJeHIQ-ui5Kt8J5tQ_QOxBQ6AE_48kxGWzkrzjxxyu41FsDG5rXXwrx4PRFUyS01Kh9RemYY-L-pgDh26JZRRPRMQSFjxTw76FGkrl9Z3B97w4TRxOlbctCeSRo42MfVQg96KZ_eN4HB8tmDhdlRRafLIVhp1vGaOp0DORzQbQwyUwfNkVAakFfT8TVnwLl8_swLiein_KR38iZOObhVyo2Edehgx-HVYG2ihntKfBXTTNrw1A6kiEa9E30vUiyZz47Oqanz5oAXJSkjQFgZmvh_EcleABk2eWURPvNGrCfSLvR5fDh2TN1SF6zojdl6timzPPuI0DAQexOTE5oL-ZTAUB3XU7Ja4a7oS6aiytOnHbQbbl1DYUagItHxjW4oAb1QbKeuhkB0j76x8r8k34cz7hFc1La8Jo-C_HS4VRKAgoSEZj5GA1eC_xPdbwqjM2QbohmCLtpPUzr60=>
+X-SG-EID: 7hD2CnSvqiJDLto7n5DrawagaUNn6UdwaXUXEKlUI5k8tjV39ZIUin7lf6ebJ7jZMEF7TqUS+X6DQA
+ h1Y+VXMRl1qgy/goMicH0fKIWC8vnwXq9q1urkE+35N9o2K59NopCylIERnFO11LORT7MkoiM6sO+a
+ D5dSIl62qq7rr2oOoyHoxj1VLcyDjtZjFCd0V/2XE2l/cyp+t/ZzbQZZKS3+SWvUBg1MgPOZS6B2R+
+ 0=
+X-SG-ID: Z2FxZazunBjVeNuNdzHDqrF8mxuCpi0krmont6YQrP1UfDuXyIREyo5P0WH8kBhhNRnsqMcI64shpg
+ bYRXTqgHEun9mGK/jE5n57eHsWT5B01m7yQVyqLvPRLGwMty8w6uMWfb9NDQ3nbtU7/OI6Dk+4hHAv
+ dsyY3SZLiNQe9bs=
+Return-Path: bounces+9553424-4f61-foaad=calpoly.edu@em7272.ijesrt.org
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Jul 2019 13:32:38.9773
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 11f9805a-803d-4fe5-81b5-08d7142939a8
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:167.89.100.226;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(2980300002)(286005)(10533003)(189003)(199004)(33964004)(43066004)(6512007)(9686003)(236005)(15974865002)(15188155005)(2171002)(19627405001)(4006050)(25786009)(7596002)(2160300002)(21004)(606006)(19627145004)(26005)(6306002)(6506007)(16799955002)(106002)(55176004)(14444005)(53386004)(75640400001)(53376002)(733005)(71190400001)(5070765005)(16586007)(36736006)(6666004)(356004)(76236002)(2351001)(126002)(6486002)(486006)(476003)(966005)(956004)(336012)(246002)(7636002)(6916009)(1096003)(18926415008)(8676002)(146002)(2361001);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4990;H:o3.lv30n.shared.sendgrid.net;FPR:;SPF:Pass;LANG:en;PTR:o3.lv30n.shared.sendgrid.net;MX:1;A:0;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT041.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 11f9805a-803d-4fe5-81b5-08d7142939a8
+X-Microsoft-Antispam:
+ BCL:6;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1414054)(71702078);SRVR:SN6PR08MB4990;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4990:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Oob-TLC-OOBClassifiers: OLM:635;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Jul 2019 13:32:38.7341
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 11f9805a-803d-4fe5-81b5-08d7142939a8
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4990
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8306043
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?WDVaeVFjY0Vuc3dTWStnUUhuSUs0OFNYOUZLRUVZcUl4bjgrTEpQb2orNnBw?=
+ =?utf-8?B?S1NvU2VjTFRxdGhxaEp6UkFFSlBEVVFYelZlYkprODlUWXdJODdjdFpvSVlH?=
+ =?utf-8?B?cm9XTHloYmErOVJCNnp2eXNleHRCR1RlbGQvak0ySUZsbHlMRGxzNFZIUktT?=
+ =?utf-8?B?ZFpIVnJaemlJajY5cDBSVzNFRGtCT2kzOFRGbzQ0WU1Oa3ZXd1F1UDNnV090?=
+ =?utf-8?B?dHhjNmhyb3ZHVU0wRmllWEgycDdXaXZXVGdsQ1BEY3Y0WFJwdUpoeTBHanRH?=
+ =?utf-8?B?OVUxL3pUTkJLcWN0bmZwVHVlUDVQOXBsd0JpSjI5UWNQMWczSHQ3dStvVUJR?=
+ =?utf-8?B?ZG5iSmNsYjhzRHZmYUE0SklTTDYwbHVsUlZkV3RhU0wwMWZUWEZEQjhIb3M5?=
+ =?utf-8?B?eTJ1c0YrWHJiWUNCbnp1bGYwNE1oRHFDeG1NVVNpZ3NTVGtwOGJRSTVtVTBL?=
+ =?utf-8?B?Qmh2OWFGcHBZSjNSNVVCaUpBOXFQVG5KSEY1R0JzNzhtTkdDZ1hrNVdnUm5Q?=
+ =?utf-8?B?L2E1bTBjVG0vb0VFZm5jR0tYdEs5bFcyNGcyWWV1SUo4Mm95eStrSEZEY1N6?=
+ =?utf-8?B?ZSthOWF3VjhPMHorM0ZzU0pJZmlzejdmUjM4QTUxZkVselhXdkUwS1B1dW9N?=
+ =?utf-8?B?K2FPbVVYajhWRlZuMWlTbDgwZVFYR0JZdmFacWNLWjFuaFB5TXA2bW1vMWxH?=
+ =?utf-8?B?UTBwaTVsVWxaRVU2azFtanVWU2lObFVtaHgwR0R4Uk9PZ1k1MFN0ajc0TW0z?=
+ =?utf-8?B?ekJ6R0pQRFZBd04weXY2VEVlNzM2OFlMS2F4VDlzRkFqNWVxVVY2dE00c2ZJ?=
+ =?utf-8?B?aWFObVlDc05FRUVtR2VGL2JOQXFuakF4RXZVUXl5cUFmTnVxTmdZKzZHZGhJ?=
+ =?utf-8?B?eHgvTk9YUUwwWGZ5a2wwZENyS2VxSUxKYzVoRHo4QWpDMnluaDNvL2dHRWUx?=
+ =?utf-8?B?encrUVVsWmNPbG9Da25EQ0drZFVZREZKZ3NaaExYOWdiS0czUkU2cTlQb3dp?=
+ =?utf-8?B?czNITkJFZ0lETm9ReGx5b3BScW0xU05XV01pa1JyN1poR0pjZlVncWFSMmxI?=
+ =?utf-8?B?UGVIY1ZEUHdIUU1aQXV5QVg5dTIvNzdhSy91VER5OWFzTFlyaHF1NXdUOWdF?=
+ =?utf-8?B?cTVjdUtLakpNT1F0Y1F6QzdDT1pwa1BXWlc0NUtBQmZPSENRZUE3WGpNZmx3?=
+ =?utf-8?B?WDRxMlVOZzlQdVJFem81VXdkYVAxbWlNVjlKcThMOFdtRTFVbU55SWU3WU5Z?=
+ =?utf-8?B?Mnp0dUE2eUg1eFRkQUwvTG9IaFVDQXR3ekRoUStZRk5vMHpqNWhVdEprYjlS?=
+ =?utf-8?B?Q2ZTVC9FaTF5TjBxaklGTUJBaW5uUXcrT2Y1N3VlSHVrUjQ4N2FRV0I3aWhZ?=
+ =?utf-8?B?anNNanBsNGdreXc9PQ==?=
+MIME-Version: 1.0
+
+--5c81ff7ebab187077a9e61e5b37ef2d46e8c7b6fa21274ed33a7528ddac2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Dear Authors/Researchers
+
+INTERNATIONAL=C2=A0JOURNAL OF=C2=A0ENGINEERING=C2=A0SCIENCES AND=C2=A0RESEA=
+RCH=C2=A0TECHNOLOGY=C2=A0 =C2=A0(IJESRT, ISSN 2277-9655)=C2=A0
+
+Invites you to submit your research paper for publishing in=C2=A0
+
+VOLUME 8=C2=A0ISSUE 8=C2=A0(August-2019)
+
+Click to Submit Manuscript Online=C2=A0 http://ijesrt.com/submit_manuscript=
+_online.php
+
+http://ijesrt.com/submit_manuscript_online.php http://ijesrt.com/submit_man=
+uscript_online.php
+
+About=C2=A0IJESRT=C2=A0=C2=A0(P.Impact Factor: 5.164)=C2=A0 =C2=A0=C2=A0
+
+To maintain a high-quality journal, manuscripts that appear in the=C2=A0IJE=
+SRT=C2=A0have been subjected to a rigorous review process. This includes bl=
+ind reviews by three or more members of the editorial review board, followe=
+d by a detailed review by the=C2=A0IJESRT=C2=A0editors.
+
+Subject Category:=C2=A0
+
+Cover all branches of Engineering and Science
+
+Important Dates:
+
+Paper Submission:=C2=A0 11=C2=A0August 2019
+	Published Online on: 15 August 2019.
+
+Review Results=C2=A0(Acceptance/Rejection) Notification: Within 02=C2=A0 Da=
+ys after submitting the paper.
+
+Publication Charges
+
+Indian Author(s)
+
+Rs 1700/- up to 3 authors, after 3 authors charges will be Rs 500/author=C2=
+=A0
+
+Free Hard copy of certificate.
+
+Foreign Author(s)
+
+$ 85 USD up to 6 Authors
+
+FINAL PAPER Submission=C2=A0 at=C2=A0 mailto:ijesrt@gmail.comijesrt@gmail.c=
+om mailto:ijesrt@gmail.com=C2=A0or=C2=A0 http://ijesrt.com/submit_manuscrip=
+t_online.php
+
+Website: www.ijesrt.in http://www.ijesrt.in
+
+www
+
+Unsubscribe https://u9553424.ct.sendgrid.net/asm/unsubscribe/?user_id=3D955=
+3424&data=3D44TY52e2EfCgFn5YR62zO0qP8LkPbUlN9U_p5yek-ncvPjxtkYiZGBQ1lCC5bdH=
+Lk8ARH-QD8pulaPfF3MpM9wdKIzDJeHIQ-ui5Kt8J5tQ_QOxBQ6AE_48kxGWzkrzjxxyu41FsDG=
+5rXXwrx4PRFUyS01Kh9RemYY-L-pgDh26JZRRPRMQSFjxTw76FGkrl9Z3B97w4TRxOlbctCeSRo=
+42MfVQg96KZ_eN4HB8tmDhdlRRafLIVhp1vGaOp0DORzQbQwyUwfNkVAakFfT8TVnwLl8_swLie=
+in_KR38iZOObhVyo2Edehgx-HVYG2ihntKfBXTTNrw1A6kiEa9E30vUiyZz47Oqanz5oAXJSkjQ=
+FgZmvh_EcleABk2eWURPvNGrCfSLvR5fDh2TN1SF6zojdl6timzPPuI0DAQexOTE5oL-ZTAUB3X=
+U7Ja4a7oS6aiytOnHbQbbl1DYUagItHxjW4oAb1QbKeuhkB0j76x8r8k34cz7hFc1La8Jo-C_HS=
+4VRKAgoSEZj5GA1eC_xPdbwqjM2QbohmCLtpPUzr60=3D=
+
+--5c81ff7ebab187077a9e61e5b37ef2d46e8c7b6fa21274ed33a7528ddac2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html data-editor-version=3D"2" class=3D"=
+sg-campaigns" xmlns=3D"http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, minimum-scale=3D1, maximum-scale=3D1"><!--[if !mso]><!-->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge"><!--<![endif=
+]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <style type=3D"text/css">
+      body {width: 600px;margin: 0 auto;}
+      table {border-collapse: collapse;}
+      table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+      img {-ms-interpolation-mode: bicubic;}
+    </style>
+    <![endif]-->
+
+    <style type=3D"text/css">
+      body, p, div {
+        font-family: arial;
+        font-size: 14px;
+      }
+      body {
+        color: #000000;
+      }
+      body a {
+        color: #1188E6;
+        text-decoration: none;
+      }
+      p { margin: 0; padding: 0; }
+      table.wrapper {
+        width:100% !important;
+        table-layout: fixed;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      img.max-width {
+        max-width: 100% !important;
+      }
+      .column.of-2 {
+        width: 50%;
+      }
+      .column.of-3 {
+        width: 33.333%;
+      }
+      .column.of-4 {
+        width: 25%;
+      }
+      @media screen and (max-width:480px) {
+        .preheader .rightColumnContent,
+        .footer .rightColumnContent {
+            text-align: left !important;
+        }
+        .preheader .rightColumnContent div,
+        .preheader .rightColumnContent span,
+        .footer .rightColumnContent div,
+        .footer .rightColumnContent span {
+          text-align: left !important;
+        }
+        .preheader .rightColumnContent,
+        .preheader .leftColumnContent {
+          font-size: 80% !important;
+          padding: 5px 0;
+        }
+        table.wrapper-mobile {
+          width: 100% !important;
+          table-layout: fixed;
+        }
+        img.max-width {
+          height: auto !important;
+          max-width: 480px !important;
+        }
+        a.bulletproof-button {
+          display: block !important;
+          width: auto !important;
+          font-size: 80%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .columns {
+          width: 100% !important;
+        }
+        .column {
+          display: block !important;
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    </style>
+    <!--user entered Head Start-->
+   =20
+     <!--End Head user entered-->
+  </head>
+  <body>
+    <center class=3D"wrapper" data-link-color=3D"#1188E6" data-body-style=
+=3D"font-size: 14px; font-family: arial; color: #000000; background-color: =
+#ffffff;">
+      <div class=3D"webkit">
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"10=
+0%" class=3D"wrapper" bgcolor=3D"#ffffff">
+          <tr>
+            <td valign=3D"top" bgcolor=3D"#ffffff" width=3D"100%">
+              <table width=3D"100%" role=3D"content-container" class=3D"out=
+er" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                <tr>
+                  <td width=3D"100%">
+                    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">
+                      <tr>
+                        <td>
+                          <!--[if mso]>
+                          <center>
+                          <table><tr><td width=3D"600">
+                          <![endif]-->
+                          <table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"width: 100%; max-width:600px;" align=3D"cent=
+er">
+                            <tr>
+                              <td role=3D"modules-container" style=3D"paddi=
+ng: 0px 0px 0px 0px; color: #000000; text-align: left;" bgcolor=3D"#ffffff"=
+ width=3D"100%" align=3D"left">
+                               =20
+    <table class=3D"module preheader preheader-hide" role=3D"module" data-t=
+ype=3D"preheader" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"display: none !important; mso-hide: all; visibility: hidden=
+; opacity: 0; color: transparent; height: 0; width: 0;">
+      <tr>
+        <td role=3D"module-content">
+          <p></p>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 018px 18px 18px;line-height:22px;text-ali=
+gn:inherit;" height=3D"100%" valign=3D"top" bgcolor=3D"">
+            <div style=3D"font-style: normal; font-variant-ligatures: norma=
+l; font-variant-caps: normal; font-weight: 400; font-family: arial; font-si=
+ze: 14px; color: rgb(0, 0, 0); text-align: justify;"><span style=3D"font-si=
+ze:18px;"><strong>Dear Authors/Researchers</strong></span></div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;">&nbsp;</div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;"><strong><span style=3D"font-size: =
+22px;">I</span>NTERNATIONAL&nbsp;<span style=3D"font-size: 22px;">J</span>O=
+URNAL OF&nbsp;<span style=3D"font-size: 22px;">E</span>NGINEERING&nbsp;<spa=
+n style=3D"font-size: 22px;">S</span>CIENCES AND&nbsp;<span style=3D"font-s=
+ize: 22px;">R</span>ESEARCH&nbsp;<span style=3D"font-size: 22px;">T</span>E=
+CHNOLOGY&nbsp; &nbsp;(<span class=3D"m_-2682313648382110229gmail-m_-3279438=
+825791617965gmail-m_5627077547282848379gmail-il">IJESRT</span>, ISSN 2277-9=
+655)&nbsp;</strong></div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;">&nbsp;</div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;">Invites you to submit your researc=
+h paper for publishing in<strong>&nbsp;</strong></div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;"><strong>VOLUME 8&nbsp;ISSUE 8&nbsp=
+;(August-2019)</strong></div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;"><strong>&nbsp;</strong>
+
+<div style=3D"box-sizing: content-box; text-align: left;"><a href=3D"https:=
+//u9553424.ct.sendgrid.net/wf/click?upn=3DB-2FA9DXUzkOKP9-2BstiXwdXmSM9HoWY=
+G4Lx1hG5pYX6lPg1xqjfRQjpwyY-2BmXu-2FxilcgY30wNQwQzRTFp9sg-2BPYQ-3D-3D_7zRxt=
+iYDTGBGqDWlp0jwu-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCxFuEffOdhUIXlBHKgG=
+-2Bd-2F182Vy0chsixRwEQvtCGc3tCA-2B4REK5E8xby0EykSWo-2BceZU-2FrtqhuC6Vc-2Ff1=
+ArPmeOxKlw8c4Q-2FeIUTkz2QAk-2FTjjENUCMepREp5XVb6mmygPIpulE3V6OhVXjSUnP1kUnK=
+YKPa72U6VnjmnPsh-2BF9vt32hVzHpQiyc1rkz9h5BBW-2Fxlj2I1Jfw9uwnFWWLz2Exb1sAVw0=
+FpI4Frnp9ngER1Bn68071tBW5khN-2BxlNw7mtXSnwWcSL9Ott0WbrC-2FEoxS-2FsxNDVLvaF8=
+k6mnSmhlQV78BUE8hrGMNAJOn-2FB2Jp6l8H4gDJU4fH-2FvCc9fH3MQgfqRYJ2S5o8nn-2BI9u=
+-2F03WVQhU-3D"><span style=3D"color: rgb(218, 165, 32);"><span style=3D"fon=
+t-size: 18px;"><strong>Click to Submit Manuscript Online</strong>&nbsp;</sp=
+an></span></a></div>
+
+<div style=3D"box-sizing: content-box; text-align: left;"><a href=3D"https:=
+//u9553424.ct.sendgrid.net/wf/click?upn=3DB-2FA9DXUzkOKP9-2BstiXwdXmSM9HoWY=
+G4Lx1hG5pYX6lPg1xqjfRQjpwyY-2BmXu-2FxilcgY30wNQwQzRTFp9sg-2BPYQ-3D-3D_7zRxt=
+iYDTGBGqDWlp0jwu-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCxFuEffOdhUIXlBHKgG=
+-2Bd-2F182Vy0chsixRwEQvtCGc3tCA-2B4REK5E8xby0EykSWo-2BceZU-2FrtqhuC6Vc-2Ff1=
+ArPmeOxKlw8c4Q-2FeIUTkz2QAk-2FTjjENUCMepREp5XVb6mmygPIpuljq-2F8BGpEWpoe0ThZ=
+KnJKDQmrSXe2X-2BFxsX4-2B4uBgl4w6QD54c56m4ImZbhNwkj2dDlWy-2Bjhv-2BYD1FU3iHcv=
+o2D2A-2Fc94hfRH14UY8DoKRZYlzcOw1bfoWPIUl4v-2F36kehOae8oA5cWtSp7Im9Rqg5ksA1W=
+iV89K5Jjr6Il-2FY6TokDuhGLORiZtEU7UtTXDJ3q5Xyzdl2cYuoP8yOwTZR8RME5786SxRPFmy=
+N6cbfpSw-3D">http://ijesrt.com/submit_<wbr>manuscript_online.php</a></div>
+
+<div style=3D"text-align: left;">&nbsp;</div>
+</div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;"><strong><em>About&nbsp;<span class=
+=3D"m_-2682313648382110229gmail-m_-3279438825791617965gmail-m_5627077547282=
+848379gmail-il">IJESRT</span></em>&nbsp;&nbsp;</strong>(P.Impact Factor: 5.=
+164)&nbsp; &nbsp;&nbsp;<br>
+To maintain a high-quality journal, manuscripts that appear in the&nbsp;<sp=
+an class=3D"m_-2682313648382110229gmail-m_-3279438825791617965gmail-m_56270=
+77547282848379gmail-il">IJESRT</span>&nbsp;have been subjected to a rigorou=
+s review process. This includes blind reviews by three or more members of t=
+he editorial review board, followed by a detailed review by the&nbsp;<span =
+class=3D"m_-2682313648382110229gmail-m_-3279438825791617965gmail-m_56270775=
+47282848379gmail-il">IJESRT</span>&nbsp;editors.<br>
+&nbsp;<br>
+<span style=3D"font-size: 16px;"><strong>Subject Category:&nbsp;</strong></=
+span><br>
+Cover all branches of Engineering and Science<br>
+&nbsp;<br>
+<span style=3D"font-size: 16px;"><strong>Important Dates:</strong></span></=
+div>
+
+<ul style=3D"font-style: normal; font-variant-ligatures: normal; font-varia=
+nt-caps: normal; font-weight: 400; color: rgb(0, 0, 0); font-size: 14px; te=
+xt-align: justify; font-family: arial;">
+	<li style=3D"margin-left: 15px;"><strong>Paper Submission:&nbsp; 11&nbsp;A=
+ugust 2019</strong></li>
+	<li style=3D"margin-left: 15px;"><strong>Published Online on: 15 August 20=
+19.</strong></li>
+</ul>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;"><span style=3D"font-weight: 600; b=
+ackground-image: initial; background-position: initial; background-size: in=
+itial; background-repeat: initial; background-origin: initial; background-c=
+lip: initial;">Review Results&nbsp;</span>(Acceptance/Rejection) Notificati=
+on: Within 02&nbsp; Days after submitting the paper.</div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;"><br>
+<span style=3D"font-size: 16px;"><strong>Publication Charges</strong></span=
+><br>
+<strong>Indian Author(s)</strong><br>
+Rs 1700/- up to 3 authors, after 3 authors charges will be Rs 500/author&nb=
+sp;<br>
+Free Hard copy of certificate.<br>
+<strong>Foreign Author(s)</strong><br>
+$ 85 USD up to 6 Authors</div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;"><br>
+<strong>FINAL PAPER Submission</strong>&nbsp; at<a href=3D"mailto:ijesrt@gm=
+ail.com">&nbsp;</a><a href=3D"mailto:ijesrt@gmail.com">ijesrt@gmail.com</a>=
+&nbsp;or&nbsp;<span class=3D"sg-image" data-imagelibrary=3D"%7B%22alignment=
+%22%3A%22%22%2C%22link%22%3A%22http%3A//ijesrt.com/submit_manuscript_online=
+.php%22%2C%22src%22%3A%22https%3A//ci5.googleusercontent.com/proxy/6fEbb20i=
+HZ_NmbMCSqxyRQBZ-sObLrLzMj2VAzy9LNxQOjZ7CqPMuNPrPL3WaO5ayk3N49cu0HOINtI-0Ns=
+yAw3BE8HSSwkjxusK1g%3Ds0-d-e1-ft%23http%3A//ijesrt.com/images/Manuscript_su=
+bmission_online.png%22%2C%22alt_text%22%3A%22%22%2C%22height%22%3A%2250%22%=
+2C%22width%22%3A%22150%22%2C%22widthPercent%22%3A100%2C%22isResponsive%22%3=
+Afalse%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D"><a href=3D"https://u9=
+553424.ct.sendgrid.net/wf/click?upn=3DB-2FA9DXUzkOKP9-2BstiXwdXmSM9HoWYG4Lx=
+1hG5pYX6lPg1xqjfRQjpwyY-2BmXu-2FxilcgY30wNQwQzRTFp9sg-2BPYQ-3D-3D_7zRxtiYDT=
+GBGqDWlp0jwu-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCxFuEffOdhUIXlBHKgG-2Bd=
+-2F182Vy0chsixRwEQvtCGc3tCA-2B4REK5E8xby0EykSWo-2BceZU-2FrtqhuC6Vc-2Ff1ArPm=
+eOxKlw8c4Q-2FeIUTkz2QAk-2FTjjENUCMepREp5XVb6mmygPIpulJSn91tixx-2FpzGQBw84ZJ=
+8HcmQM3EdTvRjy4C3NB4NhyFgBsNfHwccASLUimqAWftmSeg-2FPU4oalbxfAvbn4Uic4jmwiDw=
+-2Fdw9YPW3Dz7lnC98PYLOCvgMx0GRK-2FdgxV3BAoJhY1P2Cpls-2FI9RFkQ6c3fr-2FbBMQjG=
+LHuUGz3UgUJ-2F8lDgAscGUSh008mI1Vl-2FI-2FXQakyyAxmQgCSzanLLx4cC0MeH0vrCHRMrP=
+pvP-2FE4-3D"><img alt=3D"" border=3D"0" class=3D"max-width" height=3D"50" s=
+rc=3D"https://ci5.googleusercontent.com/proxy/6fEbb20iHZ_NmbMCSqxyRQBZ-sObL=
+rLzMj2VAzy9LNxQOjZ7CqPMuNPrPL3WaO5ayk3N49cu0HOINtI-0NsyAw3BE8HSSwkjxusK1g=
+=3Ds0-d-e1-ft#http://ijesrt.com/images/Manuscript_submission_online.png" st=
+yle=3D"color: rgb(0, 0, 0); text-decoration: none; font-family: Helvetica, =
+arial, sans-serif; font-size: 16px;" width=3D"150"></a></span></div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; font-size: 14px; co=
+lor: rgb(0, 0, 0); text-align: justify;">Website: <a href=3D"https://u95534=
+24.ct.sendgrid.net/wf/click?upn=3DMF-2BoG-2FKH0gByOieM7H-2Fp6SxPLtImlU0QkfW=
+PsZeYub8-3D_7zRxtiYDTGBGqDWlp0jwu-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCx=
+FuEffOdhUIXlBHKgG-2Bd-2F182Vy0chsixRwEQvtCGc3tCA-2B4REK5E8xby0EykSWo-2BceZU=
+-2FrtqhuC6Vc-2Ff1ArPmeOxKlw8c4Q-2FeIUTkz2QAk-2FTjjENUCMepREp5XVb6mmygPIpulv=
+fgETcoSoe4lpFaSsLZNQMZSSb6e1s5ZPzRvmloH-2BF9Xq43NGHgzuw9FfnTBjkSS6xcHckNF4t=
+5HqMC5cK92e8cQUCXSzYLuehtIcxoWX6Fc1RKXSW6C8e075Q1JmsFS7BPcJ5lsAYbO0pfG4zry0=
+2o6aTCjC1Vrv4iOSA9JEiRgD6wMTMoNT0c0WMhApiv2oaX8hBf8NRWN5ZrVC-2BtTdM95fdD83L=
+AYz0-2FpnIKZtEc-3D">www.ijesrt.in</a></div>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; font-family: arial; color: rgb(0, 0, 0)=
+; text-align: justify;"><span style=3D"font-size: 0px;">www</span></div>
+        </td>
+      </tr>
+    </table>
+  <div data-role=3D"module-unsubscribe" class=3D"module unsubscribe-css__un=
+subscribe___2CDlR" role=3D"module" data-type=3D"unsubscribe" style=3D"color=
+:#444444;font-size:12px;line-height:20px;padding:16px 16px 16px 16px;text-a=
+lign:center"><p style=3D"font-family:Editor  IJESRT ;font-size:12px;line-he=
+ight:20px"><a class=3D"Unsubscribe--unsubscribeLink" href=3D"https://u95534=
+24.ct.sendgrid.net/asm/unsubscribe/?user_id=3D9553424&amp;data=3D44TY52e2Ef=
+CgFn5YR62zO0qP8LkPbUlN9U_p5yek-ncvPjxtkYiZGBQ1lCC5bdHLk8ARH-QD8pulaPfF3MpM9=
+wdKIzDJeHIQ-ui5Kt8J5tQ_QOxBQ6AE_48kxGWzkrzjxxyu41FsDG5rXXwrx4PRFUyS01Kh9Rem=
+YY-L-pgDh26JZRRPRMQSFjxTw76FGkrl9Z3B97w4TRxOlbctCeSRo42MfVQg96KZ_eN4HB8tmDh=
+dlRRafLIVhp1vGaOp0DORzQbQwyUwfNkVAakFfT8TVnwLl8_swLiein_KR38iZOObhVyo2Edehg=
+x-HVYG2ihntKfBXTTNrw1A6kiEa9E30vUiyZz47Oqanz5oAXJSkjQFgZmvh_EcleABk2eWURPvN=
+GrCfSLvR5fDh2TN1SF6zojdl6timzPPuI0DAQexOTE5oL-ZTAUB3XU7Ja4a7oS6aiytOnHbQbbl=
+1DYUagItHxjW4oAb1QbKeuhkB0j76x8r8k34cz7hFc1La8Jo-C_HS4VRKAgoSEZj5GA1eC_xPdb=
+wqjM2QbohmCLtpPUzr60=3D">Unsubscribe</a></p></div>
+                              </td>
+                            </tr>
+                          </table>
+                          <!--[if mso]>
+                          </td></tr></table>
+                          </center>
+                          <![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </center>
+ =20
+<img src=3D"https://u9553424.ct.sendgrid.net/wf/open?upn=3D7zRxtiYDTGBGqDWl=
+p0jwu-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCxFuEffOdhUIXlBHKgG-2Bd-2F182V=
+y0chsixRwEQvtCGc3tCA-2B4REK5E8xby0EykSWo-2BceZU-2FrtqhuC6Vc-2Ff1ArPmeOxKlw8=
+c4Q-2FeIUTkz2QAk-2FTjjENUCMepREp5XVb6mmygPIpul-2FT6FHemPM5BDHk-2F-2FaY4L4xk=
+l-2B1bVkWmIiXregpwfiyiP-2FPMct9eoCP7kOeQBBzAtjK9bq9zVEutnH0jnvHnvQk31iZ4X8H=
+1vRna1vAaiiW-2BnldFjMRWKnzYXRtX-2BEWXX556FMsynd2iGy42fRZo-2BMjCgFrsWULG2Z9S=
+2xdvYju1q6fr7KHEIVcV3-2B3EeUfDhwWEVdJkalibKyD9u9tfOtioWFoI44zQkYaCKk6BlW6o-=
+3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !imp=
+ortant;width:1px !important;border-width:0 !important;margin-top:0 !importa=
+nt;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !impo=
+rtant;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 =
+!important;padding-left:0 !important;">
+</body>
+</html>
+
+--5c81ff7ebab187077a9e61e5b37ef2d46e8c7b6fa21274ed33a7528ddac2--

@@ -1,0 +1,261 @@
+Received: from BN8PR08MB6193.namprd08.prod.outlook.com (2603:10b6:a03:1a0::34)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR16CA0021.NAMPRD16.PROD.OUTLOOK.COM; Sat, 17 Aug 2019 18:24:49 +0000
+Received: from DM6PR08CA0050.namprd08.prod.outlook.com (2603:10b6:5:1e0::24)
+ by BN8PR08MB6193.namprd08.prod.outlook.com (2603:10b6:408:79::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2178.16; Sat, 17 Aug
+ 2019 18:24:48 +0000
+Received: from CO1NAM04FT054.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::201) by DM6PR08CA0050.outlook.office365.com
+ (2603:10b6:5:1e0::24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2178.16 via Frontend
+ Transport; Sat, 17 Aug 2019 18:24:48 +0000
+Authentication-Results: spf=none (sender IP is 209.85.166.68)
+ smtp.mailfrom=ajetm.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=ajetm-org.20150623.gappssmtp.com;calpoly.edu; dmarc=none action=none
+ header.from=ajetm.org;compauth=pass reason=106
+Received-SPF: None (protection.outlook.com: ajetm.org does not designate
+ permitted sender hosts)
+Received: from mail-io1-f68.google.com (209.85.166.68) by
+ CO1NAM04FT054.mail.protection.outlook.com (10.152.91.22) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2178.16 via Frontend Transport; Sat, 17 Aug 2019 18:24:47 +0000
+Received: by mail-io1-f68.google.com with SMTP id j4so12794971iop.11
+        for <foaad@calpoly.edu>; Sat, 17 Aug 2019 11:24:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ajetm-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=y+Pa27jmW5QNsqehw1JWxA2QC1MIUuwjJawaoKJ6PXg=;
+        b=v1H9jjuUp4cKBpoxTWkeg+Lewvdj2G5UgDr//k51DLFWEDgDy3MjSuOhygYl2ntDmi
+         FeL1nb6CiujhZCnQyufdKEi+dwtFABDSKuYSul5bTb33Xz4KMKtN1hvpPn3pAQTwUwyt
+         5XW3plDhU+kEwJ9oIJHxFo3KsyS6eZ+Bv36WaUA2iDNfAFYuWX+c8TcnFLveA7Q8BuN1
+         5hnzC+canqlADZGbc5RAtgKXTfVgtUAtHm8l/dHWs4I4NVFBwST5RmRIQPhc7Opw5rfl
+         MWnazRuq4yfJxfRyUwH9Gg5YH6YvwPnZDF9q2QrMf9UCcephVG6qv3ndG9nHKSJ5kYKp
+         3UVA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=y+Pa27jmW5QNsqehw1JWxA2QC1MIUuwjJawaoKJ6PXg=;
+        b=AxjeYROLev4s4tJRVX4gMKc/CrGd3eyl/oeOaBragGx27iE8OxILJSWRnpY8EEdSh/
+         cI5syRly/YnCfQSywg0ElOnC5jcljHHdHddeRI3RkbS7M1XRfIDrU36uJIqe+HI4ZzUR
+         X6YynhxzXHLbfKn2sfZW6i7zT+XIEmX2I6hf7QgyqwfPCpgY3I6TR1lHvNutSooU12U7
+         pkgWmEziwZtXMGC+YDmhp5wFFlDijJ0GYRfyPIpj8ll6oEso3MG/Rfmfqkyf159GcCAM
+         0XmQlmZ5q7I7cMvJh24x7G7Oc94vL+TmJ1qjTsESjMzVj83zSiiROMhMJN8BSNlU78Qt
+         jGrQ==
+X-Gm-Message-State: APjAAAUy0/CeCHPOzhrxpRAK20QAFRco3Zrm7BtxsmpbGZsFVpRpgLH9
+	g/dkHUvdzIqayg7b03Uk149QJY7iQR/hse/uJyhVdsvyZMuGcw==
+X-Google-Smtp-Source: APXvYqyNy1RO7RcmvXiCr4277AXUbbMwzEINS5GkQDdysZRcUjCzNOoULZ5VNLf514uhF8ETTYHVqO6FqCj08nbp8l8=
+X-Received: by 2002:a05:6602:22ce:: with SMTP id e14mr17552096ioe.290.1566066286692;
+ Sat, 17 Aug 2019 11:24:46 -0700 (PDT)
+From: J Article <article@ajetm.org>
+Date: Sun, 18 Aug 2019 02:24:35 +0800
+Message-ID: <CAO22u1Qefi+5AuzfO29eKtLhQfCNs-xHH0Wk+i9zCsXmFBjb=A@mail.gmail.com>
+Subject: Dear Pena-Rios, A; Khosmood, F: Formal Invitation from the Editorial
+ Board of American Journal of Software Engineering and Applications
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="000000000000b6972c059054384b"
+Return-Path: article@ajetm.org
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Aug 2019 18:24:47.7360
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ b08a5c71-53d3-4aa3-11dc-08d723402f76
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132105398877390631;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.166.68;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(428003)(149574003)(189003)(199004)(31014005)(33964004)(126002)(6916009)(476003)(86362001)(95326003)(486006)(55446002)(246002)(16003)(26005)(7636002)(7596002)(966005)(2171002)(8576002)(336012)(305945005)(14444005)(71190400001)(606006)(356004)(6666004)(5660300002)(61266001)(22186003)(8676002)(75640400001)(4006050)(2351001)(2361001)(16586007)(59536001)(6306002)(9686003)(236005)(1096003)(61726006)(498394004)(42186006)(58800400005)(167793001)(516124003);DIR:INB;SFP:;SCL:1;SRVR:BN8PR08MB6193;H:mail-io1-f68.google.com;FPR:;SPF:None;LANG:en;PTR:mail-io1-f68.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT054.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: b08a5c71-53d3-4aa3-11dc-08d723402f76
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(8001031)(1405096)(1407096)(1408068)(71702078);SRVR:BN8PR08MB6193;
+X-MS-TrafficTypeDiagnostic: BN8PR08MB6193:
+X-MS-Exchange-PUrlCount: 2
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Aug 2019 18:24:47.7080
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b08a5c71-53d3-4aa3-11dc-08d723402f76
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN8PR08MB6193
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.2784356
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2178.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?OEx3bC9nMmVMV1FESFRtek0wL0FVYmcrbVRvSG9YUHA3VTBMQUtzSmt6Mmw2?=
+ =?utf-8?B?STI2eFZjc0llY2V3dWRERDNuZVU0ZUtFdjRoeEhnWk9IVUhCS2tnV2QwNm9F?=
+ =?utf-8?B?T09qaVpnRVFMWHJFQjByQ0lqSWF6bzNxMzFpN0s0VFVXbWZYT3R4d1RtUy9t?=
+ =?utf-8?B?MjBITC9ORDE3ckhOUGVnRzA3Q2JHVmx6YTYvZ3ZmZE1ZRWxrbVFDMHZpaEdK?=
+ =?utf-8?B?TDVrbTl2ZDIvcWRGOVNBT2Y3UlE1TVlJVmtJUXljVE90alo2QVI1aG1aZmk4?=
+ =?utf-8?B?cVZXb3RobnNGc2ZGczJTMXl0Nzk5dHp3RFArVHRSb2NpdlA0K0FNTmRqeE55?=
+ =?utf-8?B?M3FacGdCZ2NpVlQyODRLeFc5VkhVWU1DdUxLOEZUa0h0WDI2VkprNFZ5K2dV?=
+ =?utf-8?B?N0RFa1h0VDRXNVJ5cFdHRlZKVngvRVg2OGVTZTNGc2wwVEFjdGVhM2FOUE9r?=
+ =?utf-8?B?NVEwdmFBY0x3TGxFQVpwTVlpRzdPQkxudG5aN0RrWlA0SHhBREltcndyejZ6?=
+ =?utf-8?B?RXFwSmhWbXZydU5IQkNpYmtCdk5weDRRYThIMUxBTUFTQVl0eTRiaWNjbFdX?=
+ =?utf-8?B?YXNOQ250b1YvYlJ6U3R3ZTBEa25vd0dnVDM3eGsyMXZQNFd2bHY4QlZvNkxL?=
+ =?utf-8?B?MVcyd0dZNmdxWkcvSXRxS1hMcHhTNkEzVEZPc25sVXdWZVhmd3VBU2FlV0c0?=
+ =?utf-8?B?a3VtUm5yYkVwWlhobFJPeHNTRWRWZlZDNEIxMEJRMmllZkVTNWVPZzdoSDNo?=
+ =?utf-8?B?SUdhbjdmWE5zcjJpV09ycXdSVDNKSy9qMmJyVGV5UzI1K1FvTEViSldGOHRa?=
+ =?utf-8?B?Qm1kb05RcXFaNlNXVzE1WmlYa0lLUVFMcGVJTDZhMnhjMnA5a3hoN3owWW5T?=
+ =?utf-8?B?Unl0aTBiWHM4RW9WSjFMTmNmYXBrUDZvQzZJT2FURmI0MWgySE45YTFtMkhj?=
+ =?utf-8?B?NDdkeFlvamtGenpZa3VnR3JhcUUzRUplZG1hNFA1LzlVOHVlUU03Zmp0UWFt?=
+ =?utf-8?B?QjJkRU9neEtrcHdrKzZtcjMyTGt5UERCbWcvZ3BNd2ZKVm8xY3k0VXlyREZl?=
+ =?utf-8?B?czBsRUZ1SEoxUnNza1RMRkJKUW1ScDMzT0xOOXErN3k2dnI5bklPcVlTWXFp?=
+ =?utf-8?B?eXpWeTI1UkxjdytESUZaQjY3S1lUZFJrNURoeXRMMWJSanlrKzFRcGtZNEhj?=
+ =?utf-8?B?MlozRTlHNm1WdnFHN2VMR3BIbk01S0RDU01GT2hSUWREenVROENQYlMrWWNQ?=
+ =?utf-8?B?VU5nbks2V3UxdVpvM2E0SzNxcnBkODFZOVBVNVJMVmxZS1B5MEFyTVpCeFUx?=
+ =?utf-8?Q?glxnA2xCsVX+0YcJWkaDOHEn+CCFHxq08E?=
+MIME-Version: 1.0
+
+--000000000000b6972c059054384b
+Content-Type: text/plain; charset="UTF-8"
+
+American Journal of Software Engineering and Applications
+ISSN Online: 2327-249X, ISSN Print: 2327-2473
+Current Issue: Vol.8, No.1, 2019
+Dear Pena-Rios, A; Khosmood, F,
+We are very impressed after reading your article titled "Immersive Learning
+Technologies: Research and Future Directions J.UCS Special Issue". We came
+to the assumption that American Journal of Software Engineering and
+Applications is in line with your research field. Our Board of Editorial
+Members are privileged to be inviting you to contribute your precious
+unpublished research articles to our journal for publication.
+Efficient Publication
+Quick Publication Service
+Your paper can be published online within 4-6 weeks since the date of
+submission.
+Professional Peer Review
+More than 3 peer reviewers from all over the world will carefully review
+each submitted article. Our Professional Reviewers will provide helpful
+suggestions to assist the authors in further improvement of their papers.
+Quickly Feedback
+The author will be provided with timely feedback about each submission, and
+we will provide prompt replies for every enquiries received from our
+authors.
+Guidelines for Submit your Paper
+
+   1. Instructions for manuscript preparation and Template can be seen at:
+   http://www.ajsea.org/submission
+   2. Preparing your manuscript based on the manuscript template.
+   3. Log in and submit your paper via the submission system online.
+
+Selected Journals
+We have 300+ open access journals including almost all branches such as
+Drug Design, Animal Science, Clinical Urology, Civil, Sensors Networks,
+Arts, Transportation Engineering, Risk Management, International and Public
+Affairs, Systems Engineering, etc.
+For more information please check: http://www.ajsea.org/journals
+Engineering Science
+International Journal of Systems Engineering
+International Journal of Engineering Management
+American Journal of Science, Engineering and Technology
+American Journal of Management Science and Engineering
+Respectfully,
+Grace Kent
+Assistant from Editorial Office of American Journal of Software Engineering
+and Applications
+
+--000000000000b6972c059054384b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">
+<br><br><div style=3D"font-family:&quot;Arial&quot;;font-size:13px;line-hei=
+ght:22px;color:rgb(3,3,3);background:rgba(224,219,210,0.2) none repeat scro=
+ll 0% 0%;padding:21px 194px 112px 14px;width:99%;text-align:justify"> 	<div=
+ style=3D"width:780px;background:rgb(253,255,255) none repeat scroll 0% 0%"=
+> 		<div style=3D"padding:10px 30px;border-top:5px solid rgb(144,71,1);back=
+ground:rgba(144,71,1,0.1) none repeat scroll 0% 0%"> 			<div style=3D"text-=
+align:left;font-size:15px;font-family:&quot;Verdana&quot;;font-style:italic=
+;font-weight:bold;line-height:26px;padding-bottom:6px">American Journal of =
+Software Engineering and Applications</div> 			<div style=3D"font-family:&q=
+uot;Verdana&quot;;font-style:italic"> 				<div style=3D"font-weight:bold;pa=
+dding-bottom:4px">ISSN Online: 2327-249X, ISSN Print: 2327-2473</div> 				<=
+div style=3D"font-weight:bold">Current Issue: Vol.8, No.1, 2019</div> 			</=
+div> 		</div> 		<div style=3D"padding:16px 24px"> 			<div style=3D"padding-=
+bottom:12px">Dear Pena-Rios, A; Khosmood, F,</div> 			<div>We are very impr=
+essed after reading your article titled &quot;<span style=3D"font-style:ita=
+lic">Immersive Learning Technologies: Research and Future Directions J.UCS =
+Special Issue</span>&quot;. We came to the assumption that <span style=3D"f=
+ont-style:italic">American Journal of Software Engineering and Applications=
+</span>
+ is in line with your research field. Our Board of Editorial Members are
+ privileged to be inviting you to contribute your precious unpublished=20
+research articles to our journal for publication.</div> 		</div> 		<div sty=
+le=3D"padding:7px 24px 10px;font-family:&quot;Verdana&quot;;font-size:14px"=
+> 			<div style=3D"padding:0px;text-align:left;line-height:22px">	<div styl=
+e=3D"display:inline-block;border-radius:13% 0px;color:rgb(144,71,1);font-we=
+ight:bold;border:1px solid rgba(144,71,1,0.5);padding:4px 9px">Efficient Pu=
+blication</div></div> 		</div> 		<div style=3D"background:rgba(144,71,1,0.1=
+) none repeat scroll 0% 0%;padding:16px 25px 18px"> 			<div style=3D"text-a=
+lign:center"> 				<div style=3D"display:table-cell;vertical-align:top;width=
+:200px;padding-right:10px;border-right:2px solid rgb(144,71,1)"> 					<div =
+style=3D"padding-bottom:6px;font-weight:bold;font-size:12px">Quick Publicat=
+ion Service</div> 					<div>Your paper can be published online within 4-6 w=
+eeks since the date of submission.</div> 				</div> 				<div style=3D"displ=
+ay:table-cell;vertical-align:top;width:280px;padding:0px 10px;border-right:=
+2px solid rgb(144,71,1)"> 					<div style=3D"padding-bottom:6px;font-weight=
+:bold;font-size:12px">Professional Peer Review</div> 					<div>More
+ than 3 peer reviewers from all over the world will carefully review=20
+each submitted article. Our Professional Reviewers will provide helpful=20
+suggestions to assist the authors in further improvement of their=20
+papers.</div> 				</div> 				<div style=3D"display:table-cell;vertical-alig=
+n:top;width:320px;padding-left:10px"> 					<div style=3D"padding-bottom:6px=
+;font-weight:bold;font-size:12px">Quickly Feedback</div> 					<div>The
+ author will be provided with timely feedback about each submission, and
+ we will provide prompt replies for every enquiries received from our=20
+authors.</div> 				</div> 			</div> 		</div> 		<div style=3D"padding:23px 2=
+4px 0px"> 			<div style=3D"padding-bottom:14px;font-family:&quot;Verdana&qu=
+ot;;font-size:14px"> 				<div style=3D"padding:0px;text-align:left;line-hei=
+ght:22px">	<div style=3D"display:inline-block;border-radius:13% 0px;color:r=
+gb(144,71,1);font-weight:bold;border:1px solid rgba(144,71,1,0.5);padding:4=
+px 9px">Guidelines for Submit your Paper</div></div> 			</div> 			<div> 			=
+	<ol style=3D"padding:0px 0px 0px 16px;margin:0px;list-style-type:decimal;l=
+ine-height:22px;text-align:left"><li style=3D"padding-bottom:4px">Instructi=
+ons for manuscript preparation and Template can be seen at: <a href=3D"http=
+://www.ajsea.org/submission" border=3D"0" target=3D"_blank" style=3D"text-d=
+ecoration:none;color:rgb(0,60,255);white-space:nowrap;font-weight:bold">htt=
+p://www.ajsea.org/submission</a></li><li style=3D"padding-bottom:4px">Prepa=
+ring your manuscript based on the manuscript template.</li><li>Log in and s=
+ubmit your paper via the submission system online.</li></ol> 			</div> 		</=
+div> 		<div style=3D"padding:23px 24px"> 			<div style=3D"font-family:&quot=
+;Verdana&quot;;font-size:14px"> 				<div style=3D"padding:0px;text-align:le=
+ft;line-height:22px">	<div style=3D"display:inline-block;border-radius:13% =
+0px;color:rgb(144,71,1);font-weight:bold;border:1px solid rgba(144,71,1,0.5=
+);padding:4px 9px">Selected Journals</div></div> 			</div> 			<div style=3D=
+"padding:16px 0px"> 				<div style=3D"padding-bottom:12px">We
+ have 300&#43; open access journals including almost all branches such as=20
+Drug Design,  Animal Science,  Clinical Urology,  Civil,  Sensors=20
+Networks,  Arts,  Transportation Engineering,  Risk Management, =20
+International and Public Affairs,  Systems Engineering,  etc.</div> 				<di=
+v style=3D"padding:0px">For more information please check: <a href=3D"http:=
+//www.ajsea.org/journals" border=3D"0" target=3D"_blank" style=3D"text-deco=
+ration:none;color:rgb(0,60,255);white-space:nowrap;font-weight:bold">http:/=
+/www.ajsea.org/journals</a></div> 			</div> 			<div style=3D"line-height:10=
+0%;font-weight:bold;font-style:italic"> 				<div style=3D"padding-bottom:12=
+px">Engineering Science</div><div style=3D"padding-bottom:12px">Internation=
+al Journal of Systems Engineering</div><div style=3D"padding-bottom:12px">I=
+nternational Journal of Engineering Management</div><div style=3D"padding-b=
+ottom:12px">American Journal of Science, Engineering and Technology</div><d=
+iv>American Journal of Management Science and Engineering</div> 			</div> 	=
+	</div> 		<div style=3D"background:rgba(144,71,1,0.1) none repeat scroll 0%=
+ 0%;padding:10px 20px;line-height:30px;border-bottom:8px solid rgb(144,71,1=
+)"> 			<div>Respectfully, </div> 			<div>Grace Kent</div> 			<div>Assistant=
+ from Editorial Office of <span style=3D"font-style:italic">American Journa=
+l of Software Engineering and Applications</span></div> 		</div> 	</div> </=
+div>=20
+
+</div>
+
+--000000000000b6972c059054384b--

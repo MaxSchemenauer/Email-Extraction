@@ -1,0 +1,1683 @@
+Received: from BYAPR08MB4983.namprd08.prod.outlook.com (2603:10b6:a03:14b::24)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR06CA0047.NAMPRD06.PROD.OUTLOOK.COM; Tue, 30 Apr 2019 10:28:24 +0000
+Received: from BYAPR08CA0070.namprd08.prod.outlook.com (2603:10b6:a03:117::47)
+ by BYAPR08MB4983.namprd08.prod.outlook.com (2603:10b6:a03:6a::28) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1835.15; Tue, 30 Apr
+ 2019 10:28:22 +0000
+Received: from CO1NAM04FT019.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::204) by BYAPR08CA0070.outlook.office365.com
+ (2603:10b6:a03:117::47) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1835.13 via Frontend
+ Transport; Tue, 30 Apr 2019 10:28:22 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=none action=none
+ header.from=INRIA.FR;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ CO1NAM04FT019.mail.protection.outlook.com (10.152.90.93) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1835.13 via Frontend Transport; Tue, 30 Apr 2019 10:28:20 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x3UAOCh5030355
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Tue, 30 Apr 2019 13:24:12 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x3UAOBwP025917;
+	Tue, 30 Apr 2019 13:24:11 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Tue, 30 Apr 2019 13:24:11 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x3UAOBb7007105
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Tue, 30 Apr 2019 13:24:11 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x3UA1KGg016911;
+	Tue, 30 Apr 2019 13:23:48 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          146837 for GAMESNETWORK@LISTSERV.UTA.FI; Tue, 30 Apr 2019 13:23:11
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x3UANAvb017281 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Tue, 30 Apr 2019 13:23:11 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x3UANArW029637 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <gamesnetwork@uta.fi>; Tue, 30 Apr 2019 13:23:10 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x3UAN9Bh031559 for
+          <gamesnetwork@uta.fi>; Tue, 30 Apr 2019 13:23:09 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Tue, 30 Apr 2019 13:23:09
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail3-relais-sop.national.inria.fr
+          (mail3-relais-sop.national.inria.fr [192.134.164.104]) by
+          smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x3UAN6ms007296
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=NOT) for <gamesnetwork@uta.fi>; Tue, 30 Apr 2019 13:23:09 +0300
+X-MGA-submission: =?us-ascii?q?MDE4ReosNiRkeQlyBLkXId8M/yD0SYZPnATU7p?=
+                  =?us-ascii?q?DQT0DSfWI7NaWTbZeYM65qpzBdqBouNIQclkUn44MBytbqfhK85EUhI3?=
+                  =?us-ascii?q?MQTWf+bGrxEf+B7M2fYC+BQcJanwZsnf5MY4ydi5TJR736M5NmARv016?=
+                  =?us-ascii?q?OyAu321WEZ/Uul01c4tZn3bw=3D=3D?=
+Received: from zcs-store5.inria.fr ([128.93.142.32]) by
+          mail3-relais-sop.national.inria.fr with ESMTP; 30 Apr 2019 12:23:05
+          +0200
+Content-Type: multipart/alternative;
+	boundary="=_6f3c3e74-a2c8-46a2-8a40-56b6e4884e4a"
+X-Originating-IP: [131.254.14.86]
+X-Mailer: Zimbra 8.7.11_GA_3789 (ZimbraWebClient - GC74 (Win)/8.7.11_GA_3789)
+Thread-Index: bbjaDjjRM1TMLLSd0BslnknhqVT+lA==
+Thread-Topic: ACM Symposium on Applied Perception 2019
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Tue, 30 Apr 2019 13:24:11 +0300 (EEST)
+X-Spam-Level: +
+X-Spam-Report: BAYES_00,HTML_MESSAGE,L_BDY_TRGTBLNK,L_HIDDEN_EMPTY_TO,L_OTHERMX_MAYBE_UBE,URIBL_BLOCKED
+X-Spam-Status: NO ; 1
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+Message-ID: <1837088840.4856181.1556619784974.JavaMail.zimbra@inria.fr>
+Date: Tue, 30 Apr 2019 12:23:04 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Ludovic Hoyet <ludovic.hoyet@INRIA.FR>
+Subject: [GAMESNETWORK] [Call for Paper] ACM Symposium on Applied Perception 2019
+Comments: cc: Douglas Cunningham <douglas.cunningham@b-tu.de>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Apr 2019 10:28:21.1711
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ b35a0363-4383-4bea-ac94-08d6cd569183
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(2970300002)(286005)(199004)(189003)(176002)(51174002)(7192003)(42882007)(426003)(15974865002)(102836004)(336012)(26005)(44832011)(6392003)(97736004)(106002)(21615005)(95636005)(66066001)(7846003)(16586007)(1096003)(30864003)(3846002)(6116002)(40036005)(66574012)(71190400001)(356004)(7696005)(43066004)(81166006)(16003)(14444005)(75640400001)(6862004)(55176004)(6306002)(486006)(966005)(4006050)(69596002)(53946003)(39326003)(74482002)(36756003)(66346011)(81156014)(7736002)(76786011)(2616005)(16799955002)(476003)(53416004)(606006)(50226002)(126002)(956004)(33964004)(146002)(86816001)(53386004)(8676002)(84326002)(236005)(53936002)(72826003)(559001)(579004)(569006);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4983;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:ErrorRetry;A:3;MX:3;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT019.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: b35a0363-4383-4bea-ac94-08d6cd569183
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600141)(711020)(4605104)(1401320)(1421009)(71702078)(7193020);SRVR:BYAPR08MB4983;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4983:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Oob-TLC-OOBClassifiers: OLM:5797;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Apr 2019 10:28:20.3714
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b35a0363-4383-4bea-ac94-08d6cd569183
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4983
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.4419473
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1835.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?aUY1czhPQVdCK29peVJwaURZdnRNQjdYNVQySDBGRlVtVnYxREtCRXpocWlI?=
+ =?utf-8?B?UWJ1VjhRSndWL0lUaGdUMjg2SnV1bHVoQ2ljbGMzV0tQVHo5emVGdThlTHRy?=
+ =?utf-8?B?d21vdklZMUlFcVNpZk56Z0RzV2VlS3BnNy91a0MvcEI5b0VmOW9sZS9yd09a?=
+ =?utf-8?B?b3VDWDJGNTl5RVkvTWxRL3A0KzdNOEFlc05kZlhQRExsZ3dBcnkvVlhUcDMy?=
+ =?utf-8?B?Wm41dVh3cllYOGtuWlFJT2pKNDJieVV0M0IzSkFZa3FiclI0UExlVlZ5WFdR?=
+ =?utf-8?B?VDRxRnhLMmd1K3ZjRlB3NVJ1bUJ4Tm9kRnQveEc4TmwwcDgwdVJjNnp3eThJ?=
+ =?utf-8?B?RGx3VkpzQVhvTnhsejRQWmk3Q1djTUVmWDNkTE5KMnorNTE4RjhhbzJ1WENm?=
+ =?utf-8?B?dnc0R1pvYjd0c0VRTDg4dURPTDd3cENBaEY3OXZMVWtONWhXM2MxVGFtWm94?=
+ =?utf-8?B?NTdOUklqczl4N1VzUVhSWm9wWnhlRTdOWmlyTWtML0JrNjVMUTZ0MG16MVpC?=
+ =?utf-8?B?d01uS3VJUmxjQ24xeUZsK1lHbm1NSWRUWWNwajc4T3dIVkVqSW1xY1NLYnF5?=
+ =?utf-8?B?b0FnNWJmTUxwT2RqRlNKYkZ5S2ZBWEY5QmQ5UFc2QzU4TXlCNWcrOWs3eE9C?=
+ =?utf-8?B?c0lYZFFqR2gxOVlFelVQVnRFUkNmaGMxSyszOG1sTCt1clpzMVhlUE9kMGhI?=
+ =?utf-8?B?dnE1WkNuRHpEL1pjS3cyVjRPend6WVdKMHNpUXhPMFNuMm50WGlUbnZkTWFK?=
+ =?utf-8?B?cjdCak4zcHk5dUxOTUdpR0lZNWQvNkhpeFRLUVdEWElKdVZ0RWJub2FCY1hT?=
+ =?utf-8?B?SUZZNnBKellVaUVHeHFhUDd5S3FkeS9ac0RnY2NHMjNsNmswY0ErNUFmNGRj?=
+ =?utf-8?B?dytNdnkzMDRvMStYNE9lejZqL2Q3Mm9SdXRDSGR0alVyNEtVdThRRlBTVDhj?=
+ =?utf-8?B?NCsvSTR1TU9GcWx5MlI5SVR2ajJOaXp1M2JlL1ZrQ2JwSlpxbDVHVlpuODAr?=
+ =?utf-8?B?dGplcGNHZjQvc1BIS1F0WlpFU3RwTUczNEx3eXZqeldXbEJxdDVXZno3SGVo?=
+ =?utf-8?B?WUlEUy9JT2dHUnl1enB0bkFWMmdtSG5rMnh2TE5SV3oyMlRON3ZtK0N1OE1L?=
+ =?utf-8?B?MVFrZHF3U2drTEhQbFp4eGFMc3BhSzVzaExrVmx6WjNJaUFaOHlXZDkra0JJ?=
+ =?utf-8?B?RXdxM2NsWmhueDNDbngrdFBReE9CWGxtYkZ1RVBNaGo0OUk2bHV6SW5rbWx0?=
+ =?utf-8?B?MHhKcDRaOGtMV2lDMmREY0RrcjhvSlcrbjhlY0xFTnJnMm9QckJxeVUwcUZK?=
+ =?utf-8?B?VEluWDYrVFRvZlp4WlUwOVNQUlNHbXVvZjJnZEZycnU5S2p5WGlSZjZIVVRo?=
+ =?utf-8?B?MVNwTFZ0eEdhNlE9PQ==?=
+MIME-Version: 1.0
+
+--=_6f3c3e74-a2c8-46a2-8a40-56b6e4884e4a
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+ACM Symposium on Applied Perception=20
+
+=E2=80=93 Call for papers and posters =E2=80=93=20
+
+
+
+
+Reminder: paper submission deadline on May 21st=20
+
+
+
+
+The ACM Symposium on Applied Perception (ACM SAP) provides an intimate , im=
+mersive forum for researchers who combine knowledge, methods, and insights =
+from perception research andcomputer science disciplines. This explicitly i=
+ncludes such disciplines as cognitive psychology, perceptual psychology, ps=
+ychophysics, behavior-analysis, and neuroscience on the perceptual side and=
+ computer graphics, computer vision, visualization, and human-computer inte=
+rfaces on the visual computing side to name just a few! The interdisciplina=
+ry focus of this conference explicitly acknowledges that the various scient=
+ific disciplines in perception research and computer science research use d=
+ifferent but complementary methods to address fundamentally similar questio=
+ns. As such, combinations of knowledge, methods, and/or insights from the d=
+ifferent fields can help to advance all of the applied perception fields.=
+=20
+
+
+
+
+ACM SAP 2019 will be held in Barcelona, Spain on the 19th and 20th of Septe=
+mber, 2019. We invite submissions of original work in all areas of applied =
+perception, regardless of sensory modality (vision, haptics, acoustics, pro=
+prioception, etc.). The focus of the work can be either perceptual or compu=
+tational, but each submission must =E2=80=93 as always =E2=80=93 include el=
+ements of both perception and visual computing.Relevant approaches include:=
+=20
+
+
+
+
+=E2=86=92 application of perceptual research to any area of computer scienc=
+e , including:=20
+
+    * modeling, rendering, animation;=20
+    * virtual environments, characters;=20
+    * processing information from artificial sensors;=20
+    * representation of data, communication of data;=20
+
+
+
+=E2=86=92 applications of computer science to any area of perception , such=
+ as:=20
+
+    * modeling natural perceptual systems;=20
+    * simulating natural perceptual systems;=20
+    * systematic study of natural perceptual systems.=20
+
+
+
+
+
+Papers=20
+
+Research can be submitted as long paper (up to 8 pages) or as a short paper=
+ (up to 4 pages). In all cases the page limit is EXCLUSIVE of the pages dev=
+oted to bibliographic references and appendices. Authors are explicitly enc=
+ouraged to include a full citation list. All submissions should follow the =
+general [ http://www.siggraph.org/learn/instructions-authors | SIGGRAPH for=
+matting guidelines ] Please submit all papers formatted for a double blind =
+review . Diagrams and images should be in color where appropriate. At least=
+ one author of an accepted paper must register for and attend the conferenc=
+e. Research that is not accepted as a paper will automatically be considere=
+d for the poster session. Authors can, of course, decline to have their wor=
+k be considered as a poster.=20
+
+
+
+Posters=20
+
+The posters program at SAP provides an informal venue for authors to share =
+their research achievements and further discuss them with others. In that s=
+pirit, we encourage all types of scholarly submissions that fit the scope o=
+f ACM SAP. In particular, we explicitly welcome poster submissions on work-=
+in-progress and on work that may have been previously published elsewhere b=
+ut for which additional dissemination and discussion is desired. The poster=
+ session is an integral part of SAP and the SAP program will include a dedi=
+cated time slot for poster viewing and discussion. All poster presenters wi=
+ll also have the opportunity to give a one-minute presentation on their wor=
+k during a poster fast-forward session.=20
+
+NOTE: SAP poster abstracts are NOT considered to be publications, and as su=
+ch will NOT appear in the ACM Digital Library. Poster abstracts WILL be inc=
+luded in the conference USB drive. Poster extended abstracts may include fi=
+gures and should follow the general [ http://www.siggraph.org/learn/instruc=
+tions-authors | SIGGRAPH formatting guidelines ] , except that they should =
+be 1 page long. Note that you do not need to submit the actual poster.=20
+
+
+
+***New Reviewing Process***=20
+
+Starting this year, we have adopted a new reviewing process. Each submitted=
+ paper will be assigned to the two members of the International Program Com=
+mittee (IPC) whose expertise most closely matches the topic(s) of the paper=
+. Each IPC member will find two external, independent experts to perform th=
+e actual reviews. Subsequently, the four reviewers and two IPC members will=
+ engage in a discussion about the paper and the reviews, working towards a =
+consensus recommendation for the paper. This discussion will occur on a pap=
+er-by-paper basis. No reviewer or IPC member will have access to the discus=
+sion or reviews for a paper to which they were not assigned. The two progra=
+m chairs will, as usual, consider the recommendation(s), the contents of th=
+e reviews, as well as the papers themselves to reach a final decision on ea=
+ch paper.=20
+
+
+
+Possibility for Journal Publication=20
+
+Under an agreement with the ACM Transactions on Applied Perception (TAP) an=
+d the ACM Publications Board, the strongest accepted papers will be offered=
+ publication as full papers in the ACM journal TAP (instead of appearing in=
+ the proceedings). Authors of such special issue papers must agree to prese=
+nt the paper at ACM SAP. As has always been the case, authors of regular AC=
+M SAP papers can still submit to TAP regular issues with appropriate additi=
+ons. Papers that have been recommended for acceptance in the ACM TAP journa=
+l will undergo a second review cycle, during which the authors will revise =
+the paper to address reviewer concerns (similar to conditional acceptances =
+at ACM SIGGRAPH). Please note that TAP referrals are conditional. The TAP r=
+eviewers may recommend bringing the paper back to the SAP proceedings if th=
+e quality of the revision is inadequate. Therefore, it is very important to=
+ incorporate as many reviewer comments as possible into the revision.=20
+
+The revised paper has to be submitted in TAP format to [ https://mc.manuscr=
+iptcentral.com/acm | Manuscript Central ] and must include a cover letter s=
+tating that the submission is for the SAP special issue. The cover letter s=
+hould also document the list of changes made to the paper to address the re=
+viewer concerns. Please note that TAP has a 20 page limit INCLUDING referen=
+ces. Reformatting, a paper from the SAP format to the TAP format typically =
+adds a few pages. Complete TAP author guidelines and templates are availabl=
+e at [ http://tap.acm.org/authors.cfm | http://tap.acm.org/authors.cfm ]=20
+
+
+
+Deadlines=20
+
+Each deadline is 23:59:59 AoE (Anywhere on Earth) =3D=3D> GMT/UTC-12:00 on =
+the stated day, no matter where the submitter is located.=20
+
+Papers:=20
+
+    * Tuesday, May 14th: Abstract submission=20
+    * Tuesday, May 21st: Paper submission=20
+    * Tuesday, June 25th: Paper re-submission=20
+    * Tuesday, July 2nd: Decisions announced=20
+    * Tuesday, July 14th: Final papers due=20
+
+
+
+Posters:=20
+
+    * Tuesday, July 9th: Poster submission=20
+    * Tuesday, July 16th: Decisions announced=20
+    * Tuesday, July 23rd: Camera ready version of 1-page abstract due=20
+
+
+
+Our [ https://sap.acm.org/2019/authors.php | Information for Authors ] page=
+ includes deadlines and other important information for authors planning on=
+ submitting papers or posters=20
+
+
+
+
+
+
+
+Organization=20
+
+Program Chairs=20
+
+
+    * [ https://www.b-tu.de/en/graphic-systems | Douglas W. Cunningham ] , =
+Brandenburg University of Technology=20
+    * [ https://people.rennes.inria.fr/Ludovic.Hoyet/ | Ludovic Hoyet ] , I=
+NRIA=20
+
+Conference Chairs=20
+
+
+    * Sol=C3=A8ne Neyret , University of Barcelona=20
+    * Elena Kokkinara , Inflight VR=20
+    * [ https://www.microsoft.com/en-us/research/people/margon/ | Mar Gonza=
+lez Franco ] , Microsoft Research=20
+
+Poster Chair=20
+
+
+    * [ http://psych.pan.pl/pl/pracownia-psychologii-spolecznej/2170-2/ | J=
+ustyna =C5=9Awidrak ] , IDIBAPS & Institute of Psychology, Polish Academy o=
+f Sciences=20
+
+
+
+
+
+
+
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--=_6f3c3e74-a2c8-46a2-8a40-56b6e4884e4a
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head>
+<body><div style=3D"font-family: arial,helvetica,sans-serif; font-size: 12p=
+t; color: #000000"><div><style>
+<!--
+=20
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1593833729 1073750107 16 0 415 0;}
+=20
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:FR;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:FR;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
+raphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:FR;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
+agraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:FR;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
+phCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:FR;
+	mso-fareast-language:EN-US;}
+.zimbra1
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:FR;
+	mso-fareast-language:EN-US;}
+.zimbra2
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+=20
+ @list l0
+	{mso-list-id:430008122;
+	mso-list-template-ids:-730531122;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:594941163;
+	mso-list-template-ids:2028621018;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:1615867511;
+	mso-list-template-ids:-1672157328;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style></div><div data-marker=3D"__QUOTED_TEXT__"><div><div style=3D"color=
+: #000000; font-family: arial, helvetica, sans-serif; font-size: 12pt;" dat=
+a-mce-style=3D"color: #000000; font-family: arial, helvetica, sans-serif; f=
+ont-size: 12pt;"></div><div><div id=3D"zimbraEditorContainer" class=3D"2"> =
+ <p class=3D"MsoNormal" align=3D"center" style=3D"color: #000000; font-fami=
+ly: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; text-align:=
+ center; line-height: normal; background: white;" data-mce-style=3D"color: =
+#000000; font-family: arial, helvetica, sans-serif; font-size: 12pt; margin=
+: 0px; text-align: center; line-height: normal; background: white;"><b><spa=
+n style=3D"font-size: 36.0pt; font-family: 'Arial',sans-serif; mso-fareast-=
+font-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; m=
+so-fareast-language: EN-GB;" data-mce-style=3D"font-size: 36.0pt; font-fami=
+ly: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: =
+#333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">ACM Sympos=
+ium on Applied Perception</span></b></p><p class=3D"MsoListParagraph" align=
+=3D"center" style=3D"color: #000000; font-family: arial, helvetica, sans-se=
+rif; font-size: 12pt; margin: 0px; text-align: center; line-height: normal;=
+ background: white;" data-mce-style=3D"color: #000000; font-family: arial, =
+helvetica, sans-serif; font-size: 12pt; margin: 0px; text-align: center; li=
+ne-height: normal; background: white;"><b><span style=3D"font-size: 28.0pt;=
+ mso-bidi-font-size: 36.0pt; font-family: 'Arial',sans-serif; mso-fareast-f=
+ont-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; ms=
+o-fareast-language: EN-GB;" data-mce-style=3D"font-size: 28.0pt; mso-bidi-f=
+ont-size: 36.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family:=
+ 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-l=
+anguage: EN-GB;">=E2=80=93 Call for papers and posters =E2=80=93</span></b>=
+<span style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: =
+'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; m=
+so-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"fo=
+nt-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'=
+; mso-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-language:=
+ EN-GB; mso-fareast-language: EN-GB;"></span></p><p class=3D"MsoListParagra=
+ph" align=3D"center" style=3D"color: rgb(0, 0, 0); font-family: arial, helv=
+etica, sans-serif; font-size: 12pt; margin: 0px; line-height: normal; backg=
+round: white; text-align: center;" data-mce-style=3D"color: #000000; font-f=
+amily: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; line-hei=
+ght: normal; background: white; text-align: center;"><b><span style=3D"font=
+-size: 28.0pt; mso-bidi-font-size: 36.0pt; font-family: 'Arial',sans-serif;=
+ mso-fareast-font-family: 'Times New Roman'; color: #333333; mso-ansi-langu=
+age: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-size: 28.0=
+pt; mso-bidi-font-size: 36.0pt; font-family: 'Arial',sans-serif; mso-fareas=
+t-font-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB;=
+ mso-fareast-language: EN-GB;"><br data-mce-bogus=3D"1"></span></b></p><p c=
+lass=3D"MsoListParagraph" align=3D"center" style=3D"color: rgb(0, 0, 0); fo=
+nt-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; line=
+-height: normal; background: white; text-align: center;" data-mce-style=3D"=
+color: #000000; font-family: arial, helvetica, sans-serif; font-size: 12pt;=
+ margin: 0px; line-height: normal; background: white; text-align: center;">=
+<b><span style=3D"font-size: 28.0pt; mso-bidi-font-size: 36.0pt; font-famil=
+y: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #=
+333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-st=
+yle=3D"font-size: 28.0pt; mso-bidi-font-size: 36.0pt; font-family: 'Arial',=
+sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #333333; mso=
+-ansi-language: EN-GB; mso-fareast-language: EN-GB;"></span></b><span style=
+=3D"color: rgb(255, 0, 0); font-size: 18pt;" data-mce-style=3D"color: #ff00=
+00; font-size: 18pt;"><strong>Reminder: paper submission deadline&nbsp;on M=
+ay 21st</strong></span></p><p class=3D"MsoListParagraph" align=3D"center" s=
+tyle=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-siz=
+e: 12pt; margin: 0px; text-align: center; line-height: normal; background: =
+white;" data-mce-style=3D"color: #000000; font-family: arial, helvetica, sa=
+ns-serif; font-size: 12pt; margin: 0px; text-align: center; line-height: no=
+rmal; background: white;"><b><span style=3D"font-size: 28.0pt; mso-bidi-fon=
+t-size: 36.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: '=
+Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-lan=
+guage: EN-GB;" data-mce-style=3D"font-size: 28.0pt; mso-bidi-font-size: 36.=
+0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New R=
+oman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-G=
+B;"><br data-mce-bogus=3D"1"></span></b></p><p class=3D"MsoNormal" style=3D=
+"color: #000000; font-family: arial, helvetica, sans-serif; font-size: 12pt=
+; margin: 0px; text-align: justify; line-height: normal; background: white;=
+" data-mce-style=3D"color: #000000; font-family: arial, helvetica, sans-ser=
+if; font-size: 12pt; margin: 0px; text-align: justify; line-height: normal;=
+ background: white;"><span style=3D"font-size: 12.0pt; font-family: 'Arial'=
+,sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-=
+ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-=
+size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Ti=
+mes New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-languag=
+e: EN-GB;"></span><span face=3D"Arial, sans-serif" data-mce-style=3D"font-f=
+amily: Arial, sans-serif;" style=3D"font-family: Arial, sans-serif;"><span =
+style=3D"font-size: 16px;" data-mce-style=3D"font-size: 16px;">The <strong>=
+ACM Symposium on Applied Perception (ACM SAP) provides an intimate</strong>=
+, immersive forum for researchers who combine knowledge, methods, and insig=
+hts from perception research andcomputer science disciplines. This explicit=
+ly includes such disciplines as cognitive psychology, perceptual psychology=
+, psychophysics, behavior-analysis, and neuroscience on the perceptual side=
+ and computer graphics, computer vision, visualization, and human-computer =
+interfaces on the visual computing side to name just a few! The interdiscip=
+linary focus of this conference explicitly acknowledges that the various sc=
+ientific disciplines in perception research and computer science research u=
+se different but complementary methods to address fundamentally similar que=
+stions. As such, combinations of knowledge, methods, and/or insights from t=
+he different fields can help to advance all of the applied perception field=
+s.</span></span></p><p class=3D"MsoNormal" style=3D"margin: 0px; text-align=
+: justify; line-height: normal; background-image: initial; background-posit=
+ion: initial; background-size: initial; background-repeat: initial; backgro=
+und-attachment: initial; background-origin: initial; background-clip: initi=
+al;" data-mce-style=3D"margin: 0px; text-align: justify; line-height: norma=
+l; background-image: initial; background-position: initial; background-size=
+: initial; background-repeat: initial; background-attachment: initial; back=
+ground-origin: initial; background-clip: initial;"><span face=3D"Arial, san=
+s-serif" data-mce-style=3D"font-family: Arial, sans-serif;" style=3D"font-f=
+amily: Arial, sans-serif;"><span style=3D"font-size: 16px;" data-mce-style=
+=3D"font-size: 16px;"><br></span></span></p><p class=3D"MsoNormal" style=3D=
+"margin: 0px; text-align: justify; line-height: normal; background-image: i=
+nitial; background-position: initial; background-size: initial; background-=
+repeat: initial; background-attachment: initial; background-origin: initial=
+; background-clip: initial;" data-mce-style=3D"margin: 0px; text-align: jus=
+tify; line-height: normal; background-image: initial; background-position: =
+initial; background-size: initial; background-repeat: initial; background-a=
+ttachment: initial; background-origin: initial; background-clip: initial;">=
+<span face=3D"Arial, sans-serif" data-mce-style=3D"font-family: Arial, sans=
+-serif;" style=3D"font-family: Arial, sans-serif;"><span style=3D"font-size=
+: 16px;" data-mce-style=3D"font-size: 16px;">ACM SAP 2019 will be held in B=
+arcelona, Spain on the 19th and 20th of September, 2019. We invite submissi=
+ons of original work in all areas of applied perception, regardless of sens=
+ory modality (vision, haptics, acoustics, proprioception, etc.). The focus =
+of the work can be either perceptual or computational, but each submission =
+must =E2=80=93 as always =E2=80=93 include elements of both perception and =
+visual computing.Relevant approaches include:</span></span></p><p class=3D"=
+MsoNormal" style=3D"margin: 0px; text-align: justify; line-height: normal; =
+background-image: initial; background-position: initial; background-size: i=
+nitial; background-repeat: initial; background-attachment: initial; backgro=
+und-origin: initial; background-clip: initial;" data-mce-style=3D"margin: 0=
+px; text-align: justify; line-height: normal; background-image: initial; ba=
+ckground-position: initial; background-size: initial; background-repeat: in=
+itial; background-attachment: initial; background-origin: initial; backgrou=
+nd-clip: initial;"><span face=3D"Arial, sans-serif" data-mce-style=3D"font-=
+family: Arial, sans-serif;" style=3D"font-family: Arial, sans-serif;"><span=
+ style=3D"font-size: 16px;" data-mce-style=3D"font-size: 16px;"><br></span>=
+</span></p><p class=3D"MsoNormal" style=3D"margin: 0px; text-align: justify=
+; line-height: normal; background-image: initial; background-position: init=
+ial; background-size: initial; background-repeat: initial; background-attac=
+hment: initial; background-origin: initial; background-clip: initial;" data=
+-mce-style=3D"margin: 0px; text-align: justify; line-height: normal; backgr=
+ound-image: initial; background-position: initial; background-size: initial=
+; background-repeat: initial; background-attachment: initial; background-or=
+igin: initial; background-clip: initial;"><span face=3D"Arial, sans-serif" =
+data-mce-style=3D"font-family: Arial, sans-serif;" style=3D"font-family: Ar=
+ial, sans-serif;"><span style=3D"font-size: 16px;" data-mce-style=3D"font-s=
+ize: 16px;">=E2=86=92 application of <em>perceptual research</em> to any ar=
+ea of <em>computer science</em>, including:</span></span></p><ul><li class=
+=3D"MsoNormal" data-mce-style=3D"margin: 0px; text-align: justify; line-hei=
+ght: normal; background-image: initial; background-position: initial; backg=
+round-size: initial; background-repeat: initial; background-attachment: ini=
+tial; background-origin: initial; background-clip: initial;" style=3D"margi=
+n: 0px; text-align: justify; line-height: normal; background-image: initial=
+; background-position: initial; background-size: initial; background-repeat=
+: initial; background-attachment: initial; background-origin: initial; back=
+ground-clip: initial;"><span face=3D"Arial, sans-serif" data-mce-style=3D"f=
+ont-family: Arial, sans-serif;" style=3D"font-family: Arial, sans-serif;"><=
+span style=3D"font-size: 16px;" data-mce-style=3D"font-size: 16px;">modelin=
+g, rendering, animation;</span></span></li><li class=3D"MsoNormal" data-mce=
+-style=3D"margin: 0px; text-align: justify; line-height: normal; background=
+-image: initial; background-position: initial; background-size: initial; ba=
+ckground-repeat: initial; background-attachment: initial; background-origin=
+: initial; background-clip: initial;" style=3D"margin: 0px; text-align: jus=
+tify; line-height: normal; background-image: initial; background-position: =
+initial; background-size: initial; background-repeat: initial; background-a=
+ttachment: initial; background-origin: initial; background-clip: initial;">=
+<span face=3D"Arial, sans-serif" data-mce-style=3D"font-family: Arial, sans=
+-serif;" style=3D"font-family: Arial, sans-serif;"><span style=3D"font-size=
+: 16px;" data-mce-style=3D"font-size: 16px;">virtual environments, characte=
+rs;</span></span></li><li class=3D"MsoNormal" data-mce-style=3D"margin: 0px=
+; text-align: justify; line-height: normal; background-image: initial; back=
+ground-position: initial; background-size: initial; background-repeat: init=
+ial; background-attachment: initial; background-origin: initial; background=
+-clip: initial;" style=3D"margin: 0px; text-align: justify; line-height: no=
+rmal; background-image: initial; background-position: initial; background-s=
+ize: initial; background-repeat: initial; background-attachment: initial; b=
+ackground-origin: initial; background-clip: initial;"><span face=3D"Arial, =
+sans-serif" data-mce-style=3D"font-family: Arial, sans-serif;" style=3D"fon=
+t-family: Arial, sans-serif;"><span style=3D"font-size: 16px;" data-mce-sty=
+le=3D"font-size: 16px;">processing information from artificial sensors;</sp=
+an></span></li><li class=3D"MsoNormal" data-mce-style=3D"margin: 0px; text-=
+align: justify; line-height: normal; background-image: initial; background-=
+position: initial; background-size: initial; background-repeat: initial; ba=
+ckground-attachment: initial; background-origin: initial; background-clip: =
+initial;" style=3D"margin: 0px; text-align: justify; line-height: normal; b=
+ackground-image: initial; background-position: initial; background-size: in=
+itial; background-repeat: initial; background-attachment: initial; backgrou=
+nd-origin: initial; background-clip: initial;"><span face=3D"Arial, sans-se=
+rif" data-mce-style=3D"font-family: Arial, sans-serif;" style=3D"font-famil=
+y: Arial, sans-serif;"><span style=3D"font-size: 16px;" data-mce-style=3D"f=
+ont-size: 16px;">representation of data, communication of data;</span></spa=
+n></li></ul><div><span face=3D"Arial, sans-serif" data-mce-style=3D"font-fa=
+mily: Arial, sans-serif;" style=3D"font-family: Arial, sans-serif;"><span s=
+tyle=3D"font-size: 16px;" data-mce-style=3D"font-size: 16px;"><br data-mce-=
+bogus=3D"1"></span></span></div><p class=3D"MsoNormal" style=3D"margin: 0px=
+; text-align: justify; line-height: normal; background-image: initial; back=
+ground-position: initial; background-size: initial; background-repeat: init=
+ial; background-attachment: initial; background-origin: initial; background=
+-clip: initial;" data-mce-style=3D"margin: 0px; text-align: justify; line-h=
+eight: normal; background-image: initial; background-position: initial; bac=
+kground-size: initial; background-repeat: initial; background-attachment: i=
+nitial; background-origin: initial; background-clip: initial;"><span face=
+=3D"Arial, sans-serif" data-mce-style=3D"font-family: Arial, sans-serif;" s=
+tyle=3D"font-family: Arial, sans-serif;"><span style=3D"font-size: 16px;" d=
+ata-mce-style=3D"font-size: 16px;">=E2=86=92 applications of <em>computer s=
+cience</em> to any area of <em>perception</em>, such as:</span></span></p><=
+ul><li class=3D"MsoNormal" data-mce-style=3D"margin: 0px; text-align: justi=
+fy; line-height: normal; background-image: initial; background-position: in=
+itial; background-size: initial; background-repeat: initial; background-att=
+achment: initial; background-origin: initial; background-clip: initial;" st=
+yle=3D"margin: 0px; text-align: justify; line-height: normal; background-im=
+age: initial; background-position: initial; background-size: initial; backg=
+round-repeat: initial; background-attachment: initial; background-origin: i=
+nitial; background-clip: initial;"><span face=3D"Arial, sans-serif" data-mc=
+e-style=3D"font-family: Arial, sans-serif;" style=3D"font-family: Arial, sa=
+ns-serif;"><span style=3D"font-size: 16px;" data-mce-style=3D"font-size: 16=
+px;"></span></span><span face=3D"Arial, sans-serif" data-mce-style=3D"font-=
+family: Arial, sans-serif;" style=3D"font-family: Arial, sans-serif;"><span=
+ style=3D"font-size: 16px;" data-mce-style=3D"font-size: 16px;">modeling na=
+tural perceptual systems;</span></span></li><li class=3D"MsoNormal" data-mc=
+e-style=3D"margin: 0px; text-align: justify; line-height: normal; backgroun=
+d-image: initial; background-position: initial; background-size: initial; b=
+ackground-repeat: initial; background-attachment: initial; background-origi=
+n: initial; background-clip: initial;" style=3D"margin: 0px; text-align: ju=
+stify; line-height: normal; background-image: initial; background-position:=
+ initial; background-size: initial; background-repeat: initial; background-=
+attachment: initial; background-origin: initial; background-clip: initial;"=
+><span face=3D"Arial, sans-serif" data-mce-style=3D"font-family: Arial, san=
+s-serif;" style=3D"font-family: Arial, sans-serif;"><span style=3D"font-siz=
+e: 16px;" data-mce-style=3D"font-size: 16px;">simulating natural perceptual=
+ systems;</span></span></li><li class=3D"MsoNormal" data-mce-style=3D"margi=
+n: 0px; text-align: justify; line-height: normal; background: white;" style=
+=3D"margin: 0px; text-align: justify; line-height: normal; background: whit=
+e;"><span face=3D"Arial, sans-serif" data-mce-style=3D"font-family: Arial, =
+sans-serif;" style=3D"font-family: Arial, sans-serif;"><span style=3D"font-=
+size: 16px;" data-mce-style=3D"font-size: 16px;">systematic study of natura=
+l perceptual systems.</span></span></li></ul><p class=3D"MsoNormal" style=
+=3D"margin: 0px; text-align: justify; line-height: normal; background: whit=
+e;" data-mce-style=3D"margin: 0px; text-align: justify; line-height: normal=
+; background: white;"><br></p><p class=3D"MsoNormal" align=3D"center" style=
+=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-size: 1=
+2pt; margin: 0px; text-align: center; line-height: normal; background: whit=
+e;" data-mce-style=3D"color: #000000; font-family: arial, helvetica, sans-s=
+erif; font-size: 12pt; margin: 0px; text-align: center; line-height: normal=
+; background: white;"><span style=3D"font-size: 24pt;" data-mce-style=3D"fo=
+nt-size: 24pt;"><b><span style=3D"font-family: Arial, sans-serif; color: #3=
+33333;" data-mce-style=3D"font-family: Arial, sans-serif; color: #333333;">=
+Papers</span></b></span><span style=3D"font-family: 'Verdana',sans-serif; m=
+so-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New=
+ Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-G=
+B;" data-mce-style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-f=
+amily: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; color: b=
+lack; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;"></span></p><p=
+ class=3D"MsoNormal" style=3D"color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 12pt; margin: 0px; text-align: justify; line-heigh=
+t: normal; background: white;" data-mce-style=3D"color: #000000; font-famil=
+y: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; text-align: =
+justify; line-height: normal; background: white;"><span style=3D"font-size:=
+ 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times N=
+ew Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-language: EN=
+-GB;" data-mce-style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif;=
+ mso-fareast-font-family: 'Times New Roman'; color: black; mso-ansi-languag=
+e: EN-GB; mso-fareast-language: EN-GB;">Research can be submitted as long p=
+aper (up to 8 pages) or as a short paper (up to 4 pages). In all cases the =
+page limit is&nbsp;<b>EXCLUSIVE</b>&nbsp;of the pages devoted to bibliograp=
+hic references and appendices. Authors are explicitly encouraged to include=
+ a full citation list. All submissions should follow the general&nbsp;<a hr=
+ef=3D"http://www.siggraph.org/learn/instructions-authors" target=3D"_blank"=
+><span style=3D"color: #0088cc;" data-mce-style=3D"color: #0088cc;">SIGGRAP=
+H formatting guidelines</span></a>&nbsp;Please submit all papers formatted =
+for a&nbsp;<b>double blind review</b>. Diagrams and images should be in col=
+or where appropriate. At least one author of an accepted paper must registe=
+r for and attend the conference. Research that is not accepted as a paper w=
+ill automatically be considered for the poster session. Authors can, of cou=
+rse, decline to have their work be considered as a poster.</span><span styl=
+e=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New=
+ Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-la=
+nguage: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-family:=
+ 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi=
+-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; ms=
+o-fareast-language: EN-GB;"></span></p><p class=3D"MsoNormal" style=3D"colo=
+r: #000000; font-family: arial, helvetica, sans-serif; font-size: 12pt; mar=
+gin: 0px; text-align: justify; line-height: normal; background: white;" dat=
+a-mce-style=3D"color: #000000; font-family: arial, helvetica, sans-serif; f=
+ont-size: 12pt; margin: 0px; text-align: justify; line-height: normal; back=
+ground: white;"><span style=3D"font-family: 'Verdana',sans-serif; mso-farea=
+st-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';=
+ color: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data=
+-mce-style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: '=
+Times New Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; ms=
+o-ansi-language: EN-GB; mso-fareast-language: EN-GB;">&nbsp;</span></p><p c=
+lass=3D"MsoNormal" align=3D"center" style=3D"color: #000000; font-family: a=
+rial, helvetica, sans-serif; font-size: 12pt; margin: 0px; text-align: cent=
+er; line-height: normal; background: white;" data-mce-style=3D"color: #0000=
+00; font-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px=
+; text-align: center; line-height: normal; background: white;"><span style=
+=3D"font-size: 24pt;" data-mce-style=3D"font-size: 24pt;"><b><span style=3D=
+"font-family: Arial, sans-serif; color: #333333;" data-mce-style=3D"font-fa=
+mily: Arial, sans-serif; color: #333333;">Posters</span></b></span><span st=
+yle=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times N=
+ew Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-=
+language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-famil=
+y: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bi=
+di-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; =
+mso-fareast-language: EN-GB;"></span></p><p class=3D"MsoNormal" style=3D"co=
+lor: #000000; font-family: arial, helvetica, sans-serif; font-size: 12pt; m=
+argin: 0px; text-align: justify; line-height: normal; background: white;" d=
+ata-mce-style=3D"color: #000000; font-family: arial, helvetica, sans-serif;=
+ font-size: 12pt; margin: 0px; text-align: justify; line-height: normal; ba=
+ckground: white;"><span style=3D"font-size: 12.0pt; font-family: 'Arial',sa=
+ns-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-ans=
+i-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-siz=
+e: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times=
+ New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-language: =
+EN-GB;">The posters program at SAP provides an informal venue for authors t=
+o share their research achievements and further discuss them with others. I=
+n that spirit, we encourage all types of scholarly submissions that fit the=
+ scope of ACM SAP. In particular, we explicitly welcome poster submissions =
+on work-in-progress and on work that may have been previously published els=
+ewhere but for which additional dissemination and discussion is desired. Th=
+e poster session is an integral part of SAP and the SAP program will includ=
+e a dedicated time slot for poster viewing and discussion. All poster prese=
+nters will also have the opportunity to give a one-minute presentation on t=
+heir work during a poster fast-forward session.</span><span style=3D"font-f=
+amily: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; ms=
+o-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN-=
+GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana',=
+sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-famil=
+y: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-l=
+anguage: EN-GB;"></span></p><p class=3D"MsoNormal" style=3D"color: #000000;=
+ font-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; t=
+ext-align: justify; line-height: normal; background: white;" data-mce-style=
+=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-size: 1=
+2pt; margin: 0px; text-align: justify; line-height: normal; background: whi=
+te;"><span style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso=
+-fareast-font-family: 'Times New Roman'; color: black; mso-ansi-language: E=
+N-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; fo=
+nt-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; =
+color: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">NOTE:=
+ SAP poster abstracts are NOT considered to be publications, and as such wi=
+ll NOT appear in the ACM Digital Library. Poster abstracts WILL be included=
+ in the conference USB drive. Poster extended abstracts may include figures=
+ and should follow the general&nbsp;<a href=3D"http://www.siggraph.org/lear=
+n/instructions-authors" target=3D"_blank"><span style=3D"color: #0088cc;" d=
+ata-mce-style=3D"color: #0088cc;">SIGGRAPH formatting guidelines</span></a>=
+, except that they should be 1 page long. Note that you do not need to subm=
+it the actual poster.</span><span style=3D"font-family: 'Verdana',sans-seri=
+f; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times=
+ New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-language: =
+EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans-serif; mso-fareast-fo=
+nt-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; colo=
+r: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;"></span></=
+p><p class=3D"MsoNormal" style=3D"color: #000000; font-family: arial, helve=
+tica, sans-serif; font-size: 12pt; margin: 0px; text-align: justify; line-h=
+eight: normal; background: white;" data-mce-style=3D"color: #000000; font-f=
+amily: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; text-ali=
+gn: justify; line-height: normal; background: white;"><span style=3D"font-f=
+amily: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; ms=
+o-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN-=
+GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana',=
+sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-famil=
+y: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-l=
+anguage: EN-GB;">&nbsp;</span></p><p class=3D"MsoNormal" align=3D"center" s=
+tyle=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-siz=
+e: 12pt; margin: 0px; text-align: center; line-height: normal; background: =
+white;" data-mce-style=3D"color: #000000; font-family: arial, helvetica, sa=
+ns-serif; font-size: 12pt; margin: 0px; text-align: center; line-height: no=
+rmal; background: white;"><span style=3D"font-size: 24pt;" data-mce-style=
+=3D"font-size: 24pt;"><b><span style=3D"font-family: Arial, sans-serif; col=
+or: #333333;" data-mce-style=3D"font-family: Arial, sans-serif; color: #333=
+333;">***New Reviewing Process***</span></b></span><span style=3D"font-fami=
+ly: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-b=
+idi-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN-GB;=
+ mso-fareast-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana',san=
+s-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: =
+'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-lang=
+uage: EN-GB;"></span></p><p class=3D"MsoNormal" style=3D"color: #000000; fo=
+nt-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; text=
+-align: justify; line-height: normal; background: white;" data-mce-style=3D=
+"color: #000000; font-family: arial, helvetica, sans-serif; font-size: 12pt=
+; margin: 0px; text-align: justify; line-height: normal; background: white;=
+"><span style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fa=
+reast-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN-G=
+B; mso-fareast-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; font-=
+family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; col=
+or: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">Starting=
+ this year, we have adopted a new reviewing process. Each submitted paper w=
+ill be assigned to the two members of the International Program Committee (=
+IPC) whose expertise most closely matches the topic(s) of the paper. Each I=
+PC member will find two external, independent experts to perform the actual=
+ reviews. Subsequently, the four reviewers and two IPC members will engage =
+in a discussion about the paper and the reviews, working towards a consensu=
+s recommendation for the paper. This discussion will occur on a paper-by-pa=
+per basis. No reviewer or IPC member will have access to the discussion or =
+reviews for a paper to which they were not assigned. The two program chairs=
+ will, as usual, consider the recommendation(s), the contents of the review=
+s, as well as the papers themselves to reach a final decision on each paper=
+.</span><span style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-=
+family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; color: =
+black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-sty=
+le=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times Ne=
+w Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-l=
+anguage: EN-GB; mso-fareast-language: EN-GB;"></span></p><p class=3D"MsoNor=
+mal" style=3D"color: #000000; font-family: arial, helvetica, sans-serif; fo=
+nt-size: 12pt; margin: 0px; text-align: justify; line-height: normal; backg=
+round: white;" data-mce-style=3D"color: #000000; font-family: arial, helvet=
+ica, sans-serif; font-size: 12pt; margin: 0px; text-align: justify; line-he=
+ight: normal; background: white;"><span style=3D"font-family: 'Verdana',san=
+s-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: =
+'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-lang=
+uage: EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans-serif; mso-fare=
+ast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'=
+; color: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">&nb=
+sp;</span></p><p class=3D"MsoNormal" align=3D"center" style=3D"color: #0000=
+00; font-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px=
+; text-align: center; line-height: normal; background: white;" data-mce-sty=
+le=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-size:=
+ 12pt; margin: 0px; text-align: center; line-height: normal; background: wh=
+ite;"><span style=3D"font-size: 24pt;" data-mce-style=3D"font-size: 24pt;">=
+<b><span style=3D"font-family: Arial, sans-serif; color: #333333;" data-mce=
+-style=3D"font-family: Arial, sans-serif; color: #333333;">Possibility for =
+Journal Publication</span></b></span><span style=3D"font-family: 'Verdana',=
+sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-famil=
+y: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-l=
+anguage: EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans-serif; mso-f=
+areast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Rom=
+an'; color: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">=
+</span></p><p class=3D"MsoNormal" style=3D"color: #000000; font-family: ari=
+al, helvetica, sans-serif; font-size: 12pt; margin: 0px; text-align: justif=
+y; line-height: normal; background: white;" data-mce-style=3D"color: #00000=
+0; font-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px;=
+ text-align: justify; line-height: normal; background: white;"><span style=
+=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-fa=
+mily: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareas=
+t-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; font-family: 'Aria=
+l',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; ms=
+o-ansi-language: EN-GB; mso-fareast-language: EN-GB;">Under an agreement wi=
+th the ACM Transactions on Applied Perception (TAP) and the ACM Publication=
+s Board, the strongest accepted papers will be offered publication as full =
+papers in the ACM journal TAP (instead of appearing in the proceedings). Au=
+thors of such special issue papers must agree to present the paper at ACM S=
+AP. As has always been the case, authors of regular ACM SAP papers can stil=
+l submit to TAP regular issues with appropriate additions. Papers that have=
+ been recommended for acceptance in the ACM TAP journal will undergo a seco=
+nd review cycle, during which the authors will revise the paper to address =
+reviewer concerns (similar to conditional acceptances at ACM SIGGRAPH). Ple=
+ase note that TAP referrals are conditional. The TAP reviewers may recommen=
+d bringing the paper back to the SAP proceedings if the quality of the revi=
+sion is inadequate. Therefore, it is very important to incorporate as many =
+reviewer comments as possible into the revision.</span><span style=3D"font-=
+family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; m=
+so-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN=
+-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana'=
+,sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-fami=
+ly: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-=
+language: EN-GB;"></span></p><p class=3D"MsoNormal" style=3D"color: #000000=
+; font-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; =
+text-align: justify; line-height: normal; background: white;" data-mce-styl=
+e=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-size: =
+12pt; margin: 0px; text-align: justify; line-height: normal; background: wh=
+ite;"><span style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; ms=
+o-fareast-font-family: 'Times New Roman'; color: black; mso-ansi-language: =
+EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; f=
+ont-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman';=
+ color: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">The =
+revised paper has to be submitted in TAP format to&nbsp;<a href=3D"https://=
+mc.manuscriptcentral.com/acm" target=3D"_blank"><span style=3D"color: #0088=
+cc;" data-mce-style=3D"color: #0088cc;">Manuscript Central</span></a>&nbsp;=
+and must include a cover letter stating that the submission is for the SAP =
+special issue. The cover letter should also document the list of changes ma=
+de to the paper to address the reviewer concerns. Please note that TAP has =
+a 20 page limit INCLUDING references. Reformatting, a paper from the SAP fo=
+rmat to the TAP format typically adds a few pages. Complete TAP author guid=
+elines and templates are available at&nbsp;<a href=3D"http://tap.acm.org/au=
+thors.cfm" target=3D"_blank"><span style=3D"color: #0088cc;" data-mce-style=
+=3D"color: #0088cc;">http://tap.acm.org/authors.cfm</span></a></span><span =
+style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times=
+ New Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; mso-ans=
+i-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-fam=
+ily: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-=
+bidi-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN-GB=
+; mso-fareast-language: EN-GB;"></span></p><p class=3D"MsoNormal" style=3D"=
+color: #000000; font-family: arial, helvetica, sans-serif; font-size: 12pt;=
+ margin: 0px; text-align: justify; line-height: normal; background: white;"=
+ data-mce-style=3D"color: #000000; font-family: arial, helvetica, sans-seri=
+f; font-size: 12pt; margin: 0px; text-align: justify; line-height: normal; =
+background: white;"><span style=3D"font-family: 'Verdana',sans-serif; mso-f=
+areast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Rom=
+an'; color: black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" =
+data-mce-style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-famil=
+y: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; color: black=
+; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">&nbsp;</span></p>=
+<p class=3D"MsoNormal" align=3D"center" style=3D"color: #000000; font-famil=
+y: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; text-align: =
+center; line-height: normal; background: white;" data-mce-style=3D"color: #=
+000000; font-family: arial, helvetica, sans-serif; font-size: 12pt; margin:=
+ 0px; text-align: center; line-height: normal; background: white;"><span st=
+yle=3D"font-size: 24pt;" data-mce-style=3D"font-size: 24pt;"><b><span style=
+=3D"font-family: Arial, sans-serif; color: #333333;" data-mce-style=3D"font=
+-family: Arial, sans-serif; color: #333333;">Deadlines</span></b></span><sp=
+an style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Ti=
+mes New Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; mso-=
+ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-=
+family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; m=
+so-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-language: EN=
+-GB; mso-fareast-language: EN-GB;"></span></p><p class=3D"MsoNormal" style=
+=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-size: 1=
+2pt; margin: 0px; line-height: normal; background: white;" data-mce-style=
+=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-size: 1=
+2pt; margin: 0px; line-height: normal; background: white;"><span style=3D"f=
+ont-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family:=
+ 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-l=
+anguage: EN-GB;" data-mce-style=3D"font-size: 12.0pt; font-family: 'Arial',=
+sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #333333; mso=
+-ansi-language: EN-GB; mso-fareast-language: EN-GB;">Each deadline is 23:59=
+:59 AoE (Anywhere on Earth) =3D=3D&gt; GMT/UTC-12:00 on the stated day, no =
+matter where the submitter is located.</span><span style=3D"font-family: 'V=
+erdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-fo=
+nt-family: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-f=
+areast-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans-seri=
+f; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times=
+ New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-language: =
+EN-GB;"></span></p><p class=3D"MsoNormal" style=3D"color: #000000; font-fam=
+ily: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; line-heigh=
+t: normal; background: white;" data-mce-style=3D"color: #000000; font-famil=
+y: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; line-height:=
+ normal; background: white;"><b><span style=3D"font-size: 12.0pt; font-fami=
+ly: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: =
+#333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-s=
+tyle=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-fon=
+t-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-=
+fareast-language: EN-GB;">Papers:</span></b><span style=3D"font-family: 'Ve=
+rdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-fon=
+t-family: 'Times New Roman'; color: black; mso-ansi-language: EN-GB; mso-fa=
+reast-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans-serif=
+; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times =
+New Roman'; color: black; mso-ansi-language: EN-GB; mso-fareast-language: E=
+N-GB;"></span></p><ul type=3D"disc" style=3D"color: #000000; font-family: a=
+rial, helvetica, sans-serif; font-size: 12pt;" data-mce-style=3D"color: #00=
+0000; font-family: arial, helvetica, sans-serif; font-size: 12pt;"><li clas=
+s=3D"MsoNormal" style=3D"color: black; mso-margin-top-alt: auto; mso-margin=
+-bottom-alt: auto; line-height: normal; mso-list: l2 level1 lfo2; tab-stops=
+: list 36.0pt; background: white;" data-mce-style=3D"color: black; mso-marg=
+in-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-lis=
+t: l2 level1 lfo2; tab-stops: list 36.0pt; background: white;"><span style=
+=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-fa=
+mily: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-fare=
+ast-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; font-family: 'Ar=
+ial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #333333=
+; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">Tuesday, May 14th=
+: Abstract submission</span><span style=3D"font-family: 'Verdana',sans-seri=
+f; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times=
+ New Roman'; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-m=
+ce-style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Ti=
+mes New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language:=
+ EN-GB; mso-fareast-language: EN-GB;"></span></li><li class=3D"MsoNormal" s=
+tyle=3D"color: black; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto=
+; line-height: normal; mso-list: l2 level1 lfo2; tab-stops: list 36.0pt; ba=
+ckground: white;" data-mce-style=3D"color: black; mso-margin-top-alt: auto;=
+ mso-margin-bottom-alt: auto; line-height: normal; mso-list: l2 level1 lfo2=
+; tab-stops: list 36.0pt; background: white;"><span style=3D"font-size: 12.=
+0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New R=
+oman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-G=
+B;" data-mce-style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; m=
+so-fareast-font-family: 'Times New Roman'; color: #333333; mso-ansi-languag=
+e: EN-GB; mso-fareast-language: EN-GB;">Tuesday, May 21st: Paper submission=
+</span><span style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-f=
+amily: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi=
+-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-fami=
+ly: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-b=
+idi-font-family: 'Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-l=
+anguage: EN-GB;"></span></li><li class=3D"MsoNormal" style=3D"color: black;=
+ mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal=
+; mso-list: l2 level1 lfo2; tab-stops: list 36.0pt; background: white;" dat=
+a-mce-style=3D"color: black; mso-margin-top-alt: auto; mso-margin-bottom-al=
+t: auto; line-height: normal; mso-list: l2 level1 lfo2; tab-stops: list 36.=
+0pt; background: white;"><span style=3D"font-size: 12.0pt; font-family: 'Ar=
+ial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #333333=
+; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D=
+"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-famil=
+y: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast=
+-language: EN-GB;">Tuesday, June 25th: Paper re-submission</span><span styl=
+e=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New=
+ Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-GB;=
+ mso-fareast-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana',san=
+s-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: =
+'Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">=
+</span></li><li class=3D"MsoNormal" style=3D"color: black; mso-margin-top-a=
+lt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-list: l2 le=
+vel1 lfo2; tab-stops: list 36.0pt; background: white;" data-mce-style=3D"co=
+lor: black; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-hei=
+ght: normal; mso-list: l2 level1 lfo2; tab-stops: list 36.0pt; background: =
+white;"><span style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; =
+mso-fareast-font-family: 'Times New Roman'; color: #333333; mso-ansi-langua=
+ge: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-size: 12.0p=
+t; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Rom=
+an'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;=
+">Tuesday, July 2nd: Decisions announced</span><span style=3D"font-family: =
+'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-=
+font-family: 'Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-langu=
+age: EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans-serif; mso-farea=
+st-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';=
+ mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;"></span></li><li cl=
+ass=3D"MsoNormal" style=3D"color: black; mso-margin-top-alt: auto; mso-marg=
+in-bottom-alt: auto; line-height: normal; mso-list: l2 level1 lfo2; tab-sto=
+ps: list 36.0pt; background: white;" data-mce-style=3D"color: black; mso-ma=
+rgin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-l=
+ist: l2 level1 lfo2; tab-stops: list 36.0pt; background: white;"><span styl=
+e=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-f=
+amily: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-far=
+east-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; font-family: 'A=
+rial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #33333=
+3; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">Tuesday, July 14=
+th: Final papers due</span><span style=3D"font-family: 'Verdana',sans-serif=
+; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times =
+New Roman'; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mc=
+e-style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Tim=
+es New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: =
+EN-GB; mso-fareast-language: EN-GB;"></span></li></ul><p class=3D"MsoNormal=
+" style=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-=
+size: 12pt; margin: 0px; line-height: normal; background: white;" data-mce-=
+style=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-si=
+ze: 12pt; margin: 0px; line-height: normal; background: white;"><b><span st=
+yle=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font=
+-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-f=
+areast-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; font-family: =
+'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #333=
+333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">Posters:</span=
+></b><span style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-fam=
+ily: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; color: bla=
+ck; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=
+=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New =
+Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-lan=
+guage: EN-GB; mso-fareast-language: EN-GB;"></span></p><ul type=3D"disc" st=
+yle=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-size=
+: 12pt;" data-mce-style=3D"color: #000000; font-family: arial, helvetica, s=
+ans-serif; font-size: 12pt;"><li class=3D"MsoNormal" style=3D"color: black;=
+ mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal=
+; mso-list: l0 level1 lfo3; tab-stops: list 36.0pt; background: white;" dat=
+a-mce-style=3D"color: black; mso-margin-top-alt: auto; mso-margin-bottom-al=
+t: auto; line-height: normal; mso-list: l0 level1 lfo3; tab-stops: list 36.=
+0pt; background: white;"><span style=3D"font-size: 12.0pt; font-family: 'Ar=
+ial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #333333=
+; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D=
+"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-famil=
+y: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast=
+-language: EN-GB;">Tuesday, July 9th: Poster submission</span><span style=
+=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New =
+Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-GB; =
+mso-fareast-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans=
+-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: '=
+Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;"><=
+/span></li><li class=3D"MsoNormal" style=3D"color: black; mso-margin-top-al=
+t: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-list: l0 lev=
+el1 lfo3; tab-stops: list 36.0pt; background: white;" data-mce-style=3D"col=
+or: black; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-heig=
+ht: normal; mso-list: l0 level1 lfo3; tab-stops: list 36.0pt; background: w=
+hite;"><span style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; m=
+so-fareast-font-family: 'Times New Roman'; color: #333333; mso-ansi-languag=
+e: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt=
+; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roma=
+n'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;"=
+>Tuesday, July 16th: Decisions announced</span><span style=3D"font-family: =
+'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-=
+font-family: 'Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-langu=
+age: EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans-serif; mso-farea=
+st-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';=
+ mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;"></span></li><li cl=
+ass=3D"MsoNormal" style=3D"color: black; mso-margin-top-alt: auto; mso-marg=
+in-bottom-alt: auto; line-height: normal; mso-list: l0 level1 lfo3; tab-sto=
+ps: list 36.0pt; background: white;" data-mce-style=3D"color: black; mso-ma=
+rgin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-l=
+ist: l0 level1 lfo3; tab-stops: list 36.0pt; background: white;"><span styl=
+e=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-f=
+amily: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-far=
+east-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; font-family: 'A=
+rial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #33333=
+3; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;">Tuesday, July 23=
+rd: Camera ready version of 1-page abstract due</span><span style=3D"font-f=
+amily: 'Verdana',sans-serif; mso-fareast-font-family: 'Times New Roman'; ms=
+o-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-GB; mso-fareas=
+t-language: EN-GB;" data-mce-style=3D"font-family: 'Verdana',sans-serif; ms=
+o-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New =
+Roman'; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;"></span></li=
+></ul><p class=3D"MsoNormal" style=3D"color: #000000; font-family: arial, h=
+elvetica, sans-serif; font-size: 12pt; margin: 0px; line-height: normal; ba=
+ckground: white;" data-mce-style=3D"color: #000000; font-family: arial, hel=
+vetica, sans-serif; font-size: 12pt; margin: 0px; line-height: normal; back=
+ground: white;"><span style=3D"font-size: 12.0pt; font-family: 'Arial',sans=
+-serif; mso-fareast-font-family: 'Times New Roman'; color: #333333; mso-ans=
+i-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-siz=
+e: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times=
+ New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-language=
+: EN-GB;">Our&nbsp;<a href=3D"https://sap.acm.org/2019/authors.php" target=
+=3D"_blank"><span style=3D"color: #0088cc;" data-mce-style=3D"color: #0088c=
+c;">Information for Authors</span></a>&nbsp;page includes deadlines and oth=
+er important information for authors planning on submitting papers or poste=
+rs</span><span style=3D"font-family: 'Verdana',sans-serif; mso-fareast-font=
+-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; color:=
+ black; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-st=
+yle=3D"font-family: 'Verdana',sans-serif; mso-fareast-font-family: 'Times N=
+ew Roman'; mso-bidi-font-family: 'Times New Roman'; color: black; mso-ansi-=
+language: EN-GB; mso-fareast-language: EN-GB;"></span></p><p class=3D"MsoNo=
+rmal" style=3D"color: #000000; font-family: arial, helvetica, sans-serif; f=
+ont-size: 12pt; margin: 0px; line-height: normal; background: white;" data-=
+mce-style=3D"color: #000000; font-family: arial, helvetica, sans-serif; fon=
+t-size: 12pt; margin: 0px; line-height: normal; background: white;"><span s=
+tyle=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-fon=
+t-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-=
+fareast-language: EN-GB;" data-mce-style=3D"font-size: 12.0pt; font-family:=
+ 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #33=
+3333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;"></span><br></=
+p><p class=3D"MsoNormal" style=3D"color: #000000; font-family: arial, helve=
+tica, sans-serif; font-size: 12pt; margin: 0px; line-height: normal; backgr=
+ound: white;" data-mce-style=3D"color: #000000; font-family: arial, helveti=
+ca, sans-serif; font-size: 12pt; margin: 0px; line-height: normal; backgrou=
+nd: white;"><span style=3D"font-size: 12.0pt; font-family: 'Arial',sans-ser=
+if; mso-fareast-font-family: 'Times New Roman'; color: #333333; mso-ansi-la=
+nguage: EN-GB; mso-fareast-language: EN-GB;" data-mce-style=3D"font-size: 1=
+2.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New=
+ Roman'; color: #333333; mso-ansi-language: EN-GB; mso-fareast-language: EN=
+-GB;"></span><br></p><p class=3D"MsoNormal" style=3D"color: #000000; font-f=
+amily: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; line-hei=
+ght: normal; background: white;" data-mce-style=3D"color: #000000; font-fam=
+ily: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; line-heigh=
+t: normal; background: white;"><span style=3D"font-size: 12.0pt; font-famil=
+y: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: #=
+333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-mce-st=
+yle=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast-font=
+-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; mso-f=
+areast-language: EN-GB;"><b style=3D"color: #000000; font-family: Calibri, =
+sans-serif; font-size: 32px; font-style: normal; font-variant-ligatures: no=
+rmal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-a=
+lign: center; text-indent: 0px; text-transform: none; white-space: normal; =
+widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-co=
+lor: #ffffff;" data-mce-style=3D"color: #000000; font-family: Calibri, sans=
+-serif; font-size: 32px; font-style: normal; font-variant-ligatures: normal=
+; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align=
+: center; text-indent: 0px; text-transform: none; white-space: normal; wido=
+ws: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color:=
+ #ffffff;"><span style=3D"font-family: Arial, sans-serif; color: #333333;" =
+data-mce-style=3D"font-family: Arial, sans-serif; color: #333333;">Organiza=
+tion</span></b></span></p><p class=3D"MsoNormal" style=3D"color: #000000; f=
+ont-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; lin=
+e-height: normal; background: white;" data-mce-style=3D"color: #000000; fon=
+t-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; line-=
+height: normal; background: white;"><span style=3D"font-size: 12.0pt; font-=
+family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; col=
+or: #333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" data-m=
+ce-style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fareast=
+-font-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-GB; =
+mso-fareast-language: EN-GB;"> </span></p><h4 style=3D"color: #333333; font=
+-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17.5px;=
+ margin: 10px 0px; font-weight: bold; line-height: 20px; text-rendering: op=
+timizelegibility; font-style: normal; font-variant-ligatures: normal; font-=
+variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start=
+; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; w=
+ord-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff=
+;" data-mce-style=3D"color: #333333; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: 17.5px; margin: 10px 0px; font-weight: bo=
+ld; line-height: 20px; text-rendering: optimizelegibility; font-style: norm=
+al; font-variant-ligatures: normal; font-variant-caps: normal; letter-spaci=
+ng: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform=
+: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-str=
+oke-width: 0px; background-color: #ffffff;">Program Chairs</h4><ul style=3D=
+"color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-seri=
+f; font-size: 14px; padding: 0px; margin: 0px 0px 10px 25px; font-style: no=
+rmal; font-variant-ligatures: normal; font-variant-caps: normal; font-weigh=
+t: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent:=
+ 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0=
+px; -webkit-text-stroke-width: 0px; background-color: #ffffff;" data-mce-st=
+yle=3D"color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, san=
+s-serif; font-size: 14px; padding: 0px; margin: 0px 0px 10px 25px; font-sty=
+le: normal; font-variant-ligatures: normal; font-variant-caps: normal; font=
+-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-i=
+ndent: 0px; text-transform: none; white-space: normal; widows: 2; word-spac=
+ing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><li s=
+tyle=3D"line-height: 20px;" data-mce-style=3D"line-height: 20px;"><span sty=
+le=3D"color: #000000;" data-mce-style=3D"color: #000000;"><a href=3D"https:=
+//www.b-tu.de/en/graphic-systems" target=3D"_blank" style=3D"color: #000000=
+; text-decoration: none;" data-mce-style=3D"color: #000000; text-decoration=
+: none;"><b>Douglas W. Cunningham</b></a>, Brandenburg University of Techno=
+logy</span></li><li style=3D"line-height: 20px;" data-mce-style=3D"line-hei=
+ght: 20px;"><span style=3D"color: #000000;" data-mce-style=3D"color: #00000=
+0;"><a href=3D"https://people.rennes.inria.fr/Ludovic.Hoyet/" target=3D"_bl=
+ank" style=3D"color: #000000; text-decoration: none;" data-mce-style=3D"col=
+or: #000000; text-decoration: none;"><b>Ludovic Hoyet</b></a>, INRIA</span>=
+</li></ul><h4 style=3D"color: #333333; font-family: 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; font-size: 17.5px; margin: 10px 0px; font-weight: =
+bold; line-height: 20px; text-rendering: optimizelegibility; font-style: no=
+rmal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spa=
+cing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transfo=
+rm: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-s=
+troke-width: 0px; background-color: #ffffff;" data-mce-style=3D"color: #333=
+333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: 17.5px; margin: 10px 0px; font-weight: bold; line-height: 20px; text-rend=
+ering: optimizelegibility; font-style: normal; font-variant-ligatures: norm=
+al; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-ali=
+gn: start; text-indent: 0px; text-transform: none; white-space: normal; wid=
+ows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color=
+: #ffffff;"><span style=3D"color: #000000;" data-mce-style=3D"color: #00000=
+0;">Conference Chairs</span></h4><ul style=3D"color: #333333; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; padding: 0=
+px; margin: 0px 0px 10px 25px; font-style: normal; font-variant-ligatures: =
+normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal=
+; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; wh=
+ite-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width:=
+ 0px; background-color: #ffffff;" data-mce-style=3D"color: #333333; font-fa=
+mily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; padd=
+ing: 0px; margin: 0px 0px 10px 25px; font-style: normal; font-variant-ligat=
+ures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: =
+normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: no=
+ne; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-=
+width: 0px; background-color: #ffffff;"><li style=3D"line-height: 20px;" da=
+ta-mce-style=3D"line-height: 20px;"><span style=3D"color: #000000;" data-mc=
+e-style=3D"color: #000000;"><b>Sol=C3=A8ne Neyret</b>, University of Barcel=
+ona</span></li><li style=3D"line-height: 20px;" data-mce-style=3D"line-heig=
+ht: 20px;"><span style=3D"color: #000000;" data-mce-style=3D"color: #000000=
+;"><b>Elena Kokkinara</b>, Inflight VR</span></li><li style=3D"line-height:=
+ 20px;" data-mce-style=3D"line-height: 20px;"><span style=3D"color: #000000=
+;" data-mce-style=3D"color: #000000;"><a href=3D"https://www.microsoft.com/=
+en-us/research/people/margon/" target=3D"_blank" style=3D"color: #000000; t=
+ext-decoration: none;" data-mce-style=3D"color: #000000; text-decoration: n=
+one;"><b>Mar Gonzalez Franco</b></a>, Microsoft Research</span></li></ul><h=
+4 style=3D"color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial,=
+ sans-serif; font-size: 17.5px; margin: 10px 0px; font-weight: bold; line-h=
+eight: 20px; text-rendering: optimizelegibility; font-style: normal; font-v=
+ariant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal=
+; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; wh=
+ite-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width:=
+ 0px; background-color: #ffffff;" data-mce-style=3D"color: #333333; font-fa=
+mily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17.5px; ma=
+rgin: 10px 0px; font-weight: bold; line-height: 20px; text-rendering: optim=
+izelegibility; font-style: normal; font-variant-ligatures: normal; font-var=
+iant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; t=
+ext-indent: 0px; text-transform: none; white-space: normal; widows: 2; word=
+-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">=
+<span style=3D"color: #000000;" data-mce-style=3D"color: #000000;">Poster C=
+hair</span></h4><ul style=3D"color: #333333; font-family: 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif; font-size: 14px; padding: 0px; margin: 0px 0=
+px 10px 25px; font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; tex=
+t-align: start; text-indent: 0px; text-transform: none; white-space: normal=
+; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-=
+color: #ffffff;" data-mce-style=3D"color: #333333; font-family: 'Helvetica =
+Neue', Helvetica, Arial, sans-serif; font-size: 14px; padding: 0px; margin:=
+ 0px 0px 10px 25px; font-style: normal; font-variant-ligatures: normal; fon=
+t-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: =
+2; text-align: start; text-indent: 0px; text-transform: none; white-space: =
+normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; backg=
+round-color: #ffffff;"><li style=3D"line-height: 20px;" data-mce-style=3D"l=
+ine-height: 20px;"><span style=3D"color: #000000;" data-mce-style=3D"color:=
+ #000000;"><a href=3D"http://psych.pan.pl/pl/pracownia-psychologii-spoleczn=
+ej/2170-2/" target=3D"_blank" style=3D"color: #000000; text-decoration: non=
+e;" data-mce-style=3D"color: #000000; text-decoration: none;"><b>Justyna =
+=C5=9Awidrak</b></a>, IDIBAPS &amp; Institute of Psychology, Polish Academy=
+ of Sciences</span></li></ul><p class=3D"MsoNormal" style=3D"color: #000000=
+; font-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; =
+line-height: normal; background: white;" data-mce-style=3D"color: #000000; =
+font-family: arial, helvetica, sans-serif; font-size: 12pt; margin: 0px; li=
+ne-height: normal; background: white;"><span style=3D"font-size: 12.0pt; fo=
+nt-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; =
+color: #333333; mso-ansi-language: EN-GB; mso-fareast-language: EN-GB;" dat=
+a-mce-style=3D"font-size: 12.0pt; font-family: 'Arial',sans-serif; mso-fare=
+ast-font-family: 'Times New Roman'; color: #333333; mso-ansi-language: EN-G=
+B; mso-fareast-language: EN-GB;"> </span></p><p class=3D"MsoNormal" style=
+=3D"color: #000000; font-family: arial, helvetica, sans-serif; font-size: 1=
+2pt; margin: 0px;" data-mce-style=3D"color: #000000; font-family: arial, he=
+lvetica, sans-serif; font-size: 12pt; margin: 0px;"><span style=3D"mso-ansi=
+-language: EN-GB;" data-mce-style=3D"mso-ansi-language: EN-GB;">&nbsp;</spa=
+n></p> <br><br></div></div></div><br></div></div></body></html>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>=
+
+--=_6f3c3e74-a2c8-46a2-8a40-56b6e4884e4a--

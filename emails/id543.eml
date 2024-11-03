@@ -1,0 +1,274 @@
+Received: from BYAPR08MB4439.namprd08.prod.outlook.com (2603:10b6:a02:a8::44)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR03CA0031.NAMPRD03.PROD.OUTLOOK.COM; Wed, 2 Oct 2019 21:37:00 +0000
+Received: from SN6PR08CA0035.namprd08.prod.outlook.com (2603:10b6:805:66::48)
+ by BYAPR08MB4439.namprd08.prod.outlook.com (2603:10b6:a02:f5::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2305.15; Wed, 2 Oct
+ 2019 21:36:58 +0000
+Received: from BN3NAM04FT005.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::209) by SN6PR08CA0035.outlook.office365.com
+ (2603:10b6:805:66::48) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2305.20 via Frontend
+ Transport; Wed, 2 Oct 2019 21:36:58 +0000
+Authentication-Results: spf=pass (sender IP is 209.18.93.140)
+ smtp.mailfrom=enotice.ieee.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ieee.org;calpoly.edu; dmarc=pass action=none
+ header.from=ieee.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of enotice.ieee.org
+ designates 209.18.93.140 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.18.93.140;
+ helo=mail140.magnet101.com;
+Received: from mail140.magnet101.com (209.18.93.140) by
+ BN3NAM04FT005.mail.protection.outlook.com (10.152.92.108) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2327.20 via Frontend Transport; Wed, 2 Oct 2019 21:36:58 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=rmagnet; d=ieee.org;
+ h=Date:From:To:Subject:Reply-To:List-Unsubscribe:MIME-Version:Content-Type:
+ Message-ID; i=enotice@ieee.org;
+ bh=DTLsuaSaOL+WiWKql+GBJ+V+SoQuhS74tOLfjox7CLQ=;
+ b=Goaz+fi6uYkhMObUYIh4T3CasF8gG7nWy240FglVeZcOSVMfLCIf2+WDB63t0Hn9afaZvpL621h0
+   MT9heAr2EnoGHLV0aWemqyICQBGO5tqzIsn7q1ccSRs1/9gOjGdd5OE1H5rhmeZNph3mV7M8TTjQ
+   ijSb4gfxt7SwCmtF0/k=
+Received: from RMPMTA05 (172.17.140.5) by mail140.magnet101.com id hikc7k2j0jsm for <foaad@calpoly.edu>; Wed, 2 Oct 2019 17:36:50 -0400 (envelope-from <bounce@enotice.ieee.org>)
+Date: Wed, 02 Oct 2019 17:36:49 -0400
+From: "IEEE eNotice" <enotice@ieee.org>
+To: <foaad@calpoly.edu>
+Subject: SusTech 2020
+Reply-To: "Keith Moore" <keith.moore@ieee.org>
+X-TokenInfo-NoToken:
+Feedback-ID: 11147:11147_7309520:11147_45468518:realmagnet
+x-jobid: 45468518
+List-Unsubscribe: <http://unsubscribe.magnetmail.net/Actions/unsubscribe.cfm?message_id=17492635&user_id=IEEE_MGAIM&recipient_id=2908860288&email=foaad@calpoly.edu&group_id=7309520>
+X-Bps1: 45274490117
+Content-Type: multipart/alternative; boundary="_NextPart_000_17492635_2019102_173649797"
+Message-ID: <0.0.1.38.1D579698025AA1D.B5292@mail140.magnet101.com>
+Return-Path: bounce@enotice.ieee.org
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Oct 2019 21:36:58.4721
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 2c7e0753-9fba-4d82-4608-08d74780a751
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:209.18.93.140;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001)(4636009)(286005)(189003)(199004)(236005)(43066004)(21615005)(6916009)(356004)(8676002)(2160300002)(16003)(26005)(1096003)(85166004)(7066003)(4006050)(6306002)(733005)(2351001)(246002)(6986002)(16586007)(7116003)(71190400001)(33656002)(75640400001)(103116003)(2171002)(9686003)(7596002)(7636002)(66574012)(10126004)(146002)(966005)(33964004)(606006)(486006)(476003)(126002)(336012)(106002)(115680200001)(6300400002)(38170200001)(102196002);DIR:INB;SFP:;SCL:5;SRVR:BYAPR08MB4439;H:mail140.magnet101.com;FPR:;SPF:Pass;LANG:en;PTR:mail140.magnet101.com;MX:1;A:1;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT005.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 2c7e0753-9fba-4d82-4608-08d74780a751
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4439:
+X-MS-Exchange-PUrlCount: 12
+X-MS-Oob-TLC-OOBClassifiers: OLM:6790;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:1;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Oct 2019 21:36:58.4321
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 2c7e0753-9fba-4d82-4608-08d74780a751
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4439
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8111543
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2305.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TVhWcGw4M1Z5b1djVi8xTVZMRGlKVHQzOVQ5Q2lSU0lvRlkvWjZhdGRaZTNS?=
+ =?utf-8?B?T3NsbTFTcXMwSzBqSUdKNHlCS2pLNjdlMGZMc3RQcDhoUldSQm1tem5JR2xo?=
+ =?utf-8?B?aFNCekw1aTY2Rjh3LzBBcnpIY0prMlAwMXFZanNNSDFlMFRzL2ozVENnSWpI?=
+ =?utf-8?B?dG42L1JDdjNwckJ6L2psa1lwV2FnWS9zZC9NMmxIWEVFbW5veDk5eHJnRCtj?=
+ =?utf-8?B?am1OWDF3bXF4eis1dld4Rk85SXdSaFhMdGhxeGt2MzVKem1SQ1VodWM1RWJn?=
+ =?utf-8?B?b1BhT1FjckFYREtTQ2hoVU5SZFZXT3ZFWm55N3ZnSmVUU3BNQlBNTHpLR0Nq?=
+ =?utf-8?B?WXl0M0xabDB6NWpYa1QxZnV6R2cxS09DdzBiMFhPc3FRSEF4Qnl3S1VnU215?=
+ =?utf-8?B?cThBeEQvaW5yam5TeFpqV0xuRm1JU3o4WkhzOW9TZkVhVmZoRDFNY3pmcjVI?=
+ =?utf-8?B?NkYwMmtSSmllektUWldDeWhhZGFyYmxBMEhEOGdmOFRvZEluQ2lrS2tkbWV5?=
+ =?utf-8?B?blh5bkpKRTRLZjhVN3p2Rlp1UEtRanJXN2FBOUtqMkNlK25HZ0Z5UnQxbnNa?=
+ =?utf-8?B?Nmt0ZmRXOVF2ZXUvNjhORDUyY203akx1UlA3UlVQTjIvczNqVDc0Z2xpTUVs?=
+ =?utf-8?B?TVJDMWJpd2xaRHFCYjBJbjVIekZjamxqYnVlTUlzRWFnRTFUQTErYk4vNmRN?=
+ =?utf-8?B?N1h2N200cXhSN0ZwdjluU3F3WGFEZUg3YkExRHlGRHBiMWpLMU9HbmErQWp6?=
+ =?utf-8?B?aWo5cTlTTU91YlRXYk8xNzJDNFN1WFFoanFPT3VSV3p3dDUrWElvVG0vcFRw?=
+ =?utf-8?B?SXc2ajd3TFVITlFOWDlCaUljRFJDY3N0YnlwYjRUbVdxeFVSOEltUEo5aUVG?=
+ =?utf-8?B?RG1xZnVVS1o0K3FTWXFTc21XbWhXWWdSaVFPS2FjVDUyWFFrNWNhRW9aWmlP?=
+ =?utf-8?B?S2FpVHZGaytFMTljR1grY3hMT3VEVkFiYkJpekJWN29HbUVxNHdPTHJPK1kv?=
+ =?utf-8?B?NFZiNi8wSm1xZS80YWNrWjVib2xNdEtHZHJIS0hxbXBpZGZjNkdoN0FPN2RV?=
+ =?utf-8?B?aWdNWGsrb3paQ2RCT2ZsMEl3VUo5UnVibGhERG5say9xMG5RcGVaYXZOV3FF?=
+ =?utf-8?B?UmVXZ2cyUWJ1dWZqUGgvekMybE5sVFJkWXNCbW51S0tDVHJiNUNUd3JWSUpT?=
+ =?utf-8?B?VEVVT3kwVkdPWXFiazVTWlAzVEtDY3ArZ3QzSlNwdWpzZnJXM2x3SldSU0tx?=
+ =?utf-8?B?WnJneHozZ1d5elBkbStsVDI3STVjcWRpaGs4ZVcxdWpiQmwxeU5xbEJlRWIr?=
+ =?utf-8?B?QTZ2Wk9zRU5rT08yVk85bTBPL0pPRWtRdFlaMndrSTZYTjFjNW9lTkxVYlFk?=
+ =?utf-8?B?L0J1QjdMKzVaQjE2aWZ3SlNuMmUwdnB3d3gxZGlIb29wY3VXbUhMc09ZaFVm?=
+ =?utf-8?B?S1ZKV0UwUkZTU1RLcnc2NWZEY3Rad0pmVVN5enVFSU9rdmQ2Sm1UZHpyMWhL?=
+ =?utf-8?B?R0NYa1JsbjJQNnEvTDY2dk5qdURDUEFJUk1xNWdqZjZNaVJtRU93SXl6TWt5?=
+ =?utf-8?B?UjJaSlBTUmR3bCtyZnA4SmRPanJTb1RPb1ZGcHZvTys2WGdwMEZRbXlmOVpp?=
+ =?utf-8?B?bHEzOU80Q2V5cUcvTWtNTE4vMnRYZDlxSjQzWVk0S1RjdmpPS2lCK0dzdUZT?=
+ =?utf-8?B?S0FQQ0Jvb0dwMkNQVVZudzYyNDlDQWxIb0IzdEwvNW16SG1TU0hmYnNKaFFR?=
+ =?utf-8?B?R2ViTDBPelhWbDFMdmhBaURqMUtlMUg2YkRWZzRRVmEwNGRVUWhSNzFyMmpM?=
+ =?utf-8?B?R3ArRDByVWlOcmV4ZVoxYTNMMk5EdUhlMlcvVTdSZ25od1dWZkZrS3lWVFJz?=
+ =?utf-8?B?d0JCU0hSQTA1aHhLbHplQW1Ua085aHlQSTduRUYyenp4eFd1dnNKTzB3RDcv?=
+ =?utf-8?B?QmpGOGpFemNMZENoMklGR3VYSThLU1Y5K3QvTzZlU3ZXV1UxY1orb0pxKzIx?=
+ =?utf-8?B?WkdsYjd0dStBPT0=?=
+MIME-Version: 1.0
+
+--_NextPart_000_17492635_2019102_173649797
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+To see the web version of this message click here: =0Ahttp://contentsharing=
+.net/actions/email_web_version.cfm?recipient_id=3D2908860288&messa=
+ge_id=3D17492635&user_id=3DIEEE_MGAIM&jobid=3D45468518=0A=0DTake a look at =
+our most recent message: https://www.magnetmail.net/actions/email_web_versi=
+on.cfm?recipient_id=3D2908860288&message_id=3D17492635&user_id=3DI=
+EEE_MGAIM&group_id=3D7309520&jobid=3D45468518Use this link to unsubscribe:
+http://unsubscribe.magnetmail.net/Actions/unsubscribe.cfm?message_id=3D1749=
+2635&user_id=3DIEEE_MGAIM&recipient_id=3D2908860288&group_id=3D730=
+9520&jobid=3D45468518
+
+--_NextPart_000_17492635_2019102_173649797
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body>If you are having trouble reading this message, <a href=3D"http:=
+//enotice.ieee.org/link.cfm?r=3Dva0SXrpM_6_BBWgrVg--Jw~~&amp;pe=3DZz_38SP7e=
+TmfavsdT79xcNsZDklC3b9K6uBC76rWyJ6BEbjYgDvs021CpqKiHU2dpM2ACi3rGiHkz1aAXYqw=
+Zw~~&amp;t=3Ds-doW_v7p0NUAg2p8vseWA~~">click here</a> for the web version.<=
+img class=3D"html_frame_ieee_header and another" src=3D"http://images.magne=
+tmail.net/images/clients/IEEE_MGAIM/enotice_header_800.png">=0A=
+=0A=
+<div style=3D"margin: 15px;">=0A=
+<p><strong>IEEE SusTech 2020</strong></p>=0A=
+<p><strong>Technologies that improve Air, Water, Energy, Food and Human Lif=
+e</strong></p>=0A=
+<p><strong>April 23-25, 2020 at DoubleTree by Hilton Hotel, Santa Ana, CA, =
+USA.</strong></p>=0A=
+<p><a href=3D"http://enotice.ieee.org/link.cfm?r=3Dva0SXrpM_6_BBWgrVg--Jw~~=
+&amp;pe=3DSycw28hmp8_Opb2K5003unaiHtdBFvc8DhJrxxNQbQLQL3m25IgqiioWYRSDqHqXf=
+7MsQLlF0MaBsEJNWh6xDQ~~&amp;t=3Ds-doW_v7p0NUAg2p8vseWA~~">http://site.ieee.=
+org/sustech</a></p>=0A=
+<p><strong><u>&nbsp;</u></strong></p>=0A=
+<p><strong><u>There is still time to submit your abstracts!</u></strong></p=
+>=0A=
+<p><strong>&nbsp;</strong></p>=0A=
+<table>=0A=
+<tbody>=0A=
+<tr>=0A=
+<td width=3D"566">=0A=
+<p><strong>We Have Extended Our Abstract Deadline to October 22, 2019</stro=
+ng></p>=0A=
+</td>=0A=
+</tr>=0A=
+</tbody>=0A=
+</table>=0A=
+<p><u>&nbsp;</u></p>=0A=
+<p>The SusTech Conference is designed to explore the <strong>development an=
+d application of science, engineering and technology </strong><strong>that =
+improve Sustainability of Air, Water, Energy, Food and Human Life</strong>.=
+ It brings together scientists, engineers, technologists and scholars from =
+multiple disciplines to hold a dialogue on environmental issues and collabo=
+rate on ideas to develop and utilize innovative tools and intelligent syste=
+ms to address them.</p>=0A=
+<p>&nbsp;</p>=0A=
+<p><strong>Growing List of Our Esteemed </strong><strong><a href=3D"http://=
+enotice.ieee.org/link.cfm?r=3Dva0SXrpM_6_BBWgrVg--Jw~~&amp;pe=3D66S3SJbDpxl=
+hRaDpSb0rkmONhkN5Q8Hav-lAUWlZpzEaMZdd3MaQVoIwfqEsCIjOXIUjNnqPZ4E23NAykJZACg=
+~~&amp;t=3Ds-doW_v7p0NUAg2p8vseWA~~">Invited Speakers</a></strong><strong>:=
+</strong></p>=0A=
+<p>Marty Waldman, Space Information Labs =E2=80=93 &quot;Small Modular Reac=
+tors and Microgrids for Military Use&quot;</p>=0A=
+<p>Kay Das =E2=80=93 &quot;Challenges of the Connected Vehicle Revolution&q=
+uot;</p>=0A=
+<p><em>Seth Potter =E2=80=93 &quot;Space Based Solar Power&quot;</em></p>=
+=0A=
+<p><em>Paul Schultz, LADWP =E2=80=93 Power Challenges for Southern Californ=
+ia</em></p>=0A=
+<p>Dong Tan, Northrop Grumman Aerospace Systems =E2=80=93 &quot;Power Elect=
+ronics, Smart Grid and Grid Modernization&quot;</p>=0A=
+<p>&nbsp;</p>=0A=
+<p>SusTech 2020 is soliciting papers for verbal presentations from industry=
+, government, and academia (including students) covering relevant research,=
+ technologies, methodologies, tools and case studies. Topics with policy im=
+plications are also welcome.</p>=0A=
+<p><strong><u>Suggested Topics of Interest: </u></strong></p>=0A=
+<p>Renewable/Alternative Energy - Solar/Wind/other<strong>&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Energy Efficiency<strong>&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp; </strong></p>=0A=
+<p>Internet of Things ( IOT) for Sustainability&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Smart Grid<strong>&nbsp;&nbsp; </=
+strong>Connected Vehicles</p>=0A=
+<p>Sustainable Electronics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eWaste<s=
+trong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Ag=
+riculture and Food Technology</p>=0A=
+<p>Ecological Sustainability and Conservation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp; Water Resources Management</p>=0A=
+<p>Ocean Waste &amp; Pollution Management&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Societal Implic=
+ations/ Quality of life</p>=0A=
+<p><u>&nbsp;</u></p>=0A=
+<p><a href=3D"http://enotice.ieee.org/link.cfm?r=3Dva0SXrpM_6_BBWgrVg--Jw~~=
+&amp;pe=3Dl10VNheWc8nfPXTrwqzznX1So7RfJuGrFTztAUBHiNiSXqN6VR-GI1EyzhYwcdK_w=
+vYAn1znWngiRNMZ4mgEwA~~&amp;t=3Ds-doW_v7p0NUAg2p8vseWA~~">http://site.ieee.=
+org/sustech</a><u>&nbsp; </u><u>&nbsp;</u></p>=0A=
+<p><a href=3D"http://enotice.ieee.org/link.cfm?r=3Dva0SXrpM_6_BBWgrVg--Jw~~=
+&amp;pe=3DW_ZSNTBDb730eJzGPlc0HvhKjHAq6ldEkeIFNsgcdDwEGdy_LpyLG15cOAZi8pOBY=
+9ibNN8dSUxUxwgqU9W24w~~&amp;t=3Ds-doW_v7p0NUAg2p8vseWA~~">https://www.linke=
+din.com/groups/8594589/</a></p>=0A=
+</div>=0A=
+=0A=
+=0A=
+=0A=
+<!-- BEGIN FOOTER -->=0A=
+<div class=3D"html_frame_footer_links_container" style=3D"=0A=
+  width: 780px;=0A=
+  padding: 8px;=0A=
+  margin-bottom: 20px;=0A=
+  font-family: Verdana, Arial, Helvetica, sans-serif;=0A=
+  font-size: 11.4px;=0A=
+  background-color:#e9eaec;/* Rounded corners */=0A=
+  -moz-border-radius: 10px;=0A=
+  -webkit-border-radius: 10px;=0A=
+  border-radius: 10px;/* future proofing */=0A=
+  -khtml-border-radius: 10px;/* for old Konqueror browsers */=0A=
+  ">=0A=
+<div>Western USA - Region 6<!-- R6 --> : <a href=3D"http://enotice.ieee.org=
+/link.cfm?r=3Dva0SXrpM_6_BBWgrVg--Jw~~&amp;pe=3DCM2v19HX6DGdEmL-T6C-ezAUMD4=
+aAmHkGHOjCn4ajWHT69qWXOUCTn4pp3nHa1Etbc8glPETxF4noCWRVt77hQ~~&amp;t=3Ds-doW=
+_v7p0NUAg2p8vseWA~~" target=3D"_blank">http://ewh.ieee.org/reg/6/</a></div>=
+=0A=
+<hr>=0A=
+	Manage your IEEE Communication Preferences at the =0A=
+<a href=3D"http://enotice.ieee.org/link.cfm?r=3Dva0SXrpM_6_BBWgrVg--Jw~~&am=
+p;pe=3DdmXQtvlvrBpI5cgP1vJ1mUI4CRm6Y3D8H1IhrvqEvSqcw7uIXsxLaVx6naVqA2FdSfmk=
+ODm0T0wx-N38FtpewQ~~&amp;t=3Ds-doW_v7p0NUAg2p8vseWA~~">IEEE Privacy Portal<=
+/a>=0A=
+<!--<a href=3D"https://www.ieee.org/profile/commprefs/showcommPrefpage.html=
+" target=3D"_blank"&gt;Manage your IEEE Communications Preferences</a>-->=
+=0A=
+</div>=0A=
+<!-- END FOOTER -->=0A=
+=0A=
+<img class=3D"html_frame_ieee_footer" src=3D"http://images.magnetmail.net/i=
+mages/clients/IEEE_MGAIM/enotice_footer_800.png">=0A=
+<br><img src=3D"http://enotice.ieee.org/spacer.cfm?tracking_id=3D4527449011=
+7&amp;jid=3D45468518"></body></html>
+
+--_NextPart_000_17492635_2019102_173649797--

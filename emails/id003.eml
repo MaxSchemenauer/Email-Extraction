@@ -1,0 +1,458 @@
+Received: from BN7PR08MB4979.namprd08.prod.outlook.com (2603:10b6:a02:ee::26)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR02CA0013.NAMPRD02.PROD.OUTLOOK.COM; Tue, 13 Aug 2019 11:11:29 +0000
+Received: from SN6PR08CA0018.namprd08.prod.outlook.com (2603:10b6:805:66::31)
+ by BN7PR08MB4979.namprd08.prod.outlook.com (2603:10b6:408:2d::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2157.14; Tue, 13 Aug
+ 2019 11:11:28 +0000
+Received: from CO1NAM04FT027.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::208) by SN6PR08CA0018.outlook.office365.com
+ (2603:10b6:805:66::31) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2157.13 via Frontend
+ Transport; Tue, 13 Aug 2019 11:11:28 +0000
+Authentication-Results: spf=pass (sender IP is 209.61.151.193)
+ smtp.mailfrom=newsleopard.com; calpoly.edu; dkim=pass (signature was
+ verified) header.d=newsleopard.com;calpoly.edu; dmarc=none action=none
+ header.from=apceas.org;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of newsleopard.com
+ designates 209.61.151.193 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.61.151.193;
+ helo=mail08.mg7.newsleopard.com;
+Received: from mail08.mg7.newsleopard.com (209.61.151.193) by
+ CO1NAM04FT027.mail.protection.outlook.com (10.152.90.164) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2157.15 via Frontend Transport; Tue, 13 Aug 2019 11:11:25 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=newsleopard.com; q=dns/txt;
+ s=smtp; t=1565694685; h=Content-Type: Mime-Version: Subject: From: To:
+ Sender: List-Unsubscribe: Message-Id: Date;
+ bh=4DE7KLmxZE0rSZw1Pc7Q+/2j5HBCf7Sqb029ROn+qv4=; b=khJs1tAtp5dK/A0rxRYevSY//WYgyNFszETBNZ/4BplSWVhTBVq++0ZH1OZAguUTO2en43kS
+ Nv2ipV2Th2im2QqI8Qs055kKjcr3xb8BjmveJGonc1/yixKR1NPkn/FG7kkDlC+f5GyV5wAY
+ HoZXc5Sm9dNDF8fXxszrWhOdeEE=
+X-Mailgun-Sending-Ip: 209.61.151.193
+X-Mailgun-Sid: WyIyOTgyMiIsICJmb2FhZEBjYWxwb2x5LmVkdSIsICIxODc2ZCJd
+Received: by luna.mailgun.net with HTTP; Tue, 13 Aug 2019 11:11:21 +0000
+Date: Tue, 13 Aug 2019 11:11:21 +0000
+Message-Id: <20190813111121.1.86AA563CAFE31D1D@mail08.mg7.newsleopard.com>
+List-Unsubscribe: <https://app.newsleopard.com/assets/page/unsubscribe-page-en.html?e=unsubscribe&y1=0&y2=4028d9a06c855d5f016c88bd0c37003a&y3=f5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0&appHost=https://edm.mail08.mg7.newsleopard.com>
+Sender: APCEAS Secretariat <apceas@apceas.org>
+X-Mailgun-Dkim: true
+To: foaad <foaad@calpoly.edu>
+From: APCEAS Secretariat <apceas@apceas.org>
+Subject: 2019 APCEAS @ Phuket: Sustainable Energy and Environmental
+ Development
+Content-Type: multipart/alternative; boundary="43be7d0f238241ef968447cfa06f9261"
+Return-Path: bounce+b30525.1876d-foaad=calpoly.edu@newsleopard.com
+X-MS-Exchange-Organization-ExpirationStartTime: 13 Aug 2019 11:11:28.4526
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 84f2add9-0396-4aff-4099-08d71fdefd07
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:209.61.151.193;IPV:NLI;CTRY:US;EFV:NLI;SFV:BLK;SFS:;DIR:INB;SFP:;SCL:6;SRVR:BN7PR08MB4979;H:mail08.mg7.newsleopard.com;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT027.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 84f2add9-0396-4aff-4099-08d71fdefd07
+X-Microsoft-Antispam:
+ BCL:9;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(8001031)(1405096)(71702078);SRVR:BN7PR08MB4979;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4979:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Oob-TLC-OOBClassifiers: OLM:6790;
+X-MS-Exchange-Organization-SCL: 6
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 13 Aug 2019 11:11:25.0259
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 84f2add9-0396-4aff-4099-08d71fdefd07
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4979
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.6375655
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	kl:1;ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(750119)(520011016)(520007050)(944504077)(944703077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?bzI1TksvQy9jVDQvdUt3NFNxcjNzN3dzczFyYVpuaHV4MFhHVWlKRGkwd3FD?=
+ =?utf-8?B?U2tiL2ltb3IzT3ZGVUwxK1k3NFo2SmluWEpqV1pNRGJaUUgvYTNucHVybGhz?=
+ =?utf-8?B?RXEyU1ZJMVhDRTRWNUQ2NGgza01RV0U0cUx0clQrdStXY095MzR6MlppKzZh?=
+ =?utf-8?B?U2lzTTZDSkdTK3hyS3QwTHo5QjlvS1ZLUDNLejdkdm8venlNZjhjYVNFWFBC?=
+ =?utf-8?B?azROVEgvSnA2UmEzbkYzcDF3a0QrMDNoOG5jcncyUmJjeVlnL1pHSmNtb0Zp?=
+ =?utf-8?B?TzBtTGNocmF3MWVTeUdQWEhTNFBvZTdBNWhzZjNSMW9UYzljQ09qK3J2MEMx?=
+ =?utf-8?B?NXFEMGgvRW5XSWdFOXgwNUxRRkVMRk9XSWhGOFZaalRQWFc3N2tGWTdMWGxV?=
+ =?utf-8?B?Ly9VNlhRUWgzWU5kNXJSS0JKNmZlVytqdzBSYzg5SWpSdGh5bkJ4K3B3dXI2?=
+ =?utf-8?B?YW5KQjVaVzFQb2ZJcXdDRlRRakZQdC9xWE1NZ0RWSHRWTExGU1FlRTl0aWxN?=
+ =?utf-8?B?NDlZZm53VWhDRWxjaEpDNEpsaldua3B4WlJmN28wa29WYVdBUjNpdnl1b1VF?=
+ =?utf-8?B?T2Myd01LaVlSSHBEb1hYdTN2SXdBbkI2WmJaMHAxOW5OQXI0NGtvWkY5cHU2?=
+ =?utf-8?B?M0lsZG5aR3BaelRUbDRmT1RoMStMMXFIbVBHVmZrZ3dtZzhlRUlEOWxqejdY?=
+ =?utf-8?B?TW50dzdlbjQ4WCtOL1VmdmhVZnQyTU04aTUxWFY4NzdFVzZHLzNjMVZISHRi?=
+ =?utf-8?B?dnlocXEyUFJDUFpSckhNUDNKSUVqU3ZRd1NVemhvdWZXV0RhbDJYeGkzcExE?=
+ =?utf-8?B?dHlvbWpHOWp3U1FkZFVaMjJwQ1lxVEwxSU5rSFJWYlg0QUEyeE0vdnZtL21Q?=
+ =?utf-8?B?UHdnaDJPR0FqTnpWTnNCYjZoRy9iWlBLS3YzNll6WC9PbUVadFhGYXdMNUNh?=
+ =?utf-8?B?RHhPN2kxeG5jVWhjK0srQjJVSFYrZm1ERUtsUlNiUXNzNmhoZ0FYMHBnbTRa?=
+ =?utf-8?B?YUNCZUJWbWx2MkxidU9tc2piMHowejE0UnBuRGRObkNaelp6TGhZQ3I4OTNm?=
+ =?utf-8?B?TDdXZXJmaVVyUW53TDN4SFlGVWIreE1Kc0RiK3JTUm9JdUNra0dqcTYwRnhD?=
+ =?utf-8?B?MTNjeWdJWFVMcmF1U3NIeU5rQmU3dnJydEN2MHg1dDZWK1Bla0hJQ29Iemx2?=
+ =?utf-8?B?akl5QWt1Um9IQVFYRE5wbWF3emx6UVlVM2t4eHFiVzJJSStxdDA1RTVvdmFI?=
+ =?utf-8?B?OG9QNy9La3hZMnlxR3Q3bFhCTjBaaVlKVS9XYjFqTTVJUE1zVjNtR3ZsK2to?=
+ =?utf-8?B?bjNoK0piRVBkeE9saWVQV1hSUEM2MFk4SmJoamgzSmQ2N2t0VC9LTHZZNjF0?=
+ =?utf-8?B?SnM5akx4VndYTDZZcjFTbm5NeTBEa3MyRndHSDR2enlqYUg0NWxoTXpNSWRG?=
+ =?utf-8?B?eXRvQ3VNK0dWb3ZvajcxeGNrOHloa1lSY1B0UDdRNnJ1M1V1aTc3MHdIbjli?=
+ =?utf-8?B?OWcxVkl2enowSEQ3c1hZVFlVRnZ1eW1US2xnbGhuVFF2a2VpVXdhamhXQVRP?=
+ =?utf-8?B?bGFSV08zdEF2bHFOWmdoT3hKZDljeDgvRThpN2pwV09ZWGs5K3ZUZi9tb2J2?=
+ =?utf-8?B?eFY1aTFBdkdCOG92ak84eEhZYTd4eFFXcnMrT043VHcxU2ZtRDVQY2JlUHlD?=
+ =?utf-8?B?WTlUMk56c0kzcDNtRkNpa05sUWt1ODMvOVYwMDNjOW02WGhmbGIyZTJtbXIw?=
+ =?utf-8?B?QjNiKzY0RS9wZjZsc3VsdXpPOVdleU1YNnloZFdQOVYxdmozZ01KTERkMmtu?=
+ =?utf-8?B?aVI5bW85WHk2MWdtUXFlQmlLWkZIbUdNWTZJcWZpTW1MY1AyVU9SazAzSS9R?=
+ =?utf-8?B?K0pUa05vVXMxdm82M0NvT0JCb2YrVExBeUNwTlJrbzBwR2c0K1dMMWUxVFda?=
+ =?utf-8?B?ZDBZQjZJeHJYYkYwRWF4MjA1alRYWHF2c0NiR1ZwNTJ2d1dTK3Q3YngrRFFX?=
+ =?utf-8?B?K1drUGRCRS8wdUdTZ2dDcGRpS3BqS2N1UDkvM3J5T2JjL0NSZVBHVVpKbmVC?=
+ =?utf-8?B?RzVCcHpncHFEazc0VFcrbG9XeU1IY0ZXTnMzbmkweGs0NFVsNTJzKzZPWVlS?=
+ =?utf-8?B?aEpOTXViazZCNkg3NDk2bFZUMC96OHgvTGpGMXRlazhZanYxN3VQTGRWL29p?=
+ =?utf-8?B?SmFsQWg5WU44MVVMMzVzcFNha3FPL3VESkw1ZGNuK0VrS1ppb0Z6NXAvSng1?=
+ =?utf-8?B?UHVjZUM4MURvdldzZVp4VmV5RWtBPT0=?=
+MIME-Version: 1.0
+
+--43be7d0f238241ef968447cfa06f9261
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+2019 APCEAS @ Phuket: Sustainable Energy and Environmental Development* { t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 1=
+00%; -webkit-text-size-adjust: 100%; }
+    html { height: 100%; width: 100%; }
+
+    body { height: 100% !important; margin: 0 !important; padding: 0 !impor=
+tant; width: 100% !important; mso-line-height-rule: exactly; }
+    div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; }
+  @media only screen and (max-width:600px) {
+      .row, .row__row { display: block; }
+      .row__column, .column-filler { display: block; box-sizing: border-box=
+; float: left; }
+      .col-50 { display: block; width: 100% !important; padding-left: 0 !im=
+portant; padding-right: 0 !important; }
+      .mobile-bottom-m { margin-bottom: 40px; }
+      .cBlock--spacingLR { padding-left: 16px !important; padding-right: 16=
+px !important; }
+      .img_block { width: 100% !important; }
+    }
+  Asia-Pacific Conference on Engineering and Applied Science26th =E2=80=93 =
+28th Dec. 2019, Phuket, Thailand
+        Theme: Sustainable Energy and Environmental DevelopmentThe practice=
+ of environmental engineering dates back to the dawn of civilization. Manag=
+ement of environmental resources to protect human health and the systems th=
+at support life are part of the biggest challenges facing modern society.In=
+ recognition of the interdisciplinary nature of these challenges, APCEASpro=
+vides a platform for professionals, researchers and graduate students to di=
+scuss the future development in, but not limited to the fields of Engineeri=
+ng and Applied Sciences.=C2=A0Topics should be related but not restricted t=
+o:=EF=BB=BF=CB=99Civil Engineering=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=CB=99Computer Engineering and Technology=CB=99Chemical Engineering=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=CB=99Electrical and Electronic Engineering=CB=99Environmental Eng=
+ineering=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=CB=99Fundamental and Applied Sciences=CB=99Material Science and Engineerin=
+g=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=CB=99Mechanical Engineering=CB=99Info=
+rmation Engineering and Technology =CB=99Biological EngineeringWebsite: htt=
+p://www.apceas.org =20
+
+    You are currently subscribed to our list with the following address: fo=
+aad@calpoly.edu. If you no longer want to receive our emails, you can click=
+ unsubscribe.
+ =20
+ =20
+
+
+
+
+      Email delivery powered by =E9=9B=BB=E5=AD=90=E8=B1=B9 NewsLeopard.
+   =20
+
+
+
+
+--43be7d0f238241ef968447cfa06f9261
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>2019 APCEAS @ Phuket: Sustainable Energy and Environmental Development=
+</title><meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D=
+"viewport"><meta name=3D"x-apple-disable-message-reformatting"><!--[if !mso=
+]><!--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![en=
+dif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:Pi=
+xelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-=
+-><style>* { text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-=
+size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    html { height: 100%; width: 100%; }
+
+    body { height: 100% !important; margin: 0 !important; padding: 0 !impor=
+tant; width: 100% !important; mso-line-height-rule: exactly; }
+    div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; }
+  </style><!--[if gte mso 9]><style type=3D"text/css">li { text-indent: -1e=
+m; }
+    table td { border-collapse: collapse; }
+  </style><![endif]--><style>@media only screen and (max-width:600px) {
+      .row, .row__row { display: block; }
+      .row__column, .column-filler { display: block; box-sizing: border-box=
+; float: left; }
+      .col-50 { display: block; width: 100% !important; padding-left: 0 !im=
+portant; padding-right: 0 !important; }
+      .mobile-bottom-m { margin-bottom: 40px; }
+      .cBlock--spacingLR { padding-left: 16px !important; padding-right: 16=
+px !important; }
+      .img_block { width: 100% !important; }
+    }
+  </style></head><body class=3D"body cLayout--bgColor" style=3D"background-=
+color: #f5f5f5; margin: 0; width: 100%;"><table align=3D"center" width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"center" width=3D"100%" style=3D"padding-left:10px;padding-right:10px;pa=
+dding-top:50px;padding-bottom:50px" bgcolor=3D"#f5f5f5"><!--[if !mso]><!---=
+-><div style=3D"margin:0 auto;width:100%;max-width:640px;border:"><!-- <![e=
+ndif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin=
+:0 auto;width:100%;max-width:640px;border:"><tr><td><![endif]--><table bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%=
+"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]=
+><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![end=
+if]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0=
+ auto;width:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D=
+"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-l=
+eft:32px;padding-right:32px;padding-top:10px;padding-bottom:0px"><table ali=
+gn=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0"><tbody><tr><td align=3D"center" valign=3D"top" width=3D"100%" style=3D"p=
+adding-top:0px;padding-bottom:0px"><a href=3D"https://edm.mail08.mg7.newsle=
+opard.com/t/c?l=3D4028d9a06c855d5f016c88bd0c37003a&amp;s=3D0&amp;y1=3D0&amp=
+;y2=3D4028d9a06c855d5f016c88bd0c37003a&amp;y3=3Df5dca31e4d456d7531d0020c6dd=
+1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"padding:0=
+px;text-decoration:none;display:inline-block"><img border=3D"0" width=3D"57=
+6" src=3D"https://s3.amazonaws.com/prod-newsleopard-upload-img/40283a666ae3=
+7d89016af889e284020a/2019-08-13-02-11-20-ab946c397acdb43b0e982b07e02f0b1.jp=
+g" style=3D"display:block;max-width:100%"></a></td></tr></tbody></table></t=
+d></tr></tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><!--=
+[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></table><table bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"10=
+0%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !ms=
+o]><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![e=
+ndif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin=
+:0 auto;width:640px"><tr><td><![endif]--><table align=3D"center" width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"paddin=
+g-left:32px;padding-right:32px;padding-top:24px;padding-bottom:0px"><table =
+width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>=
+<td align=3D"center" style=3D"padding-top:4px;padding-bottom:4px"><h1 style=
+=3D"color:#333333;font-size:31px;font-weight:bold;font-family:'PingFang TC'=
+,'=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helv=
+etica Neue',Helvetica,Arial,sans-serif;padding:0;margin:0;line-height:1.4;t=
+ext-decoration:none;display:inline-block"><span class=3D"a__text" style=3D"=
+color:#333333;text-decoration:none;font-family:'PingFang TC','=E5=BE=AE=E8=
+=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',He=
+lvetica,Arial,sans-serif">Asia-Pacific Conference on Engineering and Applie=
+d Science</span></h1></td></tr></tbody></table><table align=3D"center" widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td =
+align=3D"center" valign=3D"top" width=3D"100%" style=3D"font-family:'PingFa=
+ng TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei'=
+,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:25px;font-weight:nor=
+mal;color:#0e638a;line-height:1.4;margin:0;letter-spacing:1px;padding-top:4=
+px;padding-bottom:4px">26th =E2=80=93 28th Dec. 2019, Phuket, Thailand
+        </td></tr></tbody></table></td></tr></tbody></table><!--[if mso | I=
+E]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]-=
+-></td></tr></tbody></table><table border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" vali=
+gn=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;=
+width:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table role=
+=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D=
+"center" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif=
+]--><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%=
+" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padding=
+-top:24px;padding-bottom:0px"><table align=3D"center" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top" wi=
+dth=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=
+=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Aria=
+l,sans-serif;font-size:16px;font-weight:normal;color:#666666;line-height:1.=
+5;margin:0"><div style=3D"text-align: center;"><strong style=3D"font-size: =
+24px;">Theme: Sustainable Energy and </strong></div><div style=3D"text-alig=
+n: center;"><strong style=3D"font-size: 24px;">Environmental Development</s=
+trong></div><div><span style=3D"font-size: 18px;">The practice of environme=
+ntal engineering dates back to the dawn of civilization. Management of envi=
+ronmental resources to protect human health and the systems that support li=
+fe are part of the biggest challenges facing modern society.</span></div></=
+td></tr></tbody></table></td></tr></tbody></table><!--[if mso | IE]></td></=
+tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></t=
+r></tbody></table><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top"=
+ width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:100%=
+;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table role=3D"present=
+ation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" wi=
+dth=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table =
+align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=
+=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padding-top:24px=
+;padding-bottom:24px"><table align=3D"center" width=3D"100%" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" valign=
+=3D"top" width=3D"100%" style=3D"padding-top:0px;padding-bottom:0px"><img b=
+order=3D"0" width=3D"576" src=3D"https://s3.amazonaws.com/prod-newsleopard-=
+upload-img/40283a666ae37d89016af889e284020a/2019-08-13-02-14-43-fa08a9c0b68=
+4d142c5ac84b66c0ac20.jpg" style=3D"display:block;max-width:100%"></td></tr>=
+</tbody></table></td></tr></tbody></table><!--[if mso | IE]></td></tr></tab=
+le><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbod=
+y></table><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"=
+center" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" width=
+=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:100%;max-w=
+idth:640px"><!-- <![endif]--><!--[if mso | IE]><table role=3D"presentation"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D=
+"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table align=
+=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ff=
+ffff" style=3D"padding-left:32px;padding-right:32px;padding-top:0px;padding=
+-bottom:3px"><table align=3D"center" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top" width=3D"100%" styl=
+e=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=
+=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;font-=
+size:16px;font-weight:normal;color:#666666;line-height:1.5;margin:0"><div><=
+span style=3D"font-size: 18px;">In recognition of the interdisciplinary nat=
+ure of these challenges, </span><strong style=3D"font-size: 18px;">APCEAS</=
+strong><span style=3D"font-size: 18px;">provides a platform for professiona=
+ls, researchers and graduate students to discuss the future development in,=
+ but not limited to the fields of Engineering and Applied Sciences.&nbsp;</=
+span></div></td></tr></tbody></table></td></tr></tbody></table><!--[if mso =
+| IE]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endi=
+f]--></td></tr></tbody></table><table border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" v=
+align=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 au=
+to;width:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table ro=
+le=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![en=
+dif]--><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"1=
+00%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padd=
+ing-top:20px;padding-bottom:10px"><table align=3D"center" width=3D"100%" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"cent=
+er" valign=3D"top" width=3D"100%" style=3D"padding-top:0px;padding-bottom:0=
+px"><img border=3D"0" width=3D"576" src=3D"https://s3.amazonaws.com/prod-ne=
+wsleopard-upload-img/40283a666ae37d89016af889e284020a/2019-08-13-02-16-40-a=
+da348dabac802d9d8b7dd2b28c0c4e.jpg" style=3D"display:block;max-width:100%">=
+</td></tr></tbody></table></td></tr></tbody></table><!--[if mso | IE]></td>=
+</tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td><=
+/tr></tbody></table><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ align=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"to=
+p" width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:10=
+0%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table role=3D"prese=
+ntation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" =
+width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--><tabl=
+e align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=
+=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padding-top:10px=
+;padding-bottom:0px"><table align=3D"center" width=3D"100%" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top" width=3D"10=
+0%" style=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=
+=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-se=
+rif;font-size:16px;font-weight:normal;color:#666666;line-height:1.5;margin:=
+0"><div><span style=3D"font-size: 24px;">Topics should be related but not r=
+estricted to:=EF=BB=BF</span></div><div><span style=3D"font-size: 18px;">=
+=CB=99Civil Engineering&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>=
+<div><span style=3D"font-size: 18px;">=CB=99Computer Engineering and Techno=
+logy</span></div><div><span style=3D"font-size: 18px;">=CB=99Chemical Engin=
+eering&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;</span></div><div><span style=3D"font-size: 18px;">=CB=
+=99Electrical and Electronic Engineering</span></div><div><span style=3D"fo=
+nt-size: 18px;">=CB=99Environmental Engineering&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div><span style=3D"font=
+-size: 18px;">=CB=99Fundamental and Applied Sciences</span></div><div><span=
+ style=3D"font-size: 18px;">=CB=99Material Science and Engineering&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div><span style=3D"font-size: 18px=
+;">=CB=99Mechanical Engineering</span></div><div><span style=3D"font-size: =
+18px;">=CB=99Information Engineering and Technology </span></div><div><span=
+ style=3D"font-size: 18px;">=CB=99Biological Engineering</span></div><div s=
+tyle=3D"text-align: center;">Website: <a href=3D"https://edm.mail08.mg7.new=
+sleopard.com/t/c?l=3D4028d9a06c855d5f016c88bd0c37003a&amp;s=3D1&amp;y1=3D0&=
+amp;y2=3D4028d9a06c855d5f016c88bd0c37003a&amp;y3=3Df5dca31e4d456d7531d0020c=
+6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"color:=
+ rgb(27, 166, 225); text-decoration: none; display: inline-block;"><span cl=
+ass=3D"a__text" style=3D"text-decoration: none; font-family: 'PingFang TC',=
+ =E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94, 'Microsoft JhengHei', 'Helv=
+etica Neue', Helvetica, Arial, sans-serif;">http://www.apceas.org</span></a=
+></div></td></tr></tbody></table></td></tr></tbody></table><!--[if mso | IE=
+]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--=
+></td></tr></tbody></table><table border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" valig=
+n=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;w=
+idth:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table role=
+=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D=
+"center" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif=
+]--><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%=
+" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padding=
+-top:0px;padding-bottom:24px"><table align=3D"center" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" =
+valign=3D"top" width=3D"100%" style=3D"padding-top:0px;padding-bottom:0px">=
+<img border=3D"0" width=3D"576" src=3D"https://s3.amazonaws.com/prod-newsle=
+opard-upload-img/40283a666ae37d89016af889e284020a/2019-08-13-02-21-19-2bfdb=
+1bf0be2da7c1a3b96158567242.jpg" style=3D"display:block;max-width:100%"></td=
+></tr></tbody></table></td></tr></tbody></table><!--[if mso | IE]></td></tr=
+></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr>=
+</tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !ms=
+o]><!----></div><!-- <![endif]--></td></tr></tbody></table><table align=3D"=
+center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"> <t=
+body> <tr>
+  <td align=3D"center" style=3D"font-size: 13px;font-size:13px;font-family:=
+ 'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft J=
+hengHei','Helvetica Neue',Helvetica,Arial,sans-serif;color:#666;border-top:=
+1px solid #ddd;padding-top:16px;text-align:center;line-height:1.5" valign=
+=3D"middle" width=3D"100%">
+    You are currently subscribed to our list with the following address: <s=
+pan style=3D"color: #666;font-weight: bold">foaad@calpoly.edu</span>. If yo=
+u no longer want to receive our emails, you can click <a href=3D"/" style=
+=3D"color: #3f7dbd;text-decoration:none;display: inline-block;"><span class=
+=3D"a__text" style=3D"text-decoration: none;color: #3f7dbd;"><a href=3D"htt=
+ps://app.newsleopard.com/assets/page/unsubscribe-page-en.html?e=3Dunsubscri=
+be&amp;y1=3D0&amp;y2=3D4028d9a06c855d5f016c88bd0c37003a&amp;y3=3Df5dca31e4d=
+456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0&amp;appHost=3Dhttps:=
+//edm.mail08.mg7.newsleopard.com">unsubscribe</a></span></a>.
+  </td>
+</tr> </tbody> </table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%">
+  <tbody>
+  <tr>
+    <td align=3D"center" style=3D"font-size: 13px;font-size:13px;font-famil=
+y: 'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft=
+ JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;color:#666;padding-t=
+op:4px;padding-bottom:24px;text-align:center;line-height:1.5" valign=3D"mid=
+dle" width=3D"100%">
+      Email delivery powered by <a href=3D"https://newsleopard.com/?utm_sou=
+rce=3Dedm&amp;utm_medium=3Demail&amp;utm_campaign=3Dfooter&amp;utm_content=
+=3Dpowerby" style=3D"color: #3f7dbd;text-decoration:none;"><span class=3D"a=
+__text" style=3D"text-decoration: none;color: #3f7dbd;">=E9=9B=BB=E5=AD=90=
+=E8=B1=B9 NewsLeopard</span></a>.
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body></html><img src=3D"https://edm.mail08.mg7.newsleopard.com/t/s?e=3Dop=
+en&amp;y1=3D0&amp;y2=3D4028d9a06c855d5f016c88bd0c37003a&amp;y3=3Df5dca31e4d=
+456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" alt=3D"">=
+
+--43be7d0f238241ef968447cfa06f9261--

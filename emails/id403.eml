@@ -1,0 +1,474 @@
+Received: from SN6PR08MB4991.namprd08.prod.outlook.com (2603:10b6:a03:1e0::37)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BY5PR03CA0027.NAMPRD03.PROD.OUTLOOK.COM; Tue, 16 Jul 2019 06:53:18 +0000
+Received: from BYAPR08CA0021.namprd08.prod.outlook.com (2603:10b6:a03:100::34)
+ by SN6PR08MB4991.namprd08.prod.outlook.com (2603:10b6:805:6e::28) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2073.14; Tue, 16 Jul
+ 2019 06:53:17 +0000
+Received: from SN1NAM04FT004.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::206) by BYAPR08CA0021.outlook.office365.com
+ (2603:10b6:a03:100::34) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2052.18 via Frontend
+ Transport; Tue, 16 Jul 2019 06:53:16 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.166.66)
+ smtp.mailfrom=gmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=gmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.166.66 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.166.66; helo=mail-io1-f66.google.com;
+Received: from mail-io1-f66.google.com (209.85.166.66) by
+ SN1NAM04FT004.mail.protection.outlook.com (10.152.88.171) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2052.18 via Frontend Transport; Tue, 16 Jul 2019 06:53:16 +0000
+Received: by mail-io1-f66.google.com with SMTP id z3so38275754iog.0
+        for <foaad@calpoly.edu>; Mon, 15 Jul 2019 23:53:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=zknkPf264PDCH6B86QNx+L1j+eMMNlJc/T3BJ1B7XWo=;
+        b=OnDRUbwv/onUs1Mw6UjrMJmYu0f2MAZwE6oiE9WkVe9XuuZltVoCgVYnCJvCHkZiOV
+         RtkYW0HodiXtsb9jP0SNYovi4YvTHqS+G/nZm3tx8GtCyxSoPzUUNo8GJvxHYH78DdYZ
+         geadl9FvScT5w8M7WMBTyEnD8yJGoXESQMfzQxwGK6CyShBUAD8u84hm1sUHEWCTKtZ0
+         6/7TPrD1VVqEorPBcuZN/neR7DBsVjKUf/S4fPP+Oh51toW8n5GT5Ugf9gGBqa4BXJzd
+         Hkq3MEokblT2gBcPpzK6lTIySpB2JXPzNSp54jJuPmLio8vZzEH+X9GtiHHyf6csuJ3K
+         TZpA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=zknkPf264PDCH6B86QNx+L1j+eMMNlJc/T3BJ1B7XWo=;
+        b=rHnNv43v7Hv03bQ4W6uHOlP8MjrHQjCgLBahJe9xp5WJFyGCSitHiZUEHSITzF2TgN
+         wtFC+/rgkKiwkBooNgWy7EKValCqRt+ErIQMqPdrn5Il5iogn3pJT+1fY+n4ZvCI+GK/
+         pD+/+CfDgoEG/9Dp+yYkun/KItK0BpH95D/U++b/bHUm3Ch9j+gn76YbgQz5dlrSPQz2
+         xRsmQ4AKj8mwk6zu+1MtP89W0dNYIghxfb+QgrDXLKFQRIXw9qnuwXI3JWydPyDo9oyV
+         9lYaZeQ9vM7Pqh/3BaKNNQN4E1f9SXrmYRSh0BqFrHVnfg0+GnN79K9GJsb5/GE+vEuQ
+         ecSw==
+X-Gm-Message-State: APjAAAVe87E1ybB09gjFJd9xb+OMsClUDvp6rvHUWux6cnHxsOgtzDqf
+	M2gznjZ5KDTh+fS2nmhoe9mumaaAHjRtOxyybO8=
+X-Google-Smtp-Source: APXvYqwTs9Q62VQs2n1ie7QWGwuJUEvbD41eReis0y65fvljEkdljtVNMRUMqD6b2N4uj/Ri1rSmMq9jBUXDB3bYIeQ=
+X-Received: by 2002:a6b:c90c:: with SMTP id z12mr27805568iof.11.1563259995823;
+ Mon, 15 Jul 2019 23:53:15 -0700 (PDT)
+From: Ruth Franklin <rfranklin.ieee@gmail.com>
+Date: Mon, 15 Jul 2019 23:53:03 -0700
+Message-ID: <CAPT1ZSRDNPqQuP5RzC0Gh=stzGNqyXL82upw5rJBLNuRcJxe-w@mail.gmail.com>
+Subject: IEEE Event 17 July - Alternative Computing with Memristors
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000be2e60058dc6d4c1"
+BCC: <foaad@calpoly.edu>
+Return-Path: rfranklin.ieee@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 16 Jul 2019 06:53:16.6915
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ fce5fcac-cce5-49f7-1cb4-08d709ba47a7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132077335966945779;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.166.66;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(199004)(189003)(517774005)(498394004)(440504004)(606006)(733005)(2160300002)(8676002)(8576002)(246002)(966005)(33964004)(305945005)(7596002)(1096003)(7636002)(76482006)(476003)(126002)(881003)(61266001)(336012)(73392003)(21004)(6306002)(236005)(75640400001)(4006050)(59536001)(5660300002)(71190400001)(14444005)(42186006)(16586007)(82202003)(6666004)(356004)(5070765005)(86362001)(26005)(95326003)(55446002)(486006)(106002)(109986005)(124970200002)(15660700003)(71626007);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4991;H:mail-io1-f66.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-io1-f66.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT004.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: fce5fcac-cce5-49f7-1cb4-08d709ba47a7
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:SN6PR08MB4991;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4991:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 Jul 2019 06:53:16.6595
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: fce5fcac-cce5-49f7-1cb4-08d709ba47a7
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4991
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.0037274
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2073.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506356)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TERVbVV1aFppWHlOWEVnSmVUQWs1QUg4QzgvRVR3Uy9wN2FkWUZuUHJTWno5?=
+ =?utf-8?B?eUVIUUV5RVNzc21RenNld3hyQkFSSUpheE1pYzA2RlV5S2taRGl5cDZYdXhY?=
+ =?utf-8?B?L0VhVDhkWmZPdnZTME5IYXhDN21NSzRjeWFjZ0xZaEV4SjczeWFjUFhURU5G?=
+ =?utf-8?B?b2lpWUhvbmhZUWZ5NlhwR2FHS2pOeThXZlUrNURFQVhISXR6a0JjcEFkVTli?=
+ =?utf-8?B?KzRTMWlud2twTEcxeVNtZEFvTlNhMVhldk9acy9QdEQ0TC8rdnlNTHROdWxj?=
+ =?utf-8?B?K0pFNEZkS0Fzb0dyVm5qVWsxbUZzVXpXSGRkaTV3cUgvaG0yQ0x5dS8rTEc1?=
+ =?utf-8?B?NVE2cUsyUFgxbzYyQlduTlFaZzVveGtGWDVCMFRIR2ZCN2UxYVIvNDBCSHpy?=
+ =?utf-8?B?TGVaQjBEcmV6OHp0Q1JLK24vUXpYcmd0RTVzR25lL2RqMmZ6MTJ3Z0Q0L0sw?=
+ =?utf-8?B?QWt1MnpJL1RCMUVkUWdiWW90SW5RUVVaSzRxQ2drQXIzK1JzWHl1VHhFQXF4?=
+ =?utf-8?B?QTZ0eFQ0NWpibjdXZSs4NFNpcHRjOWFuNWt0MVhiN0FhVi93SEhrbGsxYlBU?=
+ =?utf-8?B?UkcvZjJPVVJxR3lBcGpmR2xQZW5GTVlXK3VXbzhpakNmYWZRS1g2R3M1UnFo?=
+ =?utf-8?B?VjlkVUxrM3hnSWNtYi9iZDdJMTlTM2NSRzRaOWpVbHg2d1AyWWVDU2ZHcmk0?=
+ =?utf-8?B?dWdFaUR2YjFDcTJKcHJZWkFQakRiV3lBOHpIOEorYlBIbEV3andPOGRIN2ND?=
+ =?utf-8?B?TzVYUVM0YUMzbm0vTW1XQTdvUHJRbVJuTEQvMzVvS05lZDlhMWtHRkM3SGxu?=
+ =?utf-8?B?SFlYRi9JWWRNNjV1WjJwdVdLSlArSFcwTjJBRGw3d3JFTkNHZDdqUExLQVJ0?=
+ =?utf-8?B?dCtvTy9uRzM4Rm9uejVFVGJPRzN5MktUanEvNkVIUHJSQ2Q5V0RFaUY4VXV0?=
+ =?utf-8?B?cm5QU3dLSVRYcDhXcUY0VjJXM2pSQXVEVHlmTVNaNmJCQWI3SnV3bG0zbnlP?=
+ =?utf-8?B?cWc2ZzBDaVc5R2lzNWxidDQ5WHJNT2lEakF2WlRKaWJpOE4yYVlsckt2Mm9Q?=
+ =?utf-8?B?T3FJamRieDFpc1hnYTJnSFFmYXgybjJ6RE1xTUNibkZsRHNDOVhvUWxSNUhU?=
+ =?utf-8?B?Qng2dUtvaVpUQmsrQWxFSlBUeXgzOEl1aHFzdEp2OEVEMERCaDd3MGdSOUds?=
+ =?utf-8?B?L2hIaGc2ek1SemplZjF3R0MxSFlIV3BUOThOWldYbzVpQW9TeU05WDNpR2NO?=
+ =?utf-8?B?UWV4SXBzbUYrTXg0MXlIb3U1bkVIZ21CZzBDZDl0Rk01RnVndGM0VzFVTnFs?=
+ =?utf-8?Q?33cczaklVNhq8=3D?=
+MIME-Version: 1.0
+
+--000000000000be2e60058dc6d4c1
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+There is still time to register for the free July 17th IEEE Central Coast
+Event, *Alternative Computing with Memristors *presented by Professor
+Dmitri Strukov Ph.D. at the *Goleta Valley Library. *
+
+The memristor (memory resistor), the long envisioned fourth fundamental
+circuit element, makes  neuromorphic computing a reality. Please see below
+for Details.
+
+Guests are welcome. Please register for the event below.
+
+Best regards,
+
+Ruth Franklin, IEEE Central Coast Chair
+
+*REGISTER for EVENT* - https://events.vtools.ieee.org/event/register/200306
+
+
+*IEEE Central Coast Event =E2=80=93 17 July 2019 @ 6PM*
+*Professor Dmitri Strukov **Ph. D. =E2=80=93 UCSB ECE**: **Alternative Comp=
+uting
+with Memristors*
+
+*FREE EVENT*
+
+*Location =E2=80=93 **Goleta Valley Library*
+
+500 N. Fairview Avenue, Goleta, CA 93117
+[image: image.png]
+
+6:00 PM =E2=80=93 Complimentary Buffet
+
+6:25 PM =E2=80=93 Central Coast Status
+
+6:30 PM =E2=80=93 Professor Dmitri Strukov=E2=80=99s Presentation
+
+*REGISTER for EVENT* - https://events.vtools.ieee.org/event/register/200306
+
+*Alternative Computing with Memristors*
+
+By now, there have been many demonstrations of resistive switching
+(=E2=80=9Cmemristive=E2=80=9D) devices based on organic, chalcogenide, tran=
+sition
+metal-oxide and silicon materials and involving different physical
+switching mechanisms, such as phase-change transitions and modulation of
+the ionic concentration profiles by electrical and/or thermal forces. The
+conductance of properly engineered memristors can be continuously tuned
+with relatively large electrical bias, and retained, effectively
+indefinitely, when small stress is applied. Such analog nonvolatile memory
+functionality and extremely high device density achieved by lateral scaling
+and/or monolithical vertical integration enable many new exciting
+applications of memristors in neuromorphic and alternative types of
+computing.
+
+In my talk, I will review several such applications based on metal-oxide
+memristors which were a recent focus of my group. This includes stateful
+material implication logic, which was originally suggested by Hewlett
+Packard Laboratories group. In our work, we showed that 3D version of this
+logic allows resolving Feynman grand challenge of implementing 8-bit adder
+in a volume smaller than 50-nm cube. I will also review our experimental
+work on memristor-based security primitives, in which we utilized device
+variations and their nonlinear I-Vs to demonstrate functionality and
+physical performance superior to those of conventional approaches. Finally,
+I will discuss applications of memristors in neuromorphic computing,
+outlining some of my group=E2=80=99s recent experimental work on mixed-sign=
+al
+firing-rate neural networks, which have a potential to greatly exceed
+conventional implementations in energy efficiency, speed, and density, and
+spiking neural networks, that allow for compact implementation of training
+algorithms in the hardware.
+[image: image.png]
+
+*Dmitri B. Strukov* received the M.S. degree in applied physics and
+mathematics from the Moscow Institute of Physics and Technology, Moscow
+region, Russia, in 1999, and the Ph.D. degree in electrical engineering
+from Stony Brook University, Stony Brook, NY, USA, in 2006.
+
+He is currently a Professor of Electrical and Computer Engineering at
+University of California at Santa Barbara. Prior to joining UCSB Dmitri
+worked as a postdoctoral associate, first at Stony Brook University (Aug.
+2006 =E2=80=93 Dec. 2007), and then at Hewlett Packard Laboratories (Jan. 2=
+007 =E2=80=93
+Jun. 2009) on various aspects of nanoelectronic systems. His research
+broadly concerns different aspects of computation, in particular addressing
+questions on how to efficiently perform computation on various levels of
+abstraction. His current research focus is on hardware implementations of
+artificial neural networks with emerging memory devices.
+
+--000000000000be2e60058dc6d4c1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><p class=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox=
+-02895cdb7c-gmail-ox-f5fee7922a-gmail-m686837718590295891gmail-ox-5c131db74=
+8-gmail-m-934804190088159847m-3273299141206711766gmail-m9009095543490243672=
+gmail-m-1262130769561452635gmail-m-5353580065159107123gmail-m-7685611329527=
+244388gmail-ox-2fa371cfcb-msonormal" style=3D"font-family:OpenSans,&quot;He=
+lvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0in 0in 2pt;color:rgb(=
+0,0,0);font-size:13px;text-align:justify"><font face=3D"verdana, sans-serif=
+">Hello,</font></p><p class=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmai=
+l-ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-m686837718590295891gmail-ox-5c131=
+db748-gmail-m-934804190088159847m-3273299141206711766gmail-m900909554349024=
+3672gmail-m-1262130769561452635gmail-m-5353580065159107123gmail-m-768561132=
+9527244388gmail-ox-2fa371cfcb-msonormal" style=3D"font-family:OpenSans,&quo=
+t;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0px 0in 1em;color:=
+rgb(0,0,0);font-size:13px;text-align:justify"><font face=3D"verdana, sans-s=
+erif">There is still time to register for the free July 17th IEEE Central C=
+oast Event,&nbsp;<b><i>Alternative Computing with Memristors&nbsp;</i></b>p=
+resented by&nbsp;Professor Dmitri Strukov Ph.D.<b>&nbsp;</b>at the<b>&nbsp;=
+</b><b style=3D"color:rgb(192,0,0)">Goleta Valley Library.&nbsp;</b></font>=
+</p><p class=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c=
+-gmail-ox-f5fee7922a-gmail-m686837718590295891gmail-ox-5c131db748-gmail-m-9=
+34804190088159847m-3273299141206711766gmail-m9009095543490243672gmail-m-126=
+2130769561452635gmail-m-5353580065159107123gmail-m-7685611329527244388gmail=
+-ox-2fa371cfcb-msonormal" style=3D"font-family:OpenSans,&quot;Helvetica Neu=
+e&quot;,Helvetica,Arial,sans-serif;margin:0px 0in 1em;color:rgb(0,0,0);font=
+-size:13px;text-align:justify"><font face=3D"verdana, sans-serif"><font col=
+or=3D"#000000">The memristor (memory resistor), the long envisioned&nbsp;</=
+font><span style=3D"color:rgb(17,17,17)">fourth fundamental circuit element=
+, makes&nbsp;&nbsp;</span>neuromorphic computing a reality.&nbsp;</font><sp=
+an style=3D"font-family:verdana,sans-serif">Please see below for Details.</=
+span><b style=3D"font-family:verdana,sans-serif"><i>&nbsp;</i></b></p><p cl=
+ass=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox=
+-f5fee7922a-gmail-m686837718590295891gmail-ox-5c131db748-gmail-m-9348041900=
+88159847m-3273299141206711766gmail-m9009095543490243672gmail-m-126213076956=
+1452635gmail-m-5353580065159107123gmail-m-7685611329527244388gmail-ox-2fa37=
+1cfcb-msonormal" style=3D"font-family:OpenSans,&quot;Helvetica Neue&quot;,H=
+elvetica,Arial,sans-serif;margin:0px 0in 1em;color:rgb(0,0,0);font-size:13p=
+x;text-align:justify"><span style=3D"font-family:verdana,sans-serif">Guests=
+ are welcome.&nbsp;Please register for the event below.</span></p><p class=
+=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5=
+fee7922a-gmail-m686837718590295891gmail-ox-5c131db748-gmail-m-9348041900881=
+59847m-3273299141206711766gmail-m9009095543490243672gmail-m-126213076956145=
+2635gmail-m-5353580065159107123gmail-m-7685611329527244388gmail-ox-2fa371cf=
+cb-msonormal" style=3D"font-family:OpenSans,&quot;Helvetica Neue&quot;,Helv=
+etica,Arial,sans-serif;margin:0in 0in 2pt;color:rgb(0,0,0);font-size:13px;t=
+ext-align:justify"><font face=3D"verdana, sans-serif">Best regards,&nbsp;</=
+font></p><p class=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895=
+cdb7c-gmail-ox-f5fee7922a-MsoNormal" style=3D"font-family:OpenSans,&quot;He=
+lvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0in 0in 2pt;color:rgb(=
+0,0,0);font-size:13px;text-align:justify"></p><p class=3D"gmail-ox-bc7507e8=
+ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-m68683=
+7718590295891gmail-ox-5c131db748-gmail-m-934804190088159847m-32732991412067=
+11766gmail-m9009095543490243672gmail-m-1262130769561452635gmail-m-535358006=
+5159107123gmail-m-7685611329527244388gmail-ox-2fa371cfcb-msonormal" style=
+=3D"font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-se=
+rif;margin:0in 0in 8pt;color:rgb(0,0,0);font-size:13px"><font face=3D"verda=
+na, sans-serif">Ruth Franklin,&nbsp;IEEE Central Coast Chair</font><span st=
+yle=3D"font-family:Arial,sans-serif;font-size:12pt"></span></p><p class=3D"=
+gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7=
+922a-gmail-m686837718590295891gmail-ox-5c131db748-gmail-m-93480419008815984=
+7m-3273299141206711766gmail-m9009095543490243672gmail-m-1262130769561452635=
+gmail-m-5353580065159107123gmail-m-7685611329527244388gmail-ox-2fa371cfcb-m=
+sonormal" style=3D"font-family:&quot;Times New Roman&quot;,serif;margin:0in=
+ 0in 8pt;color:rgb(0,0,0);font-size:12pt"><b style=3D"font-family:Calibri,s=
+ans-serif;font-size:14.6667px"><span style=3D"font-size:14pt;color:rgb(192,=
+0,0)">REGISTER for EVENT</span></b><span style=3D"font-family:Calibri,sans-=
+serif;font-size:14.6667px">&nbsp;-&nbsp;</span><a href=3D"https://events.vt=
+ools.ieee.org/event/register/200306" target=3D"_blank" rel=3D"noopener" sty=
+le=3D"word-break:break-word;color:rgb(0,125,188);font-size:14.6667px">https=
+://events.vtools.ieee.org/event/register/200306</a>&nbsp;&nbsp;<span style=
+=3D"font-family:Verdana,sans-serif"><br></span></p><p class=3D"gmail-ox-bc7=
+507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-MsoNorm=
+al" style=3D"font-family:Calibri,sans-serif;margin:0in 0in 2pt;color:rgb(0,=
+0,0);text-align:justify;font-size:11pt"><b><span style=3D"font-size:16pt">I=
+EEE Central Coast Event =E2=80=93 17 July 2019 @ 6PM</span></b></p><h5 styl=
+e=3D"font-size:11.62px;margin:0in 0in 10.5pt;line-height:12.4334px;font-fam=
+ily:&quot;Calibri Light&quot;,sans-serif;color:rgb(47,84,150);font-weight:n=
+ormal"><font size=3D"4"><span class=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7=
+d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-speakername"><b><span sty=
+le=3D"line-height:19.26px;font-family:Verdana,sans-serif;color:black">Profe=
+ssor Dmitri Strukov&nbsp;</span></b></span><b><span style=3D"line-height:19=
+.26px;font-family:Verdana,sans-serif;color:black">Ph. D. =E2=80=93 UCSB ECE=
+</span></b><b><span style=3D"line-height:19.26px;font-family:Verdana,sans-s=
+erif">:&nbsp;</span></b><b><span style=3D"font-family:Verdana,sans-serif;co=
+lor:rgb(192,0,0)">Alternative Computing with Memristors</span></b></font></=
+h5><table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"borde=
+r:0px none;line-height:normal;border-collapse:collapse;color:rgb(0,0,0);fon=
+t-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;fon=
+t-size:13px"><tbody><tr><td style=3D"padding:0px"><div><p class=3D"gmail-ox=
+-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gma=
+il-MsoNoSpacing" style=3D"font-family:Calibri,sans-serif;margin:0in 0in 8pt=
+;line-height:15.6933px;font-size:11pt"><font size=3D"4"><span id=3D"gmail-o=
+x-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gm=
+ail-_x0000_t75"></span><span id=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-=
+gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-Picture_x0020_6" style=3D"wid=
+th:173.25pt;height:102.75pt"></span></font></p></div></td></tr></tbody></ta=
+ble><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Ne=
+ue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><span style=3D"c=
+olor:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,A=
+rial,sans-serif;font-size:13px"></span><span style=3D"color:rgb(0,0,0);font=
+-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font=
+-size:13px"></span><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&qu=
+ot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><=
+span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&qu=
+ot;,Helvetica,Arial,sans-serif;font-size:13px"></span><span style=3D"color:=
+rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,=
+sans-serif;font-size:13px"></span><span style=3D"color:rgb(0,0,0);font-fami=
+ly:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size=
+:13px"></span><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;He=
+lvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><span =
+style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,H=
+elvetica,Arial,sans-serif;font-size:13px"></span><span style=3D"color:rgb(0=
+,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-=
+serif;font-size:13px"></span><span style=3D"color:rgb(0,0,0);font-family:Op=
+enSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px=
+"></span><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helveti=
+ca Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><span style=
+=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvet=
+ica,Arial,sans-serif;font-size:13px"></span><span style=3D"color:rgb(0,0,0)=
+;font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif=
+;font-size:13px"></span><span style=3D"color:rgb(0,0,0);font-family:OpenSan=
+s,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></s=
+pan><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Ne=
+ue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><b style=3D"colo=
+r:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Aria=
+l,sans-serif;font-size:13px">FREE EVENT</b><span style=3D"color:rgb(0,0,0);=
+font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;=
+font-size:13px"></span><span style=3D"color:rgb(0,0,0);font-family:OpenSans=
+,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></sp=
+an><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neu=
+e&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><span style=3D"co=
+lor:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Ar=
+ial,sans-serif;font-size:13px"></span><span style=3D"color:rgb(0,0,0);font-=
+family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-=
+size:13px"></span><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quo=
+t;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><s=
+pan style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quo=
+t;,Helvetica,Arial,sans-serif;font-size:13px"></span><span style=3D"color:r=
+gb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,s=
+ans-serif;font-size:13px"></span><span style=3D"color:rgb(0,0,0);font-famil=
+y:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:=
+13px"></span><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Hel=
+vetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><span s=
+tyle=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,He=
+lvetica,Arial,sans-serif;font-size:13px"></span><span style=3D"color:rgb(0,=
+0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-s=
+erif;font-size:13px"></span><span style=3D"color:rgb(0,0,0);font-family:Ope=
+nSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"=
+></span><span style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetic=
+a Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"></span><span style=
+=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvet=
+ica,Arial,sans-serif;font-size:13px"></span><p style=3D"font-family:OpenSan=
+s,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0px 0px 1em;=
+color:rgb(0,0,0);font-size:13px"></p><p class=3D"gmail-ox-bc7507e8ed-gmail-=
+ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-style1" style=
+=3D"font-family:&quot;Times New Roman&quot;,serif;margin:0in 0in 2pt;color:=
+rgb(0,0,0);font-size:12pt"><b><span style=3D"font-family:Arial,sans-serif">=
+Location =E2=80=93&nbsp;</span></b><b><span style=3D"font-size:14pt;font-fa=
+mily:Arial,sans-serif;color:rgb(192,0,0)">Goleta Valley Library</span></b><=
+b><span style=3D"font-family:Arial,sans-serif"></span></b></p><p class=3D"g=
+mail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee79=
+22a-gmail-style1" style=3D"font-family:&quot;Times New Roman&quot;,serif;ma=
+rgin:0in 0in 2pt;color:rgb(0,0,0);font-size:12pt"><span style=3D"font-famil=
+y:Calibri,sans-serif">500 N. Fairview Avenue, Goleta, CA 93117</span><span =
+style=3D"font-family:Calibri,sans-serif"></span></p><div style=3D"color:rgb=
+(0,0,0);font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,san=
+s-serif;font-size:13px"><img src=3D"https://myemail.cox.net/appsuite/api/im=
+age/mail/picture?folder=3Ddefault0%2FINBOX&amp;id=3D116122&amp;uid=3Dii_jxr=
+1iojz0" id=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-g=
+mail-ii_jxr1iojz0" alt=3D"image.png" width=3D"231" height=3D"137" style=3D"=
+max-width: 10000px; vertical-align: middle; width: 231px; height: 137px;">&=
+nbsp;&nbsp;&nbsp;&nbsp;<br></div><p class=3D"gmail-ox-bc7507e8ed-gmail-ox-4=
+4883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-MsoNormal" style=3D"font-=
+family:Calibri,sans-serif;margin:0in 0in 0.0001pt;color:rgb(0,0,0);line-hei=
+ght:15.6933px;font-size:11pt"><span style=3D"font-size:12pt;line-height:17.=
+12px">6:00 PM =E2=80=93 Complimentary Buffet</span></p><p class=3D"gmail-ox=
+-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-Mso=
+Normal" style=3D"font-family:Calibri,sans-serif;margin:0in 0in 0.0001pt;col=
+or:rgb(0,0,0);line-height:15.6933px;font-size:11pt"><span style=3D"font-siz=
+e:12pt;line-height:17.12px">6:25 PM =E2=80=93 Central Coast Status</span></=
+p><p class=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-g=
+mail-ox-f5fee7922a-MsoNormal" style=3D"font-family:Calibri,sans-serif;margi=
+n:0in 0in 0.0001pt;color:rgb(0,0,0);line-height:15.6933px;font-size:11pt"><=
+span style=3D"font-size:12pt;line-height:17.12px">6:30 PM =E2=80=93 Profess=
+or Dmitri Strukov=E2=80=99s Presentation</span></p><p class=3D"gmail-ox-bc7=
+507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-MsoNorm=
+al" style=3D"font-family:Calibri,sans-serif;margin:12pt 0in;color:rgb(0,0,0=
+);font-size:11pt"><b><span style=3D"font-size:14pt;color:rgb(192,0,0)">REGI=
+STER for EVENT</span></b>&nbsp;-&nbsp;<a href=3D"https://events.vtools.ieee=
+.org/event/register/200306" target=3D"_blank" rel=3D"noopener" style=3D"wor=
+d-break:break-word;color:rgb(0,125,188);font-family:&quot;Times New Roman&q=
+uot;,serif">https://events.vtools.ieee.org/event/register/200306</a></p><p =
+class=3D"gmail-ox-bc7507e8ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-=
+ox-f5fee7922a-MsoNormal" style=3D"font-family:Calibri,sans-serif;margin:0in=
+ 0in 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:11pt"><b><span =
+style=3D"font-size:14pt;color:rgb(192,0,0)">Alternative Computing with Memr=
+istors</span></b></p><p style=3D"font-family:&quot;Times New Roman&quot;,se=
+rif;margin:0in 0in 7.5pt;color:rgb(0,0,0);text-align:justify;font-size:12pt=
+"><span style=3D"font-size:10.5pt;font-family:Verdana,sans-serif">By now, t=
+here have been many demonstrations of resistive switching (=E2=80=9Cmemrist=
+ive=E2=80=9D) devices based on organic, chalcogenide, transition metal-oxid=
+e and silicon materials and involving different physical switching mechanis=
+ms, such as phase-change transitions and modulation of the ionic concentrat=
+ion profiles by electrical and/or thermal forces. The conductance of proper=
+ly engineered memristors can be continuously tuned with relatively large el=
+ectrical bias, and retained, effectively indefinitely, when small stress is=
+ applied. Such analog nonvolatile memory functionality and extremely high d=
+evice density achieved by lateral scaling and/or monolithical vertical inte=
+gration enable many new exciting applications of memristors in neuromorphic=
+ and alternative types of computing.</span><span style=3D"font-size:10.5pt;=
+font-family:Verdana,sans-serif"></span></p><p style=3D"font-family:&quot;Ti=
+mes New Roman&quot;,serif;margin:0in 0in 7.5pt;color:rgb(0,0,0);text-align:=
+justify;font-size:12pt"><span style=3D"font-size:10.5pt;font-family:Verdana=
+,sans-serif">In my talk, I will review several such applications based on m=
+etal-oxide memristors which were a recent focus of my group. This includes =
+stateful material implication logic, which was originally suggested by Hewl=
+ett Packard Laboratories group. In our work, we showed that 3D version of t=
+his logic allows resolving Feynman grand challenge of implementing 8-bit ad=
+der in a volume smaller than 50-nm cube. I will also review our experimenta=
+l work on memristor-based security primitives, in which we utilized device =
+variations and their nonlinear I-Vs to demonstrate functionality and physic=
+al performance superior to those of conventional approaches. Finally, I wil=
+l discuss applications of memristors in neuromorphic computing, outlining s=
+ome of my group=E2=80=99s recent experimental work on mixed-signal firing-r=
+ate neural networks, which have a potential to greatly exceed conventional =
+implementations in energy efficiency, speed, and density, and spiking neura=
+l networks, that allow for compact implementation of training algorithms in=
+ the hardware.</span><span style=3D"font-size:10.5pt;font-family:Verdana,sa=
+ns-serif"></span></p><div style=3D"color:rgb(0,0,0);font-family:OpenSans,&q=
+uot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"><img sr=
+c=3D"https://myemail.cox.net/appsuite/api/image/mail/picture?folder=3Ddefau=
+lt0%2FINBOX&amp;id=3D116122&amp;uid=3Dii_jxr1kn3t1" id=3D"gmail-ox-bc7507e8=
+ed-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ii_jxr1kn3t1" alt=3D"image=
+.png" width=3D"181" height=3D"237" style=3D"max-width: 10000px; vertical-al=
+ign: middle; width: 181px; height: 237px;">&nbsp;&nbsp;&nbsp;&nbsp;<br></di=
+v><p style=3D"font-family:&quot;Times New Roman&quot;,serif;margin:0in 0in =
+7.5pt;color:rgb(0,0,0);text-align:justify;font-size:12pt"><b><span style=3D=
+"font-size:10.5pt;font-family:Verdana,sans-serif">Dmitri B. Strukov</span><=
+/b><span style=3D"font-size:10.5pt;font-family:Verdana,sans-serif">&nbsp;re=
+ceived the M.S. degree in applied physics and mathematics from the Moscow I=
+nstitute of Physics and Technology, Moscow region, Russia, in 1999, and the=
+ Ph.D. degree in electrical engineering from Stony Brook University, Stony =
+Brook, NY, USA, in 2006.</span><span style=3D"font-size:10.5pt;font-family:=
+Verdana,sans-serif"></span></p><p style=3D"font-family:&quot;Times New Roma=
+n&quot;,serif;margin:0in 0in 7.5pt;color:rgb(0,0,0);text-align:justify;font=
+-size:12pt"><span style=3D"font-size:10.5pt;font-family:Verdana,sans-serif"=
+>He is currently a Professor of Electrical and Computer Engineering at Univ=
+ersity of California at Santa Barbara. Prior to joining UCSB Dmitri worked =
+as a postdoctoral associate, first at Stony Brook University (Aug. 2006 =E2=
+=80=93 Dec. 2007), and then at Hewlett Packard Laboratories (Jan. 2007 =E2=
+=80=93 Jun. 2009) on various aspects of nanoelectronic systems. His researc=
+h broadly concerns different aspects of computation, in particular addressi=
+ng questions on how to efficiently perform computation on various levels of=
+ abstraction. His current research focus is on hardware implementations of =
+artificial neural networks with emerging memory devices.</span></p></div>
+
+--000000000000be2e60058dc6d4c1--

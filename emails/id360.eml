@@ -1,0 +1,358 @@
+Received: from BN7PR08MB4977.namprd08.prod.outlook.com (2603:10b6:a03:1e0::21)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BY5PR03CA0011.NAMPRD03.PROD.OUTLOOK.COM; Wed, 24 Jul 2019 15:30:21 +0000
+Received: from BYAPR08CA0057.namprd08.prod.outlook.com (2603:10b6:a03:117::34)
+ by BN7PR08MB4977.namprd08.prod.outlook.com (2603:10b6:408:28::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2094.17; Wed, 24 Jul
+ 2019 15:30:18 +0000
+Received: from SN1NAM04FT032.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::202) by BYAPR08CA0057.outlook.office365.com
+ (2603:10b6:a03:117::34) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2094.16 via Frontend
+ Transport; Wed, 24 Jul 2019 15:30:18 +0000
+Authentication-Results: spf=none (sender IP is 209.85.208.194)
+ smtp.mailfrom=socialsciencesjournal.org; calpoly.edu; dkim=pass (signature
+ was verified)
+ header.d=socialsciencesjournal-org.20150623.gappssmtp.com;calpoly.edu;
+ dmarc=none action=none header.from=socialsciencesjournal.org;compauth=pass
+ reason=106
+Received-SPF: None (protection.outlook.com: socialsciencesjournal.org does not
+ designate permitted sender hosts)
+Received: from mail-lj1-f194.google.com (209.85.208.194) by
+ SN1NAM04FT032.mail.protection.outlook.com (10.152.88.158) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2052.18 via Frontend Transport; Wed, 24 Jul 2019 15:30:18 +0000
+Received: by mail-lj1-f194.google.com with SMTP id k18so44901740ljc.11
+        for <foaad@calpoly.edu>; Wed, 24 Jul 2019 08:30:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=socialsciencesjournal-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=S2ENc97GlQHu6qhZIps095Vd1E/eQVLmog0CM1mvxzA=;
+        b=IHWShK4XcHFxwGdpYYadU32TyBGSVG/PbfrivJlpL233nCLPVZ29giD+vbp1hDpgvE
+         QBMlEStFSmXnsM6OsF3WblvG11Na2kXG4PzfXfo9cZM70bnv5TVzDosyRbGdJEQjbmNq
+         vkBOsjxWhk93AGzAlTOH5uyJMVt2J9CR4rmJlEeppBNf86DzIRlbNH7Xx8iAgaVhZ6CD
+         xd+IzQvGexodJkEJLhZlHNCfIytaFwfcllX3NeIi6Zd3DmRAus1vwtza46tSgcaSnFKB
+         8w/xmnB+ed9W7c16nZ8BSNT02o4FXuhFXfj3sRKHb0V8AsjjYMXlkpi7ujscTkvvG67F
+         aLOw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=S2ENc97GlQHu6qhZIps095Vd1E/eQVLmog0CM1mvxzA=;
+        b=HxxK19RLmFYwDyC0HyRPBk3XJTgFweRqhaa07kAtbNgmNsMAKFjqCgE9BtyaYteRDQ
+         FRXl7DuzdhFK6qfo29E7tMTM1dxakqJ08j5LIl8wo0ULdFBFF74u5aqAx8vpa38oiWNd
+         +ygtSEzLcs1OY5FHqib+r+9BRCAsx55i9ZkJCoZRO2Dzc6QJtBGRoBdWOlZ/TWuqAlsS
+         GHzC/fjIpj+cas+9b5PdM6vekszChBbMxkA83r8eyiv/T8qrYF9rRww8OqhpoTJjTEFP
+         /cVWgf1l0BCJIcrxztYp35bVnHj+9zU1WDjhbcHy+yGUJ87/2lIGM6IgFgRcKkFml4Hs
+         hGRA==
+X-Gm-Message-State: APjAAAVWnDXnJjbS8xY8fu3sztZSEQgKIM5U77xNLshEcBPYbOKk/XIn
+	t3S/BFPTrnuU21yP9cS2OkzdUjFGo8p2TC+qM/RIoDYavG8=
+X-Google-Smtp-Source: APXvYqxYYV4qYVfaItzY6BELBXc+hgajnuyoHysPqOiZKK7G1XR6fxWLT3zNRHZ7lTBLv0KEdIL/bl38KLmO0eOFUD0=
+X-Received: by 2002:a2e:8396:: with SMTP id x22mr44544426ljg.135.1563982212944;
+ Wed, 24 Jul 2019 08:30:12 -0700 (PDT)
+From: Journal SS <member@socialsciencesjournal.org>
+Date: Wed, 24 Jul 2019 23:30:03 +0800
+Message-ID: <CAHNumNNriVWs-z7RW9i9YvUMY9PxwYsw-CqSCDczCp0nKthe8A@mail.gmail.com>
+Subject: Dear Fowler, A; Khosmood, F: An Invitation: Initiate a Special Issue
+ and Become the Lead Guest Editor
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="0000000000003ce8e7058e6efc7d"
+Return-Path: member@socialsciencesjournal.org
+X-MS-Exchange-Organization-ExpirationStartTime: 24 Jul 2019 15:30:18.1141
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 8fa8cef9-85bd-4f1e-8a9b-08d7104bd52a
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132084558181191183;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.194;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(428003)(199004)(189003)(86362001)(336012)(71190400001)(966005)(45080400002)(55446002)(561944003)(486006)(356004)(6666004)(33964004)(126002)(59536001)(61266001)(26005)(476003)(305945005)(7596002)(7636002)(95326003)(498394004)(2361001)(2351001)(16003)(733005)(16586007)(8576002)(42186006)(6306002)(6916009)(75640400001)(5660300002)(4006050)(9686003)(236005)(2171002)(53386004)(246002)(14444005)(606006)(61726006)(1096003)(8676002)(58800400005)(167793001);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4977;H:mail-lj1-f194.google.com;FPR:;SPF:None;LANG:en;PTR:mail-lj1-f194.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT032.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 8fa8cef9-85bd-4f1e-8a9b-08d7104bd52a
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(8001031)(1405096)(1407096)(1408068)(71702078);SRVR:BN7PR08MB4977;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4977:
+X-MS-Exchange-PUrlCount: 4
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 Jul 2019 15:30:18.0070
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 8fa8cef9-85bd-4f1e-8a9b-08d7104bd52a
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4977
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.0922272
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UE5lUy84ZmppMTh5c0ZLWWowb3c1eWtZL1E2anZBbEIxVFJnUTNmT1dreW9N?=
+ =?utf-8?B?QWg5UEJSOEtUZG55REtRbFFxQkIvRWFJaThTOUw2NFg2Vkk1UGxhbzFRSTBN?=
+ =?utf-8?B?MDBxN3VvZ0JSakhScDI0NzFuemtXalMxK1BVN1RoRUpoN3QxYWlHNkNvNHFw?=
+ =?utf-8?B?Rm9sTVF5WFF1dTlha1kvS1NRUWU5WDdXc0ExQ2daQmN1RHl3OC9NbUxuaUIv?=
+ =?utf-8?B?SlZaaksvNDdkKzdvT3RNNGFIYnFZdzlCcWlRbVlmbzhGcDA2OC9MK0g3L3Ey?=
+ =?utf-8?B?ams4TWIvZHQ4VTFrWVFaSVFqZ3Z0RFEwLzQ3TDJrNWxjM2wzdUtIYi8wekg1?=
+ =?utf-8?B?dHJjbm82UTVlNjBjeEVGUjl2RC9yb0UyK3NRaEllMVRpaG9Ldkd2UzZidVpF?=
+ =?utf-8?B?V1hEQStMNXZIVVVOaUcrUXM5MFFhQTBFNmZ2M2FIU0RHNUY0ZmVQakpmb1g4?=
+ =?utf-8?B?N0k5NW0wV2p4MTR2RlJoVmR4dlo5RzVmekVLZ0EzbWpDUzB4M1lYaXB0cDBV?=
+ =?utf-8?B?MHRxV1JYamtXVHBkS1ZySzZBQ08zVGpVQ2IweG1tSGthbTdKWE8xK3lVQ01a?=
+ =?utf-8?B?Wko2SjZ0RDdBVWFvY0NHRmFxejVXTHhTM24vWG4xQWpGY3NuRjFtYmxZSkw0?=
+ =?utf-8?B?UGs1YnR6YVlUdzEvaGZnK3h3dFRLTnVGUDdFM2JnelZweXNTcU9TQTdyamNs?=
+ =?utf-8?B?SC9Jb2RRU29EUzFPb2k3YWVQRHRLT1B4QjdEU0l6MnZUUnYwcEE0ZWsxcmhi?=
+ =?utf-8?B?ZkFzdERja1ZPMmEwSDkzWmlTdmtxYmJUbzFPMFFQK0o3Z3R6cVNIOGhPNloz?=
+ =?utf-8?B?R0g3emwxZXJ0VkJZVDBDWXJhSHpzVXR5eVNCRjF2K2IyeFIxb204dDk5NU9G?=
+ =?utf-8?B?cmZEYXVBMFFZOUVJOWJKRVVRR1NOUzh4RGZycjJKV29rV3F2SHVyQXRQbkpo?=
+ =?utf-8?B?ZkJYcUtkMXlaak12NjVGdVhqbEo1b3BxTVk1WjZUc0N2d1I4SFAxUnpiTitI?=
+ =?utf-8?B?RlQ0RjhjL01vQmR1ejE4NnQyYmsrLzhRRncvVmNFSDl5RTdETFR2eUM3Y1Ny?=
+ =?utf-8?B?U05UMFNCSGw0R3ZtZXdEUDNJcm1xVHBxbzdXMDFmTFJNc0thd2tSMVhaQkFx?=
+ =?utf-8?B?WFBIWDhmUVNHVFN5cVIzN1JWMkFOYk9KTW5lY0FGVWF6YVZuY1NQVzJqTnpN?=
+ =?utf-8?B?eTgrUHJ4ZlhJdHRZSEJwVExwNWNjU3FvRDd0dDJtTU5HWDNROUJOaDhhY0F2?=
+ =?utf-8?B?V2VPdityMTFpR0twMTlZK3ZtWm9rbUxraER5WTUrSTE4MDBCZG5OdllWQnVl?=
+ =?utf-8?B?SGRFOStoREVQd0l1c29wZ1hJYjBrdjlXb1A4MGdYZ21nTTZkamhub00zM2xV?=
+ =?utf-8?Q?1Dxr59NrvumkO6nRrp04SZoW+RETDqv0=3D?=
+MIME-Version: 1.0
+
+--0000000000003ce8e7058e6efc7d
+Content-Type: text/plain; charset="UTF-8"
+
+Launch a Special Issue and Become the Lead Guest Editor
+Mathematics and Computer Science
+Vol.4, No.1, 2019 <http://www.mathcomputer.org/home>
+Dear Fowler, A; Khosmood, F
+We have read your paper "*The potential of young learners making games: An
+exploratory study*" in "*2018 IEEE GAMES, ENTERTAINMENT, MEDIA CONFERENCE
+(GEM)*" and we think the paper is very interesting and relevant to the
+scope of *Mathematics and Computer Science* (http://www.mathcomputer.org)
+<http://www.mathcomputer.org>.
+Mathematics and Computer Science (MCS) (ISSN Print:2575-6036 ISSN Online:
+2575-6028) is a well-known open-access journal which aims to provide a
+platform for researchers and practitioners to promote academic
+communications and the development of science and technology.
+Scholars are welcomed to propose a special issue in their skilled fields.
+In consideration of your academic background and research achievements in
+mathematics and computer science, on behalf of the editorial board, we
+sincerely invite you to propose a special issue in the journal. On
+condition that the proposal is accepted, you will serve as the Lead Guest
+Editor.
+How to Propose Special Issues:
+
+   1. The special issue proposal form is available in the website below:
+   http://www.mathcomputer.org/download/36Form.doc
+   2. Send back the filled proposal form to us via this email directly
+
+What are the Duties of a Lead Guest Editor
+
+   1. Build a reviewer team of no less than five guest editors to undertake
+   strict pre-check and peer-review procedures in order to guarantee the high
+   quality of published manuscripts
+   2. Make the decision on the rejection or acceptance of a paper
+   3. Promote the special issue' visibility
+   4. Invite authors to contribute papers to the special issue
+
+What are Advantages of a Lead Guest Editor
+
+   1. Keep current with the cutting-edge academic research
+   2. Connect with excellent scientists worldwide
+   3. Have a greater opportunity of being promoted to the Editor in Chief
+   of the Journal
+   4. Publish one paper without any charges in the special issue
+   5. Receive a Certificate of Honor (PDF format)
+   6. Get 1 hard copy of the special issue at no charge after the special
+   issue has been completed successfully (upon request)
+
+To learn more details about the special issue, please check out here:
+http://www.mathcomputer.org/si
+Your research has left a deep impression on us and the abstract of which is
+listed as follow:
+Title: The potential of young learners making games: An exploratory study
+Abstract: This paper presents the preliminary results of a Summer Game
+Development Camp to improve perceptions and persistence of
+under-represented minorities in computer science (CS). The focus of the
+camp was to measure changes in the perceptions of and persistence with CS
+in girls aged between 9 and 11 years old. The game development camp
+consisted of four days of practical lessons on programming and game
+development. The camp concluded with a game jam on the final day. The
+participants used a tile-based free game development platform from
+Microsoft (Kodu Game Lab) to learn some programming concepts through making
+computer games. The preliminary results indicate that the children's
+perceptions of and persistence in CS are influenced by practical
+programming lessons and making games. The authors observed that a camp
+exclusively for girls could foster their confidence and capability in
+learning to program.
+Cordially,
+The Editorial Office of *Mathematics and Computer Science*
+
+--0000000000003ce8e7058e6efc7d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">
+<br><br><table style=3D"background:rgb(230,238,241) none repeat scroll 0% 0=
+%;padding:21px;width:99%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=
+ <tbody><tr><td> 	<table style=3D"background:rgb(254,254,254) none repeat s=
+croll 0% 0%;border:3px solid rgb(252,252,252)" width=3D"746px" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0"> 		<tbody><tr><td style=3D"text-align=
+:left;padding:10px 20px;background:rgb(60,185,189) none repeat scroll 0% 0%=
+"> 			<table width=3D"706px" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0"> 				<tbody><tr> 				<td style=3D"display:table-cell;vertical-align:midd=
+le"> 					<table style=3D"text-align:left" width=3D"571px" cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0"> 					<tbody><tr><td style=3D"display:inli=
+ne-block;background:rgba(0,0,0,0) linear-gradient(to right,rgb(254,254,254)=
+,rgb(172,252,255),rgb(254,254,254)) repeat scroll 0% 0%;font-size:20px;font=
+-weight:bold;text-align:center;font-family:&quot;Times New Roman&quot;;colo=
+r:rgb(4,98,101);padding:3px">Launch a Special Issue and Become the Lead Gue=
+st Editor</td></tr> 					<tr><td style=3D"font-size:15px;font-weight:bold;t=
+ext-align:left;font-family:&quot;Times New Roman&quot;;color:rgb(254,254,25=
+4);padding-top:6px">Mathematics and Computer Science</td></tr> 					<tr><td=
+ style=3D"font-size:15px;font-weight:bold;text-align:left;font-family:&quot=
+;Times New Roman&quot;;color:rgb(254,254,254)">Vol.4, No.1, 2019</td></tr> =
+					</tbody></table> 				</td> 				<td style=3D"display:table-cell;vertica=
+l-align:top;text-align:left;padding-left:10px"> 					<a href=3D"http://www.=
+mathcomputer.org/home" border=3D"0" target=3D"_blank"><img src=3D"http://im=
+g.mathcomputer.org/logo/0523582360551.png" border=3D"0"></a> 				</td> 				=
+</tr> 			</tbody></table> 		</td></tr> 		<tr><td style=3D"padding:25px 20px=
+"> 			<table width=3D"706px" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0"> 				<tbody><tr><td style=3D"padding-bottom:12px;font-family:&quot;Arial=
+&quot;;font-size:13px;line-height:22px;color:rgb(0,0,1)">Dear Fowler, A; Kh=
+osmood, F</td></tr> 				<tr><td style=3D"padding-bottom:15px;font-family:&q=
+uot;Arial&quot;;font-size:13px;line-height:22px;color:rgb(0,0,1);text-align=
+:justify">We have read your paper &quot;<i>The potential of young learners =
+making games: An exploratory study</i>&quot; in &quot;<i>2018 IEEE GAMES, E=
+NTERTAINMENT, MEDIA CONFERENCE (GEM)</i>&quot; and we think the paper is ve=
+ry interesting and relevant to the scope of <i>Mathematics and Computer Sci=
+ence</i> <a href=3D"http://www.mathcomputer.org" border=3D"0" target=3D"_bl=
+ank" style=3D"text-decoration:none;color:rgb(0,0,255);white-space:nowrap;fo=
+nt-weight:bold">(http://www.mathcomputer.org)</a>.</td></tr> 				<tr><td st=
+yle=3D"padding-bottom:15px;font-family:&quot;Arial&quot;;font-size:13px;lin=
+e-height:22px;color:rgb(0,0,1);text-align:justify"><span style=3D"font-weig=
+ht:bold;font-style:italic">Mathematics and Computer Science (MCS)</span>
+ (ISSN Print:2575-6036  ISSN Online: 2575-6028) is a well-known=20
+open-access journal which aims to provide a platform for researchers and
+ practitioners to promote academic communications and the development of
+ science and technology.</td></tr> 				<tr><td style=3D"font-family:&quot;A=
+rial&quot;;font-size:13px;line-height:22px;color:rgb(0,0,1);text-align:just=
+ify">Scholars
+ are welcomed to propose a special issue in their skilled fields. In=20
+consideration of your academic background and research achievements in=20
+mathematics and computer science, on behalf of the editorial board, we=20
+sincerely invite you to propose a special issue in the journal. On=20
+condition that the proposal is accepted, you will serve as the Lead=20
+Guest Editor.</td></tr> 			</tbody></table> 		</td></tr> 		<tr><td style=3D=
+"padding-bottom:15px"> 			<table width=3D"746px" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0"> 			<tbody><tr><td style=3D"background:rgb(242,145,5=
+0) none repeat scroll 0% 0%;color:rgb(254,254,254);font-size:16px;font-weig=
+ht:bold;font-family:&quot;Times New Roman&quot;;padding:3px 0px 3px 20px">H=
+ow to Propose Special Issues:</td></tr> 			<tr><td style=3D"padding:0px 20p=
+x"> 				<table style=3D"padding:8px;border-left:2px solid rgb(242,145,50);b=
+order-bottom:2px solid rgb(242,145,50)" width=3D"706px" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0"> 				<tbody><tr><td><ol style=3D"list-style-t=
+ype:hebrew;padding:0px 0px 0px 25px;margin:0px;font-weight:bold;color:rgb(2=
+42,145,50);font-family:&quot;Arial&quot;;font-size:13px;line-height:22px"><=
+li><span style=3D"font-weight:100;font-family:&quot;Arial&quot;;font-size:1=
+3px;line-height:22px;color:rgb(0,0,1)">The special issue proposal form is a=
+vailable in the website below: <br> 					<a href=3D"http://www.mathcomputer=
+.org/download/36Form.doc" border=3D"0" target=3D"_blank" style=3D"text-deco=
+ration:none;color:rgb(0,0,255);white-space:nowrap;font-weight:bold">http://=
+www.mathcomputer.org/download/36Form.doc</a> 					</span></li><li><span sty=
+le=3D"font-weight:100;font-family:&quot;Arial&quot;;font-size:13px;line-hei=
+ght:22px;color:rgb(0,0,1)">Send back the filled proposal form to us via thi=
+s email directly</span></li></ol></td></tr> 				</tbody></table> 			</td></=
+tr> 			</tbody></table> 		</td></tr> 		<tr><td style=3D"padding:15px 0px"> =
+			<table width=3D"746px" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">=
+ 			<tbody><tr><td style=3D"background:rgb(183,208,113) none repeat scroll =
+0% 0%;color:rgb(254,254,254);font-size:16px;font-weight:bold;font-family:&q=
+uot;Times New Roman&quot;;padding:3px 0px 3px 20px">What are the Duties of =
+a Lead Guest Editor </td></tr> 			<tr><td style=3D"padding:0px 20px"> 				<=
+table style=3D"padding:8px;border-left:2px solid rgb(183,208,113);border-bo=
+ttom:2px solid rgb(183,208,113)" width=3D"706px" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0"> 				<tbody><tr><td><ol style=3D"list-style-type:heb=
+rew;padding:0px 0px 0px 25px;margin:0px;font-weight:bold;color:rgb(183,208,=
+113);font-family:&quot;Arial&quot;;font-size:13px;line-height:22px"><li><sp=
+an style=3D"font-weight:100;font-family:&quot;Arial&quot;;font-size:13px;li=
+ne-height:22px;color:rgb(0,0,1);text-align:justify">Build
+ a reviewer team of no less than five guest editors to undertake strict=20
+pre-check and peer-review procedures in order to guarantee the high=20
+quality of published manuscripts</span></li><li><span style=3D"font-weight:=
+100;font-family:&quot;Arial&quot;;font-size:13px;line-height:22px;color:rgb=
+(0,0,1)">Make the decision on the rejection or acceptance of a paper</span>=
+</li><li><span style=3D"font-weight:100;font-family:&quot;Arial&quot;;font-=
+size:13px;line-height:22px;color:rgb(0,0,1)">Promote the special issue' vis=
+ibility</span></li><li><span style=3D"font-weight:100;font-family:&quot;Ari=
+al&quot;;font-size:13px;line-height:22px;color:rgb(0,0,1)">Invite authors t=
+o contribute papers to the special issue</span></li></ol></td></tr> 				</t=
+body></table> 			</td></tr> 			</tbody></table> 		</td></tr> 		<tr><td styl=
+e=3D"padding:15px 0px"> 			<table width=3D"746px" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0"> 			<tbody><tr><td style=3D"background:rgb(60,185,1=
+89) none repeat scroll 0% 0%;color:rgb(254,254,254);font-size:16px;font-wei=
+ght:bold;font-family:&quot;Times New Roman&quot;;padding:3px 0px 3px 20px">=
+What are Advantages of a Lead Guest Editor </td></tr> 			<tr><td style=3D"p=
+adding:0px 20px"> 				<table style=3D"padding:8px;border-left:2px solid rgb=
+(60,185,189);border-bottom:2px solid rgb(60,185,189)" width=3D"706px" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0"> 					<tbody><tr><td><ol style=
+=3D"list-style-type:hebrew;padding:0px 0px 0px 25px;margin:0px;font-weight:=
+bold;color:rgb(60,185,189);font-family:&quot;Arial&quot;;font-size:13px;lin=
+e-height:22px"><li><span style=3D"font-weight:100;font-family:&quot;Arial&q=
+uot;;font-size:13px;line-height:22px;color:rgb(0,0,1)">Keep current with th=
+e cutting-edge academic research</span></li><li><span style=3D"font-weight:=
+100;font-family:&quot;Arial&quot;;font-size:13px;line-height:22px;color:rgb=
+(0,0,1)">Connect with excellent scientists worldwide</span></li><li><span s=
+tyle=3D"font-weight:100;font-family:&quot;Arial&quot;;font-size:13px;line-h=
+eight:22px;color:rgb(0,0,1)">Have a greater opportunity of being promoted t=
+o the Editor in Chief of the Journal</span></li><li><span style=3D"font-wei=
+ght:100;font-family:&quot;Arial&quot;;font-size:13px;line-height:22px;color=
+:rgb(0,0,1)">Publish one paper without any charges in the special issue</sp=
+an></li><li><span style=3D"font-weight:100;font-family:&quot;Arial&quot;;fo=
+nt-size:13px;line-height:22px;color:rgb(0,0,1)">Receive a Certificate of Ho=
+nor (PDF format)</span></li><li><span style=3D"font-weight:100;font-family:=
+&quot;Arial&quot;;font-size:13px;line-height:22px;color:rgb(0,0,1);text-ali=
+gn:justify">Get 1 hard copy of the special issue at no charge after the spe=
+cial issue has been completed successfully (upon request)</span></li></ol><=
+/td></tr> 					<tr><td style=3D"padding:10px 0px 0px 10px;text-align:left;f=
+ont-family:&quot;Arial&quot;;font-size:13px;line-height:22px;color:rgb(0,0,=
+1)">To learn more details about the special issue, please check out here: <=
+a href=3D"http://www.mathcomputer.org/si" border=3D"0" target=3D"_blank" st=
+yle=3D"text-decoration:none;color:rgb(0,0,255);white-space:nowrap;font-weig=
+ht:bold">http://www.mathcomputer.org/si</a></td></tr> 				</tbody></table> =
+			</td></tr> 		 		<tr><td style=3D"padding:25px 20px 15px;border-bottom:7p=
+x solid rgb(60,185,189)"> 			<table width=3D"706px" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0"> 				<tbody><tr><td style=3D"padding-bottom:8px;f=
+ont-family:&quot;Arial&quot;;font-size:13px;line-height:22px;color:rgb(0,0,=
+0)">Your research has left a deep impression on us and the abstract of whic=
+h is listed as follow: </td></tr> 				<tr><td style=3D"font-family:&quot;Ar=
+ial&quot;;font-size:13px;line-height:22px;color:rgb(0,0,0)">Title: The pote=
+ntial of young learners making games: An exploratory study</td></tr> 				<t=
+r><td style=3D"padding-bottom:18px;font-family:&quot;Arial&quot;;font-size:=
+13px;line-height:22px;color:rgb(0,0,0)">Abstract:
+ This paper presents the preliminary results of a Summer Game=20
+Development Camp to improve perceptions and persistence of=20
+under-represented minorities in computer science (CS). The focus of the=20
+camp was to measure changes in the perceptions of and persistence with=20
+CS in girls aged between 9 and 11 years old. The game development camp=20
+consisted of four days of practical lessons on programming and game=20
+development. The camp concluded with a game jam on the final day. The=20
+participants used a tile-based free game development platform from=20
+Microsoft (Kodu Game Lab) to learn some programming concepts through=20
+making computer games. The preliminary results indicate that the=20
+children's perceptions of and persistence in CS are influenced by=20
+practical programming lessons and making games. The authors observed=20
+that a camp exclusively for girls could foster their confidence and=20
+capability in learning to program.</td></tr> 				<tr><td style=3D"padding-b=
+ottom:5px;font-family:&quot;Arial&quot;;font-size:13px;line-height:22px;col=
+or:rgb(0,0,1)">Cordially, </td></tr> 				<tr><td style=3D"font-family:&quot=
+;Arial&quot;;font-size:13px;line-height:22px;color:rgb(0,0,1)">The Editoria=
+l Office of <i>Mathematics and Computer Science</i></td></tr> 			</tbody></=
+table> 		</td></tr> 	</tbody></table> </td></tr> </tbody></table> </td></tr=
+></tbody></table>
+
+</div>
+
+--0000000000003ce8e7058e6efc7d--

@@ -1,0 +1,752 @@
+Received: from SN6PR08MB4992.namprd08.prod.outlook.com (2603:10b6:a03:74::17)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0040.NAMPRD05.PROD.OUTLOOK.COM; Sat, 4 May 2019 08:10:33 +0000
+Received: from DM6PR08CA0058.namprd08.prod.outlook.com (2603:10b6:5:1e0::32)
+ by SN6PR08MB4992.namprd08.prod.outlook.com (2603:10b6:805:6e::29) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1856.12; Sat, 4 May
+ 2019 08:10:31 +0000
+Received: from CO1NAM04FT033.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::206) by DM6PR08CA0058.outlook.office365.com
+ (2603:10b6:5:1e0::32) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1835.12 via Frontend
+ Transport; Sat, 4 May 2019 08:10:30 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ CO1NAM04FT033.mail.protection.outlook.com (10.152.91.232) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1835.13 via Frontend Transport; Sat, 4 May 2019 08:10:29 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x4485r23012683
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Sat, 4 May 2019 11:05:53 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x4485pNJ029318;
+	Sat, 4 May 2019 11:05:51 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Sat, 04 May 2019 11:05:51 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x4485pmJ011153
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Sat, 4 May 2019 11:05:51 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x447KwNW005668;
+	Sat, 4 May 2019 11:05:30 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          163157 for GAMESNETWORK@LISTSERV.UTA.FI; Sat, 4 May 2019 11:05:30
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4485U6J008163 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Sat, 4 May 2019 11:05:30 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4485UjF012648 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Sat, 4 May 2019 11:05:30 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4485R9j009067 for
+          <GAMESNETWORK@uta.fi>; Sat, 4 May 2019 11:05:27 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Sat, 04 May 2019 11:05:27
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-wm1-f48.google.com (mail-wm1-f48.google.com
+          [209.85.128.48]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x4485Rre011023 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Sat, 4 May 2019 11:05:27 +0300
+Received: by mail-wm1-f48.google.com with SMTP id y5so9217951wma.2 for
+          <GAMESNETWORK@uta.fi>; Sat, 04 May 2019 01:05:27 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:from:mime-version:date:subject:message-id;
+                         bh=O1f2xzzRgUFpC8xKOyaq2vBj/M7oASFhrAsAHPuJAfY=;
+                         b=oyOGxv9AEeH1eXRrKwJOHNacPOjaUmUpGERw+U7Kc3b3wT9o4qdel45qtTfdHAES2j
+                         +OH5w9BXJvfUU23On7m0YTW7Eol28vgAo79b5+kH7no7cMFL4dTKluvt1BcFfoOkrhKs
+                         Lu1Js6tWWHNE6CkzaUBoWWbxLORIKLtuE7ksiq6Vi9UZGH4CMWz49e1kciJpHxMub9gy
+                         F0UfPJ7hZNDVFotAStxXAYTs2JazBE/Q1PykLoeRCwC2sxlU/q0H+QYCuX327a6KIOLH
+                         kPm1iBPzZMvPN9DuTT/ZNcXcTTTMsAyMCeX/Zmb1cCJwkuyMLU3JYUXJVDmYv6yOfIT8
+                         TTfw==
+X-Gm-Message-State: APjAAAVxQNFCqK3FcD0GwOOViw/uJDlXlICnFwGqv0w9uGMKPaJKK7F/
+                    WeQ0siD/gDlckl+hmh3yX00=
+X-Google-Smtp-Source: APXvYqyBLENtFLB24nn6CjqLydZvCkt+QkkouY8YsTcxlchTMMamnSYSsy5ZQdv2zPUXUhyCIgY0aw==
+X-Received: by 2002:a05:600c:205a:: with SMTP id
+            p26mr8852876wmg.11.1556957126692; Sat, 04 May 2019 01:05:26 -0700
+            (PDT)
+Received: from ila13.lan ([93.56.172.211]) by smtp.gmail.com with ESMTPSA id
+          r2sm9947467wrr.65.2019.05.04.01.05.24 (version=TLS1_2
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Sat, 04 May 2019
+          01:05:25 -0700 (PDT)
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_D55D3C99-7063-4DE3-92E1-75E42825D237"
+X-Mailer: Apple Mail (2.3445.9.1)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Sat, 04 May 2019 11:05:51 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_POLITE,L_BDY_SMALL_FONT2,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1021
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+Message-ID: <0A0F8616-FB8D-4E3C-8E54-C928ED11084F@gmail.com>
+Date: Sat, 4 May 2019 10:05:23 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: ilaria mariani <nodistancetorun@GMAIL.COM>
+Subject: [GAMESNETWORK] CFP - GHItaly19: 3rd Workshop on Games-Human Interaction
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 04 May 2019 08:10:30.1224
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ fefd8bfe-99da-4d32-ce02-08d6d067f93c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(286005)(176002)(7192003)(199004)(189003)(246002)(8676002)(1096003)(50226002)(236005)(54896002)(86152003)(146002)(106002)(7846003)(6306002)(53946003)(7636002)(4006050)(60616004)(87572001)(60626007)(53386004)(53376002)(57306001)(16003)(16586007)(95326003)(61266001)(33964004)(6862004)(71190400001)(83716004)(43066004)(82746002)(59536001)(75640400001)(14444005)(69556001)(356004)(84326002)(33656002)(76482006)(7596002)(82202003)(40036005)(6392003)(55446002)(55176004)(606006)(73392003)(71816002)(66346011)(26005)(126002)(476003)(336012)(956004)(42882007)(426003)(21615005)(966005)(36756003)(413944005)(486006)(2616005)(15974865002);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4992;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT033.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: fefd8bfe-99da-4d32-ce02-08d6d067f93c
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600141)(711020)(4605104)(1401320)(1421009)(71702078);SRVR:SN6PR08MB4992;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4992:
+X-MS-Exchange-PUrlCount: 13
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 May 2019 08:10:29.2937
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: fefd8bfe-99da-4d32-ce02-08d6d067f93c
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4992
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.2611747
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1835.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504053)(944701053);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?V2xManl1eEkyTUhHb0NSRUdIRlA1Q0dyOWVYL052NXZ3RFdVUUhXVkxmTVgz?=
+ =?utf-8?B?SElnR2gycHFsZURMaWUxSHpQSWsyZWFkUEFheFVZTHFxNUs3bnpLMkJFWFpr?=
+ =?utf-8?B?ZFNhL2Q0bVV4R3lNb044YnJyOEl0NjdFbkRQdXlaMFltM2o5OXlhRHJXMGtx?=
+ =?utf-8?B?ZU9OMG1oT01rTkE1MFQ5RHY3K0pTSmVJT3ZJaDdkODZ2K01xSUhnZWxORnIw?=
+ =?utf-8?B?eWNhZWxXSUh0L0pjU3hTSVB0dVFKaHlNOWdiNlFIZ3Q5VVl4U2pRRTY4bU0v?=
+ =?utf-8?B?Qms2cHBZWFN1Y0M4TjRLdHVWcEJMUlVTNUxqclI4OXNJbDZWb0FYaC9McWhm?=
+ =?utf-8?B?ZHVaTkJjSWg3NDBPOFpRVmlSRWRIUE1PL2NSckZFNEZ6M0xoQTRpSzhGaEFL?=
+ =?utf-8?B?czZNTlB2ckFlU3JHRDNsSE1GcWFXdFJ5SFl5eUpOcnhCU1M3bE9xdjZ6bUtK?=
+ =?utf-8?B?U3RBOEp2a0tkOUlJTnhJa1JROWlzRGRqUEFLWEE1bWxyQ0lvZlZUVXU0MUFz?=
+ =?utf-8?B?YTVTdE04c0o0ZUtPSUVnM2IrbmJFZ3hoUk1QTkpVTXZuU3VoTEFMSGdnUmNn?=
+ =?utf-8?B?c1pEYUIxNTkyK2hwdWh1amNxSHhBdktOSFVaaDFaUFJUM1lXUFo2STM2cE9s?=
+ =?utf-8?B?amYycHVyZWZqS0UveGg3RmZNZnl3eTROTVJsdTNEM2kwVHlNK0hnNkNkYS9z?=
+ =?utf-8?B?YklqcXVXblZveEJza2pnU2MvR0FDN2tibEQ1eFBjcDQvVldDVWtVN0RmUE9G?=
+ =?utf-8?B?ZWRhcmxBdkVDTnA5eVBNbkhESFR1RXNlZXNPL1FjSEQ5T05Rc1RDRHc2UnZm?=
+ =?utf-8?B?TWtzc2R0ZDVHUlMrdC9VbHdraTlDZEtieGVzUGpybTQ5YjVsY2NkWUZIYXE1?=
+ =?utf-8?B?aWhsaTZSemNMc0pkcFJHU1FPTTZEWjhYTThaMm1vOVN4M2ZlZW9sQng5ZmRh?=
+ =?utf-8?B?ZVRONW43NjMxUTZ2R0FBR0ZUcjJJRFlzRXh0dzRXUkRhNUNyVDhDcnRZbVNp?=
+ =?utf-8?B?SnN2UFhNZEd6alVGSmdpRmpZd3VmOEYxTlNudHZzclB4Ly9GUmdNNGFUQ0VH?=
+ =?utf-8?B?Y21vS212RmpkSldBWmtLRTNPSTBsZmNJTk8rVDN3UW5PY29jUTlvcnEwRWpk?=
+ =?utf-8?B?Z25QMFZrd3JFajM4dzV0aFg3c21oYWt4eFh0YnF5aDFONXNMLzJMR1dkZkc0?=
+ =?utf-8?B?TFp1VVY0bTJMTStDNlFMeHFxR0laTUV5Q01xOGI3YVlZcjdyWHBwNzVYaGxp?=
+ =?utf-8?B?VHFJMDVJVEg5OXFaandlVGJOS2t1cElrZVI0UGU4RHhwRlBhNlBENEZPMnZn?=
+ =?utf-8?Q?+ogFMhjrV8AA8fgdttOpytNVw9grHwfjtf?=
+MIME-Version: 1.0
+
+--Apple-Mail=_D55D3C99-7063-4DE3-92E1-75E42825D237
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+[Our apologies if you receive multiple copies of this CfP]
+
+
+Dear all,
+This year the third edition of GHItaly workshop on Game-Human =
+Interaction will take place at Padova (Italy), during the Italian SIGCHI =
+Chapter.=20
+
+Details in the following!
+My best,=20
+Ilaria, on behalf of the organising committee
+
+
+GHItaly19
+3rd Workshop on Games-Human Interaction
+http://ghi.di.unimi.it/ <http://ghi.di.unimi.it/>
+In Conjunction with CHITALY 2019
+Biannual Conference of the Italian SIGCHI Chapter
+Padova (Italy), September 23-25, 2019
+https://www.chitaly2019.org/ <https://www.chitaly2019.org/>=20
+
+
+--------------------------
+CALL FOR PAPERS
+--------------------------
+GHItaly19 aims at bringing together scholars and industry practitioners =
+to establish a common ground on the topic.=20
+The main goal of the event is to spur discussion, exchange of ideas, and =
+development of new ways of researching, teaching, and working on =
+games-human interaction.=20
+The perspective that the workshop aims at investigating is the design of =
+visual interfaces applied in the specific field of the production of =
+video games. However, the application range of video games that the =
+workshop invites to explore has to be intended in its broadest sense: =
+both entertainment and applied finalities.
+
+-----------
+TOPICS
+-----------
+The workshop aims at collecting contribution advancing the research =
+applied to video games.
+This edition will especially focus on the influence of visual interface =
+design on the final quality of user experience.
+Suggested topics include (but are not limited to):
+- Adaptive and Context-Aware Interfaces
+- Agency of objects
+- Artificial Intelligence applications
+- Biometric measures for interaction
+- Critical or meaningful play experience
+- Distributed and Online systems
+- Full-body Interaction
+- Game Design & Level Design
+- Human Computer Interaction applied to visual interfaces Immersive VR =
+systems
+- Information Visualization
+- Interaction Design Tools
+- Interfaces for Social Interaction and Cooperation Motion-based =
+Interaction
+- Moral choices
+- Multimodal Interfaces
+- (Multi)Sensory Interfaces
+- Procedural rhetoric
+- Sensemaking
+- Storytelling
+- Usability and Accessibility
+- Visualization techniques
+- Virtual and Augmented Reality
+
+-------------------
+SUBMISSION
+-------------------
+All paper submissions must be in English, and they must not exceed six =
+(6) pages in length, including references. The papers must be formatted =
+using the ACM SIGCHI format =
+(http://chi2019.acm.org/authors/chi-proceedings-format/ =
+<http://chi2019.acm.org/authors/chi-proceedings-format/>).
+
+Papers must be submitted online via EasyChair submission system: =
+https://easychair.org/conferences/?conf=3Dghitaly19 =
+<https://easychair.org/conferences/?conf=3Dghitaly19>
+All the papers will be subject to a double review process by the members =
+of the Programme Committee. The proceedings with the papers accepted to =
+the GHItaly19 workshop will be published in CEUR Workshop Proceedings =
+(http://ceur-ws.org <http://ceur-ws.org/>), and will be indexed by =
+SCOPUS.
+
+The authors of the best papers will be invited to submit an extended =
+version of their work to an international journal.
+
+----------------------------
+IMPORTANT DATES
+----------------------------
+May 17: Submission deadline
+June 21: Review notification
+July 8: Camera ready submission
+September 23: GHItaly 2019 Workshop
+
+-------------------------------------
+ORGANIZING COMMITTEE
+-------------------------------------
+Maria De Marsico - Sapienza Universit=C3=A0 di Roma
+Laura Anna Ripamonti - Universit=C3=A0 degli Studi di Milano
+Davide Gadia - Universit=C3=A0 degli Studi di Milano
+Dario Maggiorini - Universit=C3=A0 degli Studi di Milano
+Ilaria Mariani - Dipartimento di Design, Politecnico di Milano
+
+
+
+---------------------------------------------
+Ilaria Mariani, PhD=20
+Research fellow @ Design Department,=20
+Adjunct professor @ School of Design
+
+IMAGIS Lab
+Design Department
+Politecnico di Milano=20
+Via Durando 38/A, 20158 Milano
++39 02 2399 5935
+ilaria1.mariani@polimi.it <mailto:ilaria1.mariani@polimi.it>=20
+
+www.dipartimentodesign.polimi.it =
+<http://www.dipartimentodesign.polimi.it/>
+imagislab.it <http://imagislab.it/>
+facebook.com/imagislabpolimi <http://facebook.com/imagislabpolimi>
+
+polimi.academia.edu/IlariaMariani =
+<http://polimi.academia.edu/IlariaMariani>=20
+researchgate.net/profile/Ilaria_Mariani =
+<http://researchgate.net/profile/Ilaria_Mariani>
+---------------------------------------------
+
+
+
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--Apple-Mail=_D55D3C99-7063-4DE3-92E1-75E42825D237
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; line-b=
+reak: after-white-space;" class=3D""><span id=3D"docs-internal-guid-c33c0fd=
+b-7fff-bb47-c462-9e38e57d7ad2" class=3D""><div style=3D"line-height: 1.38; =
+margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-varian=
+t-ligatures: normal; font-variant-east-asian: normal; font-variant-position=
+: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><div=
+ style=3D"font-weight: normal; white-space: normal;" class=3D"">[Our apolog=
+ies if you receive multiple copies of this CfP]<br class=3D""></div><div cl=
+ass=3D""><br class=3D""></div><div class=3D""><br class=3D""></div></span><=
+/div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"=
+ class=3D""><span style=3D"white-space: pre-wrap;" class=3D"">Dear all</spa=
+n>,</div><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"">This year t=
+he <b class=3D"">third edition of GHItaly&nbsp;workshop on Game-Human Inter=
+action </b>will take place at Padova (Italy), during the&nbsp;<span style=
+=3D"white-space: pre-wrap;" class=3D"">Italian SIGCHI Chapter</span>.&nbsp;=
+</div><div dir=3D"ltr" class=3D""><br class=3D""></div><div dir=3D"ltr" cla=
+ss=3D"">Details in the following!</div><div dir=3D"ltr" class=3D"">My best,=
+&nbsp;</div><div dir=3D"ltr" class=3D"">Ilaria, on behalf of the organising=
+ committee</div><div dir=3D"ltr" class=3D""><br class=3D""></div></div><div=
+ style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D=
+""><span style=3D"font-weight: 700; font-variant-ligatures: normal; font-va=
+riant-east-asian: normal; font-variant-position: normal; vertical-align: ba=
+seline; white-space: pre-wrap;" class=3D""><br class=3D""></span></div><div=
+ style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D=
+""><span style=3D"font-weight: 700; font-variant-ligatures: normal; font-va=
+riant-east-asian: normal; font-variant-position: normal; vertical-align: ba=
+seline; white-space: pre-wrap;" class=3D"">GHItaly19</span></div><div style=
+=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><sp=
+an style=3D"font-weight: 700; font-variant-ligatures: normal; font-variant-=
+east-asian: normal; font-variant-position: normal; vertical-align: baseline=
+; white-space: pre-wrap;" class=3D"">3rd Workshop on Games-Human Interactio=
+n</span></div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bott=
+om: 0pt;" class=3D""><a href=3D"http://ghi.di.unimi.it/" style=3D"text-deco=
+ration:none;" class=3D""><span style=3D"color: rgb(17, 85, 204); font-varia=
+nt-ligatures: normal; font-variant-east-asian: normal; font-variant-positio=
+n: normal; text-decoration: underline; -webkit-text-decoration-skip: none; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D"">http://ghi.di.=
+unimi.it/</span></a></div><br class=3D""><div style=3D"line-height: 1.38; m=
+argin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant=
+-ligatures: normal; font-variant-east-asian: normal; font-variant-position:=
+ normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">In Co=
+njunction with CHITALY 2019</span></div><div style=3D"line-height: 1.38; ma=
+rgin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-=
+ligatures: normal; font-variant-east-asian: normal; font-variant-position: =
+normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Biannu=
+al Conference of the Italian SIGCHI Chapter</span></div><div style=3D"line-=
+height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=
+=3D"font-variant-ligatures: normal; font-variant-east-asian: normal; font-v=
+ariant-position: normal; vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">Padova (Italy), September 23-25, 2019</span></div><div style=3D"=
+line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><a href=
+=3D"https://www.chitaly2019.org/" style=3D"text-decoration:none;" class=3D"=
+"><span style=3D"color: rgb(17, 85, 204); font-variant-ligatures: normal; f=
+ont-variant-east-asian: normal; font-variant-position: normal; text-decorat=
+ion: underline; -webkit-text-decoration-skip: none; vertical-align: baselin=
+e; white-space: pre-wrap;" class=3D"">https://www.chitaly2019.org/</span></=
+a><span style=3D"font-variant-ligatures: normal; font-variant-east-asian: n=
+ormal; font-variant-position: normal; vertical-align: baseline; white-space=
+: pre-wrap;" class=3D""> </span></div><br class=3D""><br class=3D""><div st=
+yle=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D"">=
+<span style=3D"font-variant-ligatures: normal; font-variant-east-asian: nor=
+mal; font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">--------------------------</span></div><div style=3D"=
+line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span s=
+tyle=3D"font-variant-ligatures: normal; font-variant-east-asian: normal; fo=
+nt-variant-position: normal; vertical-align: baseline; white-space: pre-wra=
+p;" class=3D"">CALL FOR PAPERS</span></div><div style=3D"line-height: 1.38;=
+ margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-varia=
+nt-ligatures: normal; font-variant-east-asian: normal; font-variant-positio=
+n: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">---=
+-----------------------</span></div><div style=3D"line-height: 1.38; margin=
+-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-liga=
+tures: normal; font-variant-east-asian: normal; font-variant-position: norm=
+al; vertical-align: baseline; white-space: pre-wrap;" class=3D"">GHItaly19 =
+aims at bringing together scholars and industry practitioners to establish =
+a common ground on the topic.&nbsp;</span></div><div style=3D"line-height: =
+1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-=
+variant-ligatures: normal; font-variant-east-asian: normal; font-variant-po=
+sition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"=
+">The main goal of the event is to spur discussion, exchange of ideas, and =
+development of new ways of researching, teaching, and working on games-huma=
+n interaction.&nbsp;</span></div><div style=3D"line-height: 1.38; margin-to=
+p: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatur=
+es: normal; font-variant-east-asian: normal; font-variant-position: normal;=
+ vertical-align: baseline; white-space: pre-wrap;" class=3D"">The perspecti=
+ve that the workshop aims at investigating is the design of visual interfac=
+es applied in the specific field of the production of video games. However,=
+ the application range of video games that the workshop invites to explore =
+has to be intended in its broadest sense: both entertainment and applied fi=
+nalities.</span></div><br class=3D""><div style=3D"line-height: 1.38; margi=
+n-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">---------=
+--</span></div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bot=
+tom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; font-v=
+ariant-east-asian: normal; font-variant-position: normal; vertical-align: b=
+aseline; white-space: pre-wrap;" class=3D"">TOPICS</span></div><div style=
+=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><sp=
+an style=3D"font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D"">-----------</span></div><div style=3D"line-height: 1.38;=
+ margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-varia=
+nt-ligatures: normal; font-variant-east-asian: normal; font-variant-positio=
+n: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">The=
+ workshop aims at collecting contribution advancing the research applied to=
+ video games.</span></div><div style=3D"line-height: 1.38; margin-top: 0pt;=
+ margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: nor=
+mal; font-variant-east-asian: normal; font-variant-position: normal; vertic=
+al-align: baseline; white-space: pre-wrap;" class=3D"">This edition will es=
+pecially focus on the influence of visual interface design on the final qua=
+lity of user experience.</span></div><div style=3D"line-height: 1.38; margi=
+n-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Suggested=
+ topics include (but are not limited to):</span></div><div style=3D"line-he=
+ight: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D=
+"font-variant-ligatures: normal; font-variant-east-asian: normal; font-vari=
+ant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cla=
+ss=3D"">- Adaptive and Context-Aware Interfaces</span></div><div style=3D"l=
+ine-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span st=
+yle=3D"font-variant-ligatures: normal; font-variant-east-asian: normal; fon=
+t-variant-position: normal; vertical-align: baseline; white-space: pre-wrap=
+;" class=3D"">- Agency of objects</span></div><div style=3D"line-height: 1.=
+38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-va=
+riant-ligatures: normal; font-variant-east-asian: normal; font-variant-posi=
+tion: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">=
+- Artificial Intelligence applications</span></div><div style=3D"line-heigh=
+t: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"fo=
+nt-variant-ligatures: normal; font-variant-east-asian: normal; font-variant=
+-position: normal; vertical-align: baseline; white-space: pre-wrap;" class=
+=3D"">- Biometric measures for interaction</span></div><div style=3D"line-h=
+eight: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=
+=3D"font-variant-ligatures: normal; font-variant-east-asian: normal; font-v=
+ariant-position: normal; vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">- Critical or meaningful play experience</span></div><div style=
+=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><sp=
+an style=3D"font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D"">- Distributed and Online systems</span></div><div style=
+=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><sp=
+an style=3D"font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D"">- Full-body Interaction</span></div><div style=3D"line-h=
+eight: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=
+=3D"font-variant-ligatures: normal; font-variant-east-asian: normal; font-v=
+ariant-position: normal; vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">- Game Design &amp; Level Design</span></div><div style=3D"line-=
+height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=
+=3D"font-variant-ligatures: normal; font-variant-east-asian: normal; font-v=
+ariant-position: normal; vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">- Human Computer Interaction applied to visual interfaces Immers=
+ive VR systems</span></div><div style=3D"line-height: 1.38; margin-top: 0pt=
+; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: no=
+rmal; font-variant-east-asian: normal; font-variant-position: normal; verti=
+cal-align: baseline; white-space: pre-wrap;" class=3D"">- Information Visua=
+lization</span></div><div style=3D"line-height: 1.38; margin-top: 0pt; marg=
+in-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; vertical-al=
+ign: baseline; white-space: pre-wrap;" class=3D"">- Interaction Design Tool=
+s</span></div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bott=
+om: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; font-va=
+riant-east-asian: normal; font-variant-position: normal; vertical-align: ba=
+seline; white-space: pre-wrap;" class=3D"">- Interfaces for Social Interact=
+ion and Cooperation Motion-based Interaction</span></div><div style=3D"line=
+-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=
+=3D"font-variant-ligatures: normal; font-variant-east-asian: normal; font-v=
+ariant-position: normal; vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">- Moral choices</span></div><div style=3D"line-height: 1.38; mar=
+gin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-l=
+igatures: normal; font-variant-east-asian: normal; font-variant-position: n=
+ormal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">- Multi=
+modal Interfaces</span></div><div style=3D"line-height: 1.38; margin-top: 0=
+pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; ver=
+tical-align: baseline; white-space: pre-wrap;" class=3D"">- (Multi)Sensory =
+Interfaces</span></div><div style=3D"line-height: 1.38; margin-top: 0pt; ma=
+rgin-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal=
+; font-variant-east-asian: normal; font-variant-position: normal; vertical-=
+align: baseline; white-space: pre-wrap;" class=3D"">- Procedural rhetoric</=
+span></div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom:=
+ 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; font-varia=
+nt-east-asian: normal; font-variant-position: normal; vertical-align: basel=
+ine; white-space: pre-wrap;" class=3D"">- Sensemaking</span></div><div styl=
+e=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><s=
+pan style=3D"font-variant-ligatures: normal; font-variant-east-asian: norma=
+l; font-variant-position: normal; vertical-align: baseline; white-space: pr=
+e-wrap;" class=3D"">- Storytelling</span></div><div style=3D"line-height: 1=
+.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-v=
+ariant-ligatures: normal; font-variant-east-asian: normal; font-variant-pos=
+ition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""=
+>- Usability and Accessibility</span></div><div style=3D"line-height: 1.38;=
+ margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-varia=
+nt-ligatures: normal; font-variant-east-asian: normal; font-variant-positio=
+n: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">- V=
+isualization techniques</span></div><div style=3D"line-height: 1.38; margin=
+-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-liga=
+tures: normal; font-variant-east-asian: normal; font-variant-position: norm=
+al; vertical-align: baseline; white-space: pre-wrap;" class=3D"">- Virtual =
+and Augmented Reality</span></div><br class=3D""><div style=3D"line-height:=
+ 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font=
+-variant-ligatures: normal; font-variant-east-asian: normal; font-variant-p=
+osition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D=
+"">-------------------</span></div><div style=3D"line-height: 1.38; margin-=
+top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligat=
+ures: normal; font-variant-east-asian: normal; font-variant-position: norma=
+l; vertical-align: baseline; white-space: pre-wrap;" class=3D"">SUBMISSION<=
+/span></div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom=
+: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; font-vari=
+ant-east-asian: normal; font-variant-position: normal; vertical-align: base=
+line; white-space: pre-wrap;" class=3D"">-------------------</span></div><d=
+iv style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D"">All paper submissions must be in English, and t=
+hey must not exceed six (6) pages in length, including references. The pape=
+rs must be formatted using the ACM SIGCHI format (</span><a href=3D"http://=
+chi2019.acm.org/authors/chi-proceedings-format/" style=3D"text-decoration:n=
+one;" class=3D""><span style=3D"color: rgb(17, 85, 204); font-variant-ligat=
+ures: normal; font-variant-east-asian: normal; font-variant-position: norma=
+l; text-decoration: underline; -webkit-text-decoration-skip: none; vertical=
+-align: baseline; white-space: pre-wrap;" class=3D"">http://chi2019.acm.org=
+/authors/chi-proceedings-format/</span></a><span style=3D"font-variant-liga=
+tures: normal; font-variant-east-asian: normal; font-variant-position: norm=
+al; vertical-align: baseline; white-space: pre-wrap;" class=3D"">).</span><=
+/div><br class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margi=
+n-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; f=
+ont-variant-east-asian: normal; font-variant-position: normal; vertical-ali=
+gn: baseline; white-space: pre-wrap;" class=3D"">Papers must be submitted o=
+nline via EasyChair submission system: </span><a href=3D"https://easychair.=
+org/conferences/?conf=3Dghitaly19" style=3D"text-decoration:none;" class=3D=
+""><span style=3D"color: rgb(17, 85, 204); font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; text-decora=
+tion: underline; -webkit-text-decoration-skip: none; vertical-align: baseli=
+ne; white-space: pre-wrap;" class=3D"">https://easychair.org/conferences/?c=
+onf=3Dghitaly19</span></a></div><br class=3D""><div style=3D"line-height: 1=
+.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-v=
+ariant-ligatures: normal; font-variant-east-asian: normal; font-variant-pos=
+ition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""=
+>All the papers will be subject to a double review process by the members o=
+f the Programme Committee. The proceedings with the papers accepted to the =
+GHItaly19 workshop will be published in CEUR Workshop Proceedings (</span><=
+a href=3D"http://ceur-ws.org/" style=3D"text-decoration:none;" class=3D""><=
+span style=3D"color: rgb(17, 85, 204); font-variant-ligatures: normal; font=
+-variant-east-asian: normal; font-variant-position: normal; text-decoration=
+: underline; -webkit-text-decoration-skip: none; vertical-align: baseline; =
+white-space: pre-wrap;" class=3D"">http://ceur-ws.org</span></a><span style=
+=3D"font-variant-ligatures: normal; font-variant-east-asian: normal; font-v=
+ariant-position: normal; vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">), and will be indexed by SCOPUS.</span></div><br class=3D""><di=
+v style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D"">The authors of the best papers will be invited =
+to submit an extended version of their work to an international journal.</s=
+pan></div><br class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; =
+margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: norm=
+al; font-variant-east-asian: normal; font-variant-position: normal; vertica=
+l-align: baseline; white-space: pre-wrap;" class=3D"">---------------------=
+-------</span></div><div style=3D"line-height: 1.38; margin-top: 0pt; margi=
+n-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; f=
+ont-variant-east-asian: normal; font-variant-position: normal; vertical-ali=
+gn: baseline; white-space: pre-wrap;" class=3D"">IMPORTANT DATES</span></di=
+v><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" cl=
+ass=3D""><span style=3D"font-variant-ligatures: normal; font-variant-east-a=
+sian: normal; font-variant-position: normal; vertical-align: baseline; whit=
+e-space: pre-wrap;" class=3D"">----------------------------</span></div><di=
+v style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D"">May 17: Submission deadline</span></div><div st=
+yle=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D"">=
+<span style=3D"font-variant-ligatures: normal; font-variant-east-asian: nor=
+mal; font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">June 21: Review notification</span></div><div style=
+=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><sp=
+an style=3D"font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D"">July 8: Camera ready submission</span></div><div style=
+=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><sp=
+an style=3D"font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D"">September 23: GHItaly 2019 Workshop</span></div><br clas=
+s=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt=
+;" class=3D""><span style=3D"font-variant-ligatures: normal; font-variant-e=
+ast-asian: normal; font-variant-position: normal; vertical-align: baseline;=
+ white-space: pre-wrap;" class=3D"">-------------------------------------</=
+span></div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom:=
+ 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; font-varia=
+nt-east-asian: normal; font-variant-position: normal; vertical-align: basel=
+ine; white-space: pre-wrap;" class=3D"">ORGANIZING COMMITTEE</span></div><d=
+iv style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><span style=3D"font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D"">-------------------------------------</span></d=
+iv><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" c=
+lass=3D""><span style=3D"font-variant-ligatures: normal; font-variant-east-=
+asian: normal; font-variant-position: normal; vertical-align: baseline; whi=
+te-space: pre-wrap;" class=3D"">Maria De Marsico - Sapienza Universit=C3=A0=
+ di Roma</span></div><div style=3D"line-height: 1.38; margin-top: 0pt; marg=
+in-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; vertical-al=
+ign: baseline; white-space: pre-wrap;" class=3D"">Laura Anna Ripamonti - Un=
+iversit=C3=A0 degli Studi di Milano</span></div><div style=3D"line-height: =
+1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-=
+variant-ligatures: normal; font-variant-east-asian: normal; font-variant-po=
+sition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"=
+">Davide Gadia - Universit=C3=A0 degli Studi di Milano</span></div><div sty=
+le=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><=
+span style=3D"font-variant-ligatures: normal; font-variant-east-asian: norm=
+al; font-variant-position: normal; vertical-align: baseline; white-space: p=
+re-wrap;" class=3D"">Dario Maggiorini - Universit=C3=A0 degli Studi di Mila=
+no</span></div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bot=
+tom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: normal; font-v=
+ariant-east-asian: normal; font-variant-position: normal; vertical-align: b=
+aseline; white-space: pre-wrap;" class=3D"">Ilaria Mariani - Dipartimento d=
+i Design, Politecnico di Milano</span></div><div style=3D"line-height: 1.38=
+; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-vari=
+ant-ligatures: normal; font-variant-east-asian: normal; font-variant-positi=
+on: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><b=
+r class=3D""></span></div><div style=3D"line-height: 1.38; margin-top: 0pt;=
+ margin-bottom: 0pt;" class=3D""><span style=3D"font-variant-ligatures: nor=
+mal; font-variant-east-asian: normal; font-variant-position: normal; vertic=
+al-align: baseline; white-space: pre-wrap;" class=3D""><br class=3D""></spa=
+n></div><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0p=
+t;" class=3D""><span style=3D"font-variant-ligatures: normal; font-variant-=
+east-asian: normal; font-variant-position: normal; vertical-align: baseline=
+; white-space: pre-wrap;" class=3D""><br class=3D""></span></div><div style=
+=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><sp=
+an style=3D"font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D""><div dir=3D"auto" style=3D"white-space: normal; word-wra=
+p: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" cl=
+ass=3D""><div dir=3D"auto" style=3D"word-wrap: break-word; -webkit-nbsp-mod=
+e: space; line-break: after-white-space;" class=3D""><div style=3D"word-wra=
+p: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" cl=
+ass=3D""><div style=3D"font-family: Helvetica;"><div dir=3D"ltr" style=3D"c=
+olor: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; fo=
+nt-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(=
+255, 255, 255);" class=3D""><div style=3D"color: rgb(0, 0, 0); font-family:=
+ Helvetica; font-size: 12px;" class=3D""><div><div dir=3D"ltr" style=3D"col=
+or: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; font=
+-variant-ligatures: normal;" class=3D""><span style=3D"font-family: monospa=
+ce, monospace; font-size: x-small;" class=3D"">----------------------------=
+-----------------</span></div><div dir=3D"ltr" style=3D"color: rgb(34, 34, =
+34); font-family: arial, sans-serif; font-size: small; font-variant-ligatur=
+es: normal;" class=3D""><span style=3D"font-family: monospace, monospace; f=
+ont-size: x-small;" class=3D"">Ilaria Mariani,&nbsp;</span><font face=3D"mo=
+nospace, monospace" size=3D"1" class=3D"">PhD&nbsp;</font></div><div dir=3D=
+"ltr" style=3D"color: rgb(34, 34, 34); font-family: arial, sans-serif; font=
+-size: small; font-variant-ligatures: normal;" class=3D""><span style=3D"fo=
+nt-family: monospace, monospace; font-size: x-small;" class=3D"">Research f=
+ellow</span><font face=3D"monospace, monospace" size=3D"1" class=3D"">&nbsp=
+;@&nbsp;</font><span style=3D"font-family: monospace, monospace; font-size:=
+ x-small;" class=3D"">Design Department,&nbsp;</span></div><div dir=3D"ltr"=
+ style=3D"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size=
+: small; font-variant-ligatures: normal;" class=3D""><div dir=3D"ltr" style=
+=3D"font-size: 12.8px;" class=3D""><span style=3D"font-family: monospace, m=
+onospace; font-size: x-small;" class=3D"">Adjunct professor</span><font fac=
+e=3D"monospace, monospace" size=3D"1" class=3D"">&nbsp;@&nbsp;</font><span =
+style=3D"font-family: monospace, monospace; font-size: x-small;" class=3D""=
+>School of Design</span></div><div dir=3D"ltr" style=3D"font-size: 12.8px;"=
+ class=3D""><span style=3D"font-family: monospace, monospace; font-size: x-=
+small;" class=3D""><br class=3D""></span></div></div><div dir=3D"ltr" style=
+=3D"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-variant-li=
+gatures: normal; font-size: 12.8px;" class=3D""><span style=3D"font-family:=
+ monospace, monospace; font-size: x-small;" class=3D"">IMAGIS Lab</span></d=
+iv><div dir=3D"ltr" style=3D"color: rgb(34, 34, 34); font-family: arial, sa=
+ns-serif; font-variant-ligatures: normal; font-size: 12.8px;" class=3D""><s=
+pan style=3D"font-family: monospace, monospace; font-size: x-small;" class=
+=3D"">Design Department</span></div><div dir=3D"ltr" style=3D"color: rgb(34=
+, 34, 34); font-family: arial, sans-serif; font-variant-ligatures: normal; =
+font-size: 12.8px;" class=3D""><span style=3D"font-family: monospace, monos=
+pace; font-size: x-small;" class=3D"">Politecnico di Milano&nbsp;</span></d=
+iv><div dir=3D"ltr" style=3D"font-variant-ligatures: normal;" class=3D""><d=
+iv style=3D"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-si=
+ze: small;" class=3D""><font face=3D"monospace, monospace" size=3D"1" class=
+=3D"">Via Durando 38/A, 20158 Milano<br class=3D""></font></div><div style=
+=3D"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: smal=
+l;" class=3D""><font color=3D"#000000" face=3D"monospace, monospace" size=
+=3D"1" class=3D"">&#43;39 02 2399 5935</font></div><div class=3D""><div sty=
+le=3D"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: sm=
+all;" class=3D""><font face=3D"monospace, monospace" size=3D"1" style=3D"co=
+lor: rgb(17, 85, 204);" class=3D""><a href=3D"mailto:ilaria1.mariani@polimi=
+.it" class=3D"">ilaria1.mariani@polimi.it</a>&nbsp;</font></div><div style=
+=3D"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: smal=
+l;" class=3D""><font color=3D"#000000" face=3D"monospace, monospace" size=
+=3D"1" class=3D""><br class=3D""></font></div><div style=3D"color: rgb(34, =
+34, 34); font-family: arial, sans-serif; font-size: small;" class=3D""><fon=
+t face=3D"monospace, monospace" size=3D"1" color=3D"#000000" class=3D""><a =
+href=3D"http://www.dipartimentodesign.polimi.it/" target=3D"_blank" style=
+=3D"color: rgb(17, 85, 204);" class=3D"">www.dipartimentodesign.polimi.it</=
+a><br class=3D""></font></div><div style=3D"color: rgb(34, 34, 34); font-fa=
+mily: arial, sans-serif; font-size: small;" class=3D""><font face=3D"monosp=
+ace, monospace" size=3D"1" color=3D"#000000" class=3D""><a href=3D"http://i=
+magislab.it/" target=3D"_blank" style=3D"color: rgb(17, 85, 204);" class=3D=
+"">imagislab.it</a><br class=3D""><font color=3D"#1155cc" class=3D""><a hre=
+f=3D"http://facebook.com/imagislabpolimi" class=3D"">facebook.com/imagislab=
+polimi</a></font></font></div><div class=3D""><span style=3D"font-family: m=
+onospace, monospace; font-size: x-small;" class=3D""><br class=3D""></span>=
+</div><div class=3D""><font face=3D"monospace, monospace" size=3D"1" class=
+=3D""><a href=3D"http://polimi.academia.edu/IlariaMariani" class=3D"">polim=
+i.academia.edu/IlariaMariani</a>&nbsp;</font></div><div class=3D""><font fa=
+ce=3D"monospace, monospace" size=3D"1" class=3D""><a href=3D"http://researc=
+hgate.net/profile/Ilaria_Mariani" class=3D"">researchgate.net/profile/Ilari=
+a_Mariani</a></font></div><div class=3D""><span style=3D"font-family: monos=
+pace, monospace; font-size: x-small; color: rgb(34, 34, 34);" class=3D"">--=
+-------------------------------------------</span></div></div><div class=3D=
+""><span style=3D"font-family: monospace, monospace; font-size: x-small; co=
+lor: rgb(34, 34, 34);" class=3D""><br class=3D""></span></div></div></div><=
+/div></div></div></div></div><br class=3D"Apple-interchange-newline"></div>=
+</span></div><div class=3D""><span style=3D"font-size: 11pt; font-family: A=
+rial; font-variant-ligatures: normal; font-variant-east-asian: normal; font=
+-variant-position: normal; vertical-align: baseline; white-space: pre-wrap;=
+" class=3D""><br class=3D""></span></div></span></body></html>--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--Apple-Mail=_D55D3C99-7063-4DE3-92E1-75E42825D237--

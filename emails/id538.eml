@@ -1,0 +1,134 @@
+Received: from BN7PR08MB4977.namprd08.prod.outlook.com (2603:10b6:a03:d4::27)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR06CA0014.NAMPRD06.PROD.OUTLOOK.COM; Thu, 4 Jul 2019 20:01:31 +0000
+Received: from SN4PR0801CA0019.namprd08.prod.outlook.com
+ (2603:10b6:803:29::29) by BN7PR08MB4977.namprd08.prod.outlook.com
+ (2603:10b6:408:28::27) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2052.18; Thu, 4 Jul
+ 2019 20:01:29 +0000
+Received: from SN1NAM04FT043.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::200) by SN4PR0801CA0019.outlook.office365.com
+ (2603:10b6:803:29::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2052.18 via Frontend
+ Transport; Thu, 4 Jul 2019 20:01:29 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.11.167)
+ smtp.mailfrom=amazonses.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=amazonses.com;calpoly.edu; dmarc=none action=none
+ header.from=saiconference.com;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of amazonses.com designates
+ 54.240.11.167 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.11.167; helo=a11-167.smtp-out.amazonses.com;
+Received: from a11-167.smtp-out.amazonses.com (54.240.11.167) by
+ SN1NAM04FT043.mail.protection.outlook.com (10.152.89.45) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2052.18 via Frontend Transport; Thu, 4 Jul 2019 20:01:29 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1562270488;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Feedback-ID;
+	bh=HLhYEFjLOAia1jR5aabIPrQK/jZvXnFuzbTeTqGf5hY=;
+	b=ZNtgeaeQMXpONY/iqIM1ND/m8fH0GjjX4c9jGMoZ1Ha0sMuVneLTiWn2SjBQ8aUp
+	DwruU4faLqd4KPbE5Da2AGOlH0+PIa3+i1Ws3t78obgW50WrLk4RmhXl3NbnadI8lWy
+	jUzjDqtbTaPsCvlRoiEKQm1DqqYRveX53KyA0CLg=
+Date: Thu, 4 Jul 2019 20:01:28 +0000
+To: foaad@calpoly.edu
+From: FICC 2020 <FICC@saiconference.com>
+Reply-To: FICC 2020 <FICC@saiconference.com>
+Subject: Submission Due 10th July : FICC 2020 (San Francisco, United States)
+Message-ID: <0100016bbe93d83f-2a82b0fe-ef7d-4622-945f-140026532073-000000@email.amazonses.com>
+X-Mailer: Sendy (https://sendy.co)
+List-Unsubscribe: <http://52.21.30.170/sendy/unsubscribe/XVYl7Zlp2QqJ763xOyxe9q50BHNVJGlSUpvq5kLRbifQY/MskCYact4sAZRf357tgjig/763ejid15IhosvZo98zrZk1Q>
+Content-Type: text/html; charset=UTF-8
+X-SES-Outgoing: 2019.07.04-54.240.11.167
+Feedback-ID: 1.us-east-1.2G1TzVyFwUkgUZP/A244FHSGpGSk8PXaiBksQsEJ0hk=:AmazonSES
+Return-Path:
+ 0100016bbe93d83f-2a82b0fe-ef7d-4622-945f-140026532073-000000@amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 04 Jul 2019 20:01:29.5802
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ acd43566-2f67-4d96-3ca4-08d700ba6774
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:54.240.11.167;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(6019001)(4636009)(2980300002)(269900001)(286005)(199004)(189003)(26005)(7636002)(2171002)(6506007)(23676004)(43066004)(7596002)(6916009)(6486002)(476003)(16586007)(53346004)(956004)(146002)(25786009)(2361001)(356004)(2351001)(50226002)(106002)(76236002)(23846002)(126002)(4006050)(71280400001)(16003)(966005)(413944005)(36736006)(50466002)(36906005)(486006)(75640400001)(3450700001)(606006)(6306002)(246002)(7066003)(90596002)(9686003)(236005)(6512007)(1096003)(42882007)(14444005)(8676002)(336012)(1997600015)(256605007)(10721665003);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4977;H:a11-167.smtp-out.amazonses.com;FPR:;SPF:Pass;LANG:en;PTR:a11-167.smtp-out.amazonses.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT043.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: acd43566-2f67-4d96-3ca4-08d700ba6774
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(8001031)(1405096)(71702078);SRVR:BN7PR08MB4977;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4977:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 Jul 2019 20:01:29.4471
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: acd43566-2f67-4d96-3ca4-08d700ba6774
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4977
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.3257778
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2032.008
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZjBRRFVQMEM1bFBaQ0kwL0xLendHWVlUZzlobkJhQkd2K0txc0NqNFVaWGRu?=
+ =?utf-8?B?Zm0yOHNvZWU1T0xpSVJFSW5yMGFLNHhsUWQycURQcUFkUVNhRlFzYkZXRnBI?=
+ =?utf-8?B?NjJ0akNpWTl1dGNPMXJqZlVmQzAvZTViSUExVm9ON2FBU1M3eHpLZVo2Q0JP?=
+ =?utf-8?B?M3BURWNhVEVWQUkzd2FkWS9NSlpidVpEVEFGSDRUdk5jV1UwM2FTMGZhanJK?=
+ =?utf-8?B?YUlWMmxROHN2Wk1rYW9xUFhYWnJwU2tNMUlPRnJadDVDZHhnUDZsSlVDVjAw?=
+ =?utf-8?B?RTNMbmY2WkNEMW5xcmxoOXI2MHNwUEpVK3ROeVZTZWcxczJsajJhcEYwa0Z4?=
+ =?utf-8?B?TThjZi9rZWhheWRPTXErZXgwUDVQK1BiUmhXeUJRSFF3SkMxUzQxdHdZdnBi?=
+ =?utf-8?B?ejQzQkpzOEhIdmJ5Y2hxaTdVcjl5SVc0Nm94N3Z2ejRYOWFudCtueHdlYUdC?=
+ =?utf-8?B?L25OaU4vZHpmQTUwa2xxSm1xdjI4bUhkMmdyOUMwMVVLN0NEbytkZG1YRFlK?=
+ =?utf-8?B?bHlKQS94Yy9xUG0yS1RZNHJveFh6MGtiT2thdGtoQmI5Tk1BMnpIWk1NSjNk?=
+ =?utf-8?B?MlBTVnl6cEVHL1JLa013QzFkclEwTVB5WHBBZjQxOS8ySURJY1loaG53eldi?=
+ =?utf-8?B?bVZvMk5KTUc2R2U1c1JDWUlIbDc0bS9rdG1xdHJIaGw2eXBaU21vNXFpWng1?=
+ =?utf-8?B?anNiY0wwaFhyWGVjaFY5ekFDK21HclhSVDE4Z1NtaVVnVDRXbjhGS2ZlZ1l1?=
+ =?utf-8?B?SU1EMzAyOHIrZnQwd24vRzRJQVdRM3JWUXJ6VTdURmR6VlU5RlYxeE9yVGdh?=
+ =?utf-8?B?N3hnaHZvaHVPQ3Q4S1JzUnNZZXg0QWY1emdsWHBNUkF4TUpJVjVqTWU2d3FN?=
+ =?utf-8?B?M2gzTFZvTkNNZE1kV1VXSUFVc21qM2lPV2w2SDI1Z2lxdTViLzZsOVZSTkVO?=
+ =?utf-8?B?V0VRMjlBWThjOHp0U2xxUGlnbHl0ZXZtc21DTkVGcDVKYVFJYldvN1FCZjhy?=
+ =?utf-8?B?ZEh5ZjFRQjF1QlB6bkNvTEl1OHUrUU9xQTlLdUFIbkNSL1Z2MUdYTzY2VXda?=
+ =?utf-8?B?VkVXK1ZGSDVCMXZ5SndjRFVsOGhWdjZrUWFzOHU1eDZnYVN4NERFOFZlUllF?=
+ =?utf-8?B?M3lTY2JjSklIeGJoSks0TVJzQ1JwQi9KY2NVNjdUcTVPUEhlTGt1L0FUNmRW?=
+ =?utf-8?B?M2hXcDJUOTI0bGlxVVJiRDAxR0VFTnN0dkhsa3ZndVkrSTNYdWVtSDZLc0tQ?=
+ =?utf-8?B?UFBoaThTVTlaWExBWlBOem1lS09tRENJblVxUmMyQUJWV3VHa2p0U1E2a2RB?=
+ =?utf-8?B?YzRUY1FLK09zVmtCZ3ZSSVdXbVlmRE5Sd2Q4L3JiOW1wMnlzc0pCQW43NytU?=
+ =?utf-8?B?Uko3L2tNN0JaYXRMM080YlJZRjhJM0dpL0UxRFRFTmt0dUR2T1pJVHY0cDc5?=
+ =?utf-8?B?L0luV2tGWkxpMTgwNHBVSUpFUFFYT0QrK3BlZDFQa2p1OW8xcUkrenVrcDZW?=
+ =?utf-8?Q?f+1RB/tJArv3ljerUSPmdZFBqdC?=
+MIME-Version: 1.0
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title></title>
+</head>
+<body>
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Dear Colleague,</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">We would like to let you know that the <strong>paper submission due date</strong> for FICC 2020&nbsp;is <strong>July 10, 2019</strong>. </span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Please consider and plan for submitting papers and encourage your colleagues, research group members and fellow scientists to contribute and participate in this conference.&nbsp;</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Future of Information and Communication Conference (FICC) 2020 will be held from 5-6 March 2020 in&nbsp;San Francisco, United States.&nbsp;</span></span><span style="font-size:12px;"><span style="font-family:helvetica;">Conference Tracks are&nbsp;Communication, Data Science, Ambient Intelligence, Networking, Computing, Security and Privacy. Topics are listed <a href="https://saiconference.com/FICC2020/CallforPapers#Topics">here</a></span></span></p>
+
+<p><font face="helvetica"><span style="font-size: 12px;">FICC 2020 proceedings will be published in Springer series &quot;Advances in Intelligent Systems and Computing&quot; and submitted for indexing to ISI Proceedings, EI-Compendex, DBLP, SCOPUS, Google Scholar and Springerlink. The publications within &quot;Advances in Intelligent Systems and Computing&quot; are primarily proceedings of important conferences, symposia and congresses. They cover significant recent developments in the field, both of a foundational and applicable character.</span></font></p>
+
+<p><font face="helvetica"><span style="font-size: 12px;">Complete details are available on the website :&nbsp;<a href="https://saiconference.com/FICC">https://saiconference.com/FICC</a></span></font></p>
+
+<p><font face="helvetica"><span style="font-size: 12px;">Regards,</span></font><br>
+<font face="helvetica"><span style="font-size: 12px;">Kohei Arai,</span></font><br>
+<font face="helvetica"><span style="font-size: 12px;">Program Chair</span></font><br>
+<font face="helvetica"><span style="font-size: 12px;">FICC 2020</span></font></p>
+
+<p><span style="font-size:10px;"><font face="helvetica"><a href="http://52.21.30.170/sendy/unsubscribe/XVYl7Zlp2QqJ763xOyxe9q50BHNVJGlSUpvq5kLRbifQY/MskCYact4sAZRf357tgjig/763ejid15IhosvZo98zrZk1Q">Unsubscribe</a></font></span></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

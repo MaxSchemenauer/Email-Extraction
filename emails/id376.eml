@@ -1,0 +1,370 @@
+Received: from BN7PR08MB4978.namprd08.prod.outlook.com (2603:10b6:a03:80::25)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR11CA0048.NAMPRD11.PROD.OUTLOOK.COM; Sun, 21 Jul 2019 07:01:26 +0000
+Received: from BN6PR08CA0063.namprd08.prod.outlook.com (2603:10b6:404:b9::25)
+ by BN7PR08MB4978.namprd08.prod.outlook.com (2603:10b6:408:28::28) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2094.15; Sun, 21 Jul
+ 2019 07:01:25 +0000
+Received: from SN1NAM04FT019.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::202) by BN6PR08CA0063.outlook.office365.com
+ (2603:10b6:404:b9::25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2094.12 via Frontend
+ Transport; Sun, 21 Jul 2019 07:01:25 +0000
+Authentication-Results: spf=pass (sender IP is 149.72.190.131)
+ smtp.mailfrom=em460.istes.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=istes.org;calpoly.edu; dmarc=pass action=none
+ header.from=istes.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of em460.istes.org
+ designates 149.72.190.131 as permitted sender)
+ receiver=protection.outlook.com; client-ip=149.72.190.131;
+ helo=o3.ptr1357.istes.org;
+Received: from o3.ptr1357.istes.org (149.72.190.131) by
+ SN1NAM04FT019.mail.protection.outlook.com (10.152.88.152) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2052.18 via Frontend Transport; Sun, 21 Jul 2019 07:01:24 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=istes.org; 
+	h=mime-version:from:reply-to:to:subject:content-type:list-unsubscribe; 
+	s=s1; bh=DWKcVWtJs9Gv51XvBQFbD0olnd8=; b=hmBne25uVcN5g9BcoYFOzx+
+	3/V7ZZebgyLCsMb2ZJ/3b0LGs2alPipNfIeTaeV3a6/g1JsZ/LtdHaiOrTxzjkGy
+	yx+QZS9x1fpI6q+CccTxyZkvbqpfNtzwCd8MW9qkXUJlU9L4c4leQQTEnjfkDymi
+	SwSpkYv9ISOoQiTvOrFU=
+Received: by filter1147p1las1.sendgrid.net with SMTP id filter1147p1las1-7497-5D340DC1-3B
+        2019-07-21 07:01:21.816504514 +0000 UTC m=+1662295.927356122
+Received: from ISRES1 (85.96.218.138.dynamic.ttnet.com.tr [85.96.218.138])
+	by ismtpd0006p1lon1.sendgrid.net (SG) with ESMTP id _HCL9-hgQtyUPX16A1HM9g
+	for <foaad@calpoly.edu>; Sun, 21 Jul 2019 07:01:21.416 +0000 (UTC)
+Return-Path: bounces+9551280-addf-foaad=calpoly.edu@em460.istes.org
+From: "ISTES Organization" <conference@istes.org>
+Reply-To: conference@istes.org
+To: foaad@calpoly.edu
+Subject: Final Call For Papers-Denver,CO,USA(Reg-only200USD)-IConSES/IConEST 2019
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_72B1_620C1869.1ABA4B7B"
+Date: Sun, 21 Jul 2019 07:01:21 +0000
+Message-ID: <112725016330242311412821@ISRES-1>
+List-Unsubscribe: <mailto:?subject=Unsubscribe>
+X-Antivirus: AVG (VPS 190720-4, 20.07.2019), Outbound message
+X-Antivirus-Status: Clean
+X-SG-EID: 7hD2CnSvqiJDLto7n5DrawagaUNn6UdwaXUXEKlUI5ktaMQ81V1Wn9TUzAVGpDJvRacVtb19gS+Yjw
+ iJTAq+tiMYC4hpBxFcuzYEzRGbR8+c/tBkkcUmSRudTVS5otl5zx2vMlNXH5Yw0jaQwfrK/Huehcgj
+ gu+z1xAZ5Z8lJeE6n6uvv0bHWghLaJmRQBOUjTeK9uiMz2myDDHynl/ABYmNixWWZVwacomfuej0NI
+ Y=
+X-MS-Exchange-Organization-ExpirationStartTime: 21 Jul 2019 07:01:24.5153
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4d1bf6a3-7b22-47c1-dda6-08d70da93e7b
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:149.72.190.131;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BN7PR08MB4978;H:o3.ptr1357.istes.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT019.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 4d1bf6a3-7b22-47c1-dda6-08d70da93e7b
+X-Microsoft-Antispam:
+ BCL:5;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:BN7PR08MB4978;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4978:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:6430;
+X-MS-Exchange-Organization-SCL: 5
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 21 Jul 2019 07:01:24.1120
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4d1bf6a3-7b22-47c1-dda6-08d70da93e7b
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4978
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.2609876
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2094.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750119)(520011016)(944504077)(944702077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?SmYzRTM0bWtIMFpXQUJNMUpZa1BCM2ZWbEhJQVZkZTU1dkxyZUs4MXlyekhG?=
+ =?utf-8?B?Z29nS1AyRkc1NHBSVGJ1N21UUHBsc3FBN2tnQ3R1QzNwUHlEWGZ1SzZWN2dL?=
+ =?utf-8?B?YVgwZEhkV0pKeVFvUGxvNFJIRUNHMG5CSVJ6dnJ0aEJhR2xueDlZcy96Q2tO?=
+ =?utf-8?B?N1paNmxLK2lrRTA0UGZacm5FdTZjU1lkM0dObitFWnkvSXV1a2FNdk9hZnFh?=
+ =?utf-8?B?c3J3N1ZwMlpTZzRwaHVtYkpsN2kwUG95V1M2bE1kWmN2STU0aWQ2V3NxMFRi?=
+ =?utf-8?B?eVd2SlloaWQ2TG5qK1pYYlUwdjNpdkt4QkM4S29weXhjOFJvZkU5Zk5oZ21D?=
+ =?utf-8?B?R0U2Rmo5ODhSeGE3eGtzZ0hJSEs4WUlScE9qSmYyeHJGbzg1U1BZUG5keEZl?=
+ =?utf-8?B?dVN3Ym9GRTlORnpONzkweStjbmduanlJQnFnSGFyMmNFRDh0NU40RmRIay9I?=
+ =?utf-8?B?YXhxcU83S010TUFCUWovSmRYQzdLNWFuM3IzSTJvLytwRVUyc29ra2R5aXY4?=
+ =?utf-8?B?THd5eWxoMTdNUS9NTjZSTmxLZ1ZUR1g5S0U4b21YTXg2bEs4Z3VJc2JyUVN4?=
+ =?utf-8?B?QmQ1STNTZS9BU2U4TWN4dkpLM01LSWJ3eVU0TXJMWjNHelFDRDNOYThhZWRF?=
+ =?utf-8?B?RTVnRkhLWXk0OCtEY2NUNk41TzdVWVp5WEJiTnA5M1R4aTFIZXptUDBoY3Ni?=
+ =?utf-8?B?Y2ZMYmZhNzhZUERhSGtSejRucHJOUk5XOVBqcTZCcys5dXBrbi92YlN1azdZ?=
+ =?utf-8?B?NkFNWUdXbGJQVkdnc3JzREp3dHZWVjRVOXA3L2JPbGExVzJBQ2ZQNVMyZkNB?=
+ =?utf-8?B?Z0dvMTQyV00wOGloQTZ3SWlaSHBheUl5Y1dCeWtzSHdIMzVIeTEwRWZac3Ix?=
+ =?utf-8?B?czE5aUVYdnFQQjFRbXl2S3ozR0FDdDl4SzYvMGt4QzNXbUZYRzdnQUlxKzNn?=
+ =?utf-8?B?UGlQV2Q5TTAzWWZ6dnpVcHExcWVxWGpiNVJ0RitKaGRaTzN4UkFBL1RUMU5Z?=
+ =?utf-8?B?a0hrNEdrTjN0cG1LMkJEelh0Z0x6b1JpUTF0NWN2RHREcDgwTmRzWSs5eDBy?=
+ =?utf-8?B?VWgvei9QSXc1UTNKNnNYTzdXT3dLeC9BZzRIMCs1V2pmUWRqR0hPZnptZEFB?=
+ =?utf-8?B?cFV0SlkxM1RXM05maStYV0RMZFkyZUpQQVFTWHZBcHBVV0g2alh3Zm5rL1Vy?=
+ =?utf-8?B?aitrTmdsWmNLNzQvZGtTL0twb2NGaDh3OWxvN25uYmJaUWRrZTJqRk1UdmZl?=
+ =?utf-8?B?Rk5HQnFaWjRMc3owQS9PT0ZoMCtUekVTUFZ6RDU5TVF6UTJNRi8zS1Q5SWhV?=
+ =?utf-8?B?bUtkR3dMVURLWVA5aG1JODhVY25Hd1JKNEp3b3oxVmRLc1JEbi9WWmgyUWto?=
+ =?utf-8?B?QUZGa1FQSXRycDZFanVDajBQZXNJWVBMMHM2WnhEWFlNN20vWGdPQ1Y0dnJ5?=
+ =?utf-8?B?L050VllnYnE0TkxzQmxIUkw5ZU9Kc1hXU3F1OE1tYW5ueVFBK2xwUTdRZUc2?=
+ =?utf-8?B?aGg2TXZLcHBlU2M5NDJlRGNvQzFTZ1NtTkdHZURHQXpqVzdZWFBPN1RyV29x?=
+ =?utf-8?B?VjUyVkJpV0NFblR6KytybjVqdEhuVHZaR1d3WXhaTlJJZWQ1MU9UWnR4bWlJ?=
+ =?utf-8?B?Z0tzUGNPVFU3aUJheVN0RHM5U0pHRlhUbVBsNCtYdlVqc2NHL2h1TU5XM0o3?=
+ =?utf-8?B?UVBqMzVrbVZXbTNwbm14OTlTRnZ3OTZjTmlzaThrM3pYOEl2bCswb2UrVWhq?=
+ =?utf-8?B?ZmE1bEVuL05ydjNCM1hpaFJwcmpsWkJGMmk1N20vbEVWMEJ2MHpoRGtYVTdp?=
+ =?utf-8?B?ZWhlS1NmV1kwZzlVT09hODdpNVhFQTMxUkZ6Z3IrZ2JWNWJOaDdVbXJtQkhz?=
+ =?utf-8?Q?lDrgXm1YtT/dm?=
+MIME-Version: 1.0
+
+------=_NextPart_001_72B1_620C1869.1ABA4B7B
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Colleague
+
+You are invited to participate in the International Conference on Social an=
+d Education Sciences (IConSES - https://www.iconses.net) and International =
+Conference on Engineering, Science and Technology (IConEST - https://www.ic=
+onest.net) which will take place at the Holiday Inn & Suites Denver Tech Ce=
+nter-Centennial on October 7-10, 2019 in Denver, CO, USA. The conferences a=
+re organized annually by the International Society for Technology, Educatio=
+n and Science (ISTES) and supported by Iowa State University, Indiana Unive=
+rsity, and University of Northern Colorado. The conferences invite submissi=
+ons which address the theory, research or applications in all disciplines o=
+f education and social sciences for IConSES and all disciplines of engineer=
+ing, science and technology for IConEST. The conferences are organized for:
+- Faculty members in all disciplines of education and social sciences
+- Faculty members in all disciplines of engineering, science and technology
+- Graduate students, Researchers
+- K-12 administrators, Teachers, Principals
+- All interested in engineering, sciences and technology
+- All interested in education and social sciences
+
+After peer-reviewing process, all full papers will be published in the Proc=
+eedings.
+
+Best regards,
+
+Prof.Dr. Valarie Akerson, Indiana University, United States
+Prof. Dr. Mack Shelley, Iowa State University, United States
+Dr. Elizabeth (Betsy) Kersey, University of Northern Colorado, United States
+
+
+
+VIRTUAL PRESENTATION
+
+Virtual presentations are accepted and published as regular presentations. =
+Virtual presenters receive regular presentation certificates and their pape=
+rs are included as regular papers in the program/abstract/proceeding books.=
+ All documents of the virtual presenters are the same as the ones of oral/p=
+oster presenters.You will receive all documents Program Book, Abstract Book=
+, Certificate of Participation, and Proceedings Book electronically. After =
+peer-reviewing process, all full papers will be published in the conference=
+ proceedings book or journals.
+
+
+
+IMPORTANT DATES
+
+- Submission of Abstracts: Continues until August 01, 2019
+- Early Registration: April 01, 2019
+- Regular Registration: June 01, 2019
+- Late Registration: August 01, 2019
+- Event Date: October 7-10, 2019
+- Fulltext Submission: November 01, 2019
+- Proceeding Book Publication: December, 2019
+
+
+
+PUBLICATION OF PRESENTATION PAPERS
+
+After peer-reviewing process, selected papers will be published in:
+- International Journal on Social and Education Sciences (IJonSES)
+- International Journal on Engineering, Science and Technology (IJonEST)
+
+
+
+KEYNOTE SPEAKERS
+
+- Prof. Dr. Valarie Akerson(Indiana University) - "The Role of Nature of Sc=
+ience within an Era of STEM"
+- Prof. Dr. Mack Shelley (Iowa State University) - "Application of Statisti=
+cal Methods to Education"
+
+
+
+CONTACT
+
+International Conference on Social and Education Sciences (IConSES) - https=
+://www.iconses.net
+International Conference on Engineering, Science and Technology (IConEST) -=
+ https://www.iconest.net
+
+
+
+Please mark this email as "NOT SPAM" in order to receive other emails from =
+ISTES Organization
+
+Your Member ID for ISTES E-Mails: 41270528234.
+This e-mail is sent by ISTES Organization.
+If you don't wish to receive information, please click the unsubscribe link=
+ [ Unsubscribe ]
+
+
+
+
+
+
+
+---
+Bu e-posta, AVG taraf=C4=B1ndan vir=C3=BCslere kar=C5=9F=C4=B1 kontrol edil=
+di.
+http://www.avg.com
+
+------=_NextPart_001_72B1_620C1869.1ABA4B7B
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001">
+<style type=3D"text/css">
+body,td,th {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height:25px;
+}
+</style>
+         </head>
+<body>
+<p><img align=3D"baseline" alt=3D"ISTES Conferences" src=3D"https://www.ist=
+es.org/mail/c1/images/topofmail.png" border=3D"0" hspace=3D"0"></p>
+<p><strong>Dear Colleague</strong></p>
+<p style=3D"text-align: justify;">You are invited to participate in the
+International Conference on Social and Education Sciences (IConSES - <a hre=
+f=3D"https://www.iconses.net">https://www.iconses.net</a>)
+ and International Conference on Engineering, Science and  Technology (ICon=
+EST -
+   <a href=3D"https://www.iconest.net">https://www.iconest.net</a>)  which =
+will
+take  place at the Holiday Inn &amp; Suites Denver Tech  Center-Centennial =
+on
+October  7-10, 2019 in Denver, CO,  USA. The conferences  are  organized
+annually  by  the International Society for  Technology, Education  and
+ Science  (ISTES)  and  supported by Iowa State  University, Indiana
+University,  and    University of   Northern Colorado. The  conferences inv=
+ite
+submissions  which    address the   theory, research or  applications in al=
+l
+disciplines of  education   and social   sciences for IConSES and  all
+disciplines  of  engineering,  science  and    technology for IConEST. The=
+=20
+conferences are   organized  for:<br>- Faculty   members  in all discipline=
+s of
+education and  social   sciences<br>- Faculty   members in all  disciplines=
+ of
+engineering,  science and  technology<br>-   Graduate students,
+Researchers<br>-  K-12  administrators,   Teachers,   Principals<br>- All
+interested  in engineering,   sciences and   technology<br>-   All interest=
+ed in
+education and  social  sciences</p>
+<p style=3D"text-align: justify;">After peer-reviewing process, all full pa=
+pers
+ will be published in the Proceedings.</p>
+<p style=3D"text-align: justify;">Best regards,</p>
+<p style=3D"text-align: justify;">Prof.Dr. Valarie Akerson, Indiana Univers=
+ity,
+ United States<br> Prof. Dr. Mack Shelley, Iowa State University, United
+States<br> Dr. Elizabeth (Betsy) Kersey, University of Northern Colorado,
+ United  States</p>
+<p style=3D"text-align: justify;">&nbsp;</p>
+<p style=3D"text-align: justify; font-weight: bold;">VIRTUAL PRESENTATION</=
+p>
+<p style=3D"text-align: justify;"><strong>Virtual presentations are accepte=
+d and
+ published as regular presentations.</strong> Virtual presenters receive re=
+gular
+  presentation certificates and their papers are included as regular papers=
+ in
+ the  program/abstract/proceeding books. All documents of the virtual prese=
+nters
+  are  the same as the ones of oral/poster presenters.You will receive all
+ documents  Program Book, Abstract Book, Certificate of Participation, and
+ Proceedings Book  electronically. After peer-reviewing process, all full p=
+apers
+  will be published  in the conference proceedings book or journals.</p>
+<p style=3D"text-align: justify;">&nbsp;</p>
+<p style=3D"text-align: justify; font-weight: bold;">IMPORTANT DATES</p>
+<p style=3D"text-align: justify;">- Submission of Abstracts: Continues unti=
+l
+August 01, 2019<br> - Early Registration: April 01, 2019<br> - Regular
+Registration: June 01, 2019<br> - Late Registration: <strong>August
+ 01, 2019</strong><br> - Event Date: October 7-10, 2019<br> - Fulltext Subm=
+ission:
+ November  01, 2019<br> - Proceeding Book Publication: December, 2019<br></=
+p>
+<p style=3D"text-align: justify;">&nbsp;</p>
+<p style=3D"text-align: justify; font-weight: bold;">PUBLICATION OF PRESENT=
+ATION
+ PAPERS</p>
+<p style=3D"text-align: justify;"><i>After peer-reviewing process, selected=
+ papers
+ will be published in:</i><br> - International Journal on Social and Educat=
+ion
+ Sciences (IJonSES)<br> - International Journal on Engineering, Science and
+Technology (IJonEST) </p>
+<p style=3D"text-align: justify;">&nbsp;</p>
+<p style=3D"text-align: justify; font-weight: bold;">KEYNOTE SPEAKERS</p>
+<p style=3D"text-align: justify;">- Prof. Dr. Valarie Akerson(Indiana Unive=
+rsity)
+ - &quot;The Role of Nature of Science within an Era of STEM&quot;<br> - Pr=
+of. Dr. Mack
+ Shelley (Iowa State University) - &quot;Application of Statistical Methods=
+ to
+Education&quot; </p>
+<p style=3D"text-align: justify;">&nbsp;</p>
+<p style=3D"text-align: justify; font-weight: bold;">CONTACT</p>
+<p style=3D"text-align: justify;">International Conference on Social and Ed=
+ucation
+ Sciences (IConSES) - <a href=3D"https://www.iconses.net">https://www.icons=
+es.net</a><br> International
+ Conference on Engineering, Science and Technology (IConEST) - <a href=3D"h=
+ttps://www.iconest.net">https://www.iconest.net</a></p>
+<p style=3D"text-align: justify;">&nbsp;</p>
+<p style=3D"text-align: justify; color: blue; font-weight: bold;">Please ma=
+rk this
+ email as <span style=3D"color: red;">&quot;NOT SPAM&quot;</span> in order =
+to receive other
+ emails from <span style=3D"color: red;">ISTES Organization</span></p>
+<p style=3D"text-align: justify;">Your Member ID for ISTES E-Mails:
+ 41270528234.<br> This e-mail is sent by ISTES Organization.<br> If you don=
+'t
+wish to  receive information, please click the unsubscribe link [  <a href=
+=3D"https://www.istes.org/mail/unsubscribe.php?email=3Dfoaad@calpoly.edu">U=
+nsubscribe</a>
+]</p>
+<p style=3D"text-align: justify;">&nbsp;</p>
+<p style=3D"text-align: justify;">&nbsp;</p>
+<div id=3D"DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2"><br> <table style=3D"borde=
+r-top: 1px solid #D3D4DE;">
+	<tr>
+      <td style=3D"width: 55px; padding-top: 18px;"><a href=3D"http://www.a=
+vg.com/email-signature?utm_medium=3Demail&amp;utm_source=3Dlink&amp;utm_cam=
+paign=3Dsig-email&amp;utm_content=3Demailclient" target=3D"_blank"><img src=
+=3D"https://ipmcdn.avast.com/images/icons/icon-envelope-tick-green-avg-v1.p=
+ng" alt=3D"" width=3D"46" height=3D"29" style=3D"width: 46px; height: 29px;=
+"></a></td>
+		<td style=3D"width: 470px; padding-top: 17px; color: #41424e; font-size: =
+13px; font-family: Arial, Helvetica, sans-serif; line-height: 18px;">Vir=C3=
+=BCs bulunmuyor. <a href=3D"http://www.avg.com/email-signature?utm_medium=
+=3Demail&amp;utm_source=3Dlink&amp;utm_campaign=3Dsig-email&amp;utm_content=
+=3Demailclient" target=3D"_blank" style=3D"color: #4453ea;">www.avg.com</a>=
+ 		</td>
+	</tr>
+</table>
+<a href=3D"#DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2" width=3D"1" height=3D"1">=
+ </a></div></body>=
+
+------=_NextPart_001_72B1_620C1869.1ABA4B7B--

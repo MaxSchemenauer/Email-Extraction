@@ -1,0 +1,643 @@
+Received: from BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:a03:40::29)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0016.NAMPRD04.PROD.OUTLOOK.COM; Tue, 23 Jul 2019 08:01:29 +0000
+Received: from BYAPR08CA0071.namprd08.prod.outlook.com (2603:10b6:a03:117::48)
+ by BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:408:28::30) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2094.16; Tue, 23 Jul
+ 2019 08:01:27 +0000
+Received: from SN1NAM04FT054.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::200) by BYAPR08CA0071.outlook.office365.com
+ (2603:10b6:a03:117::48) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2094.16 via Frontend
+ Transport; Tue, 23 Jul 2019 08:01:27 +0000
+Authentication-Results: spf=pass (sender IP is 167.89.100.226)
+ smtp.mailfrom=em6638.gjaets.online; calpoly.edu; dkim=pass (signature was
+ verified) header.d=gjaets.online;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=gjaets.online;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of em6638.gjaets.online
+ designates 167.89.100.226 as permitted sender)
+ receiver=protection.outlook.com; client-ip=167.89.100.226;
+ helo=o3.lv30n.shared.sendgrid.net;
+Received: from o3.lv30n.shared.sendgrid.net (167.89.100.226) by
+ SN1NAM04FT054.mail.protection.outlook.com (10.152.89.2) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2052.18 via Frontend Transport; Tue, 23 Jul 2019 08:01:27 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=gjaets.online; 
+	h=content-type:from:mime-version:reply-to:subject:to:list-unsubscribe; 
+	s=s1; bh=FK11WyC0USOrf33jnPnaZ0i5rDM=; b=jo8WqLSpqV7nc5ngPcek0AA
+	4TsQu4mafzCxUkcaOPVbU1I6M07IJy3vHmcALVS2j6Q6Sau6zudqzhIB3CTEGZ22
+	Tcl3I6xDi9biVgL2Zbv6HGnX8b0BNWDJQ1OA/EqusfQi4HD32F+AFcWQ9gPUT4Ch
+	HhdaHaKuR54i5M+6+DVo=
+Content-Type: multipart/alternative; boundary=009630cb4548c0327ce78c625a1c9e275896c50e72a3d261c826d5c93f3b
+Date: Tue, 23 Jul 2019 06:53:52 +0000
+From: "JOURNAL GJESRM" <gjesrm@gjaets.online>
+Reply-To: infogjesrm@gmail.com
+Subject: Manuscript Submission Online for VOLUME 6, ISSUE 8 August 2019 (IMPACT FACTOR : 3.799)(INDEXED:THOMSON REUTERS ENDNOTE)
+To: foaad@calpoly.edu
+Message-ID: <LodHRxDLTeCrzuYL8lC1nA@ismtpd0002p1iad1.sendgrid.net>
+List-Unsubscribe: <mailto:unsubscribe@em6638.gjaets.online?subject=https://u9553424.ct.sendgrid.net/asm/unsubscribe/*q*user_id=9553424*a*data=sYYDloaKcvCFNWro_3nrW_cCfr5OQn4Na-Dq2HiCM0ZKNhh9i4cujf60x3YyqKJ0WSM8x0bAfw2SOcWINm2Vsrk6hz2fNZRO8zFGIh-WjZNbIUBciInXSDx5aMYFc_s-LoNZWN9WdPETQSzBoXZRPcWK5yE4bUebtNOZUc8PtiviO6Rt6VC28YhFet_WxEkPbYFUF71eKG26vDGaMyPSF73IdZ92CWaK8GUaOnESTQEwG3xBd5FovHK9JLw_62cGkv7KbWC48WMctdS7YzbKxzFyw2t_yucI2mIOtxGleuqHv9sC0pR9Ak2FsP9iQECf6LpLfhg78OB1Uw0TA4y6WP4JzSiB04Q2ckn-sfvBkJmp0ukKilfDHTxbnWlhDLU90P6adBzUB-iQYXie2tpmH1eIV-rrjQu_TkwgTLgUSsbWjN-oqqnRm6gusxqaC4SGnBuk73n-8qIlIvYIJOz_O2YTpL3WeJWY3jFjKNLClmq76i4mANvb_dXeYWM8gmciNLD4uoKLL4Xc8R-uqflh9HxIypeqHOsVJRPKGZrylBo=>
+X-SG-EID: 7hD2CnSvqiJDLto7n5DrawagaUNn6UdwaXUXEKlUI5lKT4pwVndNcDbqhurmZWAeXkKrqi950asMOy
+ R5/NGKUKwb9WRtR7uVSyYPkixvIL6aFc6mAT9LtptO5J2/8PivVvjPrQjEVEr5BeriQC2gPIA2wfTO
+ TLnXIviQy6Hnz7jDRTXMlXsg7VjyAH+XMpuEUZ514r1HekVHI+gb/SYZ9LoO4Tlu+oCn7epSW3HVhT
+ g=
+X-SG-ID: Z2FxZazunBjVeNuNdzHDqrF8mxuCpi0krmont6YQrP21vlrUFjEsD6rOO9Go9PTyLqiSI0CYu6byVt
+ q1NF8vimcVvqt76wFRcasalNSrf//Se8WBgVC8YhiEeE2Kray4iguzkZr5bgYEPxekf4v0p4cNf2hk
+ DX59dIAF996lWtk=
+Return-Path: bounces+9553424-4f61-foaad=calpoly.edu@em6638.gjaets.online
+X-MS-Exchange-Organization-ExpirationStartTime: 23 Jul 2019 08:01:27.3371
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 55f0647b-b686-4aef-5656-08d70f43f6c2
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:167.89.100.226;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(2980300002)(286005)(199004)(10913002)(189003)(10533003)(733005)(76236002)(16586007)(7596002)(486006)(19625735003)(55176004)(356004)(6916009)(6486002)(6666004)(25786009)(71190400001)(325944009)(54206008)(22416003)(36736006)(246002)(2351001)(16799955002)(1096003)(8676002)(53346004)(476003)(28505004)(18926415008)(26005)(15188155005)(146002)(2361001)(336012)(2171002)(15974865002)(106002)(7636002)(16003)(5070765005)(6306002)(33964004)(43066004)(236005)(14444005)(413944005)(966005)(2160300002)(956004)(126002)(2860700004)(4006050)(9686003)(19627405001)(75640400001)(606006)(6506007)(6512007)(49400200007)(46492003)(19627285001);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4980;H:o3.lv30n.shared.sendgrid.net;FPR:;SPF:Pass;LANG:en;PTR:o3.lv30n.shared.sendgrid.net;A:0;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT054.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 55f0647b-b686-4aef-5656-08d70f43f6c2
+X-Microsoft-Antispam:
+ BCL:6;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1414054)(71702078);SRVR:BN7PR08MB4980;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4980:
+X-MS-Exchange-PUrlCount: 8
+X-MS-Oob-TLC-OOBClassifiers: OLM:1107;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 23 Jul 2019 08:01:27.1139
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 55f0647b-b686-4aef-5656-08d70f43f6c2
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4980
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5534963
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2094.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?MUJ3Yk5tVmh3MHhyYndPSmoxcFBvRjdENFVxZGpreFkyY2Z5b0crQXZ6OUV6?=
+ =?utf-8?B?REIzOWMvVzZSdUpyYlBoeU4xNDhXQjExZUVHNFkrUnlvMjBRMFlXbDBodUcy?=
+ =?utf-8?B?cEFsSzU4VFFqTXk4N1o4UWtPbkY3Zm5iVWV4N0g2bVJpcXYvSXo4STFlTVM1?=
+ =?utf-8?B?MDJCcGZ6RFdoU05uVEIzcTc3Z3JtS25ZdVVzZEg1a1dhSUdXd3RNOHRwNzdB?=
+ =?utf-8?B?UmltYm55ZjlGcVhsRDlNNzd6V2pZNFA5VFhnTUl1YTZINHNSNERqN0h1dThi?=
+ =?utf-8?B?ZC84MFJaV2ZzN1hvZno3Q1FiNk9jOXR2Q25jUDRCeTBBdFhiOVk4L3U1cit3?=
+ =?utf-8?B?L1NJTXIzb2l3b1lQYnJUN0M2RSsvSmlrTFY3VCtuOHNwUVNDb1pKR0hXckVJ?=
+ =?utf-8?B?dEVERW9jVllpaUFMN2tWNnJIblo0T1pTaDFZM0llajJKVEpkK2NiZlVveW9L?=
+ =?utf-8?B?SWJHRWpPanVrWkRySElwWkgreXNSK1lhT3UrTzJsbWdiTGtnSVFVOXZ4SzVt?=
+ =?utf-8?B?aFN3L214SkQ5WnRRYU5ydERMZmlZa0RBMTB0dXZHVXZhT3pVNnVFcmdoM0NZ?=
+ =?utf-8?B?ZmpUa1Y2bVdobHRHbExoUE9laHRLSm9Tdm1qc2ViM0o0MVczNk43R0oxMHVh?=
+ =?utf-8?B?b1dacGlxRlRzVGtHQmtTVTBDdW9YQ3FqWjlXQnpzai9JeGhNTk5HMVZhekla?=
+ =?utf-8?B?OEUzWVZZbHozQUl4WjFzYXNwTDZOSUJUdFZsTEdRbDQ2OWVyOEpGK1JoUHlR?=
+ =?utf-8?B?K0YyMkZjczk1SVhJTGNtMHlLOTZlaVAwRlR5V05QcTFUeGlyMFZYdzJmenJG?=
+ =?utf-8?B?OW9GUGVIUk9DOGxXOU9jbzJRMVdiYXpkSS9NbXhZV1gxU0psSklsTERyeW5q?=
+ =?utf-8?B?bmJNOG80MHh6WE5zQWs1a1hJeWpOK2Y2empUaTIwTTZKdUNsclN2MUtGVUZr?=
+ =?utf-8?B?QjZGTTZJNHg1V1ZIbitpa1ZMTG96Zlpza0NFMUl2Q21ad1lhQ3ZYZnhPcm1m?=
+ =?utf-8?B?QmVIZVREdjhyRkZWbnhMSnZvVGd6Vzc4U2oyeXp4a1lzNXh1TmIreDJHbUI0?=
+ =?utf-8?B?YzJaRTlTQmdHdG5KUGFQRU44bmxxLzFMM1RvZ3YyUHJncUgxUXNtM1R2UVhS?=
+ =?utf-8?B?ZmFrcExYNW96Q3lFS0tEUUVyNHNDdXVHQUc2bTU0b3pJZjM2OFF0cVZPbE9y?=
+ =?utf-8?B?ejE5aGl1c3g5cytGTmdORTlKbTZNYngwWlU0eGNCeHV4WU1zNUt3cFpneWZh?=
+ =?utf-8?B?UGpNcE93Ulo0enVxL3c1VmxWd2hVUVZ4MGRvcEZmUkFyK2pSR3Q3NG0rNnhJ?=
+ =?utf-8?B?NEkvdFNCbnV6QWJvR3hibG1jN1FvTFp2TXRlMTJRZExIVlZXZUNmdGpxa0lj?=
+ =?utf-8?B?Q012WGl0WHUxNnc9PQ==?=
+MIME-Version: 1.0
+
+--009630cb4548c0327ce78c625a1c9e275896c50e72a3d261c826d5c93f3b
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Dear Author/Researcher,
+
+Global Journal of Engineering Science and Research Management=C2=A0(GJESRM,=
+ ISSN=C2=A02349-4506),=C2=A0=C2=A0
+
+Invites you to submit your research=C2=A0paper=C2=A0for=C2=A0publishing in=
+=C2=A0=C2=A0Volume 6,=C2=A0Issue 8=C2=A0(August- 2019).
+
+NOW INDEXED IN THOMSON REUTER=C2=A0ENDNOTE:=C2=A0ResearcherID:G-2301-2016=
+=C2=A0=C2=A0
+
+http://www.researcherid.com/rid/D-6904-2018 http://www.researcherid.com/rid=
+/D-6904-2018=C2=A0=C2=A0
+
+FOR ONLINE=C2=A0SUBMISSION=C2=A0MANUSCRIPT http://www.gjesrm.com/submit_man=
+uscript_online.php
+
+http://www.gjesrm.com/submit_manuscript_online.php http://www.gjesrm.com/su=
+bmit_manuscript_online.php
+
+CALL=C2=A0FOR=C2=A0PAPERS=C2=A0VOLUME 6, ISSUE 8
+
+About GJESRM=C2=A0(Scientific Journal=C2=A0Impact Factor: 3.799,)
+
+The=C2=A0"GLOBAL=C2=A0JOURNAL OF ENGINEERING SCIENCES AND RESEARCH MANAGEME=
+NT=E2=80=9D=C2=A0is a pre-reviewed,=C2=A0monthly, online international rese=
+arch journal, which publishes original articles, research articles, review =
+articles with top-level work from all areas of Engineering Research and the=
+ir application including Mechanical, Civil, Electrical, Chemical, Electroni=
+cs, Mathematics and Geological, =C2=A0etc. Researchers in all=C2=A0Manageme=
+nt=C2=A0technology and=C2=A0Engineering=C2=A0fields are encouraged to contr=
+ibute articles based on recent research. Journal publishes research article=
+s and reviews within the whole field of Engineering Research, and it will c=
+ontinue to provide information on the latest trends and developments in thi=
+s ever-expanding subject.
+
+To maintain a high-quality journal, manuscripts that appear in the GJESRM=
+=C2=A0 have been subjected to a rigorous review process. This includes blin=
+d reviews by three or more members of the editorial review board, followed =
+by a detailed review by the GJESRM=C2=A0editors.
+
+Subject Category:=C2=A0
+
+Cover all branches of=C2=A0Engineering and Science (Management)
+
+Important Dates:
+
+=C2=B7Paper=C2=A0Submission: =C2=A0=C2=A005=C2=A0August=C2=A02019.
+
+=C2=B7Review Results (Acceptance/Rejection) Notification:=C2=A0Within 02 =
+=C2=A0Days=C2=A0after submitting=C2=A0paper.
+
+=C2=B7Published Online on :=C2=A010 August=C2=A02019=C2=A0.
+
+Publication Charges:
+
+Indian Author(s)
+
+Rs 1500/- upto 3 authors, after 3 authors charges will be Rs 500/author=C2=
+=A0
+
+Rs 300/author for Hard copy of certificate.
+
+Foreign Author(s)
+
+$ 80 USD upto 6 Authors=C2=A0
+
+Submission Procedure:
+
+Manuscript are invited in MS Word format and to be submitted via mail on=C2=
+=A0infogjesrm@gmail.com mailto:articles@ijesrt.com,=C2=A0=C2=A0
+
+Please note that Review=C2=A0Papers/Articles are also acceptable.=C2=A0
+
+Once a=C2=A0paper=C2=A0is accepted, authors are assumed to cede copyrights =
+of the=C2=A0paper=C2=A0over to GJESRM. All=C2=A0papers=C2=A0will be acknowl=
+edged and referred.
+
+FINAL=C2=A0PAPER=C2=A0SUBMISSION:
+
+Each final full text=C2=A0paper=C2=A0(.doc) along with the corresponding si=
+gned copyright transfer form should be submitted by Email:=C2=A0infogjesrm@=
+gmail.com mailto:infogjesrm@gmail.com=C2=A0
+
+Editor in Chief:
+
+GLOBAL JOURNAL OF ENGINEERING SCIENCES AND=C2=A0RESEARCH MANAGEMENT=C2=A0(G=
+JESRM, ISSN=C2=A02349-4506),
+
+Website:=C2=A0www.gjesrm.com http://www.gjesrm.com/
+
+Paper=C2=A0Submission Email:=C2=A0infogjesrm@gmail.com mailto:infogjesrm@gm=
+ail.com
+
+For=C2=A0any Query, Please feel free to contact at:=C2=A0infogjesrm@gmail.c=
+om mailto:infogjesrm@gmail.com
+
+Unsubscribe https://u9553424.ct.sendgrid.net/asm/unsubscribe/?user_id=3D955=
+3424&data=3DsYYDloaKcvCFNWro_3nrW_cCfr5OQn4Na-Dq2HiCM0ZKNhh9i4cujf60x3YyqKJ=
+0WSM8x0bAfw2SOcWINm2Vsrk6hz2fNZRO8zFGIh-WjZNbIUBciInXSDx5aMYFc_s-LoNZWN9WdP=
+ETQSzBoXZRPcWK5yE4bUebtNOZUc8PtiviO6Rt6VC28YhFet_WxEkPbYFUF71eKG26vDGaMyPSF=
+73IdZ92CWaK8GUaOnESTQEwG3xBd5FovHK9JLw_62cGkv7KbWC48WMctdS7YzbKxzFyw2t_yucI=
+2mIOtxGleuqHv9sC0pR9Ak2FsP9iQECf6LpLfhg78OB1Uw0TA4y6WP4JzSiB04Q2ckn-sfvBkJm=
+p0ukKilfDHTxbnWlhDLU90P6adBzUB-iQYXie2tpmH1eIV-rrjQu_TkwgTLgUSsbWjN-oqqnRm6=
+gusxqaC4SGnBuk73n-8qIlIvYIJOz_O2YTpL3WeJWY3jFjKNLClmq76i4mANvb_dXeYWM8gmciN=
+LD4uoKLL4Xc8R-uqflh9HxIypeqHOsVJRPKGZrylBo=3D=
+
+--009630cb4548c0327ce78c625a1c9e275896c50e72a3d261c826d5c93f3b
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html data-editor-version=3D"2" class=3D"=
+sg-campaigns" xmlns=3D"http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, minimum-scale=3D1, maximum-scale=3D1"><!--[if !mso]><!-->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge"><!--<![endif=
+]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <style type=3D"text/css">
+      body {width: 600px;margin: 0 auto;}
+      table {border-collapse: collapse;}
+      table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+      img {-ms-interpolation-mode: bicubic;}
+    </style>
+    <![endif]-->
+
+    <style type=3D"text/css">
+      body, p, div {
+        font-family: arial;
+        font-size: 14px;
+      }
+      body {
+        color: #000000;
+      }
+      body a {
+        color: #1188E6;
+        text-decoration: none;
+      }
+      p { margin: 0; padding: 0; }
+      table.wrapper {
+        width:100% !important;
+        table-layout: fixed;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      img.max-width {
+        max-width: 100% !important;
+      }
+      .column.of-2 {
+        width: 50%;
+      }
+      .column.of-3 {
+        width: 33.333%;
+      }
+      .column.of-4 {
+        width: 25%;
+      }
+      @media screen and (max-width:480px) {
+        .preheader .rightColumnContent,
+        .footer .rightColumnContent {
+            text-align: left !important;
+        }
+        .preheader .rightColumnContent div,
+        .preheader .rightColumnContent span,
+        .footer .rightColumnContent div,
+        .footer .rightColumnContent span {
+          text-align: left !important;
+        }
+        .preheader .rightColumnContent,
+        .preheader .leftColumnContent {
+          font-size: 80% !important;
+          padding: 5px 0;
+        }
+        table.wrapper-mobile {
+          width: 100% !important;
+          table-layout: fixed;
+        }
+        img.max-width {
+          height: auto !important;
+          max-width: 480px !important;
+        }
+        a.bulletproof-button {
+          display: block !important;
+          width: auto !important;
+          font-size: 80%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .columns {
+          width: 100% !important;
+        }
+        .column {
+          display: block !important;
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    </style>
+    <!--user entered Head Start-->
+   =20
+     <!--End Head user entered-->
+  </head>
+  <body>
+    <center class=3D"wrapper" data-link-color=3D"#1188E6" data-body-style=
+=3D"font-size: 14px; font-family: arial; color: #000000; background-color: =
+#ffffff;">
+      <div class=3D"webkit">
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"10=
+0%" class=3D"wrapper" bgcolor=3D"#ffffff">
+          <tr>
+            <td valign=3D"top" bgcolor=3D"#ffffff" width=3D"100%">
+              <table width=3D"100%" role=3D"content-container" class=3D"out=
+er" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                <tr>
+                  <td width=3D"100%">
+                    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">
+                      <tr>
+                        <td>
+                          <!--[if mso]>
+                          <center>
+                          <table><tr><td width=3D"600">
+                          <![endif]-->
+                          <table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"width: 100%; max-width:600px;" align=3D"cent=
+er">
+                            <tr>
+                              <td role=3D"modules-container" style=3D"paddi=
+ng: 0px 0px 0px 0px; color: #000000; text-align: left;" bgcolor=3D"#ffffff"=
+ width=3D"100%" align=3D"left">
+                               =20
+    <table class=3D"module preheader preheader-hide" role=3D"module" data-t=
+ype=3D"preheader" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"display: none !important; mso-hide: all; visibility: hidden=
+; opacity: 0; color: transparent; height: 0; width: 0;">
+      <tr>
+        <td role=3D"module-content">
+          <p></p>
+        </td>
+      </tr>
+    </table>
+ =20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 18px 18px 18px;line-height:22px;text-alig=
+n:inherit;" height=3D"100%" valign=3D"top" bgcolor=3D"">
+            <div>
+<div style=3D"color: rgb(0, 0, 0); font-size: 13.3333px; font-style: normal=
+; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 4=
+00; font-family: verdana, geneva;">
+<div><strong>Dear Author/Researcher,</strong></div>
+
+<div>&nbsp;</div>
+
+<div><b>Global Journal of Engineering Science and Research Management&nbsp;=
+</b><font size=3D"4"><b>(GJESRM, ISSN&nbsp;</b></font><font size=3D"4"><b>2=
+349-4506</b></font><font size=3D"4"><b>),</b></font><b><font size=3D"3">&nb=
+sp;</font><font size=3D"6">&nbsp;</font></b></div>
+
+<div>&nbsp;</div>
+
+<div><b>Invites you to submit your research&nbsp;paper&nbsp;for&nbsp;publis=
+hing in&nbsp;</b><b><font size=3D"6">&nbsp;V</font>olume 6,<font size=3D"6"=
+>&nbsp;I</font>ssue 8&nbsp;(August- 2019).</b></div>
+
+<div>&nbsp;</div>
+
+<div>NOW INDEXED IN THOMSON REUTER&nbsp;<strong><font size=3D"4">ENDNOTE:&n=
+bsp;</font></strong><b>ResearcherID:</b><b>G<wbr>-2301-2016</b>&nbsp;<b>&nb=
+sp;</b></div>
+
+<div>&nbsp;</div>
+
+<div><b><a data-saferedirecturl=3D"https://www.google.com/url?q=3DSG-TEMP-U=
+RL-TAG0X&amp;source=3Dgmail&amp;ust=3D1557299875618000&amp;usg=3DAFQjCNEuLO=
+jGCTmvy6XB73HLF3ZIhdU5QQ" href=3D"http://www.researcherid.com/rid/D-6904-20=
+18" style=3D"color: rgb(17, 85, 204);" target=3D"_blank">http://www.researc=
+herid.com/ri<wbr>d/D-6904-2018</a>&nbsp;&nbsp;</b></div>
+
+<div>&nbsp;</div>
+
+<div><a data-saferedirecturl=3D"https://www.google.com/url?q=3DSG-TEMP-URL-=
+TAG1X&amp;source=3Dgmail&amp;ust=3D1557299875618000&amp;usg=3DAFQjCNEYz7xGQ=
+EC-y1oPbRORx0wWjmdcLQ" href=3D"http://www.gjesrm.com/submit_manuscript_onli=
+ne.php" style=3D"color: rgb(17, 85, 204);" target=3D"_blank"><font color=3D=
+"#000000" size=3D"4"><b>FOR ONLINE&nbsp;<font face=3D"arial, sans-serif">SU=
+BMISSION</font>&nbsp;MANUSCRIPT</b></font></a></div>
+
+<div>&nbsp;</div>
+
+<div><span style=3D"font-size:18px;"><font face=3D"arial, sans-serif"><b><a=
+ data-saferedirecturl=3D"https://www.google.com/url?q=3DSG-TEMP-URL-TAG2X&a=
+mp;source=3Dgmail&amp;ust=3D1557299875618000&amp;usg=3DAFQjCNEYz7xGQEC-y1oP=
+bRORx0wWjmdcLQ" href=3D"http://www.gjesrm.com/submit_manuscript_online.php"=
+ style=3D"color: rgb(17, 85, 204);">http://www.gjesrm.com/submit_m<wbr>anus=
+cript_online.php</a></b></font></span></div>
+</div>
+
+<div style=3D"color: rgb(0, 0, 0); font-size: 13.3333px; font-style: normal=
+; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 4=
+00; font-family: verdana, geneva;">&nbsp;</div>
+
+<div style=3D"color: rgb(0, 0, 0); font-family: Verdana; font-size: 13.3333=
+px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: =
+normal; font-weight: 400;"><b><u><span style=3D"font-size: 12pt;"><span sty=
+le=3D"background-color: rgb(255, 255, 0);"><span style=3D"font-size: 14pt;"=
+>CALL&nbsp;FOR&nbsp;PAPERS&nbsp;VOLUME 6, ISSUE 8</span></span></span></u><=
+/b></div>
+
+<div style=3D"color: rgb(0, 0, 0); font-family: Verdana; font-size: 13.3333=
+px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: =
+normal; font-weight: 400;">
+<div style=3D"font-family: verdana, geneva;"><b><font face=3D"Times New Rom=
+an, serif" size=3D"4">About GJESRM&nbsp;</font></b><i><font face=3D"Times N=
+ew Roman, serif" size=3D"4"><b>(</b>Scientific Journal&nbsp;<b>Impact Facto=
+r: 3.799,)</b></font></i></div>
+
+<div style=3D"font-family: verdana, geneva;"><font color=3D"#222222" face=
+=3D"Times New Roman, serif" size=3D"3">The&nbsp;</font><i><b>&quot;GLOBAL</=
+b>&nbsp;JOURNAL OF ENGINEERING SCIENCES AND RESEARCH MANAGEMENT<b>=E2=80=9D=
+</b></i><font color=3D"#222222" face=3D"Times New Roman, serif" size=3D"3">=
+&nbsp;</font>is a pre-reviewed,&nbsp;monthly, online international research=
+ journal, which publishes original articles, research articles, review arti=
+cles with top-level work from all areas of Engineering Research and their a=
+pplication including Mechanical, Civil, Electrical, Chemical, Electronics, =
+Mathematics and Geological, &nbsp;etc. Researchers in all<b>&nbsp;Managemen=
+t&nbsp;</b>technology and&nbsp;<b>Engineering&nbsp;</b>fields are encourage=
+d to contribute articles based on recent research. Journal publishes resear=
+ch articles and reviews within the whole field of Engineering Research, and=
+ it will continue to provide information on the latest trends and developme=
+nts in this ever-expanding subject.</div>
+
+<div style=3D"font-family: verdana, geneva;">To maintain a high-quality jou=
+rnal, manuscripts that appear in the GJESRM&nbsp; have been subjected to a =
+rigorous review process. This includes blind reviews by three or more membe=
+rs of the editorial review board, followed by a detailed review by the GJES=
+RM&nbsp;editors.</div>
+
+<div style=3D"font-family: verdana, geneva;">&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;"><strong>Subject Category:&nbsp=
+;</strong></div>
+
+<div style=3D"font-family: verdana, geneva;">Cover all branches of&nbsp;Eng=
+ineering and Science (Management)</div>
+
+<div style=3D"font-family: verdana, geneva;"><strong>Important Dates:</stro=
+ng></div>
+
+<div><font style=3D"font-family: verdana, geneva;">=C2=B7Paper&nbsp;Submiss=
+ion: &nbsp;</font><b><font face=3D"verdana, geneva" style=3D"font-family: v=
+erdana, geneva;">&nbsp;</font><span style=3D"background-color: rgb(255, 255=
+, 0);"><span style=3D"font-size: 12pt;">05&nbsp;</span></span></b><span sty=
+le=3D"background-color: rgb(255, 255, 0);"><span style=3D"font-size: 12pt;"=
+><b>August&nbsp;</b><b>2019.</b></span></span></div>
+
+<div style=3D"font-family: verdana, geneva;">=C2=B7Review Results (Acceptan=
+ce/Rejection) Notification:&nbsp;<span class=3D"m_-8932903973556423863m_714=
+4955671514293570gmail-m_-8008717912251605364m_-6836511217154458404gmail-m_-=
+3586670345802032790m_-2713146568083556105m_-2825586425274646155m_-587764817=
+9774073957gmail-m_1054018117431808475m_-5418586959424265242m_58827819935824=
+6162m_-3073215031316503592m_-8191227701859421947m_795051727797863683gmail-m=
+_-1239052422139096502gmail-m_-4827522700069238408gmail-m_-15541787916312722=
+38m_446672195183151168m_6712673376446634239m_-7179179305771777002gmail-m_-5=
+911024762096084769gmail-m_7914884863272874906gmail-m_-2741129273396794820gm=
+ail-m_6321990222817010983m_6079759896665665241m_-4198498005465131758gmail-m=
+_1577923488480885997gmail-m_-8783322439011863992gmail-m_-109105926753921522=
+0m_-8333755280777785843m_-4817813821792949gmail-m_-6139292513074594784m_158=
+0787414746970625m_-1660128609118976879m_-8181984509765803663m_-589649582863=
+3755835m_-5104447394033897978m_-4884349718193516678m_-3872571838151230111m_=
+1845632658971629740gmail-m_-8484916852924400167m_8705709126232182196m_64947=
+8686088826407gmail-m_8395303895939715661gmail-m_-7496906248697814687gmail-m=
+_-5819337607431368129gmail-m_1005603513788095961gmail-m_-544198554652151532=
+3gmail-m_14937793584420389gmail-m_6833036114462208846m_1770943494057952173g=
+mail-m_-9137867624827848199m_7052497327528617711m_1178457254105760008gmail-=
+m_-696476438382967518gmail-m_4397235275071743948m_4448431427902892242gmail-=
+m_6771174459960571222gmail-m_-4482612374921576006gmail-m_-76940332886625233=
+28gmail-m_1115836226132007752gmail-m_-9048644781704901019gmail-m_5649411655=
+148816807gmail-aBn">Within 02 &nbsp;Days</span>&nbsp;after submitting&nbsp;=
+paper.</div>
+
+<div><font face=3D"verdana, geneva" style=3D"font-family: verdana, geneva;"=
+>=C2=B7Published Online on :&nbsp;</font><span style=3D"background-color: r=
+gb(255, 255, 0);"><span style=3D"font-size: 12pt;"><b>10 August&nbsp;</b><b=
+>2019</b>&nbsp;.</span></span></div>
+
+<div style=3D"font-family: verdana, geneva;"><strong>Publication Charges:</=
+strong></div>
+
+<div style=3D"font-family: verdana, geneva;"><strong><font face=3D"Times Ne=
+w Roman, serif"><i>Indian Author(s)</i></font></strong></div>
+
+<div style=3D"font-family: verdana, geneva;"><font face=3D"Times New Roman,=
+ serif">Rs 1500/- upto 3 authors, after 3 authors charges will be Rs 500/au=
+thor&nbsp;</font></div>
+
+<div style=3D"font-family: verdana, geneva;"><font face=3D"Times New Roman,=
+ serif">Rs 300/author for Hard copy of certificate.</font></div>
+
+<div style=3D"font-family: verdana, geneva;"><strong><font face=3D"Times Ne=
+w Roman, serif"><i>Foreign Author(s)</i></font></strong></div>
+
+<div style=3D"font-family: verdana, geneva;"><font face=3D"Times New Roman,=
+ serif">$ 80 USD upto 6 Authors</font>&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;"><br>
+<strong>Submission Procedure:</strong></div>
+
+<div style=3D"font-family: verdana, geneva;">Manuscript are invited in MS W=
+ord format and to be submitted via mail on&nbsp;<u><a href=3D"mailto:articl=
+es@ijesrt.com" style=3D"color: rgb(17, 85, 204);" target=3D"_blank">infogje=
+srm@gmail.com</a></u>,&nbsp;&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;">Please note that Review&nbsp;P=
+apers/Articles are also acceptable.&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;">Once a&nbsp;paper&nbsp;is acce=
+pted, authors are assumed to cede copyrights of the&nbsp;paper&nbsp;over to=
+ GJESRM. All&nbsp;papers&nbsp;will be acknowledged and referred.</div>
+
+<div style=3D"font-family: verdana, geneva;">&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;"><strong>FINAL&nbsp;PAPER&nbsp;=
+SUBMISSION:</strong></div>
+
+<div style=3D"font-family: verdana, geneva;">Each final full text&nbsp;pape=
+r&nbsp;(.doc) along with the corresponding signed copyright transfer form s=
+hould be submitted by Email:&nbsp;<u><a href=3D"mailto:infogjesrm@gmail.com=
+" style=3D"color: rgb(17, 85, 204);" target=3D"_blank">infogjesrm@gmail.com=
+</a></u>&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;">&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;"><strong>Editor in Chief:</stro=
+ng></div>
+
+<div style=3D"font-family: verdana, geneva;"><b>GLOBAL JOURNAL OF ENGINEERI=
+NG SCIENCES AND&nbsp;RESEARCH MANAGEMENT&nbsp;</b><b>(GJESRM, ISSN&nbsp;234=
+9-4506),</b></div>
+
+<div style=3D"font-family: verdana, geneva;">&nbsp;</div>
+
+<div><span style=3D"font-family: verdana, geneva;">Website:&nbsp;</span><u>=
+<a data-saferedirecturl=3D"https://www.google.com/url?q=3DSG-TEMP-URL-TAG3X=
+&amp;source=3Dgmail&amp;ust=3D1557299875618000&amp;usg=3DAFQjCNGpL9aiBZTPJD=
+VH5FXwT5C_k4BiWw" href=3D"http://www.gjesrm.com/" style=3D"color: rgb(17, 8=
+5, 204);" target=3D"_blank"><b><span style=3D"background-color: rgb(255, 25=
+5, 0);">www.gjesrm.com</span></b></a></u></div>
+
+<div style=3D"font-family: verdana, geneva;">&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;">Paper&nbsp;Submission Email:&n=
+bsp;<u><a href=3D"mailto:infogjesrm@gmail.com" style=3D"color: rgb(17, 85, =
+204);" target=3D"_blank">infogjesrm@gmail.com</a></u></div>
+
+<div style=3D"font-family: verdana, geneva;">&nbsp;</div>
+
+<div style=3D"font-family: verdana, geneva;">For&nbsp;any Query, Please fee=
+l free to contact at:&nbsp;<u><a href=3D"mailto:infogjesrm@gmail.com" style=
+=3D"color: rgb(17, 85, 204);" target=3D"_blank">infogjesrm@gmail.com</a></u=
+></div>
+</div>
+</div>
+        </td>
+      </tr>
+    </table>
+  <div data-role=3D"module-unsubscribe" class=3D"module unsubscribe-css__un=
+subscribe___2CDlR" role=3D"module" data-type=3D"unsubscribe" style=3D"color=
+:#444444;font-size:12px;line-height:20px;padding:16px 16px 16px 16px;text-a=
+lign:center"><p style=3D"font-family:JOURNAL GJESRM;font-size:12px;line-hei=
+ght:20px"><a class=3D"Unsubscribe--unsubscribeLink" href=3D"https://u955342=
+4.ct.sendgrid.net/asm/unsubscribe/?user_id=3D9553424&amp;data=3DsYYDloaKcvC=
+FNWro_3nrW_cCfr5OQn4Na-Dq2HiCM0ZKNhh9i4cujf60x3YyqKJ0WSM8x0bAfw2SOcWINm2Vsr=
+k6hz2fNZRO8zFGIh-WjZNbIUBciInXSDx5aMYFc_s-LoNZWN9WdPETQSzBoXZRPcWK5yE4bUebt=
+NOZUc8PtiviO6Rt6VC28YhFet_WxEkPbYFUF71eKG26vDGaMyPSF73IdZ92CWaK8GUaOnESTQEw=
+G3xBd5FovHK9JLw_62cGkv7KbWC48WMctdS7YzbKxzFyw2t_yucI2mIOtxGleuqHv9sC0pR9Ak2=
+FsP9iQECf6LpLfhg78OB1Uw0TA4y6WP4JzSiB04Q2ckn-sfvBkJmp0ukKilfDHTxbnWlhDLU90P=
+6adBzUB-iQYXie2tpmH1eIV-rrjQu_TkwgTLgUSsbWjN-oqqnRm6gusxqaC4SGnBuk73n-8qIlI=
+vYIJOz_O2YTpL3WeJWY3jFjKNLClmq76i4mANvb_dXeYWM8gmciNLD4uoKLL4Xc8R-uqflh9HxI=
+ypeqHOsVJRPKGZrylBo=3D">Unsubscribe</a></p></div>
+                              </td>
+                            </tr>
+                          </table>
+                          <!--[if mso]>
+                          </td></tr></table>
+                          </center>
+                          <![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </center>
+ =20
+<img src=3D"https://u9553424.ct.sendgrid.net/wf/open?upn=3D7zRxtiYDTGBGqDWl=
+p0jwu-2FeuS-2FFLYAlhcXQufkROEAXiCKu5v3VrCd0WvCxFuEffOdhUIXlBHKgG-2Bd-2F182V=
+y0chsixRwEQvtCGc3tCA-2B4RHcBcUKlkGTEy3uH6pmzQlED9ZcE4xEPpMU0N5lwpkH-2BUNJsJ=
+ssnkoKy7f7yeGBCFNX3hrTC5BdVB-2FYVKoOXExiqdcmjx5-2BZjFdveDLgBUKM762iRWFzY6da=
+gZbxD7Unk4SmMO718JU4EymCRbGqFGiiGzLA-2FDgQD4vN3yKOt8cRTBKxnZeB7JrDWOqdejD-2=
+FNO1dXglN-2Ft3b-2Bwx4I5VQyYvL8jRnABf6FI02-2FFxDjD0Whvhlcps4U-2BI8aQN1tZc-2B=
+cKPz1GYv3faQiKxnsSWLcIskd3OcQcNOGpVoRsFC9ODqckasn97ZI686VK-2F2VIT00Y-3D" al=
+t=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important=
+;width:1px !important;border-width:0 !important;margin-top:0 !important;mar=
+gin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;=
+padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !impor=
+tant;padding-left:0 !important;">
+</body>
+</html>
+
+--009630cb4548c0327ce78c625a1c9e275896c50e72a3d261c826d5c93f3b--

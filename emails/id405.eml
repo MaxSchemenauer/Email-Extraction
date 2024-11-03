@@ -1,0 +1,446 @@
+Received: from DM6PR08MB6201.namprd08.prod.outlook.com (2603:10b6:a03:117::26)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0049.NAMPRD08.PROD.OUTLOOK.COM; Tue, 20 Aug 2019 08:30:15 +0000
+Received: from DM6PR08CA0017.namprd08.prod.outlook.com (2603:10b6:5:80::30) by
+ DM6PR08MB6201.namprd08.prod.outlook.com (2603:10b6:5:1e3::21) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2178.16; Tue, 20 Aug 2019 08:30:13 +0000
+Received: from BN3NAM04FT004.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::200) by DM6PR08CA0017.outlook.office365.com
+ (2603:10b6:5:80::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2157.15 via Frontend
+ Transport; Tue, 20 Aug 2019 08:30:13 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.166.68)
+ smtp.mailfrom=gmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=gmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.166.68 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.166.68; helo=mail-io1-f68.google.com;
+Received: from mail-io1-f68.google.com (209.85.166.68) by
+ BN3NAM04FT004.mail.protection.outlook.com (10.152.92.98) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2178.16 via Frontend Transport; Tue, 20 Aug 2019 08:30:13 +0000
+Received: by mail-io1-f68.google.com with SMTP id e20so10419465iob.9
+        for <foaad@calpoly.edu>; Tue, 20 Aug 2019 01:30:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=Xl8sdvH3IrOa0cA3Daoz6rrsmzP+SzRuRPAS6racsSA=;
+        b=AG3afX57eiVz05uvmaUskfg6UX+vfvpHyRA+ll4/BLCuLAhy2uoYXhmEEcPdHS2+KG
+         VeaX9M2CfOUNNM8Mx65g0eQWy/3oS3zBm6oI7GAzs69x6X/6F2ykmjWPrP2AjeYXivR4
+         PRQ/Af4gh7IpK6QGGwiyaWi+CbSc3GxYUqCXOyQfgQV979pNOo40qgGoBriyW35UEHPS
+         +Y3FjXHJ5r7XmJGEMpfN7aRQ0tBHD3i4JFyFkvzVI2UWLPjq94+MWybxmu4CUnHF+18S
+         L42SzYVsNQclTUb+MiXHDSh/du9gQFVGs3saUEhWqgeMnbRKarMrmX/kIRiGQ1SrzGJr
+         37Rg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=Xl8sdvH3IrOa0cA3Daoz6rrsmzP+SzRuRPAS6racsSA=;
+        b=Y7Ag0w4Oi/ue/K5DQHSqrwkmzMbClUUMjfkwmZwuO47Auku4YoK/GR9sKO9as3LDOi
+         4atlThmcVX4LRy2WSemzSz9ECWBS8S+0Ej7Nr1JQZGmc3mK98NqryzX7TSTbov6BVADs
+         SkQ6+MDlWk2RFtUvUzuZt1/bDPOTVFDHyW59YjBaI6tuSDw5Iyu9ddVWlONU5C6CKSVS
+         iQPCJ6a31QAF1I+YSN7QKD9kAQ3OdM4SOXlMKa+BeV7d2V4vWQbPUVbtFCinNZLgd4LA
+         vvqmSztDytvW0HY6zPSsnvM6umWbUQLCVqWXv+2whtr4W/tv/w2b5CgHn0yEXEqj0Bwu
+         XC5g==
+X-Gm-Message-State: APjAAAUIPFGA/zAg956qxzDm9Bk2djLCLvmlY0gqR+tEEWvNg4WjH4W4
+	3kE6BYe6CAcHAn7A9k8j1isDpEtIDi6Zem6WtbA=
+X-Google-Smtp-Source: APXvYqzSlLghbj+hVAEHUnKJRQdr81uONAV+uLxM1xiOUHE2WxOPXYPAVe+CmqtogOzDugDX1xmnCGkE+rOOhR9DJ6o=
+X-Received: by 2002:a5d:9711:: with SMTP id h17mr30049510iol.280.1566289812261;
+ Tue, 20 Aug 2019 01:30:12 -0700 (PDT)
+From: Ruth Franklin <rfranklin.ieee@gmail.com>
+Date: Tue, 20 Aug 2019 01:30:00 -0700
+Message-ID: <CAPT1ZSSdHcm-pBddRa95_mRtYxm1iJhb7NCsTvFLk=U0UZn86A@mail.gmail.com>
+Subject: IEEE Event 21 August - Radio Frequency ID via Drones
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000e01abb0590884372"
+Bcc: foaad@calpoly.edu
+Return-Path: rfranklin.ieee@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 20 Aug 2019 08:30:13.0040
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 6c3da39a-1771-4d0e-356a-08d725489ee7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132107634130070189;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.166.68;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(199004)(189003)(76482006)(75640400001)(42186006)(1096003)(6306002)(498394004)(86362001)(26005)(73392003)(486006)(733005)(881003)(236005)(336012)(61266001)(109986005)(16586007)(33964004)(16003)(305945005)(7596002)(246002)(59536001)(82202003)(5070765005)(7636002)(5660300002)(126002)(356004)(95326003)(6666004)(106002)(476003)(440504004)(71190400001)(517774005)(606006)(4006050)(2160300002)(966005)(8676002)(8576002)(55446002)(14444005)(124970200002)(15660700003)(15585785002);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB6201;H:mail-io1-f68.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-io1-f68.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT004.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 6c3da39a-1771-4d0e-356a-08d725489ee7
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:DM6PR08MB6201;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB6201:
+X-MS-Exchange-PUrlCount: 4
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 20 Aug 2019 08:30:13.0010
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6c3da39a-1771-4d0e-356a-08d725489ee7
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB6201
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.0097822
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2178.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UGJFSDI0NmJyZ3hpcnVKUGc0OVU5OE1FZnRuRUFaL2tJTitCYllOR0NwVDBO?=
+ =?utf-8?B?MktXQmZvNFNtYjhVSkJYbnM5YlQ0ZnN1aG1ycEVnRlJoZzVQQ1lsMGx4UytJ?=
+ =?utf-8?B?ODhqOXRZRGpva0RzM3NlRThheDdpUjk1RWlHWWpBNkN5OW1hMmFaUkFDdnhw?=
+ =?utf-8?B?NTM5MzRXUVFoWEZscjg1cSt6SmJ5MDRQTEd0bTB5SjdHK3VLRE5IRGkvRlZ0?=
+ =?utf-8?B?ejZ0b1Y4S2l5TzNRR1libkk1Tk0yYXB1UXdMSUJ1N1pwZGt1bjV5bE82RGxu?=
+ =?utf-8?B?SGxaV2t0VEtRLzhvdERTSEpnUFdYMVloa3JmaDgwSjZ6V1BnRFZPeU9aUHhW?=
+ =?utf-8?B?MWZnaWtsQUZ4WXF5WFNiM0RGQXdPMXdzVlJWZkt3T25VbFh5QUE5R0xRd1p4?=
+ =?utf-8?B?UnFvVHE0WGR6eWxoWGVyYThvQktQRkxWampNVmgvdng2U05sQ0Jyd1pQOUdx?=
+ =?utf-8?B?QTBJcmpCbVVUaWR3RmRxMnVUc0ZqQkx6S0lBaStST2xMRWZkZXBBYUc3UHRY?=
+ =?utf-8?B?ejNCM2FRRGg2U2hhazE0cmhIclVPemQzZ3ZGYlhtd0VaRmRhN1VKRWN0NmFm?=
+ =?utf-8?B?MzN4enY2dGZ1Z05yaUFwbWFkUTB6eXl5eEFrdDZkUnpRRi9PcnBIdythbzdR?=
+ =?utf-8?B?V2Nxd0NnNXNNNlIwQmVBbWVHcFEzYlpzZUYxNWozdkdtNU9wQXJaZ3lLUzR1?=
+ =?utf-8?B?ajJWeEpva01NRThsTVorUERkM0Z6ZzhpZ2E5dkowUExOQlpGK3dDaGVRUmJ6?=
+ =?utf-8?B?NmVRb0FLQXVWODdGVnhmbGIzQU1FdFRHRThDclB3TGF2UVk1ZFJ3UlJmRUNF?=
+ =?utf-8?B?NVdTOFhKdUhYc3IrQ0lmWXBmOXRPQzh3RnhlMUFUVytYK24yVU5BdUtRdFNI?=
+ =?utf-8?B?L21yVi80N2p4YVl6N2FsZXNnZzhZMFZMV1kxNU93emJ1L09penZUTjlJazBp?=
+ =?utf-8?B?a2tWd3VWNUh4S3cxcmhyNkVPT29BYm9YWjJwT2hkazA0Qmdia0FodXh3T29r?=
+ =?utf-8?B?SzVpb2VwbWFWV2FVY2hPS1B2bjUzS0prR1g0L3lMcXZER2xDL1hhS2pGUllp?=
+ =?utf-8?B?SHcyTFJ0b1dBaXhKV1NVRjV4L3M4RkhnNHVlbko1cEZkbVVIdG1xUkV4U2Vw?=
+ =?utf-8?B?K2Z1WUVaM1hxdDJKa0lwck1YenQ4bldmNTNFY0d5SG5MZkdxNHBES2ViSEdw?=
+ =?utf-8?B?MDRBU2JRdWJwVnZ3cUlrMGVRR2psRU5pcWViWXdKKzNPKzFmc0xybkltckRK?=
+ =?utf-8?B?aUJTQUFRcTh5MjBpa0hOMmoyK2lnS0wvd1Vtd2JzZWNyMjU0ajAzM0hXeTQw?=
+ =?utf-8?B?N2VtcUtQS1BPY1NZOTRCdnpOaWQzdTltU21aN3c2VU55MUZMTGNyUFlCeGdL?=
+ =?utf-8?B?cEp4d3JFK01wamRkRmpxekNVT0lBSzdJUVZzS251eExVQytkVFhrTzkraWxq?=
+ =?utf-8?Q?AIpc+8gC?=
+MIME-Version: 1.0
+
+--000000000000e01abb0590884372
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+There is still time to register for the August 21th IEEE Central Coast
+Event, *UAV-RFID for Outdoor Applications, *presented by Professor Tali
+Freed Ph.D. at *Flightline Restaurant. *Please see below for Details. Guest=
+s
+are welcome.
+
+Registrations for you and your guests must be made before Wednesday August
+21. I will report the exact number of registrants to Flightline Restaurant
+on Tuesday evening so that they can prepare the appropriate amount of food
+for the buffet on Wednesday evening.
+
+Best regards,
+
+Ruth Franklin, IEEE Central Coast Chair
+
+*REGISTER for EVENT @* - https://events.vtools.ieee.org/m/201787
+
+
+*IEEE Central Coast Event =E2=80=93 21 August 2019 @ 6PM*
+*Professor Tali Freed **Ph. D., P.E. - Cal Poly**: **UAV-RFID for Outdoor
+Applications**FREE EVENT - But must Register for food count*
+
+*Location =E2=80=93 Flightline Restaurant                                 *
+
+521 Firestone Rd, Goleta, CA, 93117
+
+[image: image.png]
+
+6:00 PM =E2=80=93 Buffet Style Dinner =E2=80=93 menu includes
+
+              BBQ Chicken, Tri-tip, Salmon,
+
+              Rice, Vegetables. Salad, Bread
+
+6:25 PM =E2=80=93 Central Coast Status
+
+6:30 PM =E2=80=93 Professor Freed Presentation
+
+*REGISTER for EVENT @ * - https://events.vtools.ieee.org/m/201787
+
+*UAV-RFID for Outdoor Applications =E2=80=93*
+
+=C2=B7        *Optimizing a UAV-RFID Cattle Search Tour*
+
+=C2=B7        *Efficiently managing oilfield equipment inventory*
+
+This presentation will introduce *PolyGAIT* =E2=80=93 the Cal Poly Center f=
+or
+Global Automatic Identification Technologies, its past R&D achievements and
+current fronts. Recent applied research on combined systems of unmanned
+aerial vehicles (*UAV*) and radio frequency identification (*RFID*) will be
+described. Commercial applicability and extensions of this research will be
+discussed.
+[image: image.png]
+
+
+
+*Professor Tali Freed  Ph.D., P.E.*
+
+Dr. Tali Freed received her Ph.D. from the U.C. Berkeley Department of
+Industrial Engineering and Operations Research. Her B.Sc. and M.Sc. are in
+Industrial Engineering and Management, from the Technion =E2=80=93 Israel I=
+nstitute
+of Technology.  Prior to starting her studies at the Technion Dr. Freed
+completed her mandatory military service in the Israeli Air Force, as the
+first woman technician in the force. Dr. Freed is a faculty member of the
+Industrial and Manufacturing Engineering Department of Cal Poly San Luis
+Obispo. She currently serves as the Graduate Programs and Senior Projects
+Coordinator for the department. Dr. Freed=E2=80=99s primary areas of teachi=
+ng,
+research, development, and consulting are RFID (radio frequency
+identification), process improvement, planning and scheduling, and design
+of information systems. She is certified as a Professional Engineer in the
+state of California, and the Director of PolyGAIT, The Multidisciplinary
+Cal Poly Center for Global Automatic Identification Technologies.
+http://www.polygait.calpoly.edu/
+
+Dr. Freed has been a faculty member at Cal Poly since 2001. She has also
+been adjunct faculty at the Naval Postgraduate School in Monterey and
+several other universities in the US and Israel. Dr. Freed invented and
+patented an efficient RFID-enabled process for food traceability. She
+specializes in custom-design of RFID systems for cost reduction and
+increased productivity. In the last two decades Dr. Freed has been
+consulting with many commercial, governmental, and non-profit
+organizations. Executives and engineers from various organizations
+frequently visit PolyGAIT to learn about RFID and its uses for process
+improvement. She has advised hundreds of these projects and published
+numerous academic and industrial articles and reports. She is frequently
+invited to speak at professional conferences and conventions.
+
+--000000000000e01abb0590884372
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><p class=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox=
+-492e458436-gmail-ox-44883b7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gma=
+il-m686837718590295891gmail-ox-5c131db748-gmail-m-934804190088159847m-32732=
+99141206711766gmail-m9009095543490243672gmail-m-1262130769561452635gmail-m-=
+5353580065159107123gmail-m-7685611329527244388gmail-ox-2fa371cfcb-msonormal=
+" style=3D"font-family:OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,=
+sans-serif;margin:0in 0in 2pt;color:rgb(0,0,0);font-size:13px;text-align:ju=
+stify"><font face=3D"verdana, sans-serif">Hello,</font></p><p class=3D"gmai=
+l-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-gmail-ox-44883b7d03=
+-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-m686837718590295891gmail-ox-=
+5c131db748-gmail-m-934804190088159847m-3273299141206711766gmail-m9009095543=
+490243672gmail-m-1262130769561452635gmail-m-5353580065159107123gmail-m-7685=
+611329527244388gmail-ox-2fa371cfcb-msonormal" style=3D"font-family:OpenSans=
+,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0px 0in 1em;c=
+olor:rgb(0,0,0);font-size:13px;text-align:justify"><font face=3D"verdana, s=
+ans-serif">There is still time to register for the August 21th IEEE Central=
+ Coast Event,&nbsp;</font><b style=3D"font-family:verdana,sans-serif;color:=
+rgb(34,34,34)"><span style=3D"line-height:19.9733px"><font color=3D"#000000=
+">UAV-RFID for Outdoor Applications,&nbsp;</font></span></b><span style=3D"=
+font-family:verdana,sans-serif;color:rgb(34,34,34)">presented by&nbsp;Profe=
+ssor Tali Freed Ph.D.</span><b style=3D"font-family:verdana,sans-serif;colo=
+r:rgb(34,34,34)">&nbsp;</b><span style=3D"font-family:verdana,sans-serif;co=
+lor:rgb(34,34,34)">at</span><b style=3D"font-family:verdana,sans-serif;colo=
+r:rgb(34,34,34)">&nbsp;</b><b style=3D"font-family:verdana,sans-serif"><spa=
+n style=3D"color:rgb(192,0,0)">Flightline Restaurant.&nbsp;</span></b><span=
+ style=3D"font-family:verdana,sans-serif">Please see below for Details.<b><=
+i>&nbsp;</i></b>Guests are welcome.&nbsp;</span></p><p class=3D"gmail-ox-2f=
+2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-gmail-ox-44883b7d03-gmail-=
+ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-m686837718590295891gmail-ox-5c131db=
+748-gmail-m-934804190088159847m-3273299141206711766gmail-m90090955434902436=
+72gmail-m-1262130769561452635gmail-m-5353580065159107123gmail-m-76856113295=
+27244388gmail-ox-2fa371cfcb-msonormal" style=3D"font-family:OpenSans,&quot;=
+Helvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0px 0in 1em;color:rg=
+b(0,0,0);font-size:13px;text-align:justify"><span style=3D"font-family:verd=
+ana,sans-serif">Registrations for you and your guests must be made before W=
+ednesday August 21. I will report the exact number of registrants to Flight=
+line Restaurant on Tuesday evening so that they can prepare the appropriate=
+ amount of food for the buffet on Wednesday evening.</span></p><p class=3D"=
+gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-gmail-ox-44883b=
+7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-m686837718590295891gmail=
+-ox-5c131db748-gmail-m-934804190088159847m-3273299141206711766gmail-m900909=
+5543490243672gmail-m-1262130769561452635gmail-m-5353580065159107123gmail-m-=
+7685611329527244388gmail-ox-2fa371cfcb-msonormal" style=3D"font-family:Open=
+Sans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0px 0in 1=
+em;color:rgb(0,0,0);font-size:13px;text-align:justify"><span style=3D"font-=
+family:verdana,sans-serif">Best regards,&nbsp;</span><br></p><p class=3D"gm=
+ail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-gmail-ox-44883b7d=
+03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-MsoNormal" style=3D"font-family:=
+OpenSans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0in 0=
+in 2pt;color:rgb(0,0,0);font-size:13px;text-align:justify"></p><p class=3D"=
+gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-gmail-ox-44883b=
+7d03-gmail-ox-02895cdb7c-gmail-ox-f5fee7922a-gmail-m686837718590295891gmail=
+-ox-5c131db748-gmail-m-934804190088159847m-3273299141206711766gmail-m900909=
+5543490243672gmail-m-1262130769561452635gmail-m-5353580065159107123gmail-m-=
+7685611329527244388gmail-ox-2fa371cfcb-msonormal" style=3D"font-family:Open=
+Sans,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;margin:0in 0in 8=
+pt;color:rgb(0,0,0);font-size:13px"><font face=3D"verdana, sans-serif">Ruth=
+ Franklin,&nbsp;IEEE Central Coast Chair</font><span style=3D"font-family:A=
+rial,sans-serif;font-size:12pt"></span></p><p class=3D"gmail-ox-2f2feac4e8-=
+gmail-ox-6d74ed3f52-gmail-ox-492e458436-gmail-ox-44883b7d03-gmail-ox-02895c=
+db7c-gmail-ox-f5fee7922a-gmail-m686837718590295891gmail-ox-5c131db748-gmail=
+-m-934804190088159847m-3273299141206711766gmail-m9009095543490243672gmail-m=
+-1262130769561452635gmail-m-5353580065159107123gmail-m-7685611329527244388g=
+mail-ox-2fa371cfcb-msonormal" style=3D"font-family:&quot;Times New Roman&qu=
+ot;,serif;margin:0in 0in 8pt;color:rgb(0,0,0);font-size:12pt"><b style=3D"c=
+olor:rgb(34,34,34);font-family:Calibri,sans-serif;font-size:14.6667px"><spa=
+n style=3D"font-size:14pt;color:rgb(192,0,0)">REGISTER for EVENT&nbsp;@</sp=
+an></b><span style=3D"color:rgb(34,34,34);font-family:Calibri,sans-serif;fo=
+nt-size:14.6667px">&nbsp;-&nbsp;</span><a href=3D"https://events.vtools.iee=
+e.org/m/201787" target=3D"_blank" rel=3D"noopener" style=3D"word-break:brea=
+k-word;color:rgb(0,125,188);font-size:14.6667px">https://events.vtools.ieee=
+.org/m/201787</a>&nbsp;&nbsp;<br></p><p class=3D"gmail-ox-2f2feac4e8-gmail-=
+ox-6d74ed3f52-gmail-ox-492e458436-MsoNormal" style=3D"font-family:Calibri,s=
+ans-serif;margin:0in 0in 2pt;color:rgb(0,0,0);text-align:justify;font-size:=
+11pt"><b><span style=3D"font-size:16pt"><br></span></b></p><p class=3D"gmai=
+l-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-MsoNormal" style=3D=
+"font-family:Calibri,sans-serif;margin:0in 0in 2pt;color:rgb(0,0,0);text-al=
+ign:justify;font-size:11pt"><b><span style=3D"font-size:16pt">IEEE Central =
+Coast Event =E2=80=93 21 August 2019 @ 6PM</span></b></p><h5 style=3D"font-=
+size:11pt;margin:0in 0in 10.5pt;line-height:15.6933px;font-family:&quot;Cal=
+ibri Light&quot;,sans-serif;color:rgb(47,84,150);font-weight:normal"><span =
+class=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-m_-282=
+8355166905858026gmail-speakername"><b><span style=3D"font-size:14pt;line-he=
+ight:19.9733px;color:black">Professor Tali Freed&nbsp;</span></b></span><b>=
+<span style=3D"font-size:14pt;line-height:19.9733px;color:black">Ph. D., P.=
+E. - Cal Poly</span></b><b><span style=3D"font-size:14pt;line-height:19.973=
+3px">:&nbsp;</span></b><b><span style=3D"font-size:14pt;line-height:19.9733=
+px;color:rgb(192,0,0)">UAV-RFID for Outdoor Applications</span></b></h5><h5=
+ style=3D"font-size:11pt;margin:0in 0in 10.5pt;line-height:15.6933px;font-f=
+amily:&quot;Calibri Light&quot;,sans-serif;color:rgb(47,84,150);font-weight=
+:normal"><b style=3D"font-family:Calibri,sans-serif;font-size:11pt;text-ali=
+gn:justify;color:rgb(34,34,34)"><span style=3D"font-size:14pt">FREE EVENT -=
+ But must Register for food count</span></b></h5><p class=3D"gmail-ox-2f2fe=
+ac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-m_-2828355166905858026gmail-s=
+tyle1" style=3D"font-family:&quot;Times New Roman&quot;,serif;margin:0in 0i=
+n 2pt;color:rgb(0,0,0);font-size:12pt"><b><span style=3D"font-size:14pt;fon=
+t-family:Calibri,sans-serif">Location =E2=80=93&nbsp;<span style=3D"color:r=
+gb(192,0,0)">Flightline Restaurant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;</span></span></b></p><p class=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74e=
+d3f52-gmail-ox-492e458436-m_-2828355166905858026gmail-style1" style=3D"font=
+-family:&quot;Times New Roman&quot;,serif;margin:0in 0in 2pt;color:rgb(0,0,=
+0);font-size:12pt"><span style=3D"font-family:Calibri,sans-serif">521 Fires=
+tone Rd, Goleta, CA, 93117</span><span style=3D"font-family:Calibri,sans-se=
+rif"></span></p><p class=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-o=
+x-492e458436-MsoNormal" style=3D"font-family:Calibri,sans-serif;margin:0in =
+0in 2pt;color:rgb(0,0,0);font-size:11pt"><img src=3D"https://myemail.cox.ne=
+t/appsuite/api/image/mail/picture?folder=3Ddefault0%2FINBOX&amp;id=3D116747=
+&amp;uid=3Dii_jyzd5sek0" id=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmai=
+l-ii_jyzd5sek0" alt=3D"image.png" width=3D"337" height=3D"192" style=3D"max=
+-width: 100%; vertical-align: middle; height: 192px; width: 337px; font-fam=
+ily: Arial, Helvetica, sans-serif; font-size: small;"><br></p><p class=3D"g=
+mail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-MsoNormal" style=
+=3D"font-family:Calibri,sans-serif;margin:0in 0in 0.0001pt;color:rgb(0,0,0)=
+;line-height:15.6933px;font-size:11pt"><span style=3D"font-size:16px">6:00 =
+PM =E2=80=93 Buffet Style Dinner =E2=80=93 menu includes</span><span style=
+=3D"font-size:12pt;line-height:17.12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class=
+=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-MsoNormal" =
+style=3D"font-family:Calibri,sans-serif;margin:0in 0in 0.0001pt;color:rgb(0=
+,0,0);line-height:15.6933px;font-size:11pt"><span style=3D"font-size:12pt;l=
+ine-height:17.12px"></span><span style=3D"font-size:10.5pt;line-height:14.9=
+8px;font-family:Verdana,sans-serif;color:rgb(97,97,97)">&nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; BBQ Chicken, Tri-tip, Salmon,</span></p><p cl=
+ass=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-MsoNorma=
+l" style=3D"font-family:Calibri,sans-serif;margin:0in 0in 0.0001pt;color:rg=
+b(0,0,0);font-size:11pt"><span style=3D"font-size:10.5pt;font-family:Verdan=
+a,sans-serif;color:rgb(97,97,97)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rice, Vegetables. Salad, Bread</span>=
+</p><p class=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436=
+-MsoNormal" style=3D"font-family:Calibri,sans-serif;margin:2pt 0in;color:rg=
+b(0,0,0);font-size:11pt"><span style=3D"font-size:12pt">6:25 PM =E2=80=93 C=
+entral Coast Status</span></p><p class=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74=
+ed3f52-gmail-ox-492e458436-MsoNormal" style=3D"font-family:Calibri,sans-ser=
+if;margin:0in 0in 2pt;color:rgb(0,0,0);font-size:11pt"><span style=3D"font-=
+size:12pt">6:30 PM =E2=80=93 Professor Freed Presentation</span></p><p clas=
+s=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-MsoNormal"=
+ style=3D"font-family:Calibri,sans-serif;margin:12pt 0in;color:rgb(0,0,0);f=
+ont-size:11pt"><b><span style=3D"font-size:14pt;color:rgb(192,0,0)">REGISTE=
+R for EVENT&nbsp;@&nbsp;</span></b>&nbsp;-&nbsp;<a href=3D"https://events.v=
+tools.ieee.org/m/201787" target=3D"_blank" rel=3D"noopener" style=3D"word-b=
+reak:break-word;color:rgb(0,125,188);font-family:&quot;Times New Roman&quot=
+;,serif">https://events.vtools.ieee.org/m/201787</a></p><p style=3D"font-fa=
+mily:&quot;Times New Roman&quot;,serif;margin:2pt 0in;color:rgb(0,0,0);text=
+-align:justify;font-size:12pt"><b><span style=3D"font-size:14pt;font-family=
+:Calibri,sans-serif">UAV-RFID for Outdoor Applications =E2=80=93</span></b>=
+</p><p style=3D"font-family:&quot;Times New Roman&quot;,serif;margin:2pt 0i=
+n 2pt 0.5in;color:rgb(0,0,0);text-align:justify;font-size:12pt"><span style=
+=3D"font-size:13pt;font-family:Symbol">=C2=B7<span style=3D"font-stretch:no=
+rmal;font-size:7pt;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><b><span style=3D"font-size:=
+13pt;font-family:Calibri,sans-serif">Optimizing a UAV-RFID Cattle Search To=
+ur</span></b></p><p style=3D"font-family:&quot;Times New Roman&quot;,serif;=
+margin:2pt 0in 2pt 0.5in;color:rgb(0,0,0);text-align:justify;font-size:12pt=
+"><span style=3D"font-size:13pt;font-family:Symbol">=C2=B7<span style=3D"fo=
+nt-stretch:normal;font-size:7pt;font-family:&quot;Times New Roman&quot;">&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><b><span style=
+=3D"font-size:13pt;font-family:Calibri,sans-serif">Efficiently managing oil=
+field equipment inventory</span></b></p><p class=3D"gmail-ox-2f2feac4e8-gma=
+il-ox-6d74ed3f52-gmail-ox-492e458436-MsoNormal" style=3D"font-family:Calibr=
+i,sans-serif;margin:0in 0in 0.0001pt;color:rgb(0,0,0);font-size:11pt"><span=
+ style=3D"font-size:12.5pt">This presentation will introduce&nbsp;<b>PolyGA=
+IT</b>&nbsp;=E2=80=93 the Cal Poly Center for Global Automatic Identificati=
+on Technologies, its past R&amp;D achievements and current fronts. Recent a=
+pplied research on combined systems of unmanned aerial vehicles (<b>UAV</b>=
+) and radio frequency identification (<b>RFID</b>) will be described. Comme=
+rcial applicability and extensions of this research will be discussed.</spa=
+n></p><div style=3D"color:rgb(0,0,0);font-family:OpenSans,&quot;Helvetica N=
+eue&quot;,Helvetica,Arial,sans-serif;font-size:13px"><img src=3D"https://my=
+email.cox.net/appsuite/api/image/mail/picture?folder=3Ddefault0%2FINBOX&amp=
+;id=3D116747&amp;uid=3Dii_jyzdbnjb1" id=3D"gmail-ox-2f2feac4e8-gmail-ox-6d7=
+4ed3f52-gmail-ii_jyzdbnjb1" alt=3D"image.png" width=3D"209" height=3D"225" =
+style=3D"max-width: 100%; vertical-align: middle; height: 225px; width: 209=
+px;">&nbsp;&nbsp;&nbsp;<br></div><p class=3D"gmail-ox-2f2feac4e8-gmail-ox-6=
+d74ed3f52-gmail-ox-492e458436-MsoNormal" style=3D"font-family:Calibri,sans-=
+serif;margin:0in 0in 0.0001pt;color:rgb(0,0,0);font-size:11pt"><span style=
+=3D"font-family:Arial,sans-serif">&nbsp;</span></p><p class=3D"gmail-ox-2f2=
+feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-MsoNormal" style=3D"font-fa=
+mily:Calibri,sans-serif;margin:0in 0in 0.0001pt;color:rgb(0,0,0);text-align=
+:justify;font-size:11pt"><b><u><span style=3D"font-size:12pt;font-family:Ar=
+ial,sans-serif">Professor Tali Freed &nbsp;Ph.D., P.E.</span></u></b><b><u>=
+<span style=3D"font-size:12pt;font-family:Arial,sans-serif"></span></u></b>=
+</p><p class=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436=
+-MsoNormal" style=3D"font-family:Calibri,sans-serif;margin:0in 0in 0.0001pt=
+;color:rgb(0,0,0);text-align:justify;font-size:11pt"><span id=3D"gmail-ox-2=
+f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-m_-2828355166905858026gma=
+il-Picture_x0020_2" style=3D"text-align:left;margin-left:1.35pt;margin-top:=
+4.4pt;width:157.05pt;height:169.4pt"></span><span style=3D"font-size:12.5pt=
+">Dr. Tali Freed received her Ph.D. from the U.C. Berkeley Department of In=
+dustrial Engineering and Operations Research. Her B.Sc. and M.Sc. are in In=
+dustrial Engineering and Management, from the Technion =E2=80=93 Israel Ins=
+titute of Technology.&nbsp; Prior to starting her studies at the Technion D=
+r. Freed completed her mandatory military service in the Israeli Air Force,=
+ as the first woman technician in the force. Dr. Freed is a faculty member =
+of the Industrial and Manufacturing Engineering Department of Cal Poly San =
+Luis Obispo. She currently serves as the Graduate Programs and Senior Proje=
+cts Coordinator for the department. Dr. Freed=E2=80=99s primary areas of te=
+aching, research, development, and consulting are RFID (radio frequency ide=
+ntification), process improvement, planning and scheduling, and design of i=
+nformation systems. She is certified as a Professional Engineer in the stat=
+e of California, and the Director of PolyGAIT, The Multidisciplinary Cal Po=
+ly Center for Global Automatic Identification Technologies. &nbsp;</span><a=
+ href=3D"http://www.polygait.calpoly.edu/" target=3D"_blank" rel=3D"noopene=
+r" style=3D"word-break:break-word;color:rgb(0,125,188);font-family:&quot;Ti=
+mes New Roman&quot;,serif"><span style=3D"font-size:12.5pt">http://www.poly=
+gait.calpoly.edu/</span></a><span style=3D"font-size:12.5pt"></span></p><p =
+class=3D"gmail-ox-2f2feac4e8-gmail-ox-6d74ed3f52-gmail-ox-492e458436-MsoNor=
+mal" style=3D"font-family:Calibri,sans-serif;margin:0in 0in 0.0001pt;color:=
+rgb(0,0,0);text-align:justify;font-size:11pt"><span style=3D"font-size:12.5=
+pt">Dr. Freed has been a faculty member at Cal Poly since 2001. She has als=
+o been adjunct faculty at the Naval Postgraduate School in Monterey and sev=
+eral other universities in the US and Israel. Dr. Freed invented and patent=
+ed an efficient RFID-enabled process for food traceability. She specializes=
+ in custom-design of RFID systems for cost reduction and increased producti=
+vity. In the last two decades Dr. Freed has been consulting with many comme=
+rcial, governmental, and non-profit organizations. Executives and engineers=
+ from various organizations frequently visit PolyGAIT to learn about RFID a=
+nd its uses for process improvement. She has advised hundreds of these proj=
+ects and published numerous academic and industrial articles and reports. S=
+he is frequently invited to speak at professional conferences and conventio=
+ns</span><span style=3D"font-size:13pt">.</span></p></div>
+
+--000000000000e01abb0590884372--

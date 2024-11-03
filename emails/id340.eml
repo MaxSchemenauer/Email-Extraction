@@ -1,0 +1,560 @@
+Received: from BN7PR08MB4978.namprd08.prod.outlook.com (2603:10b6:a03:94::33)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0056.PROD.EXCHANGELABS.COM; Fri, 26 Jul 2019 11:31:26 +0000
+Received: from DM5PR08CA0035.namprd08.prod.outlook.com (2603:10b6:4:60::24) by
+ BN7PR08MB4978.namprd08.prod.outlook.com (2603:10b6:408:28::28) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2094.16; Fri, 26 Jul 2019 11:31:24 +0000
+Received: from SN1NAM04FT021.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::208) by DM5PR08CA0035.outlook.office365.com
+ (2603:10b6:4:60::24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2094.12 via Frontend
+ Transport; Fri, 26 Jul 2019 11:31:24 +0000
+Authentication-Results: spf=pass (sender IP is 66.163.189.146)
+ smtp.mailfrom=yahoo.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=yahoo.com;calpoly.edu; dmarc=pass action=none
+ header.from=yahoo.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of yahoo.com designates
+ 66.163.189.146 as permitted sender) receiver=protection.outlook.com;
+ client-ip=66.163.189.146; helo=sonic314-20.consmr.mail.ne1.yahoo.com;
+Received: from sonic314-20.consmr.mail.ne1.yahoo.com (66.163.189.146) by
+ SN1NAM04FT021.mail.protection.outlook.com (10.152.88.149) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2115.10 via Frontend Transport; Fri, 26 Jul 2019 11:31:23 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1564140682; bh=J6/LfVx+Nu5LnzkkNM3vetU+t+t1LXj26/+peuM+CkU=; h=Date:From:Reply-To:Subject:References:From:Subject; b=YmJuqhmjwtxn6kOwAucd5umkGr/e0jmXLOZSWH6kaSI4Ti8ruwhh8T1YyhNnRCmJJkFS3J9rFr6Or2B5O1eW/Kl8qyiHTc7jMYPceDL/H+FXFISrHup5sjB/stvlORy/uqVNFhlAeU6Y5jPZ9TRCbbxeLlYWykJeYtMe8WJRKOdZyD+MK4xFn5lJsdbKvO75eimYaKUFgl9wOxIpIFTGqqEeC0fMqay2HoPXwRFs9g1/iQjv+TZnZSQAv7rlBNFispjJKZQ5iqz+O3zp24s8sZXgZ1EfO7UEEogKhJMVADehwPzpisxu7DdqRKBTIbOepWs/QNKcBEA5nggeUdOXxA==
+X-YMail-OSG: LAF45DoVM1l6I5lR5a6EyJhjl8wzUEYJhF.QFBgYs.RRy5ymGYoZnDjmRlgqiP_
+ TYwDsqmOBkc4ZrzhRTXGoVZK_a03i0uhaPvcPmfr1vyMAf2v4_4pev7Yez1IrUBp24ake3MJYOr0
+ Af9D9fE1O0YVZ66ULjXnZzSN3_08S1FbRkYXEwYP.Q_tcP3CRtMajmWiqVS_ERB19medfOmedHW7
+ .ff_TQ_eW1uIpAF2sYr.NJXERfvq0tuVJDDqJvZSSdQA4ovjvmD646df.0UslQ4ufZFGmv8H_va3
+ aPpMfeZ4MoHMFChuo7SHMtjCzRKzxvMg0EvIYo0ynh6.JunS2GvBRu_nnAq26CMOinj9kZbwJfDy
+ tc7AyEd8k_ZlQ_llC75Fnc7tj3LvpV2TV.ZoG4biyxND1nrVbHHwPxP3d.0ruDG3Uu1H_vBPogAA
+ 8c2eAkEzwZ.g2lvJ.BHLJrMzeF6JHK59Pupf3IvhJHSDG2DTZLJTSul4Z0VeDpu4pP3yiwb1zsc_
+ knU8hVTJnlhLwj31bH_coN3FA0u5bYf.WiyhvEW.fl325Pt_0iBvHKtT5KKYbaaIQerZ.69YplRg
+ 14biJ59W6eOE5jqWEZLHf3GkbfR7sBFOoVYfBPLpwZlJ3o44mrqNOOxen.u04tJZZX_wXd7Lb_Nj
+ VnwsXxztSVsJnEFqbonoYQgQFYprqcNXPI2yEBlf50E4YYc8IUvKMCE5JAp2LHRTjDTSH3KCTbSo
+ teEgkqIso_eN3DpT_mt79cVmM9_hSa.6Lu3B0saUyVQVxn.mdHnXu..ug0zb7HYmoOpEkPRLo5w6
+ C16ogK.e_.GCzs.xsOnuvSPTBvUUd2Fk.Mo3tXc_vRmCM_3bI_lHMbVw_AqAZYx0j4g..k1p04W5
+ okiAhYi0PGJJzhT5MwHJ4I23gwD.R7dYn6yBs.5CpDWXpvkmNSLcwhV2JemQqOdSBu6KAGP9GfJi
+ 6C3LiJd4vLiI_Ys6rs3nd_Uh5OjEuwKlVbC8i7GauzzmbykoPySyLiCfiIm0nyfwz3PE5Q0Ku47u
+ k8Gjg1TnGg_uD2vlXtgP.sx2tz0NrnMrQk6QngDFMGrCKWn0GJb0LImPEvXRanIH2UVkmaRa16gO
+ XL5F0jki53ylAVFnYEwXFR85qv_X3JFJW8oNqbZNYcyGtpVKlR9.nhx2Ikz2QtbrmVrtc2iJdZ4t
+ 0OZooA893OrkKBCDxFl9ycXKfE_9r1uJbcfecHLYCt93Riy69jzjJLK0ZojQU0NsV2cvo_7.6bCE
+ POHBEa5gdx907nw--
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic314.consmr.mail.ne1.yahoo.com with HTTP; Fri, 26 Jul 2019 11:31:22 +0000
+Date: Fri, 26 Jul 2019 11:31:19 +0000 (UTC)
+From: "seasconf@yahoo.com" <seasconf@yahoo.com>
+Reply-To: "seasconf@yahoo.com" <seasconf@yahoo.com>
+Message-ID: <333993158.1395511.1564140679086@mail.yahoo.com>
+Subject: Call for papers-8th International Conference on Software
+ Engineering and Applications (SEAS 2019)
+Content-Type: multipart/alternative;
+	boundary="----=_Part_1395510_1472907305.1564140679082"
+References: <333993158.1395511.1564140679086.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.13991 YMailNorrin Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36
+Content-Length: 23021
+To: Undisclosed recipients:;
+Return-Path: seasconf@yahoo.com
+X-MS-Exchange-Organization-ExpirationStartTime: 26 Jul 2019 11:31:24.1065
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ce83e1d7-7a27-4d1a-0faa-08d711bcca42
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:66.163.189.146;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(286005)(199004)(189003)(966005)(16586007)(43066004)(106002)(26005)(347745004)(33964004)(476003)(76176011)(126002)(34766002)(16003)(881003)(109986005)(88526003)(15188155005)(19273905006)(53376002)(11686005)(7066003)(6306002)(75640400001)(8676002)(86362001)(16799955002)(246002)(2860700004)(4006050)(606006)(71190400001)(14444005)(1096003)(50226002)(8796002)(1671002)(426003)(7596002)(446003)(37276005)(6666004)(356004)(336012)(7636002)(85226003)(3450700001)(486006)(236005)(82202003)(21615005)(225293001)(62882003);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4978;H:sonic314-20.consmr.mail.ne1.yahoo.com;FPR:;SPF:Pass;LANG:en;PTR:sonic314-20.consmr.mail.ne1.yahoo.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT021.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: ce83e1d7-7a27-4d1a-0faa-08d711bcca42
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:BN7PR08MB4978;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4978:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Jul 2019 11:31:23.5891
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ce83e1d7-7a27-4d1a-0faa-08d711bcca42
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4978
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5034341
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UTJFN1U4eXd3K2dqSG1SQzhGVS9pQis4cmFZZkozdTdWcmZHSHg5TmV0NCsz?=
+ =?utf-8?B?RENnUFduWk0rRTQ4SlRLcmRLTDZUdEhBaStFcmR4eFUwWXM4dHJvSXYxMHJT?=
+ =?utf-8?B?R2pIblkrVFhRVG9VZHUya05jdE00UU9RU2dMU3p1Z1h6TFVjQzBkS0tpYWp6?=
+ =?utf-8?B?TE96ZFY2ZGk1L3hDTXM5cXB0NnpHdlQyQnFzd3RNaFBva0FTSHNrT0w5aWE2?=
+ =?utf-8?B?eUd6OG5jSXl5RkpyUUlCTHZoUkR6MEdyYkx3MW1jeXRMM0ZqVm80RGlyRVhm?=
+ =?utf-8?B?dE95NCthRVlQOE9hcndMSUl6eEdMckZiNGdBb2Z4MCtBQ1FmR1BKK3RHVnhx?=
+ =?utf-8?B?cjU4RzNsak8rYlM5clgyWnBBWHFjdXNqcmdvR2FpMGJBNFYxVERWWjhlR21Y?=
+ =?utf-8?B?YXc4QUlFRjlKZlAvL2VkL0RZU3k2aG1pbVNXVmlWa1ZudkJmZ1RVZi95eVRE?=
+ =?utf-8?B?UkgwdWF4V3lpaDRuMFNORGYxUXY1REUzZE5nZUp1SlRRc28yVkVUb1FrMmRn?=
+ =?utf-8?B?eEhkTmxXVUVGcmUzeVR2M3lCQno0U24xNnV5MEkzUENSSndELzBkL0liWXhP?=
+ =?utf-8?B?UEVzMG93ZnJ1V0V3dEcyVU9hTGlRN0FiRVZaQjFrV1hCa2xzL0NvR05NQlhx?=
+ =?utf-8?B?c1ZlVnNFV2tRRjFIYUxXMjNES0lEcVJsODFFUHRPNVkzaTFjVXQ0eE91L0hp?=
+ =?utf-8?B?bHMrT0F0OEFqMGZldVk3cjlSczRaMVRKU3RIOEFhWGlWSGNibkwxdHZrVUpP?=
+ =?utf-8?B?eGpDRTJ2Y1JNQnZFUmtDeXFiUFpIT2pkRGNlZS95dW5SU3c2OG1EbXpkR2l1?=
+ =?utf-8?B?R1AwODBSc09VY1RRNmdOQVhXaWEwaHRBalMxQmgwd1NmR1lDSDhaV2Z1NHpo?=
+ =?utf-8?B?RmswTjVFSWlQRkdIWDBLZ3p3V2lOalkydU1CUE1WaHUzNUorNnY1L1B5aXVY?=
+ =?utf-8?B?ckpDby9HeEVMZWFibi9XZW05RmlJVDFxZmNWZWJJMEJmamZqeUlQRzBleXFr?=
+ =?utf-8?B?WE1weXJwYzlKNmdNMVFVaXplYnoyYW8wYkNqTjRKdFoxaG51VmU3TCsyN00z?=
+ =?utf-8?B?SjJ6c0xEa0h5S0pDWTErWVhJMWpwMlhkRmN4UnVQa1cxa0YxbmQyN2Y2UFMr?=
+ =?utf-8?B?WHBBV0c0K3dMekl6YU1XYlZDakJ5S1dUeWxHVnVxMjdCcTFrcWNWc2lVYjZJ?=
+ =?utf-8?B?V0ExUEQwWmtuVm5adHFnM0g3Nm5QbU9qMmlTUEE5Wkt3MUFwWnVsTkZtSHJ5?=
+ =?utf-8?B?ZFlSNDdQeHVZMExzdFUxWjhOTHVINlYvUTFxMFdZV1lvcWNNQXR1bWpEV29E?=
+ =?utf-8?Q?5FqFv24nK9UCf/nbkWxUD9QNV3pCU24/Xx?=
+MIME-Version: 1.0
+
+------=_Part_1395510_1472907305.1564140679082
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+=20
+8th=C2=A0InternationalConference on Software Engineering and Applications (=
+SEAS 2019)=C2=A0
+
+https://necom2019.org/seas/index.html=C2=A0
+
+August 24 ~25, 2019, Vienna,Austria=C2=A0
+
+Scope=C2=A0
+
+8th=C2=A0International Conferenceon Software Engineering and Applications (=
+SEAS 2019) will provide an excellentinternational forum for sharing knowled=
+ge and results in theory, methodologyand applications of Software Engineeri=
+ng and Applications. The goal of thisConference is to bring together resear=
+chers and practitioners from academia andindustry to focus on understanding=
+ Modern software engineering concepts andestablishing new collaborations in=
+ these areas.=C2=A0
+
+Authors are solicited to contributeto the conference by submitting articles=
+ that illustrate research results,projects, surveying works and industrial =
+experiences that describe significantadvances in the areas of software engi=
+neering & applications.=C2=A0
+
+Topics of Interest=C2=A0
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0TheSoftware Pro=
+cess
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0SoftwareEnginee=
+ring Practice
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0WebEngineering
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0QualityManageme=
+nt
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0ManagingSoftwar=
+e Projects
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0AdvancedTopics =
+in Software Engineering
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Multimediaand V=
+isual Software Engineering
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0SoftwareMainten=
+ance and Testing
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Languagesand Fo=
+rmal Methods
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Web-basedEducat=
+ion Systems and Learning Applications
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0SoftwareEnginee=
+ring Decision Making
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Knowledge-based=
+Systems and Formal Methods
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Search Engines =
+and Information Retrieval=C2=A0
+
+Paper Submission=C2=A0
+
+Authors are invited to submitpapers through the conference=C2=A0submission =
+system=C2=A0by=C2=A0July 27, 2019.=C2=A0Submissions must be originaland sho=
+uld not have been published previously or be under consideration forpublica=
+tion while being evaluated for this conference. The proceedings of theconfe=
+rence will be published by=C2=A0ComputerScience Conference Proceedings=C2=
+=A0in=C2=A0ComputerScience & Information Technology (CS & IT)=C2=A0series (=
+Confirmed).
+
+=C2=A0
+
+Selected papers from=C2=A0SEAS 2019,=C2=A0after further revisions, willbe p=
+ublished in the special issue of the following journals=C2=A0=C2=A0
+  =20
+   - International Journal of Software Engineering & Applications (IJSEA)=
+=C2=A0
+  =20
+   - International Journal on Computational Science & Applications(IJCSA)=
+=C2=A0
+  =20
+   - International Journal in Foundations of Computer Science & Technology =
+(IJFCST)=C2=A0
+
+Important Dates=C2=A0
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0SubmissionDeadl=
+ine : July 27, 2019
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0AuthorsNotifica=
+tion : August 10, 2019
+
+=C2=B7=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Registration& C=
+amera-Ready Paper Due : August 13, 2019=C2=A0
+
+Here's where you canreach us:=C2=A0seas@necom2019.org=C2=A0or=C2=A0seasconf=
+@yahoo.com
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+=C2=A0
+------=_Part_1395510_1472907305.1564140679082
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body><div class=3D"ydpccbcdf55yahoo-style-wrap" style=3D"font-family:=
+ Helvetica Neue, Helvetica, Arial, sans-serif;" dir=3D"ltr" data-setdir=3D"=
+false"><div dir=3D"ltr" data-setdir=3D"false" style=3D""><font size=3D"3"><=
+br></font></div> <div style=3D""><p class=3D"ydpffb4a72cmsonormal" align=3D=
+"center" style=3D"margin-bottom: 0.0001pt; text-align: center; background: =
+white;"><font size=3D"3"><b><span style=3D"font-family:Bookman Old Style,se=
+rif;mso-bidi-font-family:Helvetica;color:red">8<sup>th&nbsp;</sup>Internati=
+onal
+Conference on Software Engineering and Applications (SEAS 2019)&nbsp;</span=
+></b><span style=3D"font-family: Helvetica, sans-serif; color: black;"></sp=
+an></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" align=3D"center" style=3D"margin-bottom: =
+0.0001pt; text-align: center; background: white;"><font size=3D"3"><a href=
+=3D"https://necom2019.org/seas/index.html" rel=3D"nofollow" target=3D"_blan=
+k"><span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-family:=
+Helvetica;color:#196AD4">https://necom2019.org/seas/index.html</span></a><b=
+><span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-family:He=
+lvetica;color:red">&nbsp;</span></b><span style=3D"font-family: Helvetica, =
+sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" align=3D"center" style=3D"margin-bottom: =
+0.0001pt; text-align: center; background: white;"><font size=3D"3"><b><span=
+ style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-family:Helvetic=
+a;color:#92D050">August 24 ~25, 2019, Vienna,
+Austria&nbsp;</span></b><span style=3D"font-family: Helvetica, sans-serif; =
+color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><b><span style=3D"font-family:Bookman Old Sty=
+le,serif;mso-bidi-font-family:Helvetica;color:#C00000">Scope&nbsp;</span></=
+b><span style=3D"font-family: Helvetica, sans-serif; color: black;"></span>=
+</font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">8<su=
+p>th</sup>&nbsp;International Conference
+on Software Engineering and Applications (SEAS 2019) will provide an excell=
+ent
+international forum for sharing knowledge and results in theory, methodolog=
+y
+and applications of Software Engineering and Applications. The goal of this
+Conference is to bring together researchers and practitioners from academia=
+ and
+industry to focus on understanding Modern software engineering concepts and
+establishing new collaborations in these areas.&nbsp;</span><span style=3D"=
+font-family: Helvetica, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">Auth=
+ors are solicited to contribute
+to the conference by submitting articles that illustrate research results,
+projects, surveying works and industrial experiences that describe signific=
+ant
+advances in the areas of software engineering &amp; applications.&nbsp;</sp=
+an><span style=3D"font-family: Helvetica, sans-serif; color: black;"></span=
+></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><b><span style=3D"font-f=
+amily:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:#C00000"=
+>Topics of Interest&nbsp;</span></b><span style=3D"font-family: Helvetica, =
+sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The
+Software Process</span><span style=3D"font-family: Helvetica, sans-serif; c=
+olor: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software
+Engineering Practice</span><span style=3D"font-family: Helvetica, sans-seri=
+f; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web
+Engineering</span><span style=3D"font-family: Helvetica, sans-serif; color:=
+ black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quality
+Management</span><span style=3D"font-family: Helvetica, sans-serif; color: =
+black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Managing
+Software Projects</span><span style=3D"font-family: Helvetica, sans-serif; =
+color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advanced
+Topics in Software Engineering</span><span style=3D"font-family: Helvetica,=
+ sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedia
+and Visual Software Engineering</span><span style=3D"font-family: Helvetica=
+, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software
+Maintenance and Testing</span><span style=3D"font-family: Helvetica, sans-s=
+erif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Languages
+and Formal Methods</span><span style=3D"font-family: Helvetica, sans-serif;=
+ color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web-based
+Education Systems and Learning Applications</span><span style=3D"font-famil=
+y: Helvetica, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software
+Engineering Decision Making</span><span style=3D"font-family: Helvetica, sa=
+ns-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">=C2=
+=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Knowledge-based
+Systems and Formal Methods</span><span style=3D"font-family: Helvetica, san=
+s-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:#656565">=
+=C2=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span st=
+yle=3D"font-family:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;c=
+olor:black">Search Engines and Information Retrieval</span><span style=3D"f=
+ont-family:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:#65=
+6565">&nbsp;</span><span style=3D"font-family: Helvetica, sans-serif; color=
+: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><b><span style=3D"font-f=
+amily:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:#C00000"=
+>Paper Submission&nbsp;</span></b><span style=3D"font-family: Helvetica, sa=
+ns-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; text-al=
+ign: justify; background: white;"><font size=3D"3"><span style=3D"font-fami=
+ly:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:black">Auth=
+ors are invited to submit
+papers through the conference&nbsp;</span><a href=3D"http://necom2019.org/s=
+ubmission/index.php" rel=3D"nofollow" target=3D"_blank"><span style=3D"font=
+-family:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:#548DD=
+4">submission system</span></a><span style=3D"font-family:Bookman Old Style=
+,serif;mso-bidi-font-family:Helvetica;color:black">&nbsp;by&nbsp;</span><b>=
+<span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-family:Hel=
+vetica;color:red">July 27, 2019.</span></b><span style=3D"font-family:Bookm=
+an Old Style,serif;mso-bidi-font-family:Helvetica;color:black">&nbsp;Submis=
+sions must be original
+and should not have been published previously or be under consideration for
+publication while being evaluated for this conference. The proceedings of t=
+he
+conference will be published by&nbsp;</span><a href=3D"http://airccse.org/c=
+scp.html" rel=3D"nofollow" target=3D"_blank"><span style=3D"font-family:Boo=
+kman Old Style,serif;mso-bidi-font-family:Helvetica;color:#196AD4">Computer
+Science Conference Proceedings</span></a><b><span style=3D"font-family:Book=
+man Old Style,serif;mso-bidi-font-family:Helvetica;color:#548DD4">&nbsp;in&=
+nbsp;</span></b><a href=3D"http://airccse.org/cscp.html" rel=3D"nofollow" t=
+arget=3D"_blank"><span style=3D"font-family:Bookman Old Style,serif;mso-bid=
+i-font-family:Helvetica;color:#548DD4">Computer
+Science &amp; Information Technology (CS &amp; IT)</span></a><span style=3D=
+"font-family:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:b=
+lack">&nbsp;series (Confirmed).</span><span style=3D"font-family: Helvetica=
+, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><span style=3D"font-family:Bookman Old Style,=
+serif;mso-bidi-font-family:Helvetica;color:black">&nbsp;</span><span style=
+=3D"font-family: Helvetica, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><span style=3D"font-family:Bookman Old Style,=
+serif;mso-bidi-font-family:Helvetica;color:black">Selected papers from&nbsp=
+;</span><span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-fa=
+mily:Helvetica;color:red">SEAS 2019,</span><span style=3D"font-family:Bookm=
+an Old Style,serif;mso-bidi-font-family:Helvetica;color:black">&nbsp;after =
+further revisions, will
+be published in the special issue of the following journals&nbsp;&nbsp;</sp=
+an><span style=3D"font-family: Helvetica, sans-serif; color: black;"></span=
+></font></p>
+
+<ul type=3D"disc" style=3D"">
+ <li class=3D"ydpff579eebMsoNormal" style=3D"color:#548DD4;mso-margin-top-a=
+lt:auto;margin-bottom:     0in;margin-bottom:.0001pt;line-height:normal;mso=
+-list:l0 level1 lfo1;     tab-stops:list .5in;background:white"><font size=
+=3D"3"><span style=3D"color:windowtext"><a href=3D"http://www.airccse.org/j=
+ournal/ijsea/ijsea.html" rel=3D"nofollow" target=3D"_blank"><span style=3D"=
+font-family:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;     col=
+or:#196AD4">International Journal of Software Engineering &amp;
+     Applications (IJSEA)</span></a></span><span style=3D"font-family:Bookm=
+an Old Style,serif;     mso-bidi-font-family:Helvetica">&nbsp;</span><span =
+style=3D"font-family: Helvetica, sans-serif;"></span></font></li>
+</ul>
+
+<ul type=3D"disc" style=3D"">
+ <li class=3D"ydpff579eebMsoNormal" style=3D"color:#548DD4;mso-margin-top-a=
+lt:auto;margin-bottom:     0in;margin-bottom:.0001pt;line-height:normal;mso=
+-list:l1 level1 lfo2;     tab-stops:list .5in;background:white"><font size=
+=3D"3"><span style=3D"color:windowtext"><a href=3D"http://airccse.org/journ=
+al/ijcsa/index.html" rel=3D"nofollow" target=3D"_blank"><span style=3D"font=
+-family:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;     color:#=
+196AD4">International Journal on Computational Science &amp;
+     Applications(IJCSA)</span></a></span><span style=3D"font-family:Bookma=
+n Old Style,serif;     mso-bidi-font-family:Helvetica">&nbsp;</span><span s=
+tyle=3D"font-family: Helvetica, sans-serif;"></span></font></li>
+</ul>
+
+<ul type=3D"disc" style=3D"">
+ <li class=3D"ydpff579eebMsoNormal" style=3D"color:black;mso-margin-top-alt=
+:auto;margin-bottom:     0in;margin-bottom:.0001pt;line-height:normal;mso-l=
+ist:l2 level1 lfo3;     tab-stops:list .5in;background:white"><font size=3D=
+"3"><span style=3D"color:windowtext"><a href=3D"http://airccse.org/journal/=
+ijfcst/ijfcst.html" rel=3D"nofollow" target=3D"_blank"><span style=3D"font-=
+family:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;     color:#1=
+96AD4">International Journal in Foundations of Computer Science
+     &amp; Technology (IJFCST)</span></a></span><span style=3D"font-family:=
+Bookman Old Style,serif;     mso-bidi-font-family:Helvetica">&nbsp;</span><=
+span style=3D"font-family: Helvetica, sans-serif;"></span></font></li>
+</ul>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><b><span style=3D"font-family:Bookman Old Sty=
+le,serif;mso-bidi-font-family:Helvetica;color:#C00000">Important Dates</spa=
+n></b><span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-fami=
+ly:Helvetica;color:#92D050">&nbsp;</span><span style=3D"font-family: Helvet=
+ica, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><span style=3D"font-family:Bookman Old Style,=
+serif;mso-bidi-font-family:Helvetica;color:red">=C2=B7&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Submission
+Deadline : July 27, 2019</b></span><span style=3D"font-family: Helvetica, s=
+ans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><span style=3D"font-family:Bookman Old Style,=
+serif;mso-bidi-font-family:Helvetica;color:black">=C2=B7&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authors
+Notification : August 10, 2019</span><span style=3D"font-family: Helvetica,=
+ sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><span style=3D"font-family:Bookman Old Style,=
+serif;mso-bidi-font-family:Helvetica;color:black">=C2=B7&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registration
+&amp; Camera-Ready Paper Due : August 13, 2019</span><span style=3D"font-fa=
+mily:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:#92D050">=
+&nbsp;</span><span style=3D"font-family: Helvetica, sans-serif; color: blac=
+k;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><b><span style=3D"font-family:Bookman Old Sty=
+le,serif;mso-bidi-font-family:Helvetica;color:red;background:white">Here's =
+where you can
+reach us:</span></b><b><span style=3D"font-family:Bookman Old Style,serif;m=
+so-bidi-font-family:Helvetica;color:#656565;background:white">&nbsp;</span>=
+</b><a href=3D"mailto:seas@necom2019.org" rel=3D"nofollow" target=3D"_blank=
+"><span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-family:H=
+elvetica;color:#196AD4">seas@necom2019.org</span></a><b><span style=3D"font=
+-family:Bookman Old Style,serif;mso-bidi-font-family:Helvetica;color:#65656=
+5;background:white">&nbsp;or&nbsp;</span></b><a href=3D"mailto:seasconf@yah=
+oo.com" rel=3D"nofollow" target=3D"_blank"><span style=3D"font-family:Bookm=
+an Old Style,serif;mso-bidi-font-family:Helvetica;color:#196AD4">seasconf@y=
+ahoo.com</span></a><span style=3D"font-family: Helvetica, sans-serif; color=
+: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"margin-bottom: 0.0001pt; backgro=
+und: white;"><font size=3D"3"><span style=3D"font-family:Bookman Old Style,=
+serif;mso-bidi-font-family:Helvetica;color:black">&nbsp;</span><span style=
+=3D"font-family: Helvetica, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"background: white;"><font size=
+=3D"3"><span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-fam=
+ily:Helvetica;color:black">&nbsp;</span><span style=3D"font-family: Helveti=
+ca, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpffb4a72cmsonormal" style=3D"background: white;"><font size=
+=3D"3"><span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-fam=
+ily:Helvetica;color:black">&nbsp;</span><span style=3D"font-family: Helveti=
+ca, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpd693cb8cmsonormal" style=3D"background: white;"><font size=
+=3D"3"><span style=3D"font-family:Bookman Old Style,serif;mso-bidi-font-fam=
+ily:Helvetica;color:black">&nbsp;</span><span style=3D"font-family: Helveti=
+ca, sans-serif; color: black;"></span></font></p>
+
+<p class=3D"ydpff579eebMsoNormal" style=3D""><font size=3D"3">&nbsp;</font>=
+</p>
+
+<div style=3D""><font size=3D"3">&nbsp;</font></div></div></div></body></ht=
+ml>=
+
+------=_Part_1395510_1472907305.1564140679082--

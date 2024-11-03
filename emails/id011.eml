@@ -1,0 +1,824 @@
+Received: from DM6PR08MB4988.namprd08.prod.outlook.com (2603:10b6:a02:a8::39)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR03CA0026.NAMPRD03.PROD.OUTLOOK.COM; Fri, 9 Aug 2019 18:06:37 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=n5itsw4mtA8FeJYovF1G47NBnsvh9Okhcmn/tlYy9wl/ibUKSYmN6HEYTd+MXCjWAHmhcUFoNejo8rpbq78gQuxsj9uWbZOzs/xUOyaJteNb/pjA0IQZHZTJWrwNJks/+sWec7rlwdNuJlmrz69mC+Ny9w5yGttxduAfVIohlWScaBWmuDrXAcCNC8M/Ze0qBJUsgLaU4djJGttWCaD1RnSd2tMMofk+kS0Ebe98QPd3O877os6NqgYkAapMTLl9gNDR9dgEl4F9o/6TNuf77uF3xLmP9ScEKtOE0CkXq3qjcsg6gok3hehq8U1jslUBc/fsAr0v+VDPTp7ryBIPTA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=h47sbf+CrHI7lMRdPRnQWqJISooUirjI2+lugygFuJc=;
+ b=c9P57ApEuzrNYHO+uO7D2mMYHdz01JOb0sRrSkCf+A0m3GBlRbIvBAbKdJPTDpaiDihAC2cPWKaLCRBluc7bCcuYJp4yHW/4VkhOh8CnNJCppttybBAMmZRBdlKd/+HvX0M1EMYZFTdqcCM0hh8n6AzPZ/62M0FpHAHX6ZP4AoyeGsAq2mHFIc+GGqhxfZBH83tS0w6390FLWznbAFeDf26yUaRkIhWYYxDxpgvHkSrndallTRZp+3JWmIbthhTXxWMEK5DMGbPA8HYTFwPCFj02jufCFCIw4DBZZFlNzhHgyuFFAULB/f6J3PplwGuZHTC5NObMnAJYVoGem3UvMg==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1;spf=pass (sender ip is
+ 209.85.161.98) smtp.rcpttodomain=calpoly.edu
+ smtp.mailfrom=listserv.ieee.org;dmarc=pass (p=none sp=none pct=100)
+ action=none header.from=ieee.org;dkim=pass (signature was verified)
+ header.d=ieee.org;arc=fail (47)
+Received: from DM6PR08CA0004.namprd08.prod.outlook.com (2603:10b6:5:80::17) by
+ DM6PR08MB4988.namprd08.prod.outlook.com (2603:10b6:5:4b::33) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2094.17; Fri, 9 Aug 2019 18:06:36 +0000
+Received: from CO1NAM04FT007.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::203) by DM6PR08CA0004.outlook.office365.com
+ (2603:10b6:5:80::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2157.14 via Frontend
+ Transport; Fri, 9 Aug 2019 18:06:36 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.161.98)
+ smtp.mailfrom=listserv.ieee.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ieee.org;calpoly.edu; dmarc=pass action=none
+ header.from=ieee.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of listserv.ieee.org
+ designates 209.85.161.98 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.85.161.98;
+ helo=mail-yw1-f98.google.com;
+Received: from mail-yw1-f98.google.com (209.85.161.98) by
+ CO1NAM04FT007.mail.protection.outlook.com (10.152.90.85) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2157.15 via Frontend Transport; Fri, 9 Aug 2019 18:06:36 +0000
+Received: by mail-yw1-f98.google.com with SMTP id i138so35884512ywg.8
+        for <foaad@calpoly.edu>; Fri, 09 Aug 2019 11:06:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ieee.org; s=google;
+        h=approved-by:mime-version:from:date:message-id:subject:to:sender
+         :precedence:list-help:list-unsubscribe:list-subscribe:list-owner;
+        bh=h47sbf+CrHI7lMRdPRnQWqJISooUirjI2+lugygFuJc=;
+        b=OqnC/Iqo/WF26kcJP9aFEM7Ra7/aL8LldWdE9B7dz6I8tTaeUbBKzqbMswL12Dnc64
+         Y3CMQIvTdA7qi9AqiVcb+Wc9Pmab53+RLBvPV4YhNz1HeVbfiwFNzs9VgVj5Yb+YVduf
+         n7LYIreggK2GoJrW0aMfYdpzd+pTG3a5vT15M=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:approved-by:mime-version:from:date:message-id
+         :subject:to:sender:precedence:list-help:list-unsubscribe
+         :list-subscribe:list-owner;
+        bh=h47sbf+CrHI7lMRdPRnQWqJISooUirjI2+lugygFuJc=;
+        b=gvEmlxupjhRT/BfPgct71v+JrouTO4F/VRS6lGxUYDMbntA0JgPR6Jb+BZtKqYmod+
+         kStqeoGskR7x583hnrVhJrVf7b89JUhDPLkugOf2nh+GodFWiCqtQ+E92++aqp3Yrl6s
+         8ouz+nbQrXrLmXhojs7lpvzYiMOVguBjsAzRKxD6rY3QqBuybLJw5W37ByTXQEHQVJrf
+         I3bkUjEdZ/up/Rjatn6I8T4OqATgyPMvTceATN75nNfhdNDRP7qzlf6lALTEfuAm1ucf
+         nGZ0C41KB1AFVbWq9hS8o6FP99oD5J2NZi336aBhuJRorQW4CiP0gUW9eAK6oKZk+i94
+         oCsw==
+X-Gm-Message-State: APjAAAVwC0uzIG2O2kjvVFwsXM3k+PUXjzAtnIa2yTn/Dhvwu9nMIho5
+	h2Vyx/iJDaJrWA6rgPR3388CHZhvGWEvJlSpkCCW+VymIUPp
+X-Google-Smtp-Source: APXvYqxt+gttKbMe/4eI/oR6de3iHjVccC9tYkgyV4ZOyNzSK6qn7zlSPvPxjiymhVeV1K2dxXNKPSZabc71
+X-Received: by 2002:a81:a497:: with SMTP id b145mr13912521ywh.271.1565373989080;
+        Fri, 09 Aug 2019 11:06:29 -0700 (PDT)
+Return-Path: owner-enotice-local-21@listserv.ieee.org
+Received: from listserv.ieee.org (listserv.ieee.org. [54.208.220.43])
+        by smtp-relay.gmail.com with ESMTPS id f189sm12882066ywh.14.2019.08.09.11.06.28
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 09 Aug 2019 11:06:29 -0700 (PDT)
+X-Relaying-Domain: ieee.org
+Received: from HOME (listserv.ieee.org [10.144.192.7])
+	by listserv.ieee.org (8.14.4/8.14.4) with ESMTP id x793Kr9G018655;
+	Fri, 9 Aug 2019 14:06:20 -0400
+Received: by LISTSERV.IEEE.ORG (LISTSERV-TCP/IP release 16.5) with spool id
+          25067209 for enotice-local-21@LISTSERV.IEEE.ORG; Fri, 9 Aug 2019
+          14:05:23 -0400
+Received: from spmpdv01.ieee.org (spmpdv01.ieee.org [10.144.192.218]) by
+          listserv.ieee.org (8.14.4/8.14.4) with ESMTP id x79I47br029395 for
+          <enotice-local-21@ieee.org>; Fri, 9 Aug 2019 14:04:07 -0400
+Received: from mail-wr1-f72.google.com (mail-wr1-f72.google.com
+          [209.85.221.72]) by spmpdv01.ieee.org (8.14.4/8.14.4/Debian-4+deb7u1)
+          with ESMTP id x79I4Cbx024956 (version=TLSv1/SSLv3
+          cipher=AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <enotice-local-21@ieee.org>; Fri, 9 Aug 2019 14:04:13 -0400
+Received: by mail-wr1-f72.google.com with SMTP id b14so46933617wrn.8 for
+          <enotice-local-21@ieee.org>; Fri, 09 Aug 2019 11:04:12 -0700 (PDT)
+Received: from mx.expurgate.net (mx.expurgate.net. [195.190.135.10]) by
+          mx.google.com with ESMTPS id z14si86034570wrl.122.2019.08.09.11.04.11
+          for <enotice-local-21@ieee.org> (version=TLS1_2
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Fri, 09 Aug 2019
+          11:04:11 -0700 (PDT)
+Received: from mx.expurgate.net (helo=localhost) by mx.expurgate.net with esmtp
+          id 1hw9FL-00022Q-2g for enotice-local-21@ieee.org; Fri, 09 Aug 2019
+          20:04:11 +0200
+Received: from [209.85.208.178] (helo=mail-lj1-f178.google.com) by
+          mxtls.expurgate.net with ESMTPS (eXpurgate 4.2.1-14) (envelope-from
+          <h.shiminsky@ieee.org>) id 5d4db598-4aa1-c0a8033609dd-d155d0b2b540-3
+          for <enotice-local-21@ieee.org>; Fri, 09 Aug 2019 20:04:09 +0200
+Received: by mail-lj1-f178.google.com with SMTP id v24so93032294ljg.13 for
+          <enotice-local-21@ieee.org>; Fri, 09 Aug 2019 11:04:09 -0700 (PDT)
+Approved-By: enotice@IEEE.ORG
+X-Received: by 2002:a1c:f418:: with SMTP id z24mr12110844wma.80.1565373851745;
+            Fri, 09 Aug 2019 11:04:11 -0700 (PDT)
+X-Received: by 2002:a1c:f418:: with SMTP id z24mr12110825wma.80.1565373851440;
+            Fri, 09 Aug 2019 11:04:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1565373851; cv=none; d=google.com;
+          s=arc-20160816;
+          b=nRYpyBM6qvgYsgwQNzyUBO7IJbt/PCr2itBAmLMmKc1j+tlY02AkWqbhDjfhQY0R2e
+          nqfonf/Ito0/c7tsZFTAgtAewGyj21i+EZUZMtwJbwfHepkmdGFPbtF+FgV+LYCwngef
+          +bM5D2mRwB+UbDPTU7ORaHfloDXuJ47E/Z6XuRtQ1eJjHI9HJ6OML3th6ZsWNOnnMCEF
+          M5Mw8OVVNbpCYzItKf6xnWoAWGTTyUuYXQxT1bMiG+hEn0cuenoowsFOu68TXLbORGNz
+          AbZIO3s8Q8EsicqROQGNsIqydIQBUEBu95uoEViJZ/KWiwGyPimp8f8VJVmWsZNVcr+O
+          NrdQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+                       s=arc-20160816;
+                       h=to:subject:message-id:date:from:mime-version:dkim-signature;
+                       bh=RFt+ympyMdYMgTCXvMHhk2Nf5bsRR5IQd3c9Njngyp8=;
+                       b=v6YpnCn1hq3vsYk86pMdTB9NITLjFbX5Ft9p+FoJXi6DfFJ9yuvOIlY7+8fChwhAZs
+                       HZ81FXJpzEeN8X98ADQU91Ls7FF7eh/dbHyw1i3tym+fRUjzqlU47CzHnbVPSrTHFVYy
+                       bUd80Tk6YBJzK3Szi+n53zr5zmFnGvtU46A5xHTyukOR3uzM4hCNrdghskLC210puH2m
+                       qd+XUje3bTGsWUe+D8pmfYm+a8996bhg/4xJCpm1xGAWmlFU11x5wGGGvVtI4RfbKA+Y
+                       9NBbNmCz3z5CgzwiKgLyjoLVwkg3eGa7QbyUl3O31YXF7QEp1D+E5oBi/O1ig9yn5L6x
+                       YnmA==
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass header.i=@ieee.org
+                         header.s=google header.b=TPaNUmcD; spf=pass
+                         (google.com: domain of h.shiminsky@ieee.org designates
+                         209.85.208.178 as permitted sender)
+                         smtp.mailfrom=h.shiminsky@ieee.org
+Received-SPF: neutral (spmpdv01.ieee.org: 195.190.135.10 is neither permitted
+              nor denied by domain h.shiminsky@ieee.org)
+              receiver=spmpdv01.ieee.org; client-ip=195.190.135.10;
+              envelope-from=<h.shiminsky@ieee.org>;
+              helo=mail-wr1-f72.google.com; identity=mailfrom
+X-Received: by 2002:a05:651c:28c:: with SMTP id
+            b12mr6439951ljo.69.1565373848028; Fri, 09 Aug 2019 11:04:08 -0700
+            (PDT)
+From: IEEE eNotice <enotice@ieee.org>
+Date: Fri, 9 Aug 2019 14:03:41 -0400
+Message-ID: <CAONZpN9t5Cu+XyMgVGWNg4c21AOZ9iGsdGmUB4o1iG+xZeh23Q@mail.gmail.com>
+Subject: 2020 IEEE Green Technologies Conference (IEEEgreenTech)
+To: enotice-local-21@ieee.org
+Content-Type: multipart/related; boundary="0000000000002775f5058fb3001a"
+X-purgate-ID: tlsNG-69e11b/1565373849-00004AA1-9C068633/0/0
+X-purgate-type: clean
+X-purgate-size: 42998
+X-Gm-Spam: 0
+X-Gm-Phishy: 0
+X-Spam-Score: undef - enotice@ieee.org is allowed always.
+X-CanIt-Geo: ip=195.190.135.10; country=DE; latitude=51.2993; longitude=9.4910;
+             http://maps.google.com/maps?q=51.2993,9.4910&z=6
+X-CanItPRO-Stream: default
+X-Canit-Stats-ID: 010L64czo - f888f9ab5f8e
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 10.144.192.218
+Sender: enotice-local-21@ieee.org
+Precedence: list
+List-Help: <mailto:LISTSERV@LISTSERV.IEEE.ORG?body=INFO%20enotice-local-21>
+List-Unsubscribe: <mailto:enotice-local-21-unsubscribe-request@LISTSERV.IEEE.ORG>
+List-Subscribe: <mailto:enotice-local-21-subscribe-request@LISTSERV.IEEE.ORG>
+List-Owner: <mailto:enotice-local-21-request@LISTSERV.IEEE.ORG>
+X-MS-Exchange-Organization-ExpirationStartTime: 09 Aug 2019 18:06:36.1842
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 485d96f3-e6ce-4156-7beb-08d71cf4518a
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132098475961872694;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.161.98;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(286005)(5142003)(189003)(199004)(7192003)(176002)(2361001)(71190400001)(33964004)(6666004)(5650700001)(26005)(5660700001)(7596002)(1096003)(476003)(305945005)(63266004)(356004)(336012)(7636002)(59656003)(61266001)(4006050)(126002)(16586007)(95326003)(2351001)(106002)(6636002)(75640400001)(42186006)(14444005)(55176004)(55446002)(5024004)(966005)(61726006)(7846003)(498394004)(606006)(486006)(8676002)(10126004)(54556002)(236005)(146002)(9686003)(34206002)(59536001)(53376002)(8576002)(6306002)(246002)(6392003)(733005)(16003)(575854001);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB4988;H:mail-yw1-f98.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-yw1-f98.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT007.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 485d96f3-e6ce-4156-7beb-08d71cf4518a
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(1124261)(49563074)(71702078);SRVR:DM6PR08MB4988;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4988:
+X-MS-Exchange-PUrlCount: 4
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Aug 2019 18:06:36.1052
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 485d96f3-e6ce-4156-7beb-08d71cf4518a
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4988
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3815023
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?NlBsKzdMMUQ2UUNLS0lEa0hBS2RoQng1aG0wb1hjUk13ZzdsUFFMV3hhWkF5?=
+ =?utf-8?B?NkdXaHlJY0NmR0MrbThieE4vMFVXMCt3VjNnbHl5anJEVVV1UUJzRGVxS0wx?=
+ =?utf-8?B?RGNUYnowSGpHVWdKdVFEWTA5QVc2SkJZcUh0UjcxWEFaOXV0bjd6ekN4cnhJ?=
+ =?utf-8?B?WEVuQmhEdmNEcklpUFhqMkFVY2RsRWgrRnA0UHdPalhHbmlTWEVzREpjRysz?=
+ =?utf-8?B?UHAvK0VQcTRmcFR0d3VlT3RjQmtRL0NYTnpiRWtTTisrTS85RnNIalBDdHZ2?=
+ =?utf-8?B?U1RQSVAwZmdrdENUWXJEbEJtMjRRcHZLbklqNWpUbU1hVXNWTXNxMXZETzVF?=
+ =?utf-8?B?T2R5dzJ6bm9qM0ppK2RQT25FcFhpd0hOKy9lUGlYelZnRFRsTG9lTlRaeGNm?=
+ =?utf-8?B?MzBwVnFObHgvQ0Z6aGY2aDFNQ3RqZUVzK2tYd2hiZCtYZWI3SUZvWWk0WlZW?=
+ =?utf-8?B?OThoWGZjeDlCWkM1TUUvUENVSFZMdldRV0RiTENCdmlWcjZpSTd4K1dRYngx?=
+ =?utf-8?B?OVBlUHJpcHVVQTJvVEpUK2k3d05HUEZGVjFVSXpDa09JeGU4VzFSRTBjTVRr?=
+ =?utf-8?B?M252YUVkTlJKY0VtTGFBZGY1Mm5ySVJORlZ2YVdnL3JGK1hhd0hONnZINnVT?=
+ =?utf-8?B?WDNPcGFJNzR5QndoRXpJRi9FRkxqV1M3TStEZXYwWTdiZS9ySXZ3QVYxaGFK?=
+ =?utf-8?B?VDVrNTdTUCtSakZwRWpKQjcwUHE3a2FVUFVzaXJsaU9CWE92SHMxcWVEaEFu?=
+ =?utf-8?B?VHltZjFOcy80Nk9CT2g1d2VKZXlFZ0dXbk53WXFPQ1N6RjJBTkFSeXVvajdi?=
+ =?utf-8?B?ODBlZ3l1S1ROUEdjYWRPQVBJZEpEZkVLOFFrY0MzVVgvbkQvUjRJV3lrSS9z?=
+ =?utf-8?B?cXR6d3o4ajFzVGwxWlNVV05IMGplMjJHNHpSVVYwa1RQeEpHbUhyb1I0aWRO?=
+ =?utf-8?B?NWFuUEpieWFJYlhpaW1EWEdWMkpNSldrQXFFWUhoUllhT0VlWi9pL3NvSklv?=
+ =?utf-8?B?MDFMS3NXREIzVlVoY3FHMmlBMjBvNHVZbnUwTjUrT28yUVZsNU1iV1lnMHk4?=
+ =?utf-8?B?c3BuVTJTVXlnU2dUMDUvZ1gwWDNnd244Z2hOMWhQYVJGVGFoZ1VySWxtTXFT?=
+ =?utf-8?B?cEtmTG5BYmM1WTRaQW1CaVhuREMraHFXcDhSZTBSNE0xRGxsWWltYUNFTitO?=
+ =?utf-8?B?QnlLRi9LNDlQTEZmUVd3cWdaN0g3RStmZEYxRVhYL3VEazZQVmhiRFo3NWVs?=
+ =?utf-8?B?cjkyY09PN3NDS2pQanhobDZHTTJEaEZnNzZ2Ri9PZnVKSkhMTUl2aStNQUJy?=
+ =?utf-8?B?RG9MOS9BeHFLclR2cllHckNhdXBxM0dTOUZUTFptc3h3S0xMdWtBYWhrT1Y2?=
+ =?utf-8?Q?2HAvqOiV11ZeziVNHcUJgJSb2yE2tiMg=3D?=
+MIME-Version: 1.0
+
+--0000000000002775f5058fb3001a
+Content-Type: multipart/alternative; boundary="0000000000002775f3058fb30019"
+
+--0000000000002775f3058fb30019
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+[image: image.png]
+___________________________________________________________________________=
+________________________________________________________
+
+IEEE Oklahoma City Section's Patrons, Exhibitors and Support Schedules For
+the
+2020 Green Tech Conference/Region 5 Business Meeting and Student
+Competitions April 1-5, 2020
+http://ieeegreentech.org/cfp
+
+The IEEE Oklahoma City Section is pleased to host the IEEE Green
+Technologies Conference, Region 5 student competitions, and support an
+Engineering Job Fair for students and IEEE members. Approximately 400
+Engineers, Researchers, Innovators, and Engineering Students from around
+the world will be attending the 2020 IEEE Green Technologies Conference and
+IEEE Student Activities.
+This 12th annual IEEE Green Technical Conference provides a forum for
+government, industry, and research experts to collaborate and present
+innovative approaches on future framework, plans, and technological
+solutions for moving towards a Green Technology Focus.
+The academic papers presented at the IEEE Green Technologies Conference are
+judged on their quality, research, sustainable designs, and applications
+related to Green Technologies. The best papers shall be included in the
+conference proceeding then will be submitted to the IEEE Xplore=C2=AE digit=
+al
+library.
+
+In addition to renewable, Green Technology topics include:
+=E2=80=A2 Energy Generation, Storage, Management, Conservation, and Usage R=
+eduction
+=E2=80=A2 Smart Grids, Systems, Cities, Villages, and Infrastructures
+=E2=80=A2 Sustainable IT Computing and Software Engineering
+=E2=80=A2 Biomedical and Biotechnology Solutions
+=E2=80=A2 Radar/Weather Forecasting, Planning, and Engineering for Wind and=
+ Solar
+Solutions
+The Job fair will occur Friday and Saturday, and is targeted towards the
+Region 5 student participants, and local students and members. This is a
+great opportunity for companies to mingle with the best and brightest
+students for their internship and employee needs.
+The IEEE Region 5 Saturday meeting consists of an administrative meeting of
+IEEE Region 5 volunteers, as well as training and educational activities
+interspersed with contests for Undergraduate students (Paper, Robotics,
+Ethics and a Circuit Design).
+IEEE Region 5 consists of Oklahoma, Texas, Louisiana, Arkansas, Missouri,
+Colorado, and parts of Wyoming, New Mexico, South Dakota, Nebraska, and
+Illinois.
+I thank you very much for your kind consideration to participate as a
+Patron, Exhibitor, or Supporter. If you make a contribution, we will make
+it known to our attendees.
+Our organization, the IEEE is a non-profit 501(c) (3) organization. For
+additional information on the conferences contact any of the following
+individuals.
+
+Sincerely,
+Robert Scolli r.scolli@ieee.org
+2020 IEEE Green Tech General Chair
+
+Ryan Musgrove ryan.musgrove@ieee.org
+2020 IEEE Green Tech General Vice Chair
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+To unsubscribe from local IEEE eNotices, visit the IEEE Communications Preferences web page at https://www.ieee.org/profile/commprefs/showcommPrefpage.html . Sign in with your IEEE Account and then uncheck the "Local IEEE section and chapter e-mail communication" option.
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+IEEE * 445 Hoes Lane, Piscataway, NJ 08854, USA * http://www.ieee.org/
+
+--0000000000002775f3058fb30019
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div><div><img src=3D"cid:ii_jz4f0moa0" alt=3D"image.png" wi=
+dth=3D"536" height=3D"101" style=3D"margin-right: 0px;"><br></div></div><sp=
+an style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif"><div=
+ style=3D"">_______________________________________________________________=
+____________________________________________________________________</div><=
+div style=3D"font-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,=
+Helvetica,Arial,sans-serif;font-size:16px"><br></span></div><span style=3D"=
+font-size:16px">IEEE Oklahoma City Section's Patrons, Exhibitors and Suppor=
+t Schedules For the</span></span><br style=3D"font-family:Roboto,RobotoDraf=
+t,Helvetica,Arial,sans-serif;font-size:16px"><span style=3D"font-family:Rob=
+oto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px">2020 Green Tech =
+Conference/Region 5 Business Meeting and Student Competitions April 1-5, 20=
+20<br></span><span style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,=
+sans-serif;font-size:16px"><a href=3D"http://ieeegreentech.org/cfp">http://=
+ieeegreentech.org/cfp</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<br style=3D"font-f=
+amily:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px"><br sty=
+le=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:1=
+6px"><span style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-ser=
+if;font-size:16px">The IEEE Oklahoma City Section is pleased to host the IE=
+EE Green Technologies Conference, Region 5 student competitions, and suppor=
+t an Engineering Job Fair for students and IEEE members. Approximately 400 =
+Engineers, Researchers, Innovators, and Engineering Students from around th=
+e world will be attending the 2020 IEEE Green Technologies Conference and I=
+EEE Student Activities.</span><br style=3D"font-family:Roboto,RobotoDraft,H=
+elvetica,Arial,sans-serif;font-size:16px"><span style=3D"font-family:Roboto=
+,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px">This 12th annual IE=
+EE Green Technical Conference provides a forum for government, industry, an=
+d research experts to collaborate and present innovative approaches on futu=
+re framework, plans, and technological solutions for moving towards a Green=
+ Technology Focus.</span><br style=3D"font-family:Roboto,RobotoDraft,Helvet=
+ica,Arial,sans-serif;font-size:16px"><span style=3D"font-family:Roboto,Robo=
+toDraft,Helvetica,Arial,sans-serif;font-size:16px">The academic papers pres=
+ented at the IEEE Green Technologies Conference are judged on their quality=
+, research, sustainable designs, and applications related to Green Technolo=
+gies. The best papers shall be included in the conference proceeding then w=
+ill be submitted to the IEEE Xplore=C2=AE digital library.</span><br style=
+=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16p=
+x"><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;f=
+ont-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,Helvetica,Aria=
+l,sans-serif;font-size:16px">In addition to renewable, Green Technology top=
+ics include:</span><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Ar=
+ial,sans-serif;font-size:16px"><span style=3D"font-family:Roboto,RobotoDraf=
+t,Helvetica,Arial,sans-serif;font-size:16px">=E2=80=A2 Energy Generation, S=
+torage, Management, Conservation, and Usage Reduction</span><br style=3D"fo=
+nt-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px"><sp=
+an style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-=
+size:16px">=E2=80=A2 Smart Grids, Systems, Cities, Villages, and Infrastruc=
+tures</span><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,san=
+s-serif;font-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,Helve=
+tica,Arial,sans-serif;font-size:16px">=E2=80=A2 Sustainable IT Computing an=
+d Software Engineering</span><br style=3D"font-family:Roboto,RobotoDraft,He=
+lvetica,Arial,sans-serif;font-size:16px"><span style=3D"font-family:Roboto,=
+RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px">=E2=80=A2 Biomedical=
+ and Biotechnology Solutions</span><br style=3D"font-family:Roboto,RobotoDr=
+aft,Helvetica,Arial,sans-serif;font-size:16px"><span style=3D"font-family:R=
+oboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px">=E2=80=A2 Rada=
+r/Weather Forecasting, Planning, and Engineering for Wind and Solar Solutio=
+ns</span><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-s=
+erif;font-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,Helvetic=
+a,Arial,sans-serif;font-size:16px">The Job fair will occur Friday and Satur=
+day, and is targeted towards the Region 5 student participants, and local s=
+tudents and members. This is a great opportunity for companies to mingle wi=
+th the best and brightest students for their internship and employee needs.=
+</span><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-ser=
+if;font-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,Helvetica,=
+Arial,sans-serif;font-size:16px">The IEEE Region 5 Saturday meeting consist=
+s of an administrative meeting of IEEE Region 5 volunteers, as well as trai=
+ning and educational activities interspersed with contests for Undergraduat=
+e students (Paper, Robotics, Ethics and a Circuit Design).</span><br style=
+=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16p=
+x"><span style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif=
+;font-size:16px">IEEE Region 5 consists of Oklahoma, Texas, Louisiana, Arka=
+nsas, Missouri, Colorado, and parts of Wyoming, New Mexico, South Dakota, N=
+ebraska, and Illinois.</span><br style=3D"font-family:Roboto,RobotoDraft,He=
+lvetica,Arial,sans-serif;font-size:16px"><span style=3D"font-family:Roboto,=
+RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px">I thank you very muc=
+h for your kind consideration to participate as a Patron, Exhibitor, or Sup=
+porter. If you make a contribution, we will make it known to our attendees.=
+</span><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-ser=
+if;font-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,Helvetica,=
+Arial,sans-serif;font-size:16px">Our organization, the IEEE is a non-profit=
+ 501(c) (3) organization. For additional information on the conferences con=
+tact any of the following individuals.</span><br style=3D"font-family:Robot=
+o,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px"><br style=3D"font-=
+family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px"><span =
+style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-siz=
+e:16px">Sincerely,</span><br style=3D"font-family:Roboto,RobotoDraft,Helvet=
+ica,Arial,sans-serif;font-size:16px"><span style=3D"font-family:Roboto,Robo=
+toDraft,Helvetica,Arial,sans-serif;font-size:16px">Robert Scolli&nbsp;</spa=
+n><a href=3D"mailto:r.scolli@ieee.org" target=3D"_blank" style=3D"font-fami=
+ly:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px">r.scolli@i=
+eee.org</a><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans=
+-serif;font-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,Helvet=
+ica,Arial,sans-serif;font-size:16px">2020 IEEE Green Tech General Chair</sp=
+an><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;f=
+ont-size:16px"><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,=
+sans-serif;font-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,He=
+lvetica,Arial,sans-serif;font-size:16px">Ryan Musgrove&nbsp;</span><a href=
+=3D"mailto:ryan.musgrove@ieee.org" target=3D"_blank" style=3D"font-family:R=
+oboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px">ryan.musgrove@=
+ieee.org</a><br style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,san=
+s-serif;font-size:16px"><span style=3D"font-family:Roboto,RobotoDraft,Helve=
+tica,Arial,sans-serif;font-size:16px">2020 IEEE Green Tech General Vice Cha=
+ir</span><div><span style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial=
+,sans-serif;font-size:16px"><br></span></div><div><span style=3D"font-famil=
+y:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size:16px"><br></span>=
+</div><div><span style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sa=
+ns-serif;font-size:16px"><br></span></div></div>
+<hr>
+<p> To unsubscribe from the enotice-local-21 list, click the following link=
+: https://listserv.ieee.org/cgi-bin/wa?SUBED1=3Denotice-local-21&amp;A=3D1 =
+</p>
+
+--0000000000002775f3058fb30019--
+
+--0000000000002775f5058fb3001a
+Content-Type: image/png; name="image.png"
+Content-Disposition: inline; filename="image.png"
+Content-Transfer-Encoding: base64
+Content-ID: <ii_jz4f0moa0>
+X-Attachment-Id: ii_jz4f0moa0
+
+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
+UAjMUQT+f6APkHK2faT8AAAAAElFTkSuQmCC
+
+--0000000000002775f5058fb3001a--

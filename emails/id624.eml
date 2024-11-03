@@ -1,0 +1,429 @@
+Received: from CY4PR08MB2421.namprd08.prod.outlook.com (2603:10b6:a03:94::17)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0040.PROD.EXCHANGELABS.COM; Fri, 20 Sep 2019 18:26:58 +0000
+Received: from DM6PR08CA0003.namprd08.prod.outlook.com (2603:10b6:5:80::16) by
+ CY4PR08MB2421.namprd08.prod.outlook.com (2603:10b6:903:3e::7) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2284.20; Fri, 20 Sep 2019 18:26:57 +0000
+Received: from SN1NAM04FT004.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::204) by DM6PR08CA0003.outlook.office365.com
+ (2603:10b6:5:80::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2157.14 via Frontend
+ Transport; Fri, 20 Sep 2019 18:26:57 +0000
+Authentication-Results: spf=none (sender IP is 132.205.96.92)
+ smtp.mailfrom=encs.concordia.ca; calpoly.edu; dkim=none (message not signed)
+ header.d=none;calpoly.edu; dmarc=none action=none
+ header.from=cenparmi.concordia.ca;compauth=pass reason=105
+Received-SPF: None (protection.outlook.com: encs.concordia.ca does not
+ designate permitted sender hosts)
+Received: from oldperseverance.encs.concordia.ca (132.205.96.92) by
+ SN1NAM04FT004.mail.protection.outlook.com (10.152.88.171) with Microsoft SMTP
+ Server id 15.20.2284.25 via Frontend Transport; Fri, 20 Sep 2019 18:26:56
+ +0000
+Received: from oldtact.encs.concordia.ca (mailman@oldtact.encs.concordia.ca [132.205.96.85] port 27873)
+	by oldperseverance.encs.concordia.ca (envelope-from icprai-2020-announcement-bounces@encs.concordia.ca) (8.13.7/8.13.7) with ESMTP id x8KIQ46V025995;
+	Fri, 20 Sep 2019 14:26:22 -0400
+Received: from oldperseverance.encs.concordia.ca
+ (root@oldperseverance.encs.concordia.ca [132.205.96.92])
+ by oldtact.encs.concordia.ca (8.14.5/8.14.5) with ESMTP id x8KIPIlU024037;
+ Fri, 20 Sep 2019 14:25:18 -0400
+Received: from [132.205.110.181] (fling.encs.concordia.ca [132.205.110.181]
+ port 18426) by oldperseverance.encs.concordia.ca (envelope-from
+ icprai2020@cenparmi.concordia.ca) (8.13.7/8.13.7) with ESMTP id
+ x8KIPHd1025703; Fri, 20 Sep 2019 14:25:18 -0400
+To: icprai-2020-announcement@encs.concordia.ca
+From: ICPRAI 2020 <icprai2020@cenparmi.concordia.ca>
+Message-ID: <d02c8861-390f-ce8b-7588-0a3a9eea7494@cenparmi.concordia.ca>
+Date: Fri, 20 Sep 2019 14:25:12 -0400
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
+ Thunderbird/60.9.0
+Content-Language: en-US
+X-Scanned-By: MIMEDefang 2.58 on oldperseverance.encs.concordia.ca at 2019-09-20 14:26:36 EDT
+X-Scanned-By: MIMEDefang 2.58 on oldperseverance.encs.concordia.ca at
+ 2019-09-20 14:25:18 EDT
+X-Mailman-Approved-At: Fri, 20 Sep 2019 14:26:03 -0400
+Subject: [ICPRAI-2020-announcement] ICPRAI 2020 - Call for Papers,
+ Special Sessions, Workshops, and Sponsors
+X-BeenThere: icprai-2020-announcement@encs.concordia.ca
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <icprai-2020-announcement.encs.concordia.ca>
+List-Unsubscribe: <https://mail.encs.concordia.ca:444/mailman/options/icprai-2020-announcement>,
+ <mailto:icprai-2020-announcement-request@encs.concordia.ca?subject=unsubscribe>
+List-Archive: <https://mail.encs.concordia.ca:444/mailman/private/icprai-2020-announcement/>
+List-Post: <mailto:icprai-2020-announcement@encs.concordia.ca>
+List-Help: <mailto:icprai-2020-announcement-request@encs.concordia.ca?subject=help>
+List-Subscribe: <https://mail.encs.concordia.ca:444/mailman/listinfo/icprai-2020-announcement>,
+ <mailto:icprai-2020-announcement-request@encs.concordia.ca?subject=subscribe>
+Reply-To: icprai2020@cenparmi.concordia.ca
+Content-Type: multipart/mixed; boundary="===============5670944680217864407=="
+Errors-To: icprai-2020-announcement-bounces@encs.concordia.ca
+Sender: "Icprai-2020-announcement"
+ <icprai-2020-announcement-bounces@encs.concordia.ca>
+Return-Path: icprai-2020-announcement-bounces@encs.concordia.ca
+X-MS-Exchange-Organization-ExpirationStartTime: 20 Sep 2019 18:26:56.6271
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ dead8bf6-1bee-412f-c8cc-08d73df81e54
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:132.205.96.92;IPV:NLI;CTRY:CA;EFV:NLI;SFV:NSPM;SFS:(4636009)(428003)(176002)(199004)(189003)(6392003)(65806001)(7846003)(336012)(31696002)(65956001)(31686004)(966005)(71190400001)(2616005)(7596002)(8676002)(450100002)(16586007)(58126008)(7636002)(19273905006)(606006)(246002)(14444005)(19810500001)(6306002)(54896002)(42882007)(486006)(2351001)(126002)(956004)(476003)(26005)(236005)(24616004)(58800400005)(146002)(44144004)(2361001)(15003)(43066004)(16670700002)(356004)(5660300002)(6666004)(4006050)(1096003)(34206002)(9036002)(2476003)(3450700001)(75640400001)(89386003)(561944003)(33964004)(225293001);DIR:INB;SFP:;SCL:1;SRVR:CY4PR08MB2421;H:oldperseverance.encs.concordia.ca;FPR:;SPF:None;LANG:en;PTR:oldperseverance.encs.concordia.ca;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT004.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: dead8bf6-1bee-412f-c8cc-08d73df81e54
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600167)(711020)(4605104)(1404068)(49563074)(71702078);SRVR:CY4PR08MB2421;
+X-MS-TrafficTypeDiagnostic: CY4PR08MB2421:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Oob-TLC-OOBClassifiers: OLM:3826;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 20 Sep 2019 18:26:56.3839
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: dead8bf6-1bee-412f-c8cc-08d73df81e54
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY4PR08MB2421
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5224823
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2284.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZTQ2RW5lRHd2VWJlVmdBSzBheDNEWVVVMkRjbTk2cllSVWFRNUQxRkdCM3Z6?=
+ =?utf-8?B?ZlkwV3c0VWVFbngrNVUycWJ0K3hzRnNmdGc4OHZiR3A5YUkyemtBN1lkT0Jh?=
+ =?utf-8?B?WDQ3K2VCK1Nxc1VpSklOKzhyeitZOFE4L3UzWWJ4WVBkcUxteHZYNXlPTktB?=
+ =?utf-8?B?MFNrR3YyMWlzdGNnZDhnTThzY3V4YXY2eVRPNGxaTGdHWU5WY2FkekQrdk0w?=
+ =?utf-8?B?RjkxOWpPNGNRa3FLMTBUc1E0Q21IQ3NaZFFPVU85S0JWakhzaHRBb29IbFFM?=
+ =?utf-8?B?L3BITWFHSDJkZ1NLeE1VcXU0RWtaaDd3N3RTcm10MlhxVWFXaVFTWmR5SkMw?=
+ =?utf-8?B?ZlpvM1ltVmxCQUdZTEJiUUdjS1Q1Q1lnWU9TQkdSdVlVcXFJUlZLWVA1KzNx?=
+ =?utf-8?B?WGlhQkp6djFyUE51UHd6dHQxVFg5bkNQeDVtb3ZHSG1WT3dzMlFnNG01NWp1?=
+ =?utf-8?B?SHl3ZzBNR3B6OWhVQ0VvaHFQdllSNHp2R0txbGdHcEdoTVRWQmFRZGpnSkpT?=
+ =?utf-8?B?VCtxSDN6MjZXVWFBMHBGb3JmSzFzNmFQcmFSdk9LeFNZdURoVEl2Z2lOM2k2?=
+ =?utf-8?B?TnZ3MXVsczViU1hBekRVa1VLenl3NXErZnFqZmZjSFo3cHY2YkxvWTJUY2tP?=
+ =?utf-8?B?Y1RXR3pmQ1NveFNFdThhRUI1bk00QkliMXJLOXh5WlRIV0RCRkdzNnc0T252?=
+ =?utf-8?B?UFFwM1N2NVRSK1NDNWZhV0xmMDdFREMvc3NSNHdheVMvNmNMQzJ1TUIzVExt?=
+ =?utf-8?B?SklXUGdDUjE0WDFLZ3NHUlpGM2RCN3NrSzF0Z1Y0K1BiSktwQ2s3QUVrbS91?=
+ =?utf-8?B?clpiM0xYeWIxb0ZyNEdiT0FJRUpiU0J0YUhsTnBPUXhqTElHREk4bVFRMkox?=
+ =?utf-8?B?cE5qK3lXdTl6V2d1VzU0ZDk5dVNHVElOZFdHazBtR2Y1VWlnRUExcUZWb05r?=
+ =?utf-8?B?MW9tTDJvaUlQK2FsS2JyOUhicXNad25xR0dIc3A4TW9Ibkc5YWlyckc2Zjg5?=
+ =?utf-8?B?dFBxeDVMRkc5Vm1meG1sSTZPU0VYMkh2ak02WG1IRmtHY05kODlqU3R0Q3Mz?=
+ =?utf-8?B?UEhmbEM0MlVkOEQ5K2o5MFlSR0NOaGZSL1RYc0o5by9hblFOT1dNUTN3ODJR?=
+ =?utf-8?B?bzlUemI5WmFxUmtqbEJsQlJxakRXSU5ja3pncDZIdE1qRFlUUEl4b0hEcnp0?=
+ =?utf-8?B?ak1IV3RVMVNleERmYU5RY01ZR2xBMzlXQnptNnJieWk3ZjFTYkJpQzdnS2cy?=
+ =?utf-8?B?Q2VCdlhIUmoyTU5XMTBrSld4dzNoV0xsQ3d6dFdSR3ZoSmd1YnNjd2FDL0pS?=
+ =?utf-8?B?RGN3WU5Td3FqYTQzbWxXQ1NwSVFPcVFTZWQzdnJQZnBXVlpSdDhCaVE0REJS?=
+ =?utf-8?B?WkZhTWR6b3A3Z1R2NFd2cjN3U2tmMlM4S0MxbUF6Y2w1Q0dueHc2b1lVK3li?=
+ =?utf-8?Q?8k6cxZwU?=
+MIME-Version: 1.0
+
+--===============5670944680217864407==
+Content-Type: multipart/alternative;
+ boundary="------------D62F8DA1E11D4D61DD092782"
+Content-Language: en-US
+
+--------------D62F8DA1E11D4D61DD092782
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+*Call for Papers, Special Sessions, Workshops, and Sponsors*
+
+*ICPRAI 2020 - Second International Conference on Pattern Recognition 
+and Artificial Intelligence *
+
+*Zhongshan City, China, just a short boat ride direct from Hong Kong airport
+**May 12-15, 2020*
+
+**Call for Papers:
+
+**Paper submission is now open through EasyChair until November 15, 2019.
+Please see the "Submission Guidelines" page on our web URLs:
+
+http://www.icprai2020.com/and https://users.encs.concordia.ca/~icprai20/
+
+*Technical Session Tracks:*
+
+*Track* 	*Description*
+*1*: Lu 	Recognition of different types of patterns, handwriting, 
+document, text, machine learning, neural networks, SVM, deep learning 
+and classification techniques, language processing, semantic analysis, 
+computational linguistics, e-learning and innovative teaching methods.
+*2*: Cheriet 	Computer vision and image processing, bio-medical 
+analysis, healthcare and tomography.
+*3*: Vincent 	Artificial Intelligence, 2D and 3D images and graphics, 
+audio/video, and multimedia applications, feature extraction and 
+evaluation.
+*4*: Yuen 	Security and forensic studies, mobile applications, face, 
+fingerprint, iris, brain, and strategic objects and targets.
+*5*: Zheng 	Big data, small sample size, supercomputing, data mining and 
+performance evaluation, intelligent systems and practical applications, 
+Industrial Applications of PRAI, intellectual properties and ownership, 
+innovation and technology transfer, financial trends and analysis, 
+traffic analysis and smart transportation systems, robotics and 
+autonomous vehicles.
+
+
+
+*Publication Notes: *
+
+ 1. Proceeding of ICPRAI 2020 to be published in the _LNCS series of
+    Springer_,
+ 2. Best papers will be selected for a Special Issue in the
+    International Journal of Pattern Recognition and Artificial
+    Intelligence (IJPRAI),
+ 3. Papers of general interest will be considered for new books in the
+    Book Series of Language Processing, Pattern Recognition, and
+    Intelligent Systems (http://www.worldscientific.com/series/scpl), and
+ 4. Depending on the submissions, we may also propose Special Issues to
+    other journals on papers of special interest on emerging topics.
+
+*Keynote Speakers***:
+
+**ICPRAI 2020 is proud to announce the following Keynote speakers, with 
+more to come:
+
+  * Prof. Gernot Fink
+  * Prof. Hironobu Fujiyoshi
+  * Prof. Seong-Whan Lee
+  * Prof. Cheng-Lin Liu
+  * Prof. Farida Cheriet
+  * Profs. Nicole Vincent and Camille Kurtz
+
+***Call for Special Sessions and Workshops
+
+***We welcome proposals for Special Sessions, Panels, and Workshops, 
+submission starting on August 15, 2019until October 15, 2019.Please send 
+your proposals to the Conference Secretariat (email below).**
+**
+***Sponsors:
+
+***Looking to increase your visibility as a vendor in the AI landscape? 
+Ask us about sponsorship and exhibitor opportunities.***
+
+**Important Dates:*
+
+    *Proposal for Special Sessions:* 	August 15 until October 15, 2019
+    *Paper Submission:* 	*September 15 until November 15, 2019*
+    *Acceptance notification:* 	January 25, 2020
+    *Camera ready & Copyright Form:* 	February 15, 2020
+
+*Contact:*
+
+*    Secretariat: *icprai2020@cenparmi.concordia.ca 
+<mailto:icprai2020@cenparmi.concordia.ca>
+
+*Web: *http://www.icprai2020.com/and 
+https://users.encs.concordia.ca/~icprai20/ 
+<https://users.encs.concordia.ca/%7Eicprai20/>
+*
+Facebook: *https://www.facebook.com/ICPRAI2020
+
+
+------------------------------------------------------------------------
+ICPRAI 2020 - Second International Conference on Pattern Recognition and 
+Artificial Intelligence
+*Web:*http://www.icprai2020.com/or 
+https://users.encs.concordia.ca/~icprai20/
+*eMail:*icprai2020@cenparmi.concordia.ca
+*Facebook:*https://www.facebook.com/ICPRAI2020
+
+--------------D62F8DA1E11D4D61DD092782
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body text="#000000" bgcolor="#FFFFFF">
+    <p class="pageHeaders" align="center"><tt><big><b>Call for Papers,
+            Special Sessions, Workshops, and Sponsors</b></big></tt></p>
+    <tt> </tt><tt> </tt><tt> </tt>
+    <div align="center"> <tt><b>ICPRAI 2020 - Second International
+          Conference on Pattern Recognition and Artificial Intelligence
+        </b></tt><tt><br>
+      </tt> </div>
+    <tt> </tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt> </tt>
+    <div align="center"><tt><b>Zhongshan City, China, just a short boat
+          ride direct from Hong Kong airport<br>
+        </b></tt><tt><b>May 12-15, 2020</b></tt><tt><br>
+      </tt> </div>
+    <tt> </tt><tt><br>
+    </tt><tt> </tt><tt><b><b>Call for Papers:<br>
+          <br>
+        </b></b></tt><tt>Paper submission is now open through EasyChair
+      until November 15, 2019.</tt><tt><br>
+    </tt><tt> Please see the &quot;Submission Guidelines&quot; page on our web
+      URLs:</tt><tt><br>
+    </tt><tt> </tt><tt><br>
+    </tt><tt> &nbsp; </tt><tt><a href="http://www.icprai2020.com/">http://www.icprai2020.com/</a></tt><tt>
+      and </tt><tt><a href="https://users.encs.concordia.ca/~icprai20/">https://users.encs.concordia.ca/~icprai20/</a></tt><tt><br>
+    </tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt> </tt><tt><b>Technical Session
+        Tracks:</b></tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt><br>
+    </tt><tt> </tt>
+    <table style="color: rgb(0, 0, 0); font-family: &amp;quot;Times New
+      Roman&amp;quot;; font-size: 16px; font-style: normal;
+      font-variant: normal; font-weight: 400; letter-spacing: normal;
+      orphans: 2; text-align: left; text-decoration: none; text-indent:
+      0px; text-transform: none; -webkit-text-stroke-width: 0px;
+      white-space: normal; word-spacing: 0px;" width="90%" cellspacing="2" cellpadding="4" border="1">
+      <tbody>
+        <tr>
+          <td width="13%"><tt><b>Track</b></tt></td>
+          <td><tt><b>Description</b></tt></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ccffff"><tt><b>1</b></tt><tt>: Lu</tt></td>
+          <td bgcolor="#ccffff" align="justify"><tt>Recognition of
+              different types of patterns, handwriting, document, text,
+              machine learning, neural networks, SVM, deep learning and
+              classification techniques, language processing, semantic
+              analysis, computational linguistics, e-learning and
+              innovative teaching methods.</tt></td>
+        </tr>
+        <tr>
+          <td><tt><b>2</b></tt><tt>: Cheriet</tt></td>
+          <td align="justify"><tt>Computer vision and image processing,
+              bio-medical analysis, healthcare and tomography.</tt></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ccffff"><tt><b>3</b></tt><tt>: Vincent</tt></td>
+          <td bgcolor="#ccffff" align="justify"><tt>Artificial
+              Intelligence, 2D and 3D images and graphics, audio/video,
+              and multimedia applications, feature extraction and
+              evaluation.</tt></td>
+        </tr>
+        <tr>
+          <td><tt><b>4</b></tt><tt>: Yuen</tt></td>
+          <td align="justify"><tt>Security and forensic studies, mobile
+              applications, face, fingerprint, iris, brain, and
+              strategic objects and targets.</tt></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ccffff"><tt><b>5</b></tt><tt>: Zheng</tt></td>
+          <td bgcolor="#ccffff" align="justify"><tt>Big data, small
+              sample size, supercomputing, data mining and performance
+              evaluation, intelligent systems and practical
+              applications, Industrial Applications of PRAI,
+              intellectual properties and ownership, innovation and
+              technology transfer, financial trends and analysis,
+              traffic analysis and smart transportation systems,
+              robotics and autonomous vehicles.</tt></td>
+        </tr>
+      </tbody>
+    </table>
+    <tt> </tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt><b>Publication Notes: </b></tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt> </tt>
+    <ol>
+      <li><tt>Proceeding of ICPRAI 2020 to be published in the </tt><tt><u>LNCS
+            series of Springer</u></tt><tt>,</tt><tt><br>
+        </tt> </li>
+      <li><tt>Best papers will be selected for a Special Issue in the
+          International Journal of Pattern Recognition and Artificial
+          Intelligence (IJPRAI),</tt><tt><br>
+        </tt> </li>
+      <li><tt>Papers of general interest will be considered for new
+          books in the Book Series of Language Processing, Pattern
+          Recognition, and Intelligent Systems (</tt><tt><a class="moz-txt-link-freetext" href="http://www.worldscientific.com/series/scpl">http://www.worldscientific.com/series/scpl</a></tt><tt>),
+          and</tt></li>
+      <li><tt>Depending on the submissions, we may also propose Special
+          Issues to other journals on papers of special interest on
+          emerging topics.</tt><tt><br>
+        </tt> </li>
+    </ol>
+    <tt> </tt><tt> </tt><tt><b>Keynote Speakers</b></tt><tt><b><b>:<br>
+          <br>
+        </b></b></tt><tt>ICPRAI 2020 is proud to announce the following
+      Keynote speakers, with more to come: </tt><tt><br>
+    </tt><tt> </tt><tt> </tt>
+    <ul>
+      <li><tt>Prof. Gernot Fink </tt></li>
+      <li><tt>Prof. Hironobu Fujiyoshi </tt></li>
+      <li><tt>Prof. Seong-Whan Lee </tt></li>
+      <li><tt>Prof. Cheng-Lin Liu </tt></li>
+      <li><tt>Prof. Farida Cheriet </tt></li>
+      <li><tt>Profs. Nicole Vincent and Camille Kurtz</tt><tt><br>
+        </tt> </li>
+    </ul>
+    <tt> </tt><tt><b><b><b>Call for Special Sessions and Workshops<br>
+            <br>
+          </b></b></b></tt><tt>We welcome proposals for Special
+      Sessions, Panels, and Workshops, submission starting on August 15,
+      2019</tt><tt> </tt><tt>until October 15, 2019.</tt><tt> </tt><tt>Please
+      send your proposals to the Conference Secretariat (email below).</tt><tt><b><b><br>
+        </b></b></tt><tt><br>
+    </tt><tt> </tt><tt><b><b><b>Sponsors:<br>
+            <br>
+          </b></b></b></tt><tt>Looking to increase your visibility as a
+      vendor in the AI landscape? Ask us about sponsorship and exhibitor
+      opportunities.</tt><tt><b><b><b><br>
+            <br>
+          </b></b>Important Dates:</b></tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt> </tt>
+    <blockquote>
+      <table width="560" height="169" cellspacing="2" cellpadding="2" border="1">
+        <tbody>
+          <tr>
+            <td valign="top"><tt><b>Proposal for Special Sessions:</b></tt></td>
+            <td valign="top"><tt>August 15 until October 15, 2019 </tt></td>
+          </tr>
+          <tr>
+            <td valign="top"><tt><b>Paper Submission:</b></tt></td>
+            <td valign="top"><tt><b>September 15 until November 15, 2019</b></tt></td>
+          </tr>
+          <tr>
+            <td valign="top"><tt><b>Acceptance notification:</b></tt></td>
+            <td valign="top"><tt>January 25, 2020</tt></td>
+          </tr>
+          <tr>
+            <td valign="top"><tt><b>Camera ready &amp; Copyright Form:</b></tt></td>
+            <td valign="top"><tt>February 15, 2020</tt></td>
+          </tr>
+        </tbody>
+      </table>
+    </blockquote>
+    <tt> </tt><tt><b>Contact:</b></tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt><b>&nbsp;&nbsp;&nbsp; Secretariat: </b></tt><tt><a href="mailto:icprai2020@cenparmi.concordia.ca">icprai2020@cenparmi.concordia.ca
+      </a></tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt><b>Web: </b></tt><tt> </tt><tt><a href="http://www.icprai2020.com/" target="_blank">http://www.icprai2020.com/</a></tt><tt>
+      and </tt><tt><a href="https://users.encs.concordia.ca/%7Eicprai20/" target="_blank">https://users.encs.concordia.ca/~icprai20/</a></tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt><b><br>
+        Facebook: </b></tt><tt><a class="moz-txt-link-freetext" href="https://www.facebook.com/ICPRAI2020">https://www.facebook.com/ICPRAI2020</a></tt><tt><br>
+    </tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt><br>
+    </tt><tt> </tt><tt> </tt><tt> </tt>
+    <div class="moz-signature">
+      <hr><tt> ICPRAI 2020 - Second International Conference on Pattern
+        Recognition and Artificial Intelligence</tt><tt><br>
+      </tt> <tt><b>Web:</b></tt><tt> </tt><tt><a class="moz-txt-link-freetext" href="http://www.icprai2020.com/">http://www.icprai2020.com/</a></tt><tt>
+        or </tt><tt><a class="moz-txt-link-freetext" href="https://users.encs.concordia.ca/~icprai20/">https://users.encs.concordia.ca/~icprai20/</a></tt><tt><br>
+      </tt> <tt><b>eMail:</b></tt><tt> </tt><tt><a class="moz-txt-link-abbreviated" href="mailto:icprai2020@cenparmi.concordia.ca">icprai2020@cenparmi.concordia.ca</a></tt><tt><br>
+      </tt> <tt><b>Facebook:</b></tt><tt> </tt><tt><a class="moz-txt-link-freetext" href="https://www.facebook.com/ICPRAI2020">https://www.facebook.com/ICPRAI2020</a></tt></div>
+    <tt> </tt>
+  </body>
+</html>
+
+--------------D62F8DA1E11D4D61DD092782--
+
+--===============5670944680217864407==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Icprai-2020-announcement mailing list
+Icprai-2020-announcement@encs.concordia.ca
+https://mail.encs.concordia.ca:444/mailman/listinfo/icprai-2020-announcement
+
+--===============5670944680217864407==--

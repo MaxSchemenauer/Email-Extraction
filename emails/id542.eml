@@ -1,0 +1,169 @@
+Received: from BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:a03:12b::16)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR07CA0075.NAMPRD07.PROD.OUTLOOK.COM; Mon, 8 Jul 2019 09:19:57 +0000
+Received: from BN6PR08CA0055.namprd08.prod.outlook.com (2603:10b6:404:b9::17)
+ by BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:408:28::30) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2052.19; Mon, 8 Jul
+ 2019 09:19:54 +0000
+Received: from SN1NAM04FT017.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::204) by BN6PR08CA0055.outlook.office365.com
+ (2603:10b6:404:b9::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2052.18 via Frontend
+ Transport; Mon, 8 Jul 2019 09:19:54 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.210.67)
+ smtp.mailfrom=gmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=gmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.210.67 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.210.67; helo=mail-ot1-f67.google.com;
+Received: from mail-ot1-f67.google.com (209.85.210.67) by
+ SN1NAM04FT017.mail.protection.outlook.com (10.152.88.154) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2052.18 via Frontend Transport; Mon, 8 Jul 2019 09:19:54 +0000
+Received: by mail-ot1-f67.google.com with SMTP id q10so15451915otk.10
+        for <foaad@calpoly.edu>; Mon, 08 Jul 2019 02:19:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:sender:from:date:message-id:subject:to;
+        bh=9B5DUsJ6hgab+JMCR7bv3MkrIPMzCAjA74DowO5F9QY=;
+        b=tnHH00rkvsUhpJxD9n17hM3HLThvc8Qz2sMJXnuLQPO8kTy/tcuDz4Ah9dLw1zH4FM
+         xpWDb7CSFwyHNYENXJHzp/gfQ25gcvWdeP5kqFq5Oj/rA43OfnLjUmWncVTm/nDxo2Z+
+         l7Lf1ToegGfJ2t6otun1Od/p1EqO7KlcVXJDPo/AsNf7k5yNtEXJFHXnzUQBVpBJkfn9
+         LZ3WsHIFWCD/GPYJQ1N1wMPT5WGEDWZ0MKv8KgW/mx3P/PY2R4BDdZAkvZzrx1WH0L+9
+         0+xHlQpfKUKKMKzta5E5c6BFoL0XXS4D4Eka18ne6chlYfPi23IQhwiCKAz6eW7D4PCZ
+         igew==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:sender:from:date:message-id:subject
+         :to;
+        bh=9B5DUsJ6hgab+JMCR7bv3MkrIPMzCAjA74DowO5F9QY=;
+        b=dkRtFfIL+R0Y2YskKJ8DlgOsauKeKnein83nvvskQt3iYVTV9BBCfEmbhdBunudAtv
+         mg/nfZL28RFExi2udILKYh97L5HdCLW6tUuQp5rGBWhJ1ivd6Op+kP3uGTi4CZGMERmI
+         44pDZgPKUkLGG6XFA5mCuvWsc3Wb9+4qfTuIyCi1d4Npkp2QSvkbTxx0vxHEDqqWA2FW
+         mooRmxSqA4cA+ChFBJV7pNxnP1RbfRbn8atR56asbT2HS7pWdzEa8zHcn6qD5wT6q9QM
+         ejuDVgLn6dO4qDC2LsKZP/g+8npjcKuMiEH8mS4q0nOyVnR2DqoqjB1fkX6RgqsoQR9P
+         sPfA==
+X-Gm-Message-State: APjAAAVPx3YXmMR6YDy0R/Hu0dCb6DttisOABlpHvhBqn6SfDYAW+/lR
+	0rsW5fPn6IHsKFFvoeDSq5tPpQCcyFBmAhzyruTcFcT9
+X-Google-Smtp-Source: APXvYqyLllvglFjnoOIbknjzM6gyCr/WjPqje6JppsxYyr9qwPItxgdIt+bGyOB4NJAVEh+CD2NDLjgcIY0vd9ZXa5s=
+X-Received: by 2002:a05:6830:105a:: with SMTP id b26mr13110070otp.351.1562577593546;
+ Mon, 08 Jul 2019 02:19:53 -0700 (PDT)
+Received: from 52669349336 named unknown by gmailapi.google.com with HTTPREST;
+ Mon, 8 Jul 2019 05:19:52 -0400
+Sender: NAMGI KIM <ijistjournal12@gmail.com>
+From: NAMGI KIM <ijistjournal12@gmail.com>
+Date: Mon, 8 Jul 2019 05:19:52 -0400
+X-Google-Sender-Auth: iBrjA9moFAqlws7DH19d2BqYRh0
+Message-ID: <CAHyAFtBdcQFH=nvLc9Ew+NzrS_6EZmfmPdngpyGuRk5UzP3YQg@mail.gmail.com>
+Subject: Submit your papers for evaluation and publication in the July 2019 issue!!
+To: Foaad <foaad@calpoly.edu>
+Content-Type: multipart/alternative; boundary="00000000000065bc40058d27f2d1"
+Return-Path: ijistjournal12@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 08 Jul 2019 09:19:54.1873
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 551b6fb4-5990-43af-6d95-08d703857010
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132070511941903072;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.210.67;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(189003)(199004)(476003)(71190400001)(7636002)(126002)(14444005)(336012)(8676002)(18926415008)(6916009)(75640400001)(22186003)(5660300002)(486006)(33964004)(108016009)(73392003)(26005)(95476003)(55446002)(58800400005)(62610400004)(21615005)(16586007)(305945005)(7596002)(66574012)(606006)(356004)(8576002)(1096003)(59536001)(76236002)(86362001)(246002)(4006050)(82202003)(95326003)(6392003)(53346004)(7846003)(2171002)(76482006)(73972006)(106002)(16003)(236005)(6306002)(733005)(498394004)(2160300002)(61266001)(19627405001)(99710200001);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4980;H:mail-ot1-f67.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-ot1-f67.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT017.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 551b6fb4-5990-43af-6d95-08d703857010
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:BN7PR08MB4980;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4980:
+X-MS-Exchange-PUrlCount: 2
+X-MS-Oob-TLC-OOBClassifiers: OLM:374;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 Jul 2019 09:19:54.1562
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 551b6fb4-5990-43af-6d95-08d703857010
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4980
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8997662
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2052.002
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	RJR7U6OUvwXiHbZXRBvon8SxX1+BE7keUuDaY57ZEYvmnj0kcqeJrwCfExRvG2e3OsyYhZbwaLR+Ak796JxwVb9xETn/S4XD6r2D4fTQMuTsy5snv9pzHlyzNbUGS8ooIAKqAUmeAABhzraasPjnYYasIqr7654mZgkj/smATsKQ5rQxEiHX2Do7vOxpB7AvIEbwcNr7WJPHSGHxyzM2UWphMr4YuJ487EhciwnupOqW2aAwz6vHUhNlLa1R0MfSfV4m/HIu3ZQu1t3mnYbicISebNublS2h2yuTpDZrHuQQ6iNK/4o6wrZ3FrAz6XT3NZ9/G9jMg2++6Az5MuDlILLFp5RotA9LzTsUkiljxzDdeK0cniMdYc+RI2MIWHKDaKSeiU+SetZ2onLfchNteeURBZ0ZbaU4XzQYYHbJHAgiNi9Iotl+NADmhOke1hqIbwxoSedli8xAw+k4DGm6SuOgIl4uwN/4IvXmKq5nD68GV0R4hDlVcscZEywi9moOIbN/vfmxS2jdbo8LrmO36C0eHU4KXtDEw7TA/rYkfuK+L2uhR2knt0t0LTxWzFRKcY3I2qCJFfIUcVyFmTmltiaQxRZti6P7glMCqJX5ltBwhPNQhaNKp56DnQGukFhdTO5T3KMhcHH/vBev5cIZufyaejwuJSqqnowxhhOvrm6K4kZbJ1G4UPOSKnKmSlcB42qLSdJlOtWcww+uoSCKdQtt4Soim9QPFVO/+CL94JwCwD5/Qt6QkM2sjm6v4IumG7IxVws1n0BgNnPEHF1MA+6jBElxKI8fM7mR3Qf6kyyZ1rK3ff1lpEQKk7xaQe5YYCA5L934I2h4jXySQjTEZPLOOs3IsNYERinlDengpVe8bdlwxAX3RLMw8wcoCXVtBfIxsrPMOp4CmfnXNa+4dYjHo7XiPjVuYvdk+51jJT37TEhuiSuSXOCRQSj2+ts0epbitfb0l1aghLXhZtW0DA==
+MIME-Version: 1.0
+
+--00000000000065bc40058d27f2d1
+Content-Type: text/plain; charset="UTF-8"
+
+IJIST July 2019 is an open access International refereed research
+publishing journal with a focused aim on promoting and publishing original
+high quality research dealing with theoretical and scientific aspects in
+all disciplines of Information science and techniques.
+
+Information systems
+System Software
+Artificial Intelligence
+Computer Architecture
+Distributed Systems
+System & Software Engineering
+Genomics-IT & Bioinformatics
+Internet and Web
+AI & Expert systems
+Software Process and Life Cycle
+Database Systems
+Software Testing & Quality assurance
+IOT & Big DATA
+Information Technology Implementation
+Computing Languages & Algorithms
+E-commerce & M-Commerce
+Computer Networks & Communications
+Computing Systems
+Control Systems & Engineering
+Systems Engineering
+
+Sample journal archives :*http://  airccse.org/journal/IS/vol1.html
+<https://ijistjournal12-dot-yamm-track.appspot.com/Redirect?ukey=1yiuDvOlm1gdJQhWnlR1aBF2gBkAM4xjPY0xsuVb3rG4-0&key=YAMMID-77592702&link=http%3A%2F%2Fairccse.org%2Fjournal%2FIS%2Fvol1.html>*
+[image: beacon]
+
+--00000000000065bc40058d27f2d1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><font fac=
+e=3D"garamond,times new roman,serif" size=3D"4">IJIST July 2019 is an open =
+access International refereed research publishing journal with a focused ai=
+m on promoting and publishing original high quality research dealing with t=
+heoretical and scientific aspects in all disciplines of Information science=
+ and techniques.</font></div><div dir=3D"ltr"><font face=3D"garamond,times =
+new roman,serif"></font><font size=3D"4"></font><br></div><div dir=3D"ltr">=
+<font face=3D"garamond,times new roman,serif" size=3D"4">Information system=
+s<br>System Software<br>Artificial Intelligence<br>Computer Architecture<br=
+>Distributed Systems<br>System &amp; Software Engineering <br>Genomics-IT &=
+amp; Bioinformatics<br>Internet and Web<br>AI &amp; Expert systems<br>Softw=
+are Process and Life Cycle<br>Database Systems<br>Software Testing &amp; Qu=
+ality assurance<br>IOT &amp; Big DATA<br>Information Technology Implementat=
+ion<br>Computing Languages &amp; Algorithms<br>E-commerce &amp; M-Commerce<=
+br>Computer Networks &amp; Communications<br>Computing Systems<br>Control S=
+ystems &amp; Engineering<br>Systems Engineering</font></div><div dir=3D"ltr=
+"><font face=3D"Times New Roman" size=3D"4"><br></font></div><div><font fac=
+e=3D"Times New Roman" size=3D"4">Sample journal archives :</font><font colo=
+r=3D"#ff0000" face=3D"Times New Roman" size=3D"4"><b>http://&nbsp; <a href=
+=3D"https://ijistjournal12-dot-yamm-track.appspot.com/Redirect?ukey=3D1yiuD=
+vOlm1gdJQhWnlR1aBF2gBkAM4xjPY0xsuVb3rG4-0&amp;key=3DYAMMID-77592702&amp;lin=
+k=3Dhttp%3A%2F%2Fairccse.org%2Fjournal%2FIS%2Fvol1.html">airccse.org/journa=
+l/IS/vol1.html</a></b></font></div></div></div></div>
+<img src=3D"https://ijistjournal12-dot-yamm-track.appspot.com/FireBase?ukey=
+=3D1yiuDvOlm1gdJQhWnlR1aBF2gBkAM4xjPY0xsuVb3rG4-0&amp;key=3DYAMMID-77592702=
+" width=3D"1" height=3D"1" alt=3D"beacon" style=3D"display:none; display:no=
+ne!important;">
+
+--00000000000065bc40058d27f2d1--

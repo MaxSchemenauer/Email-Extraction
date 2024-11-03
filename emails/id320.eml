@@ -1,0 +1,691 @@
+Return-Path: shullbackman2001@yahoo.com
+Received: from p-zm-mta02.its.calpoly.edu (LHLO p-zm-mta02.its.calpoly.edu) (129.65.64.110) by p-zm-store01.its.calpoly.edu with LMTP;
+	 Mon, 13 Oct 2014 23:50:34 -0700 (PDT)
+Received: from p-zm-mta02.its.calpoly.edu (localhost.localdomain [127.0.0.1]) by p-zm-mta02.its.calpoly.edu (Postfix) with ESMTP id D22839E2F6 for <foaad@calpoly.edu>;
+	 Mon, 13 Oct 2014 23:50:34 -0700 (PDT)
+Received: from israfil.its.calpoly.edu (prod-loopback.its.calpoly.edu [129.65.64.9]) by p-zm-mta02.its.calpoly.edu (Postfix) with ESMTPS id CC4C89E2FF for <foaad@cpmail.calpoly.edu>;
+	 Mon, 13 Oct 2014 23:50:34 -0700 (PDT)
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AosDADXHPFRiingwXGdsb2JhbABODYIMPEZTUwWDBrhIkEABBYdRgRwWAQYWDAsGFCULhBQSBggCEwECCywBFBcXDwEJAjEBAQ0BBAIEFAgLCQ0HBIgIAQECEQgFoROHL4gMgUwEIgmDB4F9hw4BIwMBIwOGOAEKAQEBAQEVAQYMAQEBj1QKBwEcAoJvDzISgUIFhRUChBGNE4UCghWBJzyDCoJyN2iMJYRebIEGAgcXgSQBAQE
+X-IPAS-Result: AosDADXHPFRiingwXGdsb2JhbABODYIMPEZTUwWDBrhIkEABBYdRgRwWAQYWDAsGFCULhBQSBggCEwECCywBFBcXDwEJAjEBAQ0BBAIEFAgLCQ0HBIgIAQECEQgFoROHL4gMgUwEIgmDB4F9hw4BIwMBIwOGOAEKAQEBAQEVAQYMAQEBj1QKBwEcAoJvDzISgUIFhRUChBGNE4UCghWBJzyDCoJyN2iMJYRebIEGAgcXgSQBAQE
+X-IronPort-AV: E=Sophos;i="5.04,714,1406617200";
+	    d="scan'208,217"; a=1162287
+X-Originating-IP-Address: 98.138.120.48
+Received: from nm41.bullet.mail.ne1.yahoo.com ([98.138.120.48]) by israfil.its.calpoly.edu with ESMTP/TLS/DHE-RSA-AES256-SHA;
+	 13 Oct 2014 23:50:33 -0700
+DKIM-Signature: v=1; a="rsa-sha256"; c="relaxed/relaxed";
+	 d="yahoo.com"; s=s1024; t=1413269429;
+	 bh="gnXWFGSoI8MxEkGM7Vo1oFhAe2m/j9LUYImIj1b71VU=";
+	 h="Received:Received:Received:Received:Received:X-Yahoo-Newman-Property:X-Yahoo-Newman-Id:X-YMail-OSG:Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Length";
+	 b="U8hN1BXIDgCCdgKmuuwILUFe0K+4KQF8wRI75E3D2Kep9Wbitg2lfNJsInMLUjqslxZUfxml9MGLmMN5qKkPUMBAJ7+I8uPMkeYCufvQ7xmgk4YWhRannMm2/AQKyasrJFy4hBTYfe9EyAYuUYG1vOGiym5YMRy/8+aj9Z+pYTA="
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024;
+	 d="yahoo.com";
+	 b="aareDIGqS4PS6uRqHfh6fOdm8pjL9nVAACcpW7/NWBHvx8XhsbikK0VFGi8DOdBPG/AZhP6Wv5XwD7hrVCj6DD6DnR/lUdPwOyDTy5MGjUrD8n801S1UJLz+THUemRAx9Eew6TVmpRKGwfynX/h5BNZT7JNo8sPVy8eljNGYD9A=";
+Received: from [127.0.0.1] by nm41.bullet.mail.ne1.yahoo.com with NNFMP;
+	 14 Oct 2014 06:50:29 -0000
+Received: from [98.138.101.132] by nm41.bullet.mail.ne1.yahoo.com with NNFMP;
+	 14 Oct 2014 06:47:32 -0000
+Received: from [98.139.212.152] by tm20.bullet.mail.ne1.yahoo.com with NNFMP;
+	 14 Oct 2014 06:47:32 -0000
+Received: from [98.139.212.198] by tm9.bullet.mail.bf1.yahoo.com with NNFMP;
+	 14 Oct 2014 06:47:32 -0000
+Received: from [127.0.0.1] by omp1007.mail.bf1.yahoo.com with NNFMP;
+	 14 Oct 2014 06:47:32 -0000
+X-Yahoo-Newman-Property: ymail-4
+X-Yahoo-Newman-Id: 299499.97179.bm@omp1007.mail.bf1.yahoo.com
+X-YMail-OSG: bmuhBlkVM1lNe3Oy7Xl.s8NRJaX.TIN8ddXdhlHJ5zOuMSBWvYy0j8yCxfKDsL8 le1X3.uucMhyRgZGqkXarBr06nm4mTDdijPrhVSf5X84QSDZdZvh1._xa49n8RqTT7AKDo3w08t0 07uhLY0zEuyOTWXxDvBeyouNoqDlaUHrVOETqP2lmy7GS6QbmAFWOAOO7dPpVhevhq3NjR9C3KZq WA.crgTYyW1wuyZ4MIAI5TSFm2HjU3xJL893kNrmzSA54O3PADDAdy4krWiCj3lAX3_njnQyT6l3 DHTjugSjAWLuMTPRcYOLk5dExlc9JYStM7RUz8HyQ5.kXlrPuhkgDxTQTTJfzPq8z6V0k6fMKnNR cjfzMEt_3ZeJc0kDbXxokfZFNTCZkUEVIhTMRKAwcFVNkzdRy899NSrCYaXOgYNWcU8IJGFROlIJ PugX8rIo2kzmgucMh33lLqi7H3NfkgiayQj.kmQs_DVkOOLSh9GSpjo4xpapzoSm0x1WV.MZVTom LNzBXI0AjlpRkQGWgXyAMGu7rDd9jZyb3hV7SBNypTlGE04neush_GprA4pYS1CW_edAuxww_afZ 3gDLpzWgk5ktyy4Sq7qfQmPPPG.M6VdXTupueGz_8vYOPj40odvOdNYFU2Yg0y91YVT.ZUXuo9v8 D1cR7E2Q2oUxK967NCff9VlQv34m3N17fJ1qHl5ZVTGFLCkBYcO_KJRpWip.SFLdFZIleHg8Fa5t CEeS7JL23jOtJ5UD.lCNHL9hnepQXOZ5VkQ--
+Date: Tue, 14 Oct 2014 06:47:28 +0000
+From: Shullb Ackman <shullbackman2001@yahoo.com>
+Reply-To: Shullb Ackman <shullbackman2001@yahoo.com>
+To: "aripd.jea@gmail.com" <aripd.jea@gmail.com>
+Message-ID: <1516774167.29420.1413269248225.JavaMail.yahoo@jws106150.mail.bf1.yahoo.com>
+Subject: Call for Papers
+Content-Type: multipart/alternative;
+	boundary="----=_Part_29419_357862394.1413269248211"
+MIME-Version: 1.0
+
+------=_Part_29419_357862394.1413269248211
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Callfor PapersJournalof Engineering and ArchitectureISSN:2334-2986 (Print) =
+2334-2994 (Online)Journal of Engineering andArchitectureis an international=
+ peer-reviewed journal. The journal is not limited to aspecific aspect of e=
+ngineering and architecture but is instead devoted to awide range of subfie=
+lds in the engineering sciences and architecture. Articlesof interdisciplin=
+ary nature are particularly welcome. The journal strives tomaintain high qu=
+ality of publications. There will be a commitment to expeditingthe time tak=
+en for the publication of the papers. The editorial board reservesthe right=
+ to reject papers without sending them out for review. The journalalso publ=
+ishes innovative contributions on every aspect of architecturalendeavor.The=
+journal is published by the American Research Institute for Policy Developm=
+ent that serves as afocal point for academicians, professionals, graduate a=
+nd undergraduatestudents, fellows, and associates pursuing research through=
+out the world.Theinterested contributors are highly encouraged to submit th=
+eirmanuscripts/papers to the executive editor via e-mail at editor@aripd.or=
+g. Please indicate the name of thejournal (Journal of Engineering and Archi=
+tecture) in the cover letter or simplyput =E2=80=98Journal of Engineering a=
+nd Architecture=E2=80=99 in the subject box duringsubmission via e-mail.=C2=
+=A0 The journal isAbstracted/Indexed in CrossRef, CrossCheck, Cabell's, Ulr=
+ich's, GriffithResearch Online, Google Scholar, Education.edu, Informatics,=
+ Universe DigitalLibrary, Standard Periodical Directory, Gale, Open J-Gate,=
+ EBSCO, Journal Seek,DRJI, ProQuest, BASE, InfoBase Index, OCLC, IBSS, Acad=
+emic Journal Databases,Scientific Index.E-Publication FirstTME-PublicationF=
+irstTM is a feature offered through our journal platform. It allowsPDF vers=
+ion of manuscripts that have been peer reviewed and accepted, to behosted o=
+nline prior to their inclusion in a final printed journal. Readers canfreel=
+y access or cite the article. The accepted papers are published onlinewithi=
+n one week after the completion of all necessary publishing steps.DOI=C2=AE=
+ numberEachpaper published in Journal of Engineering and Architecture is as=
+signed a DOI=C2=AEnumber, which appears beneath the author's affiliation in=
+ the published paper.Click HERE to know what is DOI(Digital Object Identifi=
+er)? Click HEREto retrieve Digital Object Identifiers (DOIs) for journal ar=
+ticles, books, andchapters.JEAis inviting papers for Vol. 2, No. 2. The onl=
+ine publication date is December31, 2014. Submission Deadline: October 31, =
+2014. Youmay view the complete list of the journals of the institute. For a=
+ny additionalinformation, please contact with the executive editor at edito=
+r@aripd.org Regards,Dr. David Grau,Arizona State University, USA. Editor-in=
+-ChiefJournal of Engineeringand Architecture ________________N. B. To unsub=
+scribe,forward this email to info@aripd.org =C2=A0with'Unsubscribe' in the =
+subject line.=C2=A0=C2=A0
+------=_Part_29419_357862394.1413269248211
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head>
+<body><div style=3D"color:#000; background-color:#fff; font-family:Helvetic=
+aNeue, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;font-siz=
+e:16px"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val=3D"Cambria Math"/>
+   <m:brkBin m:val=3D"before"/>
+   <m:brkBinSub m:val=3D"--"/>
+   <m:smallFrac m:val=3D"off"/>
+   <m:dispDef/>
+   <m:lMargin m:val=3D"0"/>
+   <m:rMargin m:val=3D"0"/>
+   <m:defJc m:val=3D"centerGroup"/>
+   <m:wrapIndent m:val=3D"1440"/>
+   <m:intLim m:val=3D"subSup"/>
+   <m:naryLim m:val=3D"undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]-->
+
+<div id=3D"yui_3_16_0_1_1413268775249_11704" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:center;line-height:normal" align=3D"center"><u id=3D"y=
+ui_3_16_0_1_1413268775249_11707" style=3D"" class=3D""><span id=3D"yui_3_16=
+_0_1_1413268775249_11706" class=3D"" style=3D"font-size:14.0pt;font-family:=
+&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times =
+New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Call
+for Papers</span></u><span class=3D"" style=3D"font-size:14.0pt;font-family=
+:&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times=
+ New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"></span><=
+/div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11703" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:center;line-height:normal" align=3D"center"><span id=
+=3D"yui_3_16_0_1_1413268775249_11702" class=3D"" style=3D"font-size:14.0pt;=
+font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:=
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot=
+;">Journal
+of Engineering and Architecture</span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11763" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:center;line-height:normal" align=3D"center"><span id=
+=3D"yui_3_16_0_1_1413268775249_11762" class=3D"" style=3D"font-size:12.0pt;=
+font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:=
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot=
+;">ISSN:
+2334-2986 (Print) 2334-2994 (Online)</span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11682" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:justify;line-height:normal"><a id=3D"yui_3_16_0_1_1413=
+268775249_11798" style=3D"" class=3D"" href=3D"http://aripd.org/jea#j_info"=
+><span id=3D"yui_3_16_0_1_1413268775249_11797" class=3D"" style=3D"font-siz=
+e:12.0pt;font-family:&quot;Garamond&quot;,&quot;serif&quot;;color:blue">Jou=
+rnal of Engineering and
+Architecture</span></a><span id=3D"yui_3_16_0_1_1413268775249_11681" class=
+=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;seri=
+f&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-f=
+amily:&quot;Times New Roman&quot;">
+is an international peer-reviewed journal. The journal is not limited to a
+specific aspect of engineering and architecture but is instead devoted to a
+wide range of subfields in the engineering sciences and architecture. Artic=
+les
+of interdisciplinary nature are particularly welcome. The journal strives t=
+o
+maintain high quality of publications. There will be a commitment to expedi=
+ting
+the time taken for the publication of the papers. The editorial board reser=
+ves
+the right to reject papers without sending them out for review. The journal
+also publishes innovative contributions on every aspect of architectural
+endeavor.</span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11699" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:justify;line-height:normal"><span id=3D"yui_3_16_0_1_1=
+413268775249_12123" class=3D"" style=3D"font-size:12.0pt;font-family:&quot;=
+Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Ro=
+man&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">The
+journal is published by the </span><a id=3D"yui_3_16_0_1_1413268775249_1170=
+1" style=3D"" class=3D"" href=3D"http://www.aripd.org/" target=3D"_blank"><=
+span id=3D"yui_3_16_0_1_1413268775249_11700" class=3D"" style=3D"font-size:=
+12.0pt;font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-=
+family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Rom=
+an&quot;;color:blue">American Research Institute for Policy Development</sp=
+an></a><span id=3D"yui_3_16_0_1_1413268775249_11764" class=3D"" style=3D"fo=
+nt-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-farea=
+st-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times=
+ New Roman&quot;"> that serves as a
+focal point for academicians, professionals, graduate and undergraduate
+students, fellows, and associates pursuing research throughout the world.</=
+span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11698" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:justify;line-height:normal"><span id=3D"yui_3_16_0_1_1=
+413268775249_11765" class=3D"" style=3D"font-size:12.0pt;font-family:&quot;=
+Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Ro=
+man&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">The
+interested contributors are highly encouraged to submit their
+manuscripts/papers to the executive editor via e-mail at </span><a style=3D=
+"" class=3D"" href=3D"mailto:editor@aripd.org"><span class=3D"" style=3D"fo=
+nt-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-farea=
+st-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times=
+ New Roman&quot;;color:blue">editor@aripd.org</span></a><span id=3D"yui_3_1=
+6_0_1_1413268775249_11697" class=3D"" style=3D"font-size:12.0pt;font-family=
+:&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times=
+ New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">. Please=
+ indicate the name of the
+journal (Journal of Engineering and Architecture) in the cover letter or si=
+mply
+put =E2=80=98Journal of Engineering and Architecture=E2=80=99 in the subjec=
+t box during
+submission via e-mail.&nbsp; </span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11695" class=3D"" style=3D"margin-bot=
+tom:6.0pt;line-height:normal"><span id=3D"yui_3_16_0_1_1413268775249_11696"=
+ class=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quo=
+t;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-=
+font-family:&quot;Times New Roman&quot;">The journal is
+Abstracted/Indexed in CrossRef, CrossCheck, Cabell's, Ulrich's, Griffith
+Research Online, Google Scholar, Education.edu, Informatics, Universe Digit=
+al
+Library, Standard Periodical Directory, Gale, Open J-Gate, EBSCO, Journal S=
+eek,
+DRJI, ProQuest, BASE, InfoBase Index, OCLC, IBSS, Academic Journal Database=
+s,
+Scientific Index.</span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11692" class=3D"" style=3D"margin-bot=
+tom:6.0pt;line-height:normal"><span class=3D"" style=3D"font-size:12.0pt;fo=
+nt-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&q=
+uot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"=
+>E-Publication First<sup style=3D"" class=3D"">TM</sup></span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11691" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:justify;line-height:normal"><span id=3D"yui_3_16_0_1_1=
+413268775249_11690" class=3D"" style=3D"font-size:12.0pt;font-family:&quot;=
+Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Ro=
+man&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">E-Publication
+First<sup style=3D"" class=3D"">TM</sup> is a feature offered through our j=
+ournal platform. It allows
+PDF version of manuscripts that have been peer reviewed and accepted, to be
+hosted online prior to their inclusion in a final printed journal. Readers =
+can
+freely access or cite the article. The accepted papers are published online
+within one week after the completion of all necessary publishing steps.</sp=
+an></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">DOI<sup style=3D"" class=3D"">=C2=AE </=
+sup>number</span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11688" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:justify;line-height:normal"><span id=3D"yui_3_16_0_1_1=
+413268775249_11689" class=3D"" style=3D"font-size:12.0pt;font-family:&quot;=
+Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Ro=
+man&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">Each
+paper published in Journal of Engineering and Architecture is assigned a DO=
+I<sup style=3D"" class=3D"">=C2=AE</sup>
+number, which appears beneath the author's affiliation in the published pap=
+er.
+Click </span><a style=3D"" class=3D"" href=3D"http://www.crossref.org/" tar=
+get=3D"_blank"><span class=3D"" style=3D"font-size:12.0pt;font-family:&quot=
+;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New R=
+oman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue">HER=
+E</span></a><span class=3D"" style=3D"font-size:12.0pt;font-family:&quot;Ga=
+ramond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roma=
+n&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"> to know what is =
+DOI
+(Digital Object Identifier)? Click </span><a style=3D"" class=3D"" href=3D"=
+http://www.crossref.org/" target=3D"_blank"><span class=3D"" style=3D"font-=
+size:12.0pt;font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-=
+font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times Ne=
+w Roman&quot;;color:blue">HERE</span></a><span id=3D"yui_3_16_0_1_141326877=
+5249_11687" class=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond=
+&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot=
+;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+to retrieve Digital Object Identifiers (DOIs) for journal articles, books, =
+and
+chapters.</span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11685" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:justify;line-height:normal"><span id=3D"yui_3_16_0_1_1=
+413268775249_11686" class=3D"" style=3D"font-size:12.0pt;font-family:&quot;=
+Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Ro=
+man&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">JEA
+is inviting papers for Vol. 2, No. 2. The online publication date is Decemb=
+er
+31, 2014. Submission Deadline: October 31, 2014. </span></div>
+
+<div id=3D"yui_3_16_0_1_1413268775249_11684" class=3D"" style=3D"margin-bot=
+tom:6.0pt;text-align:justify;line-height:normal"><span class=3D"" style=3D"=
+font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-far=
+east-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Tim=
+es New Roman&quot;">You
+may view the </span><a style=3D"" class=3D"" href=3D"http://aripd.org/brows=
+e/alljournals" target=3D"_blank"><span class=3D"" style=3D"font-size:12.0pt=
+;font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family=
+:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quo=
+t;;color:blue">complete list of the journals</span></a><span id=3D"yui_3_16=
+_0_1_1413268775249_11683" class=3D"" style=3D"font-size:12.0pt;font-family:=
+&quot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times =
+New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"> of the i=
+nstitute. </span></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">For any additional
+information, please contact with the executive editor at </span><a style=3D=
+"" class=3D"" href=3D"mailto:editor@aripd.org"><span class=3D"" style=3D"fo=
+nt-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;serif&quot;;mso-farea=
+st-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times=
+ New Roman&quot;;color:blue">editor@aripd.org</span></a><span class=3D"" st=
+yle=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;serif&quot;;=
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&q=
+uot;Times New Roman&quot;"> </span></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">Regards,</span></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">Dr. David Grau,
+Arizona State University, USA.<span class=3D"" style=3D"background:yellow">=
+ </span></span></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">Editor-in-Chief</span></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">Journal of Engineering
+and Architecture<span class=3D"" style=3D"background:yellow"> </span></span=
+></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">________________</span></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">N. B. To unsubscribe,
+forward this email to </span><a style=3D"" class=3D"" href=3D"mailto:info@a=
+ripd.org"><span class=3D"" style=3D"font-size:12.0pt;font-family:&quot;Gara=
+mond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&=
+quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue">info@ari=
+pd.org</span></a><span class=3D"" style=3D"font-size:12.0pt;font-family:&qu=
+ot;Garamond&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New=
+ Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"> &nbsp;with
+'Unsubscribe' in the subject line.</span></div>
+
+<div class=3D"" style=3D"margin-bottom:6.0pt;line-height:normal"><span clas=
+s=3D"" style=3D"font-size:12.0pt;font-family:&quot;Garamond&quot;,&quot;ser=
+if&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-=
+family:&quot;Times New Roman&quot;">&nbsp;</span></div>
+
+<div style=3D"" class=3D""><span class=3D"" style=3D"mso-bidi-font-size:12.=
+0pt;line-height:115%">&nbsp;</span></div>
+
+<!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState=3D"false" DefUnhideWhenUsed=3D"true"
+  DefSemiHidden=3D"true" DefQFormat=3D"false" DefPriority=3D"99"
+  LatentStyleCount=3D"267">
+  <w:LsdException Locked=3D"false" Priority=3D"0" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Normal"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"heading 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 7"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 8"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 9"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 7"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 8"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 9"/>
+  <w:LsdException Locked=3D"false" Priority=3D"35" QFormat=3D"true" Name=3D=
+"caption"/>
+  <w:LsdException Locked=3D"false" Priority=3D"10" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Title"/>
+  <w:LsdException Locked=3D"false" Priority=3D"1" Name=3D"Default Paragraph=
+ Font"/>
+  <w:LsdException Locked=3D"false" Priority=3D"11" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtitle"/>
+  <w:LsdException Locked=3D"false" Priority=3D"22" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Strong"/>
+  <w:LsdException Locked=3D"false" Priority=3D"20" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"59" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Table Grid"/>
+  <w:LsdException Locked=3D"false" UnhideWhenUsed=3D"false" Name=3D"Placeho=
+lder Text"/>
+  <w:LsdException Locked=3D"false" Priority=3D"1" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"No Spacing"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" UnhideWhenUsed=3D"false" Name=3D"Revisio=
+n"/>
+  <w:LsdException Locked=3D"false" Priority=3D"34" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"List Paragraph"/>
+  <w:LsdException Locked=3D"false" Priority=3D"29" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Quote"/>
+  <w:LsdException Locked=3D"false" Priority=3D"30" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Quote"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"19" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"21" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"31" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Reference"/>
+  <w:LsdException Locked=3D"false" Priority=3D"32" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Reference"/>
+  <w:LsdException Locked=3D"false" Priority=3D"33" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Book Title"/>
+  <w:LsdException Locked=3D"false" Priority=3D"37" Name=3D"Bibliography"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" QFormat=3D"true" Name=3D=
+"TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--></div></body></html>=
+
+------=_Part_29419_357862394.1413269248211--

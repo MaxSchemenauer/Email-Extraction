@@ -1,0 +1,344 @@
+Received: from BYAPR08MB4981.namprd08.prod.outlook.com (2603:10b6:a03:14b::38)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR06CA0061.NAMPRD06.PROD.OUTLOOK.COM; Mon, 10 Jun 2019 02:54:11 +0000
+Received: from BYAPR08CA0005.namprd08.prod.outlook.com (2603:10b6:a03:100::18)
+ by BYAPR08MB4981.namprd08.prod.outlook.com (2603:10b6:a03:6a::26) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.15; Mon, 10 Jun
+ 2019 02:54:08 +0000
+Received: from BN3NAM04FT006.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::208) by BYAPR08CA0005.outlook.office365.com
+ (2603:10b6:a03:100::18) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.14 via Frontend
+ Transport; Mon, 10 Jun 2019 02:54:07 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ BN3NAM04FT006.mail.protection.outlook.com (10.152.92.96) with Microsoft SMTP
+ Server id 15.20.1943.19 via Frontend Transport; Mon, 10 Jun 2019 02:54:07
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id 880AB2E3565; Sun,  9 Jun 2019 22:44:49 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org 880AB2E3565
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1560134689;
+	bh=qj05YhyPyATi4L6u0ZPhk5f1wh9AQlXgwyN7tCrUass=;
+	h=Date:To:Subject:From:From;
+	b=Cs3LIKWXH6SiK9dOwQNFUZqmWqGprTfHbLyFMX37XR3+bqL/ifo0qLWuUQKygT5PF
+	 +a8foHQ8lW0RnXjVoNii1A0QDan6loqZhoomS1DvFCZ4bApgsoOyW5VrlatdazisSi
+	 fLIHw3H5vQ8rHv1q1S4J3gDZ5Jnj+ldy/o24i5wI=
+Date: Sun, 09 Jun 2019 22:44:49 -0400
+To: foaad@calpoly.edu
+Subject: Call For Papers: CS & CE World Congress (CSCE'19: July 29 -
+ August 1, 2019, Las Vegas); Deadline: June 20
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Message-ID: <20190610024449.880AB2E3565@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Jun 2019 02:54:07.4952
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 8abbdb4c-b4f2-483a-8226-08d6ed4ee7fe
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BYAPR08MB4981;H:world-comp.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT006.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: 8abbdb4c-b4f2-483a-8226-08d6ed4ee7fe
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1414054)(71702078);SRVR:BYAPR08MB4981;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4981:
+X-MS-Exchange-PUrlCount: 14
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 5
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Jun 2019 02:54:07.3367
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 8abbdb4c-b4f2-483a-8226-08d6ed4ee7fe
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4981
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.2482918
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1965.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?D0hoPJ07pxWazCjq+7NqCgr0zDuQ7j2wM8lUw29DeJvDIRmH7wB8rrshfuWg?=
+ =?us-ascii?Q?vGDLSqt/HWn7Oi9YeoSxQ475AKqpZ5BcwS0/+DSQV87rqSZA23Bg7scqV8Bd?=
+ =?us-ascii?Q?hb5gjEEGpBalIjt9rnS66YJ0725WTp0I1IMp4X2W+LvWvtSEjb8LxOYjPW5g?=
+ =?us-ascii?Q?snye9+JoC8kYmzMj37gdxP46GehOl10f61sApHqUR2s0V5u4obC7sOhkjWfL?=
+ =?us-ascii?Q?jtyLZwIgJhxudrDt9R2IsAUqgXVpVcPdMuggk3OC5WEBHto6Bt8ZaLB8tPFl?=
+ =?us-ascii?Q?I70Q37FNJjcndd/j16E7lzbLVK05aBU1/cgtzmRQ81PwTPGBAXNwuIO9ZE+M?=
+ =?us-ascii?Q?UxC7AAjgy5rwgNFokidsqPv9yrlRZHsapR5fbpi6EBblcJjqEcnxxUxGjNqT?=
+ =?us-ascii?Q?0W4WVuyukmtPh75PN0JR305+s8r7W66O2nlPyNjXvJKCuIyUhhufYNsChnk5?=
+ =?us-ascii?Q?9sNv62q1XH5HAK4tYy7tNEjE0Q6Gk2rjg2lPHdqXZdfOfDiFlpNcTJ4O3rXb?=
+ =?us-ascii?Q?ppMfECYIFWeo6pHRw8+llmyFtm/wn08fBVCypd0SoJObSrDHmtIBjGTi4MXx?=
+ =?us-ascii?Q?7UfT/PyZELD9oUSbfYxhc25qRpVumNxHRuhVirjqqFItrWp60ZRTAnJx7Jam?=
+ =?us-ascii?Q?vZjR+TyATnPUh8WrjeUvV2XCGuXu2qsnL7DE75JxIXGUHiXKafk2ubv2zLth?=
+ =?us-ascii?Q?6XeOgcZF4xceL+6byPPatf7Ru7QbbAyzmMhhSaPSYMh7qwQKCLOWRXMCjwCI?=
+ =?us-ascii?Q?F8mcqZwYRN2INmL350HHBT2H/xyRzaXDY/Hgvk1rjI7ojWHrnGfa7I+qx6is?=
+ =?us-ascii?Q?iGiT8A2i4kmydYF53brvseeF1uMkfIgPZwe0OvnUAQooLVJvFfTCc+RIEiq5?=
+ =?us-ascii?Q?gHmikQeSrwrTYEwH3Cg1+cWg6FiD5Uc50c3EvEoZHye0N0r/G/kP+y93e4KY?=
+ =?us-ascii?Q?x3/asjeJBQTody3y1F0Qa7IjGhYdh/5xgNNxrKQ2rQ591OVGeIjjZ2Cn0ACv?=
+ =?us-ascii?Q?kgA64yl8djLV/4b0EZuzoOgpudmHsHbqwQdA3mhtf7b3Q50MiS+cHcQEnw4K?=
+ =?us-ascii?Q?Z6AlScYeBXharQX15aoS96MtsOyJUM5QplPiCtqH75kafMdQouG4yN9k89Yh?=
+ =?us-ascii?Q?GdSS1ek/LPYR262KU0LczKTUD7uFxK6+/J1XDCzk/CuHNK60n96kVrqhzJTP?=
+ =?us-ascii?Q?jXzeKeJVrkekv6+FRNZ0+TSPtkOeDim1gMga4sMwkZRjfKbLv2WEh/zpl2Mn?=
+ =?us-ascii?Q?s9Cr6Q1LqtQRl3QnkxiVwBh62VcA3l120F91MBeTZ/HyP4Rxpk4eS9aH3pjA?=
+ =?us-ascii?Q?2wU=3D?=
+MIME-Version: 1.0
+
+
+                         CALL  FOR  PAPERS
+
+         Paper Submission Deadline (EXTENDED): June 20, 2019
+
+             The 2019 World Congress in Computer Science,
+        Computer Engineering, and Applied Computing (CSCE'19)
+
+        July 29 - August 1, 2019, Luxor (MGM), Las Vegas, USA
+               https://americancse.org/events/csce2019 
+
+In order to leverage synergy between various CS & CE fields, the program
+committee of 20 major conferences have their 2019 events held at one
+venue (same location and dates) forming the 2019 Congress. To get a
+feeling about the conferences' atmosphere, see some delegates photos
+available at (over 2,000 photos): https://photos.ucmss.com/ 
+
+All accepted papers will be published in printed conference books
+(proceedings) - with unique international ISBN number and will also be
+made available online. Extended papers of all accepted papers will also
+be considered for publicaton in journals (indexed by Scopus, ACM DL, Ei
+Compendex, SCI, ISI, ...; publishers include: Springer, Elsevier,
+IEEE, ...).
+
+
+
+FOREWORD:
+
+   The congress includes 20 major tracks
+   ( https://www.americancse.org/events/csce2019 ) composed of: 122
+   technical, research, and panel sessions as well as a number of
+   keynote lectures and tutorials; all will be held simultaneously,
+   same location and dates: July 29 - August 1, 2019. Last year,
+   the Congress had attracted speakers/authors and participants
+   affiliated with over 169 different universities (including many
+   from the top 50 ranked institutions), major IT corporations
+   (including: Microsoft, Google, Apple, SAP, Facebook, Oracle, Amazon,
+   Yahoo, Samsung, IBM, Ebay, GE, Siemens, Philips, Ericsson, BAE
+   Systems, Hitachi, NTT, ...), major corporations (including: Exxon
+   Mobil, Johnson & Johnson, JPMorgan Chase, PetroChina, GlaxoSmithKline,
+   HSBC, Airbus, Boeing, Hyundai, ...), government research agencies
+   (NSF, NIH, DoE, US Air Force, NSA National Security Agency, ...), US
+   national laboratories (including, NASA, ANL, LLNL, Sandia, ORNL,
+   Lawrence Berkeley National Lab, Los Alamos National Lab, National
+   Cancer Institute, NIST, ...), and a number of Venture Capitalists as
+   well as distinguished speakers discussing Intellectual Property
+   issues. Last year, 55% of attendees were from academia, 24% from
+   industry; 20% from government and funding agencies; and 1% unknown.
+   About half of the attendees were from outside USA; from 72 nations.
+
+
+LIST OF JOINT-CONFERENCES:
+
+   The Congress is composed of a number of tracks (joint-conferences,
+   tutorials, sessions, workshops, poster and panel discussions); all will
+   be held simultaneously, same location and dates: July 29 through August 1,
+   2019. For the complete list of joint conferences, see below (more detailed
+   information appears at: https://www.americancse.org/events/csce2019 )
+
+o  ACC'19:
+   The 3rd International Conference on Applied Cognitive Computing
+o  BIOCOMP'19:
+   The 20th International Conference on Bioinformatics & Computational
+   Biology
+o  BIOENG'19:
+   The 5th International Conference on Biomedical Engineering and Sciences
+o  CSC'19:
+   The 17th International Conference on Scientific Computing
+o  EEE'19:
+   The 18th International Conference on e-Learning, e-Business, Enterprise
+   Information Systems, and e-Government
+o  ESCS'19:
+   The 17th International Conference on Embedded Systems, Cyber-physical
+   Systems, and Applications
+o  FCS'19:
+   The 15th International Conference on Foundations of Computer Science
+o  FECS'19:
+   The 15th International Conference on Frontiers in Education: Computer
+   Science and Computer Engineering
+o  GCC'19:
+   The 15th International Conference on Grid, Cloud, and Cluster Computing
+o  HIMS'19:
+   The 5th International Conference on Health Informatics and Medical Systems
+o  ICAI'19:
+   The 21st International Conference on Artificial Intelligence
+o  ICDATA'19:
+   The 15th International Conference on Data Science
+o  ICOMP'19:
+   The 20th International Conference on Internet Computing and IoT
+o  ICWN'19:
+   The 18th International Conference on Wireless Networks
+o  IKE'19:
+   The 18th International Conference on Information & Knowledge Engineering
+o  IPCV'19:
+   The 23rd International Conference on Image Processing, Computer Vision,
+   & Pattern Recognition
+o  MSV'19:
+   The 16th International Conference on Modeling, Simulation and
+   Visualization Methods
+o  PDPTA'19:
+   The 25th International Conference on Parallel and Distributed Processing
+   Techniques and Applications
+o  SAM'19:
+   The 18th International Conference on Security and Management
+o  SERP'19:
+   The 17th International Conference on Software Engineering Research
+   and Practice
+
+   All conferences listed above will be held simultaneously;
+   i.e., same location and dates (July 29 - August 1, 2019, USA.)
+
+
+INVITATION:
+
+   You are invited to submit a "LATE BREAKING PAPER", "POSITION PAPER", or
+   "ABSTRACT/POSTER PAPER" for consideration. All accepted papers will be
+   published in printed conference books/proceedings (with unique
+   international ISBN number) and will also be made available online. The
+   proceedings will be imprinted by the American Council on Science and
+   Education, and distributed/published by CSREA (Computer Science Research,
+   Education, and Applications Press). The books will be processed for
+   indexation in science databases, including EBSCO (www.ebsco.com), one
+   of the largest subject index systems, and all other EBSCO affiliated
+   science indexation databases. ACM Digital Library is also including the
+   titles into its databases as well as ProQuest indexing databases and
+   others. In addition, like prior years, extended versions of selected
+   papers (about 40%) of the conference will appear in journals and edited
+   research books; publishers include, Springer, Elsevier, BMC, and others.
+   Each book in each series will be subject to Elsevier and Springer
+   science indexing products (which includes: Scopus, www.info.scopus.com;
+   SCI Compendex, Engineering Village, www.ei.org; EMBASE, www.info.embase.com;
+   and others). See the web link below for a small subset of such
+   publications: (some of these books and journal special issues have
+   already received the top 25% downloads in their respective fields and/or
+   identified as "Highly Accessed" by publishers and/or science citation
+   index trackers.)
+
+   https://americancse.org/events/csce2019/books-journal-special-issues 
+   https://americancse.org/events/csce2019/publication 
+
+
+SUBMISSION OF PAPERS:
+
+   In response to this announcement, authors are given the opportunity to
+   submit their papers for evaluation in one of the following three paper
+   categories:
+
+   1. LATE BREAKING PAPERS: describe late-breaking/recent developments in
+      the field. The maximum number of pages is 7. Please write the
+      following on the first page of your submission "name of conference:
+      LATE BREAKING PAPER". If accepted, The length of the final/Camera-
+      Ready paper will be limited to 7 (two-column IEEE style) pages and
+      the author will be given the opportunity to present the paper in a
+      formal session.
+
+   2. POSITION PAPERS: enable discussions on emerging topics without the
+      experimentation normally present in an academic paper. Commonly,
+      such papers will substantiate the opinions or positions put forward
+      with evidence from an extensive objective discussion of the topic.
+      The maximum number of pages is 4. Please write the following on the
+      first page of your submission "name of conference: POSITION PAPER".
+      If accepted, The length of the final/Camera-Ready paper will be
+      limited to 4 (two-column IEEE style) pages and the author will be
+      given the opportunity to present the paper in a formal session.
+
+   3. ABSTRACT/POSTER PAPERS: describe research roadmaps (similar to PhD
+      plan or PhD prospectus). The maximum number of pages is 2. Please
+      write the following on the first page of your submission "name of
+      conference: ABSTRACT/POSTER PAPER". If accepted, The length of the
+      final/Camera-Ready paper will be limited to 2 (two-column IEEE
+      style) pages and the author will be given the opportunity to
+      present the paper in a discussion/poster session.
+
+   Prospective authors are invited to submit their papers by uploading
+   them to the evaluation web site at:  https://american-cse.org/ 
+   Submissions must be uploaded by the due date (see IMPORTANT DATES) and
+   must be in either MS doc or pdf formats. All reasonable typesetting
+   formats are acceptable. Later, the authors of accepted papers will be
+   asked to follow a particular typesetting format to prepare their final
+   papers for publication which conform to the two-column IEEE style
+   format - see:
+   https://www.ieee.org/conferences_events/conferences/publishing/templates.html 
+   The first page of the paper should include:
+
+   - Title of the paper
+   - Name, affiliation, postal address, and email address of each author
+     (identify the name of the Contact Author)
+   - Abstract (between 100 and 120 words)
+   - A maximum of 5 topical keywords that would best represent the work
+     described in the paper
+   - Write the type of the submission as "LATE BREAKING PAPERS",
+     "POSITION PAPERS", or "ABSTRACT/POSTER PAPERS".
+   - The actual text of the paper can start from the first page (space
+     permitting).
+   Submissions are to be uploaded to the submission/evaluation web site
+   portal at http://american-cse.org/ 
+
+   Each paper will be peer-reviewed by at least two experts in the field
+   for originality, significance, clarity, impact, and soundness.
+
+
+IMPORTANT DATES:
+
+   June 20, 2019:   Submission of papers: https://american-cse.org/ 
+                    - LATE BREAKING PAPERS (maximum of 7 pages);
+                    - POSITION PAPERS (maximum of 4 pages);
+                    - ABSTRACT/POSTER PAPERS (maximum of 2 pages)
+                    The sooner, a submission is received, the earlier,
+                    the status report (notification) will be sent out.
+
+   June 27, 2019:   Notification of acceptance (+/- two days)
+
+   July 07, 2019:   Registration due
+                    https://americancse.org/events/csce2019/registration 
+
+   July 20, 2019:   Final Camera-Ready paper due
+                    The final papers should be uploaded to the publication
+                    portal - the url of Publication Portal appears in the
+                    notification of acceptance that such authors will receive.
+
+   July 29 - August 1, 2019:
+                    The 2019 World Congress in Computer Science, Computer
+                    Engineering, and Applied Computing (CSCE'19: USA);
+                    Including affiliated federated/joint conferences
+                    https://www.americancse.org/events/csce2019 
+
+LOCATION:
+   Luxor in Las Vegas (renovated)
+   https://www.luxor.com/en/entertainment.html 
+
+CONTACT:
+   Questions and inquiries should be sent to:
+   CSCE'19 Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.
+

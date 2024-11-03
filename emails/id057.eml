@@ -1,0 +1,324 @@
+Received: from BYAPR08MB5591.namprd08.prod.outlook.com (2603:10b6:a02:80::29)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0016.PROD.EXCHANGELABS.COM; Fri, 6 Sep 2019 03:08:42 +0000
+Received: from SN6PR08CA0012.namprd08.prod.outlook.com (2603:10b6:805:66::25)
+ by BYAPR08MB5591.namprd08.prod.outlook.com (2603:10b6:a03:c8::32) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2241.14; Fri, 6 Sep
+ 2019 03:08:41 +0000
+Received: from BN3NAM04FT042.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::207) by SN6PR08CA0012.outlook.office365.com
+ (2603:10b6:805:66::25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2241.13 via Frontend
+ Transport; Fri, 6 Sep 2019 03:08:41 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ BN3NAM04FT042.mail.protection.outlook.com (10.152.93.52) with Microsoft SMTP
+ Server id 15.20.2241.14 via Frontend Transport; Fri, 6 Sep 2019 03:08:37
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id B6DA42E1A66; Thu,  5 Sep 2019 23:08:02 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org B6DA42E1A66
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1567739282;
+	bh=ysrr3n+4m/FV53XCnymmsKsCiIQ85eSq2an6FarV9ik=;
+	h=Date:To:Subject:From:From;
+	b=R3NULdw0mkDpQ0rpLvt67d8qMwbyE+vAqgKGPYKmO84rzVFNiTnR6NCFiHtd9zTlZ
+	 C4x15ecJimAk2kYp4LS0h+4pzxMliopyy5BFvGaucIyXa1Wxg6PRKm6PXnketsokfD
+	 /eDYyH/zmS73fHiALw+LBt5QrTaikI2DJBRAakhE=
+Date: Thu, 05 Sep 2019 23:08:02 -0400
+To: foaad@calpoly.edu
+Subject: CFP, IEEE CPS publisher: Joint Conferences: AI, Data Science,
+ Social Networks, Smart City (CSCI: Dec. 5-7, 2019, Las Vegas); Deadline:
+ October 6
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20190906030802.B6DA42E1A66@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Sep 2019 03:08:38.0621
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 7905facc-2730-4e01-7a70-08d73277833e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(91214003)(189003)(199004)(52024003)(40036005)(97876018)(5660300002)(26005)(47776003)(4006050)(42186006)(70486001)(75640400001)(1076003)(2361001)(52956003)(66574012)(103686004)(126002)(476003)(486006)(2351001)(42882007)(336012)(50466002)(305945005)(356004)(23726003)(6916009)(966005)(34003)(106002)(8266002)(36756003)(569274001)(1096003)(86362001)(45080400002)(230700001)(33656002)(9686003)(6306002)(14444005)(58126008)(7636002)(2171002)(8676002)(6266002)(246002)(79816003)(14776007);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB5591;H:world-comp.org;FPR:;SPF:Pass;LANG:en;PTR:mail.world-comp.org;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT042.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 7905facc-2730-4e01-7a70-08d73277833e
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(4709080)(8001031)(1414054)(71702078);SRVR:BYAPR08MB5591;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB5591:
+X-MS-Exchange-PUrlCount: 15
+X-MS-Oob-TLC-OOBClassifiers: OLM:7219;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Sep 2019 03:08:37.9100
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7905facc-2730-4e01-7a70-08d73277833e
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB5591
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.9547845
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2241.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?NJ8uow7fJ31ll8Dy4qLZN5xNZU0LLZP4vlDLBv1XBGSDhWAbwNR9rcrUmlgg?=
+ =?us-ascii?Q?4fnvFrsT4QNRL2iIB/cam5SMur9lyL1GT9Q7w/c35/ofBpBid8OjtLHn93fK?=
+ =?us-ascii?Q?t1oUnOsHZsP/2DhnKKl/MkXRMW2xbmzeobO9uKsGd0homjjPTY6GDeo8hjn9?=
+ =?us-ascii?Q?iYJWHVKkWtZEonZVaaJ+K8PtvpruhB8diV8RqkYqulT8Ig1VgGu4Hq+Doz1Z?=
+ =?us-ascii?Q?Ip3FL+Ie2e/HTcBCKLLTpHqrW+3nv/1o94Q1zoU658IDmd3APuSQyKy1qiPE?=
+ =?us-ascii?Q?jarH/6A6H3YBHGGrdkWNZx+GqSwwtKvO7mD+IfplSbfdMrhPLDo6CUOlYc+4?=
+ =?us-ascii?Q?IXaF0f1bnMV3xD2JeOAatZjji8cKbw4MK3c/EverNUsU2GtV6Np6zbzMlF58?=
+ =?us-ascii?Q?VMnuDq3ZbzUyXiJx8OXWIJVzpjTM1fRGKA5F+lUaL6um5I0uOV7780Vrl4cG?=
+ =?us-ascii?Q?e+ncCvy48HSmd4n7/nsh8XhxGUUFVBv11Noc7AeO2TrPsPuoDRxrq0CC+4Ys?=
+ =?us-ascii?Q?S003VzqKJ6+yE3IHRsxEO9TL7VKBmpjMnos41Vp///QVxx7YJNCLEsBnEUOg?=
+ =?us-ascii?Q?HSK8nxaNiYrs0ebmn72mjd/J6nKz4eRdO+XLC7X6zCjiIjitB0el5fTCtnQs?=
+ =?us-ascii?Q?d4qwef4vNEli3VZqwfgU/XAkIdRFAspTukfrXvtsvQmpYNNiMYjWMUa6yJeB?=
+ =?us-ascii?Q?rv8BjSi7FCc+6ZRpeZTeCK6ke+YFUYhCZwwHQbjDSdx+KqdQhNN5N3voHaUq?=
+ =?us-ascii?Q?yJSrQFF1alMT1PTrDPisGuEnKdW9onMmN1pi0zTY93qlJrnXIwDPynVFbgEA?=
+ =?us-ascii?Q?NxBzPyhX15wqbqQ4n+rzf7L2wDUq2UHLURW8ZRM7JzHttRi6PDzXRNHZc2z1?=
+ =?us-ascii?Q?7Fk0kIelgoKCfEG0GH4AGaUdfnkgKuTpqnCFyxqRrChBRqT4EZHT7tGtgAEX?=
+ =?us-ascii?Q?II9oWDxIk5Qvh2p/rTlQO3BYIDFEjUBaqWM2PAAn8bXsjhGC9E6U4P26zdmv?=
+ =?us-ascii?Q?c2/mytzHYIZwZPvztdgJC9ZRS4u+g7QTThl64q99V6ZJQ6yfibr6aSuxveUX?=
+ =?us-ascii?Q?D7h3rtj8?=
+MIME-Version: 1.0
+
+
+                          CALL  FOR  PAPERS
+              Paper Submission Deadline: October 6, 2019
+
+CSCI-ISAI: International Symposium on ARTIFICIAL INTELLIGENCE
+           https://americancse.org/events/csci2019/Symposiums/csci_isai 
+                                 +
+CSCI-ISBD: International Symposium on BIG DATA & DATA SCIENCE
+           https://americancse.org/events/csci2019/Symposiums/csci_isbd 
+                                 +
+CSCI-ISNA: International Symposium on SOCIAL NETWORK ANALYSIS, SOCIAL
+           MEDIA, & MINING
+           https://americancse.org/events/csci2019/Symposiums/csci_isna 
+                                 +
+CSCI-ISSC: International Symposium on SMART CITIES & SMART MOBILITY
+           https://americancse.org/events/csci2019/Symposiums/csci_issc 
+
+                  December 5-7, 2019, Las Vegas, USA
+
+                          IEEE Xplore entry:
+   https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+
+All accepted papers will be included in the proceedings of The 2019
+International Conference on Computational Science and Computational
+Intelligence (CSCI), to be published by IEEE CPS. The main objective
+of the CSCI Conference is to facilitate increased opportunities for
+cross-fertilization across research topics that overlap.
+
+PUBLISHER:
+
+   IEEE CPS: https://www.computer.org/conferences/cps 
+
+   Past conference proceedings can be accessed via IEEE Xplore
+   Digital Library at (each year, indexation was finalized during
+   the month of October):
+   Volume I (2014):  https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6822065 
+   Volume II (2014): https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6822285 
+   Volume (2015):    https://ieeexplore.ieee.org/xpl/conhome/7420813/proceeding 
+   Volume (2016):    https://ieeexplore.ieee.org/xpl/conhome/7879541/proceeding 
+   Volume (2017):    https://ieeexplore.ieee.org/xpl/conhome/8554238/proceeding 
+   Volune (2018):    Pending soon (October)
+   Since its inception, CSCI proceedings have always been approved
+   and included into IEEE Xplore indexation/digital-library citation
+   index databases (including all papers of its symposiums.)
+
+
+INVITATION:
+
+   You are invited to submit a paper for consideration. All accepted
+   papers will be published by IEEE CPS in the proceedings of The
+   2019 International Conference on Computational Science and
+   Computational Intelligence (CSCI). Extended versions of selected
+   papers of the conference will also appear in journals and edited
+   research books (Springer, Elsevier, BMC, ...) The published
+   proceedings can be accessed via web portals, IEEE CPS, other
+   Digital libraries.
+
+   CSCI'19 International Conference is composed of a number of
+   symposiums, sessions, workshops, posters and panel discussions;
+   all will be held simultaneously, same location and dates:
+   December 5-7, 2019.
+
+
+SCOPE AND LIST OF TOPICS:
+
+   For a detailed topical scope for each research track, refer to
+   the web sites that appear at the begining of this announcement.
+
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+   All accepted papers will be published by IEEE CPS:
+   https://www.computer.org/conferences/cps 
+   in the proceedings of The 2019 International Conference on
+   Computational Science and Computational Intelligence (CSCI'19).
+
+   Papers should be typeset by using the general typesetting
+   instructions available at:
+   https://www.ieee.org/conferences_events/conferences/publishing/templates.html 
+   (i.e., use of regular Times New Roman, font size of 10, single
+   line spacing, 2-column format). Authors of accepted papers
+   will later receive more specific typesetting instructions. All
+   submissions must be original (papers must not have been
+   previously published or currently being considered by others
+   for publication).
+
+   Submissions must be in either MS doc or pdf formats (6 pages
+   for Regular Research Papers; 4 pages for Short Papers; 2 pages
+   for Poster Papers - the number of pages include all figures,
+   tables, and references). The first page should include:
+
+   - Title of the paper.
+   - Name, affiliation, city, country, and email address of each
+     author (identify the name of the Contact Author).
+   - Abstract (about 100 words).
+   - A maximum of 5 topical keywords that would best represent the
+     work described in the paper.
+   - Write the type of the submission as "Full/Regular Research
+     Papers", "Short Papers", or "Poster Papers".
+   - Write the acronym of the most relevant symposium that this
+     paper is being submitted to - the acronyms are:
+        Computational Science (CSCI-ISCS); Computational
+        Intelligence (CSCI-ISCI); Cyber Warfare, Cyber Defense, &
+        Cyber Security (CSCI-ISCW); Signal & Image Processing,
+        Computer Vision & Pattern Recognition (CSCI-ISPC); Smart
+        Cities and Smart Mobility (CSCI-ISSC); Education
+        (CSCI-ISED); Health Informatics and Medical Systems
+        (CSCI-ISHI); Mobile Computing, Wireless Networks, &
+        Security (CSCI-ISMC); Software Engineering (CSCI-ISSE);
+        Internet of Things & Internet of Everything (CSCI-ISOT);
+        Big Data and Data Science (CSCI-ISBD); Artificial
+        Intelligence (CSCI-ISAI); Social Network Analysis, Social
+        Media, & Mining (CSCI-ISNA); Cloud Computing and Data
+        Centers (CSCI-ISCC); Computational Biology (CSCI-ISCB);
+        and Parallel & Distributed Computing (CSCI-ISPD).
+        See https://americancse.org/events/csci2019/Symposiums 
+        for more details.
+
+   The actual paper can start from the first page (space permitting).
+   Submissions are to be uploaded to the submission/evaluation web
+   site portal at: https://american-cse.org/ 
+
+
+TYPE OF SUBMISSIONS/PAPERS:
+
+  - Full/Regular Research Papers (maximum of 6 pages):
+    Regular Research Papers should provide detail original research
+    contributions. They must report new research results that
+    represent a contribution to the field; sufficient details and
+    support for the results and conclusions should also be provided.
+    The work presented in regular papers are expected to be at a
+    stage of maturity that with some additional work can be
+    published as journal papers.
+
+  - Short Papers (maximum of 4 pages):
+    Short papers report on ongoing research projects. They should
+    provide overall research methodologies with some results. The
+    work presented in short papers are expected to be at a stage of
+    maturity that with some additional work can be published as
+    regular papers.
+
+  - Poster Papers (maximum of 2 pages):
+    Poster papers report on ongoing research projects that are
+    still in their infancy (i.e., at very early stages). Such
+    papers tend to provide research methodologies without yet
+    concrete results.
+
+
+REVIEW PROCESS
+
+   Each paper will be peer-reviewed by 2 to 4 peers (except for
+   papers that are philosophical in nature - such papers would be
+   considered for panel discussions.) Confidentiality of submitted
+   material will be maintained.  Papers will be evaluated on the
+   basis of originality, impact, significance, quality of research,
+   quality of writing, and contribution to conference program and
+   diversity. Papers whose authors include one or more members of
+   the program committee will be evaluated using the double-blinded
+   review process. Authors whose papers are not selected for
+   publication can submit a rebuttal letter; rebuttals will be
+   evaluated by 4 members of the Program Committee.
+
+
+DEADLINES - DATES:
+
+   October 6, 2019:      Submission of Papers
+                         https://american-cse.org/ 
+   October 18, 2019:     Notification of acceptance (+/- 2 days)
+   October 30, 2019:     Final papers & Author Registrations
+   December 5-7, 2019:   The 2019 International Conference on Computational
+                         Science and Computational Intelligence
+                         (CSCI'19: Las Vegas, USA)
+                         Including all affiliated symposiums:
+                         https://americancse.org/events/csci2019 
+
+
+DEMOGRAPHY HISTORY (based on 2014 through 2018 participation data):
+
+   In the past, about 42% of the attendees have been from outside
+   USA; from 59 nations. 56% of registrants have been from academia,
+   32% from industry; 11% from government agencies and research labs;
+   and 1% unknown. The conference has had participants, speakers,
+   authors affiliated with over 154 different universities; including
+   many from the top 40 ranked institutions; major IT corporations,
+   including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+   Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+   Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+   Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+   Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+   BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+   Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+   major corporations, including, Exxon Mobil, JPMorgan Chase,
+   Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+   Petroleum Group, Aerospace Electronic Technology (China), Max
+   Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+   (France), Forschungszentrum Juelich (Germany), Secured Smart
+   Electric Vehicle (Korea), ...; government research agencies and
+   national laboratories, including, NSF, NIH National Institutes of
+   Health, US Air Force (multiple research labs), NSA National Security
+   Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+   Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+   Lab, US National Cancer Institute, Swedish Defence Research Agency,
+   NIST US National Institute of Standards and Technology, U.S.
+   Geological Survey, US National Library of Medicine, US Air Force
+   (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+   Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+   Army, Korea Internet & Security Agency, Suez Canal Research Center,
+   Okinawa Bureau (Japan), Canadian Medical Protective Association,
+   Osong Medical Innovation Foundation (Korea), National Institute of
+   Informatics (Japan), ...; and three Venture Capitalists and nine
+   Intellectual Property attorneys.
+
+
+CONTACT:
+
+   Questions and inquiries should be sent to:
+   CSCI 2019 Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email
+   address you wish to be excluded from the listserv.
+

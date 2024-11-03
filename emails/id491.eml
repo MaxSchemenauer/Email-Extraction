@@ -1,0 +1,132 @@
+Received: from BYAPR08MB5783.namprd08.prod.outlook.com (2603:10b6:a03:40::48)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0035.NAMPRD04.PROD.OUTLOOK.COM; Wed, 8 May 2019 12:56:41 +0000
+Received: from BYAPR08CA0009.namprd08.prod.outlook.com (2603:10b6:a03:100::22)
+ by BYAPR08MB5783.namprd08.prod.outlook.com (2603:10b6:a03:11d::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1856.11; Wed, 8 May
+ 2019 12:56:36 +0000
+Received: from CO1NAM04FT025.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::207) by BYAPR08CA0009.outlook.office365.com
+ (2603:10b6:a03:100::22) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1878.21 via Frontend
+ Transport; Wed, 8 May 2019 12:56:36 +0000
+Authentication-Results: spf=pass (sender IP is 208.91.199.207)
+ smtp.mailfrom=editorialoffice-journalcra.com; calpoly.edu; dkim=pass
+ (signature was verified) header.d=editorialoffice-journalcra.com;calpoly.edu;
+ dmarc=bestguesspass action=none
+ header.from=editorialoffice-journalcra.com;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of
+ editorialoffice-journalcra.com designates 208.91.199.207 as permitted sender)
+ receiver=protection.outlook.com; client-ip=208.91.199.207;
+ helo=us2-ob2-6.mailhostbox.com;
+Received: from us2-ob2-6.mailhostbox.com (208.91.199.207) by
+ CO1NAM04FT025.mail.protection.outlook.com (10.152.90.160) with Microsoft SMTP
+ Server (version=TLS1_0, cipher=TLS_RSA_WITH_AES_256_CBC_SHA) id 15.20.1856.15
+ via Frontend Transport; Wed, 8 May 2019 12:56:36 +0000
+Received: from 172.16.214.59 (unknown [172.16.214.59])
+	(using TLSv1 with cipher AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	(Authenticated sender: currentresearch@editorialoffice-journalcra.com)
+	by us2.outbound.mailhostbox.com (Postfix) with ESMTPSA id 5F938781DE2;
+	Wed,  8 May 2019 12:56:29 +0000 (GMT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=editorialoffice-journalcra.com; s=20190419; t=1557320190;
+	bh=nn4RnmppY57GGdnYbqPuVOCqlvw6zm7w8NGX88K69ec=;
+	h=Date:From:Reply-To:To:Subject;
+	b=gKhUme+EBTkPBnlsy6f2PRT7VKoiX1UlDgRpsH5Tsz9s2VBCPK/7brM8jAMAbl3uz
+	 w29JU69ZdQH7+z8jI9seuulDtGEzLggt7C7pCNzwqv6SpLa9A42kLhMiBzVxyFVx8J
+	 nRQTnE5/g7zFktYZEK0LwZNB9U/X1MuKMuSl/JcQ=
+Date: Wed, 8 May 2019 18:26:29 +0530 (IST)
+From: researchjournal researchjournal
+ <currentresearch@editorialoffice-journalcra.com>
+Reply-To: researchjournal researchjournal
+ <currentresearch@editorialoffice-journalcra.com>
+To: currentresearch@editorialoffice-journalcra.com
+Message-ID: <848925039.79131.1557320189314@webmail.editorialoffice-journalcra.com>
+Subject: Paper Submission
+Content-Type: multipart/alternative;
+	boundary="----=_Part_79130_577288407.1557320189304"
+X-Mailer: Open-Xchange Mailer v7.8.3-Rev22
+X-Originating-Client: open-xchange-appsuite
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.2 cv=epKv9shX c=1 sm=1 tr=0
+	a=3zYEqOLVmx/W3MhMQxMQ8Q==:117 a=p5YLQe6KpjPl6tQTthkA:9 a=QEXdDO2ut3YA:10
+	a=oKGnaZ8eSCkA:10 a=9igv0xfnWO4A:10 a=6rNQ1EetRwgCS6xojuwA:9
+	a=_W_S_7VecoQA:10 a=MKjH8ZjYdDToqsncEJi-:22
+Return-Path: currentresearch@editorialoffice-journalcra.com
+X-MS-Exchange-Organization-ExpirationStartTime: 08 May 2019 12:56:36.3959
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ba577901-382a-42d5-6d7f-08d6d3b49ac9
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:208.91.199.207;IPV:NLI;CTRY:VG;EFV:NLI;SFV:NSPM;SFS:(3000300001)(189003)(199004)(5660300002)(7116003)(86152003)(126002)(86362001)(77096007)(236005)(486006)(221733001)(7596002)(58800400003)(7636002)(356004)(88526003)(16586007)(75640400001)(4006050)(85226003)(6306002)(71190400001)(26005)(106002)(21004)(476003)(33964004)(3450700001)(76392004)(22186003)(336012)(1096003)(2351001)(81686011)(450100002)(2160300002)(6966003)(246002)(8676002)(84326002)(966005)(3480700005)(34206002)(6266002)(50226002)(15974865002)(43066004)(7416002)(2361001)(46842002);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB5783;H:us2-ob2-6.mailhostbox.com;FPR:;SPF:Pass;LANG:en;PTR:us2-ob2-6.mailhostbox.com;MX:1;A:0;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT025.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: ba577901-382a-42d5-6d7f-08d6d3b49ac9
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600141)(711020)(4605104)(4709054)(1401320)(8001031)(1421009)(1414054)(71702078);SRVR:BYAPR08MB5783;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB5783:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:4714;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 May 2019 12:56:36.0507
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ba577901-382a-42d5-6d7f-08d6d3b49ac9
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB5783
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.9865297
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1856.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	D5PeCyhggoAAOQUn7GEtByYNxECeNxEk5Z3q7XNZFCBlCiJCnGkirmq6TTFZcGpK7I1SpJ0J095PW26K6qUXRjzoKaJScamUZqZ+zeXWbPXKGDyCrW6StMt9e0Mv6bPbQYEy5gBQaNFGFmmTvIUd1ZnQPiRQXKpv5haCJhq2jnVp7oDHK2Jnx3tT9pVLbYHQ5JLFjmByEIKc9QedSuc0t4380obftcLnIaospmpyJ9BfyltZpaow0+07Z13fQ3vSIHWZ0kaYMV0C5uEwRI8uDIErfunqJ704Y6Lo7BIeznZ4maY6v1zWeKCc8YM/u7adIC0rzRvWEJqY8cKLra2uBn02N7qoqkT7wSG4NBGebwGSoxIxL2J48C+o9sZAN5mS41QdX7vM0rO1rsk+LUN6lYOCoMSHhL17sJkwMceuTobU9Lh5ZgMiFuqUerE4VriWR4DITf7MXcTu0nhUn2glk0WUx2ytjhIVaf48lIa3CU1zfwvrR+kixGupgJgPgnKcAAJFcbEHrHxQ6qqPj7q/TS6P/VRFNBwossmyUnVteMVN6U+pDe5JIEuAnyvibWNDo1sSmpJFUphvbBWXHZV7k49GpD2t4xnvxkKA3JhjFC8ZFKk5QjbDyaDf+Rf9PVLHD07m4hc1yNP9oIuWVP1VhhWQUD5s3x5k1Ou6/ELPWnWavYL+52sKIXEQP4OpNOtLR8g2zK3EL5u/VIYr1ByiRxFfCJyhhX59/Kd4E5XHNuwRyEJ7uWO/eRdqCWDzsfA9yIPDGwcCtFCiuXVlJtEWaEFm+Ty0q79BnCLyaCYirVA5cnSNFNeZR2yQVL/ubj/Dozy3dIZbNrvR0tmijqeRMegLb1DeLrVh8N+FD+KodcCZX42gYHPBoXehwrnJj//0zeQzdCIDyvIiPxGGBmSQNpWl3PXKzQ5iYD7IyNEORcY=
+MIME-Version: 1.0
+
+------=_Part_79130_577288407.1557320189304
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+INTERNATIONAL JOURNAL OF CURRENT RESEARCH
+
+Journal Impact Factor 2018: 7.749
+
+INVITED FOR RESEARCH ARTICLES - Vol. 11, Issue 05, MAY - 2019
+
+Index Copernicus ICV 2017 = 72.25
+
+CALL FOR PAPERS
+
+Submit your Research and Review articles to: http://www.journalcra.com/submit-article
+
+Contact : journalcra.com@gmail.com,  articlesjournalcra2019@gmail.com mailto:articlesjournalcra2019@gmail.com
+
+Areas Covered: Multidisciplinary
+
+Accepted Language: English
+
+Frequency: 12 Issues per Year
+
+Call for Papers: http://www.journalcra.com/call-papers-2019
+
+If any more information please goes to our website: www.journalcra.com
+------=_Part_79130_577288407.1557320189304
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body><p><strong>INTERNATIONAL JOURNAL OF CURRENT RESEARCH</strong></p><p>Journal Impact Factor 2018: 7.749</p><p>INVITED FOR RESEARCH ARTICLES - Vol. 11, Issue 05, MAY - 2019</p><p>Index Copernicus ICV 2017 = 72.25</p><p>CALL FOR PAPERS</p><p>Submit your Research and Review articles to: <strong>http://www.journalcra.com/submit-article</strong></p><p>Contact : journalcra.com@gmail.com, &nbsp;<a href="mailto:articlesjournalcra2019@gmail.com">articlesjournalcra2019@gmail.com</a></p><p>Areas Covered: Multidisciplinary</p><p>Accepted Language: English</p><p>Frequency: 12 Issues per Year</p><p>Call for Papers: http://www.journalcra.com/call-papers-2019</p><p>If any more information please goes to our website:&nbsp;www.journalcra.com</p></body></html>
+ 
+------=_Part_79130_577288407.1557320189304--

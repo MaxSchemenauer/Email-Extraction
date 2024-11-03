@@ -1,0 +1,1169 @@
+Received: from SN6PR08MB4989.namprd08.prod.outlook.com (2603:10b6:a02:a8::35)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR03CA0022.NAMPRD03.PROD.OUTLOOK.COM; Mon, 15 Jul 2019 13:14:04 +0000
+Received: from BYAPR08CA0042.namprd08.prod.outlook.com (2603:10b6:a03:117::19)
+ by SN6PR08MB4989.namprd08.prod.outlook.com (2603:10b6:805:6e::26) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2073.10; Mon, 15 Jul
+ 2019 13:13:59 +0000
+Received: from BN3NAM04FT031.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::208) by BYAPR08CA0042.outlook.office365.com
+ (2603:10b6:a03:117::19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2073.10 via Frontend
+ Transport; Mon, 15 Jul 2019 13:13:59 +0000
+Authentication-Results: spf=pass (sender IP is 199.15.213.53)
+ smtp.mailfrom=potomac1050.mktomail.com; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ieee.org;calpoly.edu; dmarc=pass action=none
+ header.from=ieee.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of potomac1050.mktomail.com
+ designates 199.15.213.53 as permitted sender)
+ receiver=protection.outlook.com; client-ip=199.15.213.53;
+ helo=potomac1053.mktomail.com;
+Received: from potomac1053.mktomail.com (199.15.213.53) by
+ BN3NAM04FT031.mail.protection.outlook.com (10.152.92.64) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2052.18 via Frontend Transport; Mon, 15 Jul 2019 13:13:58 +0000
+Return-Path: 211-FYL-955.0.1758.0.0.4376.9.667772@potomac1050.mktomail.com
+X-MSFBL: KlKQHAAmNU4Rz+ksHGqfmPQWodioZ09MZD+IaZK2CWQ=|eyJnIjoiYmctYWItMDE
+	iLCJyIjoiZm9hYWRAY2FscG9seS5lZHUiLCJiIjoiZHZwLTE5OS0xNS0yMTMtNTI
+	iLCJ1IjoiMjExLUZZTC05NTU6MjM5NjoyNDQxOjc0MTI6MDo0Mzc2Ojk6MTc1ODo
+	2Njc3NzIifQ==
+Received: from [10.1.87.249] ([10.1.87.249:52139] helo=abmas01.marketo.org)
+	by abmta22.marketo.org (envelope-from <ieeestandards@ieee.org>)
+	(ecelerity 4.2.38.62370 r(:)) with ESMTP
+	id BB/DE-11501-61C7C2D5; Mon, 15 Jul 2019 08:13:58 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1563196438;
+	s=m1; d=ieee.org; i=@ieee.org;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=EEcnx1wVXAiJHO1o7V5MpgsdNQTZ8CKEh64AG7JFReg=;
+	b=N1fo5F/2ct7oG7XQd0O2Dw7EzZbQMPf0x8mAbkGd5dcZHJaJcV9Z3GTfvEyoq/k+
+	Y3nnvsNaKTgQEDAxNz/v/cTGeUpTvL9iXIKd9k+rcsVyKKXoEAfMtXfQEc1rKMoJgrC
+	E590RvSfNpHvj53/zduCbWfIqetYK82cix9TNGc8=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1563196438;
+	s=m1; d=mktomail.com; i=@mktomail.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=EEcnx1wVXAiJHO1o7V5MpgsdNQTZ8CKEh64AG7JFReg=;
+	b=fFIvAntcAPk19VD22B+UzbFgQQ5mlvIF2lWGIgpCMBZwXoa67NVrwqt3hGHASvpP
+	ntErGo9JeJNeLlvx7G6PcahSZxczSOHkoKLuU44pnR3RHLzSmdtwGkDMk76UYOrGM+N
+	oST+5ObShnomNWMqYUsE9ccdZ33Zc5m8wr5/U/iQ=
+Date: Mon, 15 Jul 2019 08:13:58 -0500 (CDT)
+From: IEEE Standards Association <ieeestandards@ieee.org>
+Reply-To: <ieeestandards@ieee.org>
+To: foaad@calpoly.edu
+Message-ID: <473491590.121681608.1563196438654.JavaMail.root@abmas01.marketo.org>
+Subject: Early bird registration ends July 25th for the 2019 IEEE Ethernet &
+ IP @ Automotive Tech Day
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_121681607_485949533.1563196438654"
+X-Binding: bg-ab-01
+X-MarketoID: 211-FYL-955:2396:2441:7412:0:4376:9:1758:667772
+X-MktArchive: false
+List-Unsubscribe: <mailto:GRIXCSJZGMYWUS2FMYWXE22ENQWWMRLQONTT2PI.1758.4376.9@unsub-ab.mktomail.com>
+X-Mailfrom: 211-FYL-955.0.1758.0.0.4376.9.667772@potomac1050.mktomail.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Jul 2019 13:13:59.0236
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 5b422be5-59f0-4240-a243-08d709264c54
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:199.15.213.53;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(3000300001)(286005)(199004)(189003)(71190400001)(18926415008)(75640400001)(86816001)(356004)(606006)(1096003)(246002)(486006)(8676002)(76236002)(146002)(6916009)(7596002)(7636002)(22756006)(10126004)(55176004)(16586007)(16003)(966005)(733005)(9686003)(2160300002)(236005)(33964004)(14444005)(11986003)(106002)(3450700001)(6306002)(347745004)(43066004)(58536013)(42882007)(19627405001)(2361001)(336012)(85226003)(476003)(126002)(7696005)(2351001)(22746008)(26005)(4006050)(53946003)(2171002)(28505004)(579004);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4989;H:potomac1053.mktomail.com;FPR:;SPF:Pass;LANG:en;PTR:potomac1053.mktomail.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT031.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 5b422be5-59f0-4240-a243-08d709264c54
+X-Microsoft-Antispam:
+ BCL:6;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:SN6PR08MB4989;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4989:
+X-MS-Exchange-PUrlCount: 27
+X-MS-Oob-TLC-OOBClassifiers: OLM:1850;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Jul 2019 13:13:58.9896
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5b422be5-59f0-4240-a243-08d709264c54
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4989
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.3062424
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2052.002
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077);
+X-Microsoft-Antispam-Message-Info:
+	z5nIwl7EJF95QMm3FW0OTp0UApOMlnV8u8RN39O6w0+NjzoJw/KK7WNo1mdE+EDDl3rMHBtxRqGDDNxRCyALRc2a93hL/7BvtJjIrEef+eOZPmbsRnIf8CO0IXM2GJ+aIPPVW11yuQMKweavHDHzaByrdhekZbaLoi/nmZiciWMTkwWMNPMRZQb4RThj0wxKm86av+V1oYrHAggsyZaiyCVARC7mgO12i1o8VPYANw4+nsgf5DFjxB+MX0r5dtN7W45POOvD6hMNZ9VXvFvtf0vOCSF4khs3cGO52rB4xBqk/hrvN5xok+l+qb1/7Vswkl3XR9+DFD6U7AOPqOPy6PDIceYDqRZE453ARckt5nJUSu4FWIgOqXeXX7BgNk4lKX6f0qFyGwwozhLat3fuwE+HDGtX9GpnlU+j5d+WD+hJ5ewc71ymMl/6MQj70MhVVQ3QC4fKoVkQCNgS9e80c6cLRWH1AM4ho6mAdZ/g2GxmSw8OH2PE5e8zsHhdD/J3oQ+IVi7h4djdB+JiSiWZ5W933s37/QV0aNE9oCyIoc6jWmBiA2ptUVpp2ve7NS3JU0he3xxbes64vybKp1KmQz8FcOC1PZJXt9EEUKalQ6xjEpy6enRuIWUf4077fvtTRXoVE14+f9Tu0JqphN8599/9meBjaVyWixqPmsblB0usJi+MU99F84080RctOxZvrwIFlPRvGdr+y4vFqIL9S/WRYIm2iF58DCSwDecHBDG6CerzoI5rVzgnw59Xh//fMkOxynq96GMZj6ygKFop6d5j/r8Eze++wrZiAzeu46MzrkVqHtIQ5SqSLxB1VFGs1PuaUgsJmbTjRfjv81Ehpc/d1VCGGRf9/WADqUCjrv7wRerP5Dp5xBTQd2cb680+hPL4W3u7a5UtDqciW3KFe2LmHFUGGyjEUSFdh587zfPssXcrnxjQN75akVaEr1A63KGPksaCSmk1fqRyT966HQ==
+MIME-Version: 1.0
+
+------=_Part_121681607_485949533.1563196438654
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Register by July 25th=C2=A0and get=20
+the early bird registration price for=C2=A0the=C2=A09th IEEE-SA Ethernet & =
+IP @ Automotive Technology=20
+Day <http://go.standards.ieee.org/x0F000000R60D8Y02T2wILN>=C2=A0(E&IP@ATD),=
+=C2=A024-25 September 2019 in Detroit, Michigan, USA. The=C2=A0Ford Motor C=
+ompany <http://go.standards.ieee.org/XTD0w3Y08000L02IN006FS0>=C2=A0is our H=
+ost. E&IP@ATD=C2=A0is the premier venue for automobile manufacturers, suppl=
+iers, semiconductor vendors, tool providers, engineers, scientists, educato=
+rs, and the media to share ground breaking ideas along with implementation =
+strategies and applications related to Automotive Ethernet Systems.
+
+
+Presentations will provide insights into the developments, trends, and solu=
+tions in the following topics:
+
+
+=09- Current automotive use-cases and future perspectives
+=09- Ethernet's role to facilitate cloud connectivity
+=09- Ethernet network design and specification
+=09- Ethernet requirements for automated driving applications
+=09- Safety, security, and reliability of Ethernet communications
+=09- Markets and strategies
+=09- Tools and tests methods
+=09- Present and future physical layer and protocol solutions
+${Button-Text}  <http://go.standards.ieee.org/dc/TyTOrxmz22SGW307RMIKKL3sHY=
+iUkrhCyzGTTrpxMIQ=3D/v02I08190TDLFwl6Y00N000>
+${Button-Text}  <http://go.standards.ieee.org/dc/TyTOrxmz22SGW307RMIKKL3sHY=
+iUkrhCyzGTTrpxMIQ=3D/v02I08190TDLFwl6Y00N000>
+View the draft program here <http://go.standards.ieee.org/tTLw0N00FI0D6008Y=
+20006V>!
+Sponsor and Exhibitor Opportunities
+
+Platinum and Gold Exhibitor packages have sold out. Silver and Bronze Exhib=
+itor packages are available, as well as sponsorship of a breakfast, coffee =
+break or lunch.=C2=A0 You may also purchase a Sponsored Presentation slot t=
+o showcase your automotive Ethernet related products and services.
+
+See the=C2=A0Exhibitor/Supporter Prospectus <http://go.standards.ieee.org/J=
+Y0DFN0W6L0870I0Tw00020>=C2=A0for details.
+${Button-Text}  <http://go.standards.ieee.org/dc/TyTOrxmz22SGW307RMIKKL3sHY=
+iUkrhCyzGTTrpxMIQ=3D/v02I08190TDLFwl6Y00N000>
+Contact=C2=A0eipatd-requests@ieee.org <http://go.standards.ieee.org/hDw6Y2Y=
+00F000NT08000L9I>=C2=A0for additional information.
+Arrive early and join the IEEE P802.1DG meeting
+
+All are welcome to attend the IEEE 802.1 TSN Interim Plenary Meeting to adv=
+ance the work of=C2=A0IEEE P802.1DG (TSN Profile for Automotive In-Vehicle =
+Ethernet Communications) <http://go.standards.ieee.org/dT0Dw6Z80N0LI00Y2a00=
+0F0> the day before E&IP@ATD starts.
+
+When: Monday, 23 September 2019
+Time: 9 AM =E2=80=93 5 PM (arrive by 8:30 AM for security check-in)
+Meeting Location: GM Renaissance Center <http://go.standards.ieee.org/E0T0F=
+0wcY0I080NL0102D06>, Tower 100, conference room 21 A27
+Meeting Fee: None
+Registration: No registration required. Notify Craig Gunther at =C2=A0craig=
+gunther@yahoo.com <http://go.standards.ieee.org/n0Fw01d00N8D0LY0I600T12> by=
+ 23 August 2019 to get you on the GM RenCen security list.
+Hotel Accommodations: Crowne Plaza Detroit Downtown Riverfront Hotel <http:=
+//go.standards.ieee.org/HF0000N08w5I0L20D6Y00UT>
+CONNECT WITH US ON
+
+
+
+ <http://go.standards.ieee.org/g20I28D0N006YL0TF000e1w>=C2=A0=C2=A0  <http:=
+//go.standards.ieee.org/O010w2NL00008FD30f0T6IY>=C2=A0=C2=A0  <http://go.st=
+andards.ieee.org/dT0Dw6481N0LI00Y2g000F0>=C2=A0=C2=A0  <http://go.standards=
+.ieee.org/M80L0N0IF126T00hD0wY050>=C2=A0=C2=A0  <http://go.standards.ieee.o=
+rg/r2060L010YiDI8F6w00N0T0>
+IEEE, 445 Hoes Lane, Piscataway, NJ 08854-4141 USA <[[#]]>
+=C2=A9 2019 Copyright=C2=A0=C2=A0 Contact <http://go.standards.ieee.org/s07=
+10D60IY8j0F0N2w00T0L>=C2=A0=C2=A0 Privacy Policy <http://go.standards.ieee.=
+org/r2080L010YkDI8F6w00N0T0>
+
+This email was sent to foaad@calpoly.edu. If you would like to update your =
+communication preferences click here: https://engagestandards.ieee.org/pref=
+erences.html?mkt_unsubscribe=3D1&mkt_tok=3DeyJpIjoiTkRVMlpUVm1NalJpTkRVNCIs=
+InQiOiJCaDNRYTBFTUczTmZuM1A2SHNHd3RNcDhqRjRZMUVZMW02cFRuS2NVZVVjQ012N2N0cXI=
+0YTMvSERHWVltQ284cEthZW9XWEh3cE5pNWFUU2ZjMHN4ZExSUUIwcEZoZGFwakJqeHFMMTBjMS=
+txUFJwMVZ4a1dxbGwwWjZLaFVLbCJ9.
+
+------=_Part_121681607_485949533.1563196438654
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head><!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]--><!--Default Colors Begin - Use Find and Replace to update--=
+><!--#010101 (Color Band, Divider)--><!--#0D6797 (Button Color, Button Bord=
+er Color)--><!--Default Colors End--><!--Global Variables Begin--><!--Globa=
+l Variables End--><!--Color Band Module Variables Begin--><!--Color Band Mo=
+dule Variables End--><!--Hero w/ CTA Module Variables Begin--><!--Hero w/ C=
+TA Module Variables End--><!--Hero w/out CTA Module Variables Begin--><!--H=
+ero w/out CTA Module Variables End--><!--Banner Module Variables Begin--><!=
+--Banner Module Variables End--><!--Photo Module Variables Begin--><!--Phot=
+o Module Variables End--><!--Title Module Variables Begin--><!--Title Modul=
+e Variables End--><!--FreeText Module Variables Begin--><!--FreeText Module=
+ Variables End--><!--Button Module Variables Begin--><!--Button Module Vari=
+ables End--><!--FreeText2Col Module Variables Begin--><!--FreeText2Col Modu=
+le Variables End--><!--FreeText3Col Module Variables Begin--><!--FreeText3C=
+ol Module Variables End--><!--FreeTextWN Module Variables Begin--><!--FreeT=
+extWN Module Variables End--><!--VideoModule Variables Begin--><!--VideoMod=
+ule Variables End--><!--Features2Col Module Variables Begin--><!--Features2=
+Col Module Variables End--><!--Features3Col Module Variables Begin--><!--Fe=
+atures3Col Module Variables End--><!--Photos2Col Module Variables Begin--><=
+!--Photos2Col Module Variables End--><!--Photos3Col Module Variables Begin-=
+-><!--Photos3Col Module Variables End--><!--Article Module Variables Begin-=
+-><!--Article Module Variables End--><!--Article2Col Module Variables Begin=
+--><!--Article2Col Module Variables End--><!--Article3Col Module Variables =
+Begin--><!--Article3Col Module Variables End--><!--Products2Col Module Vari=
+ables Begin--><!--Products2Col Module Variables End--><!--Products3Col Modu=
+le Variables Begin--><!--Products2Col Module Variables End--><!--Testimonia=
+ls2Col Module Variables Begin--><!--Testimonials2Col Module Variables End--=
+><!--CTA Module Variables Begin--><!--CTA Module Variables End--><!--Divide=
+r Module Variables Begin--><!--Divider Module Variables End--><!--Social Mo=
+dule Variables Begin--><!--Social Module Variables End--><!--Other Meta Tag=
+s Begin-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1,=
+ minimum-scale=3D1, maximum-scale=3D1">=20
+<meta name=3D"robots" content=3D"noindex,nofollow">=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=20
+<!--Other Meta Tags End-->=20
+<!--[if mso]>
+    <style type=3D'text/css'>
+      .primary-font {
+      font-family: Arial, sans-serif !important;
+      }
+    </style>
+    <![endif]-->=20
+<!--[if mso]>
+    <style type=3D'text/css'>
+      .secondary-font {
+      font-family: Arial, sans-serif !important;
+      }
+    </style>
+    <![endif]-->=20
+<!--[if gte mso 9]>
+    <style type=3D"text/css">
+      #hero .table3-3{
+      width: 100% !important;
+      }
+    </style>
+    <![endif]-->=20
+<style>
+      /*startcommon*/
+      @media only screen and (max-width: 803px) {
+      .m_hero .background {
+      background-size: cover !important;
+      }
+      }
+      /*endcommon*/
+    </style>=20
+<!--[if mso]>
+    <style>
+      .outlookbutton {
+      padding-left:60px !important
+      }
+    </style>
+    <![endif]-->=20
+<style media=3D"all">
+      /* CLIENT-SPECIFIC STYLES */
+      #outlook a {
+      padding: 0;
+      }
+      /* Force Outlook to provide a "view in browser" message */
+      .ReadMsgBody {
+      width: 100%;
+      }
+      .ExternalClass {
+      width: 100%;
+      }
+      /* Force Hotmail to display emails at full width */
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+      line-height: 100%;
+      }
+      /* Force Hotmail to display normal line spacing */
+      /* iOS BLUE LINKS */
+      @-ms-viewport {
+      width: device-width;
+      }
+    </style>=20
+<style type=3D"text/css">
+      html { -webkit-text-size-adjust:none; }
+      p {margin: 0 0 10px !important;padding: 0;}
+      body{font-family:Lato, Calibri, sans-serif;}
+      a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      }
+      a{outline: none !important; text-decoration:none !important;}
+      @media only screen and (max-width: 640px){
+      .em_main_table {
+      width: 100% !important;
+      }
+      .em_spc_20 {
+      height: 20px !important;
+      }
+      .em_hide {
+      display: none !important;
+      }
+      .m_hero .background {
+      background-size: cover !important;
+      }
+      table[class=3D"table600"] {
+      width: 450px !important;
+      }
+      *[class].main {width:100% !important;min-width:100% !important;}
+      *[class].inner_table{width:90% !important;min-width:90% !important;}
+      *[class].block{width:100% !important;margin:0 auto !important;padding=
+:0 !important;display:block;}
+      *[class].center_align{text-align:center !important;margin:0 auto;}
+      *[class].left_align{text-align:left !important;}
+      *[class].padding_bottom{padding-bottom:20px !important;}
+      *[class].padding_top{padding-top:20px !important;}
+      *[class].image-width img{width:100% !important;height:auto !Important=
+;}
+      *[class].line-height{line-height:36px !important;}
+      *[class].button_width{width:100% !important;}
+      *[class].Video img{max-width:100% !important;height:auto !Important;}
+      *[class].margin-top{margin-top:20px !important;}
+      *[class].float{float:none !important;margin-top:14px !Important;displ=
+ay:inline-block;}
+      *[class].button_width{width:100% !Important;}
+      }
+      @media only screen and (max-width: 479px){
+      .m_hero .background {
+      background-size: cover !important;
+      }
+      .em_spc_20 {
+      height: 20px !important;
+      }
+      .em_hide {
+      display: none !important;
+      }
+      .em_main_table {
+      width: 100% !important;
+      }
+      table[class=3D"table600"] {
+      width: 290px !important;
+      }
+      *[class].main {width:100% !important;min-width:100% !important;}
+      *[class].inner_table{width:90% !important;min-width:90% !important;}
+      *[class].block{width:100% !important;margin:0 auto !important;padding=
+:0 !important;display:block;}
+      *[class].center_align{text-align:center !important;margin:0 auto;}
+      *[class].left_align{text-align:left !important;}
+      *[class].padding_top{padding-top:20px !important;}
+      *[class].padding_bottom{padding-bottom:20px !important;}
+      *[class].image-width img{width:100% !important;height:auto !Important=
+;}
+      *[class].img-width img{width:100% !important;height:auto !Important;}
+      *[class].line-height{line-height:36px !important;}
+      *[class].button_width{width:100% !important;}
+      *[class].Video img{max-width:100% !important;height:auto !Important;}
+      *[class].margin-top{margin-top:20px !important;}
+      *[class].float{float:none !important;margin-top:14px !Important;displ=
+ay:inline-block;}
+      *[class].button_width{width:100% !Important;}
+      }
+    </style>=20
+</head>=20
+<body style=3D"background-color:#EEEEEE;margin-bottom: 0; -webkit-text-size=
+-adjust: 100%; padding-bottom: 0; min-width: 100%; margin-top: 0; margin-ri=
+ght: 0; -ms-text-size-adjust: 100%; margin-left: 0; padding-top: 0; padding=
+-right: 0; padding-left: 0; width: 100%;">=20
+<!--Outer table START-->=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: col=
+lapse;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"outer" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens:=
+ none; border-collapse: collapse;">=20
+<!--Header starts-->=20
+<table width=3D"640" class=3D"main" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+ margin:0 auto; border-spacing: 0; border-collapse: collapse;" align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">=20
+<tbody>
+<tr>=20
+<td bgcolor=3D"#F5FAFD" style=3D"border-collapse:collapse; background-color=
+:#F5FAFD;">=20
+<table class=3D"inner_table" style=3D"margin:0 auto;width:600px;" align=3D"=
+center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra Space-->=20
+<tbody>
+<tr>=20
+<td height=3D"15" style=3D"line-height:1px;font-size:1px;">&nbsp; </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"120" class=3D"center_align padding_bottom" valign=3D"top" alig=
+n=3D"left">=20
+<div class=3D"mktoImg" id=3D"Logo2">
+<img alt=3D"IEEE" border=3D"0" src=3D"https://engagestandards.ieee.org/rs/2=
+11-FYL-955/images/logo-n.png" width=3D"100">
+</div> </td>=20
+</tr>=20
+<!--Extra Space-->=20
+<tr>=20
+<td height=3D"15" style=3D"line-height:1px;font-size:1px;">&nbsp; </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--Header ends-->=20
+<table class=3D"main" width=3D"640" align=3D"center" id=3D"boxing" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; border-spacing: 0; border-collapse: collapse;margin:0 auto;min-widt=
+h:640px;">=20
+<tbody>
+<tr>=20
+<td class=3D"mktoContainer boxedbackground" id=3D"module-wrapper" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: non=
+e; -moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+<table class=3D"mktoModule" id=3D"ColorBand2a30b856-1d35-4840-9206-415cb7eb=
+940c" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-col=
+lapse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#010101" style=3D"background-color:#010101">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td height=3D"10" style=3D"font-size:1px;line-height:1px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Banner6580ea22-fb6d-426d-a4a2-ae0cffcaa56=
+0" style=3D" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-colla=
+pse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" bgcolor=3D"#FFFFFF">=20
+<table class=3D"main" style=3D"width: 640px; margin: 0 auto; border-collaps=
+e: collapse;" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"640">=20
+<tbody>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 0px;" height=3D"0">&nbsp; </td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"image-width" style=3D"font-size: 1px;line-hei=
+ght: 1px;">=20
+<div class=3D"mktoImg" id=3D"Banner26580ea22-fb6d-426d-a4a2-ae0cffcaa560" m=
+ktolockimgsize=3D"true">=20
+<img border=3D"0" src=3D"https://engagestandards.ieee.org/rs/211-FYL-955/im=
+ages/d_ieee_sa_bar_graphic_short.png" width=3D"640" style=3D"">=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 0px;" height=3D"0">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Banner95725589-b7ea-4490-b7d0-3bdde08aefe=
+7" style=3D" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-colla=
+pse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" bgcolor=3D"#FFFFFF">=20
+<table class=3D"main" style=3D"width: 640px; margin: 0 auto; border-collaps=
+e: collapse;" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"640">=20
+<tbody>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 0px;" height=3D"0">&nbsp; </td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"image-width" style=3D"font-size: 1px;line-hei=
+ght: 1px;">=20
+<div class=3D"mktoImg" id=3D"Banner295725589-b7ea-4490-b7d0-3bdde08aefe7" m=
+ktolockimgsize=3D"true">=20
+<a href=3D"http://go.standards.ieee.org/NY00QFNT0006w0L01820I0D" target=3D"=
+_blank"><img src=3D"https://engagestandards.ieee.org/rs/211-FYL-955/images/=
+EIP%40ADT_EMAIL_2019R.jpg" width=3D"640" style=3D""></a>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 0px;" height=3D"0">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeText" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-al=
+ign: center; border-collapse: collapse;" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:14px; color:#000000; font-family:Arial,Helvetica,san=
+s-serif; mso-line-height-rule: exactly; line-height:20px;text-align:left;" =
+valign=3D"top">=20
+<div id=3D"FreeTextContent" class=3D"mktoText">=20
+<p style=3D"color: #000000; font-family: Arial, Helvetica, sans-serif; font=
+-size: 14px; font-style: normal; font-variant-ligatures: normal; font-varia=
+nt-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text=
+-align: left; text-indent: 0px; text-transform: none; white-space: normal; =
+widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Register by =
+July 25th&nbsp;and get the early bird registration price for&nbsp;the&nbsp;=
+<strong><a href=3D"http://go.standards.ieee.org/x0F000000R60D8Y02T2wILN" ta=
+rget=3D"_blank" data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttp=
+://standards.ieee.org/events/automotive/index.html&amp;source=3Dgmail&amp;u=
+st=3D1557844060321000&amp;usg=3DAFQjCNFG_kfZXC3zG0kcU7V7lUHC_oRMrg">9th IEE=
+E-SA Ethernet &amp; IP @ Automotive Technology Day</a>&nbsp;(E&amp;IP@ATD)<=
+/strong>,&nbsp;24-25 September 2019 in Detroit, Michigan, USA. The&nbsp;<a =
+href=3D"http://go.standards.ieee.org/XTD0w3Y08000L02IN006FS0" target=3D"_bl=
+ank" data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://www.for=
+d.com/&amp;source=3Dgmail&amp;ust=3D1557844060321000&amp;usg=3DAFQjCNHAARvH=
+s3duQNAG0ukfOO8HkdNWLg">Ford Motor Company</a>&nbsp;is our Host. E&amp;IP@A=
+TD&nbsp;is the premier venue for automobile manufacturers, suppliers, semic=
+onductor vendors, tool providers, engineers, scientists, educators, and the=
+ media to share ground breaking ideas along with implementation strategies =
+and applications related to Automotive Ethernet Systems.<strong><br></stron=
+g></p>=20
+<p>Presentations will provide insights into the developments, trends, and s=
+olutions in the following topics:</p>=20
+<ul>=20
+<li>Current automotive use-cases and future perspectives</li>=20
+<li>Ethernet's role to facilitate cloud connectivity</li>=20
+<li>Ethernet network design and specification</li>=20
+<li>Ethernet requirements for automated driving applications</li>=20
+<li>Safety, security, and reliability of Ethernet communications</li>=20
+<li>Markets and strategies</li>=20
+<li>Tools and tests methods</li>=20
+<li>Present and future physical layer and protocol solutions</li>=20
+</ul>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Button271bcc41-df39-44e7-a458-e000a9f0ee3=
+2" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collap=
+se: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width:600px; margin: 0 auto; text-ali=
+gn: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+<!--CTA button-->=20
+<tr>=20
+<td valign=3D"top">=20
+<div class=3D"mktoText" id=3D"banner-button1271bcc41-df39-44e7-a458-e000a9f=
+0ee32">=20
+<table style=3D"margin: 0 auto;" width=3D"260" align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" height=3D"34">=20
+<tbody>=20
+<tr>=20
+<td style=3D"background-color: #0D6797; border: 1px solid #0D6797; border-r=
+adius: 3px; font-family: Arial,Helvetica,sans-serif; font-size: 16px; mso-l=
+ine-height-rule: exactly; line-height: 22px; text-align: center; vertical-a=
+lign: middle; color: #FFFFFF; display: block; padding: 9px 40px 8px;" valig=
+n=3D"middle"><a style=3D"text-decoration: none; color: #FFFFFF !important; =
+outline: none;" href=3D"http://go.standards.ieee.org/e80ITL00000YF00N264Dw0=
+T"> <span style=3D"color: #FFFFFF;">REGISTER TO ATTEND</span> </a></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<br>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"9">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Button271bcc41-df39-44e7-a458-e000a9f0ee3=
+2e55e114e-22ef-46a2-9d1c-5834516fe121" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width:600px; margin: 0 auto; text-ali=
+gn: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+<!--CTA button-->=20
+<tr>=20
+<td valign=3D"top">=20
+<div class=3D"mktoText" id=3D"banner-button1271bcc41-df39-44e7-a458-e000a9f=
+0ee32e55e114e-22ef-46a2-9d1c-5834516fe121">=20
+<table style=3D"margin: 0 auto;" width=3D"302" align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" height=3D"40">=20
+<tbody>=20
+<tr>=20
+<td style=3D"background-color: #0D6797; border: 1px solid #0D6797; border-r=
+adius: 3px; font-family: Arial,Helvetica,sans-serif; font-size: 16px; mso-l=
+ine-height-rule: exactly; line-height: 22px; text-align: center; vertical-a=
+lign: middle; color: #FFFFFF; display: block; padding: 9px 40px 8px;" valig=
+n=3D"middle"><a style=3D"text-decoration: none; color: #FFFFFF !important; =
+outline: none;" href=3D"http://go.standards.ieee.org/HF0000N08w5I0L20D6Y00U=
+T"> <span style=3D"color: #FFFFFF;">BOOK YOUR HOTEL ROOM</span> </a></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeTextc771dee8-c383-4930-9c56-d3ec76c34=
+df6" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-coll=
+apse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-al=
+ign: center; border-collapse: collapse;" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:14px; color:#000000; font-family:Arial,Helvetica,san=
+s-serif; mso-line-height-rule: exactly; line-height:20px;text-align:left;" =
+valign=3D"top">=20
+<div id=3D"FreeTextContentc771dee8-c383-4930-9c56-d3ec76c34df6" class=3D"mk=
+toText">=20
+<p style=3D"color: #000000; font-family: Arial, Helvetica, sans-serif; font=
+-size: 14px; font-style: normal; font-variant-ligatures: normal; font-varia=
+nt-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text=
+-align: left; text-indent: 0px; text-transform: none; white-space: normal; =
+widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><span style=
+=3D"font-size: 16px;"><strong>View the draft program <a href=3D"http://go.s=
+tandards.ieee.org/tTLw0N00FI0D6008Y20006V" target=3D"_blank" id=3D"">here</=
+a>!&nbsp;</strong></span><br><strong></strong></p>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Divider45d4d9e0-e2ca-440a-9214-ea0e70d8aa=
+7f" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-colla=
+pse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-al=
+ign: center; border-collapse: collapse;" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td>=20
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" wi=
+dth=3D"100%" style=3D"width:100%;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td style=3D"height:1px;font-size:1px;line-height:1px;background-color:#010=
+101">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"15">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeTextc771dee8-c383-4930-9c56-d3ec76c34=
+df658e47da9-1930-46c6-bcb6-098ca86f618e" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-al=
+ign: center; border-collapse: collapse;" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"15">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:14px; color:#000000; font-family:Arial,Helvetica,san=
+s-serif; mso-line-height-rule: exactly; line-height:20px;text-align:left;" =
+valign=3D"top">=20
+<div id=3D"FreeTextContentc771dee8-c383-4930-9c56-d3ec76c34df658e47da9-1930=
+-46c6-bcb6-098ca86f618e" class=3D"mktoText">=20
+<p style=3D"color: #000000; font-family: Arial, Helvetica, sans-serif; font=
+-size: 14px; font-style: normal; font-variant-ligatures: normal; font-varia=
+nt-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text=
+-align: left; text-indent: 0px; text-transform: none; white-space: normal; =
+widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><strong><spa=
+n style=3D"color: #0d6797; font-size: 16px;">Sponsor and Exhibitor Opportun=
+ities</span></strong></p>=20
+<p>Platinum and Gold Exhibitor packages have sold out. Silver and Bronze Ex=
+hibitor packages are available, as well as sponsorship of a breakfast, coff=
+ee break or lunch.&nbsp; You may also purchase a Sponsored Presentation slo=
+t to showcase your automotive Ethernet related products and services.</p>=20
+<p>See the<a href=3D"http://go.standards.ieee.org/JY0DFN0W6L0870I0Tw00020" =
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://standards.ie=
+ee.org/content/dam/ieee-standards/standards/web/documents/other/2019_eipatd=
+_exhibitor_supporter_prospectus.pdf&amp;source=3Dgmail&amp;ust=3D1557844060=
+321000&amp;usg=3DAFQjCNE1cXBnft5wjK4aNQsqlwWwGmOSrQ">&nbsp;Exhibitor/Suppor=
+ter Prospectus</a>&nbsp;for details.</p>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Button271bcc41-df39-44e7-a458-e000a9f0ee3=
+2e55e114e-22ef-46a2-9d1c-5834516fe1216fa203e5-872a-4023-bbb8-1ead996181fa" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse:=
+ collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width:600px; margin: 0 auto; text-ali=
+gn: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+<!--CTA button-->=20
+<tr>=20
+<td valign=3D"top">=20
+<div class=3D"mktoText" id=3D"banner-button1271bcc41-df39-44e7-a458-e000a9f=
+0ee32e55e114e-22ef-46a2-9d1c-5834516fe1216fa203e5-872a-4023-bbb8-1ead996181=
+fa">=20
+<table style=3D"margin:0 auto;" width=3D"350" align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"background-color: #0D6797; border:1px solid #0D6797;border-rad=
+ius:3px;font-family:Arial,Helvetica,sans-serif; font-size: 16px; mso-line-h=
+eight-rule: exactly; line-height:22px ; text-align: center; vertical-align:=
+ middle; color: #FFFFFF; display: block; padding:9px 40px 8px;" valign=3D"m=
+iddle"> <a style=3D"text-decoration: none; color: #FFFFFF !important;outlin=
+e: none;" href=3D"http://go.standards.ieee.org/l0YN8000D6Iw0L0T2080X0F"> <s=
+pan style=3D"color:#FFFFFF;">PURCHASE EXHIBITOR PACKAGES AND SPONSORSHIPS</=
+span> </a> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeTextc771dee8-c383-4930-9c56-d3ec76c34=
+df658e47da9-1930-46c6-bcb6-098ca86f618e96ed21b3-5a62-48bd-a2bd-f7742cb69352=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collaps=
+e: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-al=
+ign: center; border-collapse: collapse;" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:14px; color:#000000; font-family:Arial,Helvetica,san=
+s-serif; mso-line-height-rule: exactly; line-height:20px;text-align:left;" =
+valign=3D"top">=20
+<div id=3D"FreeTextContentc771dee8-c383-4930-9c56-d3ec76c34df658e47da9-1930=
+-46c6-bcb6-098ca86f618e96ed21b3-5a62-48bd-a2bd-f7742cb69352" class=3D"mktoT=
+ext">=20
+<p><span style=3D"font-size: 16px;"><strong></strong></span>Contact&nbsp;<a=
+ href=3D"http://go.standards.ieee.org/hDw6Y2Y00F000NT08000L9I">eipatd-reque=
+sts@ieee.org</a>&nbsp;for additional information.&nbsp; &nbsp;<br></p>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Divider54c9c641-e43d-411f-bb34-d702a80e7e=
+50" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-colla=
+pse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-al=
+ign: center; border-collapse: collapse;" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td>=20
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" wi=
+dth=3D"80%" style=3D"width:80%;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td style=3D"height:3px;font-size:1px;line-height:1px;background-color:#010=
+101">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeTextc771dee8-c383-4930-9c56-d3ec76c34=
+df658e47da9-1930-46c6-bcb6-098ca86f618e96ed21b3-5a62-48bd-a2bd-f7742cb69352=
+9f8c7578-68e5-4ea4-a03f-b545e857d8b3" style=3D"-webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; border-spacing: 0; border-collapse: collapse;" align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-al=
+ign: center; border-collapse: collapse;" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"10">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:14px; color:#000000; font-family:Arial,Helvetica,san=
+s-serif; mso-line-height-rule: exactly; line-height:20px;text-align:left;" =
+valign=3D"top">=20
+<div id=3D"FreeTextContentc771dee8-c383-4930-9c56-d3ec76c34df658e47da9-1930=
+-46c6-bcb6-098ca86f618e96ed21b3-5a62-48bd-a2bd-f7742cb693529f8c7578-68e5-4e=
+a4-a03f-b545e857d8b3" class=3D"mktoText">=20
+<strong style=3D"color: #000000; font-family: Arial, Helvetica, sans-serif;=
+ font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-=
+variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left;=
+ text-indent: 0px; text-transform: none; white-space: normal; widows: 2; wo=
+rd-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;=
+ text-decoration-style:=20
+initial; text-decoration-color: initial;"><span style=3D"color: #0d6797; fo=
+nt-size: 16px;">Arrive early and join the IEEE P802.1DG meeting</span></str=
+ong>=20
+<br>=20
+<br>All are welcome to attend the IEEE 802.1 TSN Interim Plenary Meeting to=
+ advance the work of=20
+<span face=3D"Arial, sans-serif" style=3D"font-family: Arial, sans-serif;">=
+<b>&nbsp;<strong><span style=3D"font-size: 10.5pt; line-height: 107%;=20
+font-family: 'Arial',sans-serif; color: black;"><a href=3D"http://go.standa=
+rds.ieee.org/dT0Dw6Z80N0LI00Y2a000F0">IEEE P802.1DG (TSN Profile for Automo=
+tive In-Vehicle Ethernet Communications)</a> </span></strong></b></span>the=
+ day before E&amp;IP@ATD starts.=20
+<br>=20
+<br>=20
+<strong>When:</strong> Monday, 23 September 2019=20
+<br>=20
+<strong>Time:</strong> 9 AM =E2=80=93 5 PM (arrive by 8:30 AM for security =
+check-in)=20
+<br>=20
+<strong>Meeting Location:</strong>=20
+<a href=3D"http://go.standards.ieee.org/E0T0F0wcY0I080NL0102D06" target=3D"=
+_blank" id=3D"">GM Renaissance Center</a>, Tower 100, conference room 21 A2=
+7=20
+<br>=20
+<strong>Meeting Fee:</strong> None=20
+<br>=20
+<strong>Registration:</strong> No registration required. Notify Craig Gunth=
+er at=20
+<span style=3D"font-size: 10.5pt; line-height: 107%; font-family: 'Arial',s=
+ans-serif; color: black;">&nbsp;<a href=3D"http://go.standards.ieee.org/n0F=
+w01d00N8D0LY0I600T12">craiggunther@yahoo.com</a></span>=20
+<strong>by 23 August 2019</strong> to get you on the GM RenCen security lis=
+t.=20
+<br>=20
+<strong>Hotel Accommodations:</strong>=20
+<span style=3D"font-size: 10.5pt; line-height: 107%; font-family:=20
+'Arial',sans-serif; color: black;"><a href=3D"http://go.standards.ieee.org/=
+HF0000N08w5I0L20D6Y00UT">Crowne Plaza Detroit Downtown Riverfront Hotel</a>=
+</span>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Social2e0c71aa-a2f3-45e0-89f2-3222710c731=
+5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collap=
+se: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" style=3D"background-color: #FFFFFF;" bgcolor=3D"#FFFFFF"=
+>=20
+<table class=3D"inner_table" width=3D"600" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"width: 600px; margin: 0 auto; border-collapse=
+: collapse;">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td height=3D"20" colspan=3D"3" style=3D"line-height: 1px; font-size: 1px;"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"border-collapse: collapse;">=20
+<div class=3D"mktoText" id=3D"SocialIcons2e0c71aa-a2f3-45e0-89f2-3222710c73=
+15">=20
+<p style=3D"text-align: center;"><span style=3D"color: #808080;"><strong>CO=
+NNECT WITH US ON</strong></span></p>=20
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0" wi=
+dth=3D"100%" style=3D"width: 100%; border-collapse: collapse; margin: 0 aut=
+o;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"line-height" valign=3D"top" align=3D"center" style=3D"margin: =
+0 auto; text-align: center;"><a href=3D"http://go.standards.ieee.org/g20I28=
+D0N006YL0TF000e1w" target=3D"_blank"><img src=3D"https://engagestandards.ie=
+ee.org/rs/211-FYL-955/images/icon-facebook.png" alt=3D"facebook" border=3D"=
+0" width=3D"37"></a>&nbsp;&nbsp; <a href=3D"http://go.standards.ieee.org/O0=
+10w2NL00008FD30f0T6IY" target=3D"_blank"><img src=3D"https://engagestandard=
+s.ieee.org/rs/211-FYL-955/images/icon-linkedin.png" alt=3D"linkedin" border=
+=3D"0" width=3D"37"></a>&nbsp;&nbsp; <a href=3D"http://go.standards.ieee.or=
+g/dT0Dw6481N0LI00Y2g000F0" target=3D"_blank"><img src=3D"https://engagestan=
+dards.ieee.org/rs/211-FYL-955/images/icon-twitter.png" alt=3D"twitter" bord=
+er=3D"0" width=3D"37"></a>&nbsp;&nbsp; <a href=3D"http://go.standards.ieee.=
+org/M80L0N0IF126T00hD0wY050" target=3D"_blank"><img src=3D"https://engagest=
+andards.ieee.org/rs/211-FYL-955/images/icon-instagram.png" alt=3D"instagram=
+" border=3D"0" width=3D"37"></a>&nbsp;&nbsp; <a href=3D"http://go.standards=
+.ieee.org/r2060L010YiDI8F6w00N0T0" target=3D"_blank"><img src=3D"https://en=
+gagestandards.ieee.org/rs/211-FYL-955/images/icon-youtube.png" alt=3D"youtu=
+be" border=3D"0" width=3D"37"></a>&nbsp;&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td height=3D"35" style=3D"border-collapse: collapse;line-height: 1px; font=
+-size: 1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"ColorBand9feb8d44-8065-452f-8516-4f188d50=
+ac26" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-col=
+lapse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#010101" style=3D"background-color:#010101">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td height=3D"10" style=3D"font-size:1px;line-height:1px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--Outer table End-->=20
+<!--Footer Begin-->=20
+<table class=3D"main" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacin=
+g: 0; border-collapse: collapse;margin:0 auto;" align=3D"center" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"640">=20
+<tbody>
+<tr>=20
+<td bgcolor=3D"#0D6797" style=3D"border-collapse:collapse; background-color=
+:#0D6797;">=20
+<table class=3D"inner_table" style=3D"margin:0 auto;width:600px;" align=3D"=
+center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra Space-->=20
+<tbody>
+<tr>=20
+<td height=3D"20" style=3D"line-height:1px;font-size:1px;">&nbsp; </td>=20
+</tr>=20
+<tr>=20
+</tr>
+<tr>=20
+<td valign=3D"top" style=3D"font-size:12px; color:#FFFFFF; font-family:Aria=
+l,Helvetica,sans-serif; mso-line-height-rule: exactly; line-height:20px;tex=
+t-align:center;">=20
+<div class=3D"mktoText" id=3D"Address">
+<div>
+ IEEE,=20
+<a href=3D"#" style=3D"text-decoration:none !important;color:#FFFFFF !impor=
+tant;border:none !important;">445 Hoes Lane, Piscataway, NJ 08854-4141 USA<=
+/a>=20
+</div>
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"font-size:12px; color:#FFFFFF; font-family:Aria=
+l,Helvetica,sans-serif; mso-line-height-rule: exactly; line-height:20px;tex=
+t-align:center;">=20
+<div class=3D"mktoText" id=3D"Links">
+<div>
+=C2=A9 2019 Copyright&nbsp;&nbsp;=20
+<a style=3D"text-decration: none; color: #DDDDDD;" href=3D"http://go.standa=
+rds.ieee.org/s0710D60IY8j0F0N2w00T0L">Contact</a>&nbsp;&nbsp;=20
+<a style=3D"text-decration: none; color: #DDDDDD;" href=3D"http://go.standa=
+rds.ieee.org/r2080L010YkDI8F6w00N0T0">Privacy Policy</a>
+</div>
+</div> </td>=20
+</tr>=20
+<!--Extra Space-->=20
+<tr>=20
+<td height=3D"20" style=3D"line-height:1px;font-size:1px;">&nbsp; </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--Footer End-->  =20
+
+<img src=3D"http://go.standards.ieee.org/trk?t=3D1&amp;mid=3DMjExLUZZTC05NT=
+U6MjM5NjoyNDQxOjc0MTI6MDo0Mzc2Ojk6MTc1ODo2Njc3NzI6Zm9hYWRAY2FscG9seS5lZHU%3=
+D" width=3D"1" height=3D"1" style=3D"display:none !important;" alt=3D"">
+
+<p><font face=3D"Verdana" size=3D"1">This email was sent to foaad@calpoly.e=
+du. If you would like to update your communication preferences  <a href=3D"=
+http://go.standards.ieee.org/u/JY0DFN0a6L08m1I0Tw00020">click here</a> at a=
+ny time. </font> </p>
+</body>
+</html>=
+
+------=_Part_121681607_485949533.1563196438654--

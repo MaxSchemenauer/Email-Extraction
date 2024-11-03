@@ -1,0 +1,440 @@
+Received: from DM6PR08MB4987.namprd08.prod.outlook.com (2603:10b6:a03:1d0::35)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BY5PR04CA0025.NAMPRD04.PROD.OUTLOOK.COM; Mon, 3 Jun 2019 13:18:04 +0000
+Received: from BYAPR08CA0070.namprd08.prod.outlook.com (2603:10b6:a03:117::47)
+ by DM6PR08MB4987.namprd08.prod.outlook.com (2603:10b6:5:4b::32) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1922.18; Mon, 3 Jun
+ 2019 13:18:03 +0000
+Received: from SN1NAM04FT056.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::204) by BYAPR08CA0070.outlook.office365.com
+ (2603:10b6:a03:117::47) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1943.18 via Frontend
+ Transport; Mon, 3 Jun 2019 13:18:02 +0000
+Authentication-Results: spf=neutral (sender IP is 209.85.166.70)
+ smtp.mailfrom=hevga.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=hevga-org.20150623.gappssmtp.com;calpoly.edu; dmarc=fail action=none
+ header.from=indiana.edu;compauth=pass reason=106
+Received-SPF: Neutral (protection.outlook.com: 209.85.166.70 is neither
+ permitted nor denied by domain of hevga.org)
+Received: from mail-io1-f70.google.com (209.85.166.70) by
+ SN1NAM04FT056.mail.protection.outlook.com (10.152.89.39) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.1943.19 via Frontend Transport; Mon, 3 Jun 2019 13:18:02 +0000
+Received: by mail-io1-f70.google.com with SMTP id s83sf13811189iod.13
+        for <foaad@calpoly.edu>; Mon, 03 Jun 2019 06:18:02 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1559567881; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=E5Ayj9foUCqkN6Gpn9wbzo3lv162gsYokbOlrJhB3pMzScuDI125WBOcjKU9w6riKv
+         u3Y0zR6cwts7ONaNkP+yz48P+A4QjzPawoNIcKZXmciLggx1OwkOy/BUsBxS1my0hrQC
+         yDW8u0ugO7r0D5c0qXxUPQTfmCW9WLCDx6SgWfuJTN7Xw4x5Lu76TtJ97RwbIXOgjB71
+         0xaLhfpNqP+uADDV6Yj80nWH9jI3CwOgukIKvN4G+IRFPmUPnnV2UtfliTgAyrpurr2M
+         dEYs1D3s1IaxGvYAJmnSIb5CEu0FYi2/2jQhlgSInfwJhBYv5pv3o7NgzeMX+BVA8Vca
+         Z3JA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:mime-version:content-language
+         :accept-language:message-id:date:thread-index:thread-topic:subject
+         :to:from:dkim-signature;
+        bh=lpDVyob9w4ppqVxVRCPeqb/zfeKV0JNZ+v/LW/NF+2M=;
+        b=M1uyvxzbG0vCyBqEsmasJmRLdDxXKGIh2tkD15Vy6GE/ElkCtJFN0RUKEm8hd1MH7e
+         Wz/Bcza39qkbFfUClAZFnjRKr+5vsNsDB/vMqZz7X6+dZNYoig2vQJwRTfSfE9tBeq9B
+         jEBLoLF/rw3m+9XX9ZZ2JiMVILaTm9Mnr4cn7zaQK640fSFiuBOi+lpMCVZqoxdUBhhI
+         hqmzzejfrORPv08NxcEF91mwwt9Mko0Yb1vUFnij8hgqKmXkrfy2CvhbcFyDvUpw9Zhp
+         t+N5cmsryYP62aKiDpCV4v7p2qX9z8fl298i8blwwBudMFbN/b96gZLiHAr8OYAlai/I
+         iiEw==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@indiana.edu header.s=iu header.b="Oau/lZPX";
+       spf=pass (google.com: domain of castro@indiana.edu designates 134.68.220.32 as permitted sender) smtp.mailfrom=castro@indiana.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=indiana.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=hevga-org.20150623.gappssmtp.com; s=20150623;
+        h=from:to:subject:thread-topic:thread-index:date:message-id
+         :accept-language:content-language:mime-version:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:list-unsubscribe;
+        bh=lpDVyob9w4ppqVxVRCPeqb/zfeKV0JNZ+v/LW/NF+2M=;
+        b=vGYO4sQo9po4W6jgK4a/twhX33XfmvJwUNM1RUWZoxYuEfjGBJXt9UvVItq/XsvoIZ
+         RCBc9jzSEn4EZevO58XAr8ujTFYyhsUvM3RtQT9xx60883K/vUKapzlxeqf7nlkwrakL
+         8/EKEvPig6zUY5fwlLohNwNrxkX84Rw2um3XjGmd+W4WusnQOo5ZqF1gYCrRSJmMnX9l
+         feLvBLM7rG1aY/G9SQPFXI168McHn+YEIla3c9YnHms5V2GmczSlgpfZO9hCuvQyQT93
+         Gw94QK/NKpaaaNzlciWHmokaOGM325+4Kv/MsM4fvO4+eAz4mhuGHBfL6rAtx5+j+tH3
+         OvLQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:to:subject:thread-topic:thread-index:date
+         :message-id:accept-language:content-language:mime-version
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-unsubscribe;
+        bh=lpDVyob9w4ppqVxVRCPeqb/zfeKV0JNZ+v/LW/NF+2M=;
+        b=m4wqw21o31Fz7AoRO+7sPpN6fqPRZwo35NO9aU+w89SvroIwCQZxv5i+RPSzXeVkAO
+         E64Pr2wSwWBK1ZOy23PxLbtFXMeTe7/Z4p6RjVLxkXx6CtVApoZRuWuAWQA/pPxfsZyt
+         yxo6XNJ/nWU1hje4ShlZKtDOS+4kwbwKe+Z79WwLokC2nDCvGMQSnCnNExnBWy/DPxZz
+         4GMf1PnTea7dmPbPdaYV2S2MYkQrXxlZJjgHdlTVN2LJYuvfUmTU689kP1kVcNeYTJmt
+         x6fJRwKFxHHBElR85AFwPUvDx1XPWHJHl9388qZ4FjgFcR4rUENRliOtai/tLAh9OfA0
+         n6XA==
+X-Gm-Message-State: APjAAAVpQuPdEAVO7OX6Ys1cc5f8mydcQVw10BLCLAeE26bnOrq0TmAG
+	UUDSpWkQl3Y0ZZNX3McuAEdFmA==
+X-Google-Smtp-Source: APXvYqyn2OIKthwoDTzhoODCe+iUCJvian8SxWWOkeAoGcjNZE44HtbCdMw4aPFM5pvLANlaDH3HVw==
+X-Received: by 2002:a05:660c:2ce:: with SMTP id j14mr18164923itd.70.1559567881429;
+        Mon, 03 Jun 2019 06:18:01 -0700 (PDT)
+X-BeenThere: members@hevga.org
+Received: by 2002:a24:7b8e:: with SMTP id q136ls4888967itc.3.canary-gmail;
+ Mon, 03 Jun 2019 06:18:00 -0700 (PDT)
+X-Received: by 2002:a05:660c:105:: with SMTP id w5mr16836550itj.37.1559567880300;
+        Mon, 03 Jun 2019 06:18:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1559567880; cv=none;
+        d=google.com; s=arc-20160816;
+        b=l1reqctTf6RtVmgcgRJr8xYa9FvqASTFV60BsS6jBZsrKUAP7ozaGLoFTtufnQZVWy
+         84XDGRv+8ZI+c3HR+Ah1FNzSfsKINHFSYxLjMoMMGW+Zj5G40Swy1q/xhxQrq+nhV0oP
+         EAijK1OaPjSG+NALLB2j2hl88IdsqmhGMLQk98uwZ+Uok24JQobk+wDWDRLxrQx335gG
+         Nt8KGk8pDd6nZvA2tg3rkz95ZnxXi0mcuy2/1fhG24MC/hLQs79j8buhbtMImxsRv7by
+         ZQLhTdtHdRCA3EaxMZngrEEyhMOGJjYUPKgSRh1yjhL/xs3Fh5jFXCvBohTvqwj++kQ1
+         F5SQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature;
+        bh=Cfi2qrWJ/LrVi412o+5sLm0Gc6dT+pifhQBXNo5r94A=;
+        b=Z+BaK6qNnhaPYOHpv17tDWy6Uv6KGPZ5bW19y9i7EHjZGEXzUlQOhWzI1cCMLc3i6F
+         1IDcGaxQEIvdUpQgrmuQ3szlwfh+2JbvsLa4W8wayarnAg09alprRnHWkdPs3ocP33Sz
+         QEZIwNzZwwxwDX//LHhl0t5Lzym7GrOYgp6PbbWJvEN9j0O/nSNvd1T6lzHrtEa9dWqC
+         TfwwyHQ9qi/r9578IBSi7ARpF1zf4vS+ov4/nLkPjiZBeY8tAUNkaI5Lac4DF4p21cQ6
+         amntLkGn+tsD+ykICtxX3ORSPwwiZq2Jro591db3m5VVGsTEoe6oyUGz0f2i8wLu0o+r
+         4xgw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@indiana.edu header.s=iu header.b="Oau/lZPX";
+       spf=pass (google.com: domain of castro@indiana.edu designates 134.68.220.32 as permitted sender) smtp.mailfrom=castro@indiana.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=indiana.edu
+Received: from robin.uits.iu.edu (robin.uits.iu.edu. [134.68.220.32])
+        by mx.google.com with ESMTPS id y26si10039766jak.4.2019.06.03.06.18.00
+        for <members@hevga.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 03 Jun 2019 06:18:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of castro@indiana.edu designates 134.68.220.32 as permitted sender) client-ip=134.68.220.32;
+X-IronPort-AV: E=Sophos;i="5.60,546,1549947600"; 
+   d="scan'208,217";a="69773221"
+Received: from mssg-relaydr.uits.iu.edu ([134.68.220.234])
+  by irpt-internal-relay.iu.edu with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384; 03 Jun 2019 09:18:00 -0400
+Received: from IN-CCI-D1S09.ads.iu.edu (in-cci-d1s09.ads.iu.edu [10.234.85.6])
+	by mssg-relaydr.uits.iu.edu (8.14.7/8.14.7) with ESMTP id x53DHxWe027711
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-SHA384 bits=256 verify=NOT)
+	for <members@hevga.org>; Mon, 3 Jun 2019 09:17:59 -0400
+Received: from IN-CCI-D1S12.ads.iu.edu (10.234.85.9) by
+ IN-CCI-D1S09.ads.iu.edu (10.234.85.6) with Microsoft SMTP Server (TLS) id
+ 15.0.1473.3; Mon, 3 Jun 2019 09:17:59 -0400
+Received: from IN-CCI-D1S12.ads.iu.edu ([fe80::15f9:e42d:3bea:9618]) by
+ IN-CCI-D1S12.ads.iu.edu ([fe80::15f9:e42d:3bea:9618%17]) with mapi id
+ 15.00.1473.004; Mon, 3 Jun 2019 09:17:59 -0400
+From: "Castronova, Edward J" <castro@indiana.edu>
+To: Members <members@hevga.org>
+Subject: [HEVGA] Games and God - call for papers
+Thread-Topic: Games and God - call for papers
+Thread-Index: AdUaDlORF6ks/yxaTr67imASiaeLVw==
+Date: Mon, 3 Jun 2019 13:17:59 +0000
+Message-ID: <05a9f19617b24e5082b3ff91c9e14372@IN-CCI-D1S12.ads.iu.edu>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [68.45.62.172]
+Content-Type: multipart/alternative;
+	boundary="_000_05a9f19617b24e5082b3ff91c9e14372INCCID1S12adsiuedu_"
+X-Original-Sender: castro@indiana.edu
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@indiana.edu header.s=iu header.b="Oau/lZPX";       spf=pass
+ (google.com: domain of castro@indiana.edu designates 134.68.220.32 as
+ permitted sender) smtp.mailfrom=castro@indiana.edu;       dmarc=pass (p=NONE
+ sp=NONE dis=NONE) header.from=indiana.edu
+Precedence: list
+Mailing-list: list members@hevga.org; contact members+owners@hevga.org
+List-ID: <members.hevga.org>
+X-Spam-Checked-In-Group: members@hevga.org
+X-Google-Group-Id: 1058314601267
+List-Post: <https://groups.google.com/a/hevga.org/group/members/post>, <mailto:members@hevga.org>
+List-Help: <https://support.google.com/a/hevga.org/bin/topic.py?topic=25838>, <mailto:members+help@hevga.org>
+List-Archive: <https://groups.google.com/a/hevga.org/group/members/>
+List-Unsubscribe: <mailto:googlegroups-manage+1058314601267+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/hevga.org/group/members/subscribe>
+Return-Path: members+bncBDR5RCXLQUHBBCN42TTQKGQEI3IFOYY@hevga.org
+X-MS-Exchange-Organization-ExpirationStartTime: 03 Jun 2019 13:18:02.2172
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d22e7914-eb04-4f3b-8597-08d6e825e7ef
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132040414822202083;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.166.70;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(2980300002)(166001)(176002)(189003)(199004)(14454004)(7736002)(19810500001)(5660300002)(102836004)(966005)(14444005)(88552002)(66066001)(4006050)(7596002)(24736004)(3846002)(84326002)(16586007)(7636002)(790700001)(95326003)(7696005)(54896002)(6116002)(33964004)(75640400001)(108616005)(76796011)(606006)(59646003)(146002)(9686003)(6306002)(59536001)(26005)(59286002)(486006)(59656003)(6862004)(236005)(126002)(78456001)(476003)(8676002)(71190400001)(246002)(42882007)(336012)(356004)(16003)(1096003)(55016002)(225293001)(531144003);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB4987;H:mail-io1-f70.google.com;FPR:;SPF:Neutral;LANG:en;PTR:mail-io1-f70.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT056.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: d22e7914-eb04-4f3b-8597-08d6e825e7ef
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(8001031)(1405096)(1407096)(1408068)(71702078)(7193020);SRVR:DM6PR08MB4987;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4987:
+X-MS-Exchange-PUrlCount: 4
+X-MS-Oob-TLC-OOBClassifiers: OLM:6430;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Jun 2019 13:18:02.1841
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d22e7914-eb04-4f3b-8597-08d6e825e7ef
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4987
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.0564494
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1943.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	jgAUUpoXX8pFC7kTqNrO3xBaLxBMzaHojDxm3Qxdkzz89p3So7GkPAp07x+pzR2QBIsTvCILzohThM3iKCZpTGw1JYwoChrjXwPW6HJoMz9gr/mGfu70sXFCwG9b2I+rkiyoH5/47puPYI0oibR9FtkT1Ta32ygTh4i5iqh2LT+gCiThGaoZMm36qfv4zZFkTpghCwHh/lP0HgbhH97wERcEUMiwGfR1Dw/1xNAjMWnfP/8WdoS33wraszMVbBnlEc3X0ouFFOcDDfwK2n3J0vMYvEV9CZ2dqT1b/590MQG1xJOB6QQrHtml3VyIL8JdOji8ZeIuSoBUPxoPHrUyB3BtnFkHFE+A4FL2rvMqPPmM48xDZmN2bslCdPgfQdoNSiMuIXXtQRWDimQnSimY0zCZatPnIrXtS7yKFJ71r/uLLAaW4CEFqn8pJb491SCiV3hcd5ykIuH2vY+G3CEspzFVQ7b5VtZqZ7Wt4NtFSUh/+8dygrIRmqhuqlLKQ9GQA27GsjCZpMTKnkkbaJMA4ZWoO01uSWCZS+JURxyT2r5c/p+/f/fhEh4e8XanKMkVTOvKn9ZTw3+G7NxkmgCDzkXQl8OU/yJLwpZ/UnAEHFBqXuWDZGQK25q5JmQ8pxUatvjd9STyTP74xCUa5Qj92vKsFN5a6pkT6ImFYvS1XcNM4WQW7JFwR5WBuDRZZKLNmfwjV/kCefaJbbJYEp1Zq4a91oZr+isZIZNA0EWFPIr8A2bPtLgKt+CpwsacDJQS11urkP8BFTGU9IPqj5HwXFDzHg84eEFxZ7Lv5BWy1UysofY7MCSBXM/xp38ZEys2rYmKGizF8rpmRFv0JenT27QoIpH/NjocjJ0mnb7vsa8vIZsGMiAzerDInfp/qsaZHGoDib57Q3RyZb/BIoHSxiErcH2WE+JlN8tVYJEZ6pb5eIYZt7KU8uUZz4dzMyVa
+MIME-Version: 1.0
+
+--_000_05a9f19617b24e5082b3ff91c9e14372INCCID1S12adsiuedu_
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello colleagues,
+
+Reminder: Religions is soliciting papers on the subject of Games and God:
+
+https://www.mdpi.com/journal/religions/special_issues/GamesGod
+
+If any of you are on the DiGRA list, would you mind forwarding? Thanks much=
+.
+
+Meanwhile =E2=80=A6 June! It=E2=80=99s summer! In the northern hemisphere! =
+Hurray!
+
+Sincerely,
+
+Ted
+
+Edward Castronova
+Professor of Media
+Indiana University
+
+--=20
+To unsubscribe from this group, send a blank email to members+unsubscribe@h=
+evga.org
+---=20
+You received this message because you are subscribed to the Google Groups "=
+HEVGA Members" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to members+unsubscribe@hevga.org.
+
+--_000_05a9f19617b24e5082b3ff91c9e14372INCCID1S12adsiuedu_
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Bahnschrift;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.EmailStyle18
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1877110902;
+	mso-list-template-ids:1922073072;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:=EF=82=A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"blue" vlink=3D"purple">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Hello colleagues,<o:p></o:p></span></=
+p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Reminder: Religions is soliciting pap=
+ers on the subject of Games and God:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><a href=3D"https://www.mdpi.com/journ=
+al/religions/special_issues/GamesGod">https://www.mdpi.com/journal/religion=
+s/special_issues/GamesGod</a><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">If any of you are on the DiGRA list, =
+would you mind forwarding? Thanks much.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Meanwhile =E2=80=A6 June! It=E2=80=99=
+s summer! In the northern hemisphere! Hurray!<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Sincerely,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Ted<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:&quot;Bah=
+nschrift&quot;,sans-serif">Edward Castronova<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:&quot;Bah=
+nschrift&quot;,sans-serif">Professor of Media<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:&quot;Bah=
+nschrift&quot;,sans-serif">Indiana University<o:p></o:p></span></p>
+</div>
+</body>
+</html>
+
+<p></p>
+
+-- <br>
+To unsubscribe from this group, send a blank email to members&#43;unsubscri=
+be@hevga.org<br>
+--- <br>
+You received this message because you are subscribed to the Google Groups &=
+quot;HEVGA Members&quot; group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:members&#43;unsubscribe@hevga.org">members&#43;un=
+subscribe@hevga.org</a>.<br>
+
+--_000_05a9f19617b24e5082b3ff91c9e14372INCCID1S12adsiuedu_--

@@ -1,0 +1,207 @@
+Received: from SN6PR08MB4989.namprd08.prod.outlook.com (2603:10b6:a02:80::32)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0019.PROD.EXCHANGELABS.COM; Fri, 5 Jul 2019 15:32:37 +0000
+Received: from DM5PR08CA0032.namprd08.prod.outlook.com (2603:10b6:4:60::21) by
+ SN6PR08MB4989.namprd08.prod.outlook.com (2603:10b6:805:6e::26) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2052.16; Fri, 5 Jul 2019 15:32:35 +0000
+Received: from CO1NAM04FT052.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::209) by DM5PR08CA0032.outlook.office365.com
+ (2603:10b6:4:60::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2052.18 via Frontend
+ Transport; Fri, 5 Jul 2019 15:32:34 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=fail (body hash did not verify)
+ header.d=uta.fi;CALPOLY.EDU; dmarc=pass action=none
+ header.from=uta.fi;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ CO1NAM04FT052.mail.protection.outlook.com (10.152.91.24) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2052.18 via Frontend Transport; Fri, 5 Jul 2019 15:32:33 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x65FTWvo007059
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Fri, 5 Jul 2019 18:29:32 +0300
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=uta.fi; s=mail;
+	t=1562340576; bh=FwKZ8ZImiBnJYp2hR78O15HfN5o=; l=5770;
+	h=Date:Reply-To:From:Subject:To:List-Help:List-Unsubscribe:
+	 List-Subscribe:List-Owner:List-Archive;
+	b=RTAxsaAzjjuOqIcjm/JEVbPbwxMVAn5xhPJ7YvNRQwtQBq5ynv6GSooZH3neoIw5U
+	 OJdKDEHwQ/w05ZT0vov7QxWlIdOwSWvb2uyXk6bi2UqbVMFcvpKlXp02vxFWOk6bPC
+	 Sq9r87ElcpNN0ug7AgYSOeirg1jixoTGAJgIc27s=
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x65FTVKe012486;
+	Fri, 5 Jul 2019 18:29:31 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Fri, 05 Jul 2019 18:29:31 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x65FTVDN000762
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Fri, 5 Jul 2019 18:29:31 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x65EIbHw015042;
+	Fri, 5 Jul 2019 18:29:11 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          389553 for GAMESNETWORK@LISTSERV.UTA.FI; Fri, 5 Jul 2019 18:28:39
+          +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x65EIbGs015042; Fri, 5 Jul 2019
+          18:18:39 +0300
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from quoted-printable to 8bit by listserv.uta.fi id
+                      x65FIdGW024295
+Message-ID: <5231370561959402.WA.Paul.McDonaldkcl.ac.uk@listserv.uta.fi>
+Date: Fri, 5 Jul 2019 18:18:38 +0300
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Paul McDonald <00000099c4f6f8d7-dmarc-request@uta.fi>
+Subject: [GAMESNETWORK] Call for Papers: Media Industries 2020: Global Currents and
+ Contradictions, 16-18 April 2020, =?UTF-8?Q?King=E2=80=99s?= College London
+To: "Gamesnetwork"<gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Fri, 05 Jul 2019 18:29:31 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: ALL_TRUSTED,BAYES_00,FROM_LOCAL_HEX,FROM_STARTS_WITH_NUMS,L_BDY_CLICKSMTHNG,MAILING_LIST_MULTI,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1060
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Jul 2019 15:32:34.4133
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d200cd21-2dff-4b26-e933-08d7015e008e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(4636009)(3000300001)(199004)(189003)(176002)(7192003)(126002)(43066004)(476003)(22186003)(36756003)(7126003)(77096007)(426003)(5820100001)(76506006)(7596002)(74482002)(26005)(7696005)(305945005)(6862004)(486006)(966005)(246002)(50466002)(2870700001)(15974865002)(66346011)(23676004)(55176004)(103116003)(1096003)(336012)(40036005)(66574012)(58800400005)(75640400001)(356004)(4006050)(7636002)(14444005)(47776003)(16003)(55016002)(53416004)(5660300002)(146002)(7846003)(106002)(6306002)(6392003)(225293001);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4989;H:mxout1.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout1.uta.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT052.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: d200cd21-2dff-4b26-e933-08d7015e008e
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(1402095)(71702078);SRVR:SN6PR08MB4989;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4989:
+X-MS-Exchange-PUrlCount: 5
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jul 2019 15:32:33.8099
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d200cd21-2dff-4b26-e933-08d7015e008e
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4989
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.9339378
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2032.008
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?MjMzcG55ZmVFVmdRZ0NiSFNhWGpnVlZHRldxM3hocXFDUUMzekZ1QWdlTFAy?=
+ =?utf-8?B?elNENEhLd2FlOVRqVTFFMFYwdmkxMXRXRXVDdGc2bWpncUlHaEcxYVlmZmp4?=
+ =?utf-8?B?eTg3QTE4RlVqSlNqKzczaW1GelM5SkFleTV5K3dTaENwYnlpWWtVemhGMzBC?=
+ =?utf-8?B?YktnNjJDOXBCMWRQSmI4UjB5RS8vcERXSERJaTF3R0lIQUo1TitWd1B2WGJI?=
+ =?utf-8?B?c3piY1RNMnUzdnVEZ3Y5TTlNSkdsNkUrYlkyNkVOcFBnREVZQTFUMkpsL2l0?=
+ =?utf-8?B?MS8zdld1RTVyZTRWTHJiVHZCVi9rSnZuQUxSQkFlSGw4Szk5cXk0eFBDTTVi?=
+ =?utf-8?B?Z0QxVFBibjJDdlVkdVNMdVNWb0tUTGpob1h1UGpuRjNkSHh3STNCRFo3VUxl?=
+ =?utf-8?B?b3M0TGczdzBIeUNEN2NBSmNUbjNhd1dINGdmaUpQNWhxV1FwNFBVNDBFVHFM?=
+ =?utf-8?B?VkplakdoK2RHMWo1b2NyT0U3WDRGVHcrdHAxcnB5MnpHcUlkV3FDeGp0aWcx?=
+ =?utf-8?B?eDl5SEoxWjVDTDJ3bXVPLzRaUjVHemF1UUFKaXVVTS9JWGhONXZ1UDU4ZmVZ?=
+ =?utf-8?B?cy92NWxTQ21SNEVpdHg3U0p6bTBCaEhqQm9uekkyYms0U0t3aGtLeXFTT2pT?=
+ =?utf-8?B?K3dhODhDbWN2NEhZYjA0eGt4M0dBR1lYalQrYkNqdUJ2MERGWit2My9udVZ5?=
+ =?utf-8?B?S1pNUU9KZ0lpWFI0cXRwZ2VKMHMrSDBQeElQMW5VaGlDYTlKbEw2d1VVQ2tS?=
+ =?utf-8?B?d3F1TjkrU0Uwb2FVQ0ZYY2RValFzdmxUYVh1enEzdVMvTzAvNGlKS2N3Skxs?=
+ =?utf-8?B?K0ZmUGJPeGdWakdjOFFOQ1FubC9PdnVpRTdZaWJhSzc2M0hnWU5yU2NxSWd2?=
+ =?utf-8?B?dXg2VW1vZjFkdGRQam5HOWdJU3ZGZ0kzSkZ6RjZoR01ZQ2FPbTc3ZStBaGo4?=
+ =?utf-8?B?QW5ZRUVjWENhZ2k3SnMxK2kvbEc3UEVVVnh1UEg4SmM5a1pSUXczUmppN3hD?=
+ =?utf-8?B?bVZvOHQ3M2x1MzRiakRuNExMaXhCWjdLSmxPaXFINXA4TzdBOEZDVWFDZUo4?=
+ =?utf-8?B?TWV1Sm5TcUx4WFZWWHNqTE14dWJCaVhGb2NJY29wRE5KSDQ1WVhZRG5Vc0Q1?=
+ =?utf-8?B?VUZ0T2RqOGFMV0ZYNkpWWWNyTjlSYXZxN281MWR5YU53UHFQUnB0dHhUSHMz?=
+ =?utf-8?B?bW1pc2k3WTlWTVNsaS9VWFovMmpJTlFKMDhmSDhXb0NNK3ZxcWlObUlON0cw?=
+ =?utf-8?B?VyswOER0YklNMHppaS92NlUwTnVrRnZCYTRhZzY3Vm1MU2tZQXpIRUFRQUFD?=
+ =?utf-8?B?NXlmcDBzRGNZeWtVRVRXL2NITlpCTzdNSWYzZnYza1V0WWJuczhkMk10Rmpl?=
+ =?utf-8?B?aWhiZ1c4VGhkd1E9PQ==?=
+MIME-Version: 1.0
+
+Apologies for cross posting
+
+Media Industries 2020: Global Currents and Contradictions
+16-18 April 2020   King’s College London
+
+For full details including submissions, visit https://media-industries.org/
+
+Second international Media Industries conference, hosted by the Department of Culture, Media and Creative Industries, King’s College London. 
+
+Following the success of Media Industries: Current Debates and Future Directions (2018) we are pleased to announce the next Media Industries conference will take place in April 2020. 
+
+Media Industries 2020 (MI2020) maintains an open intellectual agenda, inviting papers, panels or workshops exploring the full breadth of media industries, in contemporary and historical contexts, and from all traditions of media industries scholarship. MI2020 will therefore provide a meeting ground for all forms of media industries research.
+
+As a specialized focus, the 2020 conference takes Global Currents and Contradictions as its coordinating theme. In media industries scholarship, repeated attention to a few key territories, frequently but not exclusively located in the Global North, has concentrated but also limited the scope of the field. In choosing the theme Global Currents and Contradictions, we are therefore particularly interested in receiving submissions engaging with industries, contexts and bodies of research that represent, extend or challenge the geographic reach of the field. To headline this theme, a programme of keynote speakers will be announced in due course.
+
+PARTNERS
+A core aim of the Media Industries conference is to bring together scholars researching media industries from across multiple professional associations and their relevant sub-groups or sections. 
+
+The Department of Culture, Media and Creative Industries at King’s College London is therefore very pleased to be organizing MI2020 in partnership with:
+•	British Association of Film, Television and Screen Studies (BAFTSS) - Screen Industries Special Interest Group
+•	European Communication Research and Education Association (ECREA) - Media Industries and Cultural Production Section
+•	European Media Management Association (EMMA)
+•	European Network for Cinema and Media Studies (NECS) - Screen Industries Work Group
+•	Gesellschaft für Medienwissenschaft (GFM) - AG Medienindustrien
+•	Global Media and China journal
+•	International Association for the Study of Popular Music (IASPM)
+•	International Association of Mass Communication Research (IAMCR) - Media Production Analysis Working Group
+•	International Communication Association (ICA) - Media Industry Studies Interest Group
+•	Media Industries journal
+•	Society for Cinema and Media Studies (SCMS) - Media Industries Scholarly Interest Group
+•	South Asia Communication Association (SACA)
+
+HOST COMMITTEE
+For King’s College London: Sarah Atkinson, Bridget Conor, Virginia Crisp, Sonal Kantaria (conference administrator), Wing-Fai Leung, Paul McDonald (conference chair), Jeanette Steemers and Jaap Verheul
+
+ADVISORY COMMITTEE
+Deb Aikat, Courtney Brannon Donoghue, Hanne Bruun , Evan Elkins, Elizabeth Evans, Tom Evens, Franco Fabbri, Anthony Fung, David Hesmondhalgh, Catherine Johnson, Derek Johnson, Ramon Lobato, Skadi Loist, Amanda Lotz, Alfred Martin, Jack Newsinger, Sora Park, Alisa Perren, Steve Presence, Roel Puijk, Willemien Sanders, Kevin Sanson, Fawad Shah, Andrew Spicer, Petr Szczepanik, Harsh Taneja, Patrick Vonderau
+
+REGISTRATION
+Registration for the conference will go live in mid-November 2019. Fees will be published then and will be tiered according to the delegate’s country of residence using the World Bank’s country classifications by Gross National Income per capita.
+
+SUBMISSIONS
+
+Deadline
+Submissions will be accepted up to 23.00hrs British Summer Time (BST) 16 September 2019 (please note: BST is Coordinated Universal Time (UTC) + 1 hour)
+
+Submission Categories
+Submissions are welcomed in three categories.
+
+i.	Open Call Papers
+Format: solo or co-presented research paper lasting no more than 20mins.
+
+ii.	Pre-constituted Panels
+Format: 90mins panel of 3 x 20mins OR 4 x 15mins thematically linked solo or co-presented research papers followed by questions.
+
+iii.	Pre-constituted Workshops
+Format: 90mins interactive forum led by 4 to 6 x 6mins thematically linked informal presentations. Led by a chair or co-chairs, workshops adopt a roundtable format bringing together 4 to 6 speakers to offer short (up to 6 minute) position statements or interventions designed to trigger discussions around a central theme, issue, or problem. As such, the workshop does not involve the presentation of formal research papers, but rather is designed to create a forum for the speakers and the audience to engage in a shared discussion. The workshop format is flexible and can be adapted to allow the chair or co-chairs to introduce exercises or other activities where appropriate. 
+
+Delegates can make TWO contributions to the conference but only ONE in any category, i.e. presenting an open call paper and participating in a workshop will be permitted but presenting two open call papers will not be. Chairing a panel or organizing a workshop will NOT count as a contribution.
+
+To submit, please go to https://media-industries.org/2020-call-for-papers
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=GAMESNETWORK&A=1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html

@@ -1,0 +1,403 @@
+Received: from BYAPR08MB4534.namprd08.prod.outlook.com (2603:10b6:a03:e0::37)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0096.NAMPRD05.PROD.OUTLOOK.COM; Thu, 10 Oct 2019 06:56:35 +0000
+Received: from BN6PR08CA0075.namprd08.prod.outlook.com (2603:10b6:404:b6::13)
+ by BYAPR08MB4534.namprd08.prod.outlook.com (2603:10b6:a03:48::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.17; Thu, 10 Oct
+ 2019 06:56:33 +0000
+Received: from BN3NAM04FT054.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::207) by BN6PR08CA0075.outlook.office365.com
+ (2603:10b6:404:b6::13) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16 via Frontend
+ Transport; Thu, 10 Oct 2019 06:56:33 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.167.194)
+ smtp.mailfrom=ijrerd.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=ijrerd-com.20150623.gappssmtp.com;calpoly.edu; dmarc=bestguesspass
+ action=none header.from=ijrerd.com;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of ijrerd.com designates
+ 209.85.167.194 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.167.194; helo=mail-oi1-f194.google.com;
+Received: from mail-oi1-f194.google.com (209.85.167.194) by
+ BN3NAM04FT054.mail.protection.outlook.com (10.152.93.25) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2347.16 via Frontend Transport; Thu, 10 Oct 2019 06:56:32 +0000
+Received: by mail-oi1-f194.google.com with SMTP id x3so4002915oig.2
+        for <foaad@calpoly.edu>; Wed, 09 Oct 2019 23:56:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ijrerd-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=/ajZzv6+KEK4sw+8g26+bSdzYybx74GtfGpeeovCTA8=;
+        b=U71VqXxvb3qt0GERBCTxqOr9TxA22v7CJyuOkyo2h1NXCFBWLlkOyERzmi28NqWZDh
+         hEmfXTyJOAmCjrk/nnFxUtWO+/hAylFSSBoJuldOnZdVIIseBbU414+xdrjL4TSSdbd/
+         o/QWmonta5pt6TvUD+YhJoiV4JEalmH1GHpKCJ/C1yoWmvHJftB5K1GKzOTW/79oeISB
+         xSW9X83DJlZUfJAGlGWZu9U4xQXCS1IV3fQlTaOeMxvcxcm3P3mqZBQ4+Ud0R9hrhqVY
+         0uQ8hPNRbIY9Nr5oh4h3BlkVrzV2q9xAQciTcJA+bop7Kjho+pRf1Bbr9eoi5tO7DILW
+         yWgQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=/ajZzv6+KEK4sw+8g26+bSdzYybx74GtfGpeeovCTA8=;
+        b=RdpYTi/OuzsEOdtUL3eOMBc5Sej0yELG+C1NDzi1Dx5U8r2hfnEttbCmgPKEFWCOTx
+         RR2czY6j3Hj+UAs47FgecxOY2/3CJF8w9xg630XzUaHRCXYXvBPwH9b/1X4p02heSqg6
+         d9x4sYwMnOvBXDtS4w3mTHTMyeukpviDzn2SJgKrx352cWk/f0W2OPZGQ4mvp2EZpju3
+         wPxC11+fYiprVxxOJtGRsPLDUkmBDO/FdTrMQewcwRIhscWG7VlpFg8Tm52BdurnjexB
+         +fPGAcAFaudtQeTKEjU8FVYh6tgKtHce1I15P6onUMQb7nyz72JWJB+hSu9hSHwtts8Y
+         D6JA==
+X-Gm-Message-State: APjAAAVKN8P+8AylFBeOP4fw2vVNE0D30dHWOQfSXXV2XbJiJKUdFK4Q
+	qWdLyPVF/7ka92z2hKvYynN4YZVt0oT7lCnZ1JhGCPQM
+X-Google-Smtp-Source: APXvYqw9rQNOqQhMpzWZXWTQGO/+HSnQo1sTcvKbTY2OLQ+BNFcGkT4+j3Gtd5dFhJfBK5ObHA2kZXOyz06V3itbd6Y=
+X-Received: by 2002:aca:da41:: with SMTP id r62mr5851083oig.47.1570690591889;
+ Wed, 09 Oct 2019 23:56:31 -0700 (PDT)
+Received: from 776393159873 named unknown by gmailapi.google.com with
+ HTTPREST; Wed, 9 Oct 2019 23:56:31 -0700
+From: IJRERD Editor <support@ijrerd.com>
+Date: Wed, 9 Oct 2019 23:56:31 -0700
+Message-ID: <CADLOzXdcYnByJMHAYhSF6CucyKpEdBdKTJV_ZhhJMFRd391Xyw@mail.gmail.com>
+Subject: IJRERD :: Call For Paper :: Volume 04 - Issue 10 (Oct 2019)
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="000000000000c81d56059488e68d"
+Return-Path: support@ijrerd.com
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Oct 2019 06:56:32.8603
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 31a14f02-08bf-45d4-9727-08d74d4efc1a
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132151641928623441;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.167.194;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(979002)(4636009)(10533003)(199004)(189003)(59536001)(95326003)(16586007)(6916009)(7596002)(106002)(22186003)(7066003)(58800400005)(305945005)(7636002)(486006)(606006)(71190400001)(95476003)(26005)(336012)(476003)(2361001)(14444005)(126002)(33964004)(8676002)(356004)(76236002)(86362001)(61266001)(2351001)(236005)(733005)(66574012)(2171002)(6306002)(498394004)(8576002)(16003)(1096003)(246002)(5660300002)(55446002)(75640400001)(4006050)(18926415008)(10126004)(9686003)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4534;H:mail-oi1-f194.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-oi1-f194.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT054.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 31a14f02-08bf-45d4-9727-08d74d4efc1a
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4534:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Oct 2019 06:56:32.8573
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 31a14f02-08bf-45d4-9727-08d74d4efc1a
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4534
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5890418
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?KzVKZnFmVkRhWmJCZHpteHQ3QlYvS0pzY040c2szc3Faa0FDT2E4TlZzSkRB?=
+ =?utf-8?B?cGV5NEVQNGdXTGVLRmZhaURPTWdwNW9CTTIyeElsdkNGRDJMaUdJZW8wbnJj?=
+ =?utf-8?B?emlxblA2OTlMMDFuc3FXZkw3VVE1Z2FEa216bDJKUHRjbFBtTnVGWklLMG9X?=
+ =?utf-8?B?cmtKTGQ3T2pNa0xuaUloalZhTzhyQituWGE2SEU2Q2VvTUpxRnBFLzNkZTl3?=
+ =?utf-8?B?UmRFb3hJSFZ5cTFLZ2tUUUtpL0JQVi84UVArcTJqUkRjWGkrVERjTm54Q2FU?=
+ =?utf-8?B?OXh5bHo1d2IrSkdPTDZZVHkxcXJzRnpJanNINU5FOG85czRJYXpjS2tjOXlZ?=
+ =?utf-8?B?TWhTcUNiMFloelB0ME5IZXFGeFVuM1UzaTlnTmtZbGNFQ3phYlFRdHNKdnN3?=
+ =?utf-8?B?UWMrT2NTNVhhMmhyMmNvQlo3eVFSUE9pU2VrcEVKNHdiR280QmthYk05R2RS?=
+ =?utf-8?B?MXl1ci9NNWI3T3V1UUdHL0llY2V0YmprVVlCdCtOSkd6NzVBR1BvdzRza1Vj?=
+ =?utf-8?B?R2VyeW82bkU3NWxvb0xkRUxKTTlybjlSU2pmY2kvdklBOHJpUUxwSmRNNFlF?=
+ =?utf-8?B?bWM1OEN1Tmc1VldtM2d3SFNVWEJZRTltWVFvNk51K3Mwb2Rhc01weUd6RVNw?=
+ =?utf-8?B?TjRHc1B5WnJrV3lzenRCZ3hSR0I0dDFyYllrNmlLNS9yRUpRU2tlQ3VPTkd3?=
+ =?utf-8?B?ZWtmbmxlQmEyOVV5YVdDY2Qybk5tM0M5Um1KWThaV3dDMjUzSUJ1NGRzS1B4?=
+ =?utf-8?B?bGhpMnNLTmV2K2tNRmhSbGliVmJMWDF5aU53VDlXeGZndElibGhJQnZPUkdD?=
+ =?utf-8?B?UEx4WGhuaVIvLzhubWlaY0tJVTJvcytqd3hiOVR3bG1wd013bTFsY2tib0pk?=
+ =?utf-8?B?dGg3YWhUcUo0dnNFZ28vNUxpL1daYUduT0ljR0tkd0V0alhtd1ZnMkNjTzJa?=
+ =?utf-8?B?WlloOEFvNHBCWXFvUUxieDd1Y2MzS3RHMEsyZDBKbW9ab0hqKzBlYjJHOWZ1?=
+ =?utf-8?B?N2JWdGlCaE5RR2lLNWoyQWxJVi9URytoUkZvWlhvMU1nV0ZWM0dGS1NDbEly?=
+ =?utf-8?B?OS9PM0tBNzljOWFLNlU3Mk55NHM2SnBmSlBWYWJBQnZLRTBTYVFabkFCMkpV?=
+ =?utf-8?B?MWdCdUpPQXFZVnNMQ2trN3c0VE5nV0xHSTF2U3NFZmlJQkZvdHhnbzFRY1pZ?=
+ =?utf-8?B?S001bW5QcC9qRWpwakJEN3RXTW9nWDV0V2pzWVRPQTZqV2Jka2pZVWpOTkpz?=
+ =?utf-8?B?Y0QzaGFkKzBaVE5tQ3lwRngrUVZuQ3A3U09YcnovMGNIRGV4emRESFkyblBp?=
+ =?utf-8?B?OWRTSkVsK1hqOG9NNlhGbHhWeUJFNDFjY1hUUUQ0blE2ZUs4WGlRdlhtVm9l?=
+ =?utf-8?Q?LtXuNCdJLz3OJT5x6Jd74Pd7WTy5SdPY=3D?=
+MIME-Version: 1.0
+
+--000000000000c81d56059488e68d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Welcome to International Journal of Recent Engineering Research and
+Development*ISSN: 2455-8761*
+
+*An ISO 3297:2011 Certified International Journal*
+
+*Smooth, simple and timely publishing of review and research articles.*
+
+*Website:  **www.ijrerd.com
+<http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=3D5216317&l=
+=3Df6a0ca0b-3681-4462-9196-177f39910697&r=3Dcc50fcf2-ffb4-4959-a121-d951c00=
+0f2e1>
+  ||     **Email ID: **e**ditor@ijrerd.com* <editor@ijrerd.com>
+
+*-----Important Dates-----*
+
+*Last date of Submission: 15th  Oct 2019*
+
+*Acceptance Notification: Within 04 to 06 days*
+
+*Manuscript Publication: Within 05 days after registration*
+
+*A PEER REVIEWED REFEREED MONTHLY INTERNATIONAL JOURNAL*
+
+We are pleased to inform you that IJRERD is going to launch its next issue
+
+*(Volume 04, Issue 10,)*. We would like to invite you to contribute your
+Research Paper for publication in IJRERD. Papers published in IJRERD will
+receive very high publicity and acquire very high reputation. (
+*www.ijrerd.com*
+<http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=3D5216317&l=
+=3Dacbb2368-9dea-4626-b973-00cb32115b15&r=3Dcc50fcf2-ffb4-4959-a121-d951c00=
+0f2e1>).
+We publish original research articles, review articles and technical notes.
+The journal reviews papers within one week of submission and publishes
+accepted articles on the internet immediately upon receiving the final
+versions. Our fast reviewing process is our strength.
+
+*Features & Benefits of IJRERD Authors:*
+
+   -
+
+   Fast & Easy paper publishing process.
+   -
+
+   Fast High-level peer review, production and publishing processes.
+   -
+
+   Number to every article.
+   -
+
+   IJRERD provides individual "*Hard copy of Certificate*=E2=80=9D to all A=
+uthors.
+   -
+
+   IJRERD provides individual "*Soft copy of Certificate*=E2=80=9D to all A=
+uthors.
+   -
+
+   Universities, Colleges, Institute, etc. can subscribe the hard copy of
+   the magazine in annual basis.
+   -
+
+   *IJRERD* is globally accepted Journal. For more editorial details,
+   please go to our editorial board menu in our web *www.ijrerd.com*
+   <http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=3D5216317=
+&l=3Dc5aaa866-4c08-4187-864a-c2deb93bb120&r=3Dcc50fcf2-ffb4-4959-a121-d951c=
+000f2e1>
+
+All submitted papers will be subjected to a strict review process.
+
+Authors are required to submit the full paper (*PDF* and *Word format*)  to
+the  *Upcoming Issue*
+
+*Now, submit your manuscript Directly* click here
+<http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=3D5216317&l=
+=3D45a32e5e-23b5-4ef8-b08e-9eaba4e5a434&r=3Dcc50fcf2-ffb4-4959-a121-d951c00=
+0f2e1>
+
+Authors can submit their papers at any time by mailing to: editor@ijrerd.co=
+m
+
+*Please Share with your friends and Colleagues....*
+
+*IJRERD PROMISING QUICK AND QUALITY PUBLICATION*
+
+*------------------*
+
+
+*You may unsubscribe
+<http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/u?u=3Dcc50fcf2-f=
+fb4-4959-a121-d951c000f2e1>
+to stop receiving our emails.*
+
+--000000000000c81d56059488e68d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div style=3D"font-size:12.8px;background-color:rgb(219,229,=
+240);margin:0px auto;max-width:600px"><table cellpadding=3D"0" cellspacing=
+=3D"0" align=3D"center" border=3D"0" style=3D"border-collapse:collapse;font=
+-size:0px;width:600px"><tbody><tr><td style=3D"font-family:arial,sans-serif=
+;border-collapse:collapse;text-align:center;vertical-align:top;direction:lt=
+r;padding:20px 0px"><div style=3D"width:400px;vertical-align:top;display:in=
+line-block;direction:ltr;font-size:13px;text-align:left"><table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0" style=3D"border-collap=
+se:collapse"><tbody><tr><td align=3D"left" style=3D"font-family:arial,sans-=
+serif;border-collapse:collapse;font-size:0px;padding:0px 0px 0px 25px"><div=
+ style=3D"color:rgb(94,105,119);font-family:Arial,sans-serif;font-size:11px=
+;line-height:22px"></div></td></tr></tbody></table>&nbsp;</div><br></td></t=
+r></tbody></table></div><div style=3D"font-size:12.8px;background-color:rgb=
+(219,229,240);margin:0px auto;max-width:600px;background-image:initial;back=
+ground-position:initial;background-repeat:initial"><table cellpadding=3D"0"=
+ cellspacing=3D"0" align=3D"center" border=3D"0" style=3D"border-collapse:c=
+ollapse;font-size:0px;width:600px;background-image:initial;background-posit=
+ion:initial;background-repeat:initial"><tbody><tr><td style=3D"font-family:=
+arial,sans-serif;border-collapse:collapse;text-align:center;vertical-align:=
+top;direction:ltr;padding:0px 0px 20px"><div style=3D"width:600px;vertical-=
+align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left=
+"><table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0" st=
+yle=3D"border-collapse:collapse;vertical-align:top"><tbody><tr><td align=3D=
+"center" style=3D"font-family:arial,sans-serif;border-collapse:collapse;fon=
+t-size:0px;padding:0px"><table cellpadding=3D"0" cellspacing=3D"0" align=3D=
+"center" border=3D"0" style=3D"border-collapse:collapse"><tbody><tr><td sty=
+le=3D"font-family:arial,sans-serif;border-collapse:collapse;width:120px"></=
+td></tr></tbody></table></td></tr><tr><td align=3D"left" style=3D"font-fami=
+ly:arial,sans-serif;border-collapse:collapse;font-size:0px;padding:0px 25px=
+"><div style=3D"color:rgb(94,105,119);font-family:Arial,sans-serif;font-siz=
+e:13px;line-height:18px"><h1 style=3D"text-align:center"><span style=3D"col=
+or:rgb(16,11,112)"><span style=3D"font-size:18px"><span style=3D"font-size:=
+20px">Welcome to International Journal of Recent Engineering Research and D=
+evelopment</span></span></span></h1><h1 style=3D"line-height:26px;text-alig=
+n:center"><span style=3D"color:rgb(16,11,112)"><b><span style=3D"font-size:=
+18px">ISSN: 2455-8761</span></b></span></h1></div></td></tr><tr><td style=
+=3D"font-family:arial,sans-serif;border-collapse:collapse;font-size:0px;pad=
+ding:10px 25px"><p style=3D"margin:0px auto;font-size:1px;border-top:4px so=
+lid rgb(0,0,0);width:550px"></p></td></tr><tr><td align=3D"left" style=3D"f=
+ont-family:arial,sans-serif;border-collapse:collapse;font-size:0px;padding:=
+0px 25px 10px"><div style=3D"color:rgb(94,105,119);font-family:Arial,sans-s=
+erif;font-size:13px;line-height:22px"><p style=3D"margin:10px 0px;text-alig=
+n:center"><span style=3D"font-size:18px"><b><span style=3D"color:rgb(0,32,9=
+6)">An ISO 3297:2011 Certified International Journal</span></b></span></p><=
+p style=3D"margin:10px 0px;color:rgb(34,34,34);font-family:arial,sans-serif=
+;font-size:12.8px;text-align:center"><span style=3D"font-size:15px"><b>Smoo=
+th, simple and timely publishing of review and research articles.</b></span=
+></p><p style=3D"margin:10px 0px;text-align:center"><span style=3D"font-siz=
+e:14px"><b><span style=3D"color:rgb(192,0,0)">Website:</span><span style=3D=
+"color:red">&nbsp;&nbsp;</span></b><b style=3D"color:rgb(17,85,204)"><a hre=
+f=3D"http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=3D521631=
+7&amp;l=3Df6a0ca0b-3681-4462-9196-177f39910697&amp;r=3Dcc50fcf2-ffb4-4959-a=
+121-d951c000f2e1" target=3D"_blank">www.ijrerd.com</a>&nbsp; &nbsp;&nbsp;<s=
+pan style=3D"color:rgb(0,0,0)">||</span>&nbsp;&nbsp; &nbsp;&nbsp;</b><b><sp=
+an style=3D"color:rgb(192,0,0)">Email ID:</span><span style=3D"color:red">&=
+nbsp;</span></b><b style=3D"color:rgb(17,85,204)">e</b><a href=3D"mailto:ed=
+itor@ijrerd.com" target=3D"_blank"><b>ditor@ijrerd.com</b></a></span></p></=
+div></td></tr><tr><td style=3D"font-family:arial,sans-serif;border-collapse=
+:collapse;font-size:0px;padding:10px 25px"><p style=3D"margin:0px auto;font=
+-size:1px;border-top:4px solid rgb(0,0,0);width:550px"></p></td></tr><tr><t=
+d align=3D"left" style=3D"font-family:arial,sans-serif;border-collapse:coll=
+apse;padding:0px 25px"><div style=3D"color:rgb(94,105,119);line-height:22px=
+"><p style=3D"font-family:Arial,sans-serif;margin:10px 0px;color:rgb(0,0,0)=
+;text-align:center"><b><span style=3D"font-size:13.5pt">-----Important Date=
+s-----</span></b></p><p style=3D"font-family:Arial,sans-serif;margin:10px 0=
+px;color:rgb(0,0,0);line-height:22px;text-align:center"><span style=3D"colo=
+r:rgb(0,11,75)"><span style=3D"font-size:16px"><b>Last date of Submission: =
+15th&nbsp; Oct 2019</b></span></span></p><p style=3D"font-family:Arial,sans=
+-serif;margin:10px 0px;color:rgb(0,0,0);line-height:22px;text-align:center"=
+><span style=3D"color:rgb(0,11,75)"><span style=3D"font-size:16px"><b>Accep=
+tance Notification: Within 04 to 06 days</b></span></span></p><p style=3D"f=
+ont-family:Arial,sans-serif;margin:10px 0px;color:rgb(0,0,0);line-height:22=
+px;text-align:center"><span style=3D"color:rgb(0,11,75)"><span style=3D"fon=
+t-size:16px"><b>Manuscript Publication:&nbsp;Within 05 days&nbsp;after regi=
+stration</b></span></span></p><p style=3D"margin:10px 0px;color:rgb(34,34,3=
+4);text-align:center"><b><span style=3D"color:red"><font size=3D"4" face=3D=
+"arial, helvetica, sans-serif">A PEER REVIEWED REFEREED MONTHLY INTERNATION=
+AL&nbsp;JOURNAL</font></span></b></p><p style=3D"font-size:12.8px;margin:10=
+px 0px;color:rgb(34,34,34);text-align:center">We are pleased to inform you =
+that&nbsp;IJRERD is going to launch its next issue</p><p style=3D"font-size=
+:12.8px;margin:10px 0px;color:rgb(34,34,34);text-align:center"><b><span sty=
+le=3D"color:red">(Volume 04, Issue 10,)</span></b>. We would like to invite=
+ you to contribute your Research Paper for publication in&nbsp;IJRERD. Pape=
+rs published in&nbsp;IJRERD will receive very high publicity and acquire ve=
+ry high reputation. (<a href=3D"http://ec2-52-26-194-35.us-west-2.compute.a=
+mazonaws.com/x/d?c=3D5216317&amp;l=3Dacbb2368-9dea-4626-b973-00cb32115b15&a=
+mp;r=3Dcc50fcf2-ffb4-4959-a121-d951c000f2e1" target=3D"_blank"><b>www.ijrer=
+d.com</b></a>). We publish original research articles, review articles and =
+technical notes. The journal reviews papers&nbsp;within one week&nbsp;of su=
+bmission and publishes accepted articles on the internet immediately upon r=
+eceiving the final versions. Our fast reviewing process is our strength.</p=
+></div></td></tr><tr><td style=3D"font-family:arial,sans-serif;border-colla=
+pse:collapse;font-size:0px;padding:10px 25px"><p style=3D"margin:0px auto;f=
+ont-size:1px;border-top:4px solid rgb(0,0,0);width:550px"></p></td></tr><tr=
+><td align=3D"left" style=3D"font-family:arial,sans-serif;border-collapse:c=
+ollapse;font-size:0px;padding:0px 25px"><div style=3D"color:rgb(94,105,119)=
+;font-family:Arial,sans-serif;font-size:13px;line-height:22px"><p style=3D"=
+margin:10px 0px;color:rgb(34,34,34);font-family:arial,sans-serif;font-size:=
+12.8px"><span style=3D"font-size:15px"><b><span style=3D"color:rgb(192,0,0)=
+">Features &amp; Benefits of&nbsp;IJRERD Authors:</span></b></span></p><ul =
+style=3D"color:rgb(0,0,0)"><li style=3D"color:rgb(34,34,34);font-family:ari=
+al,sans-serif;font-size:12.8px"><p style=3D"margin:10px 0px"><span style=3D=
+"color:rgb(0,0,0)">Fast &amp; Easy paper publishing process.</span></p></li=
+><li style=3D"color:rgb(34,34,34);font-family:arial,sans-serif;font-size:12=
+.8px"><p style=3D"margin:10px 0px"><span style=3D"color:rgb(0,0,0)"><span s=
+tyle=3D"font-family:Arial,sans-serif;font-size:13px">Fast High-level peer r=
+eview, production and publishing processes.</span></span></p></li><li style=
+=3D"color:rgb(34,34,34);font-family:arial,sans-serif;font-size:12.8px"><p s=
+tyle=3D"margin:10px 0px"><span style=3D"color:rgb(0,0,0)">Number to every a=
+rticle.</span></p></li><li style=3D"color:rgb(34,34,34);font-family:arial,s=
+ans-serif;font-size:12.8px"><p style=3D"margin:10px 0px"><span style=3D"col=
+or:rgb(0,0,0)">IJRERD provides individual &quot;<b>Hard copy of Certificate=
+</b>=E2=80=9D to all Authors.</span></p></li><li style=3D"color:rgb(34,34,3=
+4);font-family:arial,sans-serif;font-size:12.8px"><p style=3D"margin:10px 0=
+px"><span style=3D"color:rgb(0,0,0)">IJRERD provides individual &quot;<b>So=
+ft copy of Certificate</b>=E2=80=9D to all Authors.</span></p></li><li styl=
+e=3D"color:rgb(34,34,34);font-family:arial,sans-serif;font-size:12.8px"><p =
+style=3D"margin:10px 0px"><span style=3D"color:rgb(0,0,0)">Universities, Co=
+lleges, Institute, etc. can subscribe the hard copy of the magazine in annu=
+al basis.</span></p></li><li style=3D"color:rgb(34,34,34);font-family:arial=
+,sans-serif;font-size:12.8px"><p style=3D"margin:10px 0px"><span style=3D"c=
+olor:rgb(0,0,0)"><b style=3D"color:rgb(85,85,85);font-family:Arial,sans-ser=
+if;font-size:13px">IJRERD</b><span style=3D"font-family:Arial,sans-serif;fo=
+nt-size:13px">&nbsp;is globally accepted Journal. For more editorial detail=
+s, please go to our editorial board menu in our web&nbsp;</span></span><a h=
+ref=3D"http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=3D5216=
+317&amp;l=3Dc5aaa866-4c08-4187-864a-c2deb93bb120&amp;r=3Dcc50fcf2-ffb4-4959=
+-a121-d951c000f2e1" style=3D"color:rgb(0,0,0)" target=3D"_blank"><b style=
+=3D"color:rgb(85,85,85);font-family:Arial,sans-serif;font-size:13px">www.ij=
+rerd.com</b></a></p></li></ul></div></td></tr><tr><td style=3D"font-family:=
+arial,sans-serif;border-collapse:collapse;font-size:0px;padding:10px 25px">=
+<p style=3D"margin:0px auto;font-size:1px;border-top:4px solid rgb(0,0,0);w=
+idth:550px"></p></td></tr><tr><td align=3D"left" style=3D"font-family:arial=
+,sans-serif;border-collapse:collapse;font-size:0px;padding:0px 25px"><div s=
+tyle=3D"color:rgb(94,105,119);font-family:Arial,sans-serif;font-size:13px;l=
+ine-height:22px"><p style=3D"margin:10px 0px;color:rgb(0,0,0)"><span style=
+=3D"color:rgb(42,42,42);font-family:arial,sans-serif;font-size:12.8px">All =
+submitted papers will be subjected to a strict review process.&nbsp;</span>=
+</p></div></td></tr><tr><td align=3D"left" style=3D"font-family:arial,sans-=
+serif;border-collapse:collapse;font-size:0px;padding:0px 25px"><div style=
+=3D"color:rgb(94,105,119);font-family:Arial,sans-serif;font-size:13px;line-=
+height:22px"><p style=3D"margin:10px 0px;color:rgb(34,34,34);font-family:ar=
+ial,sans-serif;font-size:12.8px"><span style=3D"color:rgb(42,42,42)">Author=
+s are required to submit the full paper (<b>PDF</b>&nbsp;and&nbsp;<b>Word f=
+ormat</b>)&nbsp; to the&nbsp;<b>&nbsp;</b></span><b><span style=3D"color:rg=
+b(0,112,192)">Upcoming Issue</span></b><b><span style=3D"color:rgb(42,42,42=
+)">&nbsp;</span></b></p><p style=3D"margin:10px 0px;color:rgb(34,34,34);fon=
+t-family:arial,sans-serif;font-size:12.8px"><b><span style=3D"color:red">No=
+w, submit your manuscript Directly</span></b><span style=3D"color:rgb(42,42=
+,42)">&nbsp;</span><a href=3D"http://ec2-52-26-194-35.us-west-2.compute.ama=
+zonaws.com/x/d?c=3D5216317&amp;l=3D45a32e5e-23b5-4ef8-b08e-9eaba4e5a434&amp=
+;r=3Dcc50fcf2-ffb4-4959-a121-d951c000f2e1" target=3D"_blank">click here</a>=
+</p><p style=3D"margin:10px 0px;color:rgb(34,34,34);font-family:arial,sans-=
+serif;font-size:12.8px"><span style=3D"color:rgb(42,42,42)">Authors can sub=
+mit their papers at any time by mailing to:&nbsp;<a href=3D"mailto:editor@i=
+jrerd.com" target=3D"_blank">editor@ijrerd.com</a></span></p><p style=3D"ma=
+rgin:10px 0px;color:rgb(34,34,34);font-family:arial,sans-serif;font-size:12=
+.8px"><b><span style=3D"color:red">Please Share with your friends and Colle=
+agues....</span></b></p></div></td></tr><tr><td style=3D"font-family:arial,=
+sans-serif;border-collapse:collapse;font-size:0px;padding:10px 25px"><p sty=
+le=3D"margin:0px auto;font-size:1px;border-top:4px solid rgb(0,0,0);width:5=
+50px"></p></td></tr><tr><td align=3D"left" style=3D"font-family:arial,sans-=
+serif;border-collapse:collapse;font-size:0px;padding:0px 25px"><div style=
+=3D"color:rgb(94,105,119);font-family:Arial,sans-serif;font-size:13px;line-=
+height:22px"><p style=3D"margin:10px 0px;text-align:center"><b style=3D"col=
+or:rgb(34,34,34);font-family:arial,sans-serif;font-size:12.8px"><span style=
+=3D"color:rgb(255,51,0)">IJRERD PROMISING QUICK AND QUALITY PUBLICATION</sp=
+an></b></p><p style=3D"margin:10px 0px;text-align:center"><b><span style=3D=
+"color:rgb(255,51,0)">------------------</span></b></p><p style=3D"margin:1=
+0px 0px;text-align:center"><b><span style=3D"color:rgb(255,51,0)">You may <=
+a href=3D"http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/u?u=3Dc=
+c50fcf2-ffb4-4959-a121-d951c000f2e1">unsubscribe</a> to stop receiving our =
+emails.<br></span></b></p><p style=3D"margin:10px 0px;text-align:center"><b=
+r></p></div></td></tr></tbody></table></div></td></tr></tbody></table></div=
+></div>
+<img height=3D"0" width=3D"0" src=3D"http://ec2-52-26-194-35.us-west-2.comp=
+ute.amazonaws.com/x/o?u=3Dcc50fcf2-ffb4-4959-a121-d951c000f2e1&amp;c=3D5216=
+317">
+
+--000000000000c81d56059488e68d--

@@ -1,0 +1,275 @@
+Received: from BYAPR08MB4983.namprd08.prod.outlook.com (2603:10b6:a03:d4::28)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR06CA0015.NAMPRD06.PROD.OUTLOOK.COM; Thu, 1 Aug 2019 03:48:26 +0000
+Received: from DM3PR08CA0020.namprd08.prod.outlook.com (2603:10b6:0:52::30) by
+ BYAPR08MB4983.namprd08.prod.outlook.com (2603:10b6:a03:6a::28) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2115.15; Thu, 1 Aug 2019 03:48:24 +0000
+Received: from SN1NAM04FT030.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::207) by DM3PR08CA0020.outlook.office365.com
+ (2603:10b6:0:52::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.12 via Frontend
+ Transport; Thu, 1 Aug 2019 03:48:24 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.161.101)
+ smtp.mailfrom=listserv.ieee.org; calpoly.edu; dkim=none (message not signed)
+ header.d=none;calpoly.edu; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=pass reason=116
+Received-SPF: Pass (protection.outlook.com: domain of listserv.ieee.org
+ designates 209.85.161.101 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.85.161.101;
+ helo=mail-yw1-f101.google.com;
+Received: from mail-yw1-f101.google.com (209.85.161.101) by
+ SN1NAM04FT030.mail.protection.outlook.com (10.152.88.150) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2136.14 via Frontend Transport; Thu, 1 Aug 2019 03:48:24 +0000
+Received: by mail-yw1-f101.google.com with SMTP id n205so25699237ywb.10
+        for <foaad@calpoly.edu>; Wed, 31 Jul 2019 20:48:24 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:approved-by:approved-by:mime-version:message-id
+         :date:reply-to:from:subject:to:precedence:list-help:list-unsubscribe
+         :list-subscribe:list-owner;
+        bh=U+ajVoAKznnnzXhY95/8KFjo6B2ejcDKOKjRyTxpJo8=;
+        b=BmbR84NUIMvkaRwXY08fLaBcvy7++Jh8XhgfAYGNEQnEzL4m4aG8ktfcNPDbsHJeLK
+         lRU9liHVkxAdwE1FE/LchDome7Sv8WAx4M0UqGTxk7PZEyPG0Djn4qaCxrvcY36HKZEG
+         9y3km9H8GRARu5hf0wQ7BjWMRatIzD6DBIhQacVfTvk9hwQFudg8Hn22DBhbEcsZHfvk
+         f2laVPOh89wvWe+3p7KSPxkTERNgC9RPadDW76yD7+PnpejwDvHube9gSg91kc89jcUn
+         Ckg3s7robAQObjD9cVG6Tyr1klwMI0iOBrSzkKTR8igRJfAuB6QPlZdbrWzsXFAsErYB
+         4OJQ==
+X-Gm-Message-State: APjAAAXtWztdvJ65BuY1Yi50xDTfaR6E1Fse85L0KlFusgPXMXRlWwiQ
+	syQqCubGQvv86VO4Ssob7sEy5yVkBN12EPHEhhkFeoRHAvlx
+X-Google-Smtp-Source: APXvYqyR4zERaLw8qbROn7eiU6hYSu1MVlu9/FuJZ/5mSPilYa2vtv/0ibINHQBqFhnDULwZ3k4WbM15gsiO
+X-Received: by 2002:a0d:c247:: with SMTP id e68mr75848827ywd.17.1564631303667;
+        Wed, 31 Jul 2019 20:48:23 -0700 (PDT)
+Return-Path: owner-edusocindia@listserv.ieee.org
+Received: from listserv.ieee.org (listserv.ieee.org. [54.208.220.43])
+        by smtp-relay.gmail.com with ESMTPS id j6sm5989235ywg.5.2019.07.31.20.48.23
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 31 Jul 2019 20:48:23 -0700 (PDT)
+X-Relaying-Domain: ieee.org
+Received: from HOME (listserv.ieee.org [10.144.192.7])
+	by listserv.ieee.org (8.14.4/8.14.4) with ESMTP id x713m4iq024021;
+	Wed, 31 Jul 2019 23:48:18 -0400
+Received: by LISTSERV.IEEE.ORG (LISTSERV-TCP/IP release 16.5) with spool id
+          24887414 for EDUSOCINDIA@LISTSERV.IEEE.ORG; Wed, 31 Jul 2019 23:48:02
+          -0400
+Approved-By: deepakgarg@IEEE.ORG
+Approved-By: deepakgarg108@GMAIL.COM
+Received: from spmpdv01.ieee.org (spmpdv01.ieee.org [10.144.192.218]) by
+          listserv.ieee.org (8.14.4/8.14.4) with ESMTP id x713iVVJ023303 for
+          <edusocindia@listserv.ieee.org>; Wed, 31 Jul 2019 23:44:31 -0400
+Received: from mail-io1-f67.google.com (mail-io1-f67.google.com
+          [209.85.166.67]) by spmpdv01.ieee.org (8.14.4/8.14.4/Debian-4+deb7u1)
+          with ESMTP id x713iVSL010352 (version=TLSv1/SSLv3
+          cipher=AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <edusocindia@listserv.ieee.org>; Wed, 31 Jul 2019 23:44:31 -0400
+Received: by mail-io1-f67.google.com with SMTP id z3so77334iog.0 for
+          <edusocindia@listserv.ieee.org>; Wed, 31 Jul 2019 20:44:31 -0700 (PDT)
+X-Received: by 2002:a6b:6e01:: with SMTP id d1mr41006557ioh.156.1564631070906;
+            Wed, 31 Jul 2019 20:44:30 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="0000000000002fa0a3058f060f2b"
+X-Bayes-Prob: 0.9999 (Score 5, tokens from: default, @@RPTN)
+X-Spam-Score: 0.51 () [Hold at 7.00]
+              FREEMAIL_ENVFROM_END_DIGIT:0.25,FREEMAIL_FROM:0.001,FREEMAIL_REPLYTO_END_DIGIT:0.25,HTML_MESSAGE:0.001,T_KAM_HTML_FONT_INVALID:0.01,Bayes(0.9999:5.0),C65(-5)
+X-CanIt-Geo: ip=209.85.166.67; country=US; latitude=37.7510;
+             longitude=-97.8220;
+             http://maps.google.com/maps?q=37.7510,-97.8220&z=6
+X-CanItPRO-Stream: default
+X-Canit-Stats-ID: 010HDIvpc - 01ffcaa48645
+Received-SPF: neutral (spmpdv01.ieee.org: 209.85.166.67 is neither permitted
+              nor denied by domain deepakgarg108@gmail.com)
+              receiver=spmpdv01.ieee.org; client-ip=209.85.166.67;
+              envelope-from=<deepakgarg108@gmail.com>;
+              helo=mail-io1-f67.google.com; identity=mailfrom
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 10.144.192.218
+Message-ID: <CAFhp3R0LM4DRf+ASnbF7+ov7vNfOwCf7ZeN+hncVysa745W-_w@mail.gmail.com>
+Date: Thu, 1 Aug 2019 09:14:20 +0530
+Reply-To: *** IEEE Education Society in India ***
+              <EDUSOCINDIA@ieee.org>
+From: Deepak Garg <deepakgarg108@GMAIL.COM>
+Subject: [EDUSOCINDIA] CFP: 2019 IEEE 9th International Advance Computing Conference (IACC 2019)
+To: EDUSOCINDIA@LISTSERV.IEEE.ORG
+Precedence: list
+List-Help: <https://listserv.ieee.org/cgi-bin/wa?LIST=EDUSOCINDIA>,
+           <mailto:LISTSERV@LISTSERV.IEEE.ORG?body=INFO%20EDUSOCINDIA>
+List-Unsubscribe: <mailto:EDUSOCINDIA-unsubscribe-request@LISTSERV.IEEE.ORG>
+List-Subscribe: <mailto:EDUSOCINDIA-subscribe-request@LISTSERV.IEEE.ORG>
+List-Owner: <mailto:EDUSOCINDIA-request@LISTSERV.IEEE.ORG>
+X-MS-Exchange-Organization-ExpirationStartTime: 01 Aug 2019 03:48:24.2134
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ea39e427-c3b8-4f5b-4609-08d716331aa1
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132091049042164564;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.161.101;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(5142003)(176002)(7192003)(199004)(189003)(13624006)(146002)(7636002)(606006)(43066004)(59536001)(486006)(8676002)(55176004)(95326003)(76482006)(8576002)(10126004)(7596002)(1096003)(126002)(966005)(14444005)(476003)(61266001)(5650700001)(5660700001)(246002)(5070765005)(34206002)(53376002)(58800400005)(22186003)(26005)(2361001)(2351001)(16003)(75640400001)(106002)(42186006)(5660300002)(16586007)(305945005)(4006050)(42882007)(498394004)(33964004)(6666004)(336012)(236005)(6306002)(73392003)(55446002)(356004)(82202003)(71190400001)(83140200001);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4983;H:mail-yw1-f101.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-yw1-f101.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT030.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: ea39e427-c3b8-4f5b-4609-08d716331aa1
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4983;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4983:
+X-MS-Exchange-PUrlCount: 2
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 Aug 2019 03:48:24.1794
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ea39e427-c3b8-4f5b-4609-08d716331aa1
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4983
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8821374
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TnVVTlJjSXhkT2dJRWpmRU1MMlNwTGhGRTlsUUd6OUR0bHpNakUxSlJZNHJ0?=
+ =?utf-8?B?bTVKekc2WFM3bWR5SWc4TXdVaFRMVnIvd01aQjBRY0xBaXVtY2RQTlpzTlFU?=
+ =?utf-8?B?THVVQUhJZkF4NVQrY0RPYXV2VnRic1U3U2dhZ0s4ejVxYnVXYnF4TkdEZ2Ew?=
+ =?utf-8?B?UmpmSXdmR2o1WTFvOXQxbVdJRGdyVkQ1RTZ5UHQ4Rkoza0hLK1I5WllsRnVl?=
+ =?utf-8?B?cWlyd3hQUzZZaEMwTE84clBHZ3hmN0JjUTdPcUR2SDJxZFRtR3lYYUJHUDV2?=
+ =?utf-8?B?cTFPSlVOcWVVa242dnhoUVNyV2Rwdnl6akJrbkZPMFJrcHRHQW5zY2I3MWtY?=
+ =?utf-8?B?MG1wM0hBRHVPTzhmQmdtYlFvVDBMNGJtMWoveUc0ODlNdVFkbHZHOS9aelV3?=
+ =?utf-8?B?S2VhNTU0djJ6bjRmTS81eWh4VnJhOVpQSHh2MnpxRDYrc3AybmYxekpFRTJS?=
+ =?utf-8?B?NkVWem9RMTBZYlM5bjZiSnlOUmZkVjlJWURNS0YycmN3VVMyQTRFbDJrdTZp?=
+ =?utf-8?B?SkxUb2FlTTdDMzRTVHVINURpS1NQa2tqSDRTNXZvclJBSXdIRkhCU0MyTnpB?=
+ =?utf-8?B?djYzWkpFUi9WZk5GYUxlOU5hZ0VCZnlkZkpPUjB6MjE2N20rVnBkVW5VVG1t?=
+ =?utf-8?B?RmoxUHhGRmJ3Q2d4aFJPSXRCb3FLOFN6aEZPUUZHVVVKbnBuNzRqL3VSVDcr?=
+ =?utf-8?B?N3g1OCszeEdIKzR5VzN6OGlBWUFtTVJCRUZJM2pJL25WbExQZ3ZSK201WVlL?=
+ =?utf-8?B?QUxpa3VuRWEzV0tMelNFT2V4aTFaSmZYR3lEUDBGQU1ETzBMSXFtL0tXcThO?=
+ =?utf-8?B?UTEwbVU5MDI4L0k1M09LZS9oZ01ZUHZNTHdxNFlyQTNRa2IyKzFrSHVJcGd2?=
+ =?utf-8?B?M1YzalFURnIrMFRuVVNaRC9tM01RbnRDMDRrUVdpRDJyekxIdThQN3Y3VlNX?=
+ =?utf-8?B?Wk96OE9GazB1aUFUNndFR2tPOFpXYmF2ZE5Sd05GQlhncTdqNS82amVMRG83?=
+ =?utf-8?B?ODlSdGpPN1hzdm50OUNUUm1vRnpWSm13REhYUU5CU0hGUlpIb0hTVDExZ3p0?=
+ =?utf-8?B?aUZHelJoWHNWalBRVU9XZHFkSTFDa2RpenJDbW9tM0x2c24yc3UreDZaNHIz?=
+ =?utf-8?B?Rlo0L0V1T1oxKy9aUUQ0RHFBZy9aSHA5MWxJZnIrY0F0WEMrVjk1MFdpRXZY?=
+ =?utf-8?B?L0Fzai9Vd2pCMng4M1A5Q0RUYk9wVnJabnBCWFdhbTdldVZPTXdKYUhlSWE2?=
+ =?utf-8?B?bjl0ckI0Zy9tYjM3QVVQT0VZN3VrdjQ5dWJ6RGFSckordmdRcTZNMDZnNlJs?=
+ =?utf-8?Q?EEJzOL2CtHx0L7GftRXWHU2+vOWrKflNB2?=
+MIME-Version: 1.0
+
+--0000000000002fa0a3058f060f2b
+Content-Type: text/plain; charset="UTF-8"
+
+2019 IEEE 9th International Advance Computing Conference (IACC 2019) is
+being organized at M.A.M. College of Engineering and Technology,
+Tiruchirapalli, Tamilnadu. It is organized with the objective of bringing
+together researchers, developers, and practitioners from academia and
+industry working in the area of advance computing. IACC 2019 is technically
+sponsored by IEEE Madras Section. Registered and Presented papers will be
+submitted for inclusion in IEEE Xplore for consideration, IEEE Conference
+#48062, ISBN No.  978-1-7281-4392-7.
+
+Topics:
+1. Advances in High-Performance Computing
+2. Advances in Data Science
+3. Advance of Artificial Intelligence in Interdisciplinary areas
+4. Advances in Machine Learning and Deep Learning
+
+Important Dates:
+Paper Submission Deadline: August 15, 2019
+Selection and final Confirmation: October 31, 2019
+Camera Ready Paper Submission: November 15, 2019
+Conference Date: 13th and 14th December 2019
+
+All questions about submissions should be emailed to iacc2019@mamcet.com
+
+For more details visit the Conference Website: http://computingconf.com/
+
+Annette B
+Professor and Dean
+M.A.M.  College of Engineering and Technology
+Tiruchirapalli, Tamilnadu, India.
+
+________________________________________________________________________
+To unsubscribe from the EDUSOCINDIA list, click the following link: https://listserv.ieee.org/cgi-bin/wa?SUBED1=EDUSOCINDIA&A=1
+
+--0000000000002fa0a3058f060f2b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div class=3D"gmail_default"><div class=3D"m_185894050344853=
+9184gmail-h7" style=3D"clear:both;padding-bottom:0px;max-width:100000px;out=
+line:none"><div class=3D"m_1858940503448539184gmail-Bk" style=3D"margin-bot=
+tom:0px;border-width:0px;border-top-style:solid;border-right-style:initial;=
+border-bottom-style:initial;border-left-style:initial;border-top-color:rgb(=
+239,239,239);border-right-color:initial;border-left-color:initial;border-bo=
+ttom-color:initial;border-radius:0px;width:640px;float:none"><div class=3D"=
+m_1858940503448539184gmail-G3 m_1858940503448539184gmail-G2 m_1858940503448=
+539184gmail-afm" style=3D"padding-top:0px;background-color:transparent;bord=
+er-right:0px;border-bottom:0px rgba(100,121,143,0.12);border-left:0px;borde=
+r-top:none;border-radius:0px;margin-bottom:0px;margin-left:0px;margin-right=
+:0px"><div id=3D"m_1858940503448539184gmail-:1bo"><div class=3D"m_185894050=
+3448539184gmail-adn m_1858940503448539184gmail-ads" style=3D"border-left:no=
+ne;padding:0px;display:flex"><div class=3D"m_1858940503448539184gmail-gs" s=
+tyle=3D"margin:0px;padding:0px 0px 20px;width:568px"><div class=3D"m_185894=
+0503448539184gmail-"><div id=3D"m_1858940503448539184gmail-:1br" class=3D"m=
+_1858940503448539184gmail-ii m_1858940503448539184gmail-gt" style=3D"font-s=
+ize:0.875rem;direction:ltr;margin:8px 0px 0px;padding:0px"><div id=3D"m_185=
+8940503448539184gmail-:1bq" class=3D"m_1858940503448539184gmail-a3s m_18589=
+40503448539184gmail-aXjCH" style=3D"overflow:hidden;font-variant-numeric:no=
+rmal;font-variant-east-asian:normal;font-stretch:normal;font-size:small;lin=
+e-height:1.5"><div dir=3D"auto"><div class=3D"gmail_quote"><div dir=3D"ltr"=
+><span class=3D"m_1858940503448539184gmail-HOEnZb m_1858940503448539184gmai=
+l-adL"><font color=3D"#888888"><div dir=3D"ltr" class=3D"m_1858940503448539=
+184gmail-m_-4562022957559372155m_-7024883055818892012gmail_signature"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><p class=3D"MsoNormal" style=
+=3D"margin:0in 0in 8pt;line-height:107%;font-size:11pt;font-family:Calibri,=
+sans-serif"><span style=3D"font-family:Arial,sans-serif;color:black;backgro=
+und-image:initial;background-position:initial;background-size:initial;backg=
+round-repeat:initial;background-origin:initial;background-clip:initial">201=
+9 IEEE 9th International Advance Computing Conference (IACC 2019) is being
+organized at M.A.M. College of Engineering and Technology, Tiruchirapalli,
+Tamilnadu. It is organized with the objective of bringing together research=
+ers,
+developers, and practitioners from academia and industry working in the are=
+a of
+advance computing. IACC 2019 is technically sponsored by IEEE Madras Sectio=
+n.
+Registered and Presented papers will be submitted for inclusion in IEEE Xpl=
+ore
+for consideration, IEEE Conference #48062, ISBN No. &nbsp;978-1-7281-4392-7=
+.<br>
+<br>
+Topics:<br>
+1. Advances in High-Performance Computing<br>
+2. Advances in Data Science<br>
+3. Advance of Artificial Intelligence in Interdisciplinary areas<br>
+4. Advances in Machine Learning and Deep Learning<br>
+<br>
+Important Dates:<br>
+Paper Submission Deadline: August 15, 2019<br>
+Selection and final Confirmation: October 31, 2019<br>
+Camera Ready Paper Submission: November 15, 2019&nbsp;<br>
+Conference Date: 13th and 14th December 2019<br>
+<br>
+All questions about submissions should be emailed to&nbsp;<a href=3D"mailto=
+:iacc2019@mamcet.com" target=3D"_blank" style=3D"color:blue"><span style=3D=
+"color:black">iacc2019@mamcet.com</span></a><br>
+<br>
+For more details visit the Conference Website:&nbsp;<a href=3D"http://compu=
+tingconf.com/" target=3D"_blank" style=3D"color:blue"><span style=3D"color:=
+black">http://computingconf.com/</span></a>&nbsp;&nbsp;<br>
+<br>
+</span><span style=3D"font-family:&quot;Comic Sans MS&quot;;color:black;bac=
+kground-image:initial;background-position:initial;background-size:initial;b=
+ackground-repeat:initial;background-origin:initial;background-clip:initial"=
+>Annette B<br>
+Professor and Dean<br>M.A.M.&nbsp; College of Engineering and Technology<br=
+>Tiruchirapalli, Tamilnadu, India.&nbsp;<br></span></p></div></div></div></=
+div></font></span></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div>
+<hr>
+<p> To unsubscribe from the EDUSOCINDIA list, click the following link: htt=
+ps://listserv.ieee.org/cgi-bin/wa?SUBED1=3DEDUSOCINDIA&amp;A=3D1 </p>
+
+--0000000000002fa0a3058f060f2b--

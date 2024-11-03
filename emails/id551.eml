@@ -1,0 +1,358 @@
+Received: from BN7PR08MB6098.namprd08.prod.outlook.com (2603:10b6:a03:94::24)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0047.PROD.EXCHANGELABS.COM; Wed, 6 Nov 2019 15:00:27 +0000
+Received: from DM6PR08CA0037.namprd08.prod.outlook.com (2603:10b6:5:1e0::11)
+ by BN7PR08MB6098.namprd08.prod.outlook.com (2603:10b6:408:37::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2430.20; Wed, 6 Nov
+ 2019 15:00:26 +0000
+Received: from SN1NAM04FT044.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::207) by DM6PR08CA0037.outlook.office365.com
+ (2603:10b6:5:1e0::11) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2430.20 via Frontend
+ Transport; Wed, 6 Nov 2019 15:00:26 +0000
+Authentication-Results: spf=pass (sender IP is 209.119.5.133)
+ smtp.mailfrom=LISTSERV.ACM.ORG; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=bestguesspass action=none
+ header.from=acm.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of LISTSERV.ACM.ORG
+ designates 209.119.5.133 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.119.5.133;
+ helo=acm-x.mta.lsoft.us;
+Received: from acm-x.mta.lsoft.us (209.119.5.133) by
+ SN1NAM04FT044.mail.protection.outlook.com (10.152.89.63) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2430.20 via Frontend Transport; Wed, 6 Nov 2019 15:00:26 +0000
+Return-Path:
+ owner-nolist-ACMLPX-191105AN-ov8ia944*foaad**CALPOLY*-EDU@LISTSERV.ACM.ORG
+Received: from [209.119.0.3] ([209.119.0.3:65455] helo=LOIRE)
+	by tesla.dc.lsoft.com (envelope-from <owner-nolist-ACMLPX-191105AN-ov8ia944*foaad**CALPOLY*-EDU@listserv.acm.org>)
+	(ecelerity 4.2.38.62370 r(:)) with ESMTP
+	id 20/62-22886-600E2CD5; Wed, 06 Nov 2019 10:00:22 -0500
+To: foaad@CALPOLY.EDU
+Date: Wed, 6 Nov 2019 10:00:01 -0500 (EST)
+From: "Michelle X. Zhou, ACM TiiS Editor-in-Chief" <pubs@acm.org>
+Message-ID: <18975-1817717431.9144.1573052411105@ORANGE.hosting.lsoft.com>
+Subject: TiiS Call for Papers: Special issue on Interactive Visual Analytics
+ for Making Explainable and Accountable Decisions
+Content-Type: multipart/alternative;
+ boundary="----=_Part_9140_1010861268.1573052401319"
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Nov 2019 15:00:26.2704
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ bb68c3eb-33e5-4d8d-a68f-08d762ca0e84
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:209.119.5.133;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(979002)(4636009)(286005)(199004)(189003)(5142003)(956004)(476003)(7636002)(76236002)(85226003)(966005)(1096003)(2361001)(336012)(15650500001)(486006)(126002)(2420400007)(8676002)(6666004)(246002)(356004)(71190400001)(2351001)(298455003)(4006050)(106002)(14444005)(9686003)(6306002)(16003)(236005)(733005)(16586007)(2171002)(7596002)(75640400001)(6916009)(606006)(26005)(18926415008)(225293001)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB6098;H:acm-x.mta.lsoft.us;FPR:;SPF:Pass;LANG:en;PTR:acm-x.mta.lsoft.us;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT044.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: bb68c3eb-33e5-4d8d-a68f-08d762ca0e84
+X-MS-TrafficTypeDiagnostic: BN7PR08MB6098:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Nov 2019 15:00:26.1493
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: bb68c3eb-33e5-4d8d-a68f-08d762ca0e84
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB6098
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8491274
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2408.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?iso-8859-1?Q?JFE1STIMuuH8suh8o33hNrnxWFLmI+6rVFV3VuBZ6jPC6s9YHPVeOALkh3?=
+ =?iso-8859-1?Q?PjouNHRoCmPUjEIqj9LWzSV01ZAVQ2yIlzSA8cqQM+1/oxzUZE8g1TzF/u?=
+ =?iso-8859-1?Q?NCxP6sxNJ2yVNc9Kb8xhNocc9z1QAXdeCpn4u+agZKe+PoaLtiKNn4NphU?=
+ =?iso-8859-1?Q?zFwk7p7jMliZYZ1e4UXT0vx9jOsT3W83xuq8MDUO6CQOwt9lMZMj/RQ6jJ?=
+ =?iso-8859-1?Q?HGdapBg5yokm2xBsiGgHgEf4YuSY5G5ZCE54rzVOcH3uJhENcZ59MyBvIe?=
+ =?iso-8859-1?Q?2gR7b2sJf9kFsDgD/ZQN3fq8lOqfOUSL9nLOnNlAs9PsxLMMKdRtCjhiD7?=
+ =?iso-8859-1?Q?ea2V1JQ92gMPMhrsXrrj4r2U9FdL4SomVv+xL23NWSeyToQgDwh4QjWyc9?=
+ =?iso-8859-1?Q?X75G/FiR4WH6Qw/og7FYqjFzjJH6evekJWJQIXH57e/Zpp2P+HkaPggTo4?=
+ =?iso-8859-1?Q?DcTpTZnjSB9Ba5Hl9xb86cX5BYwsnAEdw3X+kj+yaUCKK4B/rMsxHxDgiz?=
+ =?iso-8859-1?Q?LC9RF4NVWzW0KosFnw145lxLeXDmxE7tzZp12dE5+5csaJeUveXycKjWvb?=
+ =?iso-8859-1?Q?L9W5dub3Syy45Z5QQfE86lP2eJXL+2uPtjUTPlLIPvqObJNNuBr2nYOaLp?=
+ =?iso-8859-1?Q?QJTwMd16xVsyJ82FMcSpzMvw8yQ/X6BRoZOSJRBeQi+jkAl78SqyMB/qtQ?=
+ =?iso-8859-1?Q?q/FAarpjEh3vlDN+pNX7kPvEdU/4mp0GJqTpPg7F7DFhoHkZx9g1jmHDRN?=
+ =?iso-8859-1?Q?2W+nsOGB0npmTkRVQbE0I4bRwSXs8gPHzrr1Ti+uQIh2M+koDT/tuwPe4M?=
+ =?iso-8859-1?Q?tjGf52UmZt06oYvq/haR7ZNcV+NH4tUKylNJH27L1IEI/I1eoTjop/chL0?=
+ =?iso-8859-1?Q?O5O/dvcibj89MaoZrmEgmsebRT1B9C2y7TDJyw0gh4NN8tQeLASdxMtjsc?=
+ =?iso-8859-1?Q?lTesSmIZrSeQlLzfMLGrx3B8EVm9asCBYgsqUY5TXGqGBlD06KkOhLqiN+?=
+ =?iso-8859-1?Q?qlUTle0heC4IH3fdgMY4nqrToUXL/GWxYEysLqbxgXk0dh4WRIRuXRhtGs?=
+ =?iso-8859-1?Q?c7mvzrdsv9otvNcX7m4mTYmlT4LeQXmW+lXKE0UXE25qRzsyYqux6aT0hb?=
+ =?iso-8859-1?Q?usJxXFPigMVVU9hzMSNueAj9EJUvFN1HAP4K72QZJ9eOBLgARHYR6c3yVO?=
+ =?iso-8859-1?Q?o0JoQ62ERtGT9A=3D=3D?=
+MIME-Version: 1.0
+
+------=_Part_9140_1010861268.1573052401319
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+CALL FOR PAPERS   =20
+   =20
+ACM Transactions on Interactive Intelligent Systems (TiiS)    =20
+Special Issue on Interactive Visual Analytics for Making Explainable and Ac=
+countable Decisions  =20
+   =20
+Guest Editors    =20
+  * Dr. Cagatay Turkay, City, University of London, UK  =20
+  * Prof. Tatiana von Landesberger, Karlsruhe Institute of Technology, Germ=
+any  =20
+  * Dr. Remco Chang, Tufts University, USA  =20
+  * Dr. Shixia Liu, Tsinghua University, China  =20
+  * Dr. Daniel Archambault, Swansea University, Wales  =20
+        =20
+-----------------------------------------------------------------------=20
+    =20
+Background    =20
+        =20
+Due to recent advances in Artificial Intelligence, complex and advanced mac=
+hine learning models have been developed and used increasingly in making da=
+ta-driven decisions that have significant impact on science, business, and =
+the wider society. Although effective, the complexity of these models can o=
+ften make the results difficult to understand, explain, evaluate, and scrut=
+inize. There is therefore a significant demand from governments, businesses=
+, and the wider society for interpretable, explainable and accountable deci=
+sion-making models and systems.  =20
+   =20
+Interactive visual analytics offer great potential in this space by marryin=
+g human intelligence with machine power, through visual representations of =
+data and interaction techniques, to aid humans in better generating, interp=
+reting, evaluating, and deploying statistical and machine learning models. =
+In this special issue, we will feature cutting-edge research where interact=
+ive visual analytics methods are applied together with complex computationa=
+l methods for making explainable and accountable decisions informed by data=
+.  =20
+      =20
+Scope, Description, and More Information    =20
+     =20
+This special issue invites submissions that feature original research on de=
+signing, developing and evaluating interactive visual analytics methods tha=
+t empower their users to make explainable and accountable inferences and de=
+cisions based on massive amounts of data. A suitable submission must also d=
+emonstrate its relevance to TiiS, the premier journal featuring interactive=
+ intelligent systems with two distinct characteristics: intelligence and in=
+teractivity. In particular, a suitable submission must exhibit or discuss h=
+ow the resulting approaches, techniques, or systems advance an interactive =
+intelligent system. Interdisciplinary and applied research is especially en=
+couraged.    =20
+    =20
+Specific areas of interest include, but are not limited to:    =20
+    =20
+  * Role of interactive visualization in interpretable and explainable mach=
+ine learning  =20
+  * Human factors in making decisions with machine learning models  =20
+  * Facilitating algorithmic transparency and accountability through visual=
+ analytics  =20
+  * Interactive visualization for supporting non-experts in creating and in=
+terpreting complex analysis results  =20
+  * Visual analytics for interactive, informed machine-learning model build=
+ing  =20
+  * Uncertainty-aware visual analytics for the consideration of inherent un=
+certainty in data and models  =20
+  * Interactive visual analytics for addressing biases in the data and mach=
+ine learning models   =20
+  =20
+Schedule    =20
+    =20
+  * Full paper submission deadline: November 17, 2019  =20
+  * First author notification: Feb 14, 2020  =20
+  * Revised paper due: April 20, 2020  =20
+  * Final author notification: May 15, 2020   =20
+  * Expected publication: Summer 2020  =20
+      =20
+Check out http://tiis.acm.org/authors.cfm for author information and submis=
+sion details.   =20
+For further information, please contact cagatay.turkay@city.ac.uk.  =20
+    =20
+------------------------------------------------------------------------   =
+ =20
+   =20
+To stop receiving emails about publishing in ACM journals, unsubscribe at: =
+        =20
+https://optout.acm.org/unsubscribe.cfm?re=3Dfoaad@calpoly.edu&rl=3DCFP   =
+=20
+    =20
+Association for Computing Machinery             =20
+1601 Broadway, 10th Floor, New York, NY 10019, USA              =20
+Copyright 2019, ACM, Inc.   =20
+------=_Part_9140_1010861268.1573052401319
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+    <title>Call for Papers</title>
+    <meta name=3D"googlebot" content=3D"noindex, noarchive, nofollow">
+
+
+  </head>
+ =20
+  <body style=3D"font-family: verdana, tahoma, geneva, arial; font-size: 12=
+px; line-height: 1.2; color: #333333; text-align:center"><!--[if gte mso 15=
+]><table border=3D'0' cellpadding=3D'0' cellspacing=3D'0' width=3D'100%' al=
+ign=3D'left'><tr><td><![endif]-->
+ =20
+  <table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"2" wi=
+dth=3D"670">
+  =09
+    	<tbody><tr><td>
+       =20
+        	<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"670">
+            	<tbody><tr align=3D"left" valign=3D"top">
+                	<td colspan=3D"2" height=3D"10"></td>
+                </tr>
+
+				<tr align=3D"left" valign=3D"top">
+                	<!-- main body -->  =20
+					<td width=3D"650" style=3D"padding: 10px;">
+						<!-- header --><img src=3D"http://www.acm.org/binaries/content/galler=
+y/acm/plone-images/acm_logo1.gif" width=3D"280" height=3D"72" border=3D"0" =
+align=3D"right" alt=3D""></a><br>
+<div style=3D"font-family: verdana, arial; font-size: 14px; font-weight: li=
+ghter; color: #000000;">CALL FOR PAPERS<br>  </div>   <br>
+<div style=3D"font-family: verdana, arial; font-size: 18px; font-weight: bo=
+lder; color: #000000;">ACM Transactions on <br>Interactive Intelligent Syst=
+ems<br>
+	<div style=3D"font-family: verdana, arial; font-size: 13px; font-weight: n=
+ormal; color: #000000;"><em>Special issue on Interactive Visual Analytics f=
+or <br>Making Explainable and Accountable Decisions</em><br><br>
+						<div style=3D"font-family: verdana, arial; font-size: 12px; font-weig=
+ht: bold; color: #000000;">Guest Editors</div>
+
+		<div style=3D"font-family: verdana, arial; font-size: 12px; font-weight: =
+normal; color: #000000; line-height: 1.5em;">Dr. Cagatay Turkay, City, Univ=
+ersity of London, UK<br>
+Prof. Tatiana von Landesberger, Karlsruhe Institute of Technology, Germany<=
+br>
+Dr. Remco Chang, Tufts University, USA<br>
+Dr. Shixia Liu, Tsinghua University, China<br>
+Dr. Daniel Archambault, Swansea University, Wales
+<br>
+</div><br>
+
+<!-- end of header --><hr><br>
+						<img src=3D"http://www.acm.org/binaries/content/gallery/membership/bu=
+lletin_images/tiis_rgb.jpg" alt=3D"" width=3D"146" height=3D"" vspace=3D"10=
+" hspace=3D"10" border=3D"" align=3D"right">
+				=09
+<!--<div style=3D"font-family: verdana, arial; font-size: 14px; font-weight=
+: normal; color: #000000;"><strong>Information For Contributors</strong></d=
+iv> -->
+<div style=3D"font-family: verdana, arial; font-size: 12px; font-weight: no=
+rmal; color: #000000; line-height: 1.3em; vertical-align:top;">
+<!-- story -->
+	<b>Background</b><br><br>
+
+Due to recent advances in Artificial Intelligence, complex and advanced mac=
+hine learning models have been developed and used increasingly in making da=
+ta-driven decisions that have significant impact on science, business, and =
+the wider society. Although effective, the complexity of these models can o=
+ften make the results difficult to understand, explain, evaluate, and scrut=
+inize. There is therefore a significant demand from governments, businesses=
+, and the wider society for interpretable, explainable and accountable deci=
+sion-making models and systems.<br><br>
+=20
+Interactive visual analytics offer great potential in this space by marryin=
+g human intelligence with machine power, through visual representations of =
+data and interaction techniques, to aid humans in better generating, interp=
+reting, evaluating, and deploying statistical and machine learning models. =
+In this special issue, we will feature cutting-edge research where interact=
+ive visual analytics methods are applied together with complex computationa=
+l methods for making explainable and accountable decisions informed by data=
+.
+<br><br>
+
+<b>Scope, Description, and More Information</b><br><br>
+This special issue invites submissions that feature original research on de=
+signing, developing and evaluating interactive visual analytics methods tha=
+t empower their users to make explainable and accountable inferences and de=
+cisions based on massive amounts of data. A suitable submission must also d=
+emonstrate its relevance to TiiS, the premier journal featuring interactive=
+ intelligent systems with two distinct characteristics: <em>intelligence</e=
+m> and <em>interactivity</em>. In particular, a suitable submission must ex=
+hibit or discuss how the resulting approaches, techniques, or systems advan=
+ce an interactive intelligent system. Interdisciplinary and applied researc=
+h is especially encouraged.<br><br>
+
+Specific areas of interest include, but are not limited to:<br>
+
+<ul>
+<li>Role of interactive visualization in interpretable and explainable mach=
+ine learning</li>
+<li>Human factors in making decisions with machine learning models</li>
+<li>Facilitating algorithmic transparency and accountability through visual=
+ analytics</li>
+<li>Interactive visualization for supporting non-experts in creating and in=
+terpreting complex analysis results</li>
+<li>Visual analytics for interactive, informed machine-learning model build=
+ing</li>
+<li>Uncertainty-aware visual analytics for the consideration of inherent un=
+certainty in data and models</li>
+<li>Interactive visual analytics for addressing biases in the data and mach=
+ine learning models</li>
+	</ul>
+
+<b>Schedule</b><br>
+<ul>
+<li>Full paper submission deadline: November 17, 2019</li>
+<li>First author notification: Feb 14, 2020</li>
+<li>Revised paper due: April 20, 2020</li>
+<li>Final author notification: May 15, 2020</li>
+<li>Expected publication: Summer 2020</li>
+</ul>
+
+<br>
+	Check out <a href=3D"https://orange.hosting.lsoft.com/trk/click?ref=3Dznwr=
+bbrs9_6-2258dx3183f7x011900&amp;">tiis.acm.org/authors.cfm</a> for author i=
+nformation and submission details.<br>
+For further information, please contact <a href=3D"mailto:cagatay.turkay@ci=
+ty.ac.uk">cagatay.turkay@city.ac.uk</a>.
+<br>
+<br>
+=09
+=09
+=09
+<hr>
+
+<table border=3D"0" cellpadding=3D"0px" width=3D"700">=09
+		<tr>
+			<td colspan=3D"2">
+						</td></tr>
+						</table>
+			  =20
+<!-- story -->      =20
+
+	<div style=3D"font-family: verdana, tahoma, geneva, arial; font-size: 10px=
+; font-weight: bolder; color: #505050; text-align:center"><a href=3D"https:=
+//optout.acm.org/unsubscribe.cfm?re=3Dfoaad@calpoly.edu&amp;rl=3DCFP">UNSUB=
+SCRIBE</a> to stop receiving emails about publishing in ACM journals.<br><b=
+r>
+Association for Computing Machinery, 1601 Broadway, 10th Floor, New York, N=
+Y 10019, USA<br>=20
+Copyright 2019, ACM, Inc.                                  =20
+                      =20
+                    </div><!-- end of story -->
+                    </div></td><!-- end of main body -->
+                  =20
+				</tr>
+            </tbody></table>
+			</div></div></div></td>
+		</tr>
+	</tbody></table>
+=09
+</td></tr></tbody></table><!--[--><img src=3D"https://orange.hosting.lsoft.=
+com/trk/open?ref=3Dznwrbbrs9_6-2258dx011900" width=3D"1" height=3D"1"><!--]=
+--><!--[if gte mso 15]></td></tr></table><![endif]--></body></html>=
+
+------=_Part_9140_1010861268.1573052401319--

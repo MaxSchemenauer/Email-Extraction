@@ -1,0 +1,418 @@
+Return-Path: donotreply@dcmrf.net
+Received: from p-zm-mta01.its.calpoly.edu (LHLO p-zm-mta01.its.calpoly.edu) (129.65.64.109) by p-zm-store01.its.calpoly.edu with LMTP;
+	 Tue, 7 Apr 2015 15:01:24 -0700 (PDT)
+Received: from p-zm-mta01.its.calpoly.edu (localhost.localdomain [127.0.0.1]) by p-zm-mta01.its.calpoly.edu (Postfix) with ESMTP id 2D8B43A2DD for <foaad@calpoly.edu>;
+	 Tue, 7 Apr 2015 15:01:24 -0700 (PDT)
+Received: from cpmx03-in.its.calpoly.edu (prod-loopback.its.calpoly.edu [129.65.64.9]) by p-zm-mta01.its.calpoly.edu (Postfix) with ESMTPS id 20FE43A018 for <foaad@cpmail.calpoly.edu>;
+	 Tue, 7 Apr 2015 15:01:24 -0700 (PDT)
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: A0AAAQC0UiRVnOvEKEZCGg6CN4EVXIRGgUK9A4I3AQuHaRABAQEBAQEBEQEBAQEBBg0JCRQuhCgaMRoFIT4tEjQHBQcEBQUHBIgJBQg3pUSmawEfj1UBAYMEDEGBMwWGHoRYMYVNBIN0h2aFPxaGH4N+DIMGg1RcUAUCgQSBOAEBAQ
+X-IPAS-Result: A0AAAQC0UiRVnOvEKEZCGg6CN4EVXIRGgUK9A4I3AQuHaRABAQEBAQEBEQEBAQEBBg0JCRQuhCgaMRoFIT4tEjQHBQcEBQUHBIgJBQg3pUSmawEfj1UBAYMEDEGBMwWGHoRYMYVNBIN0h2aFPxaGH4N+DIMGg1RcUAUCgQSBOAEBAQ
+X-IronPort-AV: E=Sophos;i="5.11,540,1422950400";
+	    d="scan'208,217"; a=9279599
+X-Originating-IP-Address: 70.40.196.235
+Received: from gproxy7-pub.mail.unifiedlayer.com ([70.40.196.235]) by cpmx03-in.its.calpoly.edu with SMTP;
+	 07 Apr 2015 15:01:24 -0700
+Received: (qmail 30269 invoked by uid 0);
+	 7 Apr 2015 22:01:22 -0000
+Received: from unknown (HELO CMOut01) (10.0.90.82) by gproxy7.mail.unifiedlayer.com with SMTP;
+	 7 Apr 2015 22:01:22 -0000
+Received: from just65.justhost.com ([173.254.28.65]) by CMOut01 with id DA1H1q0081QHVnR01A1LSQ;
+	 Tue, 07 Apr 2015 16:01:20 -0600
+X-Authority-Analysis: v=2.1 cv=FJmImYYs c=1 sm=1 tr=0 a=ZZ68NhgFsNuoKvxfLCdbGw==:117 a=BY8XqHikAAAA:8 a=f5113yIGAAAA:8 a=XfTXnedzAAAA:8 a=kTXoUeWJQ3AA:10 a=e9J7MTPGsLIA:10 a=62chh6RgR-ZTm_LCcfsA:9 a=wPNLvfGTeEIA:10 a=lEUTsOOXQPQA:10 a=SSmOFEACAAAA:8 a=N1z6yVdWAAAA:8 a=4ETm50grvjnxUayK2MkA:9 a=yKd84V4YiwlQoxGb:21 a=_W_S_7VecoQA:10 a=p403mkujtbAA:10 a=s82Q1kGRdm0A:10 a=JVbHgG7d12gA:10 a=wJErDC4SGoYA:10 a=6lsMMUCT-ooA:10 a=MKnn2tH5gywA:10 a=7nY27ne8NYwA:10 a=qUWkX5x6N9AA:10 a=Z8g_GsjyrzMA:10 a=pj9yBL_eCiQA:10 a=KWQMXd6bQrEA:10 a=brP3zeuLf2MA:10 a=OP3iMzCqpaEA:10 a=AyGL_EzmTGgA:10 a=Z3Zr9i96-3QA:10 a=DtGIcscNzR8A:10 a=1Z2Tayu5IWIA:10 a=F96oFP6NjjYA:10 a=kkblyhzSu90A:10 a=FyucvrgMbhYA:10 a=kJ_YfImkIMQA:10 a=vX5Ti79sxEQA:10 a=YwTHAeq_huwA:10 a=cZekGwZ71n8A:10 a=nrPdjiqzYbcA:10 a=Jh5VUdtNeiAA:10 a=Nf4nrLCatYQA:10 a=L1_wpxCUxMAA:10 a=Jpf8A0SOxWwA:10 a=ZntxkFYNLwMA:10
+Received: from [127.0.0.1] (port=34808 helo=localhost.localdomain) by just65.justhost.com with esmtpa (Exim 4.82) (envelope-from <donotreply@dcmrf.net>) id 1YfbYc-0001PC-Vk for foaad@calpoly.edu;
+	 Tue, 07 Apr 2015 16:01:19 -0600
+Date: Tue, 7 Apr 2015 16:01:18 -0600
+To: <foaad@calpoly.edu>
+From: "The Society of Digital Information and Wireless Communications (SDIWC)"
+	<donotreply@dcmrf.net>
+Subject: Call for Papers
+Message-ID: <075cf9cbbb92639ad443461960a50ac0@localhost.localdomain>
+X-Mailer: PHPMailer 5.2 (http://code.google.com/a/apache-extras.org/p/phpmailer/)
+Content-Type: multipart/alternative;
+	boundary="b1_075cf9cbbb92639ad443461960a50ac0"
+X-Identified-User: {:just65.justhost.com:dcmrfnet:dcmrf.net} {sentby:program running on server}
+MIME-Version: 1.0
+
+--b1_075cf9cbbb92639ad443461960a50ac0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: 8bit
+
+Call For Papers
+You are invited to participate in one of the following conferences
+The Second International Conference on Education Technologies & Computers (ICETC2015)
+Thailand, May. 20 - 22, 2015
+The International Technology Management Conference (ITMC2015)
+Turkey, May. 26 - 28, 2015
+The Second International Conference on Electrical and Electronics Engineering, Clean Energy and Green Computing (EEECEGC2015)
+Turkey, May. 26 - 28, 2015
+The Second International Conference on Data Mining, Internet Computing, & Big Data (BigData2015)
+Mauritius, Jun. 29 - July 1, 2015
+The Third International Conference on Digital Information Processing, E-Business & Cloud Computing (DIPECC2015)
+Mauritius, Jun. 29 - July 1, 2015
+The Global Technology Management Conference (GTMC2015)
+USA, Jul. 15 - 17, 2015
+The Fourth International Conference on Informatics & Applications (ICIA2015)
+Japan, Jul. 20 - 22, 2015
+The International Conference on Electronics & Software Science (ICESS2015)
+Japan, Jul. 20 - 22, 2015
+The Fourth World Congress on Computing, Engineering and Technology (WCET2015)
+Malaysia, Sept. 8 - 10, 2015
+The Second International Conference on Information Security and Digital Forensics (ISDF2015)
+Malaysia, Sept. 8 - 10, 2015
+The Second International Conference on Computer Science, Computer Engineering, and Education Technologies (CSCEET2015)
+Malaysia, Sept. 8 - 10, 2015
+The International Conference on Software Engineering, Mobile Computing and Media Informatics (SEMCMI2015)
+Malaysia, Sept. 8 - 10, 2015
+The International Conference on Electrical and Electronic Engineering Telecommunication Engineering, and Mechatronics (EEETEM2015)
+Malaysia, Sept. 8 - 10, 2015
+The International Conference on Big Data, Internet of Things, and Zero-Size Intelligence (BDIZSI2015)
+Malaysia, Sept. 8 - 10, 2015
+The International Conference on Green Computing, Intelligent and Renewable Energies (GCIRE2015)
+Malaysia, Sept. 8 - 10, 2015
+The Fourth International Conference on E-Learning & E-Technologies in Education (ICEEE2015)
+Indonesia, Sept. 10 - 12, 2015
+The International Conference on Database, Datawarehouse, Data Mining & Big Data (DDDMBD2015)
+Indonesia, Sept. 10 - 12, 2015
+The International Conference on Innovations in Intelligent Systems & Computing Technologies (ICIISCT2015)
+India, Sept. 18 - 20, 2015
+The International Conference on Data Mining, Multimedia, Image Processing & their Applications (ICDMMIPA2015)
+India, Sept. 18 - 20, 2015
+The Fourth International Conference on e-Technologies & Networks for Development (ICeND2015)
+Poland, Sept. 21 - 23, 2015
+The Second International Conference on Computer Science, Computer Engineering, & Social Media (CSCESM2015)
+Poland, Sept. 21 - 23, 2015
+The South-East Europe Design Automation, Computer Engineering, Computer Networks, and Social Media Conference (SEEDA-CECNSM2015)
+Greece, Sept. 25 - 27, 2015
+The Fifth International Conference on Digital Information Processing & Communications (ICDIPC2015)
+Switzerland, Oct. 7 - 9, 2015
+The International Conference on Semantic Web Business & Innovation (SWBI2015)
+Switzerland, Oct. 7 - 9, 2015
+The International Conference on Information System Security, Robotics Modeling, and E-Commerce Transactions (ISSRMET2015)
+Dubai, Oct. 14 - 16, 2015
+The International Conference on Organizational Strategy, Business Models, & Risk Management (OSBMRM2015)
+Dubai, Oct. 14 - 16, 2015
+The International Conference on Computer, Electronics, and Biomedical Engineering (ICCEBE2015) (ICCEBE2015)
+Dubai, Oct. 14 - 16, 2015
+The Fourth International Conference on Cyber Security, Cyber Welfare, and Digital Forensic (CyberSec2015)
+Indonesia, Oct. 29 - 31, 2015
+The Second International Conference on Computer Graphics, Multimedia and Image Processing (CGMIP2015)
+Indonesia, Oct. 29 - 31, 2015
+The Second International Conference on Digital Security & Forensics (DigitalSec2015)
+South Africa, Nov. 15 - 17, 2015
+The Second International Conference on Information Security & Cyber Forensics (InfoSec2015)
+South Africa, Nov. 15 - 17, 2015
+The Second International Conference on Electrical and Biomedical Engineering, Clean Energy and Green Computing (EBECEGC2015)
+Dubai, Nov. 30 - December 1, 2015
+The Second International Conference on Digital Information Processing, Data Mining, and Wireless Communications (DIPDMWC2015)
+Dubai, Nov. 30 - December 1, 2015
+The Third International Conference on Green Computing, Technology and Innovation (ICGCTI2015)
+Malaysia, Dec. 8 - 10, 2015
+The Sixth International Conference on Digital Information Processing & Communications (ICDIPC2016)
+Lebanon, Apr. 21 - 23, 2016
+The Third International Conference on Education Technologies & Computers (ICETC2016)
+Lebanon, Apr. 21 - 23, 2016
+The Third International Conference on Electrical, Electronics, Computer Engineering and their Applications (EECEA2016)
+Lebanon, Apr. 21 - 23, 2016
+Third International Conference on Computer Science, Computer Engineering, and Social Media (CSCESM2016)
+Greece, May. 13 - 15, 2016
+The Third International Conference on Computer Science, Computer Engineering, and Education Technologies (CSCEET2016)
+Poland, Sept. 19 - 21, 2016
+The Third International Conference on Artificial Intelligence and Pattern Recognition (AIPR2016)
+Poland, Sept. 19 - 21, 2016
+The International Conference Numerical Methods and Applied Mathematics (NMAM2016)
+Poland, Sept. 19 - 21, 2016
+
+
+----------------------------------------
+
+If you want to unsubscribe to this mail message from SDIWC, just follow this link http://dcmrf.net/Filemailer2/sdiwc-mailer/unsubscribe.php?id=24d0ffc560e75f5ae14cc91d5b20db70
+
+
+--b1_075cf9cbbb92639ad443461960a50ac0
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">  <title>SDIWC Conferences | Call for Papers - CFP</title> <meta name=3D=
+"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0"> </head> <=
+body style=3D"width:75%;margin:10px auto;font-family:Arial;font-size:15px;l=
+ine-height:25px"> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"10" =
+bgcolor=3D"#FFD940" width=3D"100%"> <tr> <td> <table border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"5" width=3D"100%"> <tr><td bgcolor=3D"#3016B0" alig=
+n=3D"center"><span style=3D"font-size:22px;color:#FFF700;font-weight:bold">=
+Call For Papers</span><br><span style=3D"color:#fff">You are invited to par=
+ticipate in one of the following conferences</span></td> </tr></table><tabl=
+e border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=
+=3D"#ffffff" style=3D"margin-top:10px;"></table><table border=3D"1" cellspa=
+cing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"ma=
+rgin-top:10px;"><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" wid=
+th=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><=
+a href=3D"http://sdiwc.net/conferences/icetc2015/" target=3D"_blank" style=
+=3D"text-decoration: none; color: #190773;font-size:16px"><strong>The Secon=
+d International Conference on Education Technologies &amp; Computers (ICETC=
+2015)</strong></a><br>Thailand, <strong>May. 20 - 22, 2015</strong></td></t=
+r></tbody></table><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" w=
+idth=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td=
+><a href=3D"http://sdiwc.net/conferences/itmc2015/" target=3D"_blank" style=
+=3D"text-decoration: none; color: #190773;font-size:16px"><strong>The Inter=
+national Technology Management Conference (ITMC2015)</strong></a><br>Turkey=
+, <strong>May. 26 - 28, 2015</strong></td></tr></tbody></table><table borde=
+r=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffff=
+ff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/c=
+onferences/eeecegc2015/" target=3D"_blank" style=3D"text-decoration: none; =
+color: #190773;font-size:16px"><strong>The Second International Conference =
+on Electrical and Electronics Engineering, Clean Energy and Green Computing=
+ (EEECEGC2015)</strong></a><br>Turkey, <strong>May. 26 - 28, 2015</strong><=
+/td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" cellpadding=
+=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody=
+><tr><td><a href=3D"http://sdiwc.net/conferences/bigdata2015/" target=3D"_b=
+lank" style=3D"text-decoration: none; color: #190773;font-size:16px"><stron=
+g>The Second International Conference on Data Mining, Internet Computing, &=
+amp; Big Data (BigData2015)</strong></a><br>Mauritius, <strong>Jun. 29 - Ju=
+ly 1, 2015</strong></td></tr></tbody></table><table border=3D"1" cellspacin=
+g=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margi=
+n-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/dipecc2=
+015/" target=3D"_blank" style=3D"text-decoration: none; color: #190773;font=
+-size:16px"><strong>The Third International Conference on Digital Informati=
+on Processing, E-Business &amp; Cloud Computing (DIPECC2015)</strong></a><b=
+r>Mauritius, <strong>Jun. 29 - July 1, 2015</strong></td></tr></tbody></tab=
+le><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" b=
+gcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"htt=
+p://sdiwc.net/conferences/gtmc2015/" target=3D"_blank" style=3D"text-decora=
+tion: none; color: #190773;font-size:16px"><strong>The Global Technology Ma=
+nagement Conference (GTMC2015)</strong></a><br>USA, <strong>Jul. 15 - 17, 2=
+015</strong></td></tr></tbody></table><table border=3D"1" cellspacing=3D"0"=
+ cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:1=
+0px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/icia2015/" tar=
+get=3D"_blank" style=3D"text-decoration: none; color: #190773;font-size:16p=
+x"><strong>The
+Fourth International Conference on Informatics &amp; Applications (ICIA2015=
+)</strong></a><br>Japan, <strong>Jul. 20 - 22, 2015</strong></td></tr></tbo=
+dy></table><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D=
+"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a hre=
+f=3D"http://sdiwc.net/conferences/icess2015/" target=3D"_blank" style=3D"te=
+xt-decoration: none; color: #190773;font-size:16px"><strong>The Internation=
+al Conference on Electronics &amp; Software Science (ICESS2015)</strong></a=
+><br>Japan, <strong>Jul. 20 - 22, 2015</strong></td></tr></tbody></table><t=
+able border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolo=
+r=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://s=
+diwc.net/congress/wcet2015/" target=3D"_blank" style=3D"text-decoration: no=
+ne; color: #190773;font-size:16px"><strong>The Fourth World Congress on Com=
+puting, Engineering and Technology (WCET2015)</strong></a><br>Malaysia, <st=
+rong>Sept. 8 - 10,
+2015</strong></td></tr></tbody></table><table border=3D"1" cellspacing=3D"0=
+" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:=
+10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/isdf2015/" ta=
+rget=3D"_blank" style=3D"text-decoration: none; color: #190773;font-size:16=
+px"><strong>The Second International Conference on Information Security and=
+ Digital Forensics (ISDF2015)</strong></a><br>Malaysia, <strong>Sept. 8 - 1=
+0, 2015</strong></td></tr></tbody></table><table border=3D"1" cellspacing=
+=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin=
+-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/csceet20=
+15/" target=3D"_blank" style=3D"text-decoration: none; color: #190773;font-=
+size:16px"><strong>The Second International Conference on Computer Science,=
+ Computer Engineering, and Education Technologies (CSCEET2015)</strong></a>=
+<br>Malaysia, <strong>Sept. 8 - 10, 2015</strong></td></tr></tbody></table>=
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgco=
+lor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http:/=
+/sdiwc.net/conferences/semcmi2015/" target=3D"_blank" style=3D"text-decorat=
+ion: none; color: #190773;font-size:16px"><strong>The International Confere=
+nce on Software Engineering, Mobile Computing and Media Informatics (SEMCMI=
+2015)</strong></a><br>Malaysia, <strong>Sept. 8 - 10, 2015</strong></td></t=
+r></tbody></table><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" w=
+idth=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td=
+><a href=3D"http://sdiwc.net/conferences/eeetem2015" target=3D"_blank" styl=
+e=3D"text-decoration: none; color: #190773;font-size:16px"><strong>The Inte=
+rnational Conference on Electrical and Electronic Engineering Telecommunica=
+tion Engineering, and Mechatronics (EEETEM2015)</strong></a><br>Malaysia, <=
+strong>Sept. 8 - 10, 2015</strong></td></tr></tbody></table><table border=
+=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#fffff=
+f" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/co=
+nferences/bdizsi2015/" target=3D"_blank" style=3D"text-decoration: none; co=
+lor: #190773;font-size:16px"><strong>The International Conference on Big Da=
+ta, Internet of Things, and Zero-Size Intelligence (BDIZSI2015)</strong></a=
+><br>Malaysia, <strong>Sept. 8 - 10, 2015</strong></td></tr></tbody></table=
+><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgc=
+olor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http:=
+//sdiwc.net/conferences/gcire2015/" target=3D"_blank" style=3D"text-decorat=
+ion: none; color: #190773;font-size:16px"><strong>The International Confere=
+nce on Green Computing, Intelligent and Renewable Energies (GCIRE2015)</str=
+ong></a><br>Malaysia, <strong>Sept. 8 - 10, 2015</strong></td></tr></tbody>=
+</table><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"10=
+0%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=
+=3D"http://sdiwc.net/conferences/iceee2015/" target=3D"_blank" style=3D"tex=
+t-decoration: none; color:
+#190773;font-size:16px"><strong>The Fourth International Conference on E-Le=
+arning &amp; E-Technologies in Education (ICEEE2015)</strong></a><br>Indone=
+sia, <strong>Sept. 10 - 12, 2015</strong></td></tr></tbody></table><table b=
+order=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#=
+ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.n=
+et/conferences/dddmbd2015/" target=3D"_blank" style=3D"text-decoration: non=
+e; color: #190773;font-size:16px"><strong>The International Conference on D=
+atabase, Datawarehouse, Data Mining &amp; Big Data (DDDMBD2015)</strong></a=
+><br>Indonesia, <strong>Sept. 10 - 12, 2015</strong></td></tr></tbody></tab=
+le><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" b=
+gcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"htt=
+p://sdiwc.net/conferences/iciisct2015/" target=3D"_blank" style=3D"text-dec=
+oration: none; color: #190773;font-size:16px"><strong>The International Con=
+ference on Innovations in Intelligent Systems &amp;
+Computing Technologies (ICIISCT2015)</strong></a><br>India, <strong>Sept. 1=
+8 - 20, 2015</strong></td></tr></tbody></table><table border=3D"1" cellspac=
+ing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"mar=
+gin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/icdmm=
+ipa2015/" target=3D"_blank" style=3D"text-decoration: none; color: #190773;=
+font-size:16px"><strong>The International Conference on Data Mining, Multim=
+edia, Image Processing &amp; their Applications (ICDMMIPA2015)</strong></a>=
+<br>India, <strong>Sept. 18 - 20, 2015</strong></td></tr></tbody></table><t=
+able border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolo=
+r=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://s=
+diwc.net/conferences/icend2015/" target=3D"_blank" style=3D"text-decoration=
+: none; color: #190773;font-size:16px"><strong>The Fourth International Con=
+ference on e-Technologies &amp; Networks for Development (ICeND2015)</stron=
+g></a><br>Poland, <strong>Sept. 21 - 23,
+2015</strong></td></tr></tbody></table><table border=3D"1" cellspacing=3D"0=
+" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:=
+10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/cscesm2015/" =
+target=3D"_blank" style=3D"text-decoration: none; color: #190773;font-size:=
+16px"><strong>The Second International Conference on Computer Science, Comp=
+uter Engineering, &amp; Social Media (CSCESM2015)</strong></a><br>Poland, <=
+strong>Sept. 21 - 23, 2015</strong></td></tr></tbody></table><table border=
+=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#fffff=
+f" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/co=
+nferences/seeda-cecnsm2015/" target=3D"_blank" style=3D"text-decoration: no=
+ne; color: #190773;font-size:16px"><strong>The South-East Europe Design Aut=
+omation, Computer Engineering, Computer Networks, and Social Media Conferen=
+ce (SEEDA-CECNSM2015)</strong></a><br>Greece, <strong>Sept. 25 - 27, 2015</=
+strong></td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" cell=
+padding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"=
+><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/icdipc2015/" target=
+=3D"_blank" style=3D"text-decoration: none; color: #190773;font-size:16px">=
+<strong>The Fifth International Conference on Digital Information Processin=
+g &amp; Communications (ICDIPC2015)</strong></a><br>Switzerland, <strong>Oc=
+t. 7 - 9, 2015</strong></td></tr></tbody></table><table border=3D"1" cellsp=
+acing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"m=
+argin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/swb=
+i2015/" target=3D"_blank" style=3D"text-decoration: none; color: #190773;fo=
+nt-size:16px"><strong>The International Conference on Semantic Web Business=
+ &amp; Innovation (SWBI2015)</strong></a><br>Switzerland, <strong>Oct. 7 - =
+9, 2015</strong></td></tr></tbody></table><table border=3D"1" cellspacing=
+=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin=
+-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/issrmet2=
+015/" target=3D"_blank" style=3D"text-decoration: none; color: #190773;font=
+-size:16px"><strong>The International Conference on Information System Secu=
+rity, Robotics Modeling, and E-Commerce Transactions (ISSRMET2015)</strong>=
+</a><br>Dubai, <strong>Oct. 14 - 16, 2015</strong></td></tr></tbody></table=
+><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgc=
+olor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http:=
+//sdiwc.net/conferences/osbmrm2015/" target=3D"_blank" style=3D"text-decora=
+tion: none; color: #190773;font-size:16px"><strong>The International Confer=
+ence on Organizational Strategy, Business Models, &amp; Risk Management (OS=
+BMRM2015)</strong></a><br>Dubai, <strong>Oct. 14 - 16, 2015</strong></td></=
+tr></tbody></table><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" =
+width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><t=
+d><a href=3D"http://sdiwc.net/conferences/iccebe2015/" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #190773;font-size:16px"><strong>The In=
+ternational Conference on Computer, Electronics, and Biomedical Engineering=
+ (ICCEBE2015) (ICCEBE2015)</strong></a><br>Dubai, <strong>Oct. 14 - 16, 201=
+5</strong></td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" c=
+ellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10p=
+x;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/cybersec2015/" t=
+arget=3D"_blank" style=3D"text-decoration: none; color: #190773;font-size:1=
+6px"><strong>The Fourth International Conference on Cyber Security, Cyber W=
+elfare, and Digital Forensic (CyberSec2015)</strong></a><br>Indonesia, <str=
+ong>Oct. 29 - 31, 2015</strong></td></tr></tbody></table><table border=3D"1=
+" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" st=
+yle=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/confere=
+nces/cgmip2015/" target=3D"_blank" style=3D"text-decoration: none; color: #=
+190773;font-size:16px"><strong>The Second International
+Conference on Computer Graphics, Multimedia and Image Processing (CGMIP2015=
+)</strong></a><br>Indonesia, <strong>Oct. 29 - 31, 2015</strong></td></tr><=
+/tbody></table><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" widt=
+h=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a=
+ href=3D"http://sdiwc.net/conferences/digitalsec2015/" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #190773;font-size:16px"><strong>The Se=
+cond International Conference on Digital Security &amp; Forensics (DigitalS=
+ec2015)</strong></a><br>South Africa, <strong>Nov. 15 - 17, 2015</strong></=
+td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" cellpadding=
+=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody=
+><tr><td><a href=3D"http://sdiwc.net/conferences/infosec2015/" target=3D"_b=
+lank" style=3D"text-decoration: none; color: #190773;font-size:16px"><stron=
+g>The Second International Conference on Information Security &amp; Cyber F=
+orensics (InfoSec2015)</strong></a><br>South Africa,
+<strong>Nov. 15 - 17, 2015</strong></td></tr></tbody></table><table border=
+=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#fffff=
+f" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/co=
+nferences/ebecegc15/" target=3D"_blank" style=3D"text-decoration: none; col=
+or: #190773;font-size:16px"><strong>The Second International Conference on =
+Electrical and Biomedical Engineering, Clean Energy and Green Computing (EB=
+ECEGC2015)</strong></a><br>Dubai, <strong>Nov. 30 - December 1, 2015</stron=
+g></td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" cellpaddi=
+ng=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbo=
+dy><tr><td><a href=3D"http://sdiwc.net/conferences/dipdmwc15/" target=3D"_b=
+lank" style=3D"text-decoration: none; color: #190773;font-size:16px"><stron=
+g>The Second International Conference on Digital Information Processing, Da=
+ta Mining, and Wireless Communications (DIPDMWC2015)</strong></a><br>Dubai,=
+ <strong>Nov. 30 - December 1,
+2015</strong></td></tr></tbody></table><table border=3D"1" cellspacing=3D"0=
+" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:=
+10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/icgcti2015/" =
+target=3D"_blank" style=3D"text-decoration: none; color: #190773;font-size:=
+16px"><strong>The Third International Conference on Green Computing, Techno=
+logy and Innovation (ICGCTI2015)</strong></a><br>Malaysia, <strong>Dec. 8 -=
+ 10, 2015</strong></td></tr></tbody></table><table border=3D"1" cellspacing=
+=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin=
+-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferences/icdipc20=
+16/" target=3D"_blank" style=3D"text-decoration: none; color: #190773;font-=
+size:16px"><strong>The Sixth International Conference on Digital Informatio=
+n Processing &amp; Communications (ICDIPC2016)</strong></a><br>Lebanon, <st=
+rong>Apr. 21 - 23, 2016</strong></td></tr></tbody></table><table border=3D"=
+1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" s=
+tyle=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/confer=
+ences/icetc2016/" target=3D"_blank" style=3D"text-decoration: none; color: =
+#190773;font-size:16px"><strong>The Third International Conference on Educa=
+tion Technologies &amp; Computers (ICETC2016)</strong></a><br>Lebanon, <str=
+ong>Apr. 21 - 23, 2016</strong></td></tr></tbody></table><table border=3D"1=
+" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" st=
+yle=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/confere=
+nces/eecea2016/" target=3D"_blank" style=3D"text-decoration: none; color: #=
+190773;font-size:16px"><strong>The Third International Conference on Electr=
+ical, Electronics, Computer Engineering and their Applications (EECEA2016)<=
+/strong></a><br>Lebanon, <strong>Apr. 21 - 23, 2016</strong></td></tr></tbo=
+dy></table><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D=
+"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a hre=
+f=3D"http://sdiwc.net/conferences/cscesm2016/" target=3D"_blank" style=3D"t=
+ext-decoration: none; color: #190773;font-size:16px"><strong>Third Internat=
+ional Conference on Computer Science, Computer Engineering, and Social Medi=
+a (CSCESM2016)</strong></a><br>Greece, <strong>May. 13 - 15, 2016</strong><=
+/td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" cellpadding=
+=3D"5" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody=
+><tr><td><a href=3D"http://sdiwc.net/conferences/csceet2016/" target=3D"_bl=
+ank" style=3D"text-decoration: none; color: #190773;font-size:16px"><strong=
+>The Third International Conference on Computer Science, Computer Engineeri=
+ng, and Education Technologies (CSCEET2016)</strong></a><br>Poland, <strong=
+>Sept. 19 - 21, 2016</strong></td></tr></tbody></table><table border=3D"1" =
+cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" bgcolor=3D"#ffffff" styl=
+e=3D"margin-top:10px;"><tbody><tr><td><a href=3D"http://sdiwc.net/conferenc=
+es/aipr2016/" target=3D"_blank" style=3D"text-decoration:
+none; color: #190773;font-size:16px"><strong>The Third International Confer=
+ence on Artificial Intelligence and Pattern Recognition (AIPR2016)</strong>=
+</a><br>Poland, <strong>Sept. 19 - 21, 2016</strong></td></tr></tbody></tab=
+le><table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" width=3D"100%" b=
+gcolor=3D"#ffffff" style=3D"margin-top:10px;"><tbody><tr><td><a href=3D"htt=
+p://sdiwc.net/conferences/nmam2016/" target=3D"_blank" style=3D"text-decora=
+tion: none; color: #190773;font-size:16px"><strong>The International Confer=
+ence Numerical Methods and Applied Mathematics (NMAM2016)</strong></a><br>P=
+oland, <strong>Sept. 19 - 21, 2016</strong></td></tr></tbody></table> </td>=
+ </tr> </table> </body> </html><br><br>If you want to unsubscribe to this m=
+ail message from SDIWC, just follow this link <a href=3D"http://dcmrf.net/F=
+ilemailer2/sdiwc-mailer/unsubscribe.php?id=3D24d0ffc560e75f5ae14cc91d5b20db=
+70">http://dcmrf.net/Filemailer2/sdiwc-mailer/unsubscribe.php?id=3D24d0ffc5=
+60e75f5ae14cc91d5b20db70</a>
+
+
+
+--b1_075cf9cbbb92639ad443461960a50ac0--

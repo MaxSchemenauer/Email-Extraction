@@ -1,0 +1,167 @@
+Return-Path: game_edu-bounces@igda.org
+Received: from p-zm-mta02.its.calpoly.edu (LHLO p-zm-mta02.its.calpoly.edu) (129.65.64.110) by p-zm-store01.its.calpoly.edu with LMTP;
+	 Tue, 28 Oct 2014 14:47:47 -0700 (PDT)
+Received: from p-zm-mta02.its.calpoly.edu (localhost.localdomain [127.0.0.1]) by p-zm-mta02.its.calpoly.edu (Postfix) with ESMTP id C43E69E397 for <foaad@calpoly.edu>;
+	 Tue, 28 Oct 2014 14:47:47 -0700 (PDT)
+Received: from gabriel.its.calpoly.edu (prod-loopback.its.calpoly.edu [129.65.64.9]) by p-zm-mta02.its.calpoly.edu (Postfix) with ESMTPS id 2A0949E390 for <foaad@cpmail.calpoly.edu>;
+	 Tue, 28 Oct 2014 14:47:47 -0700 (PDT)
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: Ar0CAO4NUFTRRALxnGdsb2JhbABcFoJVd1jNU2kMiHAWAQEBAQERAQEBAQEICwkJFC6EAwEBBAEBARoTFgoEFAYEAQYDAwECBgEBAQFGCAMBIwslAgQBEgUDDAeIJgEDCbgriCqFYQEBAQEBAQEBAQEBAQEBAQEBAQEBAReQHAsOAwGEBIEeBYYYhRKLK4cTgTE8gw2Hc4JriF2BeWwBgQ6BPAEBAQ
+X-IPAS-Result: Ar0CAO4NUFTRRALxnGdsb2JhbABcFoJVd1jNU2kMiHAWAQEBAQERAQEBAQEICwkJFC6EAwEBBAEBARoTFgoEFAYEAQYDAwECBgEBAQFGCAMBIwslAgQBEgUDDAeIJgEDCbgriCqFYQEBAQEBAQEBAQEBAQEBAQEBAQEBAReQHAsOAwGEBIEeBYYYhRKLK4cTgTE8gw2Hc4JriF2BeWwBgQ6BPAEBAQ
+X-IronPort-AV: E=Sophos;i="5.04,805,1406617200";
+	    d="scan'208"; a=315968609
+X-Originating-IP-Address: 209.68.2.241
+Received: from seven.pairlist.net ([209.68.2.241]) by gabriel.its.calpoly.edu with ESMTP/TLS/ADH-AES256-SHA;
+	 28 Oct 2014 14:30:08 -0700
+Received: from seven.pairlist.net (localhost [IPv6:::1]) by seven.pairlist.net (Postfix) with ESMTP id 3214A614A0;
+	 Tue, 28 Oct 2014 17:29:56 -0400 (EDT)
+X-Original-To: game_edu@lists7.igda.org
+Delivered-To: game_edu@seven.pairlist.net
+Received: from qs1599.pair.com (qs1599.pair.com [216.92.131.237]) by seven.pairlist.net (Postfix) with SMTP id 83E4A614A0 for <game_edu@lists7.igda.org>;
+	 Tue, 28 Oct 2014 17:29:54 -0400 (EDT)
+Received: (qmail 7053 invoked by uid 3002);
+	 28 Oct 2014 21:29:54 -0000
+Delivered-To: igda-igda:org-game_edu@igda.org
+Received: (qmail 7050 invoked from network);
+	 28 Oct 2014 21:29:54 -0000
+Received: from localhost (HELO qs1599.pair.com) (127.0.0.1) by localhost with SMTP;
+	 28 Oct 2014 21:29:54 -0000
+Received: from localhost (localhost [127.0.0.1]) by qs1599.pair.com (Postfix) with SMTP id 57643AE01F for <game_edu@igda.org>;
+	 Tue, 28 Oct 2014 17:29:54 -0400 (EDT)
+X-Virus-Check-By: qs1599.pair.com
+Received: from exe.bournemouth.ac.uk (exe.bournemouth.ac.uk [194.66.76.97]) by qs1599.pair.com (Postfix) with ESMTPS id CD01BAE02B for <game_edu@igda.org>;
+	 Tue, 28 Oct 2014 17:29:53 -0400 (EDT)
+Received: from TAME.bournemouth.ac.uk ([10.254.1.20]) by exe.bournemouth.ac.uk ([194.66.76.97]) with mapi;
+	 Tue, 28 Oct 2014 21:29:50 +0000
+From: Christos Gatzidis <cgatzidis@bournemouth.ac.uk>
+To: Games Research Network <GAMESNETWORK@uta.fi>, "eguk-members@eg.org"
+	<eguk-members@eg.org>
+Content-Class: urn:content-classes:message
+Date: Tue, 28 Oct 2014 21:26:35 +0000
+Thread-Topic: VS Games 2015: First Call for papers
+Thread-Index: AQHP8vZNIon64ra0ikSmX+4e8gwozQ==
+Message-ID: <779F9B6AF5F15946B4069E53C079278002A275B3EFD0@TAME.bournemouth.ac.uk>
+References: <779F9B6AF5F15946B4069E53C07927800240A752B71D@TAME.bournemouth.ac.uk>,
+   <779F9B6AF5F15946B4069E53C079278002821748FA1E@TAME.bournemouth.ac.uk>,
+   <779F9B6AF5F15946B4069E53C07927800282187FCC21@TAME.bournemouth.ac.uk>,
+   <779F9B6AF5F15946B4069E53C079278002A275B3E68B@TAME.bournemouth.ac.uk>
+In-Reply-To: <779F9B6AF5F15946B4069E53C079278002A275B3E68B@TAME.bournemouth.ac.uk>
+Accept-Language: en-US, en-GB
+Content-Language: en-GB
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+acceptlanguage: en-US, en-GB
+CC: "fliarokapis@gmail.com" <fliarokapis@gmail.com>, "game_edu@igda.org"
+	<game_edu@igda.org>, "icec@listserver.tue.nl" <icec@listserver.tue.nl>,
+	"3DUI@LISTSERV.VT.EDU" <3DUI@LISTSERV.VT.EDU>
+Subject: [game_edu] VS Games 2015: First Call for papers
+X-BeenThere: game_edu@igda.org
+X-Mailman-Version: 2.1.18-1
+Precedence: list
+List-Id: IGDA Game Education Listserv <game_edu.igda.org>
+List-Unsubscribe: <https://pairlist7.pair.net/mailman/options/game_edu>,
+   <mailto:game_edu-request@igda.org?subject=unsubscribe>
+List-Archive: <https://pairlist7.pair.net/pipermail/game_edu/>
+List-Post: <mailto:game_edu@igda.org>
+List-Help: <mailto:game_edu-request@igda.org?subject=help>
+List-Subscribe: <https://pairlist7.pair.net/mailman/listinfo/game_edu>,
+   <mailto:game_edu-request@igda.org?subject=subscribe>
+Reply-To: IGDA Game Education Listserv <game_edu@igda.org>
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Errors-To: game_edu-bounces@igda.org
+Sender: game_edu <game_edu-bounces@igda.org>
+MIME-Version: 1.0
+
+The Seventh International Conference on Virtual Worlds and Games for Seriou=
+s Applications: VS-Games 2015 will be held in Sk=F6vde, Sweden between Sept=
+ember 16th and 18th.
+
+VS-Games 2015 aims to meet the challenges of the cross-disciplinary communi=
+ty that work around non-leisure applications of games and game technologies=
+ by bringing the community together to share knowledge and experiences. In =
+2015 we will also aim to bridge the gap between so called serious games and=
+ entertainment games. The reason we chose to do this in Sk=F6vde in 2015 is=
+ the strong interest of University of Sk=F6vde and Sweden Game Arena in bot=
+h areas and we sincerely believe that we can learn from each other.
+
+The conference will explore games and virtual worlds in relation to:
+
+
+ *   Applications (e.g. case studies, exemplars, practice examples) illustr=
+ating the practical usefulness and impact of serious games and virtual worl=
+ds
+ *   Applications of entertainment games technologies and solutions in non-=
+leisure contexts
+ *   Methodologies, theories and frameworks (e.g. participatory design meth=
+ods, mixed methodologies for data collection and analysis, cross-disciplina=
+ry methods)
+ *   Evaluation approaches and studies
+Full call for papers and other information available from: http://www.his.s=
+e/vsgames2015/
+
+Important dates and submission:
+
+
+ *   Full Paper submission (8 pages): 31st March 2015
+ *   Short Paper submission (4 pages): 31st March 2015
+ *   Poster Paper submission (2 pages) 31st March 2015
+ *   Notification of review results: 5th June, 2015
+ *   Camera ready due: 30th June, 2015
+Apologies for any cross postings.
+
+Thanks,
+
+Christos
+
+--
+Dr Christos Gatzidis
+BSc(Hon's), MA, PhD, PGCert, MIET
+Academic Grade 9
+Acting Framework Leader for Creative Technology
+
+Bournemouth University
+Room P211
+Faculty of Science and Technology
+Poole House
+Talbot Campus, Poole, BH12 5BB, Dorset
+UK
+
+Phone No: +44 (0) 1202 965135
+Fax No: +44 (0) 1202 965314
+
+Personal Profile at Bournemouth University: http://onlineservices.bournemou=
+th.ac.uk/academicstaff/Profile.aspx?staff=3Dcgatzidis
+Personal Website at City University London: http://vega.soi.city.ac.uk/~abb=
+p171/
+Personal Blog: http://christosgatzidis.blogspot.com/
+
+Doran, J. and Gatzidis, C., 2012. UDK iOS Game Development Beginner's Guide=
+. Birmingham: Packt Publishing.: http://link.packtpub.com/bbexNT
+
+VS-Games 2013 (the 5th International Conference on Games and Virtual Worlds=
+ for Serious Applications), 11-13 September 2013, Bournemouth: http://www.v=
+sgames2013.org/
+
+
+
+[http://www.bournemouth.ac.uk/Images/QueensAwardLogo.jpg]
+
+BU is a Disability Two Ticks Employer and has signed up to the Mindful Empl=
+oyer charter. Information about the accessibility of University buildings c=
+an be found on the BU DisabledGo webpages<http://www.disabledgo.com/en/org/=
+bournemouth-university>
+
+This email is intended only for the person to whom it is addressed and may =
+contain confidential information. If you have received this email in error,=
+ please notify the sender and delete this email, which must not be copied, =
+distributed or disclosed to any other person.
+
+Any views or opinions presented are solely those of the author and do not n=
+ecessarily represent those of Bournemouth University or its subsidiary comp=
+anies. Nor can any contract be formed on behalf of the University or its su=
+bsidiary companies via email.
+_______________________________________________
+game_edu mailing list
+game_edu@igda.org
+https://pairlist7.pair.net/mailman/listinfo/game_edu

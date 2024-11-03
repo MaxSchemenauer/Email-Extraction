@@ -1,0 +1,504 @@
+Received: from DM5PR08MB3514.namprd08.prod.outlook.com (2603:10b6:a03:180::26)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR13CA0013.NAMPRD13.PROD.OUTLOOK.COM; Thu, 19 Dec 2019 08:01:19 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=pass;
+ b=Y/a/65pBN5sdm1LVWN9ITG2qgcmGMCqaCnhwFwV4W5N8DIk/cH0HM4M1+XuuZufsaF+ldBLl+3uE6rt6ujCXsufbFEnZnYhg2XoDqSeSCO+zY1XmSfhHE+g92bUFiXnwE4jF6cAjnqzeHNJ20Pf5hH9H89uBTXC4euSll2DuRz/TmozcXjgJRXLeYolJB3UYKVHjRy4be+xqXP/UxRuO2ZbYR6qcgCeHg+URpKm38qF9clWQiq3Hp4CYK7umh9SWkDNfWpWaRZwQ4U3fkNQMO5k1+T1ic+Rb9n9WoAx2d/7sUctgm3kFjK/gJxpWs7/6i5R6L3S6NqP6svXiwLQhiQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=1pezOGJCvvzH2zeQSbeirLcoNyiVXP/JlVAtPGddFqs=;
+ b=J3yPGaHMu3afdyKgxDzD/Qz1o+V6LkrdMvjKYxM+JJsSRjqBbP1l/HgE3upR/V5/+Fxll37v0NeJyfC4syjam/Q2OO0GD/UrNutsrz5CjYLYJm58ER19rIpPNyyQkMLsRSsYupFUF+TZJ14Gg3S3oqpb0/Ck41fKtIZ8UgRvzmSKXpfRuyAbADYwnx/xuP5FEPKjXWuvftRYEMglbhB2mL7hQ2aOeuzA9dTSMcFmXbHTPFVdrz+2EHQuiEQTx8EbicCXxalgq2Pevzl8HSeP6Woqutj+QgB6XjvnoNmq6DY8pFoZrHKdA/lGDadDTxIFn1d7qAAsRAZ/iqiT8avOpQ==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 40.92.255.74) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=hotmail.com;
+ dmarc=pass (p=none sp=none pct=100) action=none header.from=hotmail.com;
+ dkim=pass (signature was verified) header.d=hotmail.com; arc=pass (0 oda=0
+ ltdi=1)
+Received: from MN2PR02CA0026.namprd02.prod.outlook.com (2603:10b6:208:fc::39)
+ by DM5PR08MB3514.namprd08.prod.outlook.com (2603:10b6:4:64::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2538.18; Thu, 19 Dec
+ 2019 08:01:18 +0000
+Received: from BN3NAM04FT026.eop-NAM04.prod.protection.outlook.com
+ (2603:10b6:208:fc:cafe::73) by MN2PR02CA0026.outlook.office365.com
+ (2603:10b6:208:fc::39) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2538.17 via Frontend
+ Transport; Thu, 19 Dec 2019 08:01:18 +0000
+Authentication-Results: spf=pass (sender IP is 40.92.255.74)
+ smtp.mailfrom=hotmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=hotmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=hotmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of hotmail.com designates
+ 40.92.255.74 as permitted sender) receiver=protection.outlook.com;
+ client-ip=40.92.255.74; helo=APC01-HK2-obe.outbound.protection.outlook.com;
+Received: from APC01-HK2-obe.outbound.protection.outlook.com (40.92.255.74) by
+ BN3NAM04FT026.mail.protection.outlook.com (10.152.92.180) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2559.14 via Frontend Transport; Thu, 19 Dec 2019 08:01:17 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=CsckqVYmR5YymqyVby01Sd/y3mhYOVO4ldjHnbUYy6Ov5lAv3MQqwFMX4ijb+4T8tDu/C6BnsvpaozKiQPK7sPoGQAAczUEYLsCAlBMNZXax2uzFaTf5jyI4tCeC6HRBvQ6tcSjKjH99mg5shOHs5rY50ENfL7E1UJpx/lz9I4kbZlBU6J2hxcBBg4a1jWjw+5yoV+RpRdIwVPb2sU+M9UTFpCUwrpew8VCZGHjJPf1LnBISmpzklBnJi3vy4mRrtB60UFzxIUPfm8bdBptU2RgPx+BXIhPJZLA4xEpkgCUnar/YVp/ucpByzdPpu0MRo6xaVx4lv0vxXYgS+iB5SQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=1pezOGJCvvzH2zeQSbeirLcoNyiVXP/JlVAtPGddFqs=;
+ b=fb6HpasY5Z+L1ei23D54Yh11/ETtzqlk3H5Q8CUx9NdmrGQ949jeXjeiX1CNsS/+wTvp4ekwn6gAjfeRWRK6djKBxG+/049X5hAm3f9IJjd90fx1pzGE4NfS0h624F48HtZu02mJcDn0UgBA/VvMFed/9c74AsM7+iC2Z37ArDljxUHTHgHPlGqXlphhImRx8ZWjDXxuBLZAkPv4Ld8llD7vSsfEoKoa3miyLozAjOrbQxyOhWiZam5kC4dqWopkoJ2BFVqyzSjvMhYv/CYGTHSHiq3CMr+hbD2voilaRRX4ay5A59ICTxjOKqhFZ9LUz3tAKT2Lbcub9Ze3777wDg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=1pezOGJCvvzH2zeQSbeirLcoNyiVXP/JlVAtPGddFqs=;
+ b=NtiQMs4Nve0N09AkGfn0yNLxc8OMoSGL/zo6iT2SisxDWNWJec8ONu1cS1GDT3GxZacz7KOZOD9Lk37Eh5dyoSBSUngQjNq0IVWWTagBZq9CQamESYvMLxj6D7PS65ZZvb1exttvBqdv0tVG3JetRI8HjkD2Cu8UU6OtTdc/QMMDjHXEQ+EVHhGC/GkMp0f3PPqNXw5XaqjyXewFqfkihMww/ocm7Z5GeZQtlwxyBKIrAJ6wf3Rw1xxWAGVE4uuxxva+DqszTY4xa+k+PwXxYnIGM5r3wmPTDi/bhNK7yg5rjf3knAXMlcizxjfZwuazeeo3W7rTyycsd562Dxt9xA==
+Received: from HK2APC01FT011.eop-APC01.prod.protection.outlook.com
+ (10.152.248.52) by HK2APC01HT141.eop-APC01.prod.protection.outlook.com
+ (10.152.248.234) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2559.14; Thu, 19 Dec
+ 2019 08:01:05 +0000
+Received: from HK0PR01MB2579.apcprd01.prod.exchangelabs.com (10.152.248.54) by
+ HK2APC01FT011.mail.protection.outlook.com (10.152.248.153) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2559.14 via Frontend Transport; Thu, 19 Dec 2019 08:01:05 +0000
+Received: from HK0PR01MB2579.apcprd01.prod.exchangelabs.com
+ ([fe80::58d4:afa2:632b:196a]) by HK0PR01MB2579.apcprd01.prod.exchangelabs.com
+ ([fe80::58d4:afa2:632b:196a%7]) with mapi id 15.20.2538.019; Thu, 19 Dec 2019
+ 08:01:05 +0000
+From: mia jack <MIAliyan123@hotmail.com>
+Subject: CFP : International Journal of Education (IJE)
+Thread-Topic: CFP : International Journal of Education (IJE)
+Thread-Index: AQHVtkJ1RTr5+C+nrE66pNMt7Crd1A==
+Date: Thu, 19 Dec 2019 08:01:05 +0000
+Message-ID:
+ <HK0PR01MB2579ABE77F415C49CE8CEE25E9520@HK0PR01MB2579.apcprd01.prod.exchangelabs.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-incomingtopheadermarker:
+ OriginalChecksum:A71C2126D9791B8BFFA8DA66426CC176DCAE685CE97FB01417DCE7B8F3ED284E;UpperCasedChecksum:A1C184B462919E08BED92AE29B25E34A11A930A0F1A93920452AB8A1CE8FFDDF;SizeAsReceived:9273;Count:41
+x-tmn: [1YlwrGDTaG6p251Vu/LOVcQawz0cpeo3/a+cd+S5//KLkUYTg+jgZQ==]
+x-ms-publictraffictype: Email
+x-incomingheadercount: 41
+x-eopattributedmessage: 1
+X-MS-Office365-Filtering-Correlation-Id: 9f16ec76-9954-40c1-dde1-08d78459a08c
+x-ms-exchange-slblob-mailprops:
+ WdFS8CKwqru4ISP11g/jnfFqsru3DYf1V0Vuz4gxGHG7HbCGkmqYiIf1zbMth7b5aFtvmzJt3eANzUOQC5cIvcpoCfhzygajI/X60oIjNf9beb3rTb9wKmtiOFFqF7VRAYb66jRjnhVCoYdW7WJJ9LdBB+CTTsYKH+eNbTQwk2WESvllgL7ltfl0jYPaYNavIagzB1V57YV1lnnRLWfZO9qBEZesN98OSHxd4kRNV/Yo3GOdADRjmCyCyTkrNuRyb+M2MKqwWgwlpBvds1lIcil5NJVeoJkAg0oa4PY+tbTpiZCKmMwJZXUo+jMLkJIj6mgo2LEJWkIvyVkku+XfShP8dEGITDyab6LV7aKujGrl+UZSyyAqc5xhFkGdY4khlqMQ4aVsft26uxIvr+BnL/c47Dwj9rzqr1BlNRAQBqa6PGjBEqqXNjJbLSdo1S4cAFUQmltgvgyZK3Q+5DUTnAIcXw+3gTzX7MX5zTWujZuZ/oTsmKYoZhNfiOJLP5e/eiMkymxDGs6Z4dUBhpnUGD6JTHPSRIBiZ602/AZAuanfLN9zj0CqiYIKDX+oG6FjeWyD6EMeCOd42nzHALAeU7nYdT64AIl9X1SSi0OQ98bJhwtC6/tlAxu+W2U8pNSjdp+LeTe7HIDY3llEbObMZV33VnuWeGFF7FS3fR9Gvr2rxME03GMQSpHjTsG6SEVcVCLmHpz8QvbapTuY10XBoyF3Vbijk1xkoHOxIiCNy97nGQGtwokV7arZWuiiqcxke2SG3vvg1dGDXMGLgqwIvJpp7A2CEHVXspYxcx9fownuy8BWokICQPUBiwKLktA4lwbv3A6bYpYAbBKw11rFN7RwXU96T1+b
+X-MS-TrafficTypeDiagnostic: HK2APC01HT141:|DM5PR08MB3514:
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ KcwJGP7q3MjezlLbpRLXruGHjw6FN/ORwHontTl9YAdMG1lwl/cOyDQfNLu6oDotHZkaJ7UatyirhGUMsH5PJIn9qBooleLNucdMWmxkW19mLXDaA+/M8nC0VppNEWc/TyuWBquFUSFqMNvgwBntJGW5A32gIj66zhlPm3Hy9FJVg/h7bq1VjTM2kipys3kzStw2xByC5U2LJRllcbsswyP8CNk7DW+i5x8J/JQJ3Hk=
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/alternative;
+	boundary="_000_HK0PR01MB2579ABE77F415C49CE8CEE25E9520HK0PR01MB2579apcp_"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HK2APC01HT141
+To: Undisclosed recipients:;
+Return-Path: MIAliyan123@hotmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 19 Dec 2019 08:01:17.6756
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 9f16ec76-9954-40c1-dde1-08d78459a08c
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ BN3NAM04FT026.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted:
+ BN3NAM04FT026.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:40.92.255.74;IPV:;CTRY:HK;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(189003)(199004)(21615005)(966005)(109986005)(82202003)(19627405001)(19625735003)(9686003)(6506007)(2160300002)(246002)(4006050)(75640400001)(33656002)(1096003)(7066003)(8676002)(7636002)(58800400005)(52536014)(336012)(22186003)(86362001)(7696005)(26005)(55016002)(5660300002)(356004)(127190200002);DIR:INB;SFP:;SCL:1;SRVR:DM5PR08MB3514;H:APC01-HK2-obe.outbound.protection.outlook.com;FPR:;SPF:Pass;LANG:en;PTR:mail-oln040092255074.outbound.protection.outlook.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT026.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 3ea83252-98b5-4254-080a-08d784599973
+X-MS-Oob-TLC-OOBClassifiers: OLM:7691;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 19 Dec 2019 08:01:17.2403
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 9f16ec76-9954-40c1-dde1-08d78459a08c
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM5PR08MB3514
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.3477638
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2559.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?iso-8859-1?Q?zzE6vtbiI2YJ3HfHHe03e50WhFOl3dpuxdyn3G4+bB2G+iGm7qqFx07Jor?=
+ =?iso-8859-1?Q?XOCTkpiGosOpVvganNH1YY7zQn6nuXR/U+9fGieX7J1ZnjX/iL7TCC+7Sk?=
+ =?iso-8859-1?Q?UUO65mOxDJoeVr3RzFdkL8esSeC01WN2vi00zGYsvCVZOfIeWGlryk7rve?=
+ =?iso-8859-1?Q?ApMn2jQGIq6fxVu9VlJjobIf+9hxekiEEAec35J7lzgdcseP0VpKrl2i42?=
+ =?iso-8859-1?Q?11KZp8j1XnU7/MHqMhFq+8+gQsc8x0YT8W6Rk+48JTFRwnJ6vI6Mq0A1xD?=
+ =?iso-8859-1?Q?sx33v3GtcMyCozPsWWP3yVoObQs3u/ml8K8dWdsqTrKwZ8BZehv06U7GqR?=
+ =?iso-8859-1?Q?sdZlTMSpF0tMa8+KSpe8L5GvjkDyaHO+PZvOTJyDac1tJ72XN94/30C72K?=
+ =?iso-8859-1?Q?TQ7UrQ8tetv5nci8kgyqxFq25rj2dbpRUK/QjZMQZjd3Ryy3Ih7v/q5Hhd?=
+ =?iso-8859-1?Q?56s6o/PdUMecuyYyZv4mWOJi9VrNBVuUuJLePAefTL5mih/QYT7f6SYGKu?=
+ =?iso-8859-1?Q?VetBZSW3ekOLUxo71rANAnwdntxq/W8OG96BrFaxFtwlQZ3SRPHuzwYmYO?=
+ =?iso-8859-1?Q?ZVGtk2SO9pO0pffwq9XKIEEr9T+s1C+2tFGvqWi+DUpcY7tKK3PRgf76HK?=
+ =?iso-8859-1?Q?YtfLK4+kF6TOXhtboZV4JH2YEnZ8jDPtzxKs+4orrIq9g3gE1Db2KruNYQ?=
+ =?iso-8859-1?Q?LxrNJy6LoA2O8/WEprYxyIxNvNwQXtKC6LI2ZwaB6DACG9IClno6iqg24A?=
+ =?iso-8859-1?Q?9sntP7lutQ8zJipYr0Qy9VWYopHcMIKO0hs1aCyh93ut3VpHzkstNe5Akj?=
+ =?iso-8859-1?Q?hP8WdMfjHOWtyKeN2NpeClGqfHGdU7kOygHDg1rc4WiAlft+VB4ZkR/wbr?=
+ =?iso-8859-1?Q?QsWyYPftdZ5vuL6gvZNx0wzmelFB0n63IH08tBN5VR0fogYHC/Cv+LN/I+?=
+ =?iso-8859-1?Q?dbEx83MJdDqLbi3e1ghg/m7dhqju/W3X75PV+p6I5W+kwFrj2ui4Jfwh/8?=
+ =?iso-8859-1?Q?eh9GqoYAp3hIkGlWtXPeR9R57bLDb5n1xUzaG/s23cW2QvbVdm9XtWKFYa?=
+ =?iso-8859-1?Q?T68INaVnXSQKohsK0hNd23r33XECaYBVCXxDzrLxo4AcFFu+1wwr/pvmSD?=
+ =?iso-8859-1?Q?eVjmNfFd7BzN7P7bHeesoDiBd/a23XncEH56Gc268bcnXckUe7wuMz2Hk4?=
+ =?iso-8859-1?Q?GaE/Ihq0oc6Xy5EpN3aja+VAQQcRG24Lt2k=3D?=
+MIME-Version: 1.0
+
+--_000_HK0PR01MB2579ABE77F415C49CE8CEE25E9520HK0PR01MB2579apcp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+International Journal of Education (IJE)
+
+ISSN : 1839-519N 2974-5962 (Print)
+http://flyccs.com/jounals/IJEMS/Home.html
+
+
+
+Scope
+
+International Journal of Education (IJE) is a Quarterly peer-reviewed and r=
+efereed open access journal that publishes articles which contribute new re=
+sults in all areas of Education. The journal is devoted to the publication =
+of high quality papers on theoretical and practical aspects of Educational =
+research. The goal of this journal is to bring together researchers and pra=
+ctitioners from academia and industry to focus on Educational advancements,=
+ and establishing new collaborations in these areas. Original research pape=
+rs, state-of-the-art reviews are invited for publication in all areas of Ed=
+ucation.
+
+Topics of interest include, but are not limited to, the following
+
+  *   Education Policy and Leadership
+  *   Business Education
+  *   Educating the educators
+  *   Professional Development for teachers in ICT
+  *   Teacher Evaluation
+  *   Virtual and remote laboratories
+  *   Pedagogy Enhancement with E-Learning
+  *   Course Management Systems
+  *   Web-based tools for education
+  *   Games and simulations in Education
+  *   Learning / Teaching Methodologies and Assessment
+  *   Curriculum, Research and Development
+  *   Counselor Education
+  *   Integrating technology in curriculum: Challenges & Strategies
+  *   Collaborative & Interactive Learning
+  *   Tools for 21st Century learning
+  *   Learning Analysis
+  *   Student Selection Criteria in Interdisciplinary Studies
+  *   Global Issues in Education and Research
+  *   Technology Support for Pervasive Learning
+  *   Artificial Intelligence, Robotics and Human computer Interaction in E=
+ducation
+  *   Mobile/ubiquitous computing in education
+  *   Web 2.0, Social Networking, Blogs and Wikis
+  *   Multimedia in Education
+
+Paper Submission
+
+Authors are invited to submit papers for this journal through Submission Sy=
+stem<http://flyccs.com/submission/>. Submissions must be original and shoul=
+d not have been published previously or be under consideration for publicat=
+ion while being evaluated for this Journal.
+
+Important Dates
+
+  *   Submission Deadline :December 21, 2019
+  *   Notification :December 27, 2019
+  *   Final Manuscript Due :Janaury 30, 2020
+  *   Publication Date : Determined by the Editor-in-Chief
+
+
+
+TO SUBMIT YOUR PAPER, PLEASE CLICK THE FOLLOWING LINK Submit<http://flyccs.=
+com/submission/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--_000_HK0PR01MB2579ABE77F415C49CE8CEE25E9520HK0PR01MB2579apcp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size=
+: 12pt; color: rgb(0, 0, 0);">
+<p align=3D"center" style=3D"margin: 0in 0in 10pt; line-height: 115%; font-=
+size: 11pt; font-family: Calibri, sans-serif;margin-right: 0in; margin-left=
+: 0in; font-size: 12pt; font-family: &quot;Times New Roman&quot;, serif;mar=
+gin-left:-9.0pt;text-align:center;=0A=
+text-indent:-4.5pt">
+<b><span style=3D"font-size:14.0pt; mso-bidi-font-size:12.0pt; font-family:=
+=0A=
+&quot;Times New Roman&quot;,&quot;serif&quot;; color:red; background:white"=
+>International Journal of Education (IJE)
+</span></b></p>
+<h5 align=3D"center" style=3D"margin: 10pt 0in 0.0001pt; line-height: 115%;=
+ break-after: avoid; font-size: 11pt; font-family: Cambria, serif; color: r=
+gb(36, 63, 96); font-weight: normal;margin-top:7.5pt;margin-right:0in;margi=
+n-bottom:7.5pt;=0A=
+margin-left:0in;text-align:center;background:white">
+<b><span style=3D"font-size:=0A=
+12.0pt; font-family:&quot;Times New Roman&quot;,&quot;serif&quot;; color:#8=
+DB3E2; mso-themecolor:text2; mso-themetint:102">ISSN : 1839-519N 2974-5962 =
+(Print)</span></b></h5>
+<h5 align=3D"center" style=3D"margin: 10pt 0in 0.0001pt; line-height: 115%;=
+ break-after: avoid; font-size: 11pt; font-family: Cambria, serif; color: r=
+gb(36, 63, 96); font-weight: normal;margin-top:7.5pt;margin-right:0in;margi=
+n-bottom:7.5pt;=0A=
+margin-left:0in;text-align:center;background:white">
+<a href=3D"http://flyccs.com/jounals/IJEMS/Home.html"><b><span style=3D"fon=
+t-size:12.0pt; font-family:&quot;Times New Roman&quot;,&quot;serif&quot;; c=
+olor:#548DD4; mso-themecolor:text2; mso-themetint:153">http://flyccs.com/jo=
+unals/IJEMS/Home.html</span></b></a><b><span style=3D"font-size:12.0pt; fon=
+t-family:&quot;Times New Roman&quot;,&quot;serif&quot;; color:#548DD4; mso-=
+themecolor:text2; mso-themetint:153">
+<span style=3D"mso-spacerun:yes">&nbsp;</span></span></b></h5>
+<p align=3D"center" style=3D"margin: 0in 0in 10pt; line-height: 115%; font-=
+size: 11pt; font-family: Calibri, sans-serif;margin-right: 0in; margin-left=
+: 0in; font-size: 12pt; font-family: &quot;Times New Roman&quot;, serif;tex=
+t-align:center">
+<b><span style=3D"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;=
+"><o:p>&nbsp;</o:p></span></b></p>
+<p style=3D"margin: 0in 0in 10pt; line-height: 115%; font-size: 11pt; font-=
+family: Calibri, sans-serif;margin-right: 0in; margin-left: 0in; font-size:=
+ 12pt; font-family: &quot;Times New Roman&quot;, serif;tab-stops:403.5pt">
+<b><span style=3D"font-size:14.0pt; mso-bidi-font-size:11.0pt; font-family:=
+&quot;Times New Roman&quot;,&quot;serif&quot;; color:#4F6228; mso-themecolo=
+r:accent3; mso-themeshade:128">Scope<span style=3D"mso-tab-count:1">&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b></p>
+<p style=3D"margin: 0in 0in 10pt; line-height: 115%; font-size: 11pt; font-=
+family: Calibri, sans-serif;margin-right: 0in; margin-left: 0in; font-size:=
+ 12pt; font-family: &quot;Times New Roman&quot;, serif;text-align:justify">
+<b><span style=3D"font-size:12.0pt; font-family:&quot;Times New Roman&quot;=
+,&quot;serif&quot;; color:#333333; background:white">International Journal =
+of Education (IJE)
+</span></b><span style=3D"font-size:12.0pt; font-family:&quot;Times New Rom=
+an&quot;,&quot;serif&quot;; color:#333333; background:white">is a Quarterly=
+ peer-reviewed and refereed open access journal that publishes articles whi=
+ch contribute new results in all areas of Education. The
+ journal is devoted to the publication of high quality papers on theoretica=
+l and practical aspects of Educational research. The goal of this journal i=
+s to bring together researchers and practitioners from academia and industr=
+y to focus on Educational advancements,
+ and establishing new collaborations in these areas. Original research pape=
+rs, state-of-the-art reviews are invited for publication in all areas of Ed=
+ucation.<b>
+</b></span><b><span style=3D"font-size:14.0pt; mso-bidi-font-size:11.0pt; f=
+ont-family:&quot;Times New Roman&quot;,&quot;serif&quot;; color:#4F6228; ms=
+o-themecolor:accent3; mso-themeshade:128"></span></b></p>
+<p style=3D"margin: 0in 0in 10pt; line-height: 115%; font-size: 11pt; font-=
+family: Calibri, sans-serif;margin-right: 0in; margin-left: 0in; font-size:=
+ 12pt; font-family: &quot;Times New Roman&quot;, serif;text-align:justify">
+<b><span style=3D"font-size:14.0pt; mso-bidi-font-size:11.0pt; font-family:=
+&quot;Times New Roman&quot;,&quot;serif&quot;; color:#4F6228; mso-themecolo=
+r:accent3; mso-themeshade:128">Topics of interest include, but are not limi=
+ted to, the following</span></b></p>
+<ul style=3D"margin-bottom: 0in">
+<li><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;=
+,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Educatio=
+n Policy and Leadership</span></li><li><span style=3D"font-size:12.0pt;font=
+-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Business=
+ Education</span></li><li><span style=3D"font-size:12.0pt;font-family:&quot=
+;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Educatin=
+g the educators</span></li><li><span style=3D"font-size:12.0pt;font-family:=
+&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Professi=
+onal Development for teachers in ICT</span></li><li><span style=3D"font-siz=
+e:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Teacher =
+Evaluation</span></li><li><span style=3D"font-size:12.0pt;font-family:&quot=
+;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Virtual =
+and remote laboratories</span></li><li><span style=3D"font-size:12.0pt;font=
+-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Pedagogy=
+ Enhancement with E-Learning</span></li><li><span style=3D"font-size:12.0pt=
+;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Course M=
+anagement Systems</span></li><li><span style=3D"font-size:12.0pt;font-famil=
+y:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Web-base=
+d tools for education</span></li><li><span style=3D"font-size:12.0pt;font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Games an=
+d simulations in Education</span></li><li><span style=3D"font-size:12.0pt;f=
+ont-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Learning=
+ / Teaching Methodologies and Assessment</span></li><li><span style=3D"font=
+-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Curricul=
+um, Research and Development</span></li><li><span style=3D"font-size:12.0pt=
+;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Counselo=
+r Education</span></li><li><span style=3D"font-size:12.0pt;font-family:&quo=
+t;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Integrat=
+ing technology in curriculum: Challenges &amp; Strategies</span></li><li><s=
+pan style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot=
+;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Collabor=
+ative &amp; Interactive Learning</span></li><li><span style=3D"font-size:12=
+.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Tools fo=
+r 21st Century learning</span></li><li><span style=3D"font-size:12.0pt;font=
+-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Learning=
+ Analysis</span></li><li><span style=3D"font-size:12.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Student =
+Selection Criteria in Interdisciplinary Studies</span></li><li><span style=
+=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&qu=
+ot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Global I=
+ssues in Education and Research</span></li><li><span style=3D"font-size:12.=
+0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Technolo=
+gy Support for Pervasive Learning</span></li><li><span style=3D"font-size:1=
+2.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Artifici=
+al Intelligence, Robotics and Human computer Interaction in Education</span=
+></li><li><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman=
+&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Mobile/u=
+biquitous computing in education</span></li><li><span style=3D"font-size:12=
+.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Web 2.0,=
+ Social Networking, Blogs and Wikis</span></li><li><span style=3D"font-size=
+:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Multimed=
+ia in Education</span><br>
+<br>
+<b><span style=3D"font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:&q=
+uot;Times New Roman&quot;,&quot;serif&quot;;=0A=
+color:#4F6228;mso-themecolor:accent3;mso-themeshade:128">Paper Submission</=
+span></b><br>
+<br>
+<span style=3D"font-size:12.0pt;=0A=
+line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"=
+>Authors are invited to submit papers for this journal through
+</span><a href=3D"http://flyccs.com/submission/"><b><span style=3D"font-siz=
+e:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;">Submission System</span></b></a><b><span style=3D"font-size:12.0p=
+t;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot=
+;">.</span></b><span style=3D"font-size:12.0pt;line-height:115%;font-family=
+:&quot;Times New Roman&quot;,&quot;serif&quot;">
+ Submissions must be original and should not have been published previously=
+ or be under consideration for publication while being evaluated for this J=
+ournal.
+</span><br>
+<br>
+<b><span style=3D"font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:11=
+5%;font-family:=0A=
+&quot;Times New Roman&quot;,&quot;serif&quot;;color:#4F6228;mso-themecolor:=
+accent3;mso-themeshade:=0A=
+128">Important Dates</span></b></li></ul>
+<ul style=3D"margin-bottom: 0in">
+<li><b><span style=3D"font-size:12.0pt;font-family:=0A=
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot=
+;Times New Roman&quot;;color:crimson">Submission Deadline :December 21, 201=
+9</span></b></li><li><span style=3D"font-size:12.0pt;font-family:&quot;Time=
+s New Roman&quot;,&quot;serif&quot;;=0A=
+color:#333333">Notification :December 27, 2019</span></li><li><span style=
+=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&qu=
+ot;;=0A=
+color:#333333">Final Manuscript Due :Janaury 30, 2020</span></li><li><span =
+style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;;=0A=
+color:#333333">Publication Date : Determined by the Editor-in-Chief</span><=
+br>
+<br>
+<span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;;mso-fareast-font-family:=0A=
+&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span><br>
+<br>
+<span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;">TO SUBMIT YOUR PAPER, PLEASE CLICK THE FOLLOWING LINK
+</span><a href=3D"http://flyccs.com/submission/"><span style=3D"font-size:1=
+2.0pt;font-family:=0A=
+&quot;Times New Roman&quot;,&quot;serif&quot;">Submit</span></a></li></ul>
+<p style=3D"margin-right: 0in; margin-left: 0in; font-size: 12pt; font-fami=
+ly: &quot;Times New Roman&quot;, serif;margin: 0in 0in 0.0001pt 0.5in; line=
+-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;margin-bot=
+tom:0in;margin-bottom:.0001pt;=0A=
+mso-add-space:auto;line-height:normal">
+<span style=3D"font-size:12.0pt;=0A=
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-=
+family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+<p style=3D"margin-right: 0in; margin-left: 0in; font-size: 12pt; font-fami=
+ly: &quot;Times New Roman&quot;, serif;margin: 0in 0in 0.0001pt 0.5in; line=
+-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;margin-bot=
+tom:0in;margin-bottom:=0A=
+.0001pt;mso-add-space:auto;line-height:normal">
+<span style=3D"font-size:12.0pt;=0A=
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-=
+family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+<p style=3D"margin-right: 0in; margin-left: 0in; font-size: 12pt; font-fami=
+ly: &quot;Times New Roman&quot;, serif;margin: 0in 0in 10pt 0.5in; line-hei=
+ght: 115%; font-size: 11pt; font-family: Calibri, sans-serif;margin-bottom:=
+0in;margin-bottom:.0001pt;=0A=
+mso-add-space:auto;line-height:normal">
+<span style=3D"font-size:12.0pt;=0A=
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-=
+family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+<p style=3D"margin-right: 0in; margin-left: 0in; font-size: 12pt; font-fami=
+ly: &quot;Times New Roman&quot;, serif;margin-top:0in;margin-right:0in;marg=
+in-bottom:7.5pt;margin-left:0in;=0A=
+background:white">
+<span style=3D"font-size:10.5pt;font-family:&quot;Helvetica&quot;,&quot;san=
+s-serif&quot;;=0A=
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+<p style=3D"margin-right: 0in; margin-left: 0in; font-size: 12pt; font-fami=
+ly: &quot;Times New Roman&quot;, serif;margin-top:0in;margin-right:0in;marg=
+in-bottom:7.5pt;margin-left:0in;=0A=
+background:white">
+<span style=3D"font-size:10.5pt;font-family:&quot;Helvetica&quot;,&quot;san=
+s-serif&quot;;=0A=
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+<p style=3D"margin-right: 0in; margin-left: 0in; font-size: 12pt; font-fami=
+ly: &quot;Times New Roman&quot;, serif;margin-top:0in;margin-right:0in;marg=
+in-bottom:7.5pt;margin-left:0in;=0A=
+background:white">
+<span style=3D"font-size:10.5pt;font-family:&quot;Helvetica&quot;,&quot;san=
+s-serif&quot;;=0A=
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+<br>
+</div>
+</body>
+</html>
+
+--_000_HK0PR01MB2579ABE77F415C49CE8CEE25E9520HK0PR01MB2579apcp_--

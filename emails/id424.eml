@@ -1,0 +1,823 @@
+Received: from BN7PR08MB4979.namprd08.prod.outlook.com (2603:10b6:a02:a8::39)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR03CA0026.NAMPRD03.PROD.OUTLOOK.COM; Wed, 12 Jun 2019 23:12:20 +0000
+Received: from DM3PR08CA0011.namprd08.prod.outlook.com (2603:10b6:0:52::21) by
+ BN7PR08MB4979.namprd08.prod.outlook.com (2603:10b6:408:28::29) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1987.11; Wed, 12 Jun 2019 23:12:15 +0000
+Received: from SN1NAM04FT041.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::202) by DM3PR08CA0011.outlook.office365.com
+ (2603:10b6:0:52::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.15 via Frontend
+ Transport; Wed, 12 Jun 2019 23:12:15 +0000
+Authentication-Results: spf=none (sender IP is 37.187.37.159)
+ smtp.mailfrom=jmest.org; calpoly.edu; dkim=fail (no key for signature)
+ header.d=jmest.org;calpoly.edu; dmarc=none action=none
+ header.from=jmest.org;compauth=pass reason=105
+Received-SPF: None (protection.outlook.com: jmest.org does not designate
+ permitted sender hosts)
+Received: from server.jmest.org (37.187.37.159) by
+ SN1NAM04FT041.mail.protection.outlook.com (10.152.89.19) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1987.11 via Frontend Transport; Wed, 12 Jun 2019 23:12:14 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=jmest.org; s=default;
+	h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From; bh=JMiYQSh44baF9ajOw+x8WjjflzsSTK+Fdykk8fUpCO4=;
+	b=o04lbUwpdg/+KI9ZH1nEUIA3z/ljDcyK9hchfPcaCuri8e8qxjMnOvBiAP8QOgSyDvJ+acS1S1Z/nOBnGbGuGSXxZoYoWXlU7oC2jrCHOpvPAKCZ4azpHM3zNLxMM/M47exfa1INQmQwMi3MavUa+o8Iwm6T3UOandSCpin88X0=;
+Received: from [88.241.46.114] (port=24875 helo=DESKTOPH5NJSM1)
+	by server.jmest.org with esmtpsa (UNKNOWN:DHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.82)
+	(envelope-from <editor@jmest.org>)
+	id 1hbCPU-0001wf-KP; Thu, 13 Jun 2019 01:12:05 +0200
+From: "Journal of Multidisciplinary Engineering Science and Technology" <editor@jmest.org>
+To: <editor@jmest.org>
+Subject: Invitation from Editor in Chief, JMEST
+Date: Thu, 13 Jun 2019 02:06:57 +0300
+Message-ID: <12ad01d52173$929fa7b0$b7def710$@jmest.org>
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_12AE_01D5218C.B7EF50B0"
+X-Mailer: Microsoft Outlook 14.0
+Content-Language: en-us
+Thread-Index: AdUhc4HQTszjhXV6R92IjzZZMcyk+g==
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - server.jmest.org
+X-AntiAbuse: Original Domain - calpoly.edu
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - jmest.org
+X-Get-Message-Sender-Via: server.jmest.org: authenticated_id: editor@jmest.org
+Return-Path: editor@jmest.org
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Jun 2019 23:12:14.6922
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 1288b513-911b-48ca-3dac-08d6ef8b682f
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:37.187.37.159;IPV:NLI;CTRY:;EFV:NLI;SFV:NSPM;SFS:(10001)(428003)(286005)(189003)(199004)(16586007)(102836004)(9786002)(956004)(2616005)(476003)(2160300002)(71636004)(53386004)(61296003)(37006003)(8676002)(126002)(1096003)(7826002)(81156014)(81166006)(6862004)(486006)(4006050)(46816001)(75216001)(36756003)(50226002)(26005)(71190400001)(54896002)(236005)(53946003)(14444005)(71366001)(7066003)(81686011)(966005)(45086001)(44736005)(790700001)(1420700001)(69596002)(6966003)(2351001)(19627405001)(6306002)(21004)(6200100001)(356004)(75640400001)(6666004)(606006)(426003)(86362001)(336012);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4979;H:server.jmest.org;FPR:;SPF:None;LANG:en;PTR:159.ip-37-187-37.eu;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT041.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 1288b513-911b-48ca-3dac-08d6ef8b682f
+X-Microsoft-Antispam:
+ BCL:5;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(1404068)(71702078);SRVR:BN7PR08MB4979;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4979:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Jun 2019 23:12:14.4140
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1288b513-911b-48ca-3dac-08d6ef8b682f
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4979
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.5960819
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1965.000
+Importance: high
+X-Priority: 1
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?lybMcgh++n5LO0EOdjRWoMZjRGVKEIaD0eFFRWJ9qBHuqKC2Kbbdy2KAxNAM?=
+ =?us-ascii?Q?BRnDMCNxtKpRdpKYVDZngBxdVod9MTWxOnYIoFgJjDcHKkBU7pP7h0p7PfY6?=
+ =?us-ascii?Q?zZKynTPJnJBFhOTs+codzYPyZxGLp7YTM1UH9bAyvvhRaxNGDtNxLIgYAjb/?=
+ =?us-ascii?Q?ASg7km7ypTGgac+6B1uPvpmuuqHD+d+frJZYsUBIZlytgu5C79ciDkZc7rNm?=
+ =?us-ascii?Q?QPiYSFJWj6JvYDIbm6TuIezUXTNvPWUjCpO6/CQ3qGjs4PUoZoWVkh95Cnzw?=
+ =?us-ascii?Q?PU1Xpt1kvnxQdn4cKnSANsrc506iFKzdwfY4dgclFoPbKbITZQk+KlFIZ4v0?=
+ =?us-ascii?Q?BHTDCD8BpXGQmjtriQEz1L9Hpcp54hopgo4HZyJ3BtMtGGNlyFApVR4PJufe?=
+ =?us-ascii?Q?svBHj7mSCpqV3lPWBt/GCmxtLEjeaaEWC5Xg1bcqwoNauAJvB8KlvE3CJcvc?=
+ =?us-ascii?Q?e+zI0qnMaz0Pc/s73P14gsbP2fHeMOwOZ+5Yl+t7aXdjescv/z8UObOFmQIq?=
+ =?us-ascii?Q?ffIFEIGDdUztPpZIovNo5wQWddbVc3TiFI39GrAQ1bnPHhLMVP/01HHKy4aS?=
+ =?us-ascii?Q?2SUWYfuQ9rb6aQ2m0KT/D2qsUz6T9LWBLfuRuUMUPBvMMgkExBzFahX/Sc9a?=
+ =?us-ascii?Q?jx0aP0xClnM+izmfe+XoS0IxscYY0sFFdLyxbcZt0cuOjlwXxyLBWGTGKFTC?=
+ =?us-ascii?Q?S0zBotPkJCd41r/kVth51QJsB0IgEepKmmmeAyLwZfIjaftaq13YPEaUBaIw?=
+ =?us-ascii?Q?CJPV26BqWM0DwdssiZodpQBX+igsNjxrWUW16Q4ZxKmrrSyi5cDsbZ0Lq7mI?=
+ =?us-ascii?Q?T4Wn67rLJnNqC+7kcx28/pn2PHsaAT7WIZNC8UkJO1ZVj+guRdck72FxDlPD?=
+ =?us-ascii?Q?6WxV1MjcUikxeyE1VIfv1k7nYyDLIuGakN7cbI2rkzHBAPCHG7oUpLORliXk?=
+ =?us-ascii?Q?COCx0GnE8hkDPqSsMPZ6Vwg4pTRm8EOXSQRJ3wmRZPU06PLdUhLUY5h53VVH?=
+ =?us-ascii?Q?nIv1p0xitSV5GgVs1xsIwQMa6A=3D=3D?=
+MIME-Version: 1.0
+
+------=_NextPart_000_12AE_01D5218C.B7EF50B0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+
+Please, accept our apologies if you receive multiple copies of this call for
+papers. This email is for academic/editorial information and not for
+commercial purposes. This e-mail was sent to you as an active researcher in
+the field of Engineering and Science. invitation code (JMEST). 
+
+ 	
+
+Dear Researcher,
+
+ 	
+
+You are cordially invited to submit or recommend a manuscript to the Journal
+of Multidisciplinary Engineering Science and Technology (JMEST, ISSN:
+2458-9403, which is a peer-reviewed open access academic journal and has
+been indexed by 20 databases so far. 
+ 
+ <http://www.jmest.org/> http://www.jmest.org
+
+Call for Papers - Volume. 6 Issue. 6 (25th June - 2019) 
+
+JMEST (ISSN: 2458-9403) is the one of the leading, renowned, open access,
+International Engineering Journal. 
+It is our immense pleasure to invite you to submit manuscript/paper of your
+research/review/study in any engineering research area for publication in
+the upcoming issue of our popular e-journal JMEST.
+
+Author Benefits: 
+- Reliable, Easy, Transparent & Rapid Publication Process
+- Zero-tolerance to Plagiarism- All submissions will be checked by
+iThenticate plagiarism prevention software before being sent to reviewers.
+- JMEST is globally accepted one of the well-known International Engineering
+Journal.
+- Full Paper Soft Copy with full colour Journal Cover Page (Online Version) 
+- Soft Copy of "Certificate of Publication" of all authors (instantly
+available after publication) 
+- Renowned & widely acceptable in major Universities, Institutions around
+the world.
+- Access to featured rich Online Author Manager Account at JMEST - EMS
+(Editorial
+  Management System) 
+- Paper will be published online.
+- We have team of prestigious academic editors/reviewers including from
+IITs, NITs etc. 
+- Indexing of paper in all major online bibliographic journal databases like
+Google Scholar.
+- Open Access Journal Database for High visibility and promotion of your
+article.
+- Author Research Guidelines & Support
+
+  <http://www.jmest.org/call-for-paper> Check more Details about JMEST -
+June - 2019 Call for Papers
+
+  <http://www.jmest.org/?page_id=153> Submit your Manuscript/Paper for
+Review
+ 
+Last Date of Manuscript Submission: 25th June 2019
+
+Publication of Paper (Online): 30th June 2019.
+
+Kindly forward this e-mail to your group of Friends / Students/ Colleagues /
+Associates / Fellow Researchers, who may be benefited out of this.
+
+Kind Regards,
+
+Editor-in-Chief
+JMEST
+Berlin, Germany
+		
+ 
+
+If you wish not to receive any such invitations in future. Please click
+<http://www.jmest.org/unsubscribe> REMOVE to get your email address removed
+from publishers list of potential authors. We apologise for any
+inconvenience caused.
+ 
+
+------=_NextPart_000_12AE_01D5218C.B7EF50B0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"ProgId" content=3D"Word.Document"><meta name=3D"Generator" co=
+ntent=3D"Microsoft Word 14"><meta name=3D"Originator" content=3D"Microsoft =
+Word 14"><link rel=3D"File-List" href=3D"cid:filelist.xml@01D5188A.DC0CAF70=
+"><!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+</o:OfficeDocumentSettings>
+</xml><![endif]--><link rel=3D"themeData" href=3D"~~themedata~~"><link rel=
+=3D"colorSchemeMapping" href=3D"~~colorschememapping~~"><!--[if gte mso 9]>=
+<xml>
+<w:WordDocument>
+<w:SpellingState>Clean</w:SpellingState>
+<w:TrackMoves/>
+<w:TrackFormatting/>
+<w:HyphenationZone>21</w:HyphenationZone>
+<w:EnvelopeVis/>
+<w:PunctuationKerning/>
+<w:ValidateAgainstSchemas/>
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF/>
+<w:LidThemeOther>EN-GB</w:LidThemeOther>
+<w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:DoNotExpandShiftReturn/>
+<w:BreakWrappedTables/>
+<w:SnapToGridInCell/>
+<w:WrapTextWithPunct/>
+<w:UseAsianBreakRules/>
+<w:DontGrowAutofit/>
+<w:SplitPgBreakAndParaMark/>
+<w:EnableOpenTypeKerning/>
+<w:DontFlipMirrorIndents/>
+<w:OverrideTableStyleHps/>
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+<m:mathPr>
+<m:mathFont m:val=3D"Cambria Math"/>
+<m:brkBin m:val=3D"before"/>
+<m:brkBinSub m:val=3D"&#45;-"/>
+<m:smallFrac m:val=3D"off"/>
+<m:dispDef/>
+<m:lMargin m:val=3D"0"/>
+<m:rMargin m:val=3D"0"/>
+<m:defJc m:val=3D"centerGroup"/>
+<m:wrapIndent m:val=3D"1440"/>
+<m:intLim m:val=3D"subSup"/>
+<m:naryLim m:val=3D"undOvr"/>
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState=3D"false" DefUnhideWhenUsed=3D"true" DefSemi=
+Hidden=3D"true" DefQFormat=3D"false" DefPriority=3D"99" LatentStyleCount=3D=
+"267">
+<w:LsdException Locked=3D"false" Priority=3D"0" SemiHidden=3D"false" Unhide=
+WhenUsed=3D"false" QFormat=3D"true" Name=3D"Normal"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"false" Unhide=
+WhenUsed=3D"false" QFormat=3D"true" Name=3D"heading 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 7"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 8"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 9"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 7"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 8"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 9"/>
+<w:LsdException Locked=3D"false" Priority=3D"35" QFormat=3D"true" Name=3D"c=
+aption"/>
+<w:LsdException Locked=3D"false" Priority=3D"10" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Title"/>
+<w:LsdException Locked=3D"false" Priority=3D"1" Name=3D"Default Paragraph F=
+ont"/>
+<w:LsdException Locked=3D"false" Priority=3D"11" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtitle"/>
+<w:LsdException Locked=3D"false" Priority=3D"22" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Strong"/>
+<w:LsdException Locked=3D"false" Priority=3D"20" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Emphasis"/>
+<w:LsdException Locked=3D"false" Priority=3D"59" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Table Grid"/>
+<w:LsdException Locked=3D"false" UnhideWhenUsed=3D"false" Name=3D"Placehold=
+er Text"/>
+<w:LsdException Locked=3D"false" Priority=3D"1" SemiHidden=3D"false" Unhide=
+WhenUsed=3D"false" QFormat=3D"true" Name=3D"No Spacing"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Shading"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light List"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Grid"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Dark List"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Shading"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful List"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Grid"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Shading Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light List Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Grid Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 1 Accent 1"/>
+<w:LsdException Locked=3D"false" UnhideWhenUsed=3D"false" Name=3D"Revision"=
+/>
+<w:LsdException Locked=3D"false" Priority=3D"34" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"List Paragraph"/>
+<w:LsdException Locked=3D"false" Priority=3D"29" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Quote"/>
+<w:LsdException Locked=3D"false" Priority=3D"30" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Quote"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 2 Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Dark List Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Shading Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful List Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Grid Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Shading Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light List Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Grid Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 1 Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 2 Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Dark List Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Shading Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful List Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Grid Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Shading Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light List Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Grid Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 1 Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 2 Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Dark List Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Shading Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful List Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Grid Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Shading Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light List Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Grid Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 1 Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 2 Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Dark List Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Shading Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful List Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Grid Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Shading Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light List Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Grid Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 1 Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 2 Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Dark List Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Shading Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful List Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Grid Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Shading Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light List Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Light Grid Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 1 Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium List 2 Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Dark List Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Shading Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful List Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" Name=3D"Colorful Grid Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"19" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Emphasis"/>
+<w:LsdException Locked=3D"false" Priority=3D"21" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Emphasis"/>
+<w:LsdException Locked=3D"false" Priority=3D"31" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Reference"/>
+<w:LsdException Locked=3D"false" Priority=3D"32" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Reference"/>
+<w:LsdException Locked=3D"false" Priority=3D"33" SemiHidden=3D"false" Unhid=
+eWhenUsed=3D"false" QFormat=3D"true" Name=3D"Book Title"/>
+<w:LsdException Locked=3D"false" Priority=3D"37" Name=3D"Bibliography"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" QFormat=3D"true" Name=3D"T=
+OC Heading"/>
+</w:LatentStyles>
+</xml><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536858881 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+span.EmailStyle19
+	{mso-style-type:personal-compose;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;
+	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 10]><style>/* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style><![endif]--><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3D"EN-US" link=3D"blue"=
+ vlink=3D"purple" style=3D"tab-interval:.5in"><div class=3D"WordSection1"><=
+table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"margin-left:-1.7pt;border-collapse:collapse;mso-yfti-tblloo=
+k:1184;mso-padding-alt:0in 0in 0in 0in"><tr style=3D"mso-yfti-irow:0;mso-yf=
+ti-firstrow:yes"><td width=3D"616" colspan=3D"2" style=3D"width:462.05pt;pa=
+dding:0in 5.4pt 0in 5.4pt"><p class=3D"MsoNormal" style=3D"margin-bottom:6.=
+0pt;text-align:justify"><span style=3D"color:#222222">Please, accept our ap=
+ologies if you receive multiple copies of this call for papers. This email =
+is for academic/editorial information and not for commercial purposes. This=
+ e-mail was sent to you as an active researcher in the field of Engineering=
+ and Science. invitation code (JMEST).&nbsp;</span><span style=3D"mso-ascii=
+-font-family:Calibri;mso-hansi-font-family:Calibri"><o:p></o:p></span></p><=
+/td></tr><tr style=3D"mso-yfti-irow:1;mso-row-margin-left:1.7pt"><td style=
+=3D"mso-cell-special:placeholder;border:none;padding:0in 0in 0in 0in" width=
+=3D"2"><p class=3D"MsoNormal">&nbsp;</td><td style=3D"background:#6B6B6B;pa=
+dding:.75pt .75pt .75pt .75pt"><table class=3D"MsoNormalTable" border=3D"0"=
+ cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%;mso-cellspacing:1.5=
+pt;background:#B88855;mso-yfti-tbllook:1184;mso-padding-alt:0in 0in 0in 0in=
+"><tr style=3D"mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes">=
+<td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"line-height:26.25pt"><b><span style=3D"font-size:13.5pt;font-family:&qu=
+ot;Arial&quot;,&quot;sans-serif&quot;;color:white">Dear Researcher,</span><=
+/b><span style=3D"mso-ascii-font-family:Calibri;mso-hansi-font-family:Calib=
+ri"><o:p></o:p></span></p></td></tr></table></td></tr><tr style=3D"mso-yfti=
+-irow:2;mso-yfti-lastrow:yes;mso-row-margin-left:1.7pt"><td style=3D"mso-ce=
+ll-special:placeholder;border:none;padding:0in 0in 0in 0in" width=3D"2"><p =
+class=3D"MsoNormal">&nbsp;</td><td style=3D"background:#6B6B6B;padding:.75p=
+t .75pt .75pt .75pt"><table class=3D"MsoNormalTable" border=3D"0" cellpaddi=
+ng=3D"0" width=3D"611" style=3D"width:458.1pt;mso-cellspacing:1.5pt;mso-yft=
+i-tbllook:1184;mso-padding-alt:0in 0in 0in 0in"><tr style=3D"mso-yfti-irow:=
+0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes;height:535.75pt"><td style=3D"=
+padding:.75pt .75pt .75pt .75pt;height:535.75pt"><p class=3D"MsoNormal" sty=
+le=3D"margin-bottom:6.0pt;text-align:justify;mso-line-height-alt:12.65pt"><=
+span style=3D"font-size:13.0pt;font-family:&quot;Georgia&quot;,&quot;serif&=
+quot;;color:white">You are cordially invited to submit or recommend a manus=
+cript to the&nbsp;</span><b><span style=3D"font-size:13.0pt;font-family:&qu=
+ot;Georgia&quot;,&quot;serif&quot;;color:#FFC600">Journal of Multidisciplin=
+ary Engineering Science and Technology</span></b><span style=3D"font-size:1=
+3.0pt;font-family:&quot;Georgia&quot;,&quot;serif&quot;;color:white">&nbsp;=
+(JMEST, ISSN: 2458-9403, which is a peer-reviewed open access academic jour=
+nal and has been indexed by 20 databases so far.&nbsp;</span><span style=3D=
+"mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri"><o:p></o:p></=
+span></p><p class=3D"MsoNormal" style=3D"background:white"><span style=3D"f=
+ont-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp=
+;</span><span style=3D"mso-ascii-font-family:Calibri;mso-hansi-font-family:=
+Calibri"><o:p></o:p></span></p><p class=3D"MsoNormal" style=3D"background:w=
+hite"><a href=3D"http://www.jmest.org/" target=3D"_blank"><span style=3D"fo=
+nt-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#=
+1155CC">http://www.jmest.org</span></a><span style=3D"font-size:10.5pt;font=
+-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><br><b><br>Call&nbsp;for&=
+nbsp;Papers&nbsp;- Volume.&nbsp;6&nbsp;Issue. 6 (</b><b style=3D"mso-bidi-f=
+ont-weight:normal">25<sup>th</sup><span style=3D"mso-bidi-font-weight:bold"=
+> June - 2019)</span></b></span>&nbsp;<b><span style=3D"font-size:10.5pt;fo=
+nt-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><br><br></span></b><b s=
+tyle=3D"mso-bidi-font-weight:normal"><span style=3D"font-size:10.5pt;font-f=
+amily:&quot;Arial&quot;,&quot;sans-serif&quot;">JMEST</span></b><span style=
+=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">=
+&nbsp;<b style=3D"mso-bidi-font-weight:normal">(ISSN: 2458-9403)</b> is the=
+ one of the leading, renowned, open access, International Engineering Journ=
+al.&nbsp;<br>It is our immense pleasure to invite you to submit manuscript/=
+paper&nbsp;of your research/review/study in any engineering research area f=
+or publication in the upcoming issue of our popular e-journal&nbsp;JMEST.<o=
+:p></o:p></span></p><p class=3D"MsoNormal" style=3D"background:white"><span=
+ style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&q=
+uot;"><br><b>Author Benefits:<span class=3D"apple-converted-space">&nbsp;</=
+span></b><br>- Reliable, Easy, Transparent &amp; Rapid Publication Process<=
+o:p></o:p></span></p><p class=3D"MsoNormal" style=3D"background:white"><spa=
+n style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&=
+quot;">- <b style=3D"mso-bidi-font-weight:normal">Zero-tolerance to Plagiar=
+ism</b>- All submissions will be checked by <span class=3D"SpellE">iThentic=
+ate</span> plagiarism prevention software before being sent to reviewers.<b=
+r>-&nbsp;JMEST&nbsp;is globally accepted one of the well-known Internationa=
+l Engineering Journal.<br>- Full&nbsp;<b>Paper&nbsp;Soft Copy</b>&nbsp;with=
+ full colour Journal Cover Page (Online Version)<span class=3D"apple-conver=
+ted-space">&nbsp;</span><br>-&nbsp;<b>Soft Copy of &quot;Certificate of Pub=
+lication&quot;</b>&nbsp;of all authors (instantly available after publicati=
+on)<span class=3D"apple-converted-space">&nbsp;</span><br>- Renowned &amp; =
+widely acceptable in major Universities, Institutions around the world.<br>=
+- Access to featured rich Online Author Manager Account at&nbsp;<b>JMEST&nb=
+sp;- EMS (Editorial</b></span><span style=3D"mso-ascii-font-family:Calibri;=
+mso-hansi-font-family:Calibri"><o:p></o:p></span></p><p class=3D"MsoNormal"=
+ style=3D"background:white"><b><span style=3D"font-size:10.5pt;font-family:=
+&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp; Management System)<span cl=
+ass=3D"apple-converted-space">&nbsp;</span></span></b><span style=3D"font-s=
+ize:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><br>-&nbsp=
+;Paper&nbsp;will be published online.<br>- We have team of prestigious acad=
+emic editors/reviewers including from IITs, NITs etc.</span>&nbsp;<span sty=
+le=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;=
+"><br>- Indexing of&nbsp;paper&nbsp;in all major online bibliographic journ=
+al databases like Google Scholar.<br>- Open Access Journal Database for Hig=
+h visibility and promotion of your article.<br>- Author Research Guidelines=
+ &amp; Support<br></span><u><span style=3D"color:#1155CC"><br><span class=
+=3D"MsoHyperlink"><span style=3D"color:#1155CC">&nbsp;</span></span></span>=
+</u><span class=3D"MsoHyperlink"><span style=3D"font-size:10.5pt;font-famil=
+y:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1155CC"><a href=3D"http:/=
+/www.jmest.org/call-for-paper" target=3D"_blank"><span style=3D"color:#1155=
+CC">Check more Details about&nbsp;JMEST&nbsp;- June - 2019&nbsp;Call&nbsp;f=
+or&nbsp;Papers</span></a></span></span><u><span style=3D"color:#1155CC"><br=
+><br><span class=3D"MsoHyperlink"><span style=3D"color:#1155CC">&nbsp;</spa=
+n></span></span></u><span class=3D"MsoHyperlink"><span style=3D"font-size:1=
+0.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1155CC"><=
+a href=3D"http://www.jmest.org/?page_id=3D153" target=3D"_blank"><span styl=
+e=3D"color:#1155CC">Submit your Manuscript/Paper&nbsp;for Review</span></a>=
+<o:p></o:p></span></span></p><p class=3D"MsoNormal" style=3D"background:whi=
+te"><b><span style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,&quot;=
+sans-serif&quot;">&nbsp;</span></b><span style=3D"font-size:10.0pt;font-fam=
+ily:&quot;Arial&quot;,&quot;sans-serif&quot;"><br></span><b><span style=3D"=
+font-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Last=
+ Date of Manuscript Submission:</span></b><span style=3D"font-size:10.5pt;f=
+ont-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;25<sup>th</sup> =
+June 2019<br><br><b>Publication of&nbsp;Paper&nbsp;(Online):</b>&nbsp;30<su=
+p>th</sup> June 2019.<br><br>Kindly forward this e-mail to your group of Fr=
+iends / Students/ Colleagues / Associates / Fellow Researchers, who may be =
+benefited out of this.<br><br>Kind Regards,</span><span style=3D"mso-ascii-=
+font-family:Calibri;mso-hansi-font-family:Calibri"><o:p></o:p></span></p><p=
+ class=3D"MsoNormal" style=3D"background:white"><span style=3D"font-size:10=
+.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><br>Editor-in-Ch=
+ief<o:p></o:p></span></p><p class=3D"MsoNormal" style=3D"background:white">=
+<span style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-se=
+rif&quot;">JMEST<o:p></o:p></span></p><p class=3D"MsoNormal" style=3D"backg=
+round:white">Berlin, Germany<span style=3D"mso-ascii-font-family:Calibri;ms=
+o-hansi-font-family:Calibri"><o:p></o:p></span></p></td></tr></table></td><=
+/tr><![if !supportMisalignedColumns]><tr height=3D"0"><td width=3D"2" style=
+=3D"border:none"></td><td width=3D"614" style=3D"border:none"></td></tr><![=
+endif]></table><p class=3D"MsoNormal"><span lang=3D"EN-GB" style=3D"display=
+:none;mso-hide:all;mso-ansi-language:EN-GB"><o:p>&nbsp;</o:p></span></p><ta=
+ble class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:=
+0in 0in 0in 0in;orphans: auto;widows: auto;-webkit-text-stroke-width: 0px;w=
+ord-spacing:0px"><tr style=3D"mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yft=
+i-lastrow:yes"><td width=3D"616" valign=3D"top" style=3D"width:462.05pt;pad=
+ding:0in 5.4pt 0in 5.4pt"><p class=3D"MsoNormal" style=3D"margin-top:6.0pt;=
+text-align:justify"><span style=3D"font-size:10.0pt;font-family:&quot;Arial=
+&quot;,&quot;sans-serif&quot;;color:#222222;background:white">If you wish n=
+ot to receive any such invitations in future. Please click&nbsp;</span><spa=
+n style=3D"mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri"><a =
+href=3D"http://www.jmest.org/unsubscribe" target=3D"_blank"><span style=3D"=
+font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color=
+:#1155CC;background:white">REMOVE</span></a></span><span style=3D"font-size=
+:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#222222;=
+background:white">&nbsp;to get your email address removed from publishers l=
+ist of potential authors. We apologise for any inconvenience caused.</span>=
+<span style=3D"mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri"=
+><o:p></o:p></span></p></td></tr></table><p class=3D"MsoNormal" style=3D"or=
+phans: auto;text-align:start;widows: auto;-webkit-text-stroke-width: 0px;wo=
+rd-spacing:0px"><o:p>&nbsp;</o:p></p></div></body></html>=
+
+------=_NextPart_000_12AE_01D5218C.B7EF50B0--

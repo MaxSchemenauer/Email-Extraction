@@ -1,0 +1,237 @@
+Received: from BN7PR08MB3972.namprd08.prod.outlook.com (2603:10b6:a03:40::28)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0015.NAMPRD04.PROD.OUTLOOK.COM; Tue, 15 Oct 2019 02:46:47 +0000
+Received: from SN6PR08CA0004.namprd08.prod.outlook.com (2603:10b6:805:66::17)
+ by BN7PR08MB3972.namprd08.prod.outlook.com (2603:10b6:406:8e::24) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16; Tue, 15 Oct
+ 2019 02:46:45 +0000
+Received: from CO1NAM04FT049.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::207) by SN6PR08CA0004.outlook.office365.com
+ (2603:10b6:805:66::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16 via Frontend
+ Transport; Tue, 15 Oct 2019 02:46:43 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.9.98)
+ smtp.mailfrom=amazonses.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=ijetae.com;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=ijetae.com;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of amazonses.com designates
+ 54.240.9.98 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.9.98; helo=a9-98.smtp-out.amazonses.com;
+Received: from a9-98.smtp-out.amazonses.com (54.240.9.98) by
+ CO1NAM04FT049.mail.protection.outlook.com (10.152.91.187) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2347.16 via Frontend Transport; Tue, 15 Oct 2019 02:46:43 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=v7dpd4ay2sfo2jnxzeprwgade5astdi4; d=ijetae.com; t=1571107602;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	bh=zFixuYApJSNX4Mluv1XkCFUF/o72WH62udVQQdFLzuY=;
+	b=P6xIIbITUaYPUmtvCDZklvHbpvP2STA/urcJTXYg34oQ5fvzWXqmfZWMp4UqO9iz
+	n3ujWtOYOThMm2Pe7hJyN6TsuRHV+a5U0ew+boxNTSfO31ZgR/AL9rU7IzQ2LgaIb9K
+	9da5fALd35DBVt8dRGRBzvw+vFQv8QjNMl8FiL2o=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1571107602;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+	bh=zFixuYApJSNX4Mluv1XkCFUF/o72WH62udVQQdFLzuY=;
+	b=DAjdLrVFxTecsDTOJ9cfM7O91qO1kXh0IX1vy0SiPn/IQit2ngpBxgHxurZj98dG
+	Ro3DCRv1VJkEY2StqubuxmIs6yCpm0IdaPH39G0N2N+xqL8LV8UDtog4Czctp7+nQR4
+	lZb4VyanCIdUNREm30mWv/GfPyCsqQK9VvcqNnPk=
+Date: Tue, 15 Oct 2019 02:46:42 +0000
+To: Researcher <foaad@calpoly.edu>
+From: Editorial Desk <editor@ijetae.com>
+Reply-To: Editorial Desk <editor@ijetae.com>
+Subject: Invitation for Manuscript Submission in Volume 9, Issue 10, Oct 2019.
+Message-ID: <0100016dcd4f7e3e-acebeef3-596b-433a-a9a1-88ac414a03c9-000000@email.amazonses.com>
+X-Mailer: Sendy (https://sendy.co)
+List-Unsubscribe: <https://sendy.ijrdet.com/unsubscribe/WbDF12Lx763kFGXwda1CQuu8929Y2KbVrInaGUAvQoZ7ehU/Bdavr4d4v3sXa1ib3WZyVQ/wprtkIm7ahvPhSWGkEShvQ>
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-SES-Outgoing: 2019.10.15-54.240.9.98
+Feedback-ID: 1.us-east-1.0MYluoxIRHVPKiZ3KZJ1XIoPNnFEnCRpTGTDEJaHmUs=:AmazonSES
+Return-Path:
+ 0100016dcd4f7e3e-acebeef3-596b-433a-a9a1-88ac414a03c9-000000@amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Oct 2019 02:46:43.3715
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d279dedd-bf12-41dc-dc62-08d75119e9bc
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:54.240.9.98;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(286005)(10533003)(189003)(199004)(14444005)(6306002)(1096003)(71280400001)(146002)(966005)(236005)(50226002)(8746002)(8676002)(733005)(325944009)(6486002)(15188155005)(2171002)(9686003)(16003)(16799955002)(246002)(90596002)(6512007)(58800400005)(79850400001)(4006050)(23676004)(36736006)(7636002)(486006)(6916009)(50466002)(7596002)(23846002)(476003)(956004)(42882007)(126002)(28505004)(606006)(43066004)(106002)(6506007)(336012)(3450700001)(25786009)(75640400001)(26005)(356004)(225403001)(130870200001);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB3972;H:a9-98.smtp-out.amazonses.com;FPR:;SPF:Pass;LANG:en;PTR:a9-98.smtp-out.amazonses.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT049.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: d279dedd-bf12-41dc-dc62-08d75119e9bc
+X-MS-TrafficTypeDiagnostic: BN7PR08MB3972:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Oob-TLC-OOBClassifiers: OLM:6108;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:4;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Oct 2019 02:46:43.1743
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d279dedd-bf12-41dc-dc62-08d75119e9bc
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB3972
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.9230237
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?OFJJWEQ2Ylg1T3U4K1V0Z3B0Z25lZ1JpbGNXaG9Eb1owZFVhcVNNQ2hUNDZY?=
+ =?utf-8?B?SSt1ZGhNOS90YmZ6V2ttMGpEZlE2R2h2VEk2RS9uTm1jcVh2d0Z5T0lJb0V6?=
+ =?utf-8?B?MGYvaGc2TU9jRU5uVlA5MFd2MWgvS0dsUEhXbW4zVHhLS3pFZlVlUlhsbzZ6?=
+ =?utf-8?B?NmZGM0lHemwzdW9wWVhyZ2tYaU14alhMZVBEUXlhZmtlYko2eEoyandscG9n?=
+ =?utf-8?B?cmpuS2d6ZTNXRE8rUjdETHplQWhXT2krazJid29QOGxtdkoySU9jOFF2M0Rv?=
+ =?utf-8?B?akpWVFBCbkFqcnFxck13dyt2RGdYbkUxVFg1OE9iREVzS1MrMFI2Y3NUbnBw?=
+ =?utf-8?B?VXcrSnhYSmhrRER0ejhTUG4rd0VZaENwQ3M5TkZEaXJ6bEh6N1QvNGErSXJH?=
+ =?utf-8?B?aVNPYk54Wm5FRmVYMnk5ZGRCK1U1Vkdwd1AxbGFDcXhDQ0dLbHoxaDN4ZlJ5?=
+ =?utf-8?B?WEJwdklTTXc4TTRma3FWcUZuK2hnUTNZRlFrUGxLdEhyeUNWS09PT0dXcUFs?=
+ =?utf-8?B?eGtybHlqaEl4NmNPVzZPQUdlT1RzMzZPS1dTVk9NYm51RXRjZ2xicm5jZTRU?=
+ =?utf-8?B?Y01tMDJVdHJ6cUcwSVhINnBoWVYrZzE1K0dEdmJ0YXNiVExOREhTazVPMmZJ?=
+ =?utf-8?B?ODAvTVZxRUFRYnYrNURVajI2RG9LMW1jcDQrYXBxNFRUbzdjQkRHMS9zY3Ux?=
+ =?utf-8?B?UDhFVWZEVEhOMGZreTdoVHpUaCtLT0FDYWdYQnd5SCtwVi81Z0V5dVRoVzM5?=
+ =?utf-8?B?UDhlcytkTlM4QWVrM1pqd3ByMWIxb2UwNkxseHhTd3BYTnYxUXNPQ2EwUzJx?=
+ =?utf-8?B?bElhV3J1SG03dTNXZU0rRzQ4aWRkZ1d6d0Rlbkp1WjNDRy9vZFdqRlRlRVND?=
+ =?utf-8?B?ZVZTdSt4TlNNUFZlbG5tcmtQR2d6VGZjRi9kMFBBL3FvSmk2cHM3SVpubytz?=
+ =?utf-8?B?ZmxBRmZQdHpob3U5VkJvbnNuUG1JZnJtdlNFUXNOL2syWldrWEtHcmpXcjdh?=
+ =?utf-8?B?K09xdnJYOWNOb054WGNmMWE2dE5NUGlESnlnTnh2TE0rbGlXekFUdUVFeStP?=
+ =?utf-8?B?cTl0ZnZ0bldxN2FSWitRV0ZTVS96ajZ2bEhpNlZEcktzNHNkV0hSdms4UnRS?=
+ =?utf-8?B?V2ZTWm9nRzMwQi9yUmxjMzhtUTlMSnVLU1Ntd3krb0kvOVdMdEg0ZFhiY1RW?=
+ =?utf-8?B?MmxlZWV6NjFCL1ZpUDZ4aDMzYzMxaWxadGFCZ3hFZ091OUc0STZ1WkhNL1dD?=
+ =?utf-8?B?Tng1cW8rejZPYmhpZFQxRGlvYitvMHNsNnpmdkJtUmNrdy95NmUzRVp3UEc0?=
+ =?utf-8?B?NTdIdEtYT0lLQThnelhiSUQzbGpoY0pGbkhqUmh2SjRKSFdINWx4RVZ6VXJG?=
+ =?utf-8?B?YllPUUJzWS9NZ3NSUG5jaFRxaXk3eTZXMGtqSUw0UUUwQ3U0OElzbkphS3hB?=
+ =?utf-8?B?bzN6RU92NTZRMmZVUjdSa09KaHBDMGp2MWcvMXZKTVpZUWdWN3ZBR2E1V0NJ?=
+ =?utf-8?Q?NfToog=3D?=
+MIME-Version: 1.0
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle></title>
+</head>
+<body>
+<p><span style=3D"font-size:14px;"><span style=3D"font-family:georgia;"><b>=
+<i>Dear Researcher</i></b></span></span></p>
+
+<p><span style=3D"font-size:14px;"><span style=3D"font-family:georgia;"><b>=
+<i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; Best Wishes For Your Good Health and Happiness</i></b></span></spa=
+n></p>
+
+<p style=3D"text-align: justify;"><span style=3D"font-size:14px;"><span sty=
+le=3D"font-family:georgia;">International Journal of Emerging Technology &a=
+mp;&nbsp;Advanced Engineering (ISSN 2250=E2=80=932459 (Online)) is&nbsp;an =
+Refereed ISO 9001:2008 Certified, Peer-Reviewed and Open Access Internation=
+al platform for publishing reseach articles. &nbsp;IJETAE has been granted =
+an ISSN 2250=E2=80=932459 (Online) in year 2011&nbsp;and ISRA Impact Factor=
+ 6.351&nbsp;for year 2018. After publishing 82&nbsp;Regular Issues&nbsp;<st=
+rong>(More than 7500 Research/Review Papers in Previous 8&nbsp;Years)</stro=
+ng>&nbsp;and 28&nbsp;Conferences , International Journal of Emerging Techno=
+logy &amp;&nbsp;Advanced Engineering &nbsp;invites you to submit research p=
+aper &nbsp;for&nbsp;publishing in&nbsp;Volume 9, Issue 10, Oct 2019. </span=
+></span></p>
+
+<p style=3D"text-align: center;"><span style=3D"font-size:14px;"><span styl=
+e=3D"font-family:georgia;"><b>&nbsp;<u>Research&nbsp;Paper&nbsp;Submission =
+for &nbsp;Volume 9, Issue 10, Oct 2019</u></b></span></span></p>
+
+<p align=3D"center"><span style=3D"font-size:14px;"><span style=3D"font-fam=
+ily:georgia;">Subject Domain:&nbsp;Engineering, Technology and Science</spa=
+n></span></p>
+
+<p align=3D"center"><span style=3D"font-size:14px;"><span style=3D"font-fam=
+ily:georgia;"><i>&nbsp;</i>&nbsp;Paper&nbsp;Submission Email IDs:&nbsp;&nbs=
+p;<a href=3D"mailto:ijetae@gmail.com" target=3D"_blank">ijetae@gmail.com</a=
+>,&nbsp;<a href=3D"mailto:submit_ijetae@yahoo.com" target=3D"_blank">submit=
+<wbr>_</a><a href=3D"mailto:ijetae@yahoo.com" target=3D"_blank">ijetae@yaho=
+o.com</a></span></span></p>
+
+<p align=3D"center"><span style=3D"font-size:14px;"><span style=3D"font-fam=
+ily:georgia;"><b><i><span style=3D"background-color:#FFFF00;">Deadline for =
+Submitting Manuscript (Extended): 18&nbsp;Oct&nbsp;2019</span></i></b></spa=
+n></span></p>
+
+<p align=3D"center"><span style=3D"font-size:14px;"><span style=3D"font-fam=
+ily:georgia;">&nbsp;IJETAE&nbsp;Editorial Team&nbsp;&nbsp;</span></span><sp=
+an style=3D"font-size:14px;"><span style=3D"font-family:georgia;"><a data-s=
+aferedirecturl=3D"https://www.google.com/url?hl=3Den&amp;q=3Dhttp://ijetae.=
+com/editorial_board.html&amp;source=3Dgmail&amp;ust=3D1485621089783000&amp;=
+usg=3DAFQjCNGQKXdYLrlx_2tNynNPYqajYC4NrQ" href=3D"https://sendy.ijrdet.com/=
+l/sU3mfFawLK0QQJBs7wvZwQ/72g763DVmNy46e892Xa8MJ69HQ/wprtkIm7ahvPhSWGkEShvQ"=
+ target=3D"_blank">http://ijetae.com/editorial_bo<wbr>ard.html</a></span></=
+span></p>
+
+<p align=3D"center"><span style=3D"font-size:14px;"><span style=3D"font-fam=
+ily:georgia;">IJETAE&nbsp;Published Conferences&nbsp;<strong>(&#43;28&nbsp;=
+Conferences Published)&nbsp;</strong><a data-saferedirecturl=3D"https://www=
+.google.com/url?hl=3Den&amp;q=3Dhttp://www.ijetae.com/conferencepublication=
+.html&amp;source=3Dgmail&amp;ust=3D1485621089783000&amp;usg=3DAFQjCNGfrulHL=
+hxTRNxhXMnFs-uo2AmQ5Q" href=3D"https://sendy.ijrdet.com/l/sU3mfFawLK0QQJBs7=
+wvZwQ/9uj0pxf892eBRQ763I2LWydWdw/wprtkIm7ahvPhSWGkEShvQ" target=3D"_blank">=
+http://www.ijetae.<wbr>com/conferencepublication.html</a></span></span></p>
+
+<p align=3D"center"><span style=3D"font-size:14px;"><span style=3D"font-fam=
+ily:georgia;">&nbsp;IJETAE&nbsp;Published Issues&nbsp;<strong>(83&nbsp;Issu=
+es Published, more than 7500&nbsp;Research Papers)</strong>&nbsp;&nbsp;<a d=
+ata-saferedirecturl=3D"https://www.google.com/url?hl=3Den&amp;q=3Dhttp://ij=
+etae.com/contents.html&amp;source=3Dgmail&amp;ust=3D1485621089783000&amp;us=
+g=3DAFQjCNE5-Yci8BS85qpzL1SgKPRYC67hqg" href=3D"https://sendy.ijrdet.com/l/=
+sU3mfFawLK0QQJBs7wvZwQ/XHJlrQu7Gin6X0g90NYwBw/wprtkIm7ahvPhSWGkEShvQ" targe=
+t=3D"_blank">http://ijetae.com/contents.ht<wbr>ml</a></span></span></p>
+
+<p align=3D"center"><span style=3D"font-size:14px;"><span style=3D"font-fam=
+ily:georgia;">Researchers/ Scholars are invited to submit original&nbsp;pap=
+ers&nbsp;in&nbsp;IJETAE&nbsp;Pape<wbr>r&nbsp;Template Format.&nbsp;<a data-=
+saferedirecturl=3D"https://www.google.com/url?hl=3Den&amp;q=3Dhttp://ijetae=
+.com/files/IJETAE_PAPER_TEMPLATE.doc&amp;source=3Dgmail&amp;ust=3D148562108=
+9783000&amp;usg=3DAFQjCNG82GBrzvm4zvxL5k20oLkbbwyk4A" href=3D"https://sendy=
+.ijrdet.com/l/sU3mfFawLK0QQJBs7wvZwQ/htz7qURgtCFlt9tUbk1olw/wprtkIm7ahvPhSW=
+GkEShvQ" target=3D"_blank">Download&nbsp;</a></span></span></p>
+
+<p><span style=3D"font-size:14px;"><span style=3D"font-family:georgia;">&nb=
+sp;Queries are welcomed&nbsp;at&nbsp;&nbsp;<a href=3D"mailto:ijetae@gmail.c=
+om" target=3D"_blank">ijetae@gmail.com</a>&nbsp;<wbr>.<u>Please mention you=
+r contact number while submitting manuscript.</u></span></span></p>
+
+<p><span style=3D"font-size:14px;"><span style=3D"font-family:georgia;">Reg=
+ards</span></span></p>
+
+<p><span style=3D"font-size:14px;"><span style=3D"font-family:georgia;">IJE=
+TAE Team<br>
+ISSN&nbsp;2250=E2=80=932459 (Online) ISO 9001:2008 Certified Journal&nbsp;<=
+br>
+Web site:&nbsp;<a data-saferedirecturl=3D"https://www.google.com/url?hl=3De=
+n&amp;q=3Dhttp://www.ijetae.com/&amp;source=3Dgmail&amp;ust=3D1485621089784=
+000&amp;usg=3DAFQjCNF3-TyWzOvLrAvR7uVVMZLwL2_Phw" href=3D"https://sendy.ijr=
+det.com/l/sU3mfFawLK0QQJBs7wvZwQ/GHkNA3248dIXZVlCMcYzJQ/wprtkIm7ahvPhSWGkES=
+hvQ" target=3D"_blank">www.ijetae.com</a>&nbsp;&nbsp;<br>
+Disclaimer: This email is sent to you in belief that you are affiliated wit=
+h Academic/Research at best of our knowledge and IJETAE will be honored to =
+publish your manuscript. Apologies if you are not intended user. If you lik=
+e &nbsp;to stop receiving alert mails from us then please </span></span><a =
+data-saferedirecturl=3D"https://www.google.com/url?hl=3Den&amp;q=3Dhttp://i=
+jrdet.com/sendy/unsubscribe-success.php?c%3D87&amp;source=3Dgmail&amp;ust=
+=3D1485621089784000&amp;usg=3DAFQjCNER22YEwvGgGu61s48rvXBPw1zZJA" href=3D"h=
+ttps://sendy.ijrdet.com/l/sU3mfFawLK0QQJBs7wvZwQ/N4VpUrGJhMPzk4mOFE4Btg/wpr=
+tkIm7ahvPhSWGkEShvQ" target=3D"_blank"><a href=3D"https://sendy.ijrdet.com/=
+unsubscribe/WbDF12Lx763kFGXwda1CQuu8929Y2KbVrInaGUAvQoZ7ehU/Bdavr4d4v3sXa1i=
+b3WZyVQ/wprtkIm7ahvPhSWGkEShvQ"><span style=3D"font-size:14px;"><span style=
+=3D"font-family:georgia;">Unsubscribe here</span></span></a></a><span style=
+=3D"font-family:georgia;"><a data-saferedirecturl=3D"https://www.google.com=
+/url?hl=3Den&amp;q=3Dhttp://ijrdet.com/sendy/unsubscribe-success.php?c%3D87=
+&amp;source=3Dgmail&amp;ust=3D1485621089784000&amp;usg=3DAFQjCNER22YEwvGgGu=
+61s48rvXBPw1zZJA" href=3D"https://sendy.ijrdet.com/l/sU3mfFawLK0QQJBs7wvZwQ=
+/N4VpUrGJhMPzk4mOFE4Btg/wprtkIm7ahvPhSWGkEShvQ" target=3D"_blank"> </a></sp=
+an></p>
+</body>
+</html>
+<img src=3D"https://sendy.ijrdet.com/t/wprtkIm7ahvPhSWGkEShvQ/sU3mfFawLK0QQ=
+JBs7wvZwQ" alt=3D"" style=3D"width:1px;height:1px;">

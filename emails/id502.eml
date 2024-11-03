@@ -1,0 +1,326 @@
+Received: from SN6PR08MB4989.namprd08.prod.outlook.com (2603:10b6:a02:80::17)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0004.PROD.EXCHANGELABS.COM; Mon, 5 Aug 2019 07:17:41 +0000
+Received: from SN6PR08CA0010.namprd08.prod.outlook.com (2603:10b6:805:66::23)
+ by SN6PR08MB4989.namprd08.prod.outlook.com (2603:10b6:805:6e::26) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.17; Mon, 5 Aug
+ 2019 07:17:40 +0000
+Received: from BN3NAM04FT060.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::209) by SN6PR08CA0010.outlook.office365.com
+ (2603:10b6:805:66::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.17 via Frontend
+ Transport; Mon, 5 Aug 2019 07:17:39 +0000
+Authentication-Results: spf=softfail (sender IP is 209.85.208.66)
+ smtp.mailfrom=ijcttjournal.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ijcttjournal-org.20150623.gappssmtp.com;calpoly.edu;
+ dmarc=none action=none header.from=ijcttjournal.org;compauth=pass reason=106
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ ijcttjournal.org discourages use of 209.85.208.66 as permitted sender)
+Received: from mail-ed1-f66.google.com (209.85.208.66) by
+ BN3NAM04FT060.mail.protection.outlook.com (10.152.93.141) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2136.14 via Frontend Transport; Mon, 5 Aug 2019 07:17:39 +0000
+Received: by mail-ed1-f66.google.com with SMTP id s49so42875945edb.1
+        for <foaad@calpoly.edu>; Mon, 05 Aug 2019 00:17:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ijcttjournal-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=qIF+gPKox1utDzjIRG8gVGcvnQ4dG1xwhO0KAYkb2oo=;
+        b=Vp0xl4O7WzDxEJ1rT4/h2f9y3YvRHcyK3iQWv39c45c/mhIrJmgkOUDT/CsehB6EV4
+         P1dFT1UrmcUaTbaVVCjvs/3u1OqjGBM0zgiHdJxZxqW8ffRuEyERWr5r7bTB0ge07pWP
+         gCvYj03cRGbsHzYvzVSq86pyDlj0oHqSK4A05FdT0nKxQp0EQ8j/hH/kIvISCmJcz6B5
+         ZhLiXFfiWt75723jNt6vCD6ujQf8+/8yJznuriSGO6C3hYgR1yN785FyzCZ0m1rNuO5a
+         UeWeGuTEoYNUCPX4a5+89XuQwSi3w5LlUO1Qw7/CRAoOD+6raTkmJUsdWQrTaeI4Dyzw
+         /ySw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=qIF+gPKox1utDzjIRG8gVGcvnQ4dG1xwhO0KAYkb2oo=;
+        b=EsdEWOWhMS5oBBP/EcQpnTO1JBd8AqMCr4KXBp80H8ZIL9MItRFzLRQqCAHhIo0V8K
+         Og5FvwsW8KzczOfN4Sr6rik8qxD6Gw6p2+OEzhQLi6/a88TNbgEpLEqxCNJkfUkRUGk1
+         J7HsBYHZFJ7YP4Q5hLphQwcHVmKryW/yOlSncn/uFqMHhQJMG4Cu2Ozr4F7h3QUtjOt5
+         nodIru8pMv7CQJ3SjWQ9TP4eGoHBk0hL04tpgCjtEwXok+HYWvCBUf+dMQp83op6hBxR
+         OvlYAt/IdSRPpzFvvso9ZohpzPLdWAzu9NjPMow6qNZe5UkRhL4/7NULT7tmvDtLBAQZ
+         RRKA==
+X-Gm-Message-State: APjAAAWTs/IxUKWiJRJa0N7MpdeOQy6bYYK9lwVAp0vrcKDnnLfj9z/D
+	pviAZhmehcnThTKKMd7bEI2OZIE0B8u5X9CNGSM=
+X-Google-Smtp-Source: APXvYqxtg9Dzb5jX6URHSnSwEGBfSKfv6z/yv6J2Pgdi19rdWzykYLuODCOd/P32D1SiGaRrvA0oGU9GA2uyAUGIrFk=
+X-Received: by 2002:a50:b617:: with SMTP id b23mr131437563ede.135.1564989458323;
+ Mon, 05 Aug 2019 00:17:38 -0700 (PDT)
+From: IJCTT Journal <editor@ijcttjournal.org>
+Date: Mon, 5 Aug 2019 12:47:27 +0530
+Message-ID: <CAJBZqMAqBi2cXntMJ2mUN2FZVDCDsF5c56tV15qz63PSA6ZYbA@mail.gmail.com>
+Subject: Re: IJCTT - Call For Paper - August 2019
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000bda87f058f598049"
+Bcc: foaad@calpoly.edu
+Return-Path: editor@ijcttjournal.org
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Aug 2019 07:17:39.7113
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ebd2f523-ddd8-4092-3682-08d71974fff1
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132094630597143495;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.66;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(2980300002)(189003)(199004)(58800400005)(61266001)(86362001)(55446002)(5660300002)(4000180100002)(881003)(75640400001)(71190400001)(606006)(305945005)(7596002)(6666004)(356004)(413944005)(966005)(4006050)(2160300002)(16003)(95326003)(246002)(8576002)(486006)(59536001)(54206008)(236005)(22186003)(8676002)(26005)(42186006)(61726006)(1096003)(109986005)(53376002)(6246003)(7636002)(336012)(9686003)(126002)(229853002)(33964004)(476003)(6306002)(16586007)(498394004)(15660700003)(127190200001);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4989;H:mail-ed1-f66.google.com;FPR:;SPF:SoftFail;LANG:en;PTR:mail-ed1-f66.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT060.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: ebd2f523-ddd8-4092-3682-08d71974fff1
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(8001031)(1405096)(1407096)(1408068)(71702078);SRVR:SN6PR08MB4989;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4989:
+X-MS-Exchange-PUrlCount: 1
+X-MS-Oob-TLC-OOBClassifiers: OLM:6430;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Aug 2019 07:17:39.7083
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ebd2f523-ddd8-4092-3682-08d71974fff1
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4989
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.4551227
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?NmF6MkZTdnFoWlhYT0JWZnYwSGVkK2xIZ2xsVFFWeVErTDcxekxNcVVTZnpz?=
+ =?utf-8?B?MEFwOGdVSVZjRnl4NVc0ZjZxZzVZbWVoUHdJK1ZHbmpRb3N1T2hmdFprSjhO?=
+ =?utf-8?B?VGo1OTJXL0JhZS9paE91eVF1b0dra2JFQnVndHd4MmNtQWhwcE5wdW1LbEVW?=
+ =?utf-8?B?M1M1YTd2V0l3aWhWaG5Ba2l3cHAvQVJRVmQ2Wm14SkRIbHdPa1MycDNCeUN6?=
+ =?utf-8?B?cjBGK2VSV3pKYUNGNXNWc21qaWRtcHBWQlZtK3NtQ0RVRnhqMlQwa21IK3VR?=
+ =?utf-8?B?a1JCakJYOHFwQ3duQlR4SkpvTm0rcVJVY2d4SFp5NjBySjJ3NjdnOUl3bmEy?=
+ =?utf-8?B?WHY5ZU5od05ub0M1OStFRXVYUHpZTkhWYStYd3Q0MXdmaWJ6T0diUmRMV0E2?=
+ =?utf-8?B?NGpNcVVGZWsxK05jeHI0TW9sRlZJRnNSSWdJNzJCVmlrM3BTTmF5clFzbUY4?=
+ =?utf-8?B?bWlHNnNZRnpTcmZjcmIwWTFxMGJQRFdaem5MOUcwRCtNalh1OUkra3ZvVFlU?=
+ =?utf-8?B?b2s3Ry9WaGZCVGdqUTJvUEp0U2xSUHJXRXBpVk1OV001RXpzejcvb0x4aU1y?=
+ =?utf-8?B?b29qSFF2TEZncUFJZVZrZ3ovRDVoSkJSeDZTZXdKd0Y2NjRBUENybGI4SjlO?=
+ =?utf-8?B?MlFjdE9helVZYk1Oc0piN0NjT3lGMnlmb09laVNIMGt3N1JEZ2FsK3gwdlZu?=
+ =?utf-8?B?ZjFhQTA5THF2aFZYYkg5S0hWMy9KeEhRV3BtajZrRUpGaTVXTWJEUVpNVTNE?=
+ =?utf-8?B?UHBZVnphUUR4WWh3NHZtMHhGM1pyQWdYYWZJOGVaN3hKVkpPVWpNcFpEdFR2?=
+ =?utf-8?B?cXJEcXY1aFdwamF0UUZrQzY5c3BNcGpCb21IODJzTDNCNWxkUkEvNmE0R0hK?=
+ =?utf-8?B?b0cySkJQN25yZTlkQkpyYjBvNUtwQVFsckx5c0pWa3BuWUcyL09McUpTaDJW?=
+ =?utf-8?B?YzRMQkNOcWh6MEJwR1dUQm1VdnNYUWQwNmU3cUkxb21mL3VVOGQvbmdqWVUy?=
+ =?utf-8?B?c1A0dU1OZS9WdXUwNlR4RXoxVTFlUm5zUERWRktnbXRiRERiVVU3NkJPaCtq?=
+ =?utf-8?B?MzM1WFBReWlGYlJ0NUVtRngvK0hsZmdFK2xVSnN5NEkvZ0dHWDFMb25vWWV1?=
+ =?utf-8?B?NXA4QUdMdWROZG5jdkxBVXU2cjg2aHcxVGpSbU1wbnpnd0EzTE1EOGtwMFN6?=
+ =?utf-8?B?VDVTcklMcWRUQytCUlErMmJiYVpoWlBvN1VnOWxrMm5RNWdwc1hCYmtvK2R6?=
+ =?utf-8?B?RHVMVzI4TmNMYnljZ0NNM1ZRcXFwM2NZMHc1V01nd1VTN1J1RU9FMFd6RU5K?=
+ =?utf-8?Q?cqRnGRJRoIKWtPUQ32ZFTtMnc6eD7iZSQw?=
+MIME-Version: 1.0
+
+--000000000000bda87f058f598049
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Researcher,
+
+
+
+                  *International Journal of Computer Trend and Technology
+(IJCTT) *welcomes the original research articles, short papers, long
+papers, review papers for the publication of*  August 2019 *issue.
+
+
+
+
+*UGC Approved Journal in 2017*
+
+
+*Site link:*  http://ijcttjournal.org/
+
+
+
+*Submit Your article    :  *editor@ijcttjournal.org
+
+*Frequency.                   :  *12 issues per year.
+
+*ISSN                             :  *2231 - 2803
+
+*Subject                         :*  Computer Science & Technology
+
+*Published by                :*  Seventh Sense Research Group.
+
+
+*Features of IJCTT:*
+
+   - Publication of one entire research paper in Online.
+   - Fastest reviewing and publishing process.
+   - *Both soft and Hard Copies (On Demand) of Certificate will be provided* to
+   all authors of the paper.
+   - Hard copy delivery Via Speed Post/DHL - For Fastest Delivery.
+   - High Indexing process.
+   - Low Publication Fee.
+   - Speed & easy Publication.
+
+
+By
+Editor IJCTT
+
+--000000000000bda87f058f598049
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><font size=3D"4" style=3D"color:rgb(0,0,0);font-family:arial=
+,sans-serif">Dear Researcher,</font><div class=3D"gmail_quote" style=3D"fon=
+t-family:arial,sans-serif;color:rgb(0,0,0)"><div dir=3D"ltr"><div class=3D"=
+gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><=
+div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div =
+dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail=
+_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div c=
+lass=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=
+=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_qu=
+ote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div clas=
+s=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"l=
+tr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote">=
+<div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"=
+gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><=
+div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div =
+dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail=
+_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div c=
+lass=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=
+=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_qu=
+ote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div clas=
+s=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"l=
+tr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote">=
+<div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"=
+gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><=
+div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div =
+dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail=
+_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div c=
+lass=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=
+=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_qu=
+ote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div clas=
+s=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"l=
+tr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote">=
+<div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"=
+gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><=
+div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div =
+dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail=
+_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div c=
+lass=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=
+=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=
+=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_qu=
+ote"><div dir=3D"ltr"><p class=3D"MsoNormal" style=3D"font-family:&quot;Tim=
+es New Roman&quot;,serif;margin:0in 0in 0pt;font-size:12.8px"><font size=3D=
+"4">&nbsp;</font></p><span style=3D"font-size:12.8px"><font size=3D"4"></fo=
+nt></span><p class=3D"MsoNormal" style=3D"font-family:&quot;Times New Roman=
+&quot;,serif;margin:0in 0in 0pt;text-align:justify;font-size:12.8px"><font =
+size=3D"4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=3D"color:rgb(53,28,117)">&nbsp;=
+&nbsp;</span><span style=3D"color:rgb(53,28,117)"></span><b><span style=3D"=
+color:red"><span style=3D"color:rgb(232,23,93)">International Journal of&nb=
+sp;Computer Trend and Technology (IJCTT)</span>&nbsp;</span></b>welcomes th=
+e original research articles, short papers, long papers, review papers for =
+the publication of<b>&nbsp;&nbsp;<span style=3D"color:rgb(56,118,29)">Augus=
+t 2019</span>&nbsp;</b>issue.<b><span style=3D"color:red"></span></b></font=
+></p><span style=3D"font-size:12.8px"><font size=3D"4"></font></span><p cla=
+ss=3D"MsoNormal" style=3D"font-family:&quot;Times New Roman&quot;,serif;mar=
+gin:0in 0in 0pt;font-size:12.8px"><font size=3D"4">&nbsp;</font></p><span s=
+tyle=3D"font-size:12.8px"><font size=3D"4"></font></span><p class=3D"MsoNor=
+mal" style=3D"font-family:&quot;Times New Roman&quot;,serif;margin:0in 0in =
+0pt;text-align:center;font-size:12.8px"><font size=3D"4"><b><span style=3D"=
+color:rgb(56,118,29)">UGC Approved Journal in 2017<br></span></b></font></p=
+><p class=3D"MsoNormal" style=3D"font-family:&quot;Times New Roman&quot;,se=
+rif;margin:0in 0in 0pt;font-size:12.8px"><font size=3D"4"><b><span style=3D=
+"color:rgb(232,23,93)"><br></span></b></font></p><p class=3D"MsoNormal" sty=
+le=3D"font-family:&quot;Times New Roman&quot;,serif;margin:0in 0in 0pt;font=
+-size:12.8px"><font size=3D"4"><b><span style=3D"color:rgb(232,23,93)">Site=
+ link</span><span style=3D"color:rgb(247,60,93)">:</span></b>&nbsp;&nbsp;<a=
+ href=3D"http://ijcttjournal.org/" target=3D"_blank" style=3D"font-family:a=
+rial,sans-serif;color:blue;text-decoration-line:none">http://ijcttjournal.o=
+rg/</a></font></p><span style=3D"font-size:12.8px"><font size=3D"4"></font>=
+</span><p class=3D"MsoNormal" style=3D"font-family:&quot;Times New Roman&qu=
+ot;,serif;margin:0in 0in 0pt;font-size:12.8px"><font size=3D"4">&nbsp;</fon=
+t></p><span style=3D"font-size:12.8px"><font size=3D"4"></font></span><p cl=
+ass=3D"MsoNormal" style=3D"font-family:&quot;Times New Roman&quot;,serif;ma=
+rgin:0in 0in 0pt;font-size:12.8px"><font size=3D"4"><b><span style=3D"color=
+:rgb(192,0,0)"></span></b></font></p><p class=3D"MsoNormal" style=3D"font-f=
+amily:&quot;Times New Roman&quot;,serif;margin:0in 0in 0pt;font-size:12.8px=
+"><font size=3D"4"><b><span style=3D"color:rgb(230,86,9)"></span></b></font=
+></p><p class=3D"MsoNormal" style=3D"font-family:&quot;Times New Roman&quot=
+;,serif;margin:0in 0in 0pt;font-size:12.8px"><font size=3D"4"><b><span styl=
+e=3D"color:rgb(230,86,9)">Submit Your article&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp=
+;</span>&nbsp;</b><a href=3D"mailto:editor@ijcttjournal.org" target=3D"_bla=
+nk" style=3D"font-family:arial,sans-serif;color:blue;text-decoration-line:n=
+one">editor@ijcttjournal.org</a></font></p><span style=3D"font-size:12.8px"=
+><font size=3D"4"></font></span><p class=3D"MsoNormal" style=3D"font-family=
+:&quot;Times New Roman&quot;,serif;margin:0in 0in 0pt;font-size:12.8px"><fo=
+nt size=3D"4"><b><span style=3D"color:rgb(230,86,9)">Frequency.&nbsp; &nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;:</span>&nbsp;&nbsp;</b>12 issues per year.</font></p=
+><span style=3D"font-size:12.8px"><font size=3D"4"></font></span><p class=
+=3D"MsoNormal" style=3D"font-family:&quot;Times New Roman&quot;,serif;margi=
+n:0in 0in 0pt;font-size:12.8px"><font size=3D"4"><b><span style=3D"color:rg=
+b(230,86,9)">ISSN&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp; &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span></b>2231 - 2803<span style=3D=
+"font-family:Arial,sans-serif"></span></font></p><span style=3D"font-size:1=
+2.8px"><font size=3D"4"></font></span><p class=3D"MsoNormal" style=3D"font-=
+family:&quot;Times New Roman&quot;,serif;margin:0in 0in 0pt;font-size:12.8p=
+x"><font size=3D"4"><b><span style=3D"color:rgb(230,86,9)">Subject&nbsp;&nb=
+sp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;:</span></b><span s=
+tyle=3D"color:rgb(192,0,0)">&nbsp;&nbsp;</span>Computer Science &amp; Techn=
+ology<br></font></p><span style=3D"font-size:12.8px"><font size=3D"4"></fon=
+t></span><p class=3D"MsoNormal" style=3D"font-family:&quot;Times New Roman&=
+quot;,serif;margin:0in 0in 0pt;font-size:12.8px"><font size=3D"4"><b><span =
+style=3D"color:rgb(230,86,9)">Published by &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:</span></b>&nbsp;&nbs=
+p;Seventh Sense Research Group.</font></p><span style=3D"font-size:12.8px">=
+<font size=3D"4"></font></span><p style=3D"font-family:&quot;Times New Roma=
+n&quot;,serif;font-size:12.8px;margin-right:0in;margin-left:0in"><font size=
+=3D"4"><b><span style=3D"color:rgb(128,100,162)"><br></span></b></font></p>=
+<p style=3D"font-family:&quot;Times New Roman&quot;,serif;font-size:12.8px;=
+margin-right:0in;margin-left:0in"><font size=3D"4"><b><span style=3D"color:=
+rgb(232,23,93)">Features of IJCTT</span><span style=3D"color:rgb(232,23,93)=
+">:</span></b></font></p><span style=3D"font-size:12.8px"><font size=3D"4">=
+</font></span><ul type=3D"square" style=3D"font-size:12.8px;margin-bottom:0=
+in"><li class=3D"MsoNormal" style=3D"margin:0in 0in 0pt;font-family:&quot;T=
+imes New Roman&quot;,serif"><font size=3D"4">Publication of one entire rese=
+arch paper in Online.</font></li><li class=3D"MsoNormal" style=3D"margin:0i=
+n 0in 0pt;font-family:&quot;Times New Roman&quot;,serif"><font size=3D"4">F=
+astest reviewing and publishing process.</font></li><li class=3D"MsoNormal"=
+ style=3D"margin:0in 0in 0pt;font-family:&quot;Times New Roman&quot;,serif"=
+><font size=3D"4"><b>Both soft and Hard Copies (On Demand) of Certificate w=
+ill be provided</b>&nbsp;to all authors of the paper.</font></li><li class=
+=3D"MsoNormal" style=3D"margin:0in 0in 0pt;font-family:&quot;Times New Roma=
+n&quot;,serif"><font size=3D"4">Hard copy delivery Via Speed Post/DHL - For=
+ Fastest Delivery.</font></li><li class=3D"MsoNormal" style=3D"margin:0in 0=
+in 0pt;font-family:&quot;Times New Roman&quot;,serif"><font size=3D"4">High=
+ Indexing process.</font></li><li class=3D"MsoNormal" style=3D"margin:0in 0=
+in 0pt;font-family:&quot;Times New Roman&quot;,serif"><font size=3D"4">Low =
+Publication Fee.</font></li><li class=3D"MsoNormal" style=3D"margin:0in 0in=
+ 0pt;font-family:&quot;Times New Roman&quot;,serif"><font size=3D"4">Speed =
+&amp; easy Publication.</font></li></ul><div><p class=3D"MsoNormal" style=
+=3D"font-family:Calibri,sans-serif;margin:0in 0in 0pt;background-position:i=
+nitial;background-image:initial;line-height:normal;font-size:11pt;backgroun=
+d-repeat:initial;background-clip:initial;background-origin:initial;backgrou=
+nd-size:initial"><span style=3D"color:rgb(136,136,136);font-family:&quot;Ti=
+mes New Roman&quot;,serif;font-size:10pt"><br></span><span style=3D"color:g=
+ray;font-family:&quot;Times New Roman&quot;,serif;font-size:10pt">By</span>=
+<span style=3D"color:gray;font-family:&quot;Times New Roman&quot;,serif;fon=
+t-size:10pt"><br></span><span style=3D"color:gray;font-family:&quot;Times N=
+ew Roman&quot;,serif;font-size:10pt">Editor IJCTT</span></p></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div>
+
+--000000000000bda87f058f598049--

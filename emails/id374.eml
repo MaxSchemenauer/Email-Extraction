@@ -1,0 +1,1111 @@
+Return-Path: delliot@calpoly.edu
+Received: from p-zm-mta03.its.calpoly.edu (LHLO p-zm-mta03.its.calpoly.edu) (129.65.64.111) by p-zm-store01.its.calpoly.edu with LMTP;
+	 Tue, 28 Oct 2014 17:18:40 -0700 (PDT)
+Received: from p-zm-mta03.its.calpoly.edu (localhost.localdomain [127.0.0.1]) by p-zm-mta03.its.calpoly.edu (Postfix) with ESMTP id B6D675E307;
+	 Tue, 28 Oct 2014 17:18:39 -0700 (PDT)
+Received: from p-zm-store05.its.calpoly.edu (p-zm-store05.its.calpoly.edu [129.65.64.107]) by p-zm-mta03.its.calpoly.edu (Postfix) with ESMTP id 577385E2DC;
+	 Tue, 28 Oct 2014 17:18:39 -0700 (PDT)
+From: "Dennis K. Elliot" <delliot@calpoly.edu>
+To: Alison Mackey <mackey@calpoly.edu>, "Cheryl L. Mollan"
+	<cmollan@calpoly.edu>, Christine Theodoropoulos <theo@calpoly.edu>, Eileen
+ Elizabeth Joseph <ejoseph@calpoly.edu>, "Hunter H. Francis"
+	<wfrancis@calpoly.edu>, Jeanette Elizabeth Paolucci <jepaoluc@calpoly.edu>,
+	Jill Kathryn Nelson <jinelson@calpoly.edu>, Joel Neel <jneel@calpoly.edu>,
+	"Margot K. McDonald" <mmcdonal@calpoly.edu>, Patrick Lemieux
+	<plemieux@calpoly.edu>, Rafael Jimenez-Flores <rjimenez@calpoly.edu>,
+	"Rebecca D. Scanlon" <rdscanlo@calpoly.edu>, "Richard D. Wagner"
+	<rdwagner@calpoly.edu>, Ron Skamfer <rskamfer@calpoly.edu>, "Scott L.
+ Loosley" <sloosley@calpoly.edu>, "Scott R. Bloom" <sbloom@calpoly.edu>,
+	"Suzanne K. LaCaro" <slacaro@calpoly.edu>, Yukie Murphy
+	<yumurphy@calpoly.edu>, Zachary Michael Antoyan <zantoyan@calpoly.edu>,
+	"Daniel J. Levi" <dlevi@calpoly.edu>, "David B. Braun" <dbraun@calpoly.edu>,
+	"Harvey C. Greenwald" <hgreenwa@calpoly.edu>, Jesse Vestermark
+	<jvesterm@calpoly.edu>, "Jonathan G. Fernsler" <jfernsle@calpoly.edu>, Julie
+ Moloney <jmoloney@calpoly.edu>, Katie Tool <mtool@calpoly.edu>, "Neal A.
+ MacDougall" <nmacdoug@calpoly.edu>, Rebekah Oulton <roulton@calpoly.edu>,
+	"Robert S. Echols" <rechols@calpoly.edu>, Scott Kelting
+	<skelting@calpoly.edu>, Dale Sterling Lee Dolan <dsdolan@calpoly.edu>,
+	Dominique Bonino <dbonino@calpoly.edu>, Elizabeth Jean Williams
+	<ejwillia@calpoly.edu>, "Ellen S. Chambers" <eschambe@calpoly.edu>, Joaquin
+ Escalante <jescalan@calpoly.edu>, Kim Busby <kbusby@calpoly.edu>, Stephanie
+ Roberson <roberson@calpoly.edu>, "Troy A. Weipert" <tweipert@calpoly.edu>,
+	"Victor N. Brancart" <vbrancar@calpoly.edu>, "Yukie Y. Nishinaga"
+	<ynishina@calpoly.edu>, Ahmad Nafisi <anafisi@calpoly.edu>, "Alexander M.
+ Dekhtyar" <dekhtyar@calpoly.edu>, Ali Shaban <ashaban@calpoly.edu>, "Allan J.
+ Hauck" <ahauck@calpoly.edu>, "Andrew I. Davol" <adavol@calpoly.edu>, Andrew
+ Kean <akean@calpoly.edu>, Anurag Pande <apande@calpoly.edu>, Art MacCarley
+	<amaccarl@calpoly.edu>, Brian Tietje <btietje@calpoly.edu>, "Bridget Gwenith
+ M. Benson" <bbenson@calpoly.edu>, "Bryan J. Mealy" <bmealy@calpoly.edu>,
+	"Charles B. Birdsong" <cbirdson@calpoly.edu>, Chris Oesteich
+	<coestreich@snapnrack.com>, "Christopher C. Pascual" <cpascual@calpoly.edu>,
+	"Clark S. Turner" <csturner@calpoly.edu>, Dan Holmes
+	<dan.holmes@siemens.com>, "Daniel C. Jansen" <djansen@calpoly.edu>, "David D.
+ Marshall" <ddmarsha@calpoly.edu>, David Rubin <der1@pge.com>, "David S.
+ Clague" <dclague@calpoly.edu>, Debra Larson <dslarson@calpoly.edu>, "Douglas
+ D. Piirto" <dpiirto@calpoly.edu>, Empower Poly Coalition
+	<empowerpolycoalition@gmail.com>, "Eric A. Mehiel" <emehiel@calpoly.edu>,
+	"Eric P. Kasper" <ekasper@calpoly.edu>, Foaad Khosmood <foaad@calpoly.edu>,
+	Fred DePiero <fdepiero@calpoly.edu>, gabe davis
+	<g.davis@mainstreamenergy.com>, Galen Ricard <gricard@calpoly.edu>, "Glen E.
+ Thorncroft" <gthorncr@calpoly.edu>, Gregory Schwartz <gschwa01@calpoly.edu>,
+	"Ian C. Woertz" <iwoertz@calpoly.edu>, "Ignatios E. Vakalis"
+	<ivakalis@calpoly.edu>, "James L. Hanson" <jahanson@calpoly.edu>, Jean Lee
+	<jlee473@calpoly.edu>, Jesse Maddren <jmaddren@calpoly.edu>, Jianbiao Pan
+	<pan@calpoly.edu>, "John G. Fabijanic" <jfabijan@calpoly.edu>, "John Y.
+ Oliver" <jyoliver@calpoly.edu>, Jonathan Lind York <jlyork@calpoly.edu>,
+	"Jose A. Macedo" <jmacedo@calpoly.edu>, "Joseph D. Mello"
+	<jdmello@calpoly.edu>, Kathy Chen <kcchen@calpoly.edu>, "Kim A.
+ Shollenberger" <kshollen@calpoly.edu>, "Kurt W. Colvin"
+	<kcolvin@calpoly.edu>, "Lanny V. Griffin" <lgriffin@calpoly.edu>, Lily Hsu
+ Laiho <llaiho@calpoly.edu>, Linda Vanasupa <lvanasup@calpoly.edu>, "Lizabeth
+ T. Schlemer" <lschleme@calpoly.edu>, "Lonny G. Simonian"
+	<lsimonia@calpoly.edu>, "Lynne A. Slivovsky" <lslivovs@calpoly.edu>, Mary
+ Johnson <mary.johnson@siemens.com>, "Mason M. Medizade"
+	<mmedizad@calpoly.edu>, Misgana Kebede Muleta <mmuleta@calpoly.edu>, Nazli
+ Yesiller <nyesille@calpoly.edu>, NFN Taufik <taufik@calpoly.edu>, Pat Mullen
+	<pwm3@pge.com>, "Peter J. Schuster" <pschuste@calpoly.edu>, "Peter V.
+ Schwartz" <pschwart@calpoly.edu>, "Phillip L. Nico" <pnico@calpoly.edu>, Reza
+ Pouraghabagher <rpouragh@calpoly.edu>, "Richard N. Savage"
+	<rsavage@calpoly.edu>, "Richard S. LeRoy" <rleroy@calpoly.edu>, Robert Bruce
+ Szlavik <rszlavik@calpoly.edu>, "Robert S. Crockett" <rcrocket@calpoly.edu>,
+	Rod Hoadley <rhoadley@calpoly.edu>, Roya Javadpour <rjavadpo@calpoly.edu>,
+	Sam Vigil <svigil@calpoly.edu>, "Samuel N. Blakeslee" <sblakesl@calpoly.edu>,
+	Sandy Stannard <stannard@calpoly.edu>, "Sema E. Alptekin"
+	<salpteki@calpoly.edu>, Shikha Rahman <rahman@calpoly.edu>, Stan Nosek
+	<snosek@calpoly.edu>, Steffen Peuker <speuker@calpoly.edu>, "Stuart W.
+ Styles" <sstyles@calpoly.edu>, "Thomas J. Mackin" <tmackin@calpoly.edu>,
+	"Trevor S. Harding" <tharding@calpoly.edu>, "Trygve J. Lundquist"
+	<tlundqui@calpoly.edu>, "William L. Ahlgren" <wahlgren@calpoly.edu>, "Yarrow
+ M. Nelson" <ynelson@calpoly.edu>, "Zachary N.J. Peterson" <znjp@calpoly.edu>,
+	Dan Bertoldi <dbertoldi@ase.org>, Garrett Stuart Finkelstein
+	<gfinkels@calpoly.edu>, Jesse Erik Gibson <jgibso04@calpoly.edu>, "Nadia J.
+ Carroll" <njcarrol@calpoly.edu>, "Richard (Trey) Young"
+	<treydyoung@gmail.com>, Trudy Vinson <tjvinson830@gmail.com>
+References: <1118965842662.1103666021497.678.0.291401JL.1002@scheduler.constantcontact.com>
+In-Reply-To: <1118965842662.1103666021497.678.0.291401JL.1002@scheduler.constantcontact.com>
+Subject: FW: This Way to Sustainability Conference Proposal Deadline Reminder
+Date: Tue, 28 Oct 2014 17:18:39 -0700
+Message-ID: <5a6c0a91.00001a68.0000000d@AFD-D112281.afd-calpoly.local>
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_00CF_01CFF2D3.3A0326A0"
+X-Mailer: Microsoft Outlook 14.0
+X-Mailer: Zimbra 8.0.5_GA_5839 (ZimbraConnectorForOutlook/8.0.5.993)
+Thread-Index: jgLSBSyT7W7THCIH1/M5v2fE+QLdHw==
+Content-Language: en-us
+X-Originating-IP: [129.65.64.110]
+Thread-Topic: This Way to Sustainability Conference Proposal Deadline Reminder
+MIME-Version: 1.0
+
+------=_NextPart_000_00CF_01CFF2D3.3A0326A0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_00D0_01CFF2D3.3A034DB0"
+
+------=_NextPart_001_00D0_01CFF2D3.3A034DB0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Greetings all:
+
+
+
+Please see the reminder regarding the deadline for submission of proposals=
+=20
+to the CSU Chico =93This Way To Sustainability=94 Conference in March, 2015=
+.=20
+This conference had over 1400 attendees last year, and was heavily focused=
+=20
+on agriculture, food systems, and water issues.  Even if you do not have=20
+something you wish to present, you are encouraged to consider attendance to=
+=20
+learn of best practices being implemented on our sister campuses, and=20
+network with your peers.
+
+
+
+Regards,
+
+Dennis
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dennis K. Elliot, PE, CEM
+Associate Director - Energy, Utilities, and Sustainability
+Facility Services, Cal Poly State University, San Luis Obispo, Ca
+Ph (805) 756-2090     Cell (805) 712-6477     delliot@calpoly.edu
+
+www.sustainability.calpoly.edu <http://www.sustainability.calpoly.edu/>
+P Please consider the environment before printing this e-mail.
+
+
+
+
+
+
+
+From: CSU, Chico - Sustainable Development=20
+[mailto:sustainability@csuchico.edu]
+Sent: Tuesday, October 28, 2014 11:02 AM
+To: Delliot@calpoly.edu
+Subject: This Way to Sustainability Conference Proposal Deadline Reminder
+
+
+
+  <http://r20.rs6.net/on.jsp?ca=3D2a639b4b-045c-4d3d-a410-6167ba241c3b&a=3D=
+1103666021497&d=3D1118965842662&r=3D3&o=3Dhttp://ui.constantcontact.com/ima=
+ges/p1x1.gif&c=3D02fc5dd0-527d-11e3-bea7-d4ae527b6fcc&ch=3D03725120-527d-11=
+e3-beca-d4ae527b6fcc>
+
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/SpacerImage.=
+gif>
+
+
+
+
+
+
+
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_TopCu=
+rveLeft.png>
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/SpacerImage.=
+gif>
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_TopCu=
+rveCenter.png>
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/SpacerImage.=
+gif>
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_TopCu=
+rveRight.png>
+
+
+
+ New ISD logo=20
+<http://ih.constantcontact.com/fs019/1103666021497/img/136.jpg>
+
+
+
+
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/S.gif>
+
+
+
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_Ribbo=
+nOuterShadowLeft.png>
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/SpacerImage.=
+gif>
+
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_Ribbo=
+nInnerShadowLeft1.png>
+
+
+This Way to Sustainability X
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_Ribbo=
+nInnerShadowRight1.png>
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_Ribbo=
+nOuterShadowRight.png>
+
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_Ribbo=
+nInnerShadowLeft2.png>
+
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_Ribbo=
+nInnerShadowRight2.png>
+
+
+
+
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/S.gif>
+
+
+
+
+  <http://img.constantcontact.com/letters/images/1101116784221/S.gif>
+
+
+
+
+Proposal Submission Deadline is Friday, October 31, 2014.
+
+
+
+
+
+
+
+This Way to Sustainability X will be held March 26-27, 2015 at the Bell=20
+Memorial Union on the CSU, Chico campus.
+
+
+
+Submit your proposal before this Friday, October 31, 2014.
+
+visit our website for details.=20
+<http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUD=
+VOYN8e6XSHZrU-CJOgVDjJDpQHwEz9CAeBLuGj2n3-6LxxsGoDmzH9D48rhGGFdkdlwLsCIpTfJ=
+hEK6JLlyiRdwkIyby6k5ijFZqJ9tAlsn3JWvyEI22XWfTX719kzwpTn-zdSN1uK8NGfMOjhOHFc=
+89_WjukiF5opIPnz0zp-qqg=3D=3D&c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2im=
+oVEFaGXE1kzKw=3D=3D&ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2=
+A2kw=3D=3D>
+
+
+This years focus Building Resilient Communities will explore ways to provid=
+e=20
+individuals with methods to prepare for a dynamic future, one with=20
+uncertain, but generally increasing, socio-ecological stresses. We will=20
+explore opportunities to enhance community and individual well-being.
+
+For conference abstract requirements and submission instructions please=20
+visit our=20
+<http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUD=
+VOYN8e6XSHZrZqXQLrr94mpMd6djzA8dBOayPx4CN8Ds--EWy-ux6hSjLt4zjtZB0UtsbUg7UaU=
+gMI1LP-DzswCQkC5iBSrtBToIKJ8XvVAd1U0LHSDPaQvZQhtpciyNeWafY0DFWDjcGKhfegC4Pj=
+buR-rN_m3p-J1CXycB3L7Og=3D=3D&c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2im=
+oVEFaGXE1kzKw=3D=3D&ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2=
+A2kw=3D=3D>=20
+conference page.
+
+
+
+
+
+  <http://ih.constantcontact.com/fs173/1103666021497/img/340.jpg>
+
+
+
+
+Interested in Quicker Updates?
+
+
+ <http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taU=
+DVOYN8e6XSHZrZCojsf07DlBe23aPeLfPWnlvkl7mUWNMcSyhUZ1pSmJO2Es8ItZyjqV-LdyMuy=
+q7IixVqOKZau6UF7RGmocPWLdp3DiwqcHqFMi2DggyFXyvtSpi8Hdto-PEF5dC-BOrCvoWMHyzP=
+uYxYUO-lEzYl0=3D&c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=
+=3D=3D&ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D>Li=
+ke us on Facebook &<http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vH=
+ec9Y_YN23fRqAm7taUDVOYN8e6XSHZraCy5oKmSMtgN9c2YI47yESg8p0PpjW0YKuUDJhMp84Hz=
+eZfoqAEZ-ZwiLoSI5_M8CYRfxgZ6TRzCVy2u--Z2atGzMsEgG8aqYqCRUQZLbatn1-i_2zy50i0=
+OmHSB-dpyFXpWsFzI7Ti5MiG64J2qrCdYPXmwE0Gpr-x39WE6PI6uBxZbvpiDbc=3D&c=3DbrnR=
+BevP3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=3D=3D&ch=3Dkvv4pnSa5JUnk=
+3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D> Follow us on Twitterfor in=
+stant updates on all things This Way to Sustainability.  <http://ih.constan=
+tcontact.com/fs173/1103666021497/img/365.jpg>  <http://ih.constantcontact.c=
+om/fs173/1103666021497/img/369.jpg>  <http://ih.constan
+ tcontact.com/fs173/1103666021497/img/366.jpg>  <http://ih.constantcontact.=
+com/fs173/1103666021497/img/367.jpg>To watch videos of our speakers, see co=
+nference programs, check out awards,pictures and more, visit<http://r20.rs6=
+.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZreiK=
+oI2sdohf9fKw8Yf5xqKFXohBHiFuA83TdLIAsibNAwbBvwmW3TATqg-yoEu0cLoRlFRdC1g-7mN=
+C-Vse84rtEsSo5WUaCgJ577qcL4B1Xu8xOFtzSuRWcLcAl3qcyAWf5zn7-fqJiKUWQH-YUdBZKO=
+dMx3sQ0d7T2_gPpKoCHA08uTashLE=3D&c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork=
+2imoVEFaGXE1kzKw=3D=3D&ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F=
+0P2A2kw=3D=3D> our archive page.  <http://ih.constantcontact.com/fs173/1103=
+666021497/img/338.jpg><http://ih.constantcontact.com/fs173/1103666021497/im=
+g/370.jpg><http://ih.constantcontact.com/fs173/1103666021497/img/371.jpg>  =
+<http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_BottomC=
+urveLeft.png>  <http://img.constantcontact.com/letters/images/1101116784221=
+/SpacerImage.gif>  <http://img.constant
+ contact.com/letters/images/1101116784221/PM_SSU_BottomCurveCenter.png>  <h=
+ttp://img.constantcontact.com/letters/images/1101116784221/SpacerImage.gif>=
+  <http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_Botto=
+mCurveRight.png>  <http://img.constantcontact.com/letters/images/1101116784=
+221/S.gif>Stay Connected <http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiD=
+yCm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZrZCojsf07DlBe23aPeLfPWnlvkl7mUWNMcSyhUZ=
+1pSmJO2Es8ItZyjqV-LdyMuyq7IixVqOKZau6UF7RGmocPWLdp3DiwqcHqFMi2DggyFXyvtSpi8=
+Hdto-PEF5dC-BOrCvoWMHyzPuYxYUO-lEzYl0=3D&c=3DbrnRBevP3zjf07ItAINahtPQsFeB38=
+DeywXork2imoVEFaGXE1kzKw=3D=3D&ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSR=
+t2MsU_3F0P2A2kw=3D=3D> Like us on Facebook<http://r20.rs6.net/tn.jsp?f=3D00=
+1ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZrY1DqQmXNEyiiSP9V8A1Co=
+ZlLBHaNeYrT96g7jqAJyXLeSL0ZgoxTyXooztg3QPkzJxmrmEr_T7gITZF5qBOiZ-d3Ya_DmNr5=
+RXlDdo-SHPuC-AzEBQ-qZYloeufwp554GLWQYykiJ7P&c=3DbrnRBevP3zjf07ItAINahtPQsFe=
+B38DeywXork2imoVEFaGXE1kzKw=3D=3D&ch=3Dkvv4pnSa5J
+ Unk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D> Follow us on Twitter<h=
+ttp://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUDVO=
+YN8e6XSHZrah35a5l0crHuJAVH_bW_czCNz7Ad9QvijUxDoKVzaMEcZ9sa5WJAWrSUmqEWaWC07=
+OL4vWbWmljHbLeliq9L8D-P96jMdh5J0hxAG7s2yx6Uiz_Ksipb8pZ01qulvJd4Ncoqfz_NhwT9=
+XG4rxcI24AijbpcbesdvnsuUHzi176s-WNe9gS6aWYAdbR5P0DjpelmcxfoMY0U9mCUg20g4Cs=
+=3D&c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=3D=3D&ch=3Dk=
+vv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D> View our profi=
+le on LinkedIn<http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_=
+YN23fRqAm7taUDVOYN8e6XSHZrah35a5l0crHtsRhqTJwbCL-C__suQnFbpM-z5drvHBUMGgc5h=
+87HVqwzBwECnb5wMxWq2Fo2GgunCJMBiWiv3o5d3zX-uRkwBbwsoZAR3TGZg_Z9LJSpwdZpZahX=
+xxW1lc2EURFfwdj&c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=
+=3D=3D&ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D> F=
+ind us on Pinterest  <http://img.constantcontact.com/letters/images/1101116=
+784221/SpacerImage.gif>  <https://imgssl.constantcontact.co
+ m/letters/images/1101116784221/S.gif>Forward this email<http://ui.constant=
+contact.com/sa/fwtf.jsp?llr=3Dzdb5z8dab&m=3D1103666021497&ea=3DDelliot%40ca=
+lpoly.edu&a=3D1118965842662> <http://visitor.constantcontact.com/do?p=3Dun&=
+m=3D001zTaWx_66zDrTo_q1rTb-RQ%3D%3D&ch=3D03725120-527d-11e3-beca-d4ae527b6f=
+cc&ca=3D2a639b4b-045c-4d3d-a410-6167ba241c3b>This email was sent to Delliot=
+@calpoly.edu by sustainability@csuchico.edu |Rapid removal with SafeUnsubsc=
+ribe<http://visitor.constantcontact.com/do?p=3Dun&m=3D001zTaWx_66zDrTo_q1rT=
+b-RQ%3D%3D&ch=3D03725120-527d-11e3-beca-d4ae527b6fcc&ca=3D2a639b4b-045c-4d3=
+d-a410-6167ba241c3b> =99 | Privacy Policy<http://ui.constantcontact.com/rov=
+ing/CCPrivacyPolicy.jsp> . <http://www.constantcontact.com/index.jsp?cc=3DP=
+M_SSU>CSU, Chico - Sustainable Development | 400 W. First Street | SSC Rm 4=
+64 |Chico | CA | 95929-0633  <https://imgssl.constantcontact.com/letters/im=
+ages/1101116784221/S.gif>=
+
+------=_NextPart_001_00D0_01CFF2D3.3A034DB0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><m=
+eta name=3D"Generator" content=3D"Microsoft Word 14 (filtered medium)"><!--=
+[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Webdings;
+	panose-1:5 3 1 2 1 5 9 6 7 3;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3D"EN-US" link=3D"blue"=
+ vlink=3D"purple"><div class=3D"WordSection1"><p class=3D"MsoNormal"><span =
+style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&=
+quot;;color:#1F497D">Greetings all:<o:p></o:p></span></p><p class=3D"MsoNor=
+mal"><span style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;=
+sans-serif&quot;;color:#1F497D"><o:p>&nbsp;</o:p></span></p><p class=3D"Mso=
+Normal"><span style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&qu=
+ot;sans-serif&quot;;color:#1F497D">Please see the reminder regarding the de=
+adline for submission of proposals to the CSU Chico =E2=80=9CThis Way To Su=
+stainability=E2=80=9D Conference in March, 2015.&nbsp; This conference had =
+over 1400 attendees last year, and was heavily focused on agriculture, food=
+ systems, and water issues.&nbsp; Even if you do not have something you wis=
+h to present, you are encouraged to consider attendance to learn of best pr=
+actices being implemented on our sister campuses, and network with your pee=
+rs.<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-size:11=
+.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:#1F497D">=
+<o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-size=
+:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:#1F497=
+D">Regards,<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"font=
+-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:#=
+1F497D">Dennis<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"f=
+ont-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;colo=
+r:#1F497D"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span style=
+=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;c=
+olor:#1F497D">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><span styl=
+e=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot=
+;;color:#1F497D"><o:p></o:p></span></p><p class=3D"MsoNormal"><b><span styl=
+e=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;=
+color:#1F497D">Dennis K. Elliot, PE, CEM</span></b><span style=3D"font-size=
+:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1F497D"=
+><br></span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,&q=
+uot;sans-serif&quot;;color:#1F497D">Associate Director - Energy, Utilities,=
+ and Sustainability<br>Facility Services, Cal Poly State University, San Lu=
+is Obispo, Ca<br>Ph (805) 756-2090&nbsp;&nbsp;&nbsp;&nbsp; Cell (805) 712-6=
+477&nbsp;&nbsp;&nbsp;&nbsp; <a href=3D"mailto:delliot@calpoly.edu">delliot@=
+calpoly.edu</a></span><span style=3D"font-size:11.0pt;font-family:&quot;Cal=
+ibri&quot;,&quot;sans-serif&quot;;color:#1F497D"><o:p></o:p></span></p><p c=
+lass=3D"MsoNormal"><span style=3D"font-size:9.0pt;font-family:&quot;Arial&q=
+uot;,&quot;sans-serif&quot;;color:#1F497D"><a href=3D"http://www.sustainabi=
+lity.calpoly.edu/">www.sustainability.calpoly.edu<br></a></span><span style=
+=3D"font-size:18.0pt;font-family:Webdings;color:green">P</span><span style=
+=3D"font-size:11.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;c=
+olor:green"> </span><span style=3D"font-size:10.0pt;font-family:&quot;Calib=
+ri&quot;,&quot;sans-serif&quot;;color:green">Please consider the environmen=
+t before printing this e-mail.</span><span style=3D"font-size:11.0pt;font-f=
+amily:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:#1F497D"><o:p></o:p>=
+</span></p><p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-fami=
+ly:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:#1F497D"><img border=3D=
+"0" width=3D"201" height=3D"73" id=3D"_x0000_i1068" src=3D"cid:image001.jpg=
+@01CFF2D3.36B31140"></span><span style=3D"font-size:11.0pt;font-family:&quo=
+t;Calibri&quot;,&quot;sans-serif&quot;;color:#1F497D"><o:p></o:p></span></p=
+><p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;C=
+alibri&quot;,&quot;sans-serif&quot;;color:#1F497D"><o:p>&nbsp;</o:p></span>=
+</p><p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quo=
+t;Calibri&quot;,&quot;sans-serif&quot;;color:#1F497D"><o:p>&nbsp;</o:p></sp=
+an></p><div><div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;paddin=
+g:3.0pt 0in 0in 0in"><p class=3D"MsoNormal"><b><span style=3D"font-size:10.=
+0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;">From:</span></b>=
+<span style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-s=
+erif&quot;"> CSU, Chico - Sustainable Development [mailto:sustainability@cs=
+uchico.edu] <br><b>Sent:</b> Tuesday, October 28, 2014 11:02 AM<br><b>To:</=
+b> Delliot@calpoly.edu<br><b>Subject:</b> This Way to Sustainability Confer=
+ence Proposal Deadline Reminder<o:p></o:p></span></p></div></div><p class=
+=3D"MsoNormal"><o:p>&nbsp;</o:p></p><div id=3D"rootDiv"><p class=3D"MsoNorm=
+al"><img border=3D"0" width=3D"1" height=3D"1" id=3D"_x0000_i1025" src=3D"h=
+ttp://r20.rs6.net/on.jsp?ca=3D2a639b4b-045c-4d3d-a410-6167ba241c3b&amp;a=3D=
+1103666021497&amp;d=3D1118965842662&amp;r=3D3&amp;o=3Dhttp://ui.constantcon=
+tact.com/images/p1x1.gif&amp;c=3D02fc5dd0-527d-11e3-bea7-d4ae527b6fcc&amp;c=
+h=3D03725120-527d-11e3-beca-d4ae527b6fcc"><o:p></o:p></p><div align=3D"cent=
+er"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" width=3D"100%" style=3D"width:100.0%;background:#E3E4DF;align:cen=
+ter"><tr><td width=3D"50%" style=3D"width:50.0%;padding:0in 0in 0in 0in"></=
+td><td valign=3D"top" style=3D"padding:0in 0in 0in 0in"><div align=3D"cente=
+r"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"640" style=3D"width:480.0pt"><tr style=3D"height:.75pt"><=
+td valign=3D"top" style=3D"background:#E3E4DF;padding:0in 0in 14.25pt 0in;h=
+eight:.75pt"><div><p class=3D"MsoNormal" align=3D"center" style=3D"text-ali=
+gn:center;mso-line-height-alt:.75pt"><span style=3D"font-size:10.0pt;font-f=
+amily:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#262626"><img border=
+=3D"0" width=3D"5" height=3D"1" id=3D"_x0000_i1026" src=3D"http://img.const=
+antcontact.com/letters/images/1101116784221/SpacerImage.gif"><o:p></o:p></s=
+pan></p></div></td></tr></table></div><p class=3D"MsoNormal" align=3D"cente=
+r" style=3D"text-align:center"><span style=3D"display:none"><o:p>&nbsp;</o:=
+p></span></p><div align=3D"center"><table class=3D"MsoNormalTable" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:10=
+0.0%"><tr><td width=3D"100%" valign=3D"top" style=3D"width:100.0%;padding:0=
+in 0in 0in 0in"></td></tr></table></div></td><td width=3D"50%" style=3D"wid=
+th:50.0%;padding:0in 0in 0in 0in"></td></tr><tr><td width=3D"50%" style=3D"=
+width:50.0%;padding:0in 0in 0in 0in"></td><td valign=3D"top" style=3D"paddi=
+ng:0in 0in 0in 0in"><div align=3D"center"><table class=3D"MsoNormalTable" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"wid=
+th:100.0%;background:white;align:center"><tr><td width=3D"100%" valign=3D"t=
+op" style=3D"width:100.0%;background:#E3E4DF;padding:0in 0in 0in 0in"><div =
+align=3D"center"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"><tr><td vali=
+gn=3D"bottom" style=3D"padding:0in 0in 0in 0in"><div><p class=3D"MsoNormal"=
+><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-s=
+erif&quot;;color:#262626"><img border=3D"0" width=3D"118" height=3D"55" id=
+=3D"_x0000_i1027" src=3D"http://img.constantcontact.com/letters/images/1101=
+116784221/PM_SSU_TopCurveLeft.png"><o:p></o:p></span></p></div></td><td wid=
+th=3D"50%" valign=3D"bottom" style=3D"width:50.0%;padding:0in 0in 0in 0in">=
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100.0%"><tr><td valign=3D"top" style=
+=3D"background:white;padding:0in 0in 0in 0in"><div><p class=3D"MsoNormal"><=
+span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-ser=
+if&quot;;color:#262626"><img border=3D"0" width=3D"1" height=3D"48" id=3D"_=
+x0000_i1028" src=3D"http://img.constantcontact.com/letters/images/110111678=
+4221/SpacerImage.gif"><o:p></o:p></span></p></div></td></tr></table></td><t=
+d valign=3D"bottom" style=3D"padding:0in 0in 0in 0in"><div><p class=3D"MsoN=
+ormal" align=3D"center" style=3D"text-align:center"><span style=3D"font-siz=
+e:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#262626=
+"><img border=3D"0" width=3D"402" height=3D"55" id=3D"_x0000_i1029" src=3D"=
+http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_TopCurve=
+Center.png"><o:p></o:p></span></p></div></td><td width=3D"50%" valign=3D"bo=
+ttom" style=3D"width:50.0%;padding:0in 0in 0in 0in"><div align=3D"right"><t=
+able class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" width=3D"100%" style=3D"width:100.0%"><tr><td valign=3D"top" style=3D"b=
+ackground:white;padding:0in 0in 0in 0in"><div><p class=3D"MsoNormal"><span =
+style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&qu=
+ot;;color:#262626"><img border=3D"0" width=3D"1" height=3D"48" id=3D"_x0000=
+_i1030" src=3D"http://img.constantcontact.com/letters/images/1101116784221/=
+SpacerImage.gif"><o:p></o:p></span></p></div></td></tr></table></div></td><=
+td valign=3D"bottom" style=3D"padding:0in 0in 0in 0in"><div><p class=3D"Mso=
+Normal" align=3D"right" style=3D"text-align:right"><span style=3D"font-size=
+:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#262626"=
+><img border=3D"0" width=3D"118" height=3D"55" id=3D"_x0000_i1031" src=3D"h=
+ttp://img.constantcontact.com/letters/images/1101116784221/PM_SSU_TopCurveR=
+ight.png"><o:p></o:p></span></p></div></td></tr></table></div></td></tr><tr=
+><td width=3D"100%" valign=3D"bottom" style=3D"width:100.0%;padding:0in 0in=
+ 0in 0in"><div align=3D"center"><table class=3D"MsoNormalTable" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"=
+ id=3D"content_LETTER.BLOCK2"><tr><td valign=3D"bottom" style=3D"padding:0i=
+n 0in 0in 0in"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:=
+center"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#262626"><img border=3D"0" width=3D"600" height=3D"=
+157" id=3D"_x0000_i1032" src=3D"http://ih.constantcontact.com/fs019/1103666=
+021497/img/136.jpg" hspace=3D"5" vspace=3D"5" alt=3D"New ISD logo" name=3D"=
+ACCOUNT.IMAGE.136"><br><br><o:p></o:p></span></p></td></tr></table></div><p=
+ class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span sty=
+le=3D"display:none"><o:p>&nbsp;</o:p></span></p><div align=3D"center"><tabl=
+e class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ width=3D"100%" style=3D"width:100.0%"><tr style=3D"height:.75pt"><td valig=
+n=3D"top" style=3D"padding:0in 0in 8.25pt 0in;height:.75pt"><p class=3D"Mso=
+Normal" align=3D"center" style=3D"text-align:center;mso-line-height-alt:.75=
+pt"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;san=
+s-serif&quot;;color:#262626"><img border=3D"0" width=3D"5" height=3D"1" id=
+=3D"_x0000_i1033" src=3D"http://img.constantcontact.com/letters/images/1101=
+116784221/S.gif"><o:p></o:p></span></p></td></tr></table></div></td></tr></=
+table></div></td><td width=3D"50%" style=3D"width:50.0%;padding:0in 0in 0in=
+ 0in"></td></tr><tr><td width=3D"50%" valign=3D"top" style=3D"width:50.0%;b=
+ackground:#065C28;padding:0in 0in 0in 0in"><div align=3D"right"><table clas=
+s=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"100%" style=3D"width:100.0%"><tr><td valign=3D"top" style=3D"padding:0i=
+n 0in 0in 0in"><div><p class=3D"MsoNormal" align=3D"right" style=3D"text-al=
+ign:right"><img border=3D"0" width=3D"50" height=3D"85" id=3D"_x0000_i1034"=
+ src=3D"http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_=
+RibbonOuterShadowLeft.png"><o:p></o:p></p></div></td></tr></table></div></t=
+d><td valign=3D"top" style=3D"background:#065C28;padding:0in 0in 0in 0in"><=
+div align=3D"center"><table class=3D"MsoNormalTable" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%;background:=
+#065C28;align:center"><tr><td valign=3D"bottom" style=3D"background:white;p=
+adding:12.0pt 0in 0in 0in"><p class=3D"MsoNormal" align=3D"center" style=3D=
+"text-align:center;mso-line-height-alt:.75pt"><img border=3D"0" width=3D"5"=
+ height=3D"1" id=3D"_x0000_i1035" src=3D"http://img.constantcontact.com/let=
+ters/images/1101116784221/SpacerImage.gif"><o:p></o:p></p></td></tr><tr><td=
+ width=3D"100%" valign=3D"bottom" style=3D"width:100.0%;padding:0in 0in 0in=
+ 0in"><div align=3D"center"><table class=3D"MsoNormalTable" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"><tr=
+><td valign=3D"bottom" style=3D"padding:0in 0in 0in 0in"><div><p class=3D"M=
+soNormal"><img border=3D"0" width=3D"60" height=3D"77" id=3D"_x0000_i1036" =
+src=3D"http://img.constantcontact.com/letters/images/1101116784221/PM_SSU_R=
+ibbonInnerShadowLeft1.png"><o:p></o:p></p></div></td><td width=3D"100%" sty=
+le=3D"width:100.0%;padding:0in 0in 0in 0in"><div align=3D"center"><table cl=
+ass=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wid=
+th=3D"100%" style=3D"width:100.0%;background:#065C28" id=3D"content_LETTER.=
+BLOCK4"><tr><td valign=3D"top" style=3D"padding:7.5pt 7.5pt 4.5pt 7.5pt"><p=
+ class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span sty=
+le=3D"font-size:24.0pt;font-family:&quot;Georgia&quot;,&quot;serif&quot;;co=
+lor:white">This Way to Sustainability X<o:p></o:p></span></p></td></tr></ta=
+ble></div></td><td valign=3D"bottom" style=3D"padding:0in 0in 0in 0in"><div=
+><p class=3D"MsoNormal"><img border=3D"0" width=3D"60" height=3D"77" id=3D"=
+_x0000_i1037" src=3D"http://img.constantcontact.com/letters/images/11011167=
+84221/PM_SSU_RibbonInnerShadowRight1.png"><o:p></o:p></p></div></td></tr></=
+table></div></td></tr></table></div></td><td width=3D"50%" valign=3D"top" s=
+tyle=3D"width:50.0%;background:#065C28;padding:0in 0in 0in 0in"><table clas=
+s=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"100%" style=3D"width:100.0%"><tr><td valign=3D"top" style=3D"padding:0i=
+n 0in 0in 0in"><div><p class=3D"MsoNormal"><img border=3D"0" width=3D"50" h=
+eight=3D"85" id=3D"_x0000_i1038" src=3D"http://img.constantcontact.com/lett=
+ers/images/1101116784221/PM_SSU_RibbonOuterShadowRight.png"><o:p></o:p></p>=
+</div></td></tr></table></td></tr><tr><td width=3D"50%" style=3D"width:50.0=
+%;padding:0in 0in 0in 0in"></td><td valign=3D"top" style=3D"background:#065=
+C28;padding:0in 0in 0in 0in"><div align=3D"center"><table class=3D"MsoNorma=
+lTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" sty=
+le=3D"width:100.0%;align:center"><tr><td width=3D"100%" valign=3D"top" styl=
+e=3D"width:100.0%;padding:0in 0in 0in 0in"><p class=3D"MsoNormal" style=3D"=
+mso-line-height-alt:.75pt"><img border=3D"0" width=3D"60" height=3D"10" id=
+=3D"_x0000_i1039" src=3D"http://img.constantcontact.com/letters/images/1101=
+116784221/PM_SSU_RibbonInnerShadowLeft2.png"><o:p></o:p></p></td><td valign=
+=3D"top" style=3D"padding:0in 0in 0in 0in"><p class=3D"MsoNormal" align=3D"=
+right" style=3D"text-align:right;mso-line-height-alt:.75pt"><img border=3D"=
+0" width=3D"60" height=3D"10" id=3D"_x0000_i1040" src=3D"http://img.constan=
+tcontact.com/letters/images/1101116784221/PM_SSU_RibbonInnerShadowRight2.pn=
+g"><o:p></o:p></p></td></tr></table></div></td><td width=3D"50%" style=3D"w=
+idth:50.0%;padding:0in 0in 0in 0in"></td></tr><tr><td width=3D"50%" style=
+=3D"width:50.0%;padding:0in 0in 0in 0in"></td><td valign=3D"top" style=3D"p=
+adding:0in 0in 0in 0in"><div align=3D"center"><table class=3D"MsoNormalTabl=
+e" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D=
+"width:100.0%;background:white;align:center"><tr><td width=3D"100%" valign=
+=3D"top" style=3D"width:100.0%;padding:0in 0in 0in 0in"><div align=3D"cente=
+r"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100.0%"><tr><td width=3D"100%" valig=
+n=3D"top" style=3D"width:100.0%;padding:0in 0in 0in 0in"><div align=3D"cent=
+er"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" width=3D"100%" style=3D"width:100.0%"><tr style=3D"height:.75pt">=
+<td valign=3D"top" style=3D"padding:0in 0in 8.25pt 0in;height:.75pt"><p cla=
+ss=3D"MsoNormal" align=3D"center" style=3D"text-align:center;mso-line-heigh=
+t-alt:.75pt"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,=
+&quot;sans-serif&quot;;color:#262626"><img border=3D"0" width=3D"5" height=
+=3D"1" id=3D"_x0000_i1041" src=3D"http://img.constantcontact.com/letters/im=
+ages/1101116784221/S.gif"><o:p></o:p></span></p></td></tr></table></div><p =
+class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span styl=
+e=3D"display:none"><o:p>&nbsp;</o:p></span></p><div align=3D"center"><table=
+ class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+width=3D"100%" style=3D"width:100.0%"><tr style=3D"height:.75pt"><td valign=
+=3D"top" style=3D"padding:0in 0in 8.25pt 0in;height:.75pt"><p class=3D"MsoN=
+ormal" align=3D"center" style=3D"text-align:center;mso-line-height-alt:.75p=
+t"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans=
+-serif&quot;;color:#262626"><img border=3D"0" width=3D"5" height=3D"1" id=
+=3D"_x0000_i1042" src=3D"http://img.constantcontact.com/letters/images/1101=
+116784221/S.gif"><o:p></o:p></span></p></td></tr></table></div><p class=3D"=
+MsoNormal" align=3D"center" style=3D"text-align:center"><span style=3D"disp=
+lay:none"><o:p>&nbsp;</o:p></span></p><div align=3D"center"><table class=3D=
+"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"=
+100%" style=3D"width:100.0%" id=3D"content_LETTER.BLOCK31"><tr><td valign=
+=3D"top" style=3D"padding:5.25pt 27.0pt 0in 27.0pt"><p class=3D"MsoNormal" =
+align=3D"center" style=3D"text-align:center"><span style=3D"font-size:16.0p=
+t;font-family:&quot;Georgia&quot;,&quot;serif&quot;;color:#005900">Proposal=
+ Submission Deadline is Friday, October 31, 2014.</span><span style=3D"font=
+-size:18.0pt;font-family:&quot;Georgia&quot;,&quot;serif&quot;;color:#00590=
+0"><o:p></o:p></span></p></td></tr></table></div><p class=3D"MsoNormal" ali=
+gn=3D"center" style=3D"text-align:center"><span style=3D"display:none"><o:p=
+>&nbsp;</o:p></span></p><div align=3D"center"><table class=3D"MsoNormalTabl=
+e" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D=
+"width:100.0%" id=3D"content_LETTER.BLOCK13"><tr><td valign=3D"top" style=
+=3D"padding:5.25pt 27.0pt 5.25pt 27.0pt"><p class=3D"MsoNormal" style=3D"te=
+xt-align:justify"><span style=3D"color:black"><o:p>&nbsp;</o:p></span></p><=
+div><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" width=3D"100%" style=3D"width:100.0%"><tr style=3D"height:.25in">=
+<td width=3D"276" valign=3D"top" style=3D"width:207.0pt;padding:2.25pt 2.25=
+pt 2.25pt 2.25pt;height:.25in"><div><p class=3D"MsoNormal"><strong><span st=
+yle=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot=
+;;color:#094709">This Way to Sustainability X will be held March 26-27, 201=
+5 at the Bell Memorial Union on the CSU, Chico campus.</span></strong><span=
+ style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&q=
+uot;;color:black"> <o:p></o:p></span></p></div><p class=3D"MsoNormal"><span=
+ style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&q=
+uot;;color:black"><o:p>&nbsp;</o:p></span></p><div><p class=3D"MsoNormal"><=
+strong><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;=
+sans-serif&quot;;color:black">Submit your proposal before this Friday, Octo=
+ber 31, 2014. </span></strong><span style=3D"font-size:10.0pt;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;;color:black"><o:p></o:p></span></p>=
+</div><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&q=
+uot;Arial&quot;,&quot;sans-serif&quot;;color:black"><a href=3D"http://r20.r=
+s6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZrU=
+-CJOgVDjJDpQHwEz9CAeBLuGj2n3-6LxxsGoDmzH9D48rhGGFdkdlwLsCIpTfJhEK6JLlyiRdwk=
+Iyby6k5ijFZqJ9tAlsn3JWvyEI22XWfTX719kzwpTn-zdSN1uK8NGfMOjhOHFc89_WjukiF5opI=
+Pnz0zp-qqg=3D=3D&amp;c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1=
+kzKw=3D=3D&amp;ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=
+=3D=3D" target=3D"_blank">visit our website for details.</a><o:p></o:p></sp=
+an></p><div><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-fam=
+ily:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"><br>This years fo=
+cus <em><b><span style=3D"font-family:&quot;Arial&quot;,&quot;sans-serif&qu=
+ot;">Building Resilient Communities</span></b></em> will explore ways to pr=
+ovide individuals with methods to prepare for a dynamic future, one with un=
+certain, but generally increasing, socio-ecological stresses. We will explo=
+re opportunities to enhance community and individual well-being. <br><br>Fo=
+r conference abstract requirements and&nbsp;submission&nbsp;instructions pl=
+ease visit our&nbsp;<a href=3D"http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DO=
+hcAiDyCm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZrZqXQLrr94mpMd6djzA8dBOayPx4CN8Ds-=
+-EWy-ux6hSjLt4zjtZB0UtsbUg7UaUgMI1LP-DzswCQkC5iBSrtBToIKJ8XvVAd1U0LHSDPaQvZ=
+QhtpciyNeWafY0DFWDjcGKhfegC4PjbuR-rN_m3p-J1CXycB3L7Og=3D=3D&amp;c=3DbrnRBev=
+P3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=3D=3D&amp;ch=3Dkvv4pnSa5JUn=
+k3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D" target=3D"_blank"><span s=
+tyle=3D"color:#005900">conference page</span></a>.<o:p></o:p></span></p></d=
+iv></td><td width=3D"276" valign=3D"top" style=3D"width:207.0pt;padding:2.2=
+5pt 2.25pt 2.25pt 2.25pt;height:.25in"><p class=3D"MsoNormal" align=3D"cent=
+er" style=3D"text-align:center"><span style=3D"font-size:10.0pt;font-family=
+:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"><o:p>&nbsp;</o:p></s=
+pan></p><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"=
+><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-s=
+erif&quot;;color:black"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal" =
+align=3D"center" style=3D"text-align:center"><span style=3D"font-size:10.0p=
+t;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"><img bo=
+rder=3D"0" width=3D"276" id=3D"_x0000_i1043" src=3D"http://ih.constantconta=
+ct.com/fs173/1103666021497/img/340.jpg" vspace=3D"5" name=3D"ACCOUNT.IMAGE.=
+340"><o:p></o:p></span></p></td></tr></table></div></td></tr></table></div>=
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"display:none"><o:p>&nbsp;</o:p></span></p><div align=3D"center"><ta=
+ble class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%" style=3D"width:100.0%" id=3D"content_LETTER.BLOCK20"><tr>=
+<td valign=3D"top" style=3D"padding:5.25pt 27.0pt 0in 27.0pt"><div><p class=
+=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><i><span style=
+=3D"font-size:18.0pt;font-family:&quot;Georgia&quot;,&quot;serif&quot;;colo=
+r:#005900">Interested in Quicker Updates?</span></i><span style=3D"font-siz=
+e:18.0pt;font-family:&quot;Georgia&quot;,&quot;serif&quot;;color:#005900"><=
+o:p></o:p></span></p></div></td></tr><tr><td valign=3D"top" style=3D"paddin=
+g:5.25pt 27.0pt 5.25pt 27.0pt"><div><p class=3D"MsoNormal" align=3D"center"=
+ style=3D"text-align:center"><span style=3D"font-size:10.0pt;font-family:&q=
+uot;Georgia&quot;,&quot;serif&quot;;color:#999999"><a href=3D"http://r20.rs=
+6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZrZC=
+ojsf07DlBe23aPeLfPWnlvkl7mUWNMcSyhUZ1pSmJO2Es8ItZyjqV-LdyMuyq7IixVqOKZau6UF=
+7RGmocPWLdp3DiwqcHqFMi2DggyFXyvtSpi8Hdto-PEF5dC-BOrCvoWMHyzPuYxYUO-lEzYl0=
+=3D&amp;c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=3D=3D&am=
+p;ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D" target=
+=3D"_blank"><span style=3D"text-decoration:none"><img border=3D"0" width=3D=
+"160" height=3D"27" id=3D"_x0000_i1044" src=3D"https://imgssl.constantconta=
+ct.com/ui/images1/btn_fbk_160_a.png" alt=3D"Like us on Facebook"></span></a=
+>&nbsp;</span><span style=3D"font-size:10.0pt;font-family:&quot;Georgia&quo=
+t;,&quot;serif&quot;;color:black">&amp;</span><span style=3D"font-size:10.0=
+pt;font-family:&quot;Georgia&quot;,&quot;serif&quot;;color:#999999">&nbsp;<=
+a href=3D"http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23f=
+RqAm7taUDVOYN8e6XSHZraCy5oKmSMtgN9c2YI47yESg8p0PpjW0YKuUDJhMp84HzeZfoqAEZ-Z=
+wiLoSI5_M8CYRfxgZ6TRzCVy2u--Z2atGzMsEgG8aqYqCRUQZLbatn1-i_2zy50i0OmHSB-dpyF=
+XpWsFzI7Ti5MiG64J2qrCdYPXmwE0Gpr-x39WE6PI6uBxZbvpiDbc=3D&amp;c=3DbrnRBevP3z=
+jf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=3D=3D&amp;ch=3Dkvv4pnSa5JUnk3t=
+g4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D" target=3D"_blank"><span styl=
+e=3D"text-decoration:none"><img border=3D"0" width=3D"160" height=3D"27" id=
+=3D"_x0000_i1045" src=3D"https://imgssl.constantcontact.com/ui/images1/btn_=
+twit_160.png" alt=3D"Follow us on Twitter"></span></a>&nbsp;<o:p></o:p></sp=
+an></p></div><div><p class=3D"MsoNormal" align=3D"center" style=3D"text-ali=
+gn:center"><span style=3D"font-size:10.0pt;font-family:&quot;Georgia&quot;,=
+&quot;serif&quot;;color:black">for instant updates on all things This Way t=
+o Sustainability.</span><span style=3D"font-size:10.0pt;font-family:&quot;G=
+eorgia&quot;,&quot;serif&quot;;color:#999999"><o:p></o:p></span></p></div><=
+/td></tr></table></div><p class=3D"MsoNormal" align=3D"center" style=3D"tex=
+t-align:center"><o:p>&nbsp;</o:p></p><div align=3D"center"><table class=3D"=
+MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"1=
+00%" style=3D"width:100.0%" id=3D"content_LETTER.BLOCK21"><tr><td valign=3D=
+"top" style=3D"padding:9.0pt 27.0pt 6.0pt 27.0pt"><table class=3D"MsoNormal=
+Table" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" styl=
+e=3D"width:100.0%;border-collapse:collapse"><tr style=3D"height:.25in"><td =
+width=3D"128" style=3D"width:96.0pt;padding:2.25pt 2.25pt 2.25pt 2.25pt;hei=
+ght:.25in"><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-fami=
+ly:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#262626"><img border=3D"0=
+" width=3D"121" id=3D"_x0000_i1046" src=3D"http://ih.constantcontact.com/fs=
+173/1103666021497/img/365.jpg" hspace=3D"5" vspace=3D"5" name=3D"ACCOUNT.IM=
+AGE.365"><br><br><o:p></o:p></span></p></td><td width=3D"124" style=3D"widt=
+h:93.0pt;padding:2.25pt 2.25pt 2.25pt 2.25pt;height:.25in"><p class=3D"MsoN=
+ormal"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;=
+sans-serif&quot;;color:#262626"><img border=3D"0" width=3D"126" id=3D"_x000=
+0_i1047" src=3D"http://ih.constantcontact.com/fs173/1103666021497/img/369.j=
+pg" hspace=3D"5" vspace=3D"5" name=3D"ACCOUNT.IMAGE.369"><br><br><o:p></o:p=
+></span></p></td><td width=3D"129" style=3D"width:96.75pt;padding:2.25pt 2.=
+25pt 2.25pt 2.25pt;height:.25in"><p class=3D"MsoNormal"><span style=3D"font=
+-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#26=
+2626"><img border=3D"0" width=3D"121" id=3D"_x0000_i1048" src=3D"http://ih.=
+constantcontact.com/fs173/1103666021497/img/366.jpg" hspace=3D"5" vspace=3D=
+"5" name=3D"ACCOUNT.IMAGE.366"><br><br><o:p></o:p></span></p></td><td width=
+=3D"130" style=3D"width:97.5pt;padding:2.25pt 2.25pt 2.25pt 2.25pt;height:.=
+25in"><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&q=
+uot;Arial&quot;,&quot;sans-serif&quot;;color:#262626"><img border=3D"0" wid=
+th=3D"121" id=3D"_x0000_i1049" src=3D"http://ih.constantcontact.com/fs173/1=
+103666021497/img/367.jpg" hspace=3D"5" vspace=3D"5" name=3D"ACCOUNT.IMAGE.3=
+67"><br><br><o:p></o:p></span></p></td></tr></table><p class=3D"MsoNormal" =
+align=3D"center" style=3D"text-align:center"><span style=3D"font-size:10.0p=
+t;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#262626"><o:p>=
+&nbsp;</o:p></span></p><p class=3D"MsoNormal" align=3D"center" style=3D"tex=
+t-align:center"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quo=
+t;,&quot;sans-serif&quot;;color:#262626">To watch videos of our speakers, s=
+ee conference programs, check out awards, pictures and more, visit&nbsp;<a =
+href=3D"http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRq=
+Am7taUDVOYN8e6XSHZreiKoI2sdohf9fKw8Yf5xqKFXohBHiFuA83TdLIAsibNAwbBvwmW3TATq=
+g-yoEu0cLoRlFRdC1g-7mNC-Vse84rtEsSo5WUaCgJ577qcL4B1Xu8xOFtzSuRWcLcAl3qcyAWf=
+5zn7-fqJiKUWQH-YUdBZKOdMx3sQ0d7T2_gPpKoCHA08uTashLE=3D&amp;c=3DbrnRBevP3zjf=
+07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=3D=3D&amp;ch=3Dkvv4pnSa5JUnk3tg4=
+QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D" target=3D"_blank"><span style=
+=3D"color:#005900">our archive page</span></a>.<o:p></o:p></span></p><p cla=
+ss=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span style=
+=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;c=
+olor:#262626"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal" style=3D"m=
+argin-bottom:12.0pt"><span style=3D"font-size:10.0pt;font-family:&quot;Aria=
+l&quot;,&quot;sans-serif&quot;;color:#262626"><o:p>&nbsp;</o:p></span></p><=
+p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span st=
+yle=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot=
+;;color:#262626"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal" align=
+=3D"center" style=3D"text-align:center"><span style=3D"font-size:10.0pt;fon=
+t-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#262626"><img borde=
+r=3D"0" width=3D"79" height=3D"65" id=3D"_x0000_i1050" src=3D"http://ih.con=
+stantcontact.com/fs173/1103666021497/img/338.jpg" hspace=3D"5" vspace=3D"5"=
+ name=3D"ACCOUNT.IMAGE.338"><img border=3D"0" width=3D"109" height=3D"62" i=
+d=3D"_x0000_i1051" src=3D"http://ih.constantcontact.com/fs173/1103666021497=
+/img/370.jpg" hspace=3D"5" vspace=3D"5" name=3D"ACCOUNT.IMAGE.370"><img bor=
+der=3D"0" width=3D"73" height=3D"66" id=3D"_x0000_i1052" src=3D"http://ih.c=
+onstantcontact.com/fs173/1103666021497/img/371.jpg" hspace=3D"5" vspace=3D"=
+5" name=3D"ACCOUNT.IMAGE.371"><br><br><o:p></o:p></span></p></td></tr></tab=
+le></div></td></tr></table></div></td></tr></table></div></td><td width=3D"=
+50%" style=3D"width:50.0%;padding:0in 0in 0in 0in"></td></tr><tr><td width=
+=3D"50%" style=3D"width:50.0%;padding:0in 0in 0in 0in"></td><td valign=3D"t=
+op" style=3D"padding:0in 0in 0in 0in"><div align=3D"center"><table class=3D=
+"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"=
+100%" style=3D"width:100.0%"><tr><td valign=3D"top" style=3D"padding:0in 0i=
+n 0in 0in"><div><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font=
+-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#262626"><img border=
+=3D"0" width=3D"118" height=3D"55" id=3D"_x0000_i1053" src=3D"http://img.co=
+nstantcontact.com/letters/images/1101116784221/PM_SSU_BottomCurveLeft.png">=
+<o:p></o:p></span></p></div></td><td width=3D"50%" valign=3D"top" style=3D"=
+width:50.0%;padding:0in 0in 0in 0in"><table class=3D"MsoNormalTable" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:10=
+0.0%"><tr><td valign=3D"top" style=3D"background:white;padding:0in 0in 0in =
+0in"><div><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-famil=
+y:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#262626"><img border=3D"0"=
+ width=3D"1" height=3D"48" id=3D"_x0000_i1054" src=3D"http://img.constantco=
+ntact.com/letters/images/1101116784221/SpacerImage.gif"><o:p></o:p></span><=
+/p></div></td></tr></table></td><td valign=3D"top" style=3D"padding:0in 0in=
+ 0in 0in"><div><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:=
+center"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#262626"><img border=3D"0" width=3D"402" height=3D"=
+55" id=3D"_x0000_i1055" src=3D"http://img.constantcontact.com/letters/image=
+s/1101116784221/PM_SSU_BottomCurveCenter.png"><o:p></o:p></span></p></div><=
+/td><td width=3D"50%" valign=3D"top" style=3D"width:50.0%;padding:0in 0in 0=
+in 0in"><div align=3D"right"><table class=3D"MsoNormalTable" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"><t=
+r><td valign=3D"top" style=3D"background:white;padding:0in 0in 0in 0in"><di=
+v><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;=
+Arial&quot;,&quot;sans-serif&quot;;color:#262626"><img border=3D"0" width=
+=3D"1" height=3D"48" id=3D"_x0000_i1056" src=3D"http://img.constantcontact.=
+com/letters/images/1101116784221/SpacerImage.gif"><o:p></o:p></span></p></d=
+iv></td></tr></table></div></td><td valign=3D"top" style=3D"padding:0in 0in=
+ 0in 0in"><div><p class=3D"MsoNormal" align=3D"right" style=3D"text-align:r=
+ight"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;s=
+ans-serif&quot;;color:#262626"><img border=3D"0" width=3D"118" height=3D"55=
+" id=3D"_x0000_i1057" src=3D"http://img.constantcontact.com/letters/images/=
+1101116784221/PM_SSU_BottomCurveRight.png"><o:p></o:p></span></p></div></td=
+></tr></table></div><p class=3D"MsoNormal" align=3D"center" style=3D"text-a=
+lign:center"><o:p>&nbsp;</o:p></p><div align=3D"center"><table class=3D"Mso=
+NormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%=
+" style=3D"width:100.0%;align:center"><tr><td width=3D"100%" valign=3D"top"=
+ style=3D"width:100.0%;padding:0in 0in 0in 0in"><div align=3D"center"><tabl=
+e class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ width=3D"100%" style=3D"width:100.0%"><tr style=3D"height:.75pt"><td valig=
+n=3D"top" style=3D"padding:0in 0in 8.25pt 0in;height:.75pt"><p class=3D"Mso=
+Normal" align=3D"center" style=3D"text-align:center;mso-line-height-alt:.75=
+pt"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;san=
+s-serif&quot;;color:#262626"><img border=3D"0" width=3D"5" height=3D"1" id=
+=3D"_x0000_i1058" src=3D"http://img.constantcontact.com/letters/images/1101=
+116784221/S.gif"><o:p></o:p></span></p></td></tr></table></div><p class=3D"=
+MsoNormal" align=3D"center" style=3D"text-align:center"><span style=3D"disp=
+lay:none"><o:p>&nbsp;</o:p></span></p><div align=3D"center"><table class=3D=
+"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"=
+100%" style=3D"width:100.0%"><tr><td valign=3D"top" style=3D"padding:0in 27=
+.0pt 0in 27.0pt"><div><p class=3D"MsoNormal" align=3D"center" style=3D"text=
+-align:center"><span style=3D"font-size:10.0pt;font-family:&quot;Georgia&qu=
+ot;,&quot;serif&quot;;color:#777777">Stay Connected<o:p></o:p></span></p></=
+div></td></tr></table></div><p class=3D"MsoNormal" align=3D"center" style=
+=3D"text-align:center"><span style=3D"display:none"><o:p>&nbsp;</o:p></span=
+></p><div align=3D"center"><table class=3D"MsoNormalTable" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%" id=
+=3D"content_LETTER.BLOCK27"><tr><td valign=3D"top" style=3D"padding:5.25pt =
+27.0pt 5.25pt 27.0pt"><div><p class=3D"MsoNormal" align=3D"center" style=3D=
+"margin-bottom:12.0pt;text-align:center"><span style=3D"font-size:10.0pt;fo=
+nt-family:&quot;Georgia&quot;,&quot;serif&quot;;color:#777777"><a href=3D"h=
+ttp://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUDVO=
+YN8e6XSHZrZCojsf07DlBe23aPeLfPWnlvkl7mUWNMcSyhUZ1pSmJO2Es8ItZyjqV-LdyMuyq7I=
+ixVqOKZau6UF7RGmocPWLdp3DiwqcHqFMi2DggyFXyvtSpi8Hdto-PEF5dC-BOrCvoWMHyzPuYx=
+YUO-lEzYl0=3D&amp;c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzK=
+w=3D=3D&amp;ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=
+=3D" target=3D"_blank"><span style=3D"text-decoration:none"><img border=3D"=
+0" width=3D"22" height=3D"22" id=3D"_x0000_i1059" src=3D"https://imgssl.con=
+stantcontact.com/ui/images1/ic_fbk_22.png" alt=3D"Like us on Facebook"></sp=
+an></a>&nbsp; <a href=3D"http://r20.rs6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDy=
+Cm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZrY1DqQmXNEyiiSP9V8A1CoZlLBHaNeYrT96g7jqA=
+JyXLeSL0ZgoxTyXooztg3QPkzJxmrmEr_T7gITZF5qBOiZ-d3Ya_DmNr5RXlDdo-SHPuC-AzEBQ=
+-qZYloeufwp554GLWQYykiJ7P&amp;c=3DbrnRBevP3zjf07ItAINahtPQsFeB38DeywXork2im=
+oVEFaGXE1kzKw=3D=3D&amp;ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3=
+F0P2A2kw=3D=3D" target=3D"_blank"><span style=3D"text-decoration:none"><img=
+ border=3D"0" width=3D"22" height=3D"22" id=3D"_x0000_i1060" src=3D"https:/=
+/imgssl.constantcontact.com/ui/images1/ic_twit_22.png" alt=3D"Follow us on =
+Twitter"></span></a>&nbsp; <a href=3D"http://r20.rs6.net/tn.jsp?f=3D001ZCQ-=
+7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZrah35a5l0crHuJAVH_bW_czCNz7=
+Ad9QvijUxDoKVzaMEcZ9sa5WJAWrSUmqEWaWC07OL4vWbWmljHbLeliq9L8D-P96jMdh5J0hxAG=
+7s2yx6Uiz_Ksipb8pZ01qulvJd4Ncoqfz_NhwT9XG4rxcI24AijbpcbesdvnsuUHzi176s-WNe9=
+gS6aWYAdbR5P0DjpelmcxfoMY0U9mCUg20g4Cs=3D&amp;c=3DbrnRBevP3zjf07ItAINahtPQs=
+FeB38DeywXork2imoVEFaGXE1kzKw=3D=3D&amp;ch=3Dkvv4pnSa5JUnk3tg4QfDuR2zEIGP2i=
+tvw8d-eSRt2MsU_3F0P2A2kw=3D=3D" target=3D"_blank"><span style=3D"text-decor=
+ation:none"><img border=3D"0" width=3D"22" height=3D"22" id=3D"_x0000_i1061=
+" src=3D"https://imgssl.constantcontact.com/ui/images1/ic_lkdin_22.png" alt=
+=3D"View our profile on LinkedIn"></span></a>&nbsp; <a href=3D"http://r20.r=
+s6.net/tn.jsp?f=3D001ZCQ-7Wmc8DOhcAiDyCm5vHec9Y_YN23fRqAm7taUDVOYN8e6XSHZra=
+h35a5l0crHtsRhqTJwbCL-C__suQnFbpM-z5drvHBUMGgc5h87HVqwzBwECnb5wMxWq2Fo2Ggun=
+CJMBiWiv3o5d3zX-uRkwBbwsoZAR3TGZg_Z9LJSpwdZpZahXxxW1lc2EURFfwdj&amp;c=3Dbrn=
+RBevP3zjf07ItAINahtPQsFeB38DeywXork2imoVEFaGXE1kzKw=3D=3D&amp;ch=3Dkvv4pnSa=
+5JUnk3tg4QfDuR2zEIGP2itvw8d-eSRt2MsU_3F0P2A2kw=3D=3D" target=3D"_blank"><sp=
+an style=3D"text-decoration:none"><img border=3D"0" width=3D"22" height=3D"=
+22" id=3D"_x0000_i1062" src=3D"https://imgssl.constantcontact.com/ui/images=
+1/pinterest-22.png" alt=3D"Find us on Pinterest"></span></a><o:p></o:p></sp=
+an></p></div></td></tr></table></div></td></tr></table></div><p class=3D"Ms=
+oNormal" align=3D"center" style=3D"text-align:center"><span style=3D"displa=
+y:none"><o:p>&nbsp;</o:p></span></p><div align=3D"center"><table class=3D"M=
+soNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"10=
+0%" style=3D"width:100.0%"><tr style=3D"height:.75pt"><td valign=3D"top" st=
+yle=3D"padding:0in 0in 10.5pt 0in;height:.75pt"><div><p class=3D"MsoNormal"=
+ align=3D"center" style=3D"text-align:center;mso-line-height-alt:.75pt"><im=
+g border=3D"0" width=3D"5" height=3D"1" id=3D"_x0000_i1063" src=3D"http://i=
+mg.constantcontact.com/letters/images/1101116784221/SpacerImage.gif"><o:p><=
+/o:p></p></div></td></tr></table></div></td><td width=3D"50%" style=3D"widt=
+h:50.0%;padding:0in 0in 0in 0in"></td></tr></table></div><p class=3D"MsoNor=
+mal" align=3D"center" style=3D"text-align:center;background:white"><o:p>&nb=
+sp;</o:p></p><div align=3D"center"><table class=3D"MsoNormalTable" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:10=
+0.0%;background:white" id=3D"footerPanelWrap"><tr><td style=3D"padding:0in =
+0in 0in 0in"><div align=3D"center"><table class=3D"MsoNormalTable" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:10=
+0.0%;background:white"><tr><td valign=3D"top" style=3D"padding:0in 0in 0in =
+0in"><div align=3D"center"><table class=3D"MsoNormalTable" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"><tr>=
+<td style=3D"padding:0in 0in 0in 0in"><p class=3D"MsoNormal"><img border=3D=
+"0" width=3D"1" height=3D"5" id=3D"_x0000_i1064" src=3D"https://imgssl.cons=
+tantcontact.com/letters/images/1101116784221/S.gif"><o:p></o:p></p></td><td=
+ width=3D"620" valign=3D"top" style=3D"width:465.0pt;padding:0in 0in 0in 0i=
+n"><div align=3D"center"><table class=3D"MsoNormalTable" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"><tr><t=
+d colspan=3D"2" style=3D"padding:0in 0in 0in 0in"><p class=3D"MsoNormal"><b=
+><span style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-=
+serif&quot;;color:black"><a href=3D"http://ui.constantcontact.com/sa/fwtf.j=
+sp?llr=3Dzdb5z8dab&amp;m=3D1103666021497&amp;ea=3DDelliot%40calpoly.edu&amp=
+;a=3D1118965842662" target=3D"_blank">Forward this email</a></span></b><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif=
+&quot;;color:black"><o:p></o:p></span></p></td></tr><tr><td width=3D"100" s=
+tyle=3D"width:75.0pt;padding:0in 0in 0in 0in"><p class=3D"MsoNormal" style=
+=3D"margin-bottom:12.0pt"><span style=3D"font-size:8.0pt;font-family:&quot;=
+Verdana&quot;,&quot;sans-serif&quot;;color:black"><br><a href=3D"http://vis=
+itor.constantcontact.com/do?p=3Dun&amp;m=3D001zTaWx_66zDrTo_q1rTb-RQ%3D%3D&=
+amp;ch=3D03725120-527d-11e3-beca-d4ae527b6fcc&amp;ca=3D2a639b4b-045c-4d3d-a=
+410-6167ba241c3b" target=3D"_blank"><span style=3D"text-decoration:none"><i=
+mg border=3D"0" id=3D"_x0000_i1065" src=3D"http://img.constantcontact.com/l=
+etters/images/SafeUnsubscribe_Footer_Logo_New.png"></span></a><o:p></o:p></=
+span></p><div><p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-fa=
+mily:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:black">This email was=
+ sent to <a href=3D"mailto:Delliot@calpoly.edu">Delliot@calpoly.edu</a> by =
+<a href=3D"mailto:sustainability@csuchico.edu" target=3D"_blank">sustainabi=
+lity@csuchico.edu</a> </span><span style=3D"font-size:8.0pt;font-family:&qu=
+ot;Verdana&quot;,&quot;sans-serif&quot;;color:#BABABA">| </span><span style=
+=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;=
+color:black">&nbsp; <o:p></o:p></span></p></div><div><p class=3D"MsoNormal"=
+><span style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-=
+serif&quot;;color:black">Rapid removal with <a href=3D"http://visitor.const=
+antcontact.com/do?p=3Dun&amp;m=3D001zTaWx_66zDrTo_q1rTb-RQ%3D%3D&amp;ch=3D0=
+3725120-527d-11e3-beca-d4ae527b6fcc&amp;ca=3D2a639b4b-045c-4d3d-a410-6167ba=
+241c3b" target=3D"_blank">SafeUnsubscribe</a>=E2=84=A2 </span><span style=
+=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;=
+color:#BABABA">|</span><span style=3D"font-size:8.0pt;font-family:&quot;Ver=
+dana&quot;,&quot;sans-serif&quot;;color:black"> <a href=3D"http://ui.consta=
+ntcontact.com/roving/CCPrivacyPolicy.jsp" target=3D"_blank">Privacy Policy<=
+/a>.<o:p></o:p></span></p></div></td><td style=3D"padding:0in 0in 0in 0in">=
+</td></tr><tr><td width=3D"100%" style=3D"width:100.0%;padding:11.25pt 0in =
+0in 0in"><p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:=
+&quot;Verdana&quot;,&quot;sans-serif&quot;;color:black"><a href=3D"http://w=
+ww.constantcontact.com/index.jsp?cc=3DPM_SSU" target=3D"_blank"><span style=
+=3D"text-decoration:none"><img border=3D"0" id=3D"_x0000_i1066" src=3D"http=
+://img.constantcontact.com/letters/images/CC_Footer_Logo_New.png"></span></=
+a><o:p></o:p></span></p></td><td style=3D"padding:0in 0in 0in 0in"></td></t=
+r><tr><td style=3D"padding:0in 0in 0in 0in"><div id=3D"LETTER.PHYSICALADDRE=
+SS"><p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:&quot=
+;Verdana&quot;,&quot;sans-serif&quot;;color:black"><br>CSU, Chico - Sustain=
+able Development</span><span style=3D"font-size:8.0pt;font-family:&quot;Ver=
+dana&quot;,&quot;sans-serif&quot;;color:#BABABA"> | </span><span style=3D"f=
+ont-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;color=
+:black">400 W. First Street</span><span style=3D"font-size:8.0pt;font-famil=
+y:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:#BABABA"> | </span><span=
+ style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&=
+quot;;color:black">SSC Rm 464</span><span style=3D"font-size:8.0pt;font-fam=
+ily:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:#BABABA"> | </span><sp=
+an style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-seri=
+f&quot;;color:black">Chico</span><span style=3D"font-size:8.0pt;font-family=
+:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:#BABABA"> | </span><span =
+style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&q=
+uot;;color:black">CA</span><span style=3D"font-size:8.0pt;font-family:&quot=
+;Verdana&quot;,&quot;sans-serif&quot;;color:#BABABA"> | </span><span style=
+=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;=
+color:black">95929-0633<o:p></o:p></span></p></div></td><td style=3D"paddin=
+g:0in 0in 0in 0in"></td></tr></table></div></td><td style=3D"padding:0in 0i=
+n 0in 0in"><p class=3D"MsoNormal"><img border=3D"0" width=3D"1" height=3D"5=
+" id=3D"_x0000_i1067" src=3D"https://imgssl.constantcontact.com/letters/ima=
+ges/1101116784221/S.gif"><o:p></o:p></p></td></tr></table></div></td></tr><=
+/table></div></td></tr></table></div><p class=3D"MsoNormal"><o:p>&nbsp;</o:=
+p></p></div></div></body></html>=
+
+------=_NextPart_001_00D0_01CFF2D3.3A034DB0--
+
+------=_NextPart_000_00CF_01CFF2D3.3A0326A0
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.jpg@01CFF2D3.36B31140>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCABJAMkDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2aiik
+zQAtFJmjJoAWikzRQAtFFFABRRRQAUUUlAC0UmaM0ALWT4guryw083dmVJiIMiMuQV7/AExWrmmu
+iyKyuAVYYIPcUCaurHOaT4tjvHVLqNYy5Ch1OVBPTPpW815Ct1Hblx50gLKnfA71zs3guMXBayuP
+JhY5dGXdgegPpVGzmGnajcazq84Hls1usaZLu44wB9Bx9ahNrcxjKcdJHcUVx9r45mvtWhsbfTCG
+mbaC8o+UDkkgDsO1deOlUnc1jJS2FoooplBRRRQAUUUUANJx2rkdZ8WXVxrJ0Pw1Clxfj/XTvzHb
+jvn1P/6qv+NdcbQPDVxcwnFw+IoT6Me/4DJ/Csv4Y6Stn4aF843T3zmRnPJ2g4H9T+NPzMZyblyL
+5lqDwR9oAk1vV9RvpzyQsxijHsFXtUs3gTT9payutRs5R914btzg/RiQa6UCjtSK9nHseeXniDXv
+A90kes/8TXTZDiK5A2yA+h7Z+vX1rtNE1VNa0a11COMxrcJuCE5K8+tLrGlQazpc9jcrmOZcZxyp
+7Ee4NYunSSeDvAKnUgvm2MbjCnO87jtA+uR+dMmKlCTu9Do4bqG4aRYZFdom2SBTnY2M4PvyKkZg
+qkngDqT2rzDwFfXuk+Mb3S9Xys98vnnJ/wCWmN36g/pXp7AMpBAIPBBoasVTqc8blddSs2XK3duR
+6iRf8alhuIrhS0EiSKDjKMCM/hXk3xF0LT7LxLpiWlpFbpdYEqxjaD8wGcduDXqlhp1pplsLext4
+7eFeiRrgfX3PvQ0KE5Sk4voWqgvLc3VpLCsskJkUqJIzhk9wfWpqKRqeQeMbjXfC+sxWkGv380M0
+YkRnf5hyQQcV2H/CH6q1urR+LdVWYgHLEFc/T/69cr8Wv+Rj07/r3/8AZ69Wi/1Sf7oqmclOKdSS
+Z5ve+IvFHgq9jXWTFqVhIcLMF2k+2R0Psa7ux1m11HSoNQtC0sE2MbRkjJwQR7HrVHxtZxXvhDUk
+lA+SIyKf7rLyD+lcb4D1BYfCU9ncI7C4ldoiAdq8AHJ47+lJ7XGpOnU5b6HT+Kre4vlhbSbzyb2E
+5GJSgdT29DXJXUeoXM873TpDPG6F3Y5UFkGSu0EbiFxnp+ddK17Hp9vF5oBCgBBjpx2HYUxvEkYG
+CuR+FZNoU5Re7J/Dnh+30icX2zzbqcBURBgQoeSeec+prp2uoIm2STRqw5wzgH8q5D7aArz2DJFO
+64DEZ/TtVHxBZafrHhDUNQukjmv40aVJQrAx4OMc9uMYqotbFxqJR9075buB3CJNEzHoocEmka8t
+0co08SsOoLgEVxHws0axXQF1L7PGbx5XXziMsoHGAe1XvG/gu21zTp7m0to11NBvWRVwZcfwn1yO
+n4Vdi1OThzpHVx3EUpIikRyvXawOKWSeKEAyyJGCcDcwGTXB/Cm9sX0ieyjgSG+hbMxAw0qknDH6
+dPb8a6bxQmlDQrifWreKe2gUvtdcnPQBfc9OKLDjU5ocyNRbuB3CJNGzHoocEmpc1xfw/wDB8Wi6
+dHf3VuBqM43ZYZMKnoo9DjrXaYpDg3JXZ5x8YHYWGmRg/K0rsR9FH+Ndf4R2/wDCJaVsxt+zJ09c
+c1zvxX097nw7BdoCfsk2W9lYYz+eKs/DLVFvfCcdtn97ZOYmHseVP6/pVdDCLtiGn1R2VFJS1J1C
+VyGtN/wkPjCy0VfmtbDF5eehb/lmh/Hmuk1TUItK0y4vrg4igjLt747fjXD6D4c8STQyatFrMdjP
+qZ+0Sxm3DkZ+6Mk+h6UzGpLVRSuM+JtlLp99pviKzGJbeQJIR3wcrn9R+Nd9YXkeoafBdwHMc8Yk
+X6EVx2qeEfEuqafLa3fiKGeJxkxm0C7iORznjmm/C3VHl0q50m4ys9hIQFPUKSePwbIo6EQbjV2s
+n+Zm/E7/AJGjQvw/9DFem968y+J3/I0aF+H/AKGK9N70PYdL+JP5C0lFFI6Dyf4tf8jHp3/Xv/7O
+a7m58Xadps32e6S9SRQACLSRlbjqCBgiuF+LX/Ix6d/17/8As5r1aL/Up/uiqeyOWmn7WdvI4zW7
+rVPF9q2maTYXFpZzHE95dp5fy+iqeTmsK4jttDvZrO1LeTaBYsnkkgZY49yTXqR6V5L4whe38Raj
+CxKic+Yh9QwH9QaznsFaFlzdSveX8mrThre5WQKANh42j1qe4gDwRpHIqbOrEdawNMKQOXZm3jgY
+H55rWN2BFvCnHSsTlluOtdWt7f8A0fzNxALNJ0BPoPwq9Ya4upeD/EduAylYPNCt2zwT+OB+tcde
+25mvAIjtQndgdRXR6JYlfDHia86KLQRfjnP+FaQ+I1irJ+jO0+F3/Ilw/wDXaT+ddeelch8Lv+RL
+h/67SfzrrzWrOuj/AA4+h5f4usZ/Bviu38R6ah+zzv8Avox03H7yn2Ycj3Fb0NzF451mB4NzaLp5
+WVtwwJ58ZCkei9/er/j9VfwPqe4A4jBGex3Cq3wzA/4Qm1OOfMk/9CNHQxUbVOVbPU6wdKWkpaR1
+EF5bRXtpLb3CCSGVSjqe4NeTtZap8NPEH2yKJ7nS5DtZh0ZOwb0Ydj0r0rVvE+jaHLHFquo29pJI
+u5FlbBYeorOfx/4SkQo+uaeysMENICDTTsZVKSnZ7NGho/ibS9dgWWxu42JHMbNh1PoRV64vILSE
+yXM0USAZLSOFH61wN1N8M7uYyveaYjnndFMU/lTUb4ZA5k1Cxmx0826d8fmaNATqdUg1LX4fG/ia
+y0KxYtpiSedcydPOCc4H+z/OvRlACgAAADoK4aw1j4d6XdrdWF9pcE6ggOshyAeta4+IXhQD/kP2
+P/fyhjpxkruW7OjNeW393B4T+K32gSqtreKDOAeE3cEn/gQB/Guv/wCFheFP+g9Y/wDfysM3/wAN
+GkZ3udIZ3JZiz5JJoQqsJSty7oyfiXe27+J9GKzIwiUM5VgQoLjn9K9IOs6cIxJ9vtNh5DGZcfzr
+jRe/DMHPn6N/31SNd/DJus+jfg2KNCYwnGTlpqaes/EDT7X/AEXSGGo6jKdkMUPK7j0y3p9K6i28
+0W0QuCpm2DeVGAWxzj8a4zTtb+Hmk3Hn2F9pMEuMb1fJH0J6VoXHjvwlcwPDJr9lsdSrbZtpwfQj
+pSNIqW8jh/iteRTeJrZInDtb24EgU9CWJx+VeqaVfQalplvdW0ivHIgIKnPbp9a4FU+GK5LX9i5P
+UvdMT+eataZqHw90a8Fzp+sWsMi5wBdNt5/2c4NNtGUITjNyfU9A7VzHjHw+usQR3FuV+1wDAGfv
+r/d/wol8f+FnUY8QWIP/AF0qhceMvDUgO3xFYD/trUs1mrqxyiaOXlI3eW4OGVhyDVuTRcWQQShp
+FbIPTOafqGreH7xiR4lsQ397zOazFk0USbj4utCv90yisuVnH7KS6E0OhS3FyIbcebK3GcYCj1Nd
+brdhbaB8N7+1WRctEQz/APPSRiKx9P17w7ZrgeJLDHfEnWrd3rfgfVDGdS1XTLloxhfMmPH4Crgr
+bmkKclF6astfDG+tk8IpE1xEsiTPuRnAIyc9K39R8VaNpkRe61G2Uj+BXDMfwHNcoZ/hgw5n0c/9
+tD/jTRL8L1OVn0jP/XU/41oaxjUjFRViTWfEMmu+AtavZIRbWUmI7MScPKARlvxPQe1aHwwuIpPB
+0ESSKXikkDqDyuWJGRVW91j4eajKkl5f6XK0aBEBlOFUdAB0FNsdW+HemXi3Vjf6ZBOvR0mI/rzQ
+JU5qak/Q7wUtZOk+J9G1uZ4dL1K3u5UXeyxPkgdM1rUjc8h+MvhbWvEGr6bJpOnTXUcUDK7R4wpL
+dK84/wCFbeLf+gFd/kP8a+paKAPlr/hW3i3/AKAV3+Q/xo/4Vt4t/wCgFd/kP8a+paKAPlr/AIVt
+4t/6AV3+Q/xo/wCFbeLf+gFd/kP8a+paKAPlr/hW3i3/AKAV3+Q/xo/4Vt4t/wCgFd/kP8a+paKA
+Plr/AIVt4t/6AV3+Q/xo/wCFbeLf+gFd/kP8a+paKAPlr/hW3i3/AKAV3+Q/xo/4Vt4t/wCgFd/k
+P8a+paKAPlr/AIVt4t/6AV3+Q/xo/wCFbeLf+gFd/kP8a+paKAPlr/hW3i3/AKAV3+Q/xo/4Vt4t
+/wCgFd/kP8a+paKAPlr/AIVt4t/6AV3+Q/xo/wCFbeLf+gFd/kP8a+paKAPlr/hW3i3/AKAV3+Q/
+xo/4Vt4t/wCgFd/kP8a+paKAPlr/AIVt4t/6AV3+Q/xo/wCFbeLf+gFd/kP8a+paKAPlr/hW3i3/
+AKAV3+Q/xo/4Vt4t/wCgFd/kP8a+paKAPHvg34V1rw/r1/Nq2nT2sUlsERpAME7gcda9hoooA//Z
+
+------=_NextPart_000_00CF_01CFF2D3.3A0326A0--

@@ -1,0 +1,961 @@
+Received: from BYAPR08MB4984.namprd08.prod.outlook.com (2603:10b6:a03:180::40)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BY5PR13CA0027.NAMPRD13.PROD.OUTLOOK.COM; Wed, 5 Jun 2019 04:06:59 +0000
+Received: from BN6PR08CA0090.namprd08.prod.outlook.com (2603:10b6:404:b6::28)
+ by BYAPR08MB4984.namprd08.prod.outlook.com (2603:10b6:a03:6a::29) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1943.22; Wed, 5 Jun
+ 2019 04:06:57 +0000
+Received: from CO1NAM04FT015.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::200) by BN6PR08CA0090.outlook.office365.com
+ (2603:10b6:404:b6::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.12 via Frontend
+ Transport; Wed, 5 Jun 2019 04:06:56 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=none action=none
+ header.from=UNI-WEIMAR.DE;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ CO1NAM04FT015.mail.protection.outlook.com (10.152.90.169) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1943.19 via Frontend Transport; Wed, 5 Jun 2019 04:06:55 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x5542UCa012172
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Wed, 5 Jun 2019 07:02:30 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x5542TAi007260;
+	Wed, 5 Jun 2019 07:02:29 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Wed, 05 Jun 2019 07:02:29 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x5542TKu014473
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Wed, 5 Jun 2019 07:02:29 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x5541OdB012332;
+	Wed, 5 Jun 2019 07:02:05 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          304369 for GAMESNETWORK@LISTSERV.UTA.FI; Wed, 5 Jun 2019 07:01:24
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x553pOUp010968 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Wed, 5 Jun 2019 06:51:24 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x553pOiY010148 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Wed, 5 Jun 2019 06:51:24 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x553pNY9004419 for
+          <GAMESNETWORK@uta.fi>; Wed, 5 Jun 2019 06:51:23 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Wed, 05 Jun 2019 06:51:23
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from smtpout.uni-weimar.de (smtpout-16.uni-weimar.de [141.54.1.116])
+          by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x553pKik004973
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=NOT) for <GAMESNETWORK@uta.fi>; Wed, 5 Jun 2019 06:51:23 +0300
+Received: from mailgate.uni-weimar.de (mailgate.uni-weimar.de [141.54.1.3]) by
+          smtpout.uni-weimar.de (8.14.9/8.14.6) with ESMTP id x553pK5g012463
+          for <GAMESNETWORK@uta.fi>; Wed, 5 Jun 2019 05:51:20 +0200 (CEST)
+Received: from [192.168.42.36] (vdsl-91-137-16-38.net.encoline.de
+          [91.137.16.38]) (authenticated bits=0) by mailgate.uni-weimar.de
+          (8.14.9/8.14.6) with ESMTP id x553pI1k026038 for
+          <GAMESNETWORK@uta.fi>; Wed, 5 Jun 2019 05:51:20 +0200 (CEST)
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.23)
+            Gecko/20090812 Lightning/0.9 Thunderbird/2.0.0.23 Mnenhy/0.7.6.666
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+X-Virus-Status: Clean
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Wed, 05 Jun 2019 07:02:29 +0300 (EEST)
+X-Spam-Level: +++++
+X-Spam-Report: BAYES_00,HTML_MESSAGE,L_HDR_USRAGNT_OLDTHB,L_OTHERMX_MAYBE_UBE,MIME_HTML_ONLY,URIBL_BLOCKED
+X-Spam-Status: NO ; 5
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <f2543542-e46c-ed76-0335-055c416d7682@uni-weimar.de>
+Date: Wed, 5 Jun 2019 05:51:18 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: =?UTF-8?Q?Heinrich_S=c3=b6bke?= <heinrich.soebke@UNI-WEIMAR.DE>
+Subject: [GAMESNETWORK] Workshop on Serious Mobile Locaction-based AR Games as part of the ICEC-JCSG 2019 conference
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Jun 2019 04:06:55.8062
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ cc87ce4e-0b36-48e7-2041-08d6e96b3fa5
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(2970300002)(286005)(176002)(189003)(199004)(7192003)(65956001)(50466002)(55176004)(6392003)(75640400001)(146002)(64126003)(45776006)(40036005)(426003)(31696002)(2616005)(42882007)(236005)(956004)(476003)(486006)(356004)(66346011)(53386004)(14444005)(126002)(7846003)(1096003)(21615005)(336012)(7636002)(58126008)(31686004)(16003)(7596002)(246002)(74482002)(77096007)(66574012)(36756003)(106002)(23846002)(43066004)(26005)(8676002)(54896002)(6306002)(2870700001)(4006050)(966005)(23676004)(6862004)(2486003)(53946003)(606006)(559001)(579004);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4984;H:mxout1.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout1.uta.fi;MX:3;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT015.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: cc87ce4e-0b36-48e7-2041-08d6e96b3fa5
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4984;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4984:
+X-MS-Exchange-PUrlCount: 8
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jun 2019 04:06:55.0143
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: cc87ce4e-0b36-48e7-2041-08d6e96b3fa5
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4984
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.6342395
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1943.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?S2IvMlJjTThNdE9PTHc4VTNFY25FempCdnR4cmlmRzBuOGdOZEQrb0dnenNt?=
+ =?utf-8?B?ZEFBcGZTL3FCSUlnbXNUWlN5YVArNmF5SWhBcDMvbGpJRWdGK21JSEJHN21H?=
+ =?utf-8?B?Z0VQQnUyRW9BRlU3TDhjOVNxWnFqbVIxYUxsRlVsaFFLY3oxUld2OFBkbDdt?=
+ =?utf-8?B?VzF3aEo1ZU1WZ3JPWDRFQ1Z3cEUreWRPbDBGOUNrZ0k5a0xuMSt3cWJjU2l2?=
+ =?utf-8?B?MmpYcVdtZU1OdE9pUnNEaTJtTlBSaDk0SlVNNFVDajhSc2JUTmZ4QlhZSzdo?=
+ =?utf-8?B?NmJlN0c3ZW03a01Jc0dxT21zaUtFMFdQRlRsdUFoc1FYUlF1VmFCMHZxdmtF?=
+ =?utf-8?B?cGlKK2RvSE40ZXQzejcrZWhidFhqbjBMSjE3YmZlbGF4Rjk0Mko3Sm1pZDI3?=
+ =?utf-8?B?dlBxNTJMOVF5dUNCUmF3UC9UQ21VSDNET2NrcGlIQjk5WUVPWGRFaFFOOHhn?=
+ =?utf-8?B?VnpWVnVFSHRKQm10alpkNnFCVlRsbGRtZjE2RnlVVEQrZnVxdlRyY0IvZHo1?=
+ =?utf-8?B?b0U0M0tzVUxJZngrVFBQNllVNCtzV040SHg5dVRsVmNqRmtqaWx1cFpXK3VE?=
+ =?utf-8?B?QnJCM09lN3huK0VocmFTekdvUk52WHhpb3pZbU9RS3NNOVlNR3hPbTczOU84?=
+ =?utf-8?B?M3pscGNIU2FIL1ZZQWdnUXlRL1VkQWg4SHZkZmVzN3ZRelpJcGxuc2hrZ0hK?=
+ =?utf-8?B?QlJOVFlpUmZSbXc4UnY3b3Iwb3RTdVdtOUI0aVRoVkNQb1VneCsySG40V2lK?=
+ =?utf-8?B?ZjE5djlvS0RTL3psT3pBcFc1QWlNVmkrdjNQMi91RVVQOHdLSzVhMjY1RW1p?=
+ =?utf-8?B?dFN1VFBKUFFxeDhONzhNUGI4L2dPdDhyZVl3bnJZa28reEhXOW9LMG5aL3RN?=
+ =?utf-8?B?WUtydlo5ZFhvOFF6RGhhVHdYZ0hha1BrUzc2SmFFSmRHZHRVVmk5Rk9Yc0pm?=
+ =?utf-8?B?cFo2eWNwZ0p0bUc0TjAzaHNuZGNRNXJTYkdzaXlUUy9vM0gxN3JrSGNiRFdp?=
+ =?utf-8?B?MnpqdkhsWkh5a0RFeFBDRVVMdTNzOG9pc29xRXc5a1R2L1lGSjdWR3FqOGU0?=
+ =?utf-8?B?Mzl6VGRSOXVoRTRpbU43aUw5bk8yMnBUOUhsRXNPK2p4MlVwcDJZb3VIZ2Jk?=
+ =?utf-8?B?UTlNU0NSdzFlNmFPVFVwcC9jaitKaFViMzlqdEVLK1FRbzVFT3Fnd2hySWV2?=
+ =?utf-8?B?eXJVSXA0em53T0g3bTJ3MmI1ZHNZQ20wM3BkY1B5TTlpRnAyd1BKaG1RYURP?=
+ =?utf-8?B?Z3NOamhPVWt2RGQ4aXdGRzlUZmt5QWcwZEVNR2Zwd3FiNktDQUZSV0gva2Y5?=
+ =?utf-8?Q?UBrY+HuRTeZ3SsyQKBi94RDwuH0bFrPWTF?=
+MIME-Version: 1.0
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body text="#000000" bgcolor="#FFFFFF">
+    <p>Do you do research in Serious location-based AR Games? You like
+      South America and especially Peru? You don't have anything planned
+      for mid-November? Then this CfP may be a good opportunity for you:</p>
+    <p><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:DoNotShowComments/>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>DE</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="375">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" Priority="0" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Normale Tabelle";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+</style>
+<![endif]--><font size="&#43;2"><span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">Call for Papers</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">Workshop on</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">Designing Serious Location-based Augmented
+            Reality Games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">This workshop will be held as part of the IFIP
+            International Conference on En-tertainment Computing &amp;
+            Joint Conference on Serious Games, Arequipa, Perú, November
+            11-15th 2019 (ICEC-JCSG 2019,
+            <a class="moz-txt-link-freetext" href="http://ucsp.edu.pe/icec-jcsg-2019">http://ucsp.edu.pe/icec-jcsg-2019</a>).</span></span></font></p>
+    <p><font size="&#43;2"><span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">1&nbsp;&nbsp;&nbsp; Introduction</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">In recent years, the popularity of
+            location-based Augmented Reality (AR) games has increased
+            significantly. For example, 2013 Ingress generated a hype
+            that was surpassed by 2016 Pokémon GO with an even larger
+            player base. From a didactical perspective, location-based
+            AR games, which encompass Ingress and Pokémon GO, have a
+            number of characteristics that make their use as learning
+            tools very appealing: location-based AR games guide learners
+            to real objects on location and supplement these objects
+            with information to be learned. One of the principles
+            supported is the contiguity principle: learning effects are
+            reinforced by the temporal and/or spatial combination of
+            object and information. Further prin-ciples of multimedia
+            learning, such as signaling (i.e. the insertion of
+            additional clues) can also be implemented with the help of
+            location-based AR games. Loca-tion-based AR games are also
+            suitable as social interaction triggers for collabora-tive
+            learning settings, such as the joint development of learning
+            content in groups or for making decisions and achieving
+            goals as a team.</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">In this workshop we intend to focus on the
+            benefits of location-based AR games for purposes beyond
+            entertainment, especially for learning. We would like to
+            foster a discourse about the specific contexts in which
+            location-based AR games are most valuable learning tools,
+            based on the debate of mobile and con-text-based learning.
+            Further, we would like to outline design guidelines that
+            en-sure a balance between serious purpose and fun when
+            developing and using seri-ous location-based AR games. Fun
+            is to be seen as an essential part of achieving high user
+            engagement. At the same time, however, it must also be
+            ensured that the serious purpose can be adequately achieved.
+            These two poles of fun and serious purpose create a dynamic
+            field in which the design of serious location-based AR games
+            has to take place. Further, inclusive design plays a key
+            role in enabling users with disabilities to enjoy augmented
+            game experiences.</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">Topics of interest include, but are not limited
+            to:</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Design frameworks for AR games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Lessons learnt from creative AR
+            applications</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Reuse of entertainment AR games in serious
+            application contexts</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Characterization of serious application
+            contexts of AR games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Design of accessible AR applications</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Guidelines for the design of didactic
+            scenarios using AR games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Assessment of didactic scenarios using AR
+            games and integration into ex-isting learning curricula and
+            learning infrastructure</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Case studies of serious AR games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Content provision for AR games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Analyses of AR game mechanics and their
+            transfer to serious AR games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Technical infrastructure for AR games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Multiplayer scenarios and their game
+            mechanics</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Gamification of location-based Augmented
+            Reality Games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Learning patterns in AR-driven social
+            contexts</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Ethical issues of AR games</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">All submitted papers will undergo a thorough
+            peer-review process by the workshop program committee.
+            Accepted papers will be published as part of the official
+            ICEC-JCSG 2019 conference proceedings by Springer in their
+            LNCS se-ries. At least one author of accepted submissions
+            has to register and present at the ICEC-JCSG 2019 workshop.</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">2&nbsp;&nbsp;&nbsp; Submission Information</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">Papers must be submitted in the Springer LNCS
+            format
+(<a class="moz-txt-link-freetext" href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines">https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines</a>).
+            All submissions must be written in English and be submitted
+            via EasyChair
+            (<a class="moz-txt-link-freetext" href="https://easychair.org/conferences/submission_new.cgi?a=22316072">https://easychair.org/conferences/submission_new.cgi?a=22316072</a>).
+            The length of submissions has to meet 4 pages exclusive
+            references. Attendance at the workshop is certainly also
+            possible without submitting an own submission.</span></span></font></p>
+    <p><font size="&#43;2"><span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">3&nbsp;&nbsp;&nbsp; IMPORTANT DATES</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Workshop paper submission deadline: July
+            1, 2019</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Workshop paper submission acceptance
+            notification: July 20, 2019</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Camera-ready deadline for paper
+            submissions: August 1, 2019</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Early-bird Registration: August 10, 2019 </span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">•&nbsp;&nbsp;&nbsp; Workshop Date: November 11th, 2019</span></span></font></p>
+    <p><font size="&#43;2"><span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">4&nbsp;&nbsp;&nbsp; ORGANIZERS</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">─&nbsp;&nbsp;&nbsp; Heinrich Söbke (Bauhaus-Universität
+            Weimar, Weimar, Germany)</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">─&nbsp;&nbsp;&nbsp; Jannicke Baalsrud Hauge (Royal Institute
+            of Technology, Södertälje, Sweden and Bremer Institut fur
+            Produktion und Logistik (BIBA) an der Universität Bremen,
+            Bremen, Germany)</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">─&nbsp;&nbsp;&nbsp; Ioana Andreea Stefan (Advanced Technology
+            Systems, Targoviste, Romania and the Romanian Advanced
+            Distributed Learning Association, Bucharest, Romania)</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">─&nbsp;&nbsp;&nbsp; Antoniu Stefan (Advanced Technology
+            Systems, Targoviste, Romania)</span></span></font></p>
+    <p><font size="&#43;2"><span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">5&nbsp;&nbsp;&nbsp; PROGRAM COMMITTEE</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">-&nbsp;&nbsp;&nbsp; is currently being requested <br>
+          </span></span></font></p>
+    <p><font size="&#43;2"><span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">6&nbsp;&nbsp;&nbsp; CONTACT INFORMATION</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">For further information about the workshop
+            contact Heinrich Söbke: <a class="moz-txt-link-abbreviated" href="mailto:hein-rich.soebke@uni-weimar.de">hein-rich.soebke@uni-weimar.de</a> .</span></span><br>
+        <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US">Web:
+            <a class="moz-txt-link-freetext" href="https://seriouslocationbasedargames2019.wordpress.com/">https://seriouslocationbasedargames2019.wordpress.com/</a></span></span></font><br>
+      <span class="MsoHyperlink"><span style="font-size: 10pt;" lang="EN-US"></span></span></p>
+    <span class="MsoHyperlink"><span style="font-size:10.0pt;font-family:&quot;Times New
+        Roman&quot;,serif;mso-fareast-font-family:
+        &quot;Times New
+Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:DE;mso-bidi-language:AR-SA" lang="EN-US"><br>
+      </span></span>
+    <p><br>
+    </p>
+    <pre class="moz-signature" cols="72">-- 
+-----------------------------
+Dr.-Ing. Heinrich Söbke
+Bauhaus-Universität Weimar
+
+Bauhaus-Institut für zukunftsweisende Infrastruktursysteme
+Professur Informatik im Bauwesen &amp; Professur Siedlungswasserwirtschaft
+
+Coudraystraße 7, 99423 Weimar, Germany 
+
+Tel.: &#43;49(0)3643 58 4641
+<a class="moz-txt-link-abbreviated" href="mailto:heinrich.soebke@uni-weimar.de">heinrich.soebke@uni-weimar.de</a>
+
+<a class="moz-txt-link-freetext" href="http://www.uni-weimar.de/bis">http://www.uni-weimar.de/bis</a> 
+
+</pre>
+  </body>
+</html>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a href="http://www.digra.org" target="_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href="mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+<a href="https://listserv.uta.fi/cgi-bin/wa?SUBED1=GAMESNETWORK&amp;A=1" target="_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=GAMESNETWORK&amp;A=1</a> .
+The list archive is available online at: <a href="https://listserv.uta.fi/archives/gamesnetwork.html" target="_blank">https://listserv.uta.fi/archives/gamesnetwork.html</a>

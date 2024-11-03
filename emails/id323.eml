@@ -1,0 +1,463 @@
+Received: from SN6PR08MB4991.namprd08.prod.outlook.com (2603:10b6:a03:1e0::34)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BY5PR03CA0024.NAMPRD03.PROD.OUTLOOK.COM; Sat, 22 Jun 2019 14:14:10 +0000
+Received: from SN6PR08CA0007.namprd08.prod.outlook.com (2603:10b6:805:66::20)
+ by SN6PR08MB4991.namprd08.prod.outlook.com (2603:10b6:805:6e::28) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1987.15; Sat, 22 Jun
+ 2019 14:14:09 +0000
+Received: from SN1NAM04FT016.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::207) by SN6PR08CA0007.outlook.office365.com
+ (2603:10b6:805:66::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1987.12 via Frontend
+ Transport; Sat, 22 Jun 2019 14:14:09 +0000
+Authentication-Results: spf=pass (sender IP is 209.61.151.193)
+ smtp.mailfrom=newsleopard.com; calpoly.edu; dkim=pass (signature was
+ verified) header.d=newsleopard.com;calpoly.edu; dmarc=none action=none
+ header.from=iseans.org;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of newsleopard.com
+ designates 209.61.151.193 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.61.151.193;
+ helo=rs193.mailgun.us;
+Received: from rs193.mailgun.us (209.61.151.193) by
+ SN1NAM04FT016.mail.protection.outlook.com (10.152.88.151) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2008.13 via Frontend Transport; Sat, 22 Jun 2019 14:14:08 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=newsleopard.com; q=dns/txt;
+ s=smtp; t=1561212848; h=Content-Type: Mime-Version: Subject: From: To:
+ Sender: List-Unsubscribe: Message-Id: Date;
+ bh=0RtKBomf2jFlxsUWZ6UEr5I8RjDoGok5kpdFwJtxAbg=; b=dh1bKBGBTeKLuO8TNqmMKT7Y8DTicPESPdH2k5Ir77GkhZToMNVg4U31I2cSw3r+SfgPAIEE
+ 6elC1qu8USEGzDapGHca2KLnEWzienPibPLOalOV/ojgb+w2dGzBoCL9Bh4k6DxMb70Bs0JN
+ kdRliXXzxK88kCUYdnqFd2lNTSk=
+X-Mailgun-Sending-Ip: 209.61.151.193
+X-Mailgun-Sid: WyIyOTgyMiIsICJmb2FhZEBjYWxwb2x5LmVkdSIsICIxODc2ZCJd
+Received: by luna.mailgun.net with HTTP; Sat, 22 Jun 2019 14:14:06 +0000
+Date: Sat, 22 Jun 2019 14:14:06 +0000
+Message-Id: <20190622141406.1.4EAD50BB6CFA0CC9@mail08.mg7.newsleopard.com>
+List-Unsubscribe: <https://app.newsleopard.com/assets/page/unsubscribe-page-en.html?e=unsubscribe&y1=0&y2=40284db66b7b1306016b7e44be17000c&y3=f5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0&appHost=https://edm.mail08.mg7.newsleopard.com>
+Sender: Bangkok 2019 <iseans@iseans.org>
+X-Mailgun-Dkim: true
+To: foaad <foaad@calpoly.edu>
+From: Bangkok 2019 <iseans@iseans.org>
+Subject: Call for Papers |The 6th International Symposium on Engineering and
+ Natural Sciences
+Content-Type: multipart/alternative; boundary="b4232e54c98741ca8aaa3ca0f4a6a4e0"
+Return-Path: bounce+b30525.1876d-foaad=calpoly.edu@newsleopard.com
+X-MS-Exchange-Organization-ExpirationStartTime: 22 Jun 2019 14:14:09.0386
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 566f7631-43f5-4037-f30f-08d6f71be490
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:209.61.151.193;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001)(2980300002)(286005)(189003)(199004)(349013);DIR:INB;SFP:;SCL:9;SRVR:SN6PR08MB4991;H:rs193.mailgun.us;FPR:;SPF:Pass;LANG:en;PTR:rs193.mailgun.us;MX:1;A:1;CAT:SPOOF;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT016.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 566f7631-43f5-4037-f30f-08d6f71be490
+X-Microsoft-Antispam:
+ BCL:9;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(8001031)(1405096)(71702078);SRVR:SN6PR08MB4991;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4991:
+X-MS-Exchange-PUrlCount: 10
+X-MS-Oob-TLC-OOBClassifiers: OLM:6790;
+X-MS-Exchange-Organization-SCL: 6
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Jun 2019 14:14:08.4781
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 566f7631-43f5-4037-f30f-08d6f71be490
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4991
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6836897
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1987.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750119)(520011016)(944504077)(944703077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ajRtTWtZV0V4MDIzNnNiKzY1VmtYMUhlVXJPS0YvTXpWNm14d1pvTkFTMzZC?=
+ =?utf-8?B?eFZKcW5lVHE3b2JiYU9RcEJhaWQxZkxFRmdEdGpMWTk2aktGbGtab2JLZW1j?=
+ =?utf-8?B?azBUMmNzUmdqdHlwZmtGTFNRQlA0UmpXZm5RSU9lSWgwVUtvbFVwaUZ0Snhv?=
+ =?utf-8?B?dUE3L2tmOUNGSXQwQ2FVMklaMmtORXhqb2pHSElKSU0zUFVYOGszUXdFbC9U?=
+ =?utf-8?B?NGJDeWFIUzM1bU9iRDkwSDgzNkYzNVlURG9HYmx5dnZvREhOblVCNFVBa1dX?=
+ =?utf-8?B?Y3pPTldSNjVzU3hYbFcvUmY3a0NuS0c3bFNFVnVXVXg2dUllNEdwQTBBakY5?=
+ =?utf-8?B?UzdvcVJzOS9EcCtXSXdEUzZacFo5ZUZkMVkwcWZESVZ1aklsSWRYemZ3MjhK?=
+ =?utf-8?B?c1gwalJpZU15dmNucjJkdnBscVU4bzdoZmZVYkxrNkVxa0QrbHJGUW5HK2VN?=
+ =?utf-8?B?N1B1Q2JnZ2VQaUZpc0NNMjNjVkkyc3pZVjBtZUpqcU9sNDJadDc3dUJ4cXhK?=
+ =?utf-8?B?VkJxTzR2bHF1aXk0azJaTnZCZG5ac204U0JnQi9DTGRkRGRSRFlibC9LRG1L?=
+ =?utf-8?B?aDQ4S3VERW5rb1NDRXNGS085RjFMV2RlK1djUnZPb2FkM0VNbGliYzVzOFVJ?=
+ =?utf-8?B?RmJkMGx5dDJ0YVExRU16YXQ1RWZ4cnVVRFlXS3UxMlNLSHpHWGk2ZU1id0Uz?=
+ =?utf-8?B?Q3dyUmhuQ3psUmZSNStFM0MyL0RDZXVXNk9nT1pIREpxQUpQdnJnQzBZbzRF?=
+ =?utf-8?B?UlVGVkRQdFhqK3VHL1ZXY0tBNEFjOEVIZEdoK081bWRsMDVMNUN2Q0FVV25n?=
+ =?utf-8?B?SUJjWlJDNUsvWVo1cEIzOW5uUVNQdVd5a0hHVUZKTTlEUnJSSGZUU3pTNUF6?=
+ =?utf-8?B?SlpleDE5MkRlTkFSYk5PV284UGprTDh1dUlvVG1ianZ4SGEwN2dHMFpBLzNR?=
+ =?utf-8?B?anhDclJLTC9qc0ZqblozK2p6a0trQVVLbmxmb3hhN0ExM1NpK2RrTHBsWEkw?=
+ =?utf-8?B?dFJ6a080ejdlb29oWjRNbHFmbFZrUzczR0JWbVBBQ3FDcVBoVkpJeDZ3RE8v?=
+ =?utf-8?B?STlWd2hYVmRrK0tPRlB4Um04UmtEVmduRXZLUVhPYUNta25wMGE1bCtGR29C?=
+ =?utf-8?B?QytjZElCc2s3MlcrYVVrSXdZdjhNMTNmWHROZnBUWEFVcldWRkFrazBtczlK?=
+ =?utf-8?B?ME9yZmxrWmNCUlREblU2VURuK1BuYlprYys1K2x5bGFKUm51TkZjcFJQMXY5?=
+ =?utf-8?B?cTlPWmttVGtYRVhJUFRQcGprSEFlZS9ZVElXc0NtdnVVcjY1MG1zUlhDc3NM?=
+ =?utf-8?B?NXNnU0RjbjZYazlGNFdyaFVGNFJNMEh4REwvQ3JUZ1ZkT0dicXVBdTlwS2Vx?=
+ =?utf-8?B?WUdBdGVLaUFHcVI2QkJuTENzY2lmNVBYdEw0QitlMHVaUmw0WWU1TVRtVjBW?=
+ =?utf-8?B?ZE5Qd2Y1cjRibExUdjlpZGE1WGtGNG9UbERxSktGSDJUeVVHL0R5cE1GSVFM?=
+ =?utf-8?B?UndNazQrUUNOSjk1eUNxMWJnRHcxdzlJUmI5Wmp6OVZ4akhQSkhQYXlRbHNo?=
+ =?utf-8?B?VmlaMHp3Qjl1NStCakIrQ3EwWmp5Yi9PN2g5bVNsaXY2aTFDY3ZEejhoSllW?=
+ =?utf-8?B?aDI0N2p5b1dPSWcySUVsa1dOZDhabXJBekxycGtycTRuc2dmRFQ1aEpKV0pI?=
+ =?utf-8?B?S2ZDdGRpREJSclJBaWhSTEc3UGdSK1c5cXVlSG9QaHB0UE1Cc0gxRldaWXZx?=
+ =?utf-8?B?NWVjb0xvVnhLaWNlUktKYXoyY1F6bDI3YUkrS3BQcW1lb1VScVhMM1JCWTVL?=
+ =?utf-8?B?NzRoR25sUmd0U0xWUUNsVWZhMVNYU2M4c09lU2dvZzBTcVRYR0VHemcvVnBZ?=
+ =?utf-8?B?Z0FmdmxxQ3FyZ0M0M2Z4cVRwTVZPNEErNnNUNDRCR0lwRUVCK0wvMjhZbkl0?=
+ =?utf-8?B?eDlLME9KRVNSSU1qSktaaEFZVkJyL3hLdGRiUVlLSlVCN0ZJUllkOE96OWJ0?=
+ =?utf-8?B?K1RhQkVBUURDYkYxTDRrT3h3UXR5Rmx5RndjWnNEazZoaUw3RGlOanJsRkNv?=
+ =?utf-8?B?cTYrbE1jRUlGTWdHTStNcVBWeW1IaVNnUDl4RTZDN1pTQW1UbTdqb09mY3Fj?=
+ =?utf-8?Q?WJlMe/Yls58sq3OrRjvix/VqF?=
+MIME-Version: 1.0
+
+--b4232e54c98741ca8aaa3ca0f4a6a4e0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Call for Papers |The 6th International Symposium on Engineering and Natural=
+ Sciences* { text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-=
+size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    html { height: 100%; width: 100%; }
+
+    body { height: 100% !important; margin: 0 !important; padding: 0 !impor=
+tant; width: 100% !important; mso-line-height-rule: exactly; }
+    div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; }@media only screen and (=
+max-width:600px) {
+      .row, .row__row { display: block; }
+      .row__column, .column-filler { display: block; box-sizing: border-box=
+; float: left; }
+      .col-50 { display: block; width: 100% !important; padding-left: 0 !im=
+portant; padding-right: 0 !important; }
+      .mobile-bottom-m { margin-bottom: 40px; }
+      .cBlock--spacingLR { padding-left: 16px !important; padding-right: 16=
+px !important; }
+      .img_block { width: 100% !important; }
+    }The 6th International Symposium on Engineering and Natural SciencesNov=
+ember 19-21, 2019  Bangkok, ThailandOPEN  for submission !!The 2019 Interna=
+tional Symposium on Engineering and Natural Sciences (ISEANS) will be held =
+from November 19-21, 2019 in Bangkok, Thailand. The purpose of the conferen=
+ce is to bring the world's scholars, professionals, academics, students and=
+ more together for oral sessions, poster sessions, and networking opportuni=
+ties to promote, share and discuss various subjects and developments in the=
+ field ofengineering and natural sciences.The conference features internati=
+onal keynote addresses and a farewell socializing event.Important DatesSubm=
+ission DeadlineJuly 25, 2019Notification of AcceptanceAugust 15, 2019VenueC=
+entara Watergate Pavillion Hotel BangkokContact & InquiryISEANS Secretariat=
+Email: iseans@iseans.orgWebsite: www.iseans.org =20
+
+    You are currently subscribed to our list with the following address: fo=
+aad@calpoly.edu. If you no longer want to receive our emails, you can click=
+ unsubscribe.
+ =20
+ =20
+
+
+
+
+      Email delivery powered by =E9=9B=BB=E5=AD=90=E8=B1=B9 NewsLeopard.
+   =20
+
+
+
+
+--b4232e54c98741ca8aaa3ca0f4a6a4e0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Call for Papers |The 6th International Symposium on Engineering and Na=
+tural Sciences</title><meta content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0" name=3D"viewport"><meta name=3D"x-apple-disable-message-reformattin=
+g"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3D=
+edge"><!--<![endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:=
+AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings><=
+/xml><![endif]--><style>* { text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%; -moz-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    html { height: 100%; width: 100%; }
+
+    body { height: 100% !important; margin: 0 !important; padding: 0 !impor=
+tant; width: 100% !important; mso-line-height-rule: exactly; }
+    div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; }</style><!--[if gte mso =
+9]><style type=3D"text/css">li { text-indent: -1em; }
+    table td { border-collapse: collapse; }</style><![endif]--><style>@medi=
+a only screen and (max-width:600px) {
+      .row, .row__row { display: block; }
+      .row__column, .column-filler { display: block; box-sizing: border-box=
+; float: left; }
+      .col-50 { display: block; width: 100% !important; padding-left: 0 !im=
+portant; padding-right: 0 !important; }
+      .mobile-bottom-m { margin-bottom: 40px; }
+      .cBlock--spacingLR { padding-left: 16px !important; padding-right: 16=
+px !important; }
+      .img_block { width: 100% !important; }
+    }</style></head><body class=3D"body cLayout--bgColor" style=3D"backgrou=
+nd-color: #f5f5f5; margin: 0; width: 100%;"><table align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td a=
+lign=3D"center" width=3D"100%" style=3D"padding-left:10px;padding-right:10p=
+x;padding-top:50px;padding-bottom:50px" bgcolor=3D"#f5f5f5"><!--[if !mso]><=
+!----><div style=3D"margin:0 auto;width:100%;max-width:640px;border:"><!--<=
+![endif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"mar=
+gin:0 auto;width:100%;max-width:640px;border:"><tr><td><![endif]--><table b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"1=
+00%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !m=
+so]><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!--<![e=
+ndif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin=
+:0 auto;width:640px"><tr><td><![endif]--><table align=3D"center" width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"paddin=
+g-left:32px;padding-right:32px;padding-top:24px;padding-bottom:24px"><table=
+ align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" width=3D"100%" style=
+=3D"padding-top:0px;padding-bottom:0px"><a href=3D"https://edm.mail08.mg7.n=
+ewsleopard.com/t/c?l=3D40284db66b7b1306016b7e44be17000c&amp;s=3D0&amp;y1=3D=
+0&amp;y2=3D40284db66b7b1306016b7e44be17000c&amp;y3=3Df5dca31e4d456d7531d002=
+0c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"padd=
+ing:0px;text-decoration:none;display:inline-block"><img border=3D"0" width=
+=3D"576" src=3D"https://s3.amazonaws.com/prod-newsleopard-upload-img/40283a=
+666ae37d89016af889e284020a/2019-06-22-08-48-38-6013.png" style=3D"display:b=
+lock;max-width:100%"></a></td></tr></tbody></table></td></tr></tbody></tabl=
+e><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!----></di=
+v><!--<![endif]--></td></tr></tbody></table><table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td ali=
+gn=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=
+=3D"margin:0 auto;width:100%;max-width:640px"><!--<![endif]--><!--[if mso |=
+ IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640px">=
+<tr><td><![endif]--><table align=3D"center" width=3D"100%" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"to=
+p" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padding-ri=
+ght:32px;padding-top:9px;padding-bottom:13px"><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center">=
+<h1 style=3D"color:#333333;font-size:23px;font-weight:bold;font-family:'Pin=
+gFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengH=
+ei','Helvetica Neue',Helvetica,Arial,sans-serif;padding:0;margin:0;line-hei=
+ght:1.4;text-decoration:none;display:inline-block"><span class=3D"a__text" =
+style=3D"color:#333333;text-decoration:none;font-family:'PingFang TC','=E5=
+=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica=
+ Neue',Helvetica,Arial,sans-serif">The 6th International Symposium on Engin=
+eering and Natural Sciences</span></h1></td></tr></tbody></table></td></tr>=
+</tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !ms=
+o]><!----></div><!--<![endif]--></td></tr></tbody></table><table border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbo=
+dy><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!---=
+-><div style=3D"margin:0 auto;width:100%;max-width:640px"><!--<![endif]--><=
+!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;w=
+idth:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" =
+valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32p=
+x;padding-right:32px;padding-top:4px;padding-bottom:21px"><table align=3D"c=
+enter" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbo=
+dy><tr><td align=3D"center" valign=3D"top" width=3D"100%" style=3D"font-fam=
+ily:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsof=
+t JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px;font=
+-weight:normal;color:#f39733;line-height:1.4;margin:0;letter-spacing:1px;pa=
+dding-top:4px;padding-bottom:4px">November 19-21, 2019  Bangkok, Thailand</=
+td></tr></tbody></table><table width=3D"100%" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td align=3D"center" style=3D"padding-top:4p=
+x;padding-bottom:4px"><h1 style=3D"color:#2eb5e6;font-size:29px;font-weight=
+:bold;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=
+=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;paddi=
+ng:0;margin:0;line-height:1.4;text-decoration:none;display:inline-block"><a=
+ href=3D"https://edm.mail08.mg7.newsleopard.com/t/c?l=3D40284db66b7b1306016=
+b7e44be17000c&amp;s=3D1&amp;y1=3D0&amp;y2=3D40284db66b7b1306016b7e44be17000=
+c&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0=
+" target=3D"_blank" style=3D"padding:0px;text-decoration:none;display:inlin=
+e-block"><span class=3D"a__text" style=3D"color:#2eb5e6;text-decoration:non=
+e;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94'=
+,'Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif">OPEN  fo=
+r submission !!</span></a></h1></td></tr></tbody></table></td></tr></tbody>=
+</table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!---=
+-></div><!--<![endif]--></td></tr></tbody></table><table border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><=
+td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div s=
+tyle=3D"margin:0 auto;width:100%;max-width:640px"><!--<![endif]--><!--[if m=
+so | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640=
+px"><tr><td><![endif]--><table align=3D"center" width=3D"100%" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=
+=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padd=
+ing-right:32px;padding-top:8px;padding-bottom:12px"><table align=3D"center"=
+ width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr=
+><td valign=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=
+=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica=
+ Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;color:#=
+666666;line-height:1.5;margin:0"><div><span style=3D"color: rgb(51, 51, 51)=
+;">The 2019 International Symposium on Engineering and Natural Sciences (IS=
+EANS) will be held from November 19-21, 2019 in Bangkok, Thailand. The purp=
+ose of the conference is to bring the world's scholars, professionals, acad=
+emics, students and more together for oral sessions, poster sessions, and n=
+etworking opportunities to promote, share and discuss various subjects and =
+developments in the field of</span><span style=3D"color: rgb(51, 51, 51); f=
+ont-size: 14px;"></span><strong style=3D"color: rgb(51, 51, 51); font-size:=
+ 14px;">engineering and natural sciences</strong><span style=3D"color: rgb(=
+51, 51, 51); font-size: 14px;">.</span><span style=3D"color: rgb(51, 51, 51=
+);">The conference features international keynote addresses and a farewell =
+socializing event.</span></div></td></tr></tbody></table></td></tr></tbody>=
+</table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!---=
+-></div><!--<![endif]--></td></tr></tbody></table><table border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><=
+td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div s=
+tyle=3D"margin:0 auto;width:100%;max-width:640px"><!--<![endif]--><!--[if m=
+so | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640=
+px"><tr><td><![endif]--><table align=3D"center" width=3D"100%" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=
+=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padd=
+ing-right:32px;padding-top:14px;padding-bottom:17px"><table class=3D"row" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" role=3D"pres=
+entation" align=3D"center" style=3D"table-layout:fixed"><tbody><tr class=3D=
+"row__row"><td class=3D"row__column col-50 mobile-bottom-m" align=3D"left" =
+valign=3D"top" width=3D"50" style=3D"width:50%;padding-left:0px;padding-rig=
+ht:16px"><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" width=
+=3D"100%" style=3D"padding-top:0px;padding-bottom:0px"><a href=3D"https://e=
+dm.mail08.mg7.newsleopard.com/t/c?l=3D40284db66b7b1306016b7e44be17000c&amp;=
+s=3D2&amp;y1=3D0&amp;y2=3D40284db66b7b1306016b7e44be17000c&amp;y3=3Df5dca31=
+e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank=
+" style=3D"padding:0px;text-decoration:none;display:inline-block"><img bord=
+er=3D"0" width=3D"272" src=3D"https://s3.amazonaws.com/prod-newsleopard-upl=
+oad-img/40283a666ae37d89016af889e284020a/2019-06-22-08-54-35-iseans.png" st=
+yle=3D"display:block;max-width:100%"></a></td></tr></tbody></table></td><td=
+ class=3D"row__column col-50" align=3D"left" valign=3D"top" width=3D"50" st=
+yle=3D"width:50%;padding-left:16px;padding-right:0px"><table width=3D"100%"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"l=
+eft" style=3D"padding-top:4px;padding-bottom:8px"><h1 style=3D"color:#33333=
+3;font-size:24px;font-weight:bold;font-family:'PingFang TC','=E5=BE=AE=E8=
+=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',He=
+lvetica,Arial,sans-serif;padding:0;margin:0;line-height:1.4;text-decoration=
+:none;display:inline-block"><span class=3D"a__text" style=3D"color:#333333;=
+text-decoration:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=
+=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,s=
+ans-serif">Important Dates</span></h1></td></tr></tbody></table><table alig=
+n=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td valign=3D"top" width=3D"100%" style=3D"font-family:'PingFa=
+ng TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei'=
+,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:nor=
+mal;color:#666666;line-height:1.5;margin:0;padding-bottom:24px"><div>Submis=
+sion Deadline</div><div><br></div><div><strong style=3D"font-size: 18px;">J=
+uly 25, 2019</strong></div><div><br></div><div>Notification of Acceptance</=
+div><div><br></div><div><strong style=3D"font-size: 18px;">August 15, 2019<=
+/strong></div><div><br></div><div><br></div></td></tr></tbody></table></td>=
+</tr></tbody></table></td></tr></tbody></table><!--[if mso | IE]></td></tr>=
+</table><![endif]--><!--[if !mso]><!----></div><!--<![endif]--></td></tr></=
+tbody></table><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" wid=
+th=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:100%;max=
+-width:640px"><!--<![endif]--><!--[if mso | IE]><table role=3D"presentation=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=
+=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table ali=
+gn=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#=
+ffffff" style=3D"padding-left:32px;padding-right:32px;padding-top:24px;padd=
+ing-bottom:24px"><table class=3D"row" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" width=3D"100%" role=3D"presentation" align=3D"center" style=3D"=
+table-layout:fixed"><tbody><tr class=3D"row__row"><td class=3D"row__column =
+col-50 mobile-bottom-m" align=3D"left" valign=3D"top" width=3D"50" style=3D=
+"width:50%;padding-left:0px;padding-right:16px"><table width=3D"100%" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" s=
+tyle=3D"padding-top:4px;padding-bottom:8px"><h1 style=3D"color:#333333;font=
+-size:24px;font-weight:bold;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=
+=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetic=
+a,Arial,sans-serif;padding:0;margin:0;line-height:1.4;text-decoration:none;=
+display:inline-block"><span class=3D"a__text" style=3D"color:#333333;text-d=
+ecoration:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=
+=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-se=
+rif">Venue</span></h1></td></tr></tbody></table><table align=3D"center" wid=
+th=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td=
+ valign=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=
+=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Ne=
+ue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;color:#666=
+666;line-height:1.5;margin:0;padding-bottom:24px"><h2><strong style=3D"font=
+-size: 16px;">Centara Watergate Pavillion Hotel B</strong><span style=3D"fo=
+nt-size: 16px;"><span class=3D"ql-cursor"></span></span><strong style=3D"fo=
+nt-size: 16px;">angkok</strong></h2><div><br></div></td></tr></tbody></tabl=
+e></td><td class=3D"row__column col-50" align=3D"left" valign=3D"top" width=
+=3D"50" style=3D"width:50%;padding-left:16px;padding-right:0px"><table alig=
+n=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td align=3D"center" valign=3D"top" width=3D"100%" style=3D"pa=
+dding-top:0px;padding-bottom:0px"><img border=3D"0" width=3D"272" src=3D"ht=
+tps://s3.amazonaws.com/prod-newsleopard-upload-img/40283a666ae37d89016af889=
+e284020a/2019-06-22-09-01-24-venus.png" style=3D"display:block;max-width:10=
+0%"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody><=
+/table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!----=
+></div><!--<![endif]--></td></tr></tbody></table><table border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><t=
+d align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div st=
+yle=3D"margin:0 auto;width:100%;max-width:640px"><!--<![endif]--><!--[if ms=
+o | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640p=
+x"><tr><td><![endif]--><table align=3D"center" width=3D"100%" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D=
+"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padding=
+-right:32px;padding-top:24px;padding-bottom:24px"><table align=3D"center" w=
+idth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><=
+td valign=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=
+=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Ne=
+ue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;color:#666=
+666;line-height:1.5;margin:0"><div><strong>Contact &amp; Inquiry</strong></=
+div><div><br></div><div>ISEANS Secretariat</div><div>Email: iseans@iseans.o=
+rg</div><div>Website: www.iseans.org</div></td></tr></tbody></table></td></=
+tr></tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if =
+!mso]><!----></div><!--<![endif]--></td></tr></tbody></table><!--[if mso | =
+IE]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!--<![endif]-=
+-></td></tr></tbody></table><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%"> <tbody> <tr>
+  <td align=3D"center" style=3D"font-size: 13px;font-size:13px;font-family:=
+ 'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft J=
+hengHei','Helvetica Neue',Helvetica,Arial,sans-serif;color:#666;border-top:=
+1px solid #ddd;padding-top:16px;text-align:center;line-height:1.5" valign=
+=3D"middle" width=3D"100%">
+    You are currently subscribed to our list with the following address: <s=
+pan style=3D"color: #666;font-weight: bold">foaad@calpoly.edu</span>. If yo=
+u no longer want to receive our emails, you can click <a href=3D"/" style=
+=3D"color: #3f7dbd;text-decoration:none;display: inline-block;"><span class=
+=3D"a__text" style=3D"text-decoration: none;color: #3f7dbd;"><a href=3D"htt=
+ps://app.newsleopard.com/assets/page/unsubscribe-page-en.html?e=3Dunsubscri=
+be&amp;y1=3D0&amp;y2=3D40284db66b7b1306016b7e44be17000c&amp;y3=3Df5dca31e4d=
+456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0&amp;appHost=3Dhttps:=
+//edm.mail08.mg7.newsleopard.com">unsubscribe</a></span></a>.
+  </td>
+</tr> </tbody> </table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%">
+  <tbody>
+  <tr>
+    <td align=3D"center" style=3D"font-size: 13px;font-size:13px;font-famil=
+y: 'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft=
+ JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;color:#666;padding-t=
+op:4px;padding-bottom:24px;text-align:center;line-height:1.5" valign=3D"mid=
+dle" width=3D"100%">
+      Email delivery powered by <a href=3D"https://newsleopard.com/?utm_sou=
+rce=3Dedm&amp;utm_medium=3Demail&amp;utm_campaign=3Dfooter&amp;utm_content=
+=3Dpowerby" style=3D"color: #3f7dbd;text-decoration:none;"><span class=3D"a=
+__text" style=3D"text-decoration: none;color: #3f7dbd;">=E9=9B=BB=E5=AD=90=
+=E8=B1=B9 NewsLeopard</span></a>.
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body></html><img src=3D"https://edm.mail08.mg7.newsleopard.com/t/s?e=3Dop=
+en&amp;y1=3D0&amp;y2=3D40284db66b7b1306016b7e44be17000c&amp;y3=3Df5dca31e4d=
+456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" alt=3D"">=
+
+--b4232e54c98741ca8aaa3ca0f4a6a4e0--

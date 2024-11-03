@@ -1,0 +1,282 @@
+Received: from BYAPR08MB4984.namprd08.prod.outlook.com (2603:10b6:a03:14b::33)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR06CA0056.NAMPRD06.PROD.OUTLOOK.COM; Tue, 6 Aug 2019 20:00:13 +0000
+Received: from DM5PR08CA0044.namprd08.prod.outlook.com (2603:10b6:4:60::33) by
+ BYAPR08MB4984.namprd08.prod.outlook.com (2603:10b6:a03:6a::29) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2115.10; Tue, 6 Aug 2019 20:00:10 +0000
+Received: from BN3NAM04FT006.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::202) by DM5PR08CA0044.outlook.office365.com
+ (2603:10b6:4:60::33) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.14 via Frontend
+ Transport; Tue, 6 Aug 2019 20:00:10 +0000
+Authentication-Results: spf=pass (sender IP is 209.119.5.133)
+ smtp.mailfrom=LISTSERV.ACM.ORG; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=bestguesspass action=none
+ header.from=acm.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of LISTSERV.ACM.ORG
+ designates 209.119.5.133 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.119.5.133;
+ helo=acm-x.mta.lsoft.us;
+Received: from acm-x.mta.lsoft.us (209.119.5.133) by
+ BN3NAM04FT006.mail.protection.outlook.com (10.152.92.96) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2136.14 via Frontend Transport; Tue, 6 Aug 2019 20:00:08 +0000
+Return-Path:
+ owner-nolist-ACMLPX-190719BF-ov8ia944*foaad**CALPOLY*-EDU@LISTSERV.ACM.ORG
+Received: from [209.119.0.3] ([209.119.0.3:57089] helo=LOIRE)
+	by tesla.dc.lsoft.com (envelope-from <owner-nolist-ACMLPX-190719BF-ov8ia944*foaad**CALPOLY*-EDU@listserv.acm.org>)
+	(ecelerity 4.2.38.62370 r(:)) with ESMTP
+	id DF/77-22886-84CD94D5; Tue, 06 Aug 2019 16:00:08 -0400
+To: foaad@CALPOLY.EDU
+Date: Tue, 6 Aug 2019 16:00:00 -0400 (EDT)
+From: "David A. Bader, ACM TOPC Editor-in-Chief" <pubs@acm.org>
+Message-ID: <8694-1931865664.10729.1565121605433@ORANGE.hosting.lsoft.com>
+Subject: ACM TOPC Call for Papers
+Content-Type: multipart/alternative;
+ boundary="----=_Part_10727_820642257.1565121600191"
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Aug 2019 20:00:08.9652
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 643472a6-09dd-41e8-1cea-08d71aa8af09
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:209.119.5.133;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(286005)(199004)(189003)(5142003)(126002)(966005)(476003)(606006)(336012)(356004)(76236002)(956004)(6666004)(14444005)(486006)(51815007)(26005)(85226003)(236005)(16003)(6916009)(53936002)(8676002)(75640400001)(81166006)(18926415008)(106002)(6306002)(16586007)(71190400001)(9686003)(2171002)(2351001)(1096003)(81156014)(298455003)(733005)(4006050)(2361001)(225293001);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4984;H:acm-x.mta.lsoft.us;FPR:;SPF:Pass;LANG:en;PTR:ErrorRetry;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT006.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 643472a6-09dd-41e8-1cea-08d71aa8af09
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(1414054)(71702078);SRVR:BYAPR08MB4984;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4984:
+X-MS-Exchange-PUrlCount: 8
+X-MS-Oob-TLC-OOBClassifiers: OLM:7691;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Aug 2019 20:00:08.8341
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 643472a6-09dd-41e8-1cea-08d71aa8af09
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4984
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.0876796
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?iso-8859-1?Q?URRnO6r43Q7cv1hcyH/8H0r1YlTMF+FU9pxiHwzRc2h+KVrP6sz4aZgPRK?=
+ =?iso-8859-1?Q?Qi2OzDoLZbeliHEVYhEei54jJ37Fz4qUdOfx7nHBYENgc3qYckWP8wIluR?=
+ =?iso-8859-1?Q?C2wJWNvGZ0+FRmdcvFWAugb/I4nY4GFgJjNJojHZ2kvO+GBOppVE8GBgYt?=
+ =?iso-8859-1?Q?cZoJEvx6j127hxmZib+XHcTAksqjYbw67cRe/rzGlutCsJXRHIou72cFn0?=
+ =?iso-8859-1?Q?JTO3vOEqJxqFWO90cNk2fbx8iPgkhVft3GRNNV+1sUr5rp3J+thcI5l1is?=
+ =?iso-8859-1?Q?Iel3VvGSTMji8muK8AOiSpU/R2Xo48gfRtNV2Jbp9YHm/x4IDqLmzu8lcN?=
+ =?iso-8859-1?Q?w7Au6KnxCVgaMYrK+mJ3O+bfxDSL6jsFW4ZBv4FFW7HVTqMH0dd1B1bDAT?=
+ =?iso-8859-1?Q?2i7O0Samo3Rlfg8hvdtIIm/3tFyNkqUvImFi4ccnRLsL//X4PfAMk9UATW?=
+ =?iso-8859-1?Q?kaiyhQvKDaZPlE64R1f2NkltaTrZRdTWqVGvxIWJG9tPvs3Vt4Zy5lu5/C?=
+ =?iso-8859-1?Q?/5eDzd8UC0dn257f6QN9azBcLrK7nWfWlzyqfm0TlIypNRkeX/MZiStSek?=
+ =?iso-8859-1?Q?EV+rZ2J/XVESij/yvs/KWcBx7cJTR8TIXxM2jgAJqH7bSFqP52ZGQ4UXAi?=
+ =?iso-8859-1?Q?71NxtVNGwlERN+mJtR3EQ3b7PAT7mTo6xnI5wzf2spWF7bFntdZETigsn/?=
+ =?iso-8859-1?Q?OyowhPVIF1w/hgaZUMapffFycd94CHztG+w1sPh8umfoBx0k8YVkTUZiJG?=
+ =?iso-8859-1?Q?vxSYP/fxAsPzKevzAdPF+tttpsfYPhIDyWHKZY08qV8pjspxfXKAHrc7vy?=
+ =?iso-8859-1?Q?rulhKoCzfX2jzfvZ29DAy1IiJlH8Ojof8eNf3baJe0hiD01EJ3hYdaadDG?=
+ =?iso-8859-1?Q?OalqOu/iJXY2+Ufb1AQNEOL0XlZDycoIX3DpX3i13xs3vDXpdZp75w+XsL?=
+ =?iso-8859-1?Q?tiWxtQE3v+6SFDRoELV3PrYP092eExoBnh+1owTxpcUEX9lyHCpaakRMl8?=
+ =?iso-8859-1?Q?E0jkVjKcezv+20FgEImnaBltJ3BSznTwBPNPNh?=
+MIME-Version: 1.0
+
+------=_Part_10727_820642257.1565121600191
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+CALL FOR PAPERS    =20
+     =20
+ACM Transactions on Parallel Computing
+Solutions to Complex Issues in Parallelism     =20
+     =20
+New Editor-in-Chief   =20
+David A. Bader, New Jersey Institute of Technology, USA    =20
+    =20
+----------------------------------------------------------------------    =
+=20
+     =20
+Information For Contributors  =20
+  =20
+Parallel computing is no longer a niche research field but an essential ing=
+redient in all aspects of computer science. ACM Transactions on Parallel Co=
+mputing (TOPC) is a forum for novel and innovative work on all aspects of p=
+arallel computing, including foundational and theoretical aspects, systems,=
+ languages, architectures, tools, and applications. It addresses all classe=
+s of parallel-processing platforms including concurrent, multithreaded, mul=
+ticore, accelerated, multiprocessor, clusters, and supercomputers.  =20
+  =20
+TOPC spans the range from foundational research in parallel computing to pr=
+inciples extracted from experimental investigations. Submissions should des=
+cribe novel solutions to important challenges in exploiting parallelism. So=
+lutions should be generic enough to be used beyond the specific application=
+ area in which the problem arose. Papers describing experiences should indi=
+cate how they illustrate general principles; papers about parallel computin=
+g foundations should indicate how they relate to practice.  =20
+  =20
+Subject Areas  =20
+  =20
+  * Parallel Programming Languages and Models  =20
+  * Parallel System Software  =20
+  * Parallel Architectures  =20
+  * Parallel Algorithms and Theory  =20
+  * Parallel Applications  =20
+  * Tools for Parallel Computing  =20
+  =20
+Read about the new Editor-in-Chief's plan's for the journal in Volume 6, Is=
+sue 1 at https://dl.acm.org/citation.cfm?id=3D3325883.  =20
+  =20
+For further information and to submit your manuscript, please visit https:/=
+/topc.acm.org.  =20
+    =20
+------------------------------------------------------------------------   =
+ =20
+   =20
+To stop receiving emails about publishing in ACM journals, unsubscribe at: =
+        =20
+https://optout.acm.org/unsubscribe.cfm?re=3Dfoaad@calpoly.edu&rl=3DCFP   =
+=20
+    =20
+Association for Computing Machinery             =20
+1601 Broadway, 10th Floor, New York, NY 10019, USA              =20
+Copyright 2019, ACM, Inc.   =20
+------=_Part_10727_820642257.1565121600191
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+    <title>Call for Papers</title>
+    <meta name=3D"googlebot" content=3D"noindex, noarchive, nofollow">
+
+
+  </head>
+ =20
+  <body style=3D"font-family: verdana, tahoma, geneva, arial; font-size: 12=
+px; line-height: 1.2; color: #333333; text-align:center"><!--[if gte mso 15=
+]><table border=3D'0' cellpadding=3D'0' cellspacing=3D'0' width=3D'100%' al=
+ign=3D'left'><tr><td><![endif]-->
+ =20
+  <table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"2" wi=
+dth=3D"670">
+  =09
+    	<tbody><tr><td>
+       =20
+        	<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"670">
+            	<tbody><tr align=3D"left" valign=3D"top">
+                	<td colspan=3D"2" height=3D"10"></td>
+                </tr>
+
+				<tr align=3D"left" valign=3D"top">
+                	<!-- main body -->  =20
+					<td width=3D"650" style=3D"padding: 10px;">
+						<!-- header --><img src=3D"http://www.acm.org/binaries/content/galler=
+y/acm/plone-images/acm_logo1.gif" width=3D"250" height=3D"" border=3D"0" al=
+ign=3D"right" alt=3D""></a><br>
+   <div style=3D"font-family: verdana, arial; font-size: 14px; font-weight:=
+ lighter; color: #000000;">CALL FOR PAPERS<br>  </div>   <br>         =20
+<div style=3D"font-family: verdana, arial; font-size: 18px; font-weight: bo=
+lder; color: #000000;">ACM Transactions on Parallel Computing<br></div>
+	<div style=3D"font-family: verdana, arial; font-size: 14px; font-weight: l=
+ighter; color: #000000;"><em>Solutions to Complex Issues in Parallelism</em=
+></div>
+<br>
+						<div style=3D"font-family: verdana, arial; font-size: 12px; font-weig=
+ht: light; color: #000000;"><b>New Editor-in-Chief</b></div>
+
+	<div style=3D"font-family: verdana, arial; font-size: 12px; font-weight: n=
+ormal; color: #000000; line-height: 1.5em;"><b>David A. Bader</b>, New Jers=
+ey Institute of Technology, USA<br>
+</div><br>
+
+<!-- end of header --><hr><br>
+
+<div style=3D"font-family: verdana, arial; font-size: 13px; font-weight: no=
+rmal; color: #000000;"><strong>Information For Contributors</strong></div>
+<!-- story -->
+	<div style=3D"font-family: verdana, arial; font-size: 12px; font-weight: n=
+ormal; color: #000000; line-height: 1.5em; vertical-align:top;">
+
+<br>
+<img src=3D"http://www.acm.org/binaries/content/gallery/acm/newsletters/top=
+c_cover.jpg" alt=3D"" width=3D"180" height=3D"" vspace=3D"10" hspace=3D"20"=
+ border=3D"0" align=3D"right">Parallel computing is no longer a niche resea=
+rch field but an essential ingredient in all aspects of computer science. <=
+em>ACM Transactions on Parallel Computing</em> (TOPC) is a forum for novel =
+and innovative work on all aspects of
+parallel computing, including foundational and theoretical aspects, systems=
+, languages, architectures, tools, and applications. It addresses all class=
+es of parallel-processing platforms including concurrent, multithreaded, mu=
+lticore, accelerated, multiprocessor, clusters, and supercomputers.<br><br>
+=20
+TOPC spans the range from foundational research in parallel computing to pr=
+inciples extracted from experimental investigations. Submissions should des=
+cribe novel solutions to important challenges in exploiting parallelism. So=
+lutions should be generic enough to be used beyond the specific application=
+ area in which the problem arose. Papers describing experiences should indi=
+cate how they illustrate general principles; papers about parallel computin=
+g foundations should indicate how they relate to practice.<br><br>
+
+<b>Subject Areas</b>
+		<ul>
+<li>Parallel Programming Languages and Models</li>
+<li>Parallel System Software</li>
+<li>Parallel Architectures</li>
+<li>Parallel Algorithms and Theory</li>
+<li>Parallel Applications</li>
+<li>Tools for Parallel Computing</li>
+		</ul>
+
+Read about the new Editor-in-Chief's plan's for the journal in <a href=3D"h=
+ttps://orange.hosting.lsoft.com/trk/click?ref=3Dznwrbbrs9_6-20f19x31ce08x06=
+937&amp;">Volume 6, Issue 1</a>.
+<br><br>
+For further information and to submit your manuscript, please visit <a href=
+=3D"https://orange.hosting.lsoft.com/trk/click?ref=3Dznwrbbrs9_6-20f19x31ce=
+09x06937&amp;">topc.acm.org</a>.<br><br>
+
+
+=09
+
+<hr>
+
+<table border=3D"0" cellpadding=3D"0px" width=3D"700">=09
+		<tr>
+			<td colspan=3D"2">
+						</td></tr>
+						</table>
+			  =20
+<!-- story -->      =20
+
+	<div style=3D"font-family: verdana, tahoma, geneva, arial; font-size: 10px=
+; font-weight: bolder; color: #505050; text-align:center"><a href=3D"https:=
+//optout.acm.org/unsubscribe.cfm?re=3Dfoaad@calpoly.edu&amp;rl=3DCFP">UNSUB=
+SCRIBE</a> to stop receiving emails about publishing in ACM journals.<br><b=
+r>
+Association for Computing Machinery, 1601 Broadway, 10th Floor, New York, N=
+Y 10019, USA<br>=20
+Copyright 2019, ACM, Inc.                                  =20
+                      =20
+                    </div><!-- end of story -->
+                    </div></td><!-- end of main body -->
+                  =20
+				</tr>
+            </tbody></table>
+			</div></div></div></td>
+		</tr>
+	</tbody></table>
+=09
+</td></tr></tbody></table><!--[--><img src=3D"https://orange.hosting.lsoft.=
+com/trk/open?ref=3Dznwrbbrs9_6-20f19x06937" width=3D"1" height=3D"1"><!--]-=
+-><!--[if gte mso 15]></td></tr></table><![endif]--></body></html>=
+
+------=_Part_10727_820642257.1565121600191--

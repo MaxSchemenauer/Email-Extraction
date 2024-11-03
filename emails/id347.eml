@@ -1,0 +1,299 @@
+Received: from CY4PR08MB3573.namprd08.prod.outlook.com (2603:10b6:a03:1e0::22)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR03CA0012.NAMPRD03.PROD.OUTLOOK.COM; Fri, 4 Oct 2019 21:26:38 +0000
+Received: from BYAPR08CA0022.namprd08.prod.outlook.com (2603:10b6:a03:100::35)
+ by CY4PR08MB3573.namprd08.prod.outlook.com (2603:10b6:910:77::23) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2305.20; Fri, 4 Oct
+ 2019 21:26:37 +0000
+Received: from SN1NAM04FT024.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::209) by BYAPR08CA0022.outlook.office365.com
+ (2603:10b6:a03:100::35) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2241.13 via Frontend
+ Transport; Fri, 4 Oct 2019 21:26:37 +0000
+Authentication-Results: spf=pass (sender IP is 140.98.200.37)
+ smtp.mailfrom=bmsmail2.ieee.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ieee.org;calpoly.edu; dmarc=pass action=none
+ header.from=ieee.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of bmsmail2.ieee.org
+ designates 140.98.200.37 as permitted sender)
+ receiver=protection.outlook.com; client-ip=140.98.200.37;
+ helo=smtppav01.ieee.org;
+Received: from smtppav01.ieee.org (140.98.200.37) by
+ SN1NAM04FT024.mail.protection.outlook.com (10.152.88.106) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2327.20 via Frontend Transport; Fri, 4 Oct 2019 21:26:36 +0000
+Received: from sblpav23.ieee.org (dct-lb-sweb-23.ieee.org [140.98.23.254])
+	by smtppav01.ieee.org (8.14.7/8.14.7) with ESMTP id x94LKEbT029659
+	for <foaad@calpoly.edu>; Fri, 4 Oct 2019 17:26:35 -0400
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtppav01.ieee.org x94LKEbT029659
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ieee.org; s=mail;
+	t=1570224395; bh=8a8x2u07xb0IMpTFSij7rnn3HTeYqx6ycZtYSLmDiE4=;
+	h=To:Subject:From:Reply-To:From;
+	b=aDZFALVIY5NiP80RNMWDRm5UY6UlGT2Ic7tyyFq2cwc5a/WCDGVyqU6xYOtzZcgB1
+	 qsqWe/rHSOX5iY5jOf0V69SHk/GGURWi5HXnu+9yM5eoNRzgwW/9R5Yo4YXJEKzCkX
+	 cjrivIOIBcSWvvpRQvhm/rr15+iMSrbSyomVara0=
+Date: Fri, 4 Oct 2019 17:26:35 -0400
+To: <foaad@calpoly.edu>
+Sender: "IEEE eNotice"<enotice@ieee.org>
+Subject: Correction: Call for 2020 IEEE Program Evaluators for Accreditation Activities
+From: "IEEE eNotice"<enotice@ieee.org>
+Reply-To: no_reply_enotice@ieee.org
+Message-ID: <SEMA-CR-1-6K4JK4J@bmsmail2.ieee.org>
+Content-Type: text/html;	charset="UTF-8"
+Content-Transfer-Encoding: Quoted-Printable
+Return-Path: SEMA-CR-1-6K4JK4J@bmsmail2.ieee.org
+X-MS-Exchange-Organization-ExpirationStartTime: 04 Oct 2019 21:26:36.8233
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 166ce1f6-2f27-41e7-b0cd-08d74911899c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:140.98.200.37;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(286005)(199004)(189003)(486006)(26005)(14444005)(2171002)(36906005)(23676004)(606006)(476003)(426003)(336012)(28505004)(956004)(6392003)(356004)(75640400001)(733005)(4006050)(7846003)(16003)(966005)(236005)(6306002)(33656002)(8676002)(1096003)(126002)(246002)(6916009)(43066004)(7596002)(53416004)(106002)(7636002)(5820100001)(7066003)(2351001)(23846002)(575854001)(50466002);DIR:INB;SFP:;SCL:1;SRVR:CY4PR08MB3573;H:smtppav01.ieee.org;FPR:;SPF:Pass;LANG:en;PTR:smtppav01.ieee.org;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT024.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 166ce1f6-2f27-41e7-b0cd-08d74911899c
+X-MS-TrafficTypeDiagnostic: CY4PR08MB3573:
+X-MS-Exchange-PUrlCount: 5
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:1;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 Oct 2019 21:26:36.6522
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 166ce1f6-2f27-41e7-b0cd-08d74911899c
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY4PR08MB3573
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.9162167
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2305.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?dUcxdkFLS1Jsd2hjcGZEa05wcWtMSTFRQmhOays1Rk9BQ1lnT2NRY041aU9q?=
+ =?utf-8?B?WkZ4QTNxcXZNdkw0R1IvQ1VtdlJnc0o1cXJocmVJSlhRVE1BRGdVUDN6NGJ2?=
+ =?utf-8?B?RDk0cmZTUU9iWlpJQXBhRFluZTU0QVR4bm1kU3hLczFHVlh5SDJmTEx3Zzly?=
+ =?utf-8?B?b2NsUnJVcXZRelloWU85eXVuN2ZoWTFJRmtDSG44RDI0eUYxbGE1RGRHME5N?=
+ =?utf-8?B?clg4eHdWZzd5eUxpQmZlbEFSaTZIQTZWV0dJc3pDN0ZMVUV6c0xsQ2FaNzZM?=
+ =?utf-8?B?cWNaR2dpQUozVlVXMlR4RWdHU08rLzVEUFJLSGxkenJyUWFtbkJ1aFcxVzFo?=
+ =?utf-8?B?RWpRczhjMFBYU3BvOE1leDFXVm9MWHU1cC9ZSlFkL3JXOTNSelY2Yjk3MXVi?=
+ =?utf-8?B?ekF2RENPT1NCN1ZlUkxVTithaVZpRkdZN1hMM1pKOGI3ZTlGWlRJVDVFYVo5?=
+ =?utf-8?B?bERweFdxTzlwSjFmSGpTSW9XZU5qRHp6YkUyajN2dEhmeTBGQ1RpektIK2Z4?=
+ =?utf-8?B?bzcyN25zMWdJRUprY0F6NytaK01QeERVQVpHUVp5V2djNkxwT1E4djF0T1N4?=
+ =?utf-8?B?bjVld3dmQnhkazBIdWtqSEo1NTRNYnVTOWZEcGR0Umt5VWx1OHU1OWNBZVRl?=
+ =?utf-8?B?andhQ0lXTms1ZEw4MG1QTGxYSkoxM2ZjWFd4SENjYUMyV0F2RzBSZlB3T1BP?=
+ =?utf-8?B?VjQ1RWRtMFRrVkhtdzkvSExOcDdYYThmMkJmSjg2YlNYRWFpNC9TNkxwMXlK?=
+ =?utf-8?B?YUdDaHIwZTBxRHhPZnozNGpwNmJza3d3aEE5TllZcjdnQ21uMEZma1BNelVB?=
+ =?utf-8?B?TnhwcWNIVW9PMklXTldRY1J4c1Z3M25tQXJjSyt5aHU3ZW50dXh6M0lDYUl4?=
+ =?utf-8?B?cmx4MWRaeGRYdlJCMlFnV3N6c2JxenZQL2VreDMvZXFvOWdPSlpMRFNOVm9Z?=
+ =?utf-8?B?alMrSm5VUEhhSmFUcU5BaDAvTVdBK0ZtTDB2bUsvKzlRRnpCU2dMUGUrSVZu?=
+ =?utf-8?B?UnNkZ0QwOTJEQTI0N1hUTG85ay94M1I3MVFPaGNXdG5zUmpmVS9mbjNOV0ZD?=
+ =?utf-8?B?MFpEWlgrTEFjUWdRRktzQlBFeGxUbnJXdFVOZnVDUEhFL0VmenQ3SEhxY0g0?=
+ =?utf-8?B?Mittb2pGWG1qWC9CaTlZQ2hUNHh5eGNwZXZGQ3djMGFndFpLTFJFeHhDTFgz?=
+ =?utf-8?B?S0s4djUzdkQ5NXVSeDd2VGNIYTEyVHFNalgvUlJpQzBPalpSUWxoK3R4Nlh4?=
+ =?utf-8?B?VkpzMFhlR3JtWEJ2RjlpMit5cU9Vc0lIbU5JZTRtY2Jqb1BUbnRCYTJ5OUdQ?=
+ =?utf-8?B?YitxbnVPYlRuK1I4T0IwMFhHNE1jSDV3V2JmSHczK3hCb2Q2a2E5NFhvRGFJ?=
+ =?utf-8?B?emZ5aTF0RkU5cFNOckJTZ051SE0vdSt1bXBzbVZuZEVmNjBPRkxjQUQzVHZa?=
+ =?utf-8?B?NHBTc3NtOCtXK2pGVndKUnhNM05XbVFGUUxMRklIVFVsN0lDdkpYbUcyS1Rq?=
+ =?utf-8?B?ckFaRUNISUVuMXV0WXZXNitmTDc0eXBVS0E5dVNnNXkzT0ZMSnNGS3NFUTRl?=
+ =?utf-8?Q?L3YYOLQpZIZl3Jko9TJQu1nMw=3D?=
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+  <title>IEEE eNotice</title>
+
+ =20
+ =20
+  <style type=3D"text/css">
+<!--
+#entete {        text-align: center;=20
+}
+#image_centre {        text-align:center;=20
+}
+#logos {  float:right;=20
+  padding:10px;                 =20
+}
+#pied {        text-align:center;=20
+}
+#topics {        padding:5px;              =20
+}
+-->
+  </style>
+</head><body style=3D"font-family: Arial,Helvetica,sans-serif; font-size: 1=
+4px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"5" width=3D"800">
+
+  <tbody>
+    <tr>
+      <td><img src=3D"https://images.magnetmail.net/images/clients/IEEE_MGA=
+IM/enotice_header_800.png"></td>
+    </tr>
+    <tr>
+      <td>
+	  <p class=3D"MsoNormal">
+	  &nbsp;</p>
+	  <hr>
+	  <p class=3D"MsoNormal">
+	  <span style=3D"font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-=
+font-family:
+Arial;color:#333333">The following message is being sent on behalf of the I=
+EEE=20
+	  Educational Activities Board (EAB). This message is being distributed to=
+=20
+	  multiple lists so we apologize for any duplicates. If you are currently =
+an=20
+	  IEEE Program Evaluator you do not need to re-apply, but we encourage you=
+=20
+	  to forward this information to colleagues who may be interested in this=
+=20
+	  opportunity.<o:p></o:p></span></p>
+	  <hr>
+	  <br>
+	  The IEEE Educational Activities Board (EAB) is seeking qualified=20
+	  professionals from industry, government and academic sectors to serve as=
+=20
+	  Program Evaluators to assist in accrediting Engineering and Engineering=
+=20
+	  Technology Programs for the Engineering Accreditation Commission (EAC) a=
+nd=20
+	  the Engineering Technology Accreditation Commission (ETAC) of ABET, Inc.=
+<span>&nbsp;</span><b>The=20
+	  deadline for submitting an application is 1 November 2019. &nbsp;</b><br=
+>
+	  <br>
+	  Do you want to contribute to the achievement of high quality educational=
+=20
+	  standards of engineering and engineering technology programs? Do you wan=
+t=20
+	  to interact directly with students from which future employees will be=20
+	  recruited? Do you want the opportunity to network and interact with fell=
+ow=20
+	  program evaluators, faculty members, and institutional executives?&nbsp;=
+ These=20
+	  are just some of the benefits you will experience as an IEEE Program=20
+	  Evaluator.<br>
+	  <br>
+	  IEEE Program Evaluator candidates are required for the following=20
+	  ABET-accredited programs:&nbsp;&nbsp;<br>
+	  <ul>
+		  <li style=3D"margin-left: 15px;">Computer Engineering and Computer=20
+		  Engineering Technology</li>
+		  <li style=3D"margin-left: 15px;">Electrical Engineering and Electrical=
+=20
+		  and Electronic Engineering Technology</li>
+	  </ul>
+	  <br>
+	  Things to note:<br>
+	  <ul>
+		  <li style=3D"margin-left: 15px;">This is a strictly volunteer position.=
+=20
+		  &nbsp;</li>
+		  <li style=3D"margin-left: 15px;">ETAC Applicants must be IEEE Members.<=
+/li>
+		  <li style=3D"margin-left: 15px;">EAC Applicants must be IEEE Senior=20
+		  Members.</li>
+		  <li style=3D"margin-left: 15px;"><b>The submission deadline for=20
+		  applications is Friday, 1 November 2019, for the 2020-2021 academic=20
+		  year. Act now to take advantage of this unique opportunity!</b></li>
+	  </ul>
+	  <br>
+	  For more information:&nbsp;<div>
+		  <ul>
+			  <li style=3D"margin-left: 15px;">Applications for both EAC and ETAC=20
+			  are available on the ABET website at<span>&nbsp;</span><a data-safered=
+irecturl=3D"https://www.abet.org/program-evaluators/become-a-program-evalua=
+tor/" href=3D"http://bmsmail2.ieee.org:80/ctd/lu?RID=3D1-6K4JK4J&amp;CON=3D=
+1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OID=3D1-6K0IV6R&amp;CID=3D1-6K0IV6I&amp=
+;COID=3D1-6K0IV7L&amp;T=3Dhttps%3a%2f%2fwww.abet.org%2fprogram-evaluators%2=
+fbecome-a-program-evaluator%2f&amp;Z=3D11023c24ff67820b4c5aab7b1dd13&amp;TN=
+=3Dabet.org%2fprogram-evaluators%2fbecome-a-program-evaluator%2f&amp;RT=3DC=
+licked&#43;On&#43;URL" style=3D"color: rgb(17, 85, 204);" target=3D"_blank"=
+>https://www.abet.org/program-evaluators/become-a-program-evaluator/</a></l=
+i>
+			  <li style=3D"margin-left: 15px;">General information for prospective=20
+			  applicants can be found at<span>&nbsp;</span><a data-saferedirecturl=
+=3D"https://www.google.com/url?q=3Dhttps://www.ieee.org/education/accredita=
+tion/pev-opportunities/pev-qualifications.html?utm_source%3Dmga%26utm_mediu=
+m%3Demail%26utm_campaign%3Dcall_for_pevs&amp;source=3Dgmail&amp;ust=3D15702=
+20333339000&amp;usg=3DAFQjCNFgVDOU8Rh7UCNukM9kiu2cy34OfQ" href=3D"http://bm=
+smail2.ieee.org:80/ctd/lu?RID=3D1-6K4JK4J&amp;CON=3D1-2DJZ3ZE&amp;PRO=3D&am=
+p;AID=3D&amp;OID=3D1-6K0IV6R&amp;CID=3D1-6K0IV6I&amp;COID=3D1-6K0IV7L&amp;T=
+=3Dhttps%3a%2f%2fwww.ieee.org%2feducation%2faccreditation%2fpev-opportuniti=
+es%2fpev-qualifications.html%3futm_source%3dmga%26amp%3butm_medium%3demail%=
+26amp%3butm_campaign%3dcall_for_pevs&amp;Z=3D5c85133d28f2a5d198e4a46468e89e=
+9&amp;TN=3Dieee.org%2feducation%2faccreditation%2fpev-opportunities%2fpev-q=
+ualifications.html%3futm_source%3dmga%26amp%3butm_medium%3demail%26amp%3but=
+m_campaign%3dcall_for_pevs&amp;RT=3DClicked&#43;On&#43;URL" style=3D"color:=
+ rgb(17, 85, 204);" target=3D"_blank">https://www.ieee.org/<wbr>education/a=
+ccreditation/pev-<wbr>opportunities/pev-<wbr>qualifications.html?utm_<wbr>s=
+ource=3Dmga&amp;utm_medium=3Demail&amp;<wbr>utm_campaign=3Dcall_for_pevs</a=
+></li>
+			  <li style=3D"margin-left: 15px;">If you have any specific questions=20
+			  or would like additional information, please contact IEEE=20
+			  Accreditation Program Manager =E2=80=93 Regina Samson, at &#43;1 732 5=
+62-5306=20
+			  or<span>&nbsp;</span><a href=3D"mailto:r.m.samson@ieee.org" style=3D"c=
+olor: rgb(17, 85, 204);" target=3D"_blank">r.m.samson@ieee.org</a></li>
+		  </ul>
+	  </div>
+	  <div>
+	  </div>
+      <br>
+      </td>
+    </tr>
+      <tr>
+      <td bgcolor=3D"#069">
+      <p style=3D"font-size: x-small"><span style=3D"color: #FFFFFF">
+      IEEE Region 1: https://www.ieee.org/r1/<br>
+	  IEEE Region 2: https://www.ieee.org/r2/<br>
+	  IEEE Region 3: https://www.ieee.org/r3/<br>
+	  IEEE Region 4: https://www.ieee.org/r4/<br>
+	  IEEE Region 5: https://www.ieee.org/r5/<br>
+	  IEEE Region 6: https://www.ieee.org/r6/<br>
+	  <br style=3D"color: #FFFFFF">
+	  <br style=3D"color: #FFFFFF">
+	  To unsubscribe from all mailings, use your IEEE Account to update your=20
+	  &quot;<a href=3D"http://bmsmail2.ieee.org:80/ctd/lu?RID=3D1-6K4JK4J&amp;=
+CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OID=3D1-6K0IV6R&amp;CID=3D1-6K0IV=
+6I&amp;COID=3D1-6K0IV7L&amp;T=3Dhttps%3a%2f%2fwww.ieee.org%2fieee-privacypo=
+rtal%2fapp%2fibp&amp;Z=3D602f5d765327e628df087c61afdad39&amp;TN=3Dieee.org%=
+2fieee-privacyportal%2fapp%2fibp&amp;RT=3DClicked&#43;On&#43;URL"><span sty=
+le=3D"color: #FFFFFF">Communication=20
+	  Preferences</span></a>&quot; <br>
+	  <br>
+	  Unsubscribe from EAB eNotices: <a href=3D"http://bmsmail2.ieee.org:80/ct=
+d/listsub?RID=3D1-6K4JK4J&amp;CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OID=
+=3D1-6K0IV6R&amp;CID=3D1-6K0IV6I&amp;COID=3D1-6K0IV7L&amp;RT=3DUnsubscribe&=
+#43;from&#43;List&amp;LC=3DENU&amp;LID=3D1-UJN8XL&amp;LN=3D1&#43;Subscripti=
+on&#43;List">Unsubscribe from List</a><br>
+	  <br>
+	  Subscribe to EAB eNotices: <a href=3D"http://bmsmail2.ieee.org:80/ctd/li=
+stsub?RID=3D1-6K4JK4J&amp;CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OID=3D1=
+-6K0IV6R&amp;CID=3D1-6K0IV6I&amp;COID=3D1-6K0IV7L&amp;RT=3DSubscribe&#43;to=
+&#43;List&amp;LC=3DENU&amp;LID=3D1-UJN8XL&amp;LN=3D1&#43;Subscription&#43;L=
+ist">Subscribe to List</a></span><br>
+	  </p>
+      </td>
+      </tr>
+	  <tr>
+      <td><img src=3D"https://images.magnetmail.net/images/clients/IEEE_MGA=
+IM/enotice_footer_800.png"> <br>
+	  	</td>
+      </tr>
+    <tr>
+      <td> &nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</body></html>

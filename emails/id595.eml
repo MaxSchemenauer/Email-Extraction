@@ -1,0 +1,250 @@
+Received: from BYAPR08MB4856.namprd08.prod.outlook.com (2603:10b6:a03:117::37)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0060.NAMPRD08.PROD.OUTLOOK.COM; Tue, 1 Oct 2019 18:56:40 +0000
+Received: from DM3PR08CA0002.namprd08.prod.outlook.com (2603:10b6:0:52::12) by
+ BYAPR08MB4856.namprd08.prod.outlook.com (2603:10b6:a03:6b::21) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2305.20; Tue, 1 Oct 2019 18:56:37 +0000
+Received: from SN1NAM04FT025.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::203) by DM3PR08CA0002.outlook.office365.com
+ (2603:10b6:0:52::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2305.16 via Frontend
+ Transport; Tue, 1 Oct 2019 18:56:37 +0000
+Authentication-Results: spf=none (sender IP is 193.166.164.158)
+ smtp.mailfrom=LISTSERV.UTA.FI; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=fail reason=001
+Received-SPF: None (protection.outlook.com: LISTSERV.UTA.FI does not designate
+ permitted sender hosts)
+Received: from smtp1.tuni.fi (193.166.164.158) by
+ SN1NAM04FT025.mail.protection.outlook.com (10.152.88.103) with Microsoft SMTP
+ Server id 15.20.2305.15 via Frontend Transport; Tue, 1 Oct 2019 18:56:35
+ +0000
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.tuni.fi (Postfix) with ESMTPS id D05DB7F500;
+	Tue,  1 Oct 2019 21:56:33 +0300 (EEST)
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x91GPslx012078;
+	Tue, 1 Oct 2019 21:56:09 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          615434 for GAMESNETWORK@LISTSERV.UTA.FI; Tue, 1 Oct 2019 21:56:09
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x91Iu9dJ031959 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <GAMESNETWORK@listserv.uta.fi>; Tue, 1 Oct 2019 21:56:09 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x91Iu8mP010846 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@listserv.uta.fi>; Tue, 1 Oct 2019 21:56:09 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x91Iu6I0030423 for
+          <GAMESNETWORK@listserv.uta.fi>; Tue, 1 Oct 2019 21:56:06 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Tue, 01 Oct 2019 21:56:06
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-io1-f45.google.com (mail-io1-f45.google.com
+          [209.85.166.45]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x91Iu4Qw018340 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@listserv.uta.fi>; Tue, 1 Oct 2019 21:56:06 +0300
+Received: by mail-io1-f45.google.com with SMTP id u8so50753441iom.5 for
+          <GAMESNETWORK@listserv.uta.fi>; Tue, 01 Oct 2019 11:56:05 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:from:mime-version:subject:message-id:date:to;
+                         bh=jEueW8ZHln25M0QVN+2g/1ofSQlqC5+y81/5ZqN4V5I=;
+                         b=tHDncPj5nTtZZgMREgcgbpc8VsH9rlZ2f7EdTja71+DUbM6Pw4p3QI6gNgkA8n6yj7
+                         ZBHLNJIvfv0KfHbgk9HQ649dqgeVqafdCzA7oizYzqSR7fgc5igcqMg6KYwOzmL7vFpu
+                         YMu74jIa70j7W6ypSqingPzZmo5n1tofycHQ/JDifyeV57ZyUcJdmBFv2y6SdA3UoAUb
+                         bnoyh5B8BvcgoR8lAKpG/yPDIFHxvEDNQtv62LhC3Z0MPx25BElWdatGW9o9tNYAJ/qD
+                         2B0gtg1emVnMerlF67W/12epj2fgbcLcLKgrlk3ChXWqWyDQlRnRK8157wUzUHqrXdGx
+                         2Rug==
+X-Gm-Message-State: APjAAAUM0R+ZhlDMOPxX4gKbkd8IXPcDsWvqVLVBtd8upvmmWiabXtdn
+                    mVrRBs/FDttrrGL+XP14B8vfcxrvXOE=
+X-Google-Smtp-Source: APXvYqzEwCYxBwL3EgCdV4dQpXp/1t/b+0XdFH8l7cvNHpUNNeOTINTLYPGYXeBCmzzk6yVxTFxivw==
+X-Received: by 2002:a92:9cc9:: with SMTP id x70mr26560095ill.184.1569956163779;
+            Tue, 01 Oct 2019 11:56:03 -0700 (PDT)
+Received: from ?IPv6:2601:681:5000:1d1:3daa:a981:8aa2:153d?
+          ([2601:681:5000:1d1:3daa:a981:8aa2:153d]) by smtp.gmail.com with
+          ESMTPSA id b3sm6377167iln.42.2019.10.01.11.56.03 for
+          <GAMESNETWORK@listserv.uta.fi> (version=TLS1_2
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Tue, 01 Oct 2019
+          11:56:03 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="Apple-Mail=_D9DA27C5-3FD5-491E-9E44-773EC8F41911"
+X-Mailer: Apple Mail (2.3445.104.11)
+X-Greylist: Sender DNS name whitelisted,
+            not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]);
+            Tue, 01 Oct 2019 21:56:06 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FROM,HTML_MESSAGE,L_HDR_DKIM_GOOGLE,L_HDR_HAS_DKIM,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1034
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <6EBBC362-BC71-4789-8045-7FDAA94D21F0@gmail.com>
+Date: Tue, 1 Oct 2019 12:56:01 -0600
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Rush Sanghrajka <rush.sang@GMAIL.COM>
+Subject: [GAMESNETWORK] ICIDS2019 Updates: Program Schedule Available and Early Registration Extended!
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: GAMESNETWORK@LISTSERV.UTA.FI
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@LISTSERV.UTA.FI
+X-MS-Exchange-Organization-ExpirationStartTime: 01 Oct 2019 18:56:35.4433
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 6d4c3db1-48ef-4cab-01c9-08d746a11522
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:193.166.164.158;IPV:NLI;CTRY:FI;EFV:NLI;SFV:SPM;SFS:(10001)(979002)(4636009)(428003)(249900001)(176002)(5142003)(53754006)(7192003)(189003)(199004)(2420400007)(966005)(42882007)(476003)(73392003)(71190400001)(33656002)(426003)(36756003)(126002)(336012)(2616005)(66346011)(58800400005)(76482006)(21615005)(26005)(7596002)(2351001)(7636002)(15650500001)(2361001)(75640400001)(61266001)(5660300002)(4006050)(146002)(50226002)(1096003)(16586007)(59536001)(246002)(82202003)(6306002)(36906005)(14444005)(7110500001)(356004)(15003)(8676002)(1617600016)(606006)(7846003)(54896002)(55446002)(6392003)(43066004)(34206002)(95326003)(236005)(486006)(15974865002)(126430200002)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:5;SRVR:BYAPR08MB4856;H:smtp1.tuni.fi;FPR:;SPF:None;LANG:en;PTR:smtp1.tuni.fi;MX:1;A:1;CAT:SPOOF;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT025.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 6d4c3db1-48ef-4cab-01c9-08d746a11522
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4856:
+X-MS-Exchange-PUrlCount: 5
+X-MS-Oob-TLC-OOBClassifiers: OLM:7691;
+X-MS-Exchange-Organization-SCL: 6
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 Oct 2019 18:56:35.1241
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6d4c3db1-48ef-4cab-01c9-08d746a11522
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4856
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.9470544
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2305.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?LA14GBkCdWeVq3dhz9UpnZuXHMGbrny4iVofb6OL/MpLqGeQ2yxZGRVe/UVA?=
+ =?us-ascii?Q?QJJLFLpaMX1FqvhhyKCL6sCvP3Oh6TucW/uYjzErk5SG4S2psXSKX7WAwACD?=
+ =?us-ascii?Q?T4H/qe5OvHmqzL3jT/iVaLtIcgkjXuKcE5hDNhUo6rsrtmm8e699UdTa4/du?=
+ =?us-ascii?Q?UpLV7QJLYBWv5bVLoRrNlZSD4LCLeh/Log6d5Wqq3r1u2fXUbZP4IKUu8GZM?=
+ =?us-ascii?Q?2qEuEAl3TY5B91CycVa19a9RMzQyTMxKiQr8vjkSGWPOO48uGFe7aspSZqwv?=
+ =?us-ascii?Q?wOXWAKTnUJwnyF8JYSkfafiLegd0Q3kqyA8zChUK8Lpfa1NpU37S8S9s11/J?=
+ =?us-ascii?Q?+awGSpCtmNX6ONaGSI7V32WC79EnY35sByHKobg4ItQF/ljxsjlMZPg7EP/J?=
+ =?us-ascii?Q?RPNNN+nQJme6hlC9XChiAtAnH2QI833Tpp7YfmoEMcqj5T5xKLeBfCgKLUDf?=
+ =?us-ascii?Q?RREKRIV4m7zsvptmsPPrDQavQ2yAwZTISXWmf7r10o+N7zEuHtkAp1LNcb6I?=
+ =?us-ascii?Q?MuAjyIqA+TVFSkmAAS+W8oPqf7w7BpFNxuOIq5cm327qrQEfWhezXA1bZ03A?=
+ =?us-ascii?Q?06udfYJFdv9HyB96gkKDEg4zp0odxdgdKdLFTT5duMCLClLvlEQdqFoINqUE?=
+ =?us-ascii?Q?5vhpLNAwfEFkmXwp7B4drN6WwfHJjjJsYKM7RkgDIsvdm2jO5/JlM/eQudto?=
+ =?us-ascii?Q?2MrYchBDS57eWs/AxHW9OQpEPBT/aGm4ImM5q6XahXTkNanlyuVVzoWVCs3N?=
+ =?us-ascii?Q?i4I/+A0u9vigCKOQjT5TQAGe0jyji3tWgtOy0zYu2RSQAAXfQWqUBhALIU3E?=
+ =?us-ascii?Q?ut6Kt6YkRjMDpaDZSZOPrkcg35hFOHhQGc5Fqqary0zptougXqmS4E8woHaU?=
+ =?us-ascii?Q?kra5mWbutWb5QmNWNbP6opFtst+QskP6WNR7u8ZredA08eGkbNUTaulXRSVc?=
+ =?us-ascii?Q?0JZ847HQzl/tHA8lGeyvwa9uxzl2MvdyqUoUOEHB433t839Dv7hV3naKLHlN?=
+ =?us-ascii?Q?ctZmuyO3NoYxrz75aJpd5oLycWA10a+i8LosOpAAEPfLCBP5GmYrxtGLJnws?=
+ =?us-ascii?Q?LzmxpOSyTdTdtPheNmQ2DCMqwmKln8wRyXDBhUxHoWk4v+9gR+NbB6wcBV9I?=
+ =?us-ascii?Q?9wqpA/k0xCWex+sC2u+OmyGrq22+/0sH9YJiPaIdH0YZVSiZqJwunoPNak8o?=
+ =?us-ascii?Q?Qi6/ZLOYjO1ClgbUWWUm5LZNWGeukPqpBqGd6+SF3HChsYqQEPrk+UDVy/71?=
+ =?us-ascii?Q?oCt4er3HMua6/kkMTAc9Dp1dkOueRfqe6ZdQ/2IXuwUVfeQZb+X+eq8VcN8k?=
+ =?us-ascii?Q?PNcg6JLZt/gLuWyoXAG+o9hYgWCc1VS5Y3vtOabwlLxYwEjIxjlJhKpTG1+5?=
+ =?us-ascii?Q?CBHLc6cW+RgNgy7NqJOysUJZx5iYwpcZiOq30X5ulo7k9CLMQ5RB7X53LcDN?=
+ =?us-ascii?Q?7dgPMocr8cfCzPnhO7EWrIOQ4uqK5EJuvKLPI9K9L5J2avZtZQVOP7Xb8+zZ?=
+ =?us-ascii?Q?JD7R0BzQ8hf3LxD/IIT294bphidZWaqwe3WJwmMriQ7Xbz1jvKbw8gCB0Oxv?=
+ =?us-ascii?Q?m9RABAi7JBho+wBZpiuPL3WQPNUCrC0fq1YjH9Q1umgNeykt8WCRvtMyyppp?=
+ =?us-ascii?Q?eeEUF+21V4cCUB0f/RyBCiwfVoGU44IiGxwhUS+POXRgQzs+W6IUAmuvPOqU?=
+ =?us-ascii?Q?Y86fANET96q7ZddL/UHPofyDu+U=3D?=
+MIME-Version: 1.0
+
+--Apple-Mail=_D9DA27C5-3FD5-491E-9E44-773EC8F41911
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Hello everyone,
+
+The ICIDS2019 Program Schedule is now live and available the following =
+link: https://icids.eae.utah.edu/program-schedule/ =
+<https://icids.eae.utah.edu/program-schedule/>. Further, the Early =
+Conference Registration deadline has been extended to October 8th, 2019. =
+More details on registration are available here: =
+https://icids.eae.utah.edu/registration/ =
+<https://icids.eae.utah.edu/registration/>.
+
+The International Conference on Interactive Digital Storytelling (ICIDS) =
+is the premier conference for researchers and practitioners concerned =
+with studying digital interactive forms of narrative from a variety of =
+perspectives, including the theoretical, technological, and applied =
+design practices. The annual conference is an interdisciplinary =
+gathering that combines technology-focused approaches with =
+humanities-inspired theoretical inquiry, empirical research and artistic =
+expression. ICIDS 2019 will be held at the Snowbird Ski & Summer Resort, =
+Little Cottonwood Canyon near Salt Lake City, UT, USA from November 19 =
+to 23, 2019.
+
+Best,
+Rush
+Rushit Sanghrajka
+Communications Chair
+ICIDS 2019=
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--Apple-Mail=_D9DA27C5-3FD5-491E-9E44-773EC8F41911
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=us-ascii
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+></head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; lin=
+e-break: after-white-space;" class=3D""><span style=3D"caret-color: rgb(0, =
+0, 0); color: rgb(0, 0, 0);" class=3D"">Hello everyone,</span><br style=3D"=
+caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);" class=3D""><br class=3D"">=
+T<span style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);" class=3D""=
+>he ICIDS2019 Program Schedule is now live and available the following link=
+:&nbsp;</span><a href=3D"https://icids.eae.utah.edu/program-schedule/" clas=
+s=3D"">https://icids.eae.utah.edu/program-schedule/</a>.&nbsp;<span style=
+=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);" class=3D"">Further, th=
+e Early Conference Registration deadline has been extended to October 8th, =
+2019. More details on registration are available here:&nbsp;</span><a href=
+=3D"https://icids.eae.utah.edu/registration/" class=3D"">https://icids.eae.=
+utah.edu/registration/</a>.<br style=3D"caret-color: rgb(0, 0, 0); color: r=
+gb(0, 0, 0);" class=3D""><br style=3D"caret-color: rgb(0, 0, 0); color: rgb=
+(0, 0, 0);" class=3D""><span style=3D"caret-color: rgb(0, 0, 0); color: rgb=
+(0, 0, 0);" class=3D"">The International Conference on Interactive Digital =
+Storytelling (ICIDS) is the premier conference for researchers and practiti=
+oners concerned with studying digital interactive forms of narrative from a=
+ variety of perspectives, including the theoretical, technological, and app=
+lied design practices. The annual conference is an interdisciplinary gather=
+ing that combines technology-focused approaches with humanities-inspired th=
+eoretical inquiry, empirical research and artistic expression. ICIDS 2019 w=
+ill be held at the Snowbird Ski &amp; Summer Resort, Little Cottonwood Cany=
+on near Salt Lake City, UT, USA from November 19 to 23, 2019.</span><div cl=
+ass=3D""><br class=3D""></div><div class=3D"">Best,</div><div class=3D"">Ru=
+sh</div><div class=3D"">Rushit Sanghrajka</div><div class=3D"">Communicatio=
+ns Chair</div><div class=3D"">ICIDS 2019</div></body></html>--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--Apple-Mail=_D9DA27C5-3FD5-491E-9E44-773EC8F41911--

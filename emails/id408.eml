@@ -1,0 +1,627 @@
+Received: from CY4PR08MB3621.namprd08.prod.outlook.com (10.162.134.165) by
+ MWHPR08MB3631.namprd08.prod.outlook.com with HTTPS via
+ CY1PR16CA0027.NAMPRD16.PROD.OUTLOOK.COM; Wed, 30 Aug 2017 16:26:10 +0000
+Received: from SN4PR0801CA0003.namprd08.prod.outlook.com (10.161.215.141) by
+ CY4PR08MB3621.namprd08.prod.outlook.com (10.171.254.36) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.13.10; Wed, 30 Aug 2017 16:26:09 +0000
+Received: from BN3NAM04FT021.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::205) by SN4PR0801CA0003.outlook.office365.com
+ (2603:10b6:803:29::13) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id 15.20.13.10 via
+ Frontend Transport; Wed, 30 Aug 2017 16:26:09 +0000
+Authentication-Results: spf=softfail (sender IP is 129.65.64.137)
+ smtp.mailfrom=ihsint.org; cpslo.onmicrosoft.com; dkim=pass (signature was
+ verified) header.d=ihsint.org;cpslo.onmicrosoft.com; dmarc=pass action=none
+ header.from=ihsint.org;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ ihsint.org discourages use of 129.65.64.137 as permitted sender)
+Received: from cpmx05-in.its.calpoly.edu (129.65.64.137) by
+ BN3NAM04FT021.mail.protection.outlook.com (10.152.92.150) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.1385.11 via Frontend Transport; Wed, 30 Aug 2017 16:26:08 +0000
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: A0GXAwBD5qZZhxa6yYpeBggQDAaCb4FPgRWeMJgmggEkAQqFGAEChClDFAECAQEBAQEBAQMQAQEBCgsJCCgvQgyETwMCGiMBAQQIGhIGOBQBDR8SFSYEARUFAgSKEAULq1yDEoMIAQEFgWGGfQiDKoICgzGEZIFqgRcFAQsHAUyFLhmHbQGCGg2WXAIcghIVhElLjwVahQ2DWSSGdY0CiG5TNiFDDDQLgQR8Bgs6Q4MPAQEIAQEBAXeBDz4dWgiDF4UsDxeCGwEBAQ
+X-IPAS-Result: A0GXAwBD5qZZhxa6yYpeBggQDAaCb4FPgRWeMJgmggEkAQqFGAEChClDFAECAQEBAQEBAQMQAQEBCgsJCCgvQgyETwMCGiMBAQQIGhIGOBQBDR8SFSYEARUFAgSKEAULq1yDEoMIAQEFgWGGfQiDKoICgzGEZIFqgRcFAQsHAUyFLhmHbQGCGg2WXAIcghIVhElLjwVahQ2DWSSGdY0CiG5TNiFDDDQLgQR8Bgs6Q4MPAQEIAQEBAXeBDz4dWgiDF4UsDxeCGwEBAQ
+X-IronPort-AV: E=Sophos;i="5.41,449,1498546800"; 
+   d="scan'208,217";a="83568855"
+X-Originating-IP-Address: 138.201.186.22
+Received: from server.ahfe.org ([138.201.186.22])
+  by cpmx05-in.its.calpoly.edu with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384; 30 Aug 2017 09:25:56 -0700
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=ihsint.org;
+	 s=default; h=List-Unsubscribe:Message-ID:Date:Content-Type:Subject:To:
+	Reply-To:From:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=Fz8B/D9FbZ/7wI8G/Evtsn2783eg9VuP5Ndc2jrDRQ4=; b=0apupMOr6acc8LagnEVy8+bnbh
+	+h6oEMeOivZbogD68fVnbUjk8Sy0EVc9utVO5Pc+XsbzhuZkUfE86U9M6cF0Ddw7HJ42KmNojeqLw
+	yhqpoQCTMqekIHIWY+oua/4YnMFZEMtmaIOwg4+ocuEJ9+DThWM5FvfNhtB8a/4JUsLG53p/1ermS
+	EOUz6aHtNZ2CfKabgYh9uFEL9nlBDaLK2ISAIgtbIOwkfmOZkl2TSTGGe6+GiapeUFXk3IwrZPX4e
+	/scFbfE/WRBA1GMCzGACsOGOzORvc2uRpY4+gUmQXHyXgXHhUdJ4lyr784GUEiVshd/u3QDa3c3/L
+	LLIQxbOQ==;
+Received: from [149.200.194.170] (port=58782 helo=IHSI Conference)
+	by server.ahfe.org with esmtpsa (TLSv1:DHE-RSA-AES256-SHA:256)
+	(Exim 4.89)
+	(envelope-from <bounce@ihsint.org>)
+	id 1dn5oP-0002o3-0t
+	for foaad@calpoly.edu; Wed, 30 Aug 2017 12:25:54 -0400
+From: "IHSI Conference" <no-reply@ihsint.org>
+Reply-To: admin@ihsint.org
+To: foaad@calpoly.edu
+Subject: IHSI 2018 International Conference [JW Marriott Marquis Dubai, January 7-9, 2018]
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_2228_4EC27AA6.6DD24BF2"
+X-Mailer: Smart_Send_4_1_3
+Date: Wed, 30 Aug 2017 12:25:51 -0400
+Message-ID: <37884827360083023010192@WIN-LLTHOQ235UB>
+List-Unsubscribe: <mailto:?subject=Unsubscribe>
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - server.ahfe.org
+X-AntiAbuse: Original Domain - calpoly.edu
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - ihsint.org
+X-Get-Message-Sender-Via: server.ahfe.org: authenticated_id: no-reply@ihsint.org
+X-Authenticated-Sender: server.ahfe.org: no-reply@ihsint.org
+X-Source:
+X-Source-Args:
+X-Source-Dir:
+Return-Path: bounce@ihsint.org
+X-MS-Exchange-Organization-Network-Message-Id: ea47115d-5f18-4837-ce97-08d4efc3d22f
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: CIP:129.65.64.137;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(8206002)(2980300002)(30513003)(189002)(199003)(7596002)(43066003)(9686003)(54896002)(12550400006)(45086001)(50226002)(47976999)(246002)(7826002)(7636002)(29176004)(9786002)(55176004)(1096003)(146002)(356003)(110136004)(50986999)(5660300001)(512944002)(71366001)(8676002)(606006)(626005)(58226001)(33716001)(6306002)(53376002)(2171002)(53386004)(89072002)(956001)(17460700002)(6966003)(6666003)(93156004)(6916009)(18950595002)(966005)(106466001)(2351001)(561944003)(84326002)(53946003)(189998001)(105596002)(31376004)(16003)(93146003)(2361001)(236005)(11140500002)(89436004)(50396003)(73566001)(73556002);DIR:INB;SFP:;SCL:1;SRVR:CY4PR08MB3621;H:cpmx05-in.its.calpoly.edu;FPR:;SPF:SoftFail;PTR:cpmx05-in.its.calpoly.edu;MX:1;A:1;LANG:en;
+X-Microsoft-Exchange-Diagnostics: 1;BN3NAM04FT021;1:3lFGSgzbiR0aGotZewIRfqjph8aqB2l7Xhgx+taRPISPhKtPLYUd8djmEi90ZvSCCksAK9T34rVEuK/P5HUeMPDNd+nPN8ztgf/osQ5N3lMjgKnjcZUD4uqV9NFpC39M
+X-MS-Exchange-Organization-AuthSource: BN3NAM04FT021.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: ea47115d-5f18-4837-ce97-08d4efc3d22f
+X-DkimResult-Test: Passed
+X-Microsoft-Antispam: UriScan:;BCL:0;PCL:0;RULEID:(300000500095)(300135000095)(300000501095)(300135300095)(22001)(23075)(300000502095)(300135100095)(421252002)(8251501002)(3001016)(300000503095)(300135400095)(3010002)(71702078)(300000504095)(300135200095)(300000505095)(300135600095)(300000506095)(300135500095);SRVR:CY4PR08MB3621;
+X-Microsoft-Exchange-Diagnostics: 1;CY4PR08MB3621;3:HiWB6lutBhPR/QBbi3nuduXingPaIbK31N3fYiYWInUo1rExeJVBuv7P0hBNo+ykRAjEiBKCWFpz72SIaZCNEFjfj4rstiQigBSfO5oMYjKvst2tl5URHMxwkkR/G785bied8rynRW5wOBnL3jHVALNOiFtm2HnGKolJIQ32Zt6uQygJEKNzTfAvOXOIpd7X8kuCuDEutbU3GNYJOKfN2iZmOpSBurGvRvUUrDo7jARqZuulr1Nm5Y7DYqUHACKVPs8lFm4czpD5gznzKhQzV6jc/5g4FgVjSIv3TBcYmzPsmNVmZmRneQYsirLvPEVUldscdDYjoA3DEU2y/8OoGO4WdRQ+8qb3zho09xsO01Q=;25:kOZAotis68P1KgCnPOAXQeVEKfYEHBcE3jWI/4OWPNHNuXER7zUXRjCWeKUD2vPvMdTn5fRGK9ycZMVNgPVdeJcOvw4ndn8sqTFFdpVhByFKW0DgfhKQE2XcFs8vSaDQXYq3c2391bZ0/s3VXpfdsd3uQkGlspdHy3vZcGx1SGFMvRg10iRnRezscB392kMVjTTMRQYXQpe/QUCHnXMRm0Jg2qmpDCT/kfN3qAzGbUxggAu9zPFWSQNxJ8gCuGDJ1mYItXk2oOcelZslHoRHywnQF1aJgoM5xUc2TLj0C2J3YBMIzsXgWGAmrGjLhtC1UWfbiO65MTZQWnZr/PiVGg==
+X-MS-TrafficTypeDiagnostic: CY4PR08MB3621:
+X-Microsoft-Exchange-Diagnostics: 1;CY4PR08MB3621;31:CQTiUwJimM3D+8Nf8MwrCHOHcEM9NyCpU21pqk+ec9YKOrDd076p4WnD5i9N76kT0W2MrJDzoXpkZQvUZiHFvm/27IejiLZcunfG8PB1BNyPJoTtRfES1H8v32RXFZdZIAVoqq2McAsKd96OC1srBKUFx3F7HYtu+sJf6emLEzEonU6nWtF4KIj0s/m8l9FgDR1Z6snUOfEEhbg5+qteEyV95ich8bDH6ezPLKWz3Ms=;20:r7IMwYGMbLTOr757//ZH1U0JQDYWAgzdWdzzJFszBfHUyMBDsHdphd5tuUQjENImVff0gp+TpI+XC0E+Vdg/vuBmVRT0yH1oSEqYLe04Jz3G8CiH7e841wfBR2rnOn9pMUd3NII3IgBQ2BJGu5p2ymyagTAOKVRcf3b7lwmt0Z8tT8mwcAk+0xVMhx/YapitIc53HiVbKaaZqXyTbPJ0wiZLx7DUEv/UIaGbt+cN2PUPWZQRjPJSII1+fapo4mCY+NEgbcuZ+kVOMOSnjpCIa1DS8l7GwLRK76azYnHlQcnQ8HXaI48FYNg09dt3j1Qti38cnnaN8lKh4HpHF5lmRLEc4JA6XVI41xuPpBd7SpXxru+l2mtHPVw7vTsb3lR6q+BdIMPu/NhD7i/p3Acwy+l9ENStbspIC3Kpm8jGOkXShR4UNm9UWzP2YqPqan3PHar669Q7UONnPJRKfYx/HWzEBSrfG/pHomdneHWx8m3wdQyJlSnffXCwnhvfbqSu
+X-Exchange-Antispam-Report-Test: UriScan:;
+X-Exchange-Antispam-Report-CFA-Test: BCL:0;PCL:0;RULEID:(100000700101)(100105000095)(100000701101)(100105300095)(100000702101)(100105100095)(601004)(2401047)(13018025)(13016025)(8121501046)(9101536074)(3002001)(93006095)(93005095)(10201501046)(100000703101)(100105400095)(201708071742011)(100000704101)(100105200095)(100000705101)(100105500095);SRVR:CY4PR08MB3621;BCL:0;PCL:0;RULEID:(100000800101)(100110000095)(100000801101)(100110300095)(100000802101)(100110100095)(100000803101)(100110400095)(100000804101)(100110200095)(100000805101)(100110500095);SRVR:CY4PR08MB3621;
+X-Microsoft-Exchange-Diagnostics: 1;CY4PR08MB3621;4:VsrFuQp+CJQ2xk0kqb4/3Dy/Ave6BqpYUeQ2Yy1yUlxbnCgofPzgg64LO0nOMNpsYN4nHqG0jqQCxsGaWVqUt9FkQ+Yq0blP/WzacBWU86yVMpNBYh18Abds4ZBgViIJpkxhkJ8zh2YOkKh69BSJhNa3VK1FF8UWLyRsKPvxTpHMMr66po4m7YY5KAWunOKGtctau15+Y5GMX+hYRS6YVvl9r3Jbqr1WWLHynJtEG43j0lvy9jzGH8K/YvumW5de
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Exchange-Diagnostics: =?us-ascii?Q?1;CY4PR08MB3621;23:3QLD02wIHx4vs2iPq9iFc8UZzXBAuvJRHLnd7zNq1?=
+ =?us-ascii?Q?AK/iYZ42J4fxqiTzDZ0QZXBloHe+f3V8Vr/sJA5OoaQTh88mKdQMje8CuljX?=
+ =?us-ascii?Q?DYYcfah6PeYpsfndmHzTZTq236iWN3ogPdddI1/zG8bOhNlYtrk5T7XJN243?=
+ =?us-ascii?Q?tC53WqAyokOQK3V3FLGLDCYxZXutfGJt9lt4dKGeem4LeyehFopu1GTPk4Rk?=
+ =?us-ascii?Q?g+vgrjhrnRM3u2Yi7bepIXmXa+GL+Ku8PB9pb+tsfGEUkaS8sWp5KcPR3dzs?=
+ =?us-ascii?Q?MlNvY8Fwz+FCLM0vRtXKNmN5Gq7HRY/JcRh/JNX4mNoCe1vqCkqc25iGaBcu?=
+ =?us-ascii?Q?B9yaSiLUChY67vPMebMbez99cbybmrNhs9CEEeSb5p9NtYsS62ziXcasAfLw?=
+ =?us-ascii?Q?sWko8lyYdRtcvXBB25iVJ6Oq/etTy8dIaDcmvAquIcbBaGVaNpNMt88PIBq6?=
+ =?us-ascii?Q?gS79TzNTvhSSTfj32IeI6sXh9fqTaAS9xlVOnJe8t4Qw8gd9Spjy3e8YPGbU?=
+ =?us-ascii?Q?K8xGPrH3gafXNnI6diPlgVAckUovU4jaUy0DgHfyL0O00chMc0w4QsqsPHoQ?=
+ =?us-ascii?Q?KFC/mHvFD2OU5z+pe3/ZqeZKRDUmaAPUcBzn/q1bhcVUjUROgP6uxjgFSJxB?=
+ =?us-ascii?Q?QLYIrohW6g2qVapOJR4EZmyOX9Hz8n7TgxnV+YsNFe1kpzdBR7gxzD6KaDe0?=
+ =?us-ascii?Q?sKqUPZPkLEJFhgZJGeee9BIE6yuPJkJKnj2tqypdTtw1VEkQeS/T+gl0NTej?=
+ =?us-ascii?Q?Nzlrn2HYjkyowFyntU9B1confkxUv4n7UUvfXsfJ2UUcsbIXvc50M9504Rca?=
+ =?us-ascii?Q?BTH1fkcMSn/v+DkPeG2adjIWlXMYKGH18HHwSHcysqacV2rQLpSRTYM8gLls?=
+ =?us-ascii?Q?rV7XDziEXG4o8eGAFkEUqWzk3IlzW2h2kSpxLMmnUuivTHncTLxm/0fa5Hed?=
+ =?us-ascii?Q?e64GEfwr07qnCV0CUUoLtEYAumBU0Ar7//tfCeN+S3EalVGRv+ubSzOOm5cO?=
+ =?us-ascii?Q?MvTomrFacgrG5HP8u47S7+K+BYypxkcujZ189fO/rbnaZ0Cq7zcevajho/6o?=
+ =?us-ascii?Q?xrdxprszqIQXC5Ikeygz8zLQhmaPE0+8pOCUsmwlfO+j/0asnHURFzp1DkGu?=
+ =?us-ascii?Q?tphzYxiqe5BVoWGChZShzAQr0SbhjWEzE+VjX2IFxYqywv1J79rfLNalkRoQ?=
+ =?us-ascii?Q?sn0u3fJ3NyK1TVkvOuBV/ZyLaaE5kiV59W3mlKNJEewCZYuu7XBCLQmsL8i9?=
+ =?us-ascii?Q?itX/evUi6IGbQGCziN4YKC6zpvdlp8++Ser3S/42EyGVWeaS+0auL93VrgVS?=
+ =?us-ascii?Q?nQ0bMmfynkxCZKkQnJwKa6FNz/RCdVZgzPgJuf98xj2K2npNINzPu8kdzq56?=
+ =?us-ascii?Q?B3a7ohAlGRNfcLZ2vT7ZadH0qpLDuRhSB+BdTAzeWWk6dW4?=
+X-Microsoft-Exchange-Diagnostics: 1;CY4PR08MB3621;6:flVT0+47qKuIaDdmcWYh+lwDPHh/TmnbkO8CCl8QSRJsC1k1R34Y3OaipBZuXk5wVTloUN644ydQZNe5D9oKBG1Hr3VC6D5cUJsFdikfweT+SQqbyeDGLt2bfMxNiwZxVlSdMd2WQ0lBduQYqq64QauoVh+sYQB+9eNge9+j1I7wi3hrkscmXyXZAs48dCuzs5LCJFNK9qz1rG0ttHEVI3cuISoAe9QD+z3nq4rY7KUkUcA/XPim7nXTXz16p2BLqQGcGBMBDCx+0RuKNU3vVEo4FvbaiNV4BppMF1A3O1MtGmP2r+x9qNYOyUXumZ0PB4KHk1oZOVyFFfy6Xrd7uw==;5:lV3b2ysS6EUOsWwEUvTa0TiMBmj74xYl8foMaNfvknNAeFyPDl/ahsWLFBwtCG/6iFekNyPOqgwUcrzmDa9uYNIalY9hcKlMVi66hb5JcP2y+Zkw0qz2Y9U4jVKpuLa/OxQlM6ynpf2v49raJXX7Sg==;24:gh7YFLg3E/JRce0rr3yEn6pc/iDawXguqRBs9cnKchjg90/s5ttKBIaIM6ChA2AKjBlO5yKFV6Ih5FU8qYtmndAh3QSP74OBGM4D8PCFzhw=;7:H0DvUOVSIRWSUGFzJiclFFS47n3PFf550thKG0SImY7vyPgfQIs4nFsoH33WKAss2BtmWBKiq5McgphSXzBvG43ESFylfHWZr2Pbxg3R9sUEJJuRn5ubTThhYmvyqd51aS2iZBKBaKggda/tprtRGswsEGNyohEZG4lTzt3Us4B5WEViTdjoS47s1kJjQkcc/lulMmlvILiMA8/f902/TvBXXdBPWaUZ5RDOjIpwKcA=
+SpamDiagnosticOutput: 1:99
+SpamDiagnosticMetadata: NSPM
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Aug 2017 16:26:08.6498
+ (UTC)
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY4PR08MB3621
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.1610293
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.0013.000
+MIME-Version: 1.0
+
+------=_NextPart_001_2228_4EC27AA6.6DD24BF2
+Content-Type: text/plain; charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+International Conference on Intelligent Human Systems Integration (IHSI 201=
+8)                                                                         =
+                                             =20
+JW Marriott Marquis, Dubai, UAE, January 7-9, 2018                         =
+                                                      =20
+
+                                =20
+Dear Colleagues,                                      =20
+
+You are cordially invited to submit an abstract for paper presentation or p=
+oster demonstration at the 2018 International Conference on Intelligent Hum=
+an Systems Integration: Integrating People and Intelligent Systems (IHSI 20=
+18) which will be held at the JW Marriott Marquis, Dubai, United Arab Emira=
+tes, January 7-9, 2018 (http://ihsint.org).                                =
+                                               =20
+
+iHSI 2018 Conference aims to provide a global forum for presenting and disc=
+ussing novel approaches, design tools, methodologies, techniques, and solut=
+ions for integrating people, intelligent technologies, human-computer solut=
+ions, automation, and artificial cognitive systems in all areas of human en=
+deavor in industry, economy, government, and education, including but not l=
+imited to energy, transportation, urbanization and infrastructure developme=
+nt, digital manufacturing, social development, human health, sustainability=
+, new generation of service systems, as well as safety, risk assurance, and=
+ cybersecurity in civilian, military, service and industrial contexts.     =
+                          =20
+
+=20
+iHSI 2018 Conference is Affiliated with AHFE International Conference!  AHF=
+E 2017 which was attended by over 2000 participant from 62 countries.      =
+                                                                           =
+        =20
+
+---------------------------------------------------------------------------=
+----------------------------                     =20
+
+Abstract Submission Deadline (500 words):  22 September 2017               =
+                                                                           =
+ =20
+
+iHSI Submission System: (New Users=3F Sign up): https://www.ihsi-cms.org   =
+                                                                         =20
+
+When submitting, select =93Invited Author=94                     =20
+---------------------------------------------------------------------------=
+----------------------------                     =20
+
+IHSI 2018 submission deadline is approaching quickly!                      =
+                                                                           =
+     =20
+                     =20
+Call for Participation (PDF): http://ihsint.org/files/iHSI2018_CFP.pdf     =
+                                                                           =
+    =20
+
+Keynote Address: The Emergence of True Human-Computer Symbiosis (Robots =96=
+ Agents =96 People)                                               =20
+
+Keynote Speaker: Dylan Schmorrow, Ph.D. (Read more here: http://ihsint.org/=
+keynote.html)                                                              =
+                          =20
+
+=20
+
+Peer-review accepted papers will be published in the IHSI 2018 Springer Pro=
+ceedings. The proceedings are submitted to ISI, EI-Compendex, DBLP, SCOPUS,=
+ Google Scholar and Springerlink. For questions or to submit a proposal for=
+ invited sessions please send to: admin@ihsint.org                         =
+          =20
+
+=20
+
+Why Dubai=3F Dubai=92s central location makes it one of the busiest travel =
+hubs in the world. Dubai International airport is ranked as the number one =
+hub for international passengers. The JW Marriott Marquis Hotel Dubai is a =
+Guinness world tallest records holder and world class hotel, it is one of t=
+he most desirable destinations. The two JW Marriott Marquis iconic towers i=
+n Business Bay offers superior amenities, views and located near Burj Khali=
+fa. Dubai provides impressive business and research innovation opportunitie=
+s.                                             =20
+
+                      =20
+
+We are looking forward to receiving your submission and welcoming you in Du=
+bai!                                  =20
+
+                                                   =20
+
+Best Regards,                                      =20
+
+iHSI 2018 Administration                                                   =
+                                      =20
+
+http://ihsint.org                        =20
+
+----------------------------------
+
+This invite is specific to foaad@calpoly.edu                     =20
+
+To subscribe to iHSI International reply "Subscribe"                     =20
+
+To remove your email reply "Unsubscribe"                                   =
+        =20
+------=_NextPart_001_2228_4EC27AA6.6DD24BF2
+Content-Type: text/html; charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">=0A=
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.9600.18525"></head>=0A=
+<body><font face=3D"Arial, Helvetica, sans-serif" size=3D"2">=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><strong>International Conference on Intelligent Human Systems =
+Integration (IHSI 2018)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"></span><span style=3D"font-family: &quot;Arial&quot;,&quot;san=
+s-serif&quot;; font-size: 10pt;"><strong>JW Marriott Marquis, Dubai, UAE, <=
+/strong></span><span style=3D"font-family: &quot;Arial&quot;,&quot;sans-ser=
+if&quot;; font-size: 10pt;"><strong>January 7-9, 2018</strong><span style=
+=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp; </span></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;"><span style=3D"font-family:=
+ &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt; mso-fareast-fon=
+t-family: &quot;Times New Roman&quot;;"><font color=3D"#400040">Abstract Su=
+bmission Deadline (500 words):<span style=3D"mso-spacerun: yes;">&nbsp; </s=
+pan><span style=3D"color: red;"><font color=3D"#000000">22 September 2017</=
+font></span><span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </s=
+pan></font></span></span></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;"><span style=3D"font-family:=
+ &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt; mso-fareast-fon=
+t-family: &quot;Times New Roman&quot;;"><strong><span style=3D"mso-spacerun=
+: yes;"></span></strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">Dear Colleagues,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp; &nbsp;</o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">You are cordially invited to submit an abstract for paper pres=
+entation or poster demonstration at the 2018 International Conference on In=
+telligent Human Systems Integration: Integrating People and Intelligent Sys=
+tems (IHSI 2018) which will be held at the JW Marriott Marquis, Dubai, Unit=
+ed Arab Emirates, January 7-9, 2018 (</span><a href=3D"http://ihsint.org/">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><font color=3D"#0000ff">http://ihsint.org</font></span></a><sp=
+an style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-siz=
+e: 10pt;">).<span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><=
+o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp; </o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">iHSI 2018 Conference aims to provide a global forum for presen=
+ting and discussing novel approaches, design tools, methodologies, techniqu=
+es, and solutions for integrating people, intelligent technologies, human-c=
+omputer solutions, automation, and artificial cognitive systems in all area=
+s of human endeavor in industry, economy, government, and education, includ=
+ing but not limited to energy, transportation, urbanization and infrastruct=
+ure development, digital manufacturing, social development, human health, s=
+ustainability, new generation of service systems, as well as safety, risk a=
+ssurance, and cybersecurity in civilian, military, service and industrial c=
+ontexts.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><o:p>&nbsp;</o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">iHSI 2018 Conference is Affiliated with AHFE International Con=
+ference!<span style=3D"mso-spacerun: yes;">&nbsp; </span>AHFE 2017 was atte=
+nded by 2000 participant from 62 countries.<span style=3D"mso-spacerun: yes=
+;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span=
+ style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;</span><o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></span></p><span styl=
+e=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt=
+;">=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt; mso-fareast-font-family: &quot;Times New Roman&quot;;">--------=
+---------------------------------------------------------------------------=
+--------------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;<o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<b><span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; fo=
+nt-size: 10pt; mso-fareast-font-family: &quot;Times New Roman&quot;;">Abstr=
+act Submission Deadline (500 words):<span style=3D"mso-spacerun: yes;">&nbs=
+p; </span><span style=3D"color: red;">22 September 2017</span><span style=
+=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></b><span style=3D"font-family: &q=
+uot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt; mso-fareast-font-f=
+amily: &quot;Times New Roman&quot;;"><span style=3D"mso-spacerun: yes;">&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span style=
+=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></=
+b></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<b><span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; fo=
+nt-size: 10pt; mso-fareast-font-family: &quot;Times New Roman&quot;;">IHSI =
+Submission System: (New Users? </span></b><span style=3D"font-family: &quot=
+;Times New Roman&quot;,&quot;serif&quot;; font-size: 12pt; mso-fareast-font=
+-family: &quot;Times New Roman&quot;;"><a href=3D"https://www.ihsi-cms.org/=
+signup"><b><span style=3D"color: blue; font-family: &quot;Arial&quot;,&quot=
+;sans-serif&quot;; font-size: 10pt;">Sign up</span></b></a></span><b><span =
+style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: =
+10pt; mso-fareast-font-family: &quot;Times New Roman&quot;;">): </span></b>=
+<span style=3D"font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; =
+font-size: 12pt; mso-fareast-font-family: &quot;Times New Roman&quot;;"><a =
+href=3D"https://www.ihsi-cms.org/"><b><span style=3D"color: blue; font-fami=
+ly: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;">https://www=
+.ihsi-cms.org</span></b></a></span><b><span style=3D"font-family: &quot;Ari=
+al&quot;,&quot;sans-serif&quot;; font-size: 10pt; mso-fareast-font-family: =
+&quot;Times New Roman&quot;;">&nbsp;<span style=3D"mso-spacerun: yes;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </s=
+pan></span></b><span style=3D"font-family: &quot;Arial&quot;,&quot;sans-ser=
+if&quot;; font-size: 10pt; mso-fareast-font-family: &quot;Times New Roman&q=
+uot;;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=3D"font-family: &quot;Tim=
+es New Roman&quot;,&quot;serif&quot;; font-size: 12pt; mso-fareast-font-fam=
+ily: &quot;Times New Roman&quot;;"><o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"line-height: 115%; font-family: &quot;Arial&quot;,&quot;sans=
+-serif&quot;; font-size: 10pt; mso-fareast-font-family: &quot;Times New Rom=
+an&quot;; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-l=
+anguage: AR-SA;">----------------------------------------------------------=
+---------------------------------------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=3D"font-family: &=
+quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp; </span></span><span style=3D"font-family: &quot;Arial&quot;,&quot;sa=
+ns-serif&quot;; font-size: 10pt;"><o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;</o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">Call for Participation (PDF): </span><a href=3D"http://ihsint.=
+org/files/iHSI2018_CFP.pdf"><span style=3D"font-family: &quot;Arial&quot;,&=
+quot;sans-serif&quot;; font-size: 10pt;"><font color=3D"#0000ff">http://ihs=
+int.org/files/iHSI2018_CFP.pdf</font></span></a><span style=3D"font-family:=
+ &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;">&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <=
+span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;</o:p></span></p><span style=3D"font-family: &quot;Arial&quot;,&quot;=
+sans-serif&quot;; font-size: 10pt;">=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<em><span>Keynote Address: The Emergence of True Human-Computer Symbiosis (=
+Robots =96 Agents =96 People)<span style=3D"mso-spacerun: yes;">&nbsp;</spa=
+n>Speaker: Dylan Schmorrow, Ph.D. (Read more here:</span><span style=3D"fon=
+t-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 12pt; m=
+so-fareast-font-family: &quot;Times New Roman&quot;;"><a href=3D"http://ihs=
+int.org/keynote.html"><span style=3D"color: blue; font-family: &quot;Arial&=
+quot;,&quot;sans-serif&quot;; font-size: 10pt;">http://ihsint.org/keynote.h=
+tml</span></a></span></em><span style=3D"font-family: &quot;Arial&quot;,&qu=
+ot;sans-serif&quot;; font-size: 10pt;"><span style=3D"mso-spacerun: yes;"><=
+span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-s=
+ize: 10pt;">).</span><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;"><em>&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;</em></span><em><span style=3D"mso-spacerun: yes;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></em></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">Peer-review accepted papers will be published in the IHSI 2018=
+ Springer Proceedings. The proceedings are submitted to ISI, EI-Compendex, =
+DBLP, SCOPUS, Google Scholar and Springerlink.<span style=3D"mso-spacerun: =
+yes;">&nbsp;</span></span><span style=3D"font-family: &quot;Arial&quot;,&qu=
+ot;sans-serif&quot;; font-size: 10pt;">For questions or to submit a proposa=
+l for invited sessions please send to: </span><a href=3D"mailto:admin@ihsin=
+t.org"><span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;=
+; font-size: 10pt;"><font color=3D"#0000ff">admin@ihsint.org</font></span><=
+/a><span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; fo=
+nt-size: 10pt;"> <span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><o:p>&nbsp;</o:p></span></p><span>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 10pt; line-height: normal;"=
+><span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font=
+-size: 10pt;">Why Dubai? Dubai=92s central location makes it one of the bus=
+iest travel hubs in the world. Dubai International airport is ranked as the=
+ number one hub for international passengers. The JW Marriott Marquis Hotel=
+ Dubai is a Guinness world tallest records holder and world class hotel, it=
+ is one of the most desirable destinations. The two JW Marriott Marquis ico=
+nic towers in Business Bay offers superior amenities, views and located nea=
+r Burj Khalifa. Dubai provides impressive business and research opportuniti=
+es.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><s=
+pan style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-si=
+ze: 10pt;"><o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;</o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;</o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">We are looking forward to receiving your submission and welcom=
+ing you in Dubai!<span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o=
+:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">Best Regards,<span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:=
+p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><span style=3D"mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><=
+/span><span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;=
+ font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;</span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">iHSI 2018 Administration<span style=3D"mso-spacerun: yes;">&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp; </span><o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<a href=3D"http://ihsint.org/"><span style=3D"font-family: &quot;Arial&quot=
+;,&quot;sans-serif&quot;; font-size: 10pt;"><font color=3D"#0000ff">http://=
+ihsint.org</font></span></a><span style=3D"font-family: &quot;Arial&quot;,&=
+quot;sans-serif&quot;; font-size: 10pt;">&nbsp;<span style=3D"mso-spacerun:=
+ yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;</span><o:p></o:p></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;">&nbsp;</span></p><span style=3D"font-family: &quot;Arial&quot;=
+,&quot;sans-serif&quot;; font-size: 10pt;"><span style=3D"font-family: &quo=
+t;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;"><span style=3D"font=
+-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;">=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><font size=3D"1">---------------------------------------------=
+-------------------------<o:p></o:p></font></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><font size=3D"1">This invite is specific to foaad@calpoly.edu&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<o:p></o:p></font><=
+/span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><font size=3D"1">To subscribe reply &quot;</font></span><a hre=
+f=3D"mailto:admin@ihsint.org?subject=3DSubscribe"><span style=3D"font-famil=
+y: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;"><font color=
+=3D"#0000ff" size=3D"1">Subscribe</font></span></a><span style=3D"font-fami=
+ly: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;"><font size=
+=3D"1">&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<o:p>=
+</o:p></font></span></p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><font size=3D"1">To remove your email reply &quot;</font></spa=
+n><a href=3D"mailto:admin@ihsint.org?subject=3DUnsubscribe"><span style=3D"=
+font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;"><f=
+ont color=3D"#0000ff" size=3D"1">Unsubscribe</font></span></a><span style=
+=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-size: 10pt;=
+"><font size=3D"1">&quot;&nbsp;&nbsp;&nbsp;&nbsp;<o:p></o:p></font></span><=
+/p>=0A=
+<p class=3D"MsoNormal" style=3D"margin: 0in 0in 0pt; line-height: normal;">=
+<span style=3D"font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; font-=
+size: 10pt;"><font size=3D"1">---------------------------------------------=
+-------------------------</font></span><span style=3D"font-family: &quot;Ar=
+ial&quot;,&quot;sans-serif&quot;; font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<o:p></o:p></span></p></span></span></=
+span></span></span></span></font></body></html>=
+
+------=_NextPart_001_2228_4EC27AA6.6DD24BF2--

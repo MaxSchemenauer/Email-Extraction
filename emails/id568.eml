@@ -1,0 +1,489 @@
+Received: from SN6PR08MB4991.namprd08.prod.outlook.com (2603:10b6:5:bc::26) by
+ DM6PR08MB4986.namprd08.prod.outlook.com with HTTPS via
+ DM6PR13CA0013.NAMPRD13.PROD.OUTLOOK.COM; Thu, 23 May 2019 12:10:31 +0000
+Received: from DM3PR08CA0002.namprd08.prod.outlook.com (2603:10b6:0:52::12) by
+ SN6PR08MB4991.namprd08.prod.outlook.com (2603:10b6:805:6e::28) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1922.16; Thu, 23 May 2019 12:10:29 +0000
+Received: from BN3NAM04FT055.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::200) by DM3PR08CA0002.outlook.office365.com
+ (2603:10b6:0:52::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1922.15 via Frontend
+ Transport; Thu, 23 May 2019 12:10:28 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ BN3NAM04FT055.mail.protection.outlook.com (10.152.93.43) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1922.16 via Frontend Transport; Thu, 23 May 2019 12:10:27 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x4NCAQxg023492
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <foaad@CALPOLY.EDU>; Thu, 23 May 2019 15:10:26 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x4NCAM5l003694
+	for <foaad@CALPOLY.EDU>; Thu, 23 May 2019 15:10:22 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Thu, 23 May 2019 15:10:22 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x4NCAM8O012956
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <foaad@CALPOLY.EDU>; Thu, 23 May 2019 15:10:22 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x4NBY8Qj015456
+	for <foaad@CALPOLY.EDU>; Thu, 23 May 2019 15:10:22 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          274119 for GAMESNETWORK@LISTSERV.UTA.FI; Thu, 23 May 2019 15:08:50
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4NC8o3q007792 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Thu, 23 May 2019 15:08:50 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4NC8ogG011768 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Thu, 23 May 2019 15:08:50 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4NC8iSb002600 for
+          <GAMESNETWORK@uta.fi>; Thu, 23 May 2019 15:08:44 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Thu, 23 May 2019 15:08:44
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-qt1-f193.google.com (mail-qt1-f193.google.com
+          [209.85.160.193]) by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x4NC8gWF011108 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Thu, 23 May 2019 15:08:43 +0300
+Received: by mail-qt1-f193.google.com with SMTP id l3so6364609qtj.5 for
+          <GAMESNETWORK@uta.fi>; Thu, 23 May 2019 05:08:43 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=XE3kVqy3RxdGieeOxcSTTIy6Euq7Mzq7j7YMFZTWPSg=;
+                         b=gmErDDjyLH5R6b4yxbQJSPy+eiAL41D0jYgD7hDV1yPtmht9EUOb7d2wyyuFAkcPqR
+                         vBJ8AUnm/rQf+Bt0wPf+P3CUXes0SL8DNeEmlFylMH5bTKrUR307+gzma/OrlPLPsiQ9
+                         zNVXtfqngGUDYyxzyblD1+ZvjZqqQG2xRVPoFHFH5Vu+PkfTwB/NrKFpuX4e+DKreGC6
+                         0Fnt8AdlXhr01RISpKGaJNhVD3ENJ4CTRtjT3lXdQ0pQByvSA6cUC+cqTc5fgh84gTM4
+                         SADZGD9bp+rF8BZTsrfOjl8vsX6osr6a+QLtQXJiCCC0S3C0EstfyDcv1c2+sRyO1GnV
+                         aV5w==
+X-Gm-Message-State: APjAAAWAZr6f4r8niaao65Mfj2IAxKPGrr14DxS9vEQAFU42bNW9hdYs
+                    lrlBHdAFKZ/QoJtSEHyQQEnG9twkcy4HtKwkNpW2rvRX
+X-Google-Smtp-Source: APXvYqy6VHKk8q2RcPngUMnaEIrDY1k87MQKc7oKCpHLNy1T+mwu0gRdEr9XCyEI4s8Ii5ku+BfMjl+CUIh0Kbuwoug=
+X-Received: by 2002:a0c:9463:: with SMTP id i32mr76628818qvi.112.1558613322309;
+            Thu, 23 May 2019 05:08:42 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="0000000000006b247505898cf1b1"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Thu, 23 May 2019 15:10:22 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_POLITE,L_BDY_SMALL_FONT2,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,L_URL_8BIT,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,USER_IN_WHITELIST
+X-Spam-Status: NO ; -990
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CAFFxaZcFrufKUJCdwNk-gV5-hKdEik2Wp4M5J0Ec82o6g-+juA@mail.gmail.com>
+Date: Thu, 23 May 2019 17:38:06 +0530
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Souvik Mukherjee <prosperosmaze@GMAIL.COM>
+Subject: [GAMESNETWORK] 7th Games and Literary Theory Conference, Kolkata, 18-20th November
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork*foaad**CALPOLY*-EDU@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 23 May 2019 12:10:28.3167
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 1cc04028-53b9-4467-26d3-08d6df77a514
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(286005)(176002)(7192003)(189003)(199004)(25584004)(76482006)(55176004)(6392003)(7846003)(126002)(6666004)(59536001)(55446002)(476003)(486006)(66346011)(21615005)(356004)(15974865002)(61266001)(336012)(246002)(966005)(413944005)(71190400001)(325944009)(498394004)(236005)(42882007)(73392003)(26005)(7636002)(305945005)(6306002)(7596002)(14444005)(75640400001)(8576002)(8676002)(16003)(30864003)(4006050)(1096003)(40036005)(6862004)(82202003)(106002)(87572001)(606006)(16586007)(33964004)(95326003)(146002)(43066004)(42186006)(53386004)(84326002);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4991;H:mxout1.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout1.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT055.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: 1cc04028-53b9-4467-26d3-08d6df77a514
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600141)(711020)(4605104)(1401320)(1421009)(71702078);SRVR:SN6PR08MB4991;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4991:
+X-MS-Exchange-PUrlCount: 8
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 23 May 2019 12:10:27.8113
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1cc04028-53b9-4467-26d3-08d6df77a514
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4991
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.5987685
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1922.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?SlZJNnQ1QTBKUUFHYng4N1dGM0xpVTNhNzY4bkRTNlFOampjSEx0bXJ5Ylpx?=
+ =?utf-8?B?WGtFL2lOU04zUURrcG0xc3JCaTRUVmlGWkhUYndnY3ZMeEc2VXJCUmpGTDE2?=
+ =?utf-8?B?TGx5SHlJQnU4VEZ5cFF0R2lxUzlTUTI1Rkd2UkV4MHg2bHRxTjZEK1NXc09Y?=
+ =?utf-8?B?TUpKQTk3VkxaaDBLS2VjV0VzZ3p5TG8vWUMzdjRhei9IZkdKWDV1Sm8xTmZS?=
+ =?utf-8?B?UTBIYlJWWVZLdGwvYjdhQnlVbW9CcnRCSjdLYzVEU3VjUFlCZzNXbndPNDNO?=
+ =?utf-8?B?VnZORzJQd0NGL3huQ3E1TFAvcEF3OWUwcmNzb3BkNFlmWURGcVQwc2RTQys1?=
+ =?utf-8?B?NTJDSzIrc09ZejNyd1U5RlQveVROSmVtYnk4OUFMZno3YklXUkwvQWJZZjN4?=
+ =?utf-8?B?V05pN3Bqb2x5blRsZWxXNGU3WG1tMlZEbXpuc3k1THFiWWN1YlNsR0ZNWFps?=
+ =?utf-8?B?c0pPR1FZWnF2SUZ4blJXaVh2SXpla3hoSVEvekZEKzVka1B4cDZyYWN5ZHNh?=
+ =?utf-8?B?R3QzdnpPRCtwUGxicGk1cWUxbjkwTTNDL0lkWUpTZ0w4dGRoTFFjSnNuTmNm?=
+ =?utf-8?B?dkR2WlZwempRdGNSZnRrbkhWYXl1THZtd1dFUlF4b2hnRTFpU1ZqTHdpRkQx?=
+ =?utf-8?B?K3FENWV6QXRUWHNlVkpJbkZobWZhaHB3NzFFMzYybElRREdBQlFiQm5ZQW5j?=
+ =?utf-8?B?NVB6VFVFNkMxS1pIV09LVElDaW1Ud3V6K3piS1pyVm82WkJudWl0SlQ5VXZi?=
+ =?utf-8?B?YjgyK29kYklYZVB6MXhNNENtYm9qSUUzSW1ZMWxyNVA3cEFKRk02WXBVVUlz?=
+ =?utf-8?B?b0RkUVo4elFMSEtxSHdFOGpQb1dZS2Z6aVdFVVZpVnd5WjhXajl3ZEV6WjRE?=
+ =?utf-8?B?VUdkSm82SzN2ZWI4UFJiamJPbEd0ekFiT3pSSlZ0Z3N5dWtJOERmN0Y5OCtU?=
+ =?utf-8?B?dU1XOGtzaXBsL2FrWVFSQm1URmJFVlA0SFVnVGs2S2VGOXpUVlVYVlltem1y?=
+ =?utf-8?B?aUd0dHRvaTFtREZwcmNXcmIvcG84MStQK1NUZTMrTmtqa2R1L3d0cFd6bUJs?=
+ =?utf-8?B?WHJDUWdCTzlWdU8rbEFEaXpKeWFINEoxTzgrUTg3dmVtVmFNUmVLczRBY1Ux?=
+ =?utf-8?B?UlJmT0RtaXQ1T2tPQmorSGZPaGlqMDczdXdqQkhNYnREMmNDN0J1TGFMemR3?=
+ =?utf-8?B?MUl5dGlIWWp4Ky8ra08reHo1WEdXcnU3THoxQWFLNFZIbndETUdqVmlmTEx5?=
+ =?utf-8?B?cXlzc0dhUTlIbTZWcHQ2UzRvb0ppL0Z0MWg1SE1kc2YydkRwTEZUOHNVQUk2?=
+ =?utf-8?Q?+gShW+jzcWkkSoBM4EoBuJTy8OkWzq/peP?=
+MIME-Version: 1.0
+
+--0000000000006b247505898cf1b1
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear All,
+
+
+
+It is my pleasure to announce the *7th Games and Literary Theory Conference=
+*
+(GamesLit 2019) to be held in Kolkata, India  on *November 18th to 20th*.
+The venue is Presidency University, Kolkata (formerly Hindoo College and
+Presidency College), which has just celebrated its bicentenary. It is an
+honour to be able to host the first large games conference in this part of
+Asia and indeed, the so-named Global South.
+
+
+
+Kolkata (formerly Calcutta), also known as the 'second city of the British
+Empire, used to be the capital of the British Raj and is now a vibrant and
+diverse city with a rich mix of cultures. It is also an appropriate
+location for a conference themed* 'Games at the Margin'*. The full call for
+papers is available on the conference website:
+https://gameslit2019.wordpress.com and also below.
+
+
+
+We are looking for *abstracts of at least 300 and no more than. 700 words*;
+more information is available on the conference website.  Please submit
+your abstracts via EasyChair at
+https://easychair.org/conferences/?conf=3Dgameslit2019 on or before *June
+30th*.
+
+
+
+More information on the travel, accommodation and other logistical issues
+will be provided on the website shortly. If you have any queries, please
+email me at *souvik.eng@presiuniv.ac.in <souvik.eng@presiuniv.ac.in>* or my
+coorganiser at *debanjana.eng@presiuniv.ac.in
+<debanjana.eng@presiuniv.ac.in>.*
+
+
+
+Looking forward to welcoming you to GamesLit @ Kolkata.
+
+Thanks and regards,
+
+Souvik
+
+Dr Souvik Mukherjee
+email: prosperosmaze@gmail.com, Weblog:
+http://readinggamesandplayingbooks.blogspot.in/
+Videogames and Storytelling: Reading Games and Playing Books
+<http://www.palgrave.com/page/detail/video-games-and-storytelling-souvik-mu=
+kherjee/?isb=3D9781137525048>
+ (Palgrave MacMillan 2015)
+Videogames and Postcolonialism: The Empire Plays Back
+<https://www.amazon.com/Videogames-Post-colonialism-Souvik-Mukherjee/dp/331=
+9548212>
+(Springer
+UK 2017)
+
+---------------------------------------------------------------------------=
+------------------------------------
+
+Call for Papers
+
+Videogames have grown into a global socio-cultural phenomenon and are now a
+primary concern of Literary and Cultural Studies as well as the Social
+Sciences. In a medium that sweeps across geographies (including virtual
+ones), however, the discourse usually privileges a certain section  when it
+comes to the representation of identity. In a medium, where roleplaying and
+playing in character is of prime importance, such an ignoring of the
+marginal and the diverse is indeed problematic.
+
+In one of the first books on the subject, Adrienne Shaw says =E2=80=98Teach=
+ing
+classes on minority representation in games, I heard this refrain repeated
+yet again by my students. Video games are a niche medium; they are fantasy
+environments; and they are designed for a narrow market. Of course games
+are not diverse=E2=80=94so what? [=E2=80=A6] I realized that I recognized m=
+yself in my
+participants=E2=80=99 responses. After all, I too grew up playing a medium =
+for
+which I was not the primary market and media in which only certain aspects
+of my identity were ever shown=E2=80=99 (Shaw 2015). Shaw=E2=80=99s concern=
+ is an urgent
+one and recent events related to racism, sexism and other kinds of
+discrimination in the videogame industry and in the content of the games,
+highlights the importance of academic dialogues around gaming =E2=80=98at t=
+he
+margins=E2=80=99, as it were.
+
+These concerns, of course, echo much older debates on diversity and
+difference in Literary and Cultural Studies. Identity and indeed, even the
+body, are constructs in the Foucauldian framework of biopower and beyond
+the actual control of individuals. Thinkers such as Judith Butler, Julia
+Kristeva and bell hooks point out how the the body is marginalised based on
+gender, race and class. Similarly, the constructedness of the =E2=80=98Orie=
+nt=E2=80=99 and
+the =E2=80=98Oriental=E2=80=99 in colonial discourse as shown by Edward Sai=
+d and also how
+the colonial system also renders certain groups of people =E2=80=98subalter=
+n=E2=80=99 and
+how this affects the discourse of diversity as Gayatri Chakravarty Spivak
+and Homi Bhabha make evident. Often, the discourse of diversity and the
+margins pervades games as well although the connection is not often made
+evident in the older and more traditional disciplines.
+
+Recent games scholarship has started addressing issues of diversity in
+games through the new Diversity Group that is now part of the Digital Games
+Research Association (DiGRA), books on gender, race and colonialism (Shaw
+2015; Murray 2018; Mukherjee 2017) as well as edited journal issues and
+panel discussions. As crucial to discussions of both games and literary
+theory, these issues form the main theme of this year=E2=80=99s Games and L=
+iterary
+Theory Conference, being held in Kolkata (formerly Calcutta), India.
+
+We welcome papers on but not restricted to the following topics:
+
+   - Representations of diverse games in literature.
+   - Remediating marginality: from non-canonical literature to games.
+   - Studying games with literary theory: from the center to the margins.
+   - Marginalized discourses of gaming culture.
+   - Digital and non-digital games as tools to resist inequality and
+   erasure.
+   - Representations of gender, queerness, race, class and caste in games
+   vis a vis literature.
+   - Colonization,  migration and diasporas in understanding game spaces.
+   - cis-heteropatriarchal gender norms and gaming.
+   - The language of the =E2=80=9Cdigital frontier=E2=80=9D in gaming and t=
+ech cultures
+   - Diversity practices and games studies.
+   - Empathy games that engage with racism and the =E2=80=98refugee=E2=80=
+=99 experience.
+   - Decolonizing struggles in the gaming industry around labour and money
+   - Digital Humanities from the margins vis a vis gamer culture in Global
+   North vs. the Global South.
+
+Please send your questions or comments to: debanjana.eng@presiuniv.ac.in
+
+More info and updates to be found on the website and on Facebook.
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--0000000000006b247505898cf1b1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">
+<p class=3D"MsoNormal">Dear All,</p><div><p class=3D"MsoNormal">&nbsp;</p><=
+/div><div><p class=3D"MsoNormal">It is my pleasure to announce the <b>7th G=
+ames and Literary Theory Conference</b> (GamesLit 2019) to be held in Kolka=
+ta, India &nbsp;on <b>November 18th to 20th</b>.
+ The venue is Presidency University, Kolkata (formerly Hindoo College=20
+and Presidency College), which has just celebrated its bicentenary. It=20
+is an honour to be able to host the first large games conference in this
+ part of Asia and indeed, the so-named Global South.</p></div><div><p class=
+=3D"MsoNormal">&nbsp;</p></div><div><p class=3D"MsoNormal">Kolkata
+ (formerly Calcutta), also known as the 'second city of the British=20
+Empire, used to be the capital of the British Raj and is now a vibrant=20
+and diverse city with a rich mix of cultures. It is also an appropriate=20
+location for a conference themed<b> 'Games at the Margin'</b>. The full cal=
+l for papers is available on the conference website:&nbsp;<a href=3D"https:=
+//gameslit2019.wordpress.com" target=3D"_blank">https://gameslit2019.wordpr=
+ess.com</a>&nbsp;and also below.</p></div><div><p class=3D"MsoNormal">&nbsp=
+;</p></div><div><p class=3D"MsoNormal">We are looking for <b>abstracts of a=
+t least 300 and no more than. 700 words</b>; more information is available =
+on the conference website.&nbsp; Please submit your abstracts via EasyChair=
+ at&nbsp;<a href=3D"https://easychair.org/conferences/?conf=3Dgameslit2019"=
+ target=3D"_blank">https://easychair.org/conferences/?conf=3Dgameslit2019</=
+a>&nbsp;on or before <b>June 30th</b>.&nbsp;</p></div><div><p class=3D"MsoN=
+ormal">&nbsp;</p></div><div><p class=3D"MsoNormal">More
+ information on the travel, accommodation and other logistical issues=20
+will be provided on the website shortly. If you have any queries, please
+ email me at <b><a href=3D"mailto:souvik.eng@presiuniv.ac.in" target=3D"_bl=
+ank">souvik.eng@presiuniv.ac.in</a></b> or my coorganiser at <b><a href=3D"=
+mailto:debanjana.eng@presiuniv.ac.in" target=3D"_blank">debanjana.eng@presi=
+univ.ac.in</a>.</b></p></div><div><p class=3D"MsoNormal">&nbsp;</p></div><d=
+iv><p class=3D"MsoNormal">Looking forward to welcoming you to GamesLit @ Ko=
+lkata.</p></div><br><div><div dir=3D"ltr" class=3D"m_-1555628654782724471gm=
+ail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><span style=3D"=
+border-collapse:collapse"><font><div style=3D"font-size:13px;font-family:ar=
+ial,sans-serif">Thanks and regards,<br><br>Souvik<div><br></div><div><div><=
+font size=3D"1" color=3D"#333333">Dr Souvik Mukherjee</font></div><div styl=
+e=3D"text-align:justify"><font size=3D"1" color=3D"#333333">email:&nbsp;<a =
+href=3D"mailto:prosperosmaze@gmail.com" target=3D"_blank">prosperosmaze@gma=
+il.com</a>,&nbsp;<span style=3D"font-family:tahoma,Arial,Helvetica,sans-ser=
+if;line-height:17px">Weblog:</span><span style=3D"font-family:tahoma,Arial,=
+Helvetica,sans-serif;line-height:17px">&nbsp;&nbsp;</span><a href=3D"http:/=
+/readinggamesandplayingbooks.blogspot.in/" target=3D"_blank">http://reading=
+gamesandplayingbooks.blogspot.in/</a></font></div></div><div style=3D"text-=
+align:justify"><font size=3D"1"><a href=3D"http://www.palgrave.com/page/det=
+ail/video-games-and-storytelling-souvik-mukherjee/?isb=3D9781137525048" sty=
+le=3D"font-style:italic" target=3D"_blank">Videogames and Storytelling: Rea=
+ding Games and Playing Books</a><i>&nbsp;</i>(Palgrave MacMillan 2015)</fon=
+t></div><div><div style=3D"text-align:justify"><font size=3D"1"><a href=3D"=
+https://www.amazon.com/Videogames-Post-colonialism-Souvik-Mukherjee/dp/3319=
+548212" style=3D"color:rgb(17,85,204)" target=3D"_blank">Videogames and Pos=
+tcolonialism: The Empire Plays Back</a>&nbsp;(Springer UK 2017)</font></div=
+><div style=3D"text-align:justify"><font size=3D"1"><br></font></div><div s=
+tyle=3D"text-align:justify"><font size=3D"1">------------------------------=
+---------------------------------------------------------------------------=
+------</font></div><div style=3D"text-align:justify"><font size=3D"1"><br><=
+/font></div><div style=3D"text-align:justify"><font size=3D"1">
+</font>
+		<h1 class=3D"m_-1555628654782724471entry-title">Call for Papers</h1>=09
+		<div class=3D"m_-1555628654782724471entry-content">
+		=09
+<p>Videogames have grown into a global socio-cultural phenomenon and are
+ now a primary concern of Literary and Cultural Studies as well as the=20
+Social Sciences. In a medium that sweeps across geographies (including=20
+virtual ones), however, the discourse usually privileges a certain=20
+section &nbsp;when it comes to the representation of identity. In a medium,=
+=20
+where roleplaying  and playing in character is of prime importance, such
+ an ignoring of the marginal and the diverse is indeed problematic.<br></p>
+
+
+
+<p>In one of the first books on the subject, Adrienne Shaw says=20
+=E2=80=98Teaching classes on minority representation in games, I heard this=
+=20
+refrain repeated yet again by my students. Video games are a niche=20
+medium; they are fantasy environments; and they are designed for a=20
+narrow market. Of course games are not diverse=E2=80=94so what? [=E2=80=A6]=
+ I realized=20
+that I recognized myself in my participants=E2=80=99 responses. After all, =
+I too
+ grew up playing a medium for which I was not the primary market and=20
+media in which only certain aspects of my identity were ever shown=E2=80=99=
+=20
+(Shaw 2015). Shaw=E2=80=99s concern is an urgent one and recent events rela=
+ted=20
+to racism, sexism and other kinds of discrimination in the videogame=20
+industry and in the content of the games, highlights the importance of=20
+academic dialogues around gaming =E2=80=98at the margins=E2=80=99, as it we=
+re.<br></p>
+
+
+
+<p>These concerns, of course, echo much older debates on diversity and=20
+difference in Literary and Cultural Studies. Identity and indeed, even=20
+the body, are constructs in the Foucauldian framework of biopower and=20
+beyond the actual control of individuals. Thinkers such as Judith=20
+Butler, Julia Kristeva and bell hooks point out how the the body is=20
+marginalised based on gender, race and class. Similarly, the=20
+constructedness of the =E2=80=98Orient=E2=80=99 and the =E2=80=98Oriental=
+=E2=80=99 in colonial discourse
+ as shown by Edward Said and also how the colonial system also renders=20
+certain groups of people =E2=80=98subaltern=E2=80=99 and how this affects t=
+he discourse=20
+of diversity as Gayatri Chakravarty Spivak and Homi Bhabha make evident.
+ Often, the discourse of diversity and the margins pervades games as=20
+well although the connection is not often made evident in the older and=20
+more traditional disciplines.<br></p>
+
+
+
+<p>Recent games scholarship has started addressing issues of diversity=20
+in games through the new Diversity Group that is now part of the Digital
+ Games Research Association (DiGRA), books on gender, race and=20
+colonialism (Shaw 2015; Murray 2018; Mukherjee 2017) as well as edited=20
+journal issues and panel discussions. As crucial to discussions of both=20
+games and literary theory, these issues form the main theme of this=20
+year=E2=80=99s Games and Literary Theory Conference, being held in Kolkata=
+=20
+(formerly Calcutta), India. <br></p>
+
+
+
+<p>We welcome papers on but not restricted to the following topics:<br></p>
+
+
+
+<ul><li>Representations of diverse games in literature.</li><li>Remediating=
+ marginality: from non-canonical literature to games.</li><li>Studying game=
+s with literary theory: from the center to the margins.</li><li>Marginalize=
+d discourses of gaming culture.</li><li>Digital and non-digital games as to=
+ols to resist inequality and erasure.<br></li><li>Representations of gender=
+, queerness, race, class and caste in games vis a vis literature.</li><li>C=
+olonization, &nbsp;migration and diasporas in understanding game spaces.</l=
+i><li>cis-heteropatriarchal gender norms and gaming.</li><li>The language o=
+f the =E2=80=9Cdigital frontier=E2=80=9D in gaming and tech cultures</li><l=
+i>Diversity practices and games studies.</li><li>Empathy games that engage =
+with racism and the =E2=80=98refugee=E2=80=99 experience.</li><li>Decoloniz=
+ing struggles in the gaming industry around labour and money</li><li>Digita=
+l Humanities from the margins vis a vis gamer culture in Global North vs. t=
+he Global South.</li></ul>
+
+
+
+<p>Please send your questions or comments to: <a href=3D"mailto:debanjana.e=
+ng@presiuniv.ac.in" target=3D"_blank">debanjana.eng@presiuniv.ac.in</a> </p=
+>
+
+
+
+<p>More info and updates to be found on the  website and on Facebook.</p></=
+div>
+
+</div></div><div><font size=3D"1"><br></font></div></div></font></span></di=
+v></div></div></div></div></div></div></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--0000000000006b247505898cf1b1--

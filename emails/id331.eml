@@ -1,0 +1,632 @@
+Received: from MN2PR08MB5712.namprd08.prod.outlook.com (2603:10b6:a03:74::27)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0050.NAMPRD05.PROD.OUTLOOK.COM; Mon, 30 Sep 2019 23:00:35 +0000
+Received: from MWHPR08CA0006.namprd08.prod.outlook.com (2603:10b6:301:5f::19)
+ by MN2PR08MB5712.namprd08.prod.outlook.com (2603:10b6:208:11d::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2305.20; Mon, 30 Sep
+ 2019 23:00:33 +0000
+Received: from BN3NAM04FT045.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::200) by MWHPR08CA0006.outlook.office365.com
+ (2603:10b6:301:5f::19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2305.20 via Frontend
+ Transport; Mon, 30 Sep 2019 23:00:32 +0000
+Authentication-Results: spf=pass (sender IP is 192.28.153.150)
+ smtp.mailfrom=deliver.ieee.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=deliver.ieee.org;calpoly.edu; dmarc=pass action=none
+ header.from=deliver.ieee.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of deliver.ieee.org
+ designates 192.28.153.150 as permitted sender)
+ receiver=protection.outlook.com; client-ip=192.28.153.150;
+ helo=deliver.ieee.org;
+Received: from deliver.ieee.org (192.28.153.150) by
+ BN3NAM04FT045.mail.protection.outlook.com (10.152.93.120) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2305.15 via Frontend Transport; Mon, 30 Sep 2019 23:00:32 +0000
+Return-Path: 756-GPH-899.0.5172.0.0.8265.9.494422@deliver.ieee.org
+X-MSFBL: 3MFwsBEAM+wUT//KRXy6j++zL5KO2oeohFJFnfDqo/o=|eyJyIjoiZm9hYWRAY2F
+	scG9seS5lZHUiLCJnIjoiYmctYWJkLTcwNSIsImIiOiJkdnAtMTkyLTI4LTE1My0
+	xNTAiLCJ1IjoiNzU2LUdQSC04OTk6MzkxMzo3NzMxOjE4Njk1OjA6ODI2NTo5OjU
+	xNzI6NDk0NDIyIn0=
+Received: from [10.1.87.249] ([10.1.87.249:45032] helo=abmas01.marketo.org)
+	by abmta20.marketo.org (envelope-from <ieee-enotice@deliver.ieee.org>)
+	(ecelerity 4.2.38.62370 r(:)) with ESMTP
+	id 86/F5-32352-F09829D5; Mon, 30 Sep 2019 18:00:31 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1569884431;
+	s=m1; d=deliver.ieee.org; i=@deliver.ieee.org;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=8sxQXTliKjuLzxfu4odUNiuG87aRMQtDtdCzmqMScRY=;
+	b=S8l3af5yq88gnKhF8bSTNqQ9JURj/WEwnffJd88fRyn9trMrjr4hCAj9mzM7hzFh
+	VMTBu/kvoUQwl6G8Veub2EW4MGX4/J87u9Rp6fnP1LlX3ebGXV5HDQJeA50wO6haHiO
+	MICCHaCbj53W90e6CcqBNUjpDdMBLZjmcvjRJ/sQ=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1569884431;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=8sxQXTliKjuLzxfu4odUNiuG87aRMQtDtdCzmqMScRY=;
+	b=UZ6ZxUz+8H3QMOIDt/EiXqnwJC4+Gpuzf5MBq/kSey87RrHVSnn0VRTQZU9ah3L9
+	XUbPa13AdMAcUnAGSsvG1jgCOuflrdNzJ1NhSS4TnEz7LrPuYiWTBcgbWNCK09jfGFv
+	dpn8kJ0QMTkpBAaYVhh1SedE5pq1vMnO+QBwU1QA=
+Date: Mon, 30 Sep 2019 18:00:31 -0500 (CDT)
+From: IEEE <ieee-enotice@deliver.ieee.org>
+Reply-To: shirazi@wsu.edu
+To: foaad@calpoly.edu
+Message-ID: <1965461407.1827553293.1569884431708.JavaMail.mktmail@abmas01.marketo.org>
+Subject: Call for Participation: 2019 Tenth International Green and
+ Sustainable Computing Conference (IGSC)
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1827553292_1702474333.1569884431708"
+X-PVIQ: mkto-756GPH899-000001-000000-005172
+X-Binding: bg-abd-705
+X-MarketoID: 756-GPH-899:3913:7731:18695:0:8265:9:5172:494422
+X-MktArchive: false
+List-Unsubscribe: <mailto:JB5G4WRZKI3HC5BRM5UUK3CWIRJFOULLGRTT2PI.5172.8265.9@unsub-ab.mktomail.com>
+X-Mailfrom: 756-GPH-899.0.5172.0.0.8265.9.494422@deliver.ieee.org
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Sep 2019 23:00:32.6382
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ e4dabe5a-9191-489b-cbba-08d745f9ff2a
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:192.28.153.150;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(979002)(4636009)(286005)(199004)(189003)(16586007)(2171002)(8676002)(106002)(36906005)(2351001)(246002)(43066004)(16003)(58800400005)(19627405001)(236005)(2361001)(9686003)(6306002)(146002)(71190400001)(733005)(1096003)(476003)(6916009)(76236002)(7636002)(966005)(356004)(126002)(85226003)(486006)(336012)(26005)(2160300002)(18926415008)(7696005)(33964004)(75640400001)(4006050)(606006)(7596002)(86816001)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:1;SRVR:MN2PR08MB5712;H:deliver.ieee.org;FPR:;SPF:Pass;LANG:en;PTR:deliver.ieee.org;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT045.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: e4dabe5a-9191-489b-cbba-08d745f9ff2a
+X-MS-TrafficTypeDiagnostic: MN2PR08MB5712:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:1;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Sep 2019 23:00:32.6042
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: e4dabe5a-9191-489b-cbba-08d745f9ff2a
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR08MB5712
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.9320390
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2305.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?WFhsLzhvRkE5YzhYVmlGM2dLNkNsN3NTMXB1Q1RhdEFXQktkcUF6bW04N3Bq?=
+ =?utf-8?B?MzVmRWp6UU5WU002U0lTSWRYKzJLNXpEdEkzQlE4ZVJyYTl0QjlvbkxXVms2?=
+ =?utf-8?B?UGczNStXVlV3b1hVWWpsbGlIenhnYXE4WDE0d0FuejFnK3l3L1EwRzZzNi9s?=
+ =?utf-8?B?ODdQV2drM3FSbEJ2T0tkcGc5bnJMZWpVMTdoUmwyYlR5WHAweWVaU282Mlk3?=
+ =?utf-8?B?d1VuYWtXcWZwY0tSbEwrZHRFNU9rMVZEM050UmlxMGppUVpxRWhXdTQ5QXhu?=
+ =?utf-8?B?a1c5N3VsNVBTYzRqRHZqc1pLSkIyZkEwNDBqOUxaRDBFUFRmMzNKZnRKd2Zl?=
+ =?utf-8?B?L3I4eHp6YW5xYkVVeXJaTFZHU2dPYlZya1Fpbk9LNlQzTFdJdTBvUUcraHBk?=
+ =?utf-8?B?SGRZeklBY3A4b2pyRWRydnF5R2xvRUc2cVJpNGM4ZlR0YUlMbXV6VXpJNk9t?=
+ =?utf-8?B?MUw2TjN3OGFVbzZVbU1YTFBjanRmYVdpcCt1ZXAvZkFJY0dkL0RnaHhlZXFz?=
+ =?utf-8?B?aTBROUpUckVyRjJsQXNPeFk1OEVmcXVTWjVLckFtYmFTZnd1SEp2YzNUWUx6?=
+ =?utf-8?B?cmdLdzJ5N1VqU09QNE9TVWV6Si8xU0xGYkhGQ0ZjQzNnY0drZCtnWWI3WVZY?=
+ =?utf-8?B?NXBsd1RZMlpVNEJxMU10eDVKQVZrS1c3b0Q5VGFoU1Y2NnFIUkdjbkpoRVVM?=
+ =?utf-8?B?cmVHZDNHZnBxU21TRFN4czhWZXMxeFJ5UnE1c2ZZU0QyY1JMMTJZRVdXd2Vw?=
+ =?utf-8?B?bmNVQVY3eTYvRXhQT3VNSXo2clAxMzBUaStGekhxR3Y2QXQra1gvaHQ4QVpH?=
+ =?utf-8?B?L0V2Y0J5ZFdZL2JCNkFFUmJpaWkyVkdUQi9xVzRReW5CSExmM2R4N24wU1FS?=
+ =?utf-8?B?b2I1SUw3NjhDcUVVb3BFendLTlYrZEtrWmtNRkxXTE9BSzgyWHZtbTU5KzV3?=
+ =?utf-8?B?K3BvLy9oNmhKMmlCU2dITnhpb0NLVHptT1BraGtLRkk5UDhuMmVuS1BCZVp1?=
+ =?utf-8?B?MGY4ZmY1bkZHMzFGd3RsRVNLYWZ1UmxjOE5nenk5LytpMFprdTV2VTNQOUtv?=
+ =?utf-8?B?SHpzK2FHSkxjY2FCc3ZLdzhjdmhuMklIbVdXWjhpTCswQ0x2SHpCS1RDYjZ0?=
+ =?utf-8?B?aUM1ZVFHRi9Cd1VPOUM2Z0FxL3JHaE5KNy9NbTRXVFFMMUI5c09qNXBVR1BY?=
+ =?utf-8?B?TnhxVlFQWXQ4N014TGpqNFMxWTdSMG5Eb2NLNnVMOWFJS0F6UDlLS0dHcWZQ?=
+ =?utf-8?B?Q1BOcDhFNGdyaEZOUFg3bjRRRDNBdm1UWk5BdmlXZVg4YjRQc1VGM3lGZW9q?=
+ =?utf-8?B?ZTBLcE1NT1JJNFl4QlZERlIxYldOemdLUXZRSGhqclYxWEgyeFdkK05jQmJV?=
+ =?utf-8?B?bXB1bm5uVFowWUFjQVRKWTErQUxvRXlDQmdmV3ZnditNTjdqQ0V1NE9Eak9V?=
+ =?utf-8?B?bytFU05OSkdPWkp6VjU1bXdWeGsxWFAyTDlGVW4rUUpGRHVEdDcxeXFiYnlR?=
+ =?utf-8?B?bm5BSlVucWhIeXhiQkNHazA4TUxmLzRTV01tN0tVbGt3ZzVRMlJmd0dEZUZt?=
+ =?utf-8?B?WlRNZz09?=
+MIME-Version: 1.0
+
+------=_Part_1827553292_1702474333.1569884431708
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Call for Participation
+2019 Tenth International Green and Sustainable Computing Conference (IGSC)
+October 21-24, 2019
+Alexandria, VA, USA
+https://www.igscc.org
+Contact: Behrooz Shirazi (shirazi@wsu.edu)
+Please visit the conference website for exciting conference program includi=
+ng: keynotes, panels, PhD students forum, demos, and workshops.
+If you wish to unsubscribe from conference eNotices, please visit the=C2=A0=
+IEEE Communications Preference and Policies page <https://connect.ieee.org/=
+I0a0KGC032yUUa340o0PH00>=C2=A0and uncheck the "Local IEEE Communications" b=
+ox.
+
+=C2=A9 2019 IEEE=E2=80=93 All rights reserved.
+Website <https://connect.ieee.org/taHy340oGC03V00UP2000aL>=C2=A0|=C2=A0 Pri=
+vacy Policy <https://connect.ieee.org/HG003040UyWCoH203aP00Ma>=C2=A0|=C2=A0=
+ Contact <https://connect.ieee.org/GaP0Ho30CX2NG0a30000yU4>
+
+&nbsp;
+
+------=_Part_1827553292_1702474333.1569884431708
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>IEEE Master email</title> =20
+<!-- Header Variable Starts-->                                    =20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1,=
+ minimum-scale=3D1, maximum-scale=3D1">=20
+<meta name=3D"robots" content=3D"noindex,nofollow">=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=20
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->=20
+<!--[if mso]>
+<style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:=
+Arial, Helvetica, sans-serif !important;  }</style>
+  <!--<![endif]-->=20
+<!--[if gte mso 9]>
+    <style type=3D"text/css">
+   .outlook{padding-top:0px !important;}
+    </style>
+<![endif]-->=20
+<style media=3D"all">
+#outlook a {
+  padding: 0;
+}
+ =20
+/* Force Outlook to provide a "view in browser" message */
+.ReadMsgBody {
+  width: 100%;
+}
+.ExternalClass {
+  width: 100%;
+}
+/* Force Hotmail to display emails at full width */
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+/* Force Hotmail to display normal line spacing */
+/* iOS BLUE LINKS */
+@-ms-viewport {
+    width: device-width;
+}
+</style>=20
+<style media=3D"all">
+html { -webkit-text-size-adjust:none; }
+body{font-family:Arial, Helvetica, sans-serif;}
+p, .undoreset div p, .undoreset p {
+    margin-top: 14px;
+    margin-bottom:14px;         =20
+}
+img{border:0px !important;}
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+ul.webinar {
+    padding: 0; margin-left: 1em;
+}
+.textColor {color:#333333  !important;outline: none !important; text-decora=
+tion:none !important; }
+  .btnLine{text-decoration:underline  !important;}
+  a{outline: none !important; text-decoration:none !important; }
+ @media only screen and (max-width: 640px){
+        *[class].main {width:100% !important; min-width: 100% !important;}	=
+=09
+        *[class].inner_table{width:90% !important;margin:0 auto !important;=
+}	=09
+        *[class].res{width:100% !important;display:block;}
+		 *[class].block{display:block;margin:0 auto;float:none !important;}
+        *[class].left_align{text-align:left !important;}
+        *[class].center{text-align:center !important;margin:0 auto;}
+		*[class].full-width img{width:100% !important; height:auto !important;}  =
+    =20
+        *[class].hidden{display:none !important;}
+		*[class].padding_top{padding-top:18px !important;}
+		*[class].padLeft{padding-left:10px !important;}
+		*[class].padding_btm{padding-bottom:20px !important;}
+		*[class].tableWidthNew{width:215px !important;margin:0 auto !important;}
+		*[class].iphoneHeight1{height:20px !important;}
+		*[class].extra-space1{height:12px !important;}
+		*[class].iphoneHeight{height:25px !important;}=09
+		*[class].padding_btm11{padding-bottom:35px !important;}=09
+		*[class].floatNone{float:none !important; margin:0 auto !important;}
+		*[class].borderRight{border-right:0px !important;}
+		*[class].tableWidth1{width:10% !important;box-sizing:border-box !importan=
+t;}
+*[class].tableWidth2{width:90% !important;box-sizing:border-box !important;=
+padding-left:15px;}
+
+.imgWidthNew img{width:18px !important;}
+        }
+  @media only screen and (max-width: 640px){
+        .main {width:100% !important; min-width: 100% !important;}	=09
+        .inner_table{width:90% !important;margin:0 auto !important;}	=09
+  .res{width:100% !important;display:block;}
+		.block{display:block;margin:0 auto;float:none !important;}
+       .left_align{text-align:left !important;}
+      .center{text-align:center !important;margin:0 auto;}
+		.full-width img{width:100% !important; height:auto !important;}      =20
+        .hidden{display:none !important;}
+	.padding_top{padding-top:18px !important;}
+		.padLeft{padding-left:10px !important;}
+		.padding_btm{padding-bottom:20px !important;}
+		.imgWidth{width:45px !important;}
+		.tableWidthNew11{width:auto !important;}
+		.tableWidthNew{width:215px !important;margin:0 auto !important;}
+		.iphoneHeight1{height:20px !important;}
+		.extra-space1{height:12px !important;}
+		.iphoneHeight{height:25px !important;}=09
+		.padding_btm11{padding-bottom:35px !important;}=09
+		.floatNone{float:none !important; margin:0 auto !important;}
+		.borderRight{border-right:0px !important;}
+		.tableWidth1{width:10% !important;box-sizing:border-box !important;}
+.tableWidth2{width:90% !important;box-sizing:border-box !important;padding-=
+left:15px;}
+.mktoVideoThumbnail{
+	width: 100% !important;
+	height: auto!important;
+	max-height:inherit!important;
+	min-height:inherit!important;
+}
+        }
+		@media (max-width:480px)
+		{
+		.padNew{padding:2px 5px !important;}
+		.imgWidthNew img{width:13px !important;}
+		}
+		@media (max-width:320px)
+		{
+		.padNew{padding:2px !important;}
+		}
+	=09
+	=09
+	=09
+    =20
+	=09
+       =20
+		 .mktoVideo a table{width:100% !important;}
+</style>=20
+</head>=20
+<body style=3D"margin-bottom: 0; -webkit-text-size-adjust: 100%; padding-bo=
+ttom: 0;  margin-top: 0; margin-right: 0; -ms-text-size-adjust: 100%; margi=
+n-left: 0; padding-top: 3px; padding-right: 0; padding-left: 0; width: 100%=
+;">=20
+<!-- Outer table START -->=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt;  border-spacing: 0; border-collapse: co=
+llapse;margin:0 auto;">=20
+<tbody>
+<tr>=20
+<td style=3D"background-color:#f7f7f7;" bgcolor=3D"#f7f7f7">=20
+<table class=3D"main" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+border=3D"0" width=3D"600" style=3D"border-collapse: collapse; margin:0 aut=
+o;min-width:600px;">=20
+<tbody>
+<tr>=20
+<td class=3D"mktoContainer" id=3D"template-wrapper" style=3D"background-col=
+or:#f7f7f7;" bgcolor=3D"#f7f7f7">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"HeaderSection2cabaa90a-2590-43e=
+1-b600-75b022c04aa0">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table class=3D"inner_table" width=3D"500" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:500px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"10" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"hidden" width=3D"372" valign=3D"top" style=3D"vertical-align:t=
+op;text-align:left;width:372px;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=20
+<tbody>=20
+<tr>=20
+<td height=3D"25" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;">=20
+<div class=3D"mktoImg" id=3D"header-linecabaa90a-2590-43e1-b600-75b022c04aa=
+0">=20
+<img src=3D"https://engage.ieee.org/rs/756-GPH-899/images/header line%402x.=
+png" width=3D"372" border=3D"0">=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<td width=3D"13" class=3D"hidden" style=3D"line-height:1px;font-size:1px;">=
+&nbsp;</td>=20
+<td class=3D"res center" width=3D"115" valign=3D"top" style=3D"vertical-ali=
+gn:top;text-align:right;">=20
+<div class=3D"mktoImg" id=3D"left-logo21cabaa90a-2590-43e1-b600-75b022c04aa=
+0">=20
+<a href=3D"https://connect.ieee.org/JP33G40JaH0UToC0ay00020" target=3D"_bla=
+nk"><img src=3D"https://engage.ieee.org/rs/756-GPH-899/images/ieee_logo_tag=
+line%402x.png" width=3D"115" border=3D"0"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"10" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"body-textc32d5b7b-51eb-4f1a-8c1=
+2-4716134ff4d3">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table class=3D"inner_table" width=3D"500" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:500px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;font-family:arial,sans-serif=
+,helvetica;font-size:12px;line-height:18px;color:#000000;font-weight:normal=
+;text-align:center;">=20
+<div class=3D"mktoText" id=3D"banner1_contentc32d5b7b-51eb-4f1a-8c12-471613=
+4ff4d3">=20
+<p style=3D"text-align: left;">Call for Participation<br>2019 Tenth Interna=
+tional Green and Sustainable Computing Conference (IGSC)<br>October 21-24, =
+2019<br>Alexandria, VA, USA<br>https://www.igscc.org<br>Contact: Behrooz Sh=
+irazi (shirazi@wsu.edu)<br>Please visit the conference website for exciting=
+ conference program including: keynotes, panels, PhD students forum, demos,=
+ and workshops. <br></p>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"sec-divider7ed75261-3c89-46af-9=
+905-8d66cd7143d9">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table width=3D"500" class=3D"inner_table" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:500px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"5" style=3D"line-height:1px;font-size:1px;border-bottom:1px s=
+olid #00629B;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"body-text23b2d9cf-295b-41cc-9cd=
+9-fdd484633587">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table class=3D"inner_table" width=3D"500" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:500px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;font-family:arial,sans-serif=
+,helvetica;font-size:12px;line-height:18px;color:#000000;font-weight:normal=
+;text-align:center;">=20
+<div class=3D"mktoText" id=3D"banner1_content23b2d9cf-295b-41cc-9cd9-fdd484=
+633587">=20
+<p><span style=3D"color: #000000; font-family: arial, sans-serif, helvetica=
+; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font=
+-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2=
+; text-align: center; text-indent: 0px; text-transform: none; white-space: =
+normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; backg=
+round-color: #ffffff;=20
+text-decoration-style: initial; text-decoration-color: initial; display: in=
+line !important; float: none;">If you wish to unsubscribe from conference e=
+Notices, please visit the&nbsp;</span><a href=3D"https://connect.ieee.org/I=
+0a0KGC032yUUa340o0PH00" target=3D"_blank" style=3D"text-decoration: none;">=
+IEEE Communications Preference and Policies page</a><span style=3D"color: #=
+000000; font-family: arial,=20
+sans-serif, helvetica; font-size: 12px; font-style: normal; font-variant-li=
+gatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacin=
+g: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform=
+: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-str=
+oke-width: 0px; background-color: #ffffff; text-decoration-style: initial; =
+text-decoration-color:=20
+initial; display: inline !important; float: none;">&nbsp;and uncheck the &q=
+uot;Local IEEE Communications&quot; box.&nbsp;</span></p>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"body-text5d2e228f-80b6-4368-8cf=
+2-f78a24dfe08b">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#00629B" style=3D"background-color:#00629B;">=20
+<table class=3D"inner_table" width=3D"500" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:500px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;font-family:arial,sans-serif=
+,helvetica;font-size:12px;line-height:18px;color:#000000;font-weight:normal=
+;text-align:center;">=20
+<div class=3D"mktoText" id=3D"banner1_content5d2e228f-80b6-4368-8cf2-f78a24=
+dfe08b">=20
+<div>
+ &nbsp;=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"footer2-secbf2afba8-ea82-4f11-8=
+fb1-2e592373ca97">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#00629B" style=3D"background-color:#00629B;">=20
+<table width=3D"500" class=3D"inner_table" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:500px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"res center" width=3D"185" valign=3D"middle" style=3D"vertical-=
+align:middle;width:185px;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"center" valign=3D"top" style=3D"vertical-align:top;text-align:=
+left;">=20
+<div class=3D"mktoImg" id=3D"ieee-logo-footerbf2afba8-ea82-4f11-8fb1-2e5923=
+73ca97">=20
+<a href=3D"https://connect.ieee.org/JP33G40JaH0UToC0ay00020" target=3D"_bla=
+nk"><img src=3D"https://engage.ieee.org/rs/756-GPH-899/images/ieee-logo%402=
+x-new-white-logo.png" width=3D"115" border=3D"0"></a>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"5" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"center" style=3D"font-size:10px;line-height:16px;color:#ffffff=
+;text-align:left;font-weight:normal;font-family:arial,sans-serif;">=20
+<div class=3D"mktoText" id=3D"footer-copyrightbf2afba8-ea82-4f11-8fb1-2e592=
+373ca97">=20
+<div>
+ =C2=A9 2019 IEEE=E2=80=93 All rights reserved.=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<td class=3D"res center" width=3D"315" valign=3D"top" style=3D"vertical-ali=
+gn:top;width:315px;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"iphoneHeight" height=3D"10" style=3D"line-height:1px;font-size=
+:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"center" valign=3D"top" style=3D"vertical-align:top;text-align:=
+right;font-family:arial,sans-serif;font-size:12px;line-height:18px;color:#f=
+fffff;">=20
+<div class=3D"mktoText" id=3D"social1-icons1-newbf2afba8-ea82-4f11-8fb1-2e5=
+92373ca97">=20
+<div>=20
+<a href=3D"https://connect.ieee.org/taHy340oGC03V00UP2000aL" target=3D"_bla=
+nk" style=3D"color: #ffffff; text-decoration: none; outline: none;">Website=
+</a>&nbsp;|&nbsp;=20
+<a href=3D"https://connect.ieee.org/HG003040UyWCoH203aP00Ma" target=3D"_bla=
+nk" style=3D"color: #ffffff; text-decoration: none; outline: none;">Privacy=
+ Policy</a>&nbsp;|&nbsp;=20
+<a href=3D"https://connect.ieee.org/GaP0Ho30CX2NG0a30000yU4" target=3D"_bla=
+nk" style=3D"color: #ffffff; text-decoration: none; outline: none;">Contact=
+</a>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"iphoneHeight" height=3D"10" style=3D"line-height:1px;font-size=
+:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"center" valign=3D"top" style=3D"vertical-align:top;text-align:=
+right;">=20
+<div class=3D"mktoText" id=3D"footer-social-icons11bf2afba8-ea82-4f11-8fb1-=
+2e592373ca97"></div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"10" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--Outer table ends here--> =20
+
+<img src=3D"https://connect.ieee.org/trk?t=3D1&amp;mid=3DNzU2LUdQSC04OTk6Mz=
+kxMzo3NzMxOjE4Njk1OjA6ODI2NTo5OjUxNzI6NDk0NDIyOmZvYWFkQGNhbHBvbHkuZWR1" wid=
+th=3D"1" height=3D"1" style=3D"display:none !important;" alt=3D"">
+
+&nbsp;
+</body>
+</html>=
+
+------=_Part_1827553292_1702474333.1569884431708--

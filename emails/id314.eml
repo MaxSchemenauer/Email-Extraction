@@ -1,0 +1,230 @@
+Return-Path: donotreply@dcmrf.net
+Received: from p-zm-mta01.its.calpoly.edu (LHLO p-zm-mta01.its.calpoly.edu) (129.65.64.109) by p-zm-store01.its.calpoly.edu with LMTP;
+	 Sat, 7 Mar 2015 15:03:31 -0800 (PST)
+Received: from p-zm-mta01.its.calpoly.edu (localhost.localdomain [127.0.0.1]) by p-zm-mta01.its.calpoly.edu (Postfix) with ESMTP id 8E7D13A395 for <foaad@calpoly.edu>;
+	 Sat, 7 Mar 2015 15:03:31 -0800 (PST)
+Received: from cpmx06-in.its.calpoly.edu (prod-loopback.its.calpoly.edu [129.65.64.9]) by p-zm-mta01.its.calpoly.edu (Postfix) with ESMTPS id 8ADAD3A38B for <foaad@cpmail.calpoly.edu>;
+	 Sat, 7 Mar 2015 15:03:31 -0800 (PST)
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: A0DhAACIgvtUnKgn3kNCGg6CNYEVWoQ7gUK5ZYIsAQuHTRABAQEBAQEBEAEBAQEBBg0JCRQuhBkaMRoFIT4tEjQHBQcEBQUHBIgOBQg3nkyqBAEKAQEBHo80AQGDAwxBgTEFhXeEQC6FIgSDX4c9hSAWhXuDXoMNg1RdTwUCgQSBOAEBAQ
+X-IPAS-Result: A0DhAACIgvtUnKgn3kNCGg6CNYEVWoQ7gUK5ZYIsAQuHTRABAQEBAQEBEAEBAQEBBg0JCRQuhBkaMRoFIT4tEjQHBQcEBQUHBIgOBQg3nkyqBAEKAQEBHo80AQGDAwxBgTEFhXeEQC6FIgSDX4c9hSAWhXuDXoMNg1RdTwUCgQSBOAEBAQ
+X-IronPort-AV: E=Sophos;i="5.11,359,1422950400";
+	    d="scan'208,217"; a=7176098
+X-Originating-IP-Address: 67.222.39.168
+Received: from gproxy6-pub.mail.unifiedlayer.com ([67.222.39.168]) by cpmx06-in.its.calpoly.edu with SMTP;
+	 07 Mar 2015 15:03:30 -0800
+Received: (qmail 404 invoked by uid 0);
+	 7 Mar 2015 23:03:29 -0000
+Received: from unknown (HELO cmgw4) (10.0.90.85) by gproxy6.mail.unifiedlayer.com with SMTP;
+	 7 Mar 2015 23:03:29 -0000
+Received: from just65.justhost.com ([173.254.28.65]) by cmgw4 with id 0u3Q1q00J1QHVnR01u3TpA;
+	 Sat, 07 Mar 2015 23:03:27 -0700
+X-Authority-Analysis: v=2.1 cv=PI2cp5aC c=1 sm=1 tr=0 a=ZZ68NhgFsNuoKvxfLCdbGw==:117 a=BY8XqHikAAAA:8 a=f5113yIGAAAA:8 a=XfTXnedzAAAA:8 a=kTXoUeWJQ3AA:10 a=emO1SXQWCLwA:10 a=RiBumCMAZYiXnILwpaYA:9 a=wPNLvfGTeEIA:10 a=lEUTsOOXQPQA:10 a=SSmOFEACAAAA:8 a=N1z6yVdWAAAA:8 a=2mkJKdwonsxIiZrCGfMA:9 a=knJPS52PgIJh-K20:21 a=_W_S_7VecoQA:10 a=p403mkujtbAA:10 a=ome7BpGSM9YA:10 a=QtiFa5nTXU4A:10 a=lxhlB22FEwcA:10 a=v_Jk7WMi10oA:10 a=42_zzYrPJn0A:10 a=_T5ZnmMo3OgA:10 a=s82Q1kGRdm0A:10 a=JVbHgG7d12gA:10 a=wJErDC4SGoYA:10 a=6lsMMUCT-ooA:10 a=MKnn2tH5gywA:10 a=7nY27ne8NYwA:10 a=qUWkX5x6N9AA:10 a=Z8g_GsjyrzMA:10 a=pj9yBL_eCiQA:10 a=KWQMXd6bQrEA:10 a=brP3zeuLf2MA:10 a=OP3iMzCqpaEA:10 a=AyGL_EzmTGgA:10 a=Z3Zr9i96-3QA:10 a=DtGIcscNzR8A:10 a=1Z2Tayu5IWIA:10 a=F96oFP6NjjYA:10 a=kkblyhzSu90A:10 a=FyucvrgMbhYA:10 a=kJ_YfImkIMQA:10 a=vX5Ti79sxEQA:10 a=YwTHAeq_huwA:10 a=Nf4nrLCatYQA:10
+Received: from [127.0.0.1] (port=46951 helo=localhost.localdomain) by just65.justhost.com with esmtpa (Exim 4.82) (envelope-from <donotreply@dcmrf.net>) id 1YUNkk-0003in-M9 for foaad@calpoly.edu;
+	 Sat, 07 Mar 2015 16:03:26 -0700
+Date: Sat, 7 Mar 2015 16:03:26 -0700
+To: <foaad@calpoly.edu>
+From: "The Society of Digital Information and Wireless Communications (SDIWC)"
+	<donotreply@dcmrf.net>
+Subject: Call for Papers
+Message-ID: <5f688a9d1765084093b7ee8740a4cd4a@localhost.localdomain>
+X-Mailer: PHPMailer 5.2 (http://code.google.com/a/apache-extras.org/p/phpmailer/)
+Content-Type: multipart/alternative;
+	boundary="b1_5f688a9d1765084093b7ee8740a4cd4a"
+X-Identified-User: {:just65.justhost.com:dcmrfnet:dcmrf.net} {sentby:program running on server}
+MIME-Version: 1.0
+
+--b1_5f688a9d1765084093b7ee8740a4cd4a
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: 8bit
+
+Upcoming Conferences 2015/2016
+
+The Third International Conference on E-Technologies & Business on the Web (EBW2015)
+
+Mar. 26 - 28, 2015 - France
+	
+
+The Second International Conference on Artificial Intelligence & Pattern Recognition (AIPR2015)
+
+Apr. 16 - 18, 2015 - China
+
+The Third International Conference on Digital Enterprise & Information Systems (DEIS2015)
+
+Apr. 16 - 18, 2015 - China
+	
+
+The Second International Conference on Computing Technology & Information Management (ICCTIM2015)
+
+Apr. 21 - 23, 2015 - Malaysia
+
+The Fifth International Conference on Digital Information & Communication Technology & its Applications (DICTAP2015)
+
+Apr. 29 - May 1, 2015 - Lebanon
+	
+
+The Third International Conference on Technological Advances in Electrical, Electronics & Computer Engineering (TAEECE2015)
+
+Apr. 29 - May 1, 2015 - Lebanon
+
+The Second International Conference on Education Technologies & Computers (ICETC2015)
+
+May. 20 - 22, 2015 - Thailand
+	
+
+The International Technology Management Conference (ITMC2015)
+
+May. 26 - 28, 2015 - Tunisia
+
+The Second International Conference on Electrical and Electronics Engineering, Clean Energy and Green Computing (EEECEGC2015)
+
+May. 26 - 28, 2015 - Tunisia
+	
+
+The Second International Conference on Data Mining, Internet Computing, & Big Data (BigData2015)
+
+Jun. 29 - July 1, 2015 - Mauritius
+
+The Third International Conference on Digital Information Processing, E-Business & Cloud Computing (DIPECC2015)
+
+Jun. 29 - July 1, 2015 - Mauritius
+	
+
+The Global Technology Management Conference (GTMC2015)
+
+Jul. 15 - 17, 2015 - USA
+
+The Fourth International Conference on Informatics & Applications (ICIA2015)
+
+Jul. 20 - 22, 2015 - Japan
+	
+
+The International Conference on Electronics & Software Science (ICESS2015)
+
+Jul. 20 - 22, 2015 - Japan
+
+The Fourth World Congress on Computing, Engineering and Technology (WCET2015)
+
+Sept. 8 - 10, 2015 - Malaysia
+	
+
+The Second International Conference on Information Security and Digital Forensics (ISDF2015)
+
+Sept. 8 - 10, 2015 - Malaysia
+
+The Second International Conference on Computer Science, Computer Engineering, and Education Technologies (CSCEET2015)
+
+Sept. 8 - 10, 2015 - Malaysia
+	
+
+The International Conference on Software Engineering, Mobile Computing and Media Informatics (SEMCMI2015)
+
+Sept. 8 - 10, 2015 - Malaysia
+
+The International Conference on Electrical and Electronic Engineering Telecommunication Engineering, and Mechatronics (EEETEM2015)
+
+Sept. 8 - 10, 2015 - Malaysia
+	
+
+The International Conference on Big Data, Internet of Things, and Zero-Size Intelligence (BDIZSI2015)
+
+Sept. 8 - 10, 2015 - Malaysia
+
+The International Conference on Green Computing, Intelligent and Renewable Energies (GCIRE2015)
+
+Sept. 8 - 10, 2015 - Malaysia
+	
+
+The Fourth International Conference on E-Learning & E-Technologies in Education (ICEEE2015)
+
+Sept. 10 - 12, 2015 - Indonesia
+
+The International Conference on Database, Datawarehouse, Data Mining & Big Data (DDDMBD2015)
+
+Sept. 10 - 12, 2015 - Indonesia
+	
+
+The International Conference on Innovations in Intelligent Systems & Computing Technologies (ICIISCT2015)
+
+Sept. 18 - 20, 2015 - India
+
+The International Conference on Data Mining, Multimedia, Image Processing & their Applications (ICDMMIPA2015)
+
+Sept. 18 - 20, 2015 - India
+	
+
+The Fourth International Conference on e-Technologies & Networks for Development (ICeND2015)
+
+Sept. 21 - 23, 2015 - Poland
+
+The Second International Conference on Computer Science, Computer Engineering, & Social Media (CSCESM2015)
+
+Sept. 21 - 23, 2015 - Poland
+	
+
+The South-East Europe Design Automation, Computer Engineering, Computer Networks, and Social Media Conference (SEEDA-CECNSM 2015)
+
+Sept. 25-27, 2015- Greece
+
+The Fifth International Conference on Digital Information Processing & Communications (ICDIPC2015)
+
+Oct. 7 - 9, 2015 - Switzerland
+	
+
+The International Conference on Semantic Web Business & Innovation (SWBI2015)
+
+Oct. 7 - 9, 2015 - Switzerland
+
+The Fourth International Conference on Cyber Security, Cyber Welfare, and Digital Forensic (CyberSec2015)
+
+Oct. 29-31, 2015- Indonesia
+	
+
+The Second International Conference on Computer Graphics, Multimedia and Image Processing (CGMIP2015)
+
+Oct. 29-31, 2015- Indonesia
+
+The Second International Conference on Digital Security & Forensics (DigitalSec2015)
+
+Nov. 15 - 17, 2015 - South Africa
+	
+
+The Second International Conference on Information Security & Cyber Forensics (InfoSec2015)
+
+Nov. 15 - 17, 2015 - South Africa
+
+The Sixth International Conference on Digital Information Processing & Communications (ICDIPC2016)
+
+Apr. 21 - 23, 2016
+	
+
+The Third International Conference on Education Technologies & Computers (ICETC2016)
+
+Apr. 21 - 23, 2016
+
+The Third International Conference on Electrical, Electronics, Computer Engineering and their Applications (EECEA2016)
+
+Apr. 21 - 23, 2016 
+
+----------------------------------------
+
+If you want to unsubscribe to this mail message from SDIWC, just follow this link http://dcmrf.net/Filemailer2/sdiwc-mailer/unsubscribe.php?id=65b73db1921a24fbe97786870799ab0b
+
+
+--b1_5f688a9d1765084093b7ee8740a4cd4a
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Call For Papers: CFP</title><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body style="background-color:#f9d219;padding:25px 0;font-family:Arial;line-height:25px"><table style="background-color:#adbdf7;width:90%;margin:0 auto;" border="1" cellpadding="10"><tr><td><table border="0" cellpadding="10" cellspacing="0" width="100%"><tr><td align="center" style="color:#000;letter-spacing:1px;font-size:18px;font-weight:bold;font-family:tahoma;text-transform:uppercase">Upcoming Conferences 2015/2016</td></tr></table><table border="1" cellpadding="10" cellspacing="2" width="100%" style="background-color:#FDECAD"><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/ebw2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Third International Conference on E-Technologies &amp; Business on the Web (EBW2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Mar. 26 - 28, 2015 - France</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/aipr2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International Conference on Artificial Intelligence &amp; Pattern Recognition (AIPR2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Apr. 16 - 18, 2015 - China</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/deis2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Third International Conference on Digital Enterprise &amp;
+Information Systems (DEIS2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Apr. 16 - 18, 2015 - China</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/icctim2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International Conference on Computing Technology &amp; Information Management (ICCTIM2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Apr. 21 - 23, 2015 - Malaysia</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/dictap2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Fifth International Conference on Digital Information &amp; Communication Technology &amp; its Applications (DICTAP2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Apr. 29 - May 1, 2015 - Lebanon</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/taeece2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Third International Conference on Technological Advances in Electrical, Electronics &amp; Computer Engineering (TAEECE2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Apr. 29 - May 1, 2015 - Lebanon</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/icetc2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International Conference on Education Technologies &amp; Computers (ICETC2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">May. 20 - 22, 2015 - Thailand</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/itmc2015/" style="text-decoration: none; font-weight: bold; color:
+#0049DD; line-height: normal;">The International Technology Management Conference (ITMC2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">May. 26 - 28, 2015 - Tunisia</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/eeecegc2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International Conference on Electrical and Electronics Engineering, Clean Energy and Green Computing (EEECEGC2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">May. 26 - 28, 2015 - Tunisia</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/bigdata2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International Conference on Data Mining, Internet Computing, &amp; Big Data (BigData2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Jun. 29 - July 1, 2015 - Mauritius</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/dipecc2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Third International Conference on Digital Information Processing, E-Business &amp; Cloud Computing (DIPECC2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Jun. 29 - July 1, 2015 - Mauritius</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/gtmc2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Global Technology Management Conference (GTMC2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Jul. 15 - 17, 2015 - USA</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/icia2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Fourth International Conference on Informatics &amp; Applications (ICIA2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Jul. 20 - 22, 2015 - Japan</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/icess2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The International Conference on Electronics &amp; Software Science (ICESS2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Jul. 20 - 22, 2015 - Japan</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/congress/wcet2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Fourth World Congress on Computing, Engineering and Technology (WCET2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 8 - 10, 2015 - Malaysia</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/isdf2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International Conference on Information Security and Digital Forensics (ISDF2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 8 - 10, 2015 - Malaysia</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/csceet2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International Conference on Computer Science, Computer Engineering, and Education Technologies (CSCEET2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 8 - 10, 2015 - Malaysia</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size:
+16px;"><a href="http://sdiwc.net/conferences/semcmi2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The International Conference on Software Engineering, Mobile Computing and Media Informatics (SEMCMI2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 8 - 10, 2015 - Malaysia</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/eeetem2015" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The International Conference on Electrical and Electronic Engineering Telecommunication Engineering, and Mechatronics (EEETEM2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 8 - 10, 2015 - Malaysia</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/bdizsi2015/" style="text-decoration: none; font-weight: bold; color: #0049DD;
+line-height: normal;">The International Conference on Big Data, Internet of Things, and Zero-Size Intelligence (BDIZSI2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 8 - 10, 2015 - Malaysia</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/gcire2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The International Conference on Green Computing, Intelligent and Renewable Energies (GCIRE2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 8 - 10, 2015 - Malaysia</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/iceee2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Fourth International Conference on E-Learning &amp; E-Technologies in Education (ICEEE2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 10 - 12, 2015 - Indonesia</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/dddmbd2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The International Conference on Database, Datawarehouse, Data Mining &amp; Big Data (DDDMBD2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 10 - 12, 2015 - Indonesia</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/iciisct2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The International Conference on Innovations in Intelligent Systems &amp; Computing Technologies (ICIISCT2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 18 - 20, 2015 - India</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size:
+16px;"><a href="http://sdiwc.net/conferences/icdmmipa2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The International Conference on Data Mining, Multimedia, Image Processing &amp; their Applications (ICDMMIPA2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 18 - 20, 2015 - India</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/icend2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Fourth International Conference on e-Technologies &amp; Networks for Development (ICeND2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 21 - 23, 2015 - Poland</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/cscesm2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International
+Conference on Computer Science, Computer Engineering, &amp; Social Media (CSCESM2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 21 - 23, 2015 - Poland</p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/seeda-cecnsm2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;"> The South-East Europe Design Automation, Computer Engineering, Computer Networks, and Social Media Conference (SEEDA-CECNSM 2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Sept. 25-27, 2015- Greece</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/icdipc2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;"> The Fifth International Conference on Digital Information Processing &amp; Communications (ICDIPC2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px"> Oct. 7 - 9, 2015 - Switzerland </p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/swbi2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The International Conference on Semantic Web Business &amp; Innovation (SWBI2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Oct. 7 - 9, 2015 - Switzerland</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/cybersec2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;"> The Fourth International Conference on Cyber Security, Cyber Welfare, and Digital Forensic (CyberSec2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px"> Oct. 29-31, 2015- Indonesia </p></td></td> <td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"> <a href="http://sdiwc.net/conferences/cgmip2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;"> The Second International Conference on Computer Graphics, Multimedia and Image Processing (CGMIP2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px"> Oct. 29-31, 2015- Indonesia</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href=" http://sdiwc.net/conferences/digitalsec2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;"> The Second International Conference on Digital Security &amp; Forensics (DigitalSec2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px"> Nov. 15 - 17, 2015 - South Africa </p><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/infosec2015/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;">The Second International Conference on
+Information Security &amp; Cyber Forensics (InfoSec2015)</a></p><p style="margin:0;font-weight:bold;font-size:15px">Nov. 15 - 17, 2015 - South Africa</p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/icdipc2016/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;"> The Sixth International Conference on Digital Information Processing &amp; Communications (ICDIPC2016)</a></p><p style="margin:0;font-weight:bold;font-size:15px"> Apr. 21 - 23, 2016 </p></td><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/icetc2016/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;"> The Third International Conference on Education Technologies &amp; Computers (ICETC2016)</a></p><p style="margin:0;font-weight:bold;font-size:15px"> Apr. 21 - 23, 2016 </p></td></tr><tr><td valign="top"><p style="margin:0;line-height: normal;font-size: 16px;"><a href="http://sdiwc.net/conferences/eecea2016/" style="text-decoration: none; font-weight: bold; color: #0049DD; line-height: normal;"> The Third International Conference on Electrical, Electronics, Computer Engineering and their Applications (EECEA2016)</a></p><p style="margin:0;font-weight:bold;font-size:15px"> Apr. 21 - 23, 2016 </p></td></tr></table></td></tr></table></body></html><br><br>If you want to unsubscribe to this mail message from SDIWC, just follow this link <a href="http://dcmrf.net/Filemailer2/sdiwc-mailer/unsubscribe.php?id=65b73db1921a24fbe97786870799ab0b">http://dcmrf.net/Filemailer2/sdiwc-mailer/unsubscribe.php?id=65b73db1921a24fbe97786870799ab0b</a>
+
+
+
+--b1_5f688a9d1765084093b7ee8740a4cd4a--

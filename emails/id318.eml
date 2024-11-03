@@ -1,0 +1,394 @@
+Received: from BN8PR08MB6369.namprd08.prod.outlook.com (2603:10b6:a03:60::29)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR07CA0052.NAMPRD07.PROD.OUTLOOK.COM; Sun, 6 Oct 2019 06:16:35 +0000
+Received: from DM3PR08CA0010.namprd08.prod.outlook.com (2603:10b6:0:52::20) by
+ BN8PR08MB6369.namprd08.prod.outlook.com (2603:10b6:408:db::13) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2327.24; Sun, 6 Oct 2019 06:16:33 +0000
+Received: from CO1NAM04FT058.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::208) by DM3PR08CA0010.outlook.office365.com
+ (2603:10b6:0:52::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2327.24 via Frontend
+ Transport; Sun, 6 Oct 2019 06:16:33 +0000
+Authentication-Results: spf=pass (sender IP is 66.163.189.148)
+ smtp.mailfrom=yahoo.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=yahoo.com;calpoly.edu; dmarc=pass action=none
+ header.from=yahoo.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of yahoo.com designates
+ 66.163.189.148 as permitted sender) receiver=protection.outlook.com;
+ client-ip=66.163.189.148; helo=sonic314-22.consmr.mail.ne1.yahoo.com;
+Received: from sonic314-22.consmr.mail.ne1.yahoo.com (66.163.189.148) by
+ CO1NAM04FT058.mail.protection.outlook.com (10.152.91.93) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2327.20 via Frontend Transport; Sun, 6 Oct 2019 06:16:32 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1570342592; bh=YZNfCoh4N2qIsnBGWbLBLXQmLnaEWz7EQY8eFOUwwA8=; h=Date:From:To:Subject:References:From:Subject; b=Ger2aAOLp8owBqobdiLO9IRRkuePVJYAQ3H0g+k2FuFGYvHfhBJ6e2F8n3F4vDoxy+fPOIYqd38nMRY825/HjBY5QndHKrJDgUAeBTBMfa0OHKvt0cGcVa7OaEIPpN8OkEJx3p+JIh6aFFMrXgHz4Cw1IrxYvmzn7MyZIBkWSFifKuhZXf3cnckj/JwNoBvCUc5omgwPnQ6bZPuizmztEjbI+QloXbPBFCdFft+TMIZX8+hCvjctMWzGt9ge45Gt1aI3TR4WNn9Y8niyDbVdQnDPs3FQKfYhMOfhOK3Ai4QylpPSNtpPrlg2ZnB0S4rdlrCWlxpfQ0p1y5vG+04gvw==
+X-YMail-OSG: RYWvPH4VM1musriNFXX8MvIjssvgM4lcRaiohJkQhY.LDU5gMfanwJDk2rFb8o4
+ 6Nfeia.AqV_4BnWBFxZqff5gr3elDIfCugUR174umL7GtejsTvRxhpuFP0MvEk4k32l2ogXXzJ.Q
+ Kd0jdS_jg.P2gZOPHDOD90B3GkVS8UKIuTN8KWBXdhfBsEz46QQQQDYrPKe0KXXqvNS.GOP_uFOg
+ 3YbAJgVqSYEdnmvibK.dX7iP6ikH.zYzufr2oayrMsl9FdoeuBC4mbd0BZVOHu9X_gaPkYsMTMuG
+ aMwaBDVuMugJU0SCe7xB0SdWSGZUzEm.G6Z_PULOkAa8bvEulG9sCfzEW3tQ2FLITl9QCtWA1ba6
+ R9H6tNkZezRgqXPQw.lluomWdkA_oRsP_qx8tTcb332OQdrEUWqKiwv.iuIUT_XObk427I6nrq7U
+ SBKXoFcrSjjiPzqeeOKtsftDQXA4WD63XBfIRCVcGHpSkteiea5msTzioqX9S3_NDCiypP5F.AK6
+ RU4d90l3Wc9.1.Mq6OFROhOFW7wl2ZPfCDkNRX_FFkdaCA10xxvrUG4RBqqBRkZ9tjUd4t7B0YOL
+ nI0tgLXxH_2zVq8pwSZdYQsHWL7vSxkeIC90w5OJQm0vrHWX6vwgV7EaZ6dgLWDn1ODTrHJg5UST
+ YfGx2_GAAUdwjCpOkDfHCJZ6jiBrx3lLG9p3tsNrR.lJkbMqJ01K.PZ8DgHcVm2psgWM0tYMvPLa
+ tHI2uSJZl.2Wz0ZKRnyqMG2neXofHFscv.U8q5ADUYijFuaPTbjxT5lCVAU3ZRBzK5tHlPxeBC43
+ qdb3kMqCu4oSPmm5qIruXWO8bUuZfsuyh00Nr4BwH_Pv8fmaPeWAfru8JFHIZdaCjPjvEmi2noxG
+ HlBzKjLOxNfOwfgdWvFAqqpD0AJOvaSi6BLiKlqMNcWTZXDwIaLdbUTjgyUmSvYHtlNKnyN9b9Ut
+ HAJyCWDPIzZCLmw.539CXAZ4jcij0Ucy8It9VJy8ZLUphR4Q4Kxs1Vxqrpew_9I3BClEgd7sO6i4
+ yIaGDE4oQHYbsG5OLckvi4efH0FhaV6QgdWLh5dmN9wZC4ngKOt1q8zzkTY2vdIJkpBGR1zU3E.v
+ 17ulyJeBgbYJgEUIGPkK5z_PsrnaPMMasIBNjO9XYdiLv8z6mdDHtjo4x1XeXoC.wzQnPTf1eNPe
+ Rci5hA4xGHUMrrE8oADvtlOVk20VcN._dNp4blDylsHjsM8jg6lvQ6aCVl1JpGfHa1gTS_bVlqSy
+ s56CQgOFUWS8daS8ydfdMYQeJMzDkFXhlz0Q7
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic314.consmr.mail.ne1.yahoo.com with HTTP; Sun, 6 Oct 2019 06:16:32 +0000
+Date: Sun, 6 Oct 2019 06:16:27 +0000 (UTC)
+From: "amor21345678@yahoo.com" <amor21345678@yahoo.com>
+To: "jea.aripd@gmail.com" <jea.aripd@gmail.com>
+Message-ID: <95249617.4248565.1570342587416@mail.yahoo.com>
+Subject: Call for Papers
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4248564_426247692.1570342587414"
+References: <95249617.4248565.1570342587416.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.14448 YMailNorrin Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Content-Length: 13036
+Return-Path: amor21345678@yahoo.com
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Oct 2019 06:16:33.1724
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 637dfbbc-9659-42b8-4711-08d74a24bc20
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:66.163.189.148;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BN8PR08MB6369;H:sonic314-22.consmr.mail.ne1.yahoo.com;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT058.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 637dfbbc-9659-42b8-4711-08d74a24bc20
+X-MS-TrafficTypeDiagnostic: BN8PR08MB6369:
+X-MS-Exchange-PUrlCount: 1
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:4;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Oct 2019 06:16:32.9883
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 637dfbbc-9659-42b8-4711-08d74a24bc20
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN8PR08MB6369
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.9609276
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2327.004
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?Z3JWclVnSHRKUjh6Q0s0NG5vS1FhRGcxdHEzKzZ3ZTdQWnBBNWVtR1I4MU5H?=
+ =?utf-8?B?QThIZ2grc0lZbmVpWEtIUUhXRVhPckJzM2dFUnZFTktSRUt5ejBCWHU3eW5D?=
+ =?utf-8?B?MU0ya3FqR0tWTG5SZ3pFdzQwZ1JzUDlmNGtxdkF2czUxczhSUm9HSW9iUU5V?=
+ =?utf-8?B?MmZMd2JQMXdnUXJKUjlsdno1aktuQ3c1N0xHcVJGRFRPeUhNR0NTcnRuSk5L?=
+ =?utf-8?B?TVRtTVV4djBBY21qaE1XblRGbzF4WklnaEp4OFNSL3puQURvYWJnZFJvUkpY?=
+ =?utf-8?B?elhRR2s0WVhoVVVuZWZYWDFZWDZSeFplOWZnK29TaDN2dXJ6UFpvV1VFNnhk?=
+ =?utf-8?B?L2RaOG5mZXhPMXhSVnFCMDgzejlmbWJFRjJRZVRWYk1GcWZkYjhsMkVBdkJB?=
+ =?utf-8?B?V3B0S0lUdExaRmIvdU12ZHBZOHdvTlc0VDMxOEorRDlyemxuNk95R2VKMVJh?=
+ =?utf-8?B?TjBOSy9OdklxVm90TXBRVjBiakJHM1RyTzhDK2dkbFZkam5WZlNSMVprMDdw?=
+ =?utf-8?B?b1ZveW5FZFNBVjRBL1lNZ0NzOVAwc1phbWRXUjg0S1NWYm5WNWd5dnVxa3do?=
+ =?utf-8?B?d3FKMy92RWExc0ZtUXIwQXc3WGtEaC9OT0Nxd0pXeFNYYUwyWnFIY0JpQ1gz?=
+ =?utf-8?B?SFdzak5NRldHVXRPT1RBRDNvRzZhNTJwa093N2grYlpCU21YWWs2UDRTNEg4?=
+ =?utf-8?B?YmlVdk9uVDRUNWtsang5bGlKQWZtUUVGY3VtUUExMnZIblluUU1oSWhKak9W?=
+ =?utf-8?B?SWlMRjZrRVJ6bTM5UGY3LzU3OTJpc0xlQllwT250U0lOSmdXR3BZYWFrTEpy?=
+ =?utf-8?B?L2tBbHF6azFXNzRwZEJJendwbyszeTcybHlBL2xHQ1RwWVUvTHVRbzFpRDBX?=
+ =?utf-8?B?MlRrMGpVTmtaelhrLzU4UWhrY1cxMG1oKzd2UVVEbW1LWlFhd0QwaVRjOTR0?=
+ =?utf-8?B?M21xQ1Z6Q2o3WWFhai9WTFYzbDRPZ1NVcEdheVVmb3BTYWZ0OEp0Z2J2amly?=
+ =?utf-8?B?TEhqWHhUd3lUN0k2Y2NTZ3ZZaGlYUUZHVEtkZkpoSG5sSDVwSmxzNWQrS3Ru?=
+ =?utf-8?B?NFE3Q2ZHY1M3c3dHdDJpeXhtZExWdGIzV3NXT24xSDAyenVVa1gvYk44UVFY?=
+ =?utf-8?B?UHF5NEw1TXdxVTFwdnRVM0hNaGFEQjZoYWgvbVJxZGN4aEltZStHdUhxZ2FT?=
+ =?utf-8?B?d2NrUk82UHI4K2d3bzlsaEoxelhIUzRMcUFHRXJQclpsc2dTR051RkIzQks2?=
+ =?utf-8?B?WnJETzUxMWNVbDYwZG5YTExZZ3RPR0VtYmZidHhBajZIeGNFVlJyT2FPRDFY?=
+ =?utf-8?B?Vk1EM3g3RDRYYW1Kd2xHZGEyM0lWSkpWbnJ2eXNtbjl3cHQ0QVRhdlRMdzNt?=
+ =?utf-8?B?a24zOWVSb3d0Z2gvaVVBb2NZY3czTHh2c2o4VVpoZTQ3dHdITXhCb3daZUJE?=
+ =?utf-8?B?d3oyMWxWMk5NQ09iTUp4enBMSXl5ZytYZUhFT2hmYk9IZTMyTUZYRFhOVVlL?=
+ =?utf-8?B?aXpxN0tHVy95dnlJdDRoRXZPRHdQdTFRT1ZHQkhqTm14OC83cVNHZjYwcU1j?=
+ =?utf-8?B?UmxOcXdDbUdLYW5ZY3IzU1VOeVVnS0xvY05FTWx0RG5zQnFrc3pDTFFpcWY1?=
+ =?utf-8?B?SU9PQWY3NVNEOHIwc0pJTFIzRjZnbVYxU2Mwek1WeTRySktJMjVuTWJNWmZu?=
+ =?utf-8?B?dm5pQ2tNNndlbi9TN1ZHdTNtTFhWOEhRMTZ1MnRna294ZWhObGxJYlptYkJL?=
+ =?utf-8?B?MVNoQ2gwN21ZSHVCVC9kZms5MWh0N3RYVVU0bUJCWlBURUEzY0xteWMxYk96?=
+ =?utf-8?B?Y3llMmQ1VXdTWkRNWG9qaU9nZEY5WlJsWHVvWllzV2xlcXY5MG8rQTl2T0Ey?=
+ =?utf-8?B?TEo0YlJJRGdpemZTM0d6UXU4QTExZ0JGazBCZjNac0dVVGlPbVBvcE15eFFl?=
+ =?utf-8?B?UlVqdnB3cXMrZHVBVUtuQnMzL0VlWk4zSFR2a2xESmRCakFDbzdVYTZEckQw?=
+ =?utf-8?B?amphMS9ZZUhBPT0=?=
+MIME-Version: 1.0
+
+------=_Part_4248564_426247692.1570342587414
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Callfor Papers
+
+Journalof Engineering and Architecture
+
+ISSN:2334-2986 (Print) 2334-2994 (Online)
+
+Journalof Engineering and Architecture is an international peer-reviewed jo=
+urnal. The journal isnot limited to a specific aspect of engineering and ar=
+chitecture but is insteaddevoted to a wide range of subfields in the engine=
+ering sciences andarchitecture. Articles of interdisciplinary nature are pa=
+rticularly welcome.The journal strives to maintain high quality of publicat=
+ions. There will be acommitment to expediting the time taken for the public=
+ation of the papers. Theeditorial board reserves the right to reject papers=
+ without sending them outfor review. The journal also publishes innovative =
+contributions on every aspectof architectural endeavor.
+
+Thejournal is published by the American Research Institute for Policy Devel=
+opmentthat serves as a focal point for academicians, professionals, graduat=
+e and undergraduatestudents, fellows, and associates pursuing research thro=
+ughout the world.
+
+Theinterested contributors are highly encouraged to submit theirmanuscripts=
+/papers to the executive editor via e-mail at editor@aripd.org. Please indi=
+cate thename of the journal (Journal of Engineering and Architecture) in th=
+e coverletter or simply put =E2=80=98Journal of Engineering and Architectur=
+e=E2=80=99 in the subjectbox during submission via e-mail.=C2=A0=20
+
+The journal isAbstracted/Indexed in CrossRef, CrossCheck, Cabell's, Ulrich'=
+s, GriffithResearch Online, Google Scholar, Education.edu, Informatics, Uni=
+verse DigitalLibrary, Standard Periodical Directory, Gale, Open J-Gate, EBS=
+CO, Journal Seek,DRJI, ProQuest, BASE, InfoBase Index, OCLC, IBSS, Academic=
+ Journal Databases,Scientific Index.
+
+E-Publication FirstTM
+
+E-PublicationFirstTM is a feature offered through our journal platform. It =
+allowsPDF version of manuscripts that have been peer reviewed and accepted,=
+ to behosted online prior to their inclusion in a final printed journal. Re=
+aders canfreely access or cite the article. The accepted papers are publish=
+ed onlinewithin one week after the completion of all necessary publishing s=
+teps.
+
+DOI=C2=AE number
+
+Eachpaper published in Journal of Engineering and Architecture is assigned =
+a DOI=C2=AEnumber, which appears beneath the author's affiliation in the pu=
+blished paper.=20
+
+JEAis inviting papers for Vol. 7, No. 2. The online publication date is Dec=
+ember31, 2019. Submission Deadline: October 31, 2019. =C2=A0
+
+For any additionalinformation, please contact with the executive editor at =
+editor@aripd.org=20
+
+Regards,
+
+Dr. David Grau,Arizona State University, USA.=20
+
+Editor-in-Chief
+
+Journal ofEngineering and Architecture=20
+
+Website: www.jea-net.com=20
+
+________________
+
+N. B. To unsubscribe,forward this email to info@aripd.org =C2=A0with'Unsubs=
+cribe' in the subject line.
+
+
+------=_Part_4248564_426247692.1570342587414
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body><div class=3D"ydpaf6f5b57yahoo-style-wrap" style=3D"font-family:=
+times new roman, new york, times, serif;font-size:16px;"><div dir=3D"ltr" d=
+ata-setdir=3D"false"><div class=3D"ydpc84c4d4apasted-link"><p class=3D"ydpc=
+84c4d4aMsoNormal" align=3D"center" style=3D"margin-bottom:6.0pt;text-align:=
+center;line-height:normal"><u><span style=3D"font-size:14.0pt;font-family:G=
+aramond,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font-family:=
+Times New Roman">Call
+for Papers</span></u><span style=3D"font-size:14.0pt;font-family:Garamond,s=
+erif;mso-fareast-font-family:Times New Roman;mso-bidi-font-family:Times New=
+ Roman"></span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" align=3D"center" style=3D"margin-bottom:6=
+.0pt;text-align:center;line-height:normal"><span style=3D"font-size:14.0pt;=
+font-family:Garamond,serif;mso-fareast-font-family:Times New Roman;mso-bidi=
+-font-family:Times New Roman">Journal
+of Engineering and Architecture</span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" align=3D"center" style=3D"margin-bottom:6=
+.0pt;text-align:center;line-height:normal"><span style=3D"font-size:12.0pt;=
+font-family:Garamond,serif;mso-fareast-font-family:Times New Roman;mso-bidi=
+-font-family:Times New Roman">ISSN:
+2334-2986 (Print) 2334-2994 (Online)</span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;text-align:j=
+ustify;line-height:normal"><span style=3D"font-size:12.0pt;font-family:Gara=
+mond,serif">Journal
+of Engineering and Architecture</span><span style=3D"font-size:12.0pt;font-=
+family:Garamond,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font=
+-family:Times New Roman"> is an international peer-reviewed journal. The jo=
+urnal is
+not limited to a specific aspect of engineering and architecture but is ins=
+tead
+devoted to a wide range of subfields in the engineering sciences and
+architecture. Articles of interdisciplinary nature are particularly welcome=
+.
+The journal strives to maintain high quality of publications. There will be=
+ a
+commitment to expediting the time taken for the publication of the papers. =
+The
+editorial board reserves the right to reject papers without sending them ou=
+t
+for review. The journal also publishes innovative contributions on every as=
+pect
+of architectural endeavor.</span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;text-align:j=
+ustify;line-height:normal"><span style=3D"font-size:12.0pt;font-family:Gara=
+mond,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font-family:Tim=
+es New Roman">The
+journal is published by the American Research Institute for Policy Developm=
+ent
+that serves as a focal point for academicians, professionals, graduate and =
+undergraduate
+students, fellows, and associates pursuing research throughout the world.</=
+span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;text-align:j=
+ustify;line-height:normal"><span style=3D"font-size:12.0pt;font-family:Gara=
+mond,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font-family:Tim=
+es New Roman">The
+interested contributors are highly encouraged to submit their
+manuscripts/papers to the executive editor via e-mail at </span><a href=3D"=
+mailto:editor@aripd.org" rel=3D"nofollow" target=3D"_blank"><span style=3D"=
+font-size:12.0pt;font-family:Garamond,serif;mso-fareast-font-family:Times N=
+ew Roman;mso-bidi-font-family:Times New Roman">editor@aripd.org</span></a><=
+span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fareast-font-=
+family:Times New Roman;mso-bidi-font-family:Times New Roman">. Please indic=
+ate the
+name of the journal (Journal of Engineering and Architecture) in the cover
+letter or simply put =E2=80=98Journal of Engineering and Architecture=E2=80=
+=99 in the subject
+box during submission via e-mail.&nbsp; </span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">The j=
+ournal is
+Abstracted/Indexed in CrossRef, CrossCheck, Cabell's, Ulrich's, Griffith
+Research Online, Google Scholar, Education.edu, Informatics, Universe Digit=
+al
+Library, Standard Periodical Directory, Gale, Open J-Gate, EBSCO, Journal S=
+eek,
+DRJI, ProQuest, BASE, InfoBase Index, OCLC, IBSS, Academic Journal Database=
+s,
+Scientific Index.</span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">E-Pub=
+lication First<sup>TM</sup></span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;text-align:j=
+ustify;line-height:normal"><span style=3D"font-size:12.0pt;font-family:Gara=
+mond,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font-family:Tim=
+es New Roman">E-Publication
+First<sup>TM</sup> is a feature offered through our journal platform. It al=
+lows
+PDF version of manuscripts that have been peer reviewed and accepted, to be
+hosted online prior to their inclusion in a final printed journal. Readers =
+can
+freely access or cite the article. The accepted papers are published online
+within one week after the completion of all necessary publishing steps.</sp=
+an></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">DOI<s=
+up>=C2=AE </sup>number</span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;text-align:j=
+ustify;line-height:normal"><span style=3D"font-size:12.0pt;font-family:Gara=
+mond,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font-family:Tim=
+es New Roman">Each
+paper published in Journal of Engineering and Architecture is assigned a DO=
+I<sup>=C2=AE</sup>
+number, which appears beneath the author's affiliation in the published pap=
+er. </span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;text-align:j=
+ustify;line-height:normal"><span style=3D"font-size:12.0pt;font-family:Gara=
+mond,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font-family:Tim=
+es New Roman">JEA
+is inviting papers for Vol. 7, No. 2. The online publication date is Decemb=
+er
+31, 2019. Submission Deadline: October 31, 2019. <span>&nbsp;</span></span>=
+</p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">For a=
+ny additional
+information, please contact with the executive editor at </span><a href=3D"=
+mailto:editor@aripd.org" rel=3D"nofollow" target=3D"_blank"><span style=3D"=
+font-size:12.0pt;font-family:Garamond,serif;mso-fareast-font-family:Times N=
+ew Roman;mso-bidi-font-family:Times New Roman">editor@aripd.org</span></a><=
+span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fareast-font-=
+family:Times New Roman;mso-bidi-font-family:Times New Roman"> </span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">Regar=
+ds,</span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">Dr. D=
+avid Grau,
+Arizona State University, USA.<span style=3D"background:yellow"> </span></s=
+pan></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">Edito=
+r-in-Chief</span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">Journ=
+al of
+Engineering and Architecture<span style=3D"background:yellow"> </span></spa=
+n></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif">Website=
+: </span><a href=3D"http://www.jea-net.com/" rel=3D"nofollow" target=3D"_bl=
+ank"><span style=3D"font-size:12.0pt;font-family:Garamond,serif">www.jea-ne=
+t.com</span></a><span style=3D"font-size:12.0pt;font-family:Garamond,serif"=
+> </span><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-far=
+east-font-family:Times New Roman;mso-bidi-font-family:Times New Roman"></sp=
+an></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">_____=
+___________</span></p>
+
+<p class=3D"ydpc84c4d4aMsoNormal" style=3D"margin-bottom:6.0pt;line-height:=
+normal"><span style=3D"font-size:12.0pt;font-family:Garamond,serif;mso-fare=
+ast-font-family:Times New Roman;mso-bidi-font-family:Times New Roman">N. B.=
+ To unsubscribe,
+forward this email to </span><a href=3D"mailto:info@aripd.org" rel=3D"nofol=
+low" target=3D"_blank"><span style=3D"font-size:12.0pt;font-family:Garamond=
+,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font-family:Times N=
+ew Roman">info@aripd.org</span></a><span style=3D"font-size:12.0pt;font-fam=
+ily:Garamond,serif;mso-fareast-font-family:Times New Roman;mso-bidi-font-fa=
+mily:Times New Roman"> &nbsp;with
+'Unsubscribe' in the subject line.</span></p></div><br></div></div></body><=
+/html>=
+
+------=_Part_4248564_426247692.1570342587414--

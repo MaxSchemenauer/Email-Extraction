@@ -1,0 +1,470 @@
+Received: from DM6PR08MB4986.namprd08.prod.outlook.com (2603:10b6:a03:74::22)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0045.NAMPRD05.PROD.OUTLOOK.COM; Tue, 9 Jul 2019 03:07:00 +0000
+Received: from BYAPR08CA0002.namprd08.prod.outlook.com (20.178.207.143) by
+ DM6PR08MB4986.namprd08.prod.outlook.com (20.176.115.223) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2052.18; Tue, 9 Jul 2019 03:06:58 +0000
+Received: from SN1NAM04FT029.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::208) by BYAPR08CA0002.outlook.office365.com
+ (2603:10b6:a03:100::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2052.18 via Frontend
+ Transport; Tue, 9 Jul 2019 03:06:58 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=EAE.UTAH.EDU;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ SN1NAM04FT029.mail.protection.outlook.com (10.152.88.147) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2052.18 via Frontend Transport; Tue, 9 Jul 2019 03:06:56 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x69334QY024210
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Tue, 9 Jul 2019 06:03:04 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x69334w4029294;
+	Tue, 9 Jul 2019 06:03:04 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Tue, 09 Jul 2019 06:03:04 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x69333Ok022134
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Tue, 9 Jul 2019 06:03:03 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x690g5s5024881;
+	Tue, 9 Jul 2019 06:02:46 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          393539 for GAMESNETWORK@LISTSERV.UTA.FI; Tue, 9 Jul 2019 06:02:34
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6932YD0011081 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <GAMESNETWORK@listserv.uta.fi>; Tue, 9 Jul 2019 06:02:34 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x6932YxM024105
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@listserv.uta.fi>; Tue, 9 Jul 2019
+          06:02:34 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6932XSG029163 for
+          <GAMESNETWORK@listserv.uta.fi>; Tue, 9 Jul 2019 06:02:33 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Tue, 09 Jul 2019 06:02:33
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-io1-f50.google.com (mail-io1-f50.google.com
+          [209.85.166.50]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x6932VZA019488 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@listserv.uta.fi>; Tue, 9 Jul 2019 06:02:33 +0300
+Received: by mail-io1-f50.google.com with SMTP id i10so39904385iol.13 for
+          <GAMESNETWORK@listserv.uta.fi>; Mon, 08 Jul 2019 20:02:32 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:from:mime-version:date:subject:message-id:to;
+                         bh=IAKwf6Ztx8VrnYXrQRqoNvgebaz92qn/0FFAWVDfk/s=;
+                         b=mVSMpiiWc7PjyH/vffVjAmWoypraiSktRvlEky/rZ4V/edntWOHd/pHNs0j0oVDNyt
+                         7U/8vVIE7qZrcKMPd45ugqGMcU4DPlt3PTfg4ziPH0b6l61VNK9kGmt5UAXZWW5Z0xnk
+                         9zOzUqi6/UIYfvW7D/lErSvvsvEsx+Zk4AxBN6v/5IRaDo89NFAn4I1hu4oqTLfTwqub
+                         naMITu8La/1Z8rvAbQ4nHMBh/NDVxU2E6Wx2PMfjIST56mryAl0Zj7IGtwqEJSE8oMb5
+                         TUNcxgJgoG5lNw+4lnJBuvGM5CHr7BEtFYC2XtMeqRLR2+6dsMNV91ZDSt3ddgI1ZKKR
+                         01Fg==
+X-Gm-Message-State: APjAAAXdQH9+OXHBOogDwn2H1l78CThrMbXty+4Z0N1J86m/J4K/LzZs
+                    A5QXeK7rYap5eqZLdmoHA+11Uv4F3WdrmQ==
+X-Google-Smtp-Source: APXvYqxnV6dBLKMkH430n20ze0UXTgR2ms5yJq8HlqRg7690PInTtxGx2sccck5fQgR9ePRy9I0/bA==
+X-Received: by 2002:a5d:88c6:: with SMTP id i6mr1033072iol.107.1562641350603;
+            Mon, 08 Jul 2019 20:02:30 -0700 (PDT)
+Received: from [192.168.1.15] (c-24-10-237-81.hsd1.ut.comcast.net.
+          [24.10.237.81]) by smtp.gmail.com with ESMTPSA id
+          v13sm17559361ioq.13.2019.07.08.20.02.29 (version=TLS1_2
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Mon, 08 Jul 2019
+          20:02:30 -0700 (PDT)
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_2E3638AB-F0FD-4465-AD3D-110DDF5956AB"
+X-Mailer: Apple Mail (2.3273)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Tue, 09 Jul 2019 06:03:04 +0300 (EEST)
+X-Spam-Level: xxx
+X-Spam-Report: AWL,BAYES_00,HTML_MESSAGE,L_HDR_HAS_DKIM,URIBL_BLOCKED
+X-Spam-Status: NO ; -30
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+Message-ID: <982BCA4D-B54C-4D2B-9EE5-A126143A8D53@eae.utah.edu>
+Date: Mon, 8 Jul 2019 21:02:28 -0600
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: "Rogelio E. Cardona-Rivera" <rogelio@EAE.UTAH.EDU>
+Subject: [GAMESNETWORK] ICIDS 2019 Deadline Extended: Main Conference Papers (now due July 19th!)
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 09 Jul 2019 03:06:57.2953
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 703c6330-5bbc-40e2-6fae-08d7041a80cf
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(3000300001)(286005)(189003)(199004)(7192003)(176002)(50226002)(6862004)(1096003)(6306002)(74826001)(40036005)(246002)(8676002)(7846003)(7596002)(486006)(126002)(146002)(325944009)(75640400001)(7636002)(77096007)(6392003)(57306001)(966005)(476003)(336012)(42882007)(956004)(15974865002)(69556001)(4006050)(2616005)(236005)(59536001)(53386004)(60626007)(43066004)(606006)(60616004)(14444005)(356004)(21615005)(66346011)(16003)(88552002)(71190400001)(106002)(95326003)(33656002)(33964004)(26005)(16586007)(55176004);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB4986;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT029.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 703c6330-5bbc-40e2-6fae-08d7041a80cf
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:DM6PR08MB4986;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4986:
+X-MS-Exchange-PUrlCount: 5
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Jul 2019 03:06:56.6678
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 703c6330-5bbc-40e2-6fae-08d7041a80cf
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4986
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.0122265
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2052.002
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?aFg4cytsdGpzWTMzY2VrcFBjN0RZcWZQa0ZtLzFNV0pLMkJZTzd5eVA3QjAz?=
+ =?utf-8?B?Rjk1TWh0b2JBNVQyZVRsSGtaSWFuN1hWenkwQVl5ZEN5ajdsMFVCRG9RaTRG?=
+ =?utf-8?B?WnBPY0tnVm1jRUtuS3RiaEVSTEpPQWNzVGZUcWtubU8yRWdZL1NEVzdnWldI?=
+ =?utf-8?B?anVpN0V5YjY0ckZUNEd3WGJmeFMvQ0lJM3lxYldiZ0R3QmRNSzJKM1Q0OFov?=
+ =?utf-8?B?VlJrUUpqMDJwTXI3WldwZWpZUnFKQnpkQitmMDhOTjlmc2p2SW5YUmorT0I5?=
+ =?utf-8?B?cUZPeWZncWd3OVhrSStHUml2WDNqa0s0VmdYaERmeWZwdnBXLzg3Q05kSFRI?=
+ =?utf-8?B?UTlDVThSVUh2SEo4YmJ4UXY3clBGY1MxcUNiL0thV00wblhXeFY4Vi9wZzY5?=
+ =?utf-8?B?RGdsWitWZElpYTBJN2xia3c2VUphc1RuYlVnSUpGbDFPOFNQczB4K2FubXRo?=
+ =?utf-8?B?Rk8zb25JM3lEdk1YWTJzUElTcjJOUE9Pd0R5a21TWHJGVjlTditEUXB4Mzdl?=
+ =?utf-8?B?L3pWNTg3Ly9hcVMxV0ZtZEt0OTNqZFphWFV6ZTRhaGtPaUVzeEhFYyt3MmFS?=
+ =?utf-8?B?RVliZFJwZ3JsZXdxNyszV0paVFlrUVhvM0wyM1hlSHROK1BnQ2pIU1lscGp3?=
+ =?utf-8?B?SC9TRWF6TUNETjlPWnQwclArQTd2Qk8zYXpENjhrbG9lcTBQMnh5Y1gveUta?=
+ =?utf-8?B?bGNxNzFmakZvY1ZIdjUvbmRRaXhQaFlWcS9nVFZhYm9mcFo5Q0cvZ3pmZ2RM?=
+ =?utf-8?B?SGRhWDBWKzlHRzNFcXNZdjhWbGVtOXF0N3JNOTNmOENkS3gvc0tRNE03V21I?=
+ =?utf-8?B?dlQwa3NqU3pVdUNWY3o1cTJsL3ZpbmpsdnZiNkdoNzVDeXhvend1M1djMjRK?=
+ =?utf-8?B?di9FV2dhNTNrNExYVmpnQWhjRFFtRWV5bXBjZXY5QXRvYWppZG8rclJxdEM4?=
+ =?utf-8?B?ekVjMDhnN0JBYU1BMG9ta25GNW1kaHVjOTU2Vmd0Z2JaR01xSTJ6SlJpQ29E?=
+ =?utf-8?B?bWl4T3ZsWXBzWnZZaHJzdU5UU1Q5RGwwbGUyR09RdlZFS3A0NVlNSDFUMW83?=
+ =?utf-8?B?bU1IamZFN1pObHpHVUhEYysrVVh1OU4vTk5sQ285MnJKb0FOeE14Z0hSTk9L?=
+ =?utf-8?B?MDZ0QXdoVWRIWHFBRzlKbzBlTWVSQ1pKdEdGVjkzRGFrbTNUS1JlN0RUOFJF?=
+ =?utf-8?B?QXpZeDlwWjMrYkp5dHVTNEJ2S2VlTk5uYXJEU3JjdXcwUXhiemRVcWtzTmpw?=
+ =?utf-8?B?Z1V4Q0Fub1ZMcFJKelZwa0w1VEQweno5bkZsVEhpazFSbGNldWVqTlZaV082?=
+ =?utf-8?Q?BsAEWOW2x7bdkDZX7FHJvLWa1br0JXHt0O?=
+MIME-Version: 1.0
+
+--Apple-Mail=_2E3638AB-F0FD-4465-AD3D-110DDF5956AB
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+International Conference for Interactive Digital Storytelling (ICIDS) =
+2019
+November 19-23, 2019, Snowbird, Utah, USA
+
+Due to numerous requests, the ICIDS 2019 Call for Papers Submission =
+Deadline (for Papers and Posters) has been extended. =20
+
+Paper and poster submissions are now due on Friday July 19th, 2019 =
+(Anywhere on Earth time). =20
+
+This will be the only extension; we will not be extending the deadline =
+further due to publisher constraints.
+
+As a reminder, this year=E2=80=99s conference features a special theme =
+of =E2=80=9CDesign Foundations, Innovations, and Practices.=E2=80=9D In =
+addition to the topics covered by previous iterations of ICIDS, the =
+conference program will feature topic areas that focus on principles of =
+design, advancements in the design lifecycle, and design process case =
+studies for interactive storytelling.
+
+Important Dates
+Deadlines for this call are posted below, for your convenience:
+(All deadlines are specified as Anywhere on Earth time =
+<https://en.wikipedia.org/wiki/Anywhere_on_Earth> unless otherwise =
+noted.)
+Paper & Poster submission: 	July 19th, 2019
+Initial Notification: 		August 23rd, 2019
+Author Rebuttals: 		August 30th, 2019
+Final notifications: 		September 6th, 2019
+Camera-ready submission: 	September 13th, 2019
+
+More details of this call have been posted on the ICIDS 2019 conference =
+website: http://icids.eae.utah.edu/call-for-papers/ =
+<http://icids.eae.utah.edu/call-for-papers/>. The updated deadline will =
+be posted on the website soon.
+
+For general questions, please email the ICIDS Program Chairs Rogelio E. =
+Cardona-Rivera and Anne Sullivan by using the following email address: =
+icids2019program@gmail.com <mailto:icids2019program@gmail.com>
+We hope that the extended deadline allows you to refine your =
+contributions, and we look forward to seeing them at ICIDS 2019!
+
+Best,
+
+
+Anne Sullivan, Georgia Institute of Technology, USA=20
+Rogelio E. Cardona-Rivera, University of Utah, USA=20
+ICIDS 2019 Program Co-chairs
+
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--Apple-Mail=_2E3638AB-F0FD-4465-AD3D-110DDF5956AB
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; -webki=
+t-line-break: after-white-space;" class=3D""><span id=3D"docs-internal-guid=
+-42073321-7fff-8c6a-51f7-60190af4d69d" style=3D"font-family: -webkit-standa=
+rd;" class=3D""><p dir=3D"ltr" style=3D"line-height: 1.38; margin-top: 0pt;=
+ margin-bottom: 16pt;" class=3D""><span style=3D"font-size: 13.999999999999=
+998pt; font-family: Arial; color: rgb(102, 102, 102); font-variant-ligature=
+s: normal; font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D"">International =
+Conference for Interactive Digital Storytelling (ICIDS) 2019</span><span st=
+yle=3D"font-size: 13.999999999999998pt; font-family: Arial; color: rgb(102,=
+ 102, 102); font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D""><br class=3D""></span><span style=3D"font-size: 13.99999=
+9999999998pt; font-family: Arial; color: rgb(102, 102, 102); font-variant-l=
+igatures: normal; font-variant-east-asian: normal; font-variant-position: n=
+ormal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Novembe=
+r 19-23, 2019, Snowbird, Utah, USA</span></p><div style=3D"line-height: 1.3=
+8; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-siz=
+e: 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-e=
+ast-asian: normal; font-variant-position: normal; vertical-align: baseline;=
+ white-space: pre-wrap;" class=3D"">Due to numerous requests, the ICIDS 201=
+9 Call for Papers Submission Deadline (for Papers and Posters) has been ext=
+ended.&nbsp;&nbsp;</span></div><br class=3D""><div style=3D"line-height: 1.=
+38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-si=
+ze: 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-=
+east-asian: normal; font-variant-position: normal; vertical-align: baseline=
+; white-space: pre-wrap;" class=3D"">Paper and poster submissions are now d=
+ue on </span><span style=3D"font-size: 11pt; font-family: Arial; font-weigh=
+t: 700; font-variant-ligatures: normal; font-variant-east-asian: normal; fo=
+nt-variant-position: normal; vertical-align: baseline; white-space: pre-wra=
+p;" class=3D"">Friday July 19th, 2019</span><span style=3D"font-size: 11pt;=
+ font-family: Arial; font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D""> (Anywhere on Earth time).&nbsp;&nbsp;</span></=
+div><br class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin=
+-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-family: Aria=
+l; font-variant-ligatures: normal; font-variant-east-asian: normal; font-va=
+riant-position: normal; vertical-align: baseline; white-space: pre-wrap;" c=
+lass=3D"">This will be the </span><span style=3D"font-size: 11pt; font-fami=
+ly: Arial; font-variant-ligatures: normal; font-variant-east-asian: normal;=
+ font-variant-position: normal; text-decoration: underline; vertical-align:=
+ baseline; white-space: pre-wrap;" class=3D"">only</span><span style=3D"fon=
+t-size: 11pt; font-family: Arial; font-variant-ligatures: normal; font-vari=
+ant-east-asian: normal; font-variant-position: normal; vertical-align: base=
+line; white-space: pre-wrap;" class=3D""> extension; we will not be extendi=
+ng the deadline further due to publisher constraints.</span></div><br class=
+=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;=
+" class=3D""><span style=3D"font-size: 11pt; font-family: Arial; font-varia=
+nt-ligatures: normal; font-variant-east-asian: normal; font-variant-positio=
+n: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">As =
+a reminder, this year=E2=80=99s conference features a special theme of =E2=
+=80=9CDesign Foundations, Innovations, and Practices.=E2=80=9D In addition =
+to the topics covered by previous iterations of ICIDS, the conference progr=
+am will feature topic areas that focus on principles of design, advancement=
+s in the design lifecycle, and design process case studies for interactive =
+storytelling.</span></div><br class=3D""><h2 dir=3D"ltr" style=3D"line-heig=
+ht: 1.38; margin-top: 5pt; margin-bottom: 5pt;" class=3D""><span style=3D"f=
+ont-size: 12pt; font-family: Arial; font-weight: 400; font-style: italic; f=
+ont-variant-ligatures: normal; font-variant-east-asian: normal; font-varian=
+t-position: normal; vertical-align: baseline; white-space: pre-wrap;" class=
+=3D"">Important Dates</span></h2><div style=3D"line-height: 1.38; margin-to=
+p: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; fon=
+t-family: Arial; font-variant-ligatures: normal; font-variant-east-asian: n=
+ormal; font-variant-position: normal; vertical-align: baseline; white-space=
+: pre-wrap;" class=3D"">Deadlines for this call are posted below, for your =
+convenience:</span><span style=3D"font-size: 11pt; font-family: Arial; font=
+-variant-ligatures: normal; font-variant-east-asian: normal; font-variant-p=
+osition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D=
+""><br class=3D""></span><span style=3D"font-size: 11pt; font-family: Arial=
+; font-variant-ligatures: normal; font-variant-east-asian: normal; font-var=
+iant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cl=
+ass=3D"">(All deadlines are specified as </span><a href=3D"https://en.wikip=
+edia.org/wiki/Anywhere_on_Earth" style=3D"text-decoration: none;" class=3D"=
+"><span style=3D"font-size: 11pt; font-family: Arial; color: rgb(17, 85, 20=
+4); font-variant-ligatures: normal; font-variant-east-asian: normal; font-v=
+ariant-position: normal; text-decoration: underline; vertical-align: baseli=
+ne; white-space: pre-wrap;" class=3D"">Anywhere on Earth time</span></a><sp=
+an style=3D"font-size: 11pt; font-family: Arial; font-variant-ligatures: no=
+rmal; font-variant-east-asian: normal; font-variant-position: normal; verti=
+cal-align: baseline; white-space: pre-wrap;" class=3D""> unless otherwise n=
+oted.)</span></div><ul style=3D"margin-top: 0pt; margin-bottom: 0pt;" class=
+=3D""><li dir=3D"ltr" style=3D"list-style-type: none; font-size: 11pt; font=
+-family: Arial; font-variant-ligatures: normal; font-variant-east-asian: no=
+rmal; font-variant-position: normal; vertical-align: baseline; white-space:=
+ pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin-=
+bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-variant-ligat=
+ures: normal; font-variant-east-asian: normal; font-variant-position: norma=
+l; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Paper &amp;=
+ Poster submission: </span><span style=3D"font-size: 11pt; font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D""><span cla=
+ss=3D"Apple-tab-span" style=3D"white-space: pre;">	</span></span><span styl=
+e=3D"font-size: 11pt; font-weight: 700; font-variant-ligatures: normal; fon=
+t-variant-east-asian: normal; font-variant-position: normal; vertical-align=
+: baseline; white-space: pre-wrap;" class=3D"">July 19th, 2019</span></div>=
+</li><li dir=3D"ltr" style=3D"list-style-type: none; font-size: 11pt; font-=
+family: Arial; font-variant-ligatures: normal; font-variant-east-asian: nor=
+mal; font-variant-position: normal; vertical-align: baseline; white-space: =
+pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; margin-b=
+ottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-variant-ligatu=
+res: normal; font-variant-east-asian: normal; font-variant-position: normal=
+; vertical-align: baseline; white-space: pre-wrap;" class=3D"">Initial Noti=
+fication: </span><span style=3D"font-size: 11pt; font-variant-ligatures: no=
+rmal; font-variant-east-asian: normal; font-variant-position: normal; verti=
+cal-align: baseline; white-space: pre-wrap;" class=3D""><span class=3D"Appl=
+e-tab-span" style=3D"white-space: pre;">	</span></span><span style=3D"font-=
+size: 11pt; font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D""><span class=3D"Apple-tab-span" style=3D"white-space: pre=
+;">	</span></span><span style=3D"font-size: 11pt; font-variant-ligatures: n=
+ormal; font-variant-east-asian: normal; font-variant-position: normal; vert=
+ical-align: baseline; white-space: pre-wrap;" class=3D"">August 23rd, 2019<=
+/span></div></li><li dir=3D"ltr" style=3D"list-style-type: none; font-size:=
+ 11pt; font-family: Arial; font-variant-ligatures: normal; font-variant-eas=
+t-asian: normal; font-variant-position: normal; vertical-align: baseline; w=
+hite-space: pre;" class=3D""><div style=3D"line-height: 1.38; margin-top: 0=
+pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-va=
+riant-ligatures: normal; font-variant-east-asian: normal; font-variant-posi=
+tion: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">=
+Author Rebuttals: </span><span style=3D"font-size: 11pt; font-variant-ligat=
+ures: normal; font-variant-east-asian: normal; font-variant-position: norma=
+l; vertical-align: baseline; white-space: pre-wrap;" class=3D""><span class=
+=3D"Apple-tab-span" style=3D"white-space: pre;">	</span></span><span style=
+=3D"font-size: 11pt; font-variant-ligatures: normal; font-variant-east-asia=
+n: normal; font-variant-position: normal; vertical-align: baseline; white-s=
+pace: pre-wrap;" class=3D""><span class=3D"Apple-tab-span" style=3D"white-s=
+pace: pre;">	</span></span><span style=3D"font-size: 11pt; font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">August 30=
+th, 2019</span></div></li><li dir=3D"ltr" style=3D"list-style-type: none; f=
+ont-size: 11pt; font-family: Arial; font-variant-ligatures: normal; font-va=
+riant-east-asian: normal; font-variant-position: normal; vertical-align: ba=
+seline; white-space: pre;" class=3D""><div style=3D"line-height: 1.38; marg=
+in-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt=
+; font-variant-ligatures: normal; font-variant-east-asian: normal; font-var=
+iant-position: normal; vertical-align: baseline; white-space: pre-wrap;" cl=
+ass=3D"">Final notifications: </span><span style=3D"font-size: 11pt; font-v=
+ariant-ligatures: normal; font-variant-east-asian: normal; font-variant-pos=
+ition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D""=
+><span class=3D"Apple-tab-span" style=3D"white-space: pre;">	</span></span>=
+<span style=3D"font-size: 11pt; font-variant-ligatures: normal; font-varian=
+t-east-asian: normal; font-variant-position: normal; vertical-align: baseli=
+ne; white-space: pre-wrap;" class=3D""><span class=3D"Apple-tab-span" style=
+=3D"white-space: pre;">	</span></span><span style=3D"font-size: 11pt; font-=
+variant-ligatures: normal; font-variant-east-asian: normal; font-variant-po=
+sition: normal; vertical-align: baseline; white-space: pre-wrap;" class=3D"=
+">September 6th, 2019</span></div></li><li dir=3D"ltr" style=3D"list-style-=
+type: none; font-size: 11pt; font-family: Arial; font-variant-ligatures: no=
+rmal; font-variant-east-asian: normal; font-variant-position: normal; verti=
+cal-align: baseline; white-space: pre;" class=3D""><div style=3D"line-heigh=
+t: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"fo=
+nt-size: 11pt; font-variant-ligatures: normal; font-variant-east-asian: nor=
+mal; font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">Camera-ready submission: </span><span style=3D"font-s=
+ize: 11pt; font-variant-ligatures: normal; font-variant-east-asian: normal;=
+ font-variant-position: normal; vertical-align: baseline; white-space: pre-=
+wrap;" class=3D""><span class=3D"Apple-tab-span" style=3D"white-space: pre;=
+">	</span></span><span style=3D"font-size: 11pt; font-variant-ligatures: no=
+rmal; font-variant-east-asian: normal; font-variant-position: normal; verti=
+cal-align: baseline; white-space: pre-wrap;" class=3D"">September 13th, 201=
+9</span></div></li></ul><br class=3D""><div style=3D"line-height: 1.38; mar=
+gin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11p=
+t; font-family: Arial; font-variant-ligatures: normal; font-variant-east-as=
+ian: normal; font-variant-position: normal; vertical-align: baseline; white=
+-space: pre-wrap;" class=3D"">More details of this call have been posted on=
+ the ICIDS 2019 conference website: </span><a href=3D"http://icids.eae.utah=
+.edu/call-for-papers/" style=3D"text-decoration: none;" class=3D""><span st=
+yle=3D"font-size: 11pt; font-family: Arial; color: rgb(17, 85, 204); font-v=
+ariant-ligatures: normal; font-variant-east-asian: normal; font-variant-pos=
+ition: normal; text-decoration: underline; vertical-align: baseline; white-=
+space: pre-wrap;" class=3D"">http://icids.eae.utah.edu/call-for-papers/</sp=
+an></a><span style=3D"font-size: 11pt; font-family: Arial; font-variant-lig=
+atures: normal; font-variant-east-asian: normal; font-variant-position: nor=
+mal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">. The upd=
+ated deadline will be posted on the website soon.</span></div><br class=3D"=
+"><div style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" cl=
+ass=3D""><span style=3D"font-size: 11pt; font-family: Arial; font-variant-l=
+igatures: normal; font-variant-east-asian: normal; font-variant-position: n=
+ormal; vertical-align: baseline; white-space: pre-wrap;" class=3D"">For gen=
+eral questions, please email the ICIDS Program Chairs Rogelio E. Cardona-Ri=
+vera and Anne Sullivan by using the following email address: </span><a href=
+=3D"mailto:icids2019program@gmail.com" style=3D"text-decoration: none;" cla=
+ss=3D""><span style=3D"font-size: 11pt; font-family: Arial; color: rgb(17, =
+85, 204); font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; text-decoration: underline; vertical-align: =
+baseline; white-space: pre-wrap;" class=3D"">icids2019program@gmail.com</sp=
+an></a></div><br class=3D""><div style=3D"line-height: 1.38; margin-top: 0p=
+t; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-fam=
+ily: Arial; font-variant-ligatures: normal; font-variant-east-asian: normal=
+; font-variant-position: normal; vertical-align: baseline; white-space: pre=
+-wrap;" class=3D"">We hope that the extended deadline allows you to refine =
+your contributions, and we look forward to seeing them at ICIDS 2019!</span=
+></div><br class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; mar=
+gin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-family: A=
+rial; font-variant-ligatures: normal; font-variant-east-asian: normal; font=
+-variant-position: normal; vertical-align: baseline; white-space: pre-wrap;=
+" class=3D"">Best,</span></div><div style=3D"line-height: 1.38; margin-top:=
+ 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; font-=
+family: Arial; font-variant-ligatures: normal; font-variant-east-asian: nor=
+mal; font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D""><br class=3D""><br class=3D""></span></div><div style=
+=3D"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><sp=
+an style=3D"font-size: 11pt; font-family: Arial; font-variant-ligatures: no=
+rmal; font-variant-east-asian: normal; font-variant-position: normal; verti=
+cal-align: baseline; white-space: pre-wrap;" class=3D"">Anne Sullivan, Geor=
+gia Institute of Technology, USA&nbsp;</span></div><div style=3D"line-heigh=
+t: 1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"fo=
+nt-size: 11pt; font-family: Arial; font-variant-ligatures: normal; font-var=
+iant-east-asian: normal; font-variant-position: normal; vertical-align: bas=
+eline; white-space: pre-wrap;" class=3D"">Rogelio E. Cardona-Rivera, Univer=
+sity of Utah, USA&nbsp;</span></div><div style=3D"line-height: 1.38; margin=
+-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; =
+font-family: Arial; font-variant-ligatures: normal; font-variant-east-asian=
+: normal; font-variant-position: normal; vertical-align: baseline; white-sp=
+ace: pre-wrap;" class=3D"">ICIDS 2019 Program Co-chairs</span></div></span>=
+<br class=3D"Apple-interchange-newline" style=3D"font-family: -webkit-stand=
+ard;"></body></html>--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--Apple-Mail=_2E3638AB-F0FD-4465-AD3D-110DDF5956AB--

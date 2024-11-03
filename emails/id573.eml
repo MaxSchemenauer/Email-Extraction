@@ -1,0 +1,963 @@
+Received: from SN6PR08MB4032.namprd08.prod.outlook.com (2603:10b6:301::34) by
+ BYAPR08MB4021.namprd08.prod.outlook.com with HTTPS via
+ MWHPR10CA0024.NAMPRD10.PROD.OUTLOOK.COM; Wed, 9 Jan 2019 17:40:08 +0000
+Received: from BN6PR08CA0084.namprd08.prod.outlook.com (2603:10b6:404:b6::22)
+ by SN6PR08MB4032.namprd08.prod.outlook.com (2603:10b6:805:20::32) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1495.7; Wed, 9 Jan
+ 2019 17:40:05 +0000
+Received: from SN1NAM04FT038.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::202) by BN6PR08CA0084.outlook.office365.com
+ (2603:10b6:404:b6::22) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1516.14 via Frontend
+ Transport; Wed, 9 Jan 2019 17:40:05 +0000
+Authentication-Results: spf=softfail (sender IP is 129.65.64.167)
+ smtp.mailfrom=uta.fi; cpslo.onmicrosoft.com; dkim=none (message not signed)
+ header.d=none;cpslo.onmicrosoft.com; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=405
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning uta.fi
+ discourages use of 129.65.64.167 as permitted sender)
+Received: from cpmx06-in.its.calpoly.edu (129.65.64.167) by
+ SN1NAM04FT038.mail.protection.outlook.com (10.152.89.25) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1471.13 via Frontend Transport; Wed, 9 Jan 2019 17:40:04 +0000
+Authentication-Results-Original: cpmx06-in.its.calpoly.edu; dkim=none (message
+ not signed) header.i=none; spf=Pass smtp.mailfrom=owner-gamesnetwork@uta.fi;
+ dmarc=fail (p=none dis=none) d=gmail.com
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: =?us-ascii?q?A0AQJQDCMDZchxQHAZldBh0BAQsBAQUBg?=
+ =?us-ascii?q?WWBDkgFeRYOgRuEAIEdgl6Efo4WgWwWC4cMCQGNZ4FjDwEBAhYBCoRrgX8iOBI?=
+ =?us-ascii?q?BAwEBAQEBAQIUAQEBCgsJCCkjDIVOBAILDwYjAwUOCQMEAQUOAQEGAggNGQEIC?=
+ =?us-ascii?q?wEJAgIDGwEDAQ4DAQUBIggLBREHBII2SwGBaAEXAQUKkA2QCjyLGoEXAReFMYI?=
+ =?us-ascii?q?OChmBEjGBDhKMHg8XgUA/gRGCXYF2gV0DARiBAgkJARIBEU2CSoJXAokwUAKFb?=
+ =?us-ascii?q?oEAkFUnCRyBQ4U6g0yHGBiBZIUkgzSEN4MDAY52izYCBAIEBQIFDgEhO0w1SgE?=
+ =?us-ascii?q?7cTMiGxUaITGBRnUJgiqBCwEHgy0wgT+CO4VdVIgYgigWAQE?=
+X-IPAS-Result: =?us-ascii?q?A0AQJQDCMDZchxQHAZldBh0BAQsBAQUBgWWBDkgFeRYOgRu?=
+ =?us-ascii?q?EAIEdgl6Efo4WgWwWC4cMCQGNZ4FjDwEBAhYBCoRrgX8iOBIBAwEBAQEBAQIUA?=
+ =?us-ascii?q?QEBCgsJCCkjDIVOBAILDwYjAwUOCQMEAQUOAQEGAggNGQEICwEJAgIDGwEDAQ4?=
+ =?us-ascii?q?DAQUBIggLBREHBII2SwGBaAEXAQUKkA2QCjyLGoEXAReFMYIOChmBEjGBDhKMH?=
+ =?us-ascii?q?g8XgUA/gRGCXYF2gV0DARiBAgkJARIBEU2CSoJXAokwUAKFboEAkFUnCRyBQ4U?=
+ =?us-ascii?q?6g0yHGBiBZIUkgzSEN4MDAY52izYCBAIEBQIFDgEhO0w1SgE7cTMiGxUaITGBR?=
+ =?us-ascii?q?nUJgiqBCwEHgy0wgT+CO4VdVIgYgigWAQE?=
+X-IronPort-AV: E=Sophos;i="5.56,458,1539673200"; 
+   d="scan'208,217";a="123263934"
+X-Originating-IP-Address: 153.1.7.20
+Received: from mxout2.uta.fi ([153.1.7.20])
+  by cpmx06-in.its.calpoly.edu with ESMTP/TLS/AES256-GCM-SHA384; 09 Jan 2019 09:40:02 -0800
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x09HZdOB005576
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Wed, 9 Jan 2019 19:35:39 +0200
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x09HZZaD015938;
+	Wed, 9 Jan 2019 19:35:35 +0200
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Wed, 09 Jan 2019 19:35:35 +0200 (EET)
+X-Spam-Status: NO ; -1101
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x09HZZx0027158
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Wed, 9 Jan 2019 19:35:35 +0200
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x09FWrg5007189;
+	Wed, 9 Jan 2019 19:35:17 +0200
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          307194 for GAMESNETWORK@LISTSERV.UTA.FI; Wed, 9 Jan 2019 19:35:02
+          +0200
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x09HZ2EZ025214 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Wed, 9 Jan 2019 19:35:02 +0200
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x09HZ2v8027709 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Wed, 9 Jan 2019 19:35:02 +0200
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x09HZ0si015324 for
+          <GAMESNETWORK@uta.fi>; Wed, 9 Jan 2019 19:35:00 +0200
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Wed, 09 Jan 2019 19:35:00
+          +0200 (EET)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-lj1-f176.google.com (mail-lj1-f176.google.com
+          [209.85.208.176]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x09HYxt4014438 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Wed, 9 Jan 2019 19:35:00 +0200
+Received: by mail-lj1-f176.google.com with SMTP id t18-v6so7222934ljd.4 for
+          <GAMESNETWORK@uta.fi>; Wed, 09 Jan 2019 09:34:59 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=dr7X7wiLIwmdUMFt4S27eSRcpKklPqi4mgv09PZUU4Q=;
+                         b=udQJjHJYHzy1q7EqLnpBlUrCTZEPLoaLCfwLAJjFMBSTA3tJHWpqHE2TlZ3a07BE5z
+                         Zxn1udr+3XceqkwCpxoey4DgGGCT6HjcsSmR7f6vf5lxrg3QhWDOCx52z9kenoX/N60T
+                         5XZhXkU2WXhyPf+ZElgu7PAhAw+IIvEtbyjrAJt4aF/QiZa2XpRAliM4nvp/fhRomrUn
+                         AsB/q1Rgmnow3V4B5c+lLOPPmj+XeFHc8NVoanabAU1h4dD8n6LFQEjW860XoL8h9WqT
+                         xlCmLX8Y1MPpV6bDP0Bkr4Sq7o8RJv6Y57vWGZUvn49wIuPK+L1+0x/v3ZbZeTvnKOFn
+                         7rrQ==
+X-Gm-Message-State: AJcUukd+omwToedbwnhCut4m7PGzOoQVbj0Z3YtjZ98+NXLDrNBcUol3
+                    auLv01EWGFLhX7kkt4Slz7HboA4qIynoJkcbG9gXyLwvEsA=
+X-Google-Smtp-Source: ALg8bN50SuR9M76Idi/pPYBJ+aIbKJrGUllTbsIG51OLxQhuiaemQFYV58YCbMDrMhR3w18UWFyTI+r8uVAaS7P6fDE=
+X-Received: by 2002:a2e:5054:: with SMTP id
+            v20-v6mr3991598ljd.45.1547055297878; Wed, 09 Jan 2019 09:34:57
+            -0800 (PST)
+Content-Type: multipart/alternative; boundary="0000000000007a645c057f09e125"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Wed, 09 Jan 2019 19:35:35 +0200 (EET)
+X-FSIGK-Spam-Status: Yes(F-Secure/fsigk_smtp/550/mailscan1.uta.fi) with FSIGK/SPAM_CT/@score=9/BD_CONFIRMED, Build: [Engines: 2.15.8.1186, Stamp: 3], Multi: [Enabled, t: (0.000012,0.036128)], BW: [Enabled, t: (0.000010,0.000002)], RTDA: [Enabled, t: (0.235087), Hit: Yes, Details: v2.7.25; Id: 18.1i600m8.1d0pqu2fh.18e8rs; url(1)], total: 1000(675)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,FROM_EXCESS_BASE64,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,L_URL_INFO_TLD,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,USER_IN_WHITELIST,FSIGK_SPAM_CT_WHITELIST
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CAJ5Sn4FyGJG907MuH=_12=KnD9KSHbc-07bYwWRpUCGntBhY4Q@mail.gmail.com>
+Date: Wed, 9 Jan 2019 12:34:20 -0500
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: =?UTF-8?B?UmFiaW5kcmEgUmF0YW4g4pms?= <raratan@GMAIL.COM>
+Subject: [GAMESNETWORK] CFP: Games + Communication Ante-Conference (prior to ICA 2019)
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 09 Jan 2019 17:40:04.9565
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 06874415-6b4e-4366-671d-08d676597d85
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:129.65.64.167;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(2980300002)(209900001)(3190300001)(189003)(176002)(199004)(45074003)(7192003)(7846003)(6392003)(55446002)(76482006)(4744004)(486006)(73392003)(1096003)(59536001)(66346011)(8676002)(62580400003)(966005)(82202003)(246002)(93516011)(33964004)(71190400001)(4006035)(42882007)(498394004)(5660300001)(305945005)(146002)(7636002)(7596002)(21615005)(15974865002)(58800400003)(336012)(55176004)(356004)(6666004)(606006)(8576002)(98316002)(76786011)(16586007)(43066004)(106466001)(42186006)(561944003)(53946003)(5070765005)(84326002)(53386004)(85182001)(95636005)(476003)(87572001)(95326003)(61266001)(6862004)(126002)(105596002)(14444005)(6306002)(16003)(26005)(116002)(236005)(49910200004)(579004)(6606295002);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4032;H:cpmx06-in.its.calpoly.edu;FPR:;SPF:SoftFail;LANG:en;PTR:cpmx06-in.its.calpoly.edu;MX:1;A:1;
+X-Microsoft-Exchange-Diagnostics:
+ 1;SN1NAM04FT038;1:BIEFAAyPibYIj8Sw+qtsi3EHAqs8+Yp7Pg7Y8iDcVzTV74yvKagcv9L3nnUPfPqT8+n3cvQNW02zwGegwQpOyhCB/S9yJPA27huw3rQeg6kulX1bAsZOewlJvmD9lcu7
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT038.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 06874415-6b4e-4366-671d-08d676597d85
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600109)(711020)(4605076)(1401299)(1421009)(71702078);SRVR:SN6PR08MB4032;
+X-Microsoft-Exchange-Diagnostics:
+ 1;SN6PR08MB4032;3:4r9RSfPtHkEC/aLAJb1c/HBXmb9FzYk9E5d0iy1FtKucaYMFJouP+MkycKfERB3q24IS9SFkaOpxOyLLi7nF0tknQm1EaNXcB1S5HcsA+jgy+utcvVHccTH12zN+4D+JrZMUh6a7K+9St1ccWVixRrqC8oscW5suGnc3kLR0dVpWyzSZllDS5URCKhGMe6a/dYRupOeSOmk47AptcqEQKwk30f/GJxVeXpc5GGydxkQM4hsMYkm4HO33W4KvsCaHkBoF9XJavpwvzIGX0aFP0rHrjUvDpXpUQEGhY5RwLzqK03pq/W0tIh7qJuAL/h8rZj9ryCEa0R+6it+Wz30YVBPDueQsMSLJVYZHlJEnwE65bZ+RK1UxS7Bjvnc4lYas;25:yms7coNSABgw292glWTjr9r7lbFm3MtZZsmEPv4/UXPIy2PJPTvyPPWbClPA0YUZWroVAN2A5J8Zu6jiQA+9kP49G3c2rHAPUv2U8ccBQQn2p91KWmZ6DYg6QeNNFofcdZS4cNrhzRKHTvpHxLNQBZH0h/pgdTB0sNfn346CIXKjYbMvDnpGrK37CeBdQtoisBPsksy3MCMj62+foa6tuEy0Kbiw7QV1zySyWW/m70qiex9k5AIrqTy5LGqTT1cRS3ARsEVd/391oC2J1offy5ySBg14PUJIAV8+cwKq5MiKPLwqJ4ZO7/fwLlq28kUyBF7UHrUG8/FM/KIUQiOtYg==
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4032:
+X-Microsoft-Exchange-Diagnostics:
+ 1;SN6PR08MB4032;31:PjjiDIuGWjXfSrSzxEH3otP/PmkPyVgggOiIhrN2AX6WImyLAIk4MSUu1TubZbo6vofsdg/ZSQmOvNlfBBCTBxZCceo/PPYM91WtwzHgAx4KFJBlXdS/HQKaZdaSxxfO19ikH+HYyCatlGEZFeu4NAJCSvDNydEofmhCGh+e/lPWRMa3aiQJPt/smwHAOuP2UnsxzgdK5aLTXivr2d65deBsFSSGlUeBGeiAWIKbOM0=;20:89oSWB0QizySNf2eVCfCNWSviW1S5XGxmEHPM5denyOtHx1Jm8UAHtD7f8SxOtuyTz0D8XdRaIfSHA0IaJHTlBrV/paCfAWqTzb20NPG0ddjhIqXgfA0K6KM7FvaPMpyU7neuL1xu1UaKnuMvLWNWx2QUuhn3ve7uPW8PG/7GjPkY5BwuMr1khHXRy9k4fx+SfNdZRF/eFLmETbVEAbsScXz8sEcABizuqpYnqrXjDObNrwxfNGeKT1yEHZePJ3MwvNHdQxHBho9bZmb9E+7KlIhhpEcE93ufVKHzZ/dYLsAMD9QN9P+nU3WtPOq9VK8UyHOxqc+9w+ajGyuJ/HPxnwhVTF70IZkwHeRfjfwGZ3wL8nD8pOaED9Kut3va5u6UkgIOgN4aUlsD0E7o3SFhMy/85/tZF/Qj8Oe2xuICPwNJhsoOTB3IcaDfZERSbLbPKh0KyrSy2pN3wUiXq4y6WrX761T5cMWtqvoUSmRmxkekZrram+HdXQfEsA17Bem
+X-Microsoft-Exchange-Diagnostics:
+ 1;SN6PR08MB4032;4:PPSOgWRtoeqjnPk1f6zQcFTPNpNO7L+ckYuhiSpLh7J6DALzqFKYnHb33RTV6VQsAG2Yr8nUleaIbK8wkNAolY14Bb4gEFNLElsfpmjBcARLAVrPvjhWzB1Rt1jnoOsKJMAwFG0JHWDK9LnjCgRWBAnD0YLI4YP92pL9jls9DFjNncnp+aogmxRGB+uFd1R1YUvBnhq3+s1qhEpClxfYG3IN8PEF4P3ZCAP5xp2Fgce0gPE9GGgaEGCBkWqjIQC1zTQLb7oGxZ0fG3qXOd6YmtYWj320HwAxRpfQAzQ5moo=
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Exchange-Diagnostics:
+ =?us-ascii?Q?1;SN6PR08MB4032;23:F9zH7VCiW9Plm+eYspLyhPQ95O/gSqMJWQh8xIj23?=
+ =?us-ascii?Q?IAHiqM4TNiP9Vn0H4eYlWRnEBiQdKgVT9xcaDkgBtrSXGoRwY4vytNgQ1bx0?=
+ =?us-ascii?Q?yNvQnLmYoscZA8IqvASqiN9kxDL1XvjrhZsI+uoJVmZRK86I+bYtzxXvB0Cb?=
+ =?us-ascii?Q?efs0z4nO46/20sRaEDItQtNBHZYRAl19SeT8NCjDi8l3OMle+/12XKF0dp8K?=
+ =?us-ascii?Q?wRiAeYlCa1XfTmFfg9cN3mu7rMQdoS6YM+k/G9wlqdwAkDv+ss1QewBzijR+?=
+ =?us-ascii?Q?X5BERCMrwTp/VqDn2c3hu4f2a2lR4GJ9O3WCpigAWxYvGm+5wHGu24wKOctM?=
+ =?us-ascii?Q?PLLP1bHNLA1nlg9ht4peP1q5b0SDpRQT/WZHsydDIPjraCVzQbhwSUFdFJ1a?=
+ =?us-ascii?Q?EBwx4t9CWoHGEvTCxdkvwJM97azwKZe4whJJ1HEIKFMOS9vasB/x2dVs7hF7?=
+ =?us-ascii?Q?N5CJdol6AXzQG8sDxI3FOL8agrJ/ogzFXCEldtrN6jGuDssNKU2p3BqrzUJ0?=
+ =?us-ascii?Q?Dp+SuvQAW8p1/1WKC2012DHu6rl91EgIZAtyf7OBoA3yLOIVHAwywSi0bTp7?=
+ =?us-ascii?Q?5xbt5HfVwU8YxzhgXX3yAd+4pVaPcdZx3F6PhYffRKsFau4pkD309m0tcsQ3?=
+ =?us-ascii?Q?APYSficwkamERLz57ZfSW5pyTaCQaWfGzaOui67lnE6tFP3H8t9H6uLUASvE?=
+ =?us-ascii?Q?zbmIfzkNqSgFkfiOkBdehK1ljt5sghjq6jpTYKYmOSNy26MKxvycRHYG9ZiQ?=
+ =?us-ascii?Q?ShXIZ5jA1zGDXmnKNMgm+xUG78rM/IXcf/bCm++OYEkfe4jZiS7wrxv5mSNZ?=
+ =?us-ascii?Q?r9nBXMPnLEjbNoNWD0+2T2cdI41Sk33ZuBEIIHwvMK1H/mai6VlXHu4NJ5gJ?=
+ =?us-ascii?Q?TKWtu5bzz0FUACc42TUdniw7b6+ieSFi/r2oQfCKlYu3F0ykx5nLfWzk4GcL?=
+ =?us-ascii?Q?4XdtM0XMGMroDjFyttfwocErD5EJhWEGfQtGLgp/Xg7fqNqcE7yty4uLzGOV?=
+ =?us-ascii?Q?tPNcVhJS0Js42pW5/WBQbNqB2lQnmOUjgW43jfHRjBygq6b41uo70z4I1jzR?=
+ =?us-ascii?Q?2NhYbehfM4CJNrgKij4bUsZgxVt+osMCN41PPiGkl0WEsYgmMowrwwzaYB4f?=
+ =?us-ascii?Q?jugCLNhGJQn3VYc7Ls+27gXl9iF8/Oh8JvUq27UNuBKy7Rw0UYX6CacPrHOy?=
+ =?us-ascii?Q?N9UA4yPTu6C+grwgoywA/JyHXwBlPnTLC94lps6pH9ryIoU9/FvwH200K+vW?=
+ =?us-ascii?Q?HOQoSBLA835Ukh4gzmZU9STYcLxFM9HZxuPQwl9Jk+f+Histgly/RJ4G+xWl?=
+ =?us-ascii?Q?y46saIsI+9uUNcEdcyhNKEcLUUQ4WilfLshoP7c980Uq056jfCxS2pJUD75T?=
+ =?us-ascii?Q?YWnFz37PU5YYcn2gxZbLoO6eC/TPTCLE3we71oQg6BefvK2xWHzfe/KPpoQd?=
+ =?us-ascii?Q?aY9EUMyCo1RggZsvYa8xZ0wNG8aiwVWGEuNa9EDjlnLOi2BAiecsUnV5sfDr?=
+ =?us-ascii?Q?Tkk3KvnqcjOXYdNJc9j5NRUeBOj2Py4o8xYzW39+nSEdH0zNmpN/MRU+E5FI?=
+ =?us-ascii?Q?LStVCOdCr2dfWT5/P7U5yrW+RMdLY11yLA/W/r0Ul3i5AwdkGKnPd5nFjp/F?=
+ =?us-ascii?Q?lFmlkmAEPcrvHyMLbbWEg=3D=3D?=
+X-Microsoft-Exchange-Diagnostics:
+ 1;SN6PR08MB4032;6:KHCVCV55BnmdE+4kcqb3Gqup2dOILWJ4UC669vacUy8xQhBpsdUdy1JRmA/0QOeBrIa0AE4lbfqNYHOAWwR3+g2rHqTO/wWFxGqNAOUHlloZldBqTX/JwGjeXfQjf4d2Np2KrAqYuq7hGwDpbv5U1Zj7QDhIQ1FoxoBpviObcu3E6szxz7YEcnEXcMSpIixx4kDV5jaCgWPfZbyk37S3Jg6xTf/45Mmdi0BIcV9IqaYpg87k27K97KXUgY7fRnjfT1o+yEj/3N2ySBh4AiPTUDgudVIzTvGo6OqObU0akNBZmJaPClLJCnb6ukpia1RLCyODtvnn84CBtPbtjVGQa7vvw8KXFFjo1E1H/SgHfQHcZYUoSGlAw7Ntx3uFkBp2n7gpSuGUzJgo0xS0MuPZKOyXNKrxQ7k9NXa/Q16g73hvWCf4gaIONzVXTzovy0IFjYx7djNRvpCcupJTGTJ/WA==;5:06pMrtNL8Db/dTsaoBjEc8kpAM59upML7dYc4rpv/ChZzsmfLYJFjr8FkSldF1wTSEuReP1HPlyvs/tccSMj3EkJhCBKofdsC+UIEoKfIN12nNbfKfU7bENhZyocrzJobUjhlXKZt1g8Ji8Bxbzutj1c8CcsD6fxW2bNqBauwwMvzScoX7q6png0Lr+0H1ObQHQTgu3VMoz7R9G8p96V9w==;7:miLoeNKRxRCy6eLsxoR3wXsLU+SRvuKNB0F5KMc5ONs/TRQyKKa9NRjwVhFBG3IrATTX96J50mMiJXpsGyXQ3z2np9nES2LS94bQVNPVnkGddiNT5SYzBj1HCqyP/bS1tx7nzfOMOXpgQl7kJGaJ+A==
+SpamDiagnosticOutput: 1:99
+SpamDiagnosticMetadata: NSPM
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Jan 2019 17:40:04.7065
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 06874415-6b4e-4366-671d-08d676597d85
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4032
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.8616416
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1495.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	M2X7kxR9AWj8i9Xtab+ip2Akcd2KHXl4f1kgWaFUdouVOitoH5YL2dK/OUO0PiBXa8MNeCPnMYeIpnOdhT9kIIxTcySQWxuEoBTwlJm0iVXmYgA634V2LLJQXZlPvosZe+1UIxg38kQgzPbYjTJvhdKrw+vAyMbrHpSo40J91PYTUmB9wpjcyTpq9StHhrT5KbMeiYYQYpxH2MkbLjZs8nIrQi2D+S63efCpuDMxwUvFqGH9G0hFmjZ3jJyZd+JKcSAvah9o6zfQchloFFyZ9jhm0XJVmFBCxhsEIRxYeJCmgL3peguYEEjQ6YyCXILCTbLdvSOSh5nPWLwIUOIrz7Zw9Zhuayj5u5NHEygekjNHt8yqB7MukxjmLTX3AFK5sm3rkNIUQLQ/Cn70nbX3EQddtDxS5qZ4Wg+iRaciHd1F6c0DSu4xxT9G70ykusJHyuMhNbGeHUL9JOwrhYlxf5pUoJHHG5LTGfqMhLGVM+LxfdkNTqBb9jPeqJdGVxpf0VpW1O07ERg35LNZxI59ZxcY/JiiHXTo4hJXoZfslR9XDobHTtbvarQ2uR8CiXIvjNkNGlY68XiEfV+Rz0TnKCF30nzz9p8Go+Q6tFQ+W3/jstoYg1yYmHAXFDMlgJBf0Ez6sDVy2ozFjJmOuh3T3eupjl4uRSa84ZzT1eSMyxf4e81g8ezJIHz/njZO5xlFKuLBEP5GkeZ9VnQXayirWnYfeHJ4YMWaZSxTs0y7igC65EZusJ32A7OFQ4xjepZxDNb6UsxXLRel4sHfz0lpTVOiaNGDKKajWq0LaWlRWVgMxMs6aT6cXbthRR0W2qgIBhG+3Hl9GZ6C2YlOERr1Qg==
+MIME-Version: 1.0
+
+--0000000000007a645c057f09e125
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Call for Papers, Demos and Provocations*
+
+*For the =E2=80=9CGames + Communication Ante-Conference=E2=80=9D*
+
+*Friday, May 24, 2019 =E2=80=93 Washington, DC*
+
+*http://icagamesanteconf.info <http://icagamesanteconf.info>*
+
+*(Preceding the International Communication Association (ICA) annual
+conference)*
+
+
+
+*WHEN: Papers due January 31; day long conference on Friday*,* May 24, 2019
+*
+
+*LOCATION: Washington, DC at the **AU Game Lab
+<https://www.american.edu/gamelab/>*
+
+The *ICA Game Studies Division* and *American University (AU)* request
+proposals for papers, unusual panels and demos for a one-day conference in
+Washington, DC on the intersection of games, research in the field of
+communication, policy, and innovative methods.  The event will be hosted in
+the new AU Game Lab and feature a reception afterward.
+
+This is a deliberately intimate event.  Registration will be capped at 50
+people, with priority to speakers to reward participation =E2=80=93 so subm=
+it!
+Cost will be minimal, primarily for food and facilities, and likely to be
+well under $100, depending on the sponsorships we obtain. If your
+organization would like to be a sponsor, let us know.
+
+*WHO SHOULD SUBMIT:* Game and communication scholars =E2=80=93 but also des=
+igners,
+DC game strategists and funders.
+
+*BACKGROUND:* This is a new twist on traditional academic conferences, with
+several unusual formats and some DC specialties including government
+funding and policy implications for games research.  Today, the study of
+games influences design, shapes our understanding of society, and is
+applied in domains from education to healthcare, museums and urban
+planning. All are welcome. Emerging technologies, including Virtual Reality
+and Augmented Reality, use game engines even when applied to broader
+communicative purposes.
+
+*OUR GOAL:* We are deliberately hosting an =E2=80=9CAnte-Conference=E2=80=
+=9D to allow for
+more provocative content than that usually encountered in traditional
+academic venues. Therefore, we not only request traditional research
+papers, but also solicit =E2=80=9Cideas beyond research,=E2=80=9D including=
+ failures on
+which scholars can build, methods to link design principles to theories,
+and workshops to probe genuinely difficult topics of game research and
+design.  Traditional scholarship is still welcome, but the proposal should
+address take into account the unique themes and goals of this conference.
+
+*DC NETWORKING IDEAS:* We also are looking for ideas on how the event might
+best tap into Washington DC=E2=80=99s rich universe of federal funding agen=
+cies,
+policymakers and design practitioners.  Currently we are considering
+inviting select representatives to a networking reception at the end of the
+day, possibly with a keynote panel just beforehand. The focus will be on
+how we should be improving the connection between research and
+policy/funding/design.  Ideas in this direction can be submitted as an
+email inquiry or as a more formal panel (see below).
+*SUBMISSION TYPES*
+
+*OPTION A:* more traditional, including:
+
+=C2=B7        *Research Reports* and *Theoretical Papers *submitted as *Ext=
+ended
+Abstracts *of *500 =E2=80=93 1200 words*. Each proposal should contain a (1=
+) brief
+description of the research gap and theoretical background, (2) research
+questions, (3) methodological approach, (4) progress and anticipated
+implications. Submissions are not required to provide full results in cases
+of ongoing data collection, but presenters are expected to present their
+findings at the conference. Make sure to give a sense of your progress so
+far, and why you are likely to have something provocative or useful by late
+spring. Traditional papers will be given less priority than those clearly
+stating why they should be discussed outside a traditional conference
+(e.g., thorny issues about how to frame a particular finding may be more
+interesting than basic learning gains from a game).
+
+=C2=B7        *Panel Proposals *are to be submitted as *Extended Abstracts =
+*of *500
+=E2=80=93 1200 words*. Each panel proposal should consist of (1) abstract o=
+f the
+core ideas the panel desires to address, (2) a rationale for the panel, and
+(3) a brief overview of individual topics covered. Non-traditional panels,
+or those relevant to the topics below are encouraged to apply. Evidence of
+high-quality speaking/speakers is recommended.
+
+*OPTION B:* innovative and provocative formats, especially as alternatives
+to the traditional structures of academic conferences:
+
+=C2=B7        *Hall of Meaningful Failure*: We invite studies from scholars=
+ that
+should have worked =E2=80=93 but didn=E2=80=99t. This format is meant to en=
+courage scholars
+to view their research as being iterative and building upon itself, like a
+well-designed game. Or perhaps to warn of a pitfall that more game scholars
+should be aware of and avoid at all costs. Send a *500 =E2=80=93 1200 word =
+*proposal
+of what you will discuss. Indicate if you would like =E2=80=9Cno recordings=
+=E2=80=9D and
+for attendees to avoid public discussion to make for a safer space for
+honest discussion.
+
+=C2=B7        *Implications for Policy or Funding*: These *1000 =E2=80=93 1=
+200 *word
+papers translate a recent publication in games or related research into
+clear recommendations (bullet points) for what policy makers should do
+differently, based on the insights of the paper. The source paper should
+not be your own, or your team=E2=80=99s work. Be as specific as possible ab=
+out the
+funding agency or policy unit that should respond.
+
+=C2=B7        *University Studios*: What have university-led studios with
+external clients or earned revenue models learned about making games, and
+how can they improve? Grant-funded labs could also share findings, so long
+as they can address how to balance the relationship with the funder in the
+making and distribution process. Submit a *1000 =E2=80=93 1200 *word paper,=
+ ideally
+comparing your studio or lab with at least one other institution or model.
+
+=C2=B7        *Methods that Break Play*: How is studying games different fr=
+om
+other fields of communication? Send a *500 =E2=80=93 1200 *word abstract. D=
+o we
+need to tweak any established methods in order to study games well?
+
+=C2=B7        *Design Principles*: These *500 =E2=80=93 1200 *word abstract=
+s will
+directly address how game studies scholarship can affect design. Each
+principle or =E2=80=9Cmini-theory=E2=80=9D for design should be posited and=
+ defended, such
+as =E2=80=9Cfriends lists should be ranked by recency.=E2=80=9D Such princi=
+ples are needed
+so that designers can act on research findings.
+
+=C2=B7        *Playful Societies*: These *500 =E2=80=93 1200 word *abstract=
+s reflect on
+how playful practices are migrating out of games. This might include
+activities like cheating or the subversion of norms and rules, as well as
+how playful attitudes persist after the game is over. Papers can also
+provide recommendations and ideas of how to bridge from games into other
+domains and activities.
+
+=C2=B7        *Well-Played-with-a-Theory*: We invite *500 *=E2=80=93 *750* =
+word
+proposals that bring audiences through a bit of real game play, either
+commercial or serious games, with a twist; the talks must highlight a key
+theory that is becoming more prevalent in game studies. We also ask game
+developers to submit under this heading utilizing gameplay from their own
+games. Ideally you should be ready to bring whatever console or adapters
+necessary to show live gameplay.
+
+=C2=B7        *The Wrong Term*: What=E2=80=99s a word that game scholars sh=
+ould cease
+using, or be using differently? Submit *250 =E2=80=93 500 *word abstracts f=
+or
+presentations that will comprise =E2=80=9Cmicro-talks=E2=80=9D lasting no m=
+ore than 10
+minutes, followed by plenty of debate.
+
+=C2=B7        *Demo* *(showcase)*: *250-500* word abstract, including the
+current status of the project and readiness of the demo. We plan to show
+demos during the lunch hour or evening reception in a parallel format.
+Priority will be given to games that are used to test a research idea or
+apply a research finding in a novel way that advances our understanding of
+the connection between research and practice.
+*Hints, Selection Process and Curatorial Approach*
+
+To maximize quality with such fluid and unusual categories, the chairs will
+curate this event.  Our goal is to make the day provocative and satisfying
+as an experience, not necessarily to represent all categories equally or in
+proportion to the number of submissions.
+
+Our main advice is to craft proposals that you find personally interesting
+and think your peers would find provocative with implications for the field
+or future research.
+
+We expect the tone of the conference to be reflective, with plenty of time
+for questions and discussion. It will likely have one keynote speaker,
+include an arcade that will showcase demonstration games (see above), and a
+networking reception.
+*How to Submit*
+
+=C2=B7        Please email all submissions and questions to Maxwell Foxman =
+(
+mfoxman@uoregon.edu).
+
+=C2=B7        In the *title *of your *email *include the submission type un=
+der
+which you are presenting. As an example: For someone submitting under the
+=E2=80=9CWell-Played Theory,=E2=80=9D the subject line should read: *WELL-P=
+LAYED THEORY:
+[Title of Submission]*
+
+=C2=B7        Submissions should include authors=E2=80=99 names, institutio=
+ns and
+titles. Where appropriate, submissions will be anonymized by the organizers
+(i.e., you do not need to remove your name) and reviewed by a panel of
+international scholars.
+*Important Dates*
+
+=C2=B7        Deadline for submissions: January 31, 2019 at 11:59pm EST.
+
+=C2=B7        Notification of Acceptance: February 22, 2019. (Speakers are
+expected to register within a week of their notification of acceptance so
+we can finalize the public program.)
+
+=C2=B7        Be notified! Email us if you would like to be notified when t=
+he
+registration page goes up in February
+
+*Let=E2=80=99s up the ante for traditional conferences!*
+
+
+*Conference Committee:*
+
+Chair: Maxwell Foxman, University of Oregon
+
+Co-Chair: Benjamin Stokes, American University
+
+Advisor: Rabindra Ratan, Michigan State University
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--0000000000007a645c057f09e125
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:=
+center;margin:0in 0in 0.0001pt;line-height:115%;font-size:11pt;font-family:=
+Arial,sans-serif"><i><span lang=3D"EN" style=3D"font-size:16pt;line-height:=
+115%">Call for Papers, Demos and Provocations</span><span lang=3D"EN"></spa=
+n></i></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center;margin:0=
+in 0in 0.0001pt;line-height:115%;font-size:11pt;font-family:Arial,sans-seri=
+f"><b><span lang=3D"EN" style=3D"font-size:16pt;line-height:115%">For the =
+=E2=80=9CGames &#43; Communication Ante-Conference=E2=80=9D</span><span lan=
+g=3D"EN"></span></b></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center;margin:0=
+in 0in 0.0001pt;line-height:115%;font-size:11pt;font-family:Arial,sans-seri=
+f"><b><span lang=3D"EN">Friday, May 24, 2019 =E2=80=93 Washington, DC</span=
+></b></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center;margin:0=
+in 0in 0.0001pt;line-height:115%;font-size:11pt;font-family:Arial,sans-seri=
+f"><span class=3D"gmail-MsoHyperlink" style=3D"color:blue;text-decoration-l=
+ine:underline"><b><span lang=3D"EN"><a href=3D"http://icagamesanteconf.info=
+" style=3D"color:blue">http://icagamesanteconf.info</a></span></b></span><b=
+><span lang=3D"EN"> </span></b></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center;margin:0=
+in 0in 0.0001pt;line-height:115%;font-size:11pt;font-family:Arial,sans-seri=
+f"><i><span lang=3D"EN" style=3D"font-size:8pt;line-height:115%">(Preceding=
+ the International Communication Association (ICA) annual conference)</span=
+></i></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><strong><span style=3D"font-size:11pt;font-family:Ar=
+ial,sans-serif">&nbsp;</span></strong></p>
+
+<p align=3D"center" style=3D"margin:0in 0in 0.0001pt;text-align:center;back=
+ground-image:initial;background-position:initial;background-size:initial;ba=
+ckground-repeat:initial;background-origin:initial;background-clip:initial;f=
+ont-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><strong><span =
+style=3D"font-size:11pt;font-family:Arial,sans-serif">WHEN: Papers due Janu=
+ary 31; day long conference on&nbsp;Friday</span></strong><span style=3D"fo=
+nt-size:11pt;font-family:Arial,sans-serif">,<strong>&nbsp;May 24, 2019 </st=
+rong></span></p>
+
+<p align=3D"center" style=3D"margin:0in 0in 0.3in;text-align:center;backgro=
+und-image:initial;background-position:initial;background-size:initial;backg=
+round-repeat:initial;background-origin:initial;background-clip:initial;font=
+-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><strong><span sty=
+le=3D"font-size:11pt;font-family:Arial,sans-serif">LOCATION: Washington, DC=
+ at the&nbsp;</span></strong><span class=3D"gmail-MsoHyperlink" style=3D"co=
+lor:blue;text-decoration-line:underline"><b><span style=3D"font-size:11pt;f=
+ont-family:Arial,sans-serif;color:rgb(202,32,23)"><a href=3D"https://www.am=
+erican.edu/gamelab/" style=3D"color:blue"><span style=3D"color:rgb(202,32,2=
+3)">AU Game Lab</span></a></span></b></span><b><span style=3D"font-size:11p=
+t;font-family:Arial,sans-serif"></span></b></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><span style=3D"font-size:11pt;font-family:Arial,sans=
+-serif">The&nbsp;<strong>ICA Game Studies Division</strong>&nbsp;and&nbsp;<=
+strong>American University (AU)</strong>&nbsp;request proposals for papers,=
+ unusual panels and demos for a one-day conference in Washington, DC on the=
+ intersection of games, research in the field of communication, policy, and=
+ innovative methods.&nbsp; The event will be hosted in the new AU Game Lab =
+and feature a reception afterward.</span></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><span style=3D"font-size:11pt;font-family:Arial,sans=
+-serif">This is a deliberately intimate event.&nbsp; Registration will be c=
+apped at 50 people, with priority to speakers to reward participation =E2=
+=80=93 so submit!&nbsp; Cost will be minimal, primarily for food and facili=
+ties, and likely to be well under $100, depending on the sponsorships we ob=
+tain. If your organization would like to be a sponsor, let us know.</span><=
+/p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><strong><span style=3D"font-size:11pt;font-family:Ar=
+ial,sans-serif">WHO SHOULD SUBMIT:</span></strong><span style=3D"font-size:=
+11pt;font-family:Arial,sans-serif">&nbsp;Game and communication scholars =
+=E2=80=93 but also designers, DC game strategists and funders.</span></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><strong><span style=3D"font-size:11pt;font-family:Ar=
+ial,sans-serif">BACKGROUND:</span></strong><span style=3D"font-size:11pt;fo=
+nt-family:Arial,sans-serif">&nbsp;This is a new twist on traditional academ=
+ic conferences, with several unusual formats and some DC specialties includ=
+ing government funding and policy implications for games research.&nbsp; To=
+day, the study of games influences design, shapes our understanding of soci=
+ety, and is applied in domains from education to healthcare, museums and ur=
+ban planning. All are welcome. Emerging technologies, including Virtual Rea=
+lity and Augmented Reality, use game engines even when applied to broader c=
+ommunicative purposes.</span></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><strong><span style=3D"font-size:11pt;font-family:Ar=
+ial,sans-serif">OUR GOAL:</span></strong><span style=3D"font-size:11pt;font=
+-family:Arial,sans-serif">&nbsp;We are deliberately hosting an =E2=80=9CAnt=
+e-Conference=E2=80=9D to allow for more provocative content than that usual=
+ly encountered in traditional academic venues. Therefore, we not only reque=
+st traditional research papers, but also solicit =E2=80=9Cideas beyond rese=
+arch,=E2=80=9D including failures on which scholars can build, methods to l=
+ink design principles to theories, and workshops to probe genuinely difficu=
+lt topics of game research and design.&nbsp; Traditional scholarship is sti=
+ll welcome, but the proposal should address take into account the unique th=
+emes and goals of this conference.</span></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><strong><span style=3D"font-size:11pt;font-family:Ar=
+ial,sans-serif">DC NETWORKING IDEAS:</span></strong><span style=3D"font-siz=
+e:11pt;font-family:Arial,sans-serif">&nbsp;We also are looking for ideas on=
+ how the event might best tap into Washington DC=E2=80=99s rich universe of=
+ federal funding agencies, policymakers and design practitioners.&nbsp; Cur=
+rently we are considering inviting select representatives to a networking r=
+eception at the end of the day, possibly with a keynote panel just beforeha=
+nd. The focus will be on how we should be improving the connection between =
+research and policy/funding/design.&nbsp; Ideas in this direction can be su=
+bmitted as an email inquiry or as a more formal panel (see below).</span></=
+p>
+
+<h2 align=3D"center" style=3D"margin:0in 0in 13.5pt;text-align:center;backg=
+round-image:initial;background-position:initial;background-size:initial;bac=
+kground-repeat:initial;background-origin:initial;background-clip:initial;li=
+ne-height:115%;break-after:avoid;font-size:16pt;font-family:Arial,sans-seri=
+f;font-weight:normal"><strong><span lang=3D"EN" style=3D"font-size:11pt;lin=
+e-height:115%">SUBMISSION TYPES</span></strong><span lang=3D"EN" style=3D"f=
+ont-size:11pt;line-height:115%"></span></h2>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><strong><span style=3D"font-size:11pt;font-family:Ar=
+ial,sans-serif">OPTION A:</span></strong><span style=3D"font-size:11pt;font=
+-family:Arial,sans-serif">&nbsp;more traditional, including:</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Research=
+ Reports</span></strong><span lang=3D"EN">&nbsp;and&nbsp;<strong>Theoretica=
+l Papers&nbsp;</strong>submitted as&nbsp;<strong>Extended Abstracts&nbsp;</=
+strong>of&nbsp;<strong>500 =E2=80=93 1200 words</strong>. Each proposal sho=
+uld contain a (1) brief description of the research gap and theoretical bac=
+kground, (2) research questions, (3) methodological approach, (4) progress =
+and anticipated implications. Submissions are not required to provide full =
+results in cases of ongoing data collection, but presenters are expected to=
+ present their findings at the conference. Make sure to give a sense of you=
+r progress so far, and why you are likely to have something provocative or =
+useful by late spring. Traditional papers will be given less priority than =
+those clearly stating why they should be discussed outside a traditional co=
+nference (e.g., thorny issues about how to frame a particular finding may b=
+e more interesting than basic learning gains from a game).</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Panel Pr=
+oposals&nbsp;</span></strong><span lang=3D"EN">are to be submitted as&nbsp;=
+<strong>Extended Abstracts&nbsp;</strong>of&nbsp;<strong>500 =E2=80=93 1200=
+ words</strong>. Each panel proposal should consist of (1) abstract of the =
+core ideas the panel desires to address, (2) a rationale for the panel, and=
+ (3) a brief overview of individual topics covered. Non-traditional panels,=
+ or those relevant to the topics below are encouraged to apply. Evidence of=
+ high-quality speaking/speakers is recommended.</span></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><strong><span style=3D"font-size:11pt;font-family:Ar=
+ial,sans-serif">OPTION B:</span></strong><span style=3D"font-size:11pt;font=
+-family:Arial,sans-serif">&nbsp;innovative and provocative formats, especia=
+lly as alternatives to the traditional structures of academic conferences:<=
+/span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Hall of =
+Meaningful Failure</span></strong><span lang=3D"EN">: We invite studies fro=
+m scholars that should have worked =E2=80=93 but didn=E2=80=99t. This forma=
+t is meant to encourage scholars to view their research as being iterative =
+and building upon itself, like a well-designed game. Or perhaps to warn of =
+a pitfall that more game scholars should be aware of and avoid at all costs=
+. Send a&nbsp;<strong>500 =E2=80=93 1200 word&nbsp;</strong>proposal of wha=
+t you will discuss. Indicate if you would like =E2=80=9Cno recordings=E2=80=
+=9D and for attendees to avoid public discussion to make for a safer space =
+for honest discussion.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Implicat=
+ions for Policy or Funding</span></strong><span lang=3D"EN">: These&nbsp;<s=
+trong>1000 =E2=80=93 1200&nbsp;</strong>word papers translate a recent publ=
+ication in games or related research into clear recommendations (bullet poi=
+nts) for what policy makers should do differently, based on the insights of=
+ the paper. The source paper should not be your own, or your team=E2=80=99s=
+ work. Be as specific as possible about the funding agency or policy unit t=
+hat should respond.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Universi=
+ty Studios</span></strong><span lang=3D"EN">: What have university-led stud=
+ios with external clients or earned revenue models learned about making gam=
+es, and how can they improve? Grant-funded labs could also share findings, =
+so long as they can address how to balance the relationship with the funder=
+ in the making and distribution process. Submit a&nbsp;<strong>1000 =E2=80=
+=93 1200&nbsp;</strong>word paper, ideally comparing your studio or lab wit=
+h at least one other institution or model.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Methods =
+that Break Play</span></strong><span lang=3D"EN">: How is studying games di=
+fferent from other fields of communication? Send a&nbsp;<strong>500 =E2=80=
+=93 1200&nbsp;</strong>word abstract. Do we need to tweak any established m=
+ethods in order to study games well?</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Design P=
+rinciples</span></strong><span lang=3D"EN">: These&nbsp;<strong>500 =E2=80=
+=93 1200&nbsp;</strong>word abstracts will directly address how game studie=
+s scholarship can affect design. Each principle or =E2=80=9Cmini-theory=E2=
+=80=9D for design should be posited and defended, such as =E2=80=9Cfriends =
+lists should be ranked by recency.=E2=80=9D Such principles are needed so t=
+hat designers can act on research findings.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Playful =
+Societies</span></strong><span lang=3D"EN">: These&nbsp;<strong>500 =E2=80=
+=93 1200 word&nbsp;</strong>abstracts reflect on how playful practices are =
+migrating out of games. This might include activities like cheating or the =
+subversion of norms and rules, as well as how playful attitudes persist aft=
+er the game is over. Papers can also provide recommendations and ideas of h=
+ow to bridge from games into other domains and activities.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Well-Pla=
+yed-with-a-Theory</span></strong><span lang=3D"EN">: We invite&nbsp;<strong=
+>500&nbsp;</strong>=E2=80=93&nbsp;<strong>750</strong>&nbsp;word proposals =
+that bring audiences through a bit of real game play, either commercial or =
+serious games, with a twist; the talks must highlight a key theory that is =
+becoming more prevalent in game studies. We also ask game developers to sub=
+mit under this heading utilizing gameplay from their own games. Ideally you=
+ should be ready to bring whatever console or adapters necessary to show li=
+ve gameplay.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">The Wron=
+g Term</span></strong><span lang=3D"EN">: What=E2=80=99s a word that game s=
+cholars should cease using, or be using differently? Submit&nbsp;<strong>25=
+0 =E2=80=93 500&nbsp;</strong>word abstracts for presentations that will co=
+mprise =E2=80=9Cmicro-talks=E2=80=9D lasting no more than 10 minutes, follo=
+wed by plenty of debate.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span lang=3D"EN">Demo</sp=
+an></strong><span lang=3D"EN">&nbsp;<strong>(showcase)</strong>:&nbsp;<stro=
+ng>250-500</strong>&nbsp;word abstract, including the current status of the=
+ project and readiness of the demo. We plan to show demos during the lunch =
+hour or evening reception in a parallel format.&nbsp; Priority will be give=
+n to games that are used to test a research idea or apply a research findin=
+g in a novel way that advances our understanding of the connection between =
+research and practice.</span></p>
+
+<h2 align=3D"center" style=3D"margin:0in 0in 13.5pt;text-align:center;backg=
+round-image:initial;background-position:initial;background-size:initial;bac=
+kground-repeat:initial;background-origin:initial;background-clip:initial;li=
+ne-height:115%;break-after:avoid;font-size:16pt;font-family:Arial,sans-seri=
+f;font-weight:normal"><strong><span lang=3D"EN" style=3D"font-size:11pt;lin=
+e-height:115%">Hints, Selection Process and Curatorial Approach</span></str=
+ong><span lang=3D"EN" style=3D"font-size:11pt;line-height:115%"></span></h2=
+>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><span style=3D"font-size:11pt;font-family:Arial,sans=
+-serif">To maximize quality with such fluid and unusual categories, the cha=
+irs will curate this event.&nbsp; Our goal is to make the day provocative a=
+nd satisfying as an experience, not necessarily to represent all categories=
+ equally or in proportion to the number of submissions.</span></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><span style=3D"font-size:11pt;font-family:Arial,sans=
+-serif">Our main advice is to craft proposals that you find personally inte=
+resting and think your peers would find provocative with implications for t=
+he field or future research.</span></p>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><span style=3D"font-size:11pt;font-family:Arial,sans=
+-serif">We expect the tone of the conference to be reflective, with plenty =
+of time for questions and discussion. It will likely have one keynote speak=
+er, include an arcade that will showcase demonstration games (see above), a=
+nd a networking reception.<strong>&nbsp;</strong><b></b></span></p>
+
+<h2 align=3D"center" style=3D"margin:0in 0in 13.5pt;text-align:center;backg=
+round-image:initial;background-position:initial;background-size:initial;bac=
+kground-repeat:initial;background-origin:initial;background-clip:initial;li=
+ne-height:115%;break-after:avoid;font-size:16pt;font-family:Arial,sans-seri=
+f;font-weight:normal"><strong><span lang=3D"EN" style=3D"font-size:11pt;lin=
+e-height:115%">How to Submit</span></strong><span lang=3D"EN" style=3D"font=
+-size:11pt;line-height:115%"></span></h2>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang=3D"EN">Please email all=
+ submissions and questions to Maxwell Foxman (</span><span class=3D"gmail-M=
+soHyperlink" style=3D"color:blue;text-decoration-line:underline"><span lang=
+=3D"EN" style=3D"color:rgb(202,32,23)"><a href=3D"mailto:mfoxman@uoregon.ed=
+u" style=3D"color:blue"><span style=3D"color:rgb(202,32,23)">mfoxman@uorego=
+n.edu</span></a></span></span><span lang=3D"EN">).</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang=3D"EN">In the&nbsp;<str=
+ong>title&nbsp;</strong>of your&nbsp;<strong>email&nbsp;</strong>include th=
+e submission type under which you are presenting. As an example: For someon=
+e submitting under the =E2=80=9CWell-Played Theory,=E2=80=9D the subject li=
+ne should read:&nbsp;<strong>WELL-PLAYED THEORY: [Title of Submission]</str=
+ong></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang=3D"EN">Submissions shou=
+ld include authors=E2=80=99 names, institutions and titles. Where appropria=
+te, submissions will be anonymized by the organizers (i.e., you do not need=
+ to remove your name) and reviewed by a panel of international scholars.</s=
+pan></p>
+
+<h2 style=3D"margin:0in 0in 13.5pt;background-image:initial;background-posi=
+tion:initial;background-size:initial;background-repeat:initial;background-o=
+rigin:initial;background-clip:initial;line-height:115%;break-after:avoid;fo=
+nt-size:16pt;font-family:Arial,sans-serif;font-weight:normal"><strong><span=
+ lang=3D"EN" style=3D"font-size:11pt;line-height:115%">Important Dates</spa=
+n></strong><span lang=3D"EN" style=3D"font-size:11pt;line-height:115%"></sp=
+an></h2>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang=3D"EN">Deadline for sub=
+missions: January 31, 2019 at 11:59pm EST.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang=3D"EN">Notification of =
+Acceptance: February 22, 2019. (Speakers are expected to register within a =
+week of their notification of acceptance so we can finalize the public prog=
+ram.)</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN" style=3D"=
+font-size:10pt;font-family:Symbol">=C2=B7<span style=3D"font-variant-numeri=
+c:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang=3D"EN">Be notified! Ema=
+il us if you would like to be notified when the registration page goes up i=
+n February</span></p>
+
+<p align=3D"center" style=3D"margin:0in 0in 0.3in;text-align:center;backgro=
+und-image:initial;background-position:initial;background-size:initial;backg=
+round-repeat:initial;background-origin:initial;background-clip:initial;font=
+-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><strong><i><span =
+style=3D"font-size:11pt;font-family:Arial,sans-serif">Let=E2=80=99s up the =
+ante for traditional conferences!</span></i></strong><span style=3D"font-si=
+ze:11pt;font-family:Arial,sans-serif"></span></p>
+
+<h2 style=3D"margin:0in 0in 13.5pt;background-image:initial;background-posi=
+tion:initial;background-size:initial;background-repeat:initial;background-o=
+rigin:initial;background-clip:initial;line-height:115%;break-after:avoid;fo=
+nt-size:16pt;font-family:Arial,sans-serif;font-weight:normal"><span lang=3D=
+"EN" style=3D"font-size:11pt;line-height:115%">&nbsp;</span></h2>
+
+<p style=3D"margin:0in 0in 0.3in;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><strong><span style=3D"font-size:11pt;font-family:Ar=
+ial,sans-serif">Conference Committee:</span></strong><span style=3D"font-si=
+ze:11pt;font-family:Arial,sans-serif"></span></p>
+
+<p style=3D"margin:0in 0in 0.0001pt;background-image:initial;background-pos=
+ition:initial;background-size:initial;background-repeat:initial;background-=
+origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,serif"><span style=3D"font-size:11pt;font-family:Arial,s=
+ans-serif">Chair: Maxwell Foxman, University of Oregon</span></p>
+
+<p style=3D"margin:0in 0in 0.0001pt;background-image:initial;background-pos=
+ition:initial;background-size:initial;background-repeat:initial;background-=
+origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,serif"><span style=3D"font-size:11pt;font-family:Arial,s=
+ans-serif">Co-Chair: Benjamin Stokes, American University</span></p>
+
+<p style=3D"margin:0in 0in 0.0001pt;background-image:initial;background-pos=
+ition:initial;background-size:initial;background-repeat:initial;background-=
+origin:initial;background-clip:initial;font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,serif"><span style=3D"font-size:11pt;font-family:Arial,s=
+ans-serif">Advisor: Rabindra Ratan, Michigan State University</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:115%;fo=
+nt-size:11pt;font-family:Arial,sans-serif"><span lang=3D"EN">&nbsp;</span><=
+/p></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--0000000000007a645c057f09e125--

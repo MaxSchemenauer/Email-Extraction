@@ -1,0 +1,536 @@
+Received: from BL0PR08MB4660.namprd08.prod.outlook.com (2603:10b6:a03:12b::16)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR07CA0075.NAMPRD07.PROD.OUTLOOK.COM; Thu, 17 Oct 2019 23:21:05 +0000
+Received: from DM6PR08CA0035.namprd08.prod.outlook.com (2603:10b6:5:80::48) by
+ BL0PR08MB4660.namprd08.prod.outlook.com (2603:10b6:208:5c::11) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2347.16; Thu, 17 Oct 2019 23:21:04 +0000
+Received: from BN3NAM04FT056.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::202) by DM6PR08CA0035.outlook.office365.com
+ (2603:10b6:5:80::48) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16 via Frontend
+ Transport; Thu, 17 Oct 2019 23:21:04 +0000
+Authentication-Results: spf=pass (sender IP is 144.118.38.12)
+ smtp.mailfrom=LISTS.DREXEL.EDU; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=406
+Received-SPF: Pass (protection.outlook.com: domain of LISTS.DREXEL.EDU
+ designates 144.118.38.12 as permitted sender)
+ receiver=protection.outlook.com; client-ip=144.118.38.12;
+ helo=lists.drexel.edu;
+Received: from lists.drexel.edu (144.118.38.12) by
+ BN3NAM04FT056.mail.protection.outlook.com (10.152.93.63) with Microsoft SMTP
+ Server id 15.20.2367.16 via Frontend Transport; Thu, 17 Oct 2019 23:21:04
+ +0000
+Received: from jay.irt.drexel.edu (localhost.localdomain [127.0.0.1])
+	by lists.drexel.edu (Postfix) with ESMTP id 0D2C823DA07
+	for <foaad@CALPOLY.EDU>; Thu, 17 Oct 2019 19:20:53 -0400 (EDT)
+Received: by LISTS.DREXEL.EDU (LISTSERV-TCP/IP release 16.0) with spool id
+          218831 for BIGDATA@LISTS.DREXEL.EDU; Thu, 17 Oct 2019 19:10:00 -0400
+Approved-By: cfp.conference2016@GMAIL.COM
+Received: from smtp.mail.drexel.edu (uplsmtp02.irt.drexel.edu [144.118.29.82])
+          by lists.drexel.edu (Postfix) with ESMTP id 8E80F23D318 for
+          <bigdata@lists.drexel.edu>; Thu, 17 Oct 2019 10:28:46 -0400 (EDT)
+Received: from smtp.mail.drexel.edu (localhost [127.0.0.1]) by
+          smtp.mail.drexel.edu (Postfix) with ESMTP id 7E0CC50 for
+          <bigdata@lists.drexel.edu>; Thu, 17 Oct 2019 10:28:46 -0400 (EDT)
+Received: from mail-vs1-f67.google.com (mail-vs1-f67.google.com
+          [209.85.217.67]) (using TLSv1.2 with cipher
+          ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits)) (No client certificate
+          requested) by smtp.mail.drexel.edu (Postfix) with ESMTPS id 6F1A54D
+          for <bigdata@lists.drexel.edu>; Thu, 17 Oct 2019 10:28:46 -0400 (EDT)
+Received: by mail-vs1-f67.google.com with SMTP id w195so1704498vsw.11 for
+          <bigdata@lists.drexel.edu>; Thu, 17 Oct 2019 07:28:46 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=JzM422aLZeE3IpLEhefrUems/pyxbToD62+TpAXVTY0=;
+                         b=VWp4rv+JxxPo5KxbXKYwN3rVYf0aXDL3/str6oVlSgElQqtbWrXAMiQ48vSwx5/pZS
+                         SL+H8HIXJqAx3GCjd2bkrnFUO1bOFz4x0qIPO0olbze6IxbyVNfLFLDClBNBjh3FBTGy
+                         prZplUFrnCrRo2z+6V2SMVMCzL/3t9lzoOH/2aWw3QHPvKT+vPFuD1c+Qlev6ddPrlq7
+                         G+I/EEELhhYfUjOuDSkjZZLmBdjulxCYCXEc0hUjgNKw5GsWufzWZHTiuATQXDh4EPfm
+                         a02ZPBAuKcQhNnYz686jHx4vBV11VD9k9Hgu318pLK22e8Hz6p1VyCbSg/aQq7a5r2Tu
+                         Dn2A==
+X-Gm-Message-State: APjAAAVbbZk+BJmjxzxDXryLt+K7bMxcFqzT/xz3HuO20YWA3LkyzKUl
+                    Z5V30KiWcrcakQznChBxfJTBgSI5lYdyLhplcLV5Ljqkvmw=
+X-Google-Smtp-Source: APXvYqwgFlFyg6A52Wimt6/EROOY9xLaEycWldL7VLmkye2UqX8c8Z22bLpkxc+qV73vxHeA5VW/fTfItx5/vFD9wFw=
+X-Received: by 2002:a05:6102:51a:: with SMTP id
+            l26mr2053088vsa.36.1571322525818; Thu, 17 Oct 2019 07:28:45 -0700
+            (PDT)
+Content-Type: multipart/alternative; boundary="000000000000faa48205951c0834"
+X-Virus-Scanned: ClamAV using ClamSMTP
+Message-ID: <CAEvuEAv601hvvbGV1VoxYHiozjLNYkNfXsPRWM2zNpG1gPMcag@mail.gmail.com>
+Date: Thu, 17 Oct 2019 10:28:34 -0400
+Reply-To: CFP Conference <cfp.conference2016@GMAIL.COM>
+Sender: CCI Big Data List <BIGDATA@LISTS.DREXEL.EDU>
+From: CFP Conference <cfp.conference2016@GMAIL.COM>
+Subject: IEEE BigData 2019 Call for Participations
+To: BIGDATA@LISTS.DREXEL.EDU
+Precedence: list
+List-Help: <mailto:LISTSERV@LISTS.DREXEL.EDU?body=INFO%20BIGDATA>
+List-Unsubscribe: <mailto:BIGDATA-unsubscribe-request@LISTS.DREXEL.EDU>
+List-Subscribe: <mailto:BIGDATA-subscribe-request@LISTS.DREXEL.EDU>
+List-Owner: <mailto:BIGDATA-request@LISTS.DREXEL.EDU>
+Return-Path: owner-bigdata*foaad**CALPOLY*-EDU@LISTS.DREXEL.EDU
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Oct 2019 23:21:04.1313
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4ec4391f-5a9d-45d3-7c94-08d75358ae37
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:144.118.38.12;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001)(4636009)(7192003)(189003)(199004)(6262002)(176002)(2860700004)(34206002)(8576002)(7636002)(14444005)(88552002)(10126004)(55446002)(236005)(82202003)(43066004)(16003)(6306002)(136015008)(106002)(95326003)(3450700001)(76482006)(7596002)(8676002)(606006)(71190400001)(966005)(22416003)(146002)(42186006)(1096003)(305945005)(16586007)(75432002)(486006)(246002)(21615005)(26005)(6666004)(33964004)(19625735003)(336012)(476003)(126002)(42882007)(356004)(7846003)(2351001)(73392003)(6392003)(498394004)(2361001)(61266001)(5660300002)(75640400001)(2171002)(59536001)(4006050)(93490200004);DIR:INB;SFP:;SCL:5;SRVR:BL0PR08MB4660;H:lists.drexel.edu;FPR:;SPF:Pass;LANG:en;PTR:lists.drexel.edu;MX:1;A:1;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT056.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 4ec4391f-5a9d-45d3-7c94-08d75358ae37
+X-MS-TrafficTypeDiagnostic: BL0PR08MB4660:
+X-MS-Exchange-PUrlCount: 18
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Oct 2019 23:21:04.0673
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4ec4391f-5a9d-45d3-7c94-08d75358ae37
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL0PR08MB4660
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.2511246
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?VTIzTEd2RWp1eVdwRUV4Mk1QY3lEbjNWcU1BeDBtODVManRockpINGtacDg2?=
+ =?utf-8?B?dy9SeVVyeVhUem5na0dNY29tKzhHQ0NneVptbG9UeC9YaVp3Q25FQndoUGlT?=
+ =?utf-8?B?RUx1WTRWS04yY0hrc2VIc00xUWoydG1JbDBLMHcrTXQ3RmhPYnFzdkhTSHpU?=
+ =?utf-8?B?dzhjL1lWejdlTDAxeWM3endPRXk4bUxoS0YzMnVaQlZya3hLaUxqWDE5OENk?=
+ =?utf-8?B?K1BOZFVYRHoxRHU1U2RyQm9pK0x0YTlqK0JQdXJKRURVSzZSVUttVzc1Q3Q2?=
+ =?utf-8?B?ZS8wa2hCY1FyNlZPNzBVcndGWVk3cStqUzMyT1JCc1NTVEZLbHN6K2s2dFU1?=
+ =?utf-8?B?aFkyWUZZNGJ6M3JQWk0wUDZ4QXVhNWp6dGk3UCtSQ2dRK2FSM0E0UUtabzh4?=
+ =?utf-8?B?QnNhUVowanBmenVMOXAzalRHYlBhWXQ1WC91cW1nbUhnTStGNmpWTmFaalpz?=
+ =?utf-8?B?NHRtYVFrNUNCOHFHS0tVRXUybGU2Qkc1L2xxZk9lbm9VUExnSWN4bVMyNHJY?=
+ =?utf-8?B?VTcrbnBrZkJtd2FTQldyVzdneGtDTWtkQUtmbVFhNVZXTFZkSklZUGNnNXJl?=
+ =?utf-8?B?Z01NZEpMNmZzZDFjcXNMYlpXWmZhMUR0WjdMdTk5aURKWlhPbnJQZUhWbzNL?=
+ =?utf-8?B?RXd6eTZWbHV1TjBDRE1nUUV3UVp2Q1pPMW1uUmhTU1FTa3JINnJwTldkSE5z?=
+ =?utf-8?B?Zk1Hcm9aVS9lY3hCODBKZVNNWmgxNXJDdkVWL2ozRkRRLzJyZVNyRjQ1QTVo?=
+ =?utf-8?B?RGR5V1JWV2ExUUlRRkIxZ285b21pYWdkTnBScGVxZ1FUNW02R3E1ZElZNU9Y?=
+ =?utf-8?B?elprVGVkNUMvditZenB6WmVKV1JmQ2JsN1pCck9KWjNaK1hveHkvTEYvTTdM?=
+ =?utf-8?B?eXN3NDg3SnEvWGViSzZueDN0M0trV3hqMlBTeFFQWkgrMTBSVUhOb2dhMHJF?=
+ =?utf-8?B?Q1poQWVKd2xaS1Q1a1FsOXcrclloSDNBRXdZb0ZFU1E0VkpiZkxhQUlKQUF2?=
+ =?utf-8?B?NURhL3IxSWQyNVVCakdXdzA5RnF0SDdQdGh6VHZ2VTVXTWtIWmhrblZwaGZq?=
+ =?utf-8?B?dnlJblY2VjJkWkhhYURKclN2dlVDMHhtRmx4aFBPMjVzV0xrQytQNmtJM1U4?=
+ =?utf-8?B?TGpibG9NOHhpQWIvWlZMZEdPUEtOdFZlS0NPLzlQdVQ4cWtpbGh6M2xPbEU0?=
+ =?utf-8?B?QmpZSG9VZjluVllTZUJKRU40a3g3U2lpcjU5TlpjZlJ6T1RjOVBZQmxWK1lX?=
+ =?utf-8?B?dVBNVXkxeFFhTmswckxmOGdNNU9TbGRwTHBKRkVEc2h3UHdYc3FoTXZRNUlm?=
+ =?utf-8?B?enRsODdvaGZuOC9RZU9LMHVZK2paQ3N5R1JSa2wxZnJpSHk5czVzc2RZbW95?=
+ =?utf-8?B?NDUxNk94bXFZWXNzclBndnZzVXhWd1ZweXJrM2s1bEJ5N1hxaVlqNzhpWm5n?=
+ =?utf-8?B?TmFHNGlXYkFyUDNFQTk3dWlmSXRxVU11VUI0OFZQZUoxeWFGUEFCWTVCVkVD?=
+ =?utf-8?B?OEdlZkxrZGFlNkU5R01lYzc1NWMvbDhib0JGK2F5SXNrL1pyKzhjaC9ROFlo?=
+ =?utf-8?B?VzU2QisrMzFoY1JnQU54TFUvdWtsUGs5Q0dleUU4Z2dvVVBhUkpCR0Jzc0dq?=
+ =?utf-8?B?a25ydURKNzlSRmNSQzlJRUlDcHd2K1NwWjY0REQreUplbVlMQXpXK1UrL0xU?=
+ =?utf-8?B?N0V3OWFhcW9mNXFCRVlZUWZwdUIxaTdkUC9OTzBaV0d3alJrMmVqZmxjMk9k?=
+ =?utf-8?B?dzhpV0Q3REZpU0ZQd1l1MDRpY1gzTUVlVWwwc3BGQVlMTkI5RVdIcENYQUFo?=
+ =?utf-8?B?UTVtcFN6Q2dxbFFGNTRRUk80UUlmeEM4eEQxQm9aTE8xd29VMTY4T081bmtK?=
+ =?utf-8?Q?jbf58iab6lRrj?=
+MIME-Version: 1.0
+
+--000000000000faa48205951c0834
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*2019 IEEE International Conference on Big Data (IEEE BigData 2019)
+(http://bigdataieee.org/BigData2019/ <http://bigdataieee.org/BigData2019/>)=
+*
+
+* Dec 9-12,  2019 **=E2=97=8F** Los Angeles, CA, USA*
+
+The 2019 IEEE International Conference on Big Data (IEEE Big Data 2019)
+will be held in Los Angeles, CA, Dec 9-12, 2019
+(*http://bigdataieee.org/BigData2019/
+<http://bigdataieee.org/BigData2019/>)*, we would like to invite you to
+join  this exciting event. We will have a very high quality program. The
+highlights of the IEEE Big Data 2019 program are summarized as below
+
+(1)   High quality technical program:  106 regular papers selected
+from 556 full
+paper submissions from 2057 authors and co-authors at 52 countries.  (IEEE
+Big Data is a top-tier conference, regular paper acceptance rate has been
+less than 20% since its inception).
+
+(2)   5 confirmed keynote speeches by leading experts
+http://bigdataieee.org/BigData2019/KeynoteSpeech.html
+
+*=C2=B7       **Prof. Lise Getoor*: TBD
+
+=C2=B7       *Dr. Ramanathan Guha:* TBD
+
+*=C2=B7       **Prof. **Ling Liu*: Deception, Robustness and Trust in Big D=
+ata
+Fueled Deep Learning Systems
+
+=C2=B7       *Prof. J**udea Pearl :* The new science of cause and effect, w=
+ith
+reflections on data science and artificial intelligence
+
+=C2=B7       *Prof. Yang Qiang: TBD*
+
+
+
+(3)   IEEE Big Data 2019 Industry and Government program. 6 full session
+presentations,   all the talks and discussions reflect perspectives from
+industry on how to address challenging big data issues relevant to
+industrial settings.
+
+(4)   BigData Cup Challenges
+
+=C2=B7       Solar Flare Prediction from Time Series of Solar Magnetic Fiel=
+d
+Parameters <http://dmlab.cs.gsu.edu/bigdata19/flare-comp/>
+
+=C2=B7       FEMH Voice Data Challenge 2019
+<http://femhchallenge2019.ddns.net/femh2019/>
+
+=C2=B7       Suspicious Network Event Recognition
+
+=C2=B7       Real-time Machine Learning Competition on Data Streams
+
+=C2=B7       Understanding Multilingual Communities through Analysis of
+Code-switching Behaviors in Social Media Discussions
+
+=C2=B7       Brain Data Bank Challenge
+
+http://bigdataieee.org/BigData2019/BigDataCupChallenges.html
+
+
+
+(5)   44 workshops cover many emerging new research directions in big data
+http://bigdataieee.org/BigData2019/Workshops.html
+
+(6)   9 Tutorials, poster program etc.
+Tutorial 1: Process mining: Leveraging event data to understand and improve
+organizations <http://bigdataieee.org/BigData2019/Tutorials.html#tutorial1>
+ Tutorial 2: Taming Unstructured Big Data: Automated Information Extraction
+from Massive Text
+<http://bigdataieee.org/BigData2019/Tutorials.html#tutorial2>Tutorial 3: Se=
+cure
+and Privacy-Preserving Big-Data Processing
+<http://bigdataieee.org/BigData2019/Tutorials.html#tutorial3>
+Tutorial 4: NewSQL
+: principles, systems and current trends
+<http://bigdataieee.org/BigData2019/Tutorials.html#tutorial4>Tutorial 5: An
+Overview of the Big Data Approaches for Profitable Social Network Analysis
+<http://bigdataieee.org/BigData2019/Tutorials.html#tutorial5>
+Tutorial 6: Large
+scale semantic graph data management and analytics
+<http://bigdataieee.org/BigData2019/Tutorials.html#tutorial6>
+Tutorial 7: Industrial
+AI: Machine Learning for Maintenance and Repair
+<http://bigdataieee.org/BigData2019/Tutorials.html#tutorial7>Tutorial 8: Ho=
+w
+to build and run a big data platform in the 21st century
+<http://bigdataieee.org/BigData2019/Tutorials.html#tutorial8>Tutorial 9: De=
+ep
+Learning on Big Data with Multi-Node GPU Jobs
+<http://bigdataieee.org/BigData2019/Tutorials.html#tutorial9>
+
+                     http://bigdataieee.org/BigData2019/Tutorials.html
+
+Please register at
+
+*http://bigdataieee.org/BigData2019/Registration.html
+<http://bigdataieee.org/BigData2019/Registration.html>*
+
+The regular registration package includes three lunches, one banquet,
+coffee breaks, the conference proceedings and all the technical
+presentations (keynote, paper presentations , tutorials, posters,
+workshops.  We also offer one-day registration too.
+
+
+
+
+To subscribe to this list, the user sends an email,
+
+with blank subject line, to
+listserv@lists.drexel.edu. In the text box, the user
+types:
+
+subscribe BIGDATA
+
+To unsubscribe from a list, the user sends an email to
+listserv@lists.drexel.edu with the message
+
+
+
+signoff BIGDATA
+
+########################################################################
+
+To unsubscribe from the BIGDATA list, click the following link:
+http://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3Mzc5IGZvYWFkQENBTFBPTFkuRURVIEJJR0RBVEEgIA05eQkNGOMI&c=3DSIGNOFF
+
+--000000000000faa48205951c0834
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><p style=3D"font-size:medi=
+um;color:rgb(0,0,0);margin-right:0in;margin-left:0in"><font face=3D"times n=
+ew roman, serif"><b>2019 IEEE International Conference on Big Data (IEEE Bi=
+gData 2019) (<a href=3D"http://bigdataieee.org/BigData2019/">http://bigdata=
+ieee.org/BigData2019/</a>)</b><b><span></span></b></font></p><p style=3D"fo=
+nt-size:medium;color:rgb(0,0,0);margin-right:0in;margin-left:0in"><font fac=
+e=3D"times new roman, serif"><b>&nbsp;Dec 9-12,&nbsp;&nbsp;2019&nbsp;</b><b=
+>=E2=97=8F</b><b>&nbsp;Los Angeles, CA, USA<span></span></b></font></p><p c=
+lass=3D"MsoNormal" style=3D"line-height:16.866666793823242px;color:rgb(0,0,=
+0);margin:0in 0in 10pt;font-size:11pt"><font face=3D"times new roman, serif=
+">The 2019 IEEE International Conference on Big Data (IEEE Big Data 2019) w=
+ill be held in Los Angeles, CA, Dec 9-12, 2019&nbsp;&nbsp;(<b><a href=3D"ht=
+tp://bigdataieee.org/BigData2019/">http://bigdataieee.org/BigData2019/</a>)=
+</b>, we would like to invite you to join&nbsp;&nbsp;this exciting event. W=
+e will have a very high quality program. The highlights of the IEEE Big Dat=
+a 2019 program are summarized as below&nbsp;<span></span></font></p><p clas=
+s=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.5in;line-height:115%;font-si=
+ze:11pt"><font face=3D"times new roman, serif">(1)<span style=3D"font-stret=
+ch:normal;font-size:7pt;line-height:normal">&nbsp;&nbsp;&nbsp;</span>High q=
+uality technical program:&nbsp;&nbsp;<span style=3D"color:red">106</span>&n=
+bsp;regular papers selected from&nbsp;<span style=3D"color:red">556&nbsp;</=
+span>full paper submissions from&nbsp;2057 authors and co-authors at 52 cou=
+ntries.&nbsp;&nbsp;(IEEE Big Data is a top-tier conference, regular paper a=
+cceptance rate has been less than 20% since its inception).&nbsp;<span></sp=
+an></font></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.5in;lin=
+e-height:115%;font-size:11pt"><font face=3D"times new roman, serif">(2)<spa=
+n style=3D"font-stretch:normal;font-size:7pt;line-height:normal">&nbsp;&nbs=
+p;&nbsp;</span><span style=3D"color:red">5 confirmed keynote speeches by le=
+ading experts</span>&nbsp;<a href=3D"http://bigdataieee.org/BigData2019/Key=
+noteSpeech.html">http://bigdataieee.org/BigData2019/KeynoteSpeech.html</a><=
+span></span></font></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.000=
+1pt 1in;line-height:normal;font-size:11pt"><font face=3D"times new roman, s=
+erif"><strong><span style=3D"color:black;font-weight:normal">=C2=B7<span st=
+yle=3D"font-stretch:normal;font-size:7pt;line-height:normal">&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></strong><b><span style=3D"color:=
+black">Prof. Lise Getoor</span></b><span style=3D"color:black">: TBD<strong=
+><span></span></strong></span></font></p><p class=3D"MsoNormal" style=3D"ma=
+rgin:0in 0in 0.0001pt 1in;line-height:normal;font-size:11pt"><font face=3D"=
+times new roman, serif"><span style=3D"color:black">=C2=B7<span style=3D"fo=
+nt-stretch:normal;font-size:7pt;line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;</span></span><b><span style=3D"color:black">Dr. Ramanat=
+han Guha:</span></b><span style=3D"color:black">&nbsp;TBD</span><b><span st=
+yle=3D"color:black"><span></span></span></b></font></p><p class=3D"MsoNorma=
+l" style=3D"margin:0in 0in 0.0001pt 1in;line-height:normal;font-size:11pt">=
+<font face=3D"times new roman, serif"><strong><span style=3D"color:black;fo=
+nt-weight:normal">=C2=B7<span style=3D"font-stretch:normal;font-size:7pt;li=
+ne-height:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><=
+/strong><b><span style=3D"color:black">Prof.&nbsp;</span></b><b>Ling Liu</b=
+><span style=3D"color:black">:&nbsp;</span>Deception, Robustness and Trust =
+in Big Data Fueled Deep Learning Systems<strong><span style=3D"color:black"=
+><span></span></span></strong></font></p><p class=3D"MsoNormal" style=3D"ma=
+rgin:0in 0in 0.0001pt 1in;line-height:normal;font-size:11pt"><font face=3D"=
+times new roman, serif"><span style=3D"color:black">=C2=B7<span style=3D"fo=
+nt-stretch:normal;font-size:7pt;line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;</span></span><b><span style=3D"color:black">Prof. J</sp=
+an></b><b>udea Pearl<span style=3D"color:black">&nbsp;:</span></b><span sty=
+le=3D"color:black">&nbsp;</span>The new science of cause and effect, with r=
+eflections on data science and artificial intelligence<span style=3D"color:=
+black"><span></span></span></font></p><p class=3D"MsoNormal" style=3D"margi=
+n:0in 0in 0.0001pt 1in;line-height:normal;font-size:11pt"><font face=3D"tim=
+es new roman, serif">=C2=B7<span style=3D"font-stretch:normal;font-size:7pt=
+;line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b><s=
+pan style=3D"color:black">Prof. Yang Qiang: TBD</span></b><span></span></fo=
+nt></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 1in;line-hei=
+ght:normal;color:rgb(0,0,0);font-size:11pt"><span><font face=3D"times new r=
+oman, serif">&nbsp;</font></span></p><p class=3D"MsoNormal" style=3D"margin=
+:0in 0in 10pt 0.5in;line-height:115%;font-size:11pt"><font face=3D"times ne=
+w roman, serif">(3)<span style=3D"font-stretch:normal;font-size:7pt;line-he=
+ight:normal">&nbsp;&nbsp;&nbsp;</span>IEEE Big Data 2019 Industry and Gover=
+nment program.&nbsp;6 full session presentations,&nbsp;&nbsp;&nbsp;all the =
+talks and discussions reflect perspectives from industry on how to address =
+challenging big data issues relevant to industrial settings.&nbsp;<span></s=
+pan></font></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.5in;li=
+ne-height:115%;font-size:11pt"><font face=3D"times new roman, serif">(4)<sp=
+an style=3D"font-stretch:normal;font-size:7pt;line-height:normal">&nbsp;&nb=
+sp;&nbsp;</span>BigData Cup Challenges<span></span></font></p><p class=3D"M=
+soNormal" style=3D"margin:0in 0in 0.0001pt 1in;line-height:normal;font-size=
+:11pt"><font face=3D"times new roman, serif">=C2=B7<span style=3D"font-stre=
+tch:normal;font-size:7pt;line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;</span><a href=3D"http://dmlab.cs.gsu.edu/bigdata19/flare-comp/=
+" style=3D"color:rgb(149,79,114);text-decoration:underline"><span style=3D"=
+color:rgb(30,28,99);border:1pt none windowtext;padding:0in;text-decoration:=
+none">Solar Flare Prediction from Time Series of Solar Magnetic Field Param=
+eters</span></a><span></span></font></p><p class=3D"MsoNormal" style=3D"mar=
+gin:0in 0in 0.0001pt 1in;line-height:normal;font-size:11pt"><font face=3D"t=
+imes new roman, serif">=C2=B7<span style=3D"font-stretch:normal;font-size:7=
+pt;line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a =
+href=3D"http://femhchallenge2019.ddns.net/femh2019/" style=3D"color:rgb(149=
+,79,114);text-decoration:underline"><span style=3D"color:rgb(30,28,99);bord=
+er:1pt none windowtext;padding:0in;text-decoration:none">FEMH Voice Data Ch=
+allenge 2019</span></a><span></span></font></p><p class=3D"MsoNormal" style=
+=3D"margin:0in 0in 0.0001pt 1in;line-height:normal;font-size:11pt"><font fa=
+ce=3D"times new roman, serif">=C2=B7<span style=3D"font-stretch:normal;font=
+-size:7pt;line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s=
+pan>Suspicious Network Event Recognition<span></span></font></p><p class=3D=
+"MsoNormal" style=3D"margin:0in 0in 0.0001pt 1in;line-height:normal;font-si=
+ze:11pt"><font face=3D"times new roman, serif">=C2=B7<span style=3D"font-st=
+retch:normal;font-size:7pt;line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;</span>Real-time Machine Learning Competition on Data Streams=
+<span></span></font></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.00=
+01pt 1in;line-height:normal;font-size:11pt"><font face=3D"times new roman, =
+serif">=C2=B7<span style=3D"font-stretch:normal;font-size:7pt;line-height:n=
+ormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Understanding Multi=
+lingual Communities through Analysis of Code-switching Behaviors in Social =
+Media Discussions<span></span></font></p><p class=3D"MsoNormal" style=3D"ma=
+rgin:0in 0in 0.0001pt 1in;line-height:normal;font-size:11pt"><font face=3D"=
+times new roman, serif">=C2=B7<span style=3D"font-stretch:normal;font-size:=
+7pt;line-height:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Br=
+ain Data Bank Challenge<span></span></font></p><p class=3D"MsoNormal" style=
+=3D"margin:0in 0in 0.0001pt 1in;line-height:normal;color:rgb(0,0,0);font-si=
+ze:11pt"><font face=3D"times new roman, serif"><a href=3D"http://bigdataiee=
+e.org/BigData2019/BigDataCupChallenges.html">http://bigdataieee.org/BigData=
+2019/BigDataCupChallenges.html</a><span></span></font></p><p class=3D"MsoNo=
+rmal" style=3D"margin:0in 0in 0.0001pt 1in;line-height:normal;color:rgb(0,0=
+,0);font-size:11pt"><span><font face=3D"times new roman, serif">&nbsp;</fon=
+t></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.5in;line=
+-height:115%;font-size:11pt"><font face=3D"times new roman, serif">(5)<span=
+ style=3D"font-stretch:normal;font-size:7pt;line-height:normal">&nbsp;&nbsp=
+;&nbsp;</span>44<span style=3D"color:red">&nbsp;</span>workshops cover many=
+ emerging new research directions in big data&nbsp;&nbsp;<a href=3D"http://=
+bigdataieee.org/BigData2019/Workshops.html">http://bigdataieee.org/BigData2=
+019/Workshops.html</a><span></span></font></p><p class=3D"MsoNormal" style=
+=3D"margin:0in 0in 0.0001pt 0.5in;line-height:normal;font-size:11pt"><font =
+face=3D"times new roman, serif">(6)<span style=3D"font-stretch:normal;font-=
+size:7pt;line-height:normal">&nbsp;&nbsp;&nbsp;</span><span style=3D"color:=
+red">9 Tutorials, poster program etc.</span><span></span></font></p><h4 sty=
+le=3D"margin:0in 0in 0.0001pt 0.5in;font-size:medium;color:rgb(0,0,0);font-=
+weight:bold"><font face=3D"times new roman, serif"><span style=3D"font-size=
+:11pt">Tutorial 1:&nbsp;</span><span style=3D"font-size:11pt;color:rgb(55,5=
+5,55)"><a href=3D"http://bigdataieee.org/BigData2019/Tutorials.html#tutoria=
+l1" style=3D"color:rgb(149,79,114);text-decoration:underline">Process minin=
+g: Leveraging event data to understand and improve organizations</a>&nbsp;<=
+/span><span style=3D"font-size:11pt;color:rgb(136,136,136)">&nbsp;</span><s=
+pan style=3D"font-size:11pt"><span></span></span></font></h4><h4 style=3D"m=
+argin:0in 0in 0.0001pt 0.5in;font-size:medium;color:rgb(0,0,0);font-weight:=
+bold"><font face=3D"times new roman, serif"><span style=3D"font-size:11pt">=
+Tutorial 2:&nbsp;</span><span style=3D"font-size:11pt;color:rgb(55,55,55)">=
+<a href=3D"http://bigdataieee.org/BigData2019/Tutorials.html#tutorial2" sty=
+le=3D"color:rgb(149,79,114);text-decoration:underline">Taming Unstructured =
+Big Data: Automated Information Extraction from Massive Text</a><span></spa=
+n></span></font></h4><h4 style=3D"margin:0in 0in 0.0001pt 0.5in;font-size:m=
+edium;color:rgb(0,0,0);font-weight:bold"><font face=3D"times new roman, ser=
+if"><span style=3D"font-size:11pt">Tutorial 3:&nbsp;</span><span style=3D"f=
+ont-size:11pt;color:rgb(55,55,55)"><a href=3D"http://bigdataieee.org/BigDat=
+a2019/Tutorials.html#tutorial3" style=3D"color:rgb(149,79,114);text-decorat=
+ion:underline">Secure and Privacy-Preserving Big-Data Processing</a>&nbsp;<=
+/span><span style=3D"font-size:11pt;color:rgb(136,136,136)">&nbsp;</span><s=
+pan style=3D"font-size:11pt;color:rgb(119,119,119)"><span></span></span></f=
+ont></h4><h4 style=3D"margin:0in 0in 0.0001pt 0.5in;font-size:medium;color:=
+rgb(0,0,0);font-weight:bold"><font face=3D"times new roman, serif"><span st=
+yle=3D"font-size:11pt">Tutorial 4:&nbsp;</span><span style=3D"font-size:11p=
+t;color:rgb(55,55,55)"><a href=3D"http://bigdataieee.org/BigData2019/Tutori=
+als.html#tutorial4" style=3D"color:rgb(149,79,114);text-decoration:underlin=
+e">NewSQL : principles, systems and current trends</a></span><span style=3D=
+"font-size:11pt;color:rgb(119,119,119)"><span></span></span></font></h4><h4=
+ style=3D"margin:0in 0in 0.0001pt 0.5in;font-size:medium;color:rgb(0,0,0);f=
+ont-weight:bold"><font face=3D"times new roman, serif"><span style=3D"font-=
+size:11pt">Tutorial 5:&nbsp;</span><span style=3D"font-size:11pt;color:rgb(=
+55,55,55)"><a href=3D"http://bigdataieee.org/BigData2019/Tutorials.html#tut=
+orial5" style=3D"color:rgb(149,79,114);text-decoration:underline">An Overvi=
+ew of the Big Data Approaches for Profitable Social Network Analysis</a>&nb=
+sp;</span><span style=3D"font-size:11pt;color:rgb(136,136,136)">&nbsp;<span=
+></span></span></font></h4><h4 style=3D"margin:0in 0in 0.0001pt 0.5in;font-=
+size:medium;color:rgb(0,0,0);font-weight:bold"><font face=3D"times new roma=
+n, serif"><span style=3D"font-size:11pt">Tutorial 6:&nbsp;</span><span styl=
+e=3D"font-size:11pt;color:rgb(55,55,55)"><a href=3D"http://bigdataieee.org/=
+BigData2019/Tutorials.html#tutorial6" style=3D"color:rgb(149,79,114);text-d=
+ecoration:underline">Large scale semantic graph data management and analyti=
+cs</a>&nbsp;</span><span style=3D"font-size:11pt;color:rgb(136,136,136)">&n=
+bsp;</span><span style=3D"font-size:11pt;color:rgb(119,119,119)"><span></sp=
+an></span></font></h4><h4 style=3D"margin:0in 0in 0.0001pt 0.5in;font-size:=
+medium;color:rgb(0,0,0);font-weight:bold"><font face=3D"times new roman, se=
+rif"><span style=3D"font-size:11pt">Tutorial 7:&nbsp;</span><span style=3D"=
+font-size:11pt;color:rgb(55,55,55)"><a href=3D"http://bigdataieee.org/BigDa=
+ta2019/Tutorials.html#tutorial7" style=3D"color:rgb(149,79,114);text-decora=
+tion:underline">Industrial AI: Machine Learning for Maintenance and Repair<=
+/a><span></span></span></font></h4><h4 style=3D"margin:0in 0in 0.0001pt 0.5=
+in;font-size:medium;color:rgb(0,0,0);font-weight:bold"><font face=3D"times =
+new roman, serif"><span style=3D"font-size:11pt">Tutorial 8:&nbsp;</span><s=
+pan style=3D"font-size:11pt;color:rgb(55,55,55)"><a href=3D"http://bigdatai=
+eee.org/BigData2019/Tutorials.html#tutorial8" style=3D"color:rgb(149,79,114=
+);text-decoration:underline">How to build and run a big data platform in th=
+e 21st century</a></span><span style=3D"font-size:11pt;color:rgb(136,136,13=
+6)"><span></span></span></font></h4><h4 style=3D"margin:0in 0in 0.0001pt 0.=
+5in;font-size:medium;color:rgb(0,0,0);font-weight:bold"><font face=3D"times=
+ new roman, serif"><span style=3D"font-size:11pt">Tutorial 9:&nbsp;</span><=
+span style=3D"font-size:11pt;color:rgb(55,55,55)"><a href=3D"http://bigdata=
+ieee.org/BigData2019/Tutorials.html#tutorial9" style=3D"color:rgb(149,79,11=
+4);text-decoration:underline">Deep Learning on Big Data with Multi-Node GPU=
+ Jobs</a></span><span style=3D"font-size:11pt;color:rgb(136,136,136)"><span=
+></span></span></font></h4><h4 style=3D"margin:0in 0in 0.0001pt 0.5in;font-=
+size:medium;color:rgb(0,0,0);font-weight:bold"><span style=3D"font-size:11p=
+t;color:rgb(136,136,136)"><span><font face=3D"times new roman, serif">&nbsp=
+;</font></span></span></h4><h4 style=3D"margin:0in 0in 0.0001pt 0.5in;font-=
+size:medium;color:rgb(0,0,0);font-weight:bold"><span style=3D"font-size:14p=
+t;color:rgb(119,119,119)"><span><font face=3D"times new roman, serif">&nbsp=
+;</font></span></span></h4><p class=3D"MsoNormal" style=3D"line-height:16.8=
+66666793823242px;color:rgb(0,0,0);margin:0in 0in 10pt;font-size:11pt"><font=
+ face=3D"times new roman, serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;<a href=3D"http://bigdataieee.org/BigData2019/Tutorials.html">http=
+://bigdataieee.org/BigData2019/Tutorials.html</a><span></span></font></p><p=
+ class=3D"MsoNormal" style=3D"line-height:16.866666793823242px;color:rgb(0,=
+0,0);margin:0in 0in 10pt;font-size:11pt"><font face=3D"times new roman, ser=
+if">Please register at<span></span></font></p><p class=3D"MsoNormal" style=
+=3D"line-height:16.866666793823242px;color:rgb(0,0,0);margin:0in 0in 10pt;f=
+ont-size:11pt"><b><font face=3D"times new roman, serif"><a href=3D"http://b=
+igdataieee.org/BigData2019/Registration.html" style=3D"color:rgb(149,79,114=
+);text-decoration:underline"><span style=3D"font-weight:normal">http://bigd=
+ataieee.org/BigData2019/Registration.html</span></a><span></span></font></b=
+></p><p class=3D"MsoNormal" style=3D"line-height:16.866666793823242px;color=
+:rgb(0,0,0);margin:0in 0in 10pt;font-size:11pt"><font face=3D"times new rom=
+an, serif">The regular registration package includes three lunches, one ban=
+quet, coffee breaks, the conference proceedings and all the technical prese=
+ntations (keynote, paper presentations , tutorials, posters, workshops.&nbs=
+p;&nbsp;We also offer one-day registration too.&nbsp;</font><font face=3D"C=
+alibri, sans-serif"><span></span></font></p><p class=3D"MsoNormal" style=3D=
+"line-height:16.866666793823242px;color:rgb(0,0,0);margin:0in 0in 10pt;font=
+-size:11pt;font-family:Calibri,sans-serif"><br></p><p class=3D"MsoNormal" s=
+tyle=3D"line-height:16.866666793823242px;color:rgb(0,0,0);margin:0in 0in 10=
+pt;font-size:11pt;font-family:Calibri,sans-serif"><br></p><p class=3D"MsoNo=
+rmal" style=3D"line-height:16.866666793823242px;color:rgb(0,0,0);margin:0in=
+ 0in 10pt;font-size:11pt;font-family:Calibri,sans-serif"><br></p><p class=
+=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;font-size:medium;text-align=
+:justify;font-family:&quot;Times New Roman&quot;,serif;color:black"><span s=
+tyle=3D"font-family:&quot;Courier New&quot;;font-size:10pt">To subscribe to=
+ this list, the user sends an email,</span></p><p style=3D"margin:0in 0in 0=
+.0001pt;font-size:medium;color:rgb(0,0,0);font-family:&quot;Times New Roman=
+&quot;,serif"><span style=3D"font-size:10pt;font-family:&quot;Courier New&q=
+uot;">with blank subject line, to<br><a href=3D"mailto:listserv@lists.drexe=
+l.edu" target=3D"_blank" style=3D"color:rgb(149,79,114)">listserv@lists.dre=
+xel.edu</a>. In the text box, the user<br>types:&nbsp;<br><br>subscribe BIG=
+DATA<br><br>To unsubscribe from a list, the user sends an email to<br><a hr=
+ef=3D"mailto:listserv@lists.drexel.edu" target=3D"_blank" style=3D"color:rg=
+b(149,79,114)">listserv@lists.drexel.edu</a>&nbsp;with the message</span><s=
+pan style=3D"font-size:10pt;font-family:Verdana,sans-serif"></span></p><p s=
+tyle=3D"margin:0in 0in 0.0001pt;font-size:medium;color:rgb(0,0,0);font-fami=
+ly:&quot;Times New Roman&quot;,serif"><span style=3D"font-size:10pt;font-fa=
+mily:&quot;Courier New&quot;">&nbsp;</span><span style=3D"font-size:10pt;fo=
+nt-family:Verdana,sans-serif"></span></p><p class=3D"MsoNormal" style=3D"ma=
+rgin:0in 0in 0.0001pt;font-size:medium;font-family:&quot;Times New Roman&qu=
+ot;,serif;color:black"><span style=3D"font-size:10pt;font-family:&quot;Cour=
+ier New&quot;">signoff&nbsp;</span><span style=3D"font-family:&quot;Courier=
+ New&quot;;font-size:13.333333015441895px">BIGDATA</span></p></div></div></=
+div>
+<br>
+<hr>
+<p align=3D"center">To unsubscribe from the BIGDATA list, click the followi=
+ng link:<br>
+<a href=3D"http://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3Mzc5IGZvYWFkQENB=
+TFBPTFkuRURVIEJJR0RBVEEgIA05eQkNGOMI&amp;c=3DSIGNOFF" target=3D"_blank">htt=
+p://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3Mzc5IGZvYWFkQENBTFBPTFkuRURVIE=
+JJR0RBVEEgIA05eQkNGOMI&amp;c=3DSIGNOFF</a>
+</p>
+
+--000000000000faa48205951c0834--

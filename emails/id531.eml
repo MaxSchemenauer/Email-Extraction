@@ -1,0 +1,175 @@
+Return-Path: game_edu-bounces@igda.org
+Received: from p-zm-mta01.its.calpoly.edu (LHLO p-zm-mta01.its.calpoly.edu) (129.65.64.109) by p-zm-store01.its.calpoly.edu with LMTP;
+	 Wed, 22 Oct 2014 23:21:40 -0700 (PDT)
+Received: from p-zm-mta01.its.calpoly.edu (localhost.localdomain [127.0.0.1]) by p-zm-mta01.its.calpoly.edu (Postfix) with ESMTP id D04A73A4A9 for <foaad@calpoly.edu>;
+	 Wed, 22 Oct 2014 23:21:40 -0700 (PDT)
+Received: from israfil.its.calpoly.edu (prod-loopback.its.calpoly.edu [129.65.64.9]) by p-zm-mta01.its.calpoly.edu (Postfix) with ESMTPS id C8C1B3A49C for <foaad@cpmail.calpoly.edu>;
+	 Wed, 22 Oct 2014 23:21:40 -0700 (PDT)
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AkQBAG2dSFTRRALxnGdsb2JhbABcgmt3WIMGyWoBCYhaFgERAQEBAQEICwkJFC6EAwEBBAEBARoGIwobAwsDAwECBgEBCgQ6BAICAwEjMAYTBYg8AQyzKYcAh2GFYQEBAQcBAQEBAQEBARYEjRKCYgoHAYMNQRIkgR4FlkuIQ4NJh26FRIYPgX5YgQYJF4ElAQEB
+X-IPAS-Result: AkQBAG2dSFTRRALxnGdsb2JhbABcgmt3WIMGyWoBCYhaFgERAQEBAQEICwkJFC6EAwEBBAEBARoGIwobAwsDAwECBgEBCgQ6BAICAwEjMAYTBYg8AQyzKYcAh2GFYQEBAQcBAQEBAQEBARYEjRKCYgoHAYMNQRIkgR4FlkuIQ4NJh26FRIYPgX5YgQYJF4ElAQEB
+X-IronPort-AV: E=Sophos;i="5.04,774,1406617200";
+	    d="scan'208,217"; a=2656627
+X-Originating-IP-Address: 209.68.2.241
+Received: from seven.pairlist.net ([209.68.2.241]) by israfil.its.calpoly.edu with ESMTP/TLS/ADH-AES256-SHA;
+	 22 Oct 2014 23:21:39 -0700
+Received: from seven.pairlist.net (localhost [IPv6:::1]) by seven.pairlist.net (Postfix) with ESMTP id 045C0614AD;
+	 Thu, 23 Oct 2014 02:11:34 -0400 (EDT)
+X-Original-To: game_edu@lists7.igda.org
+Delivered-To: game_edu@seven.pairlist.net
+Received: from qs1599.pair.com (qs1599.pair.com [216.92.131.237]) by seven.pairlist.net (Postfix) with SMTP id 44862614AD for <game_edu@lists7.igda.org>;
+	 Thu, 23 Oct 2014 02:11:33 -0400 (EDT)
+Received: (qmail 85947 invoked by uid 3002);
+	 23 Oct 2014 06:11:33 -0000
+Delivered-To: igda-igda:org-game_edu@igda.org
+Received: (qmail 85942 invoked from network);
+	 23 Oct 2014 06:11:33 -0000
+Received: from localhost (HELO qs1599.pair.com) (127.0.0.1) by localhost with SMTP;
+	 23 Oct 2014 06:11:33 -0000
+Received: from localhost (localhost [127.0.0.1]) by qs1599.pair.com (Postfix) with SMTP id 13A50AE043 for <game_edu@igda.org>;
+	 Thu, 23 Oct 2014 02:11:33 -0400 (EDT)
+X-Virus-Check-By: qs1599.pair.com
+Received: from note.orchestra.cse.unsw.EDU.AU (note.orchestra.cse.unsw.EDU.AU [129.94.242.24]) by qs1599.pair.com (Postfix) with ESMTP id 5AFB3AE01F for <game_edu@igda.org>;
+	 Thu, 23 Oct 2014 02:11:32 -0400 (EDT)
+Received: From [10.46.37.137] ([137.111.13.46] == E6A-ICS.building.mq.edu.au) (auth-user malcolmr) (cse-authentic-sender malcolmr) By note With Smtp ;
+	 Thu, 23 Oct 2014 17:11:30 +1100
+From: Malcolm Ryan <malcolmr@cse.unsw.edu.au>
+To: IGDA Game Education Listserv <game_edu@igda.org>
+Date: Thu, 23 Oct 2014 17:11:29 +1100
+In-Reply-To: <BF197FA9-BC60-48CD-841B-5EE97D517F10@cse.unsw.edu.au>
+Message-ID: <16D2FE2C-66C0-43BA-83A6-BF494E40A716@cse.unsw.edu.au>
+References: <86933B66-3957-4C41-9857-3ED9DA87029D@cse.unsw.edu.au> <CA+eKD7pEHvHZ5KNVudtAoqsVqtriC-2TTo3=m5ESB0TmrR7mew@mail.gmail.com> <BF197FA9-BC60-48CD-841B-5EE97D517F10@cse.unsw.edu.au>
+X-Mailer: Apple Mail (2.1878.6)
+CC: Games Research Network <GAMESNETWORK@uta.fi>
+Subject: Re: [game_edu] CFP: Workshop on Games, Ethics and War - Nov 24
+X-BeenThere: game_edu@igda.org
+X-Mailman-Version: 2.1.18-1
+Precedence: list
+List-Id: IGDA Game Education Listserv <game_edu.igda.org>
+List-Unsubscribe: <https://pairlist7.pair.net/mailman/options/game_edu>,
+   <mailto:game_edu-request@igda.org?subject=unsubscribe>
+List-Archive: <https://pairlist7.pair.net/pipermail/game_edu/>
+List-Post: <mailto:game_edu@igda.org>
+List-Help: <mailto:game_edu-request@igda.org?subject=help>
+List-Subscribe: <https://pairlist7.pair.net/mailman/listinfo/game_edu>,
+   <mailto:game_edu-request@igda.org?subject=subscribe>
+Reply-To: IGDA Game Education Listserv <game_edu@igda.org>
+Content-Type: multipart/mixed;
+	boundary="===============3111676959928868406=="
+Errors-To: game_edu-bounces@igda.org
+Sender: game_edu <game_edu-bounces@igda.org>
+MIME-Version: 1.0
+
+--===============3111676959928868406==
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_5421E947-54B4-4F39-A117-C4841C79B764"
+
+--Apple-Mail=_5421E947-54B4-4F39-A117-C4841C79B764
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+For international readers, I should have added that MQ is in Sydney Austral=
+ia.
+
+Malcolm
+
+On 23 Oct 2014, at 5:05 pm, Malcolm Ryan <malcolmr@cse.unsw.edu.au> wrote:
+
+> [Please feel free to share this with colleagues who might be interested i=
+n attending.]
+>=20
+> CALL FOR PARTICIPATION
+>=20
+> Macquarie University Department of Computing and the Ethics Centre would =
+like to invite academics, industry professionals and other interested parti=
+es to the Workshop on Games, Ethics and War. This one-day workshop will dis=
+cuss such questions as:
+>=20
+> * How is war depicted in videogames? How does this match up to the realit=
+y?
+> * What is ethical warfare? Is videogame war ethical?
+> * How do we design meaningful and engaging ethical decisions in games?
+> * How can game developers depict war and violence without glorifying it?
+> * Can games be used as a tool for developing ethical expertise?
+>=20
+> Keynote speakers:
+> * Prof Jose Zagal of DePaul University, editor of the Videogame Ethics Re=
+ader
+> * Cory Davis of Tangentlemen, lead designer of Spec-Ops: The Line
+> * Micha=C5=82 Drozdowski, of 11-bit studios, lead designer of This War of=
+ Mine
+>=20
+> This event is free but attendance is by registration only, as places are =
+limited. To register, please email Malcolm Ryan (malcolm.ryan@mq.edu.au).
+>=20
+> We are looking for additional speakers. If you are interested in giving a=
+ 20 minute presentation on a related topic, please include your topic with =
+your registration.=20
+>=20
+> Where: Room 102, E6A Building, Macquarie University
+> When: Monday November 24, 10am-4pm
+>=20
+> Lunch and refreshments will be included.
+>=20
+> _______________________________________________
+> game_edu mailing list
+> game_edu@igda.org
+> https://pairlist7.pair.net/mailman/listinfo/game_edu
+
+
+--Apple-Mail=_5421E947-54B4-4F39-A117-C4841C79B764
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; -webki=
+t-line-break: after-white-space;">For international readers, I should have =
+added that MQ is in Sydney Australia.<div><br></div><div>Malcolm<br><div><b=
+r><div><div>On 23 Oct 2014, at 5:05 pm, Malcolm Ryan &lt;<a href=3D"mailto:=
+malcolmr@cse.unsw.edu.au">malcolmr@cse.unsw.edu.au</a>&gt; wrote:</div><br =
+class=3D"Apple-interchange-newline"><blockquote type=3D"cite"><div style=3D=
+"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after=
+-white-space;"><div>[Please feel free to share this with colleagues who mig=
+ht be interested in attending.]</div><div><br></div><div>CALL FOR PARTICIPA=
+TION</div><div><div><br></div><div><div>Macquarie University Department of =
+Computing and the Ethics Centre would like to invite academics, industry pr=
+ofessionals and other interested parties to the <b>Workshop on Games, Ethic=
+s and War</b>. This one-day workshop will discuss such questions as:</div><=
+div><br></div><div>* How is war depicted in videogames? How does this match=
+ up to the reality?</div><div>* What is ethical warfare? Is videogame war e=
+thical?</div><div>* How do we design meaningful and engaging ethical decisi=
+ons in games?</div><div>*&nbsp;How can game developers depict war and viole=
+nce without glorifying it?</div><div>* Can games be used as a tool for deve=
+loping ethical expertise?</div></div><div><br></div><div>Keynote speakers:<=
+/div><div>* <b>Prof Jose Zagal</b> of DePaul University, editor of the Vide=
+ogame Ethics Reader</div><div>* <b>Cory Davis</b> of Tangentlemen, lead des=
+igner of Spec-Ops: The Line</div><div>*&nbsp;<b>Micha=C5=82&nbsp;</b><span =
+style=3D"background-color: rgb(255, 255, 255);"><b>Drozdowski</b>, of 11-bi=
+t studios, lead designer of This War of Mine</span></div><div><br></div><di=
+v>This event is free but attendance is by registration only, as places are =
+limited. To register, please email Malcolm Ryan (<a href=3D"mailto:malcolm.=
+ryan@mq.edu.au">malcolm.ryan@mq.edu.au</a>).</div><div><br></div><div>We ar=
+e looking for <b>additional speakers</b>. If you are interested in giving a=
+ 20 minute presentation on a related topic, please include your topic with =
+your registration.&nbsp;</div><div><br></div><div><b>Where:</b>&nbsp;Room 1=
+02, E6A Building, Macquarie University</div><div><b>When:</b> Monday Novemb=
+er 24, 10am-4pm</div><div><br></div><div>Lunch and refreshments will be inc=
+luded.</div><div><br></div></div></div>____________________________________=
+___________<br>game_edu mailing list<br><a href=3D"mailto:game_edu@igda.org=
+">game_edu@igda.org</a><br>https://pairlist7.pair.net/mailman/listinfo/game=
+_edu<br></blockquote></div><br></div></div></body></html>=
+
+--Apple-Mail=_5421E947-54B4-4F39-A117-C4841C79B764--
+
+--===============3111676959928868406==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+game_edu mailing list
+game_edu@igda.org
+https://pairlist7.pair.net/mailman/listinfo/game_edu
+
+--===============3111676959928868406==--

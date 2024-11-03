@@ -1,0 +1,335 @@
+Received: from BYAPR08MB5957.namprd08.prod.outlook.com (2603:10b6:405:75::46)
+ by BN8PR08MB6196.namprd08.prod.outlook.com with HTTPS via
+ BN6PR17CA0057.NAMPRD17.PROD.OUTLOOK.COM; Mon, 28 Oct 2019 17:56:38 +0000
+Received: from DM3PR08CA0008.namprd08.prod.outlook.com (2603:10b6:0:52::18) by
+ BYAPR08MB5957.namprd08.prod.outlook.com (2603:10b6:a03:11a::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2387.24; Mon, 28 Oct
+ 2019 17:56:36 +0000
+Received: from CO1NAM04FT036.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::206) by DM3PR08CA0008.outlook.office365.com
+ (2603:10b6:0:52::18) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2387.22 via Frontend
+ Transport; Mon, 28 Oct 2019 17:56:36 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ CO1NAM04FT036.mail.protection.outlook.com (10.152.91.146) with Microsoft SMTP
+ Server id 15.20.2387.20 via Frontend Transport; Mon, 28 Oct 2019 17:56:35
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id D9C472E16EF; Mon, 28 Oct 2019 13:55:01 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org D9C472E16EF
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1572285301;
+	bh=bjGpJqjX/SekLZLxbtshRRdxPghN7L8q5ND13U/E5So=;
+	h=Date:To:Subject:From:From;
+	b=sDnpNTQvSPVKKZkSB1AwWfdcsw23K6wGzXcb4lYD13+NSUWWHPo4X7RBn+sVQpNyl
+	 jP0JjuiWdP3lNmTZ0Bp9WunSYvmwMUpiAcfgz1OlhRhRdo+KL8ctWk1HmVfE5xy9OM
+	 B9kU4BYNNfOKkC5SMXy0w5zoCTr7BHo9aS3rQLFk=
+Date: Mon, 28 Oct 2019 13:55:01 -0400
+To: foaad@calpoly.edu
+Subject: CFP: IEEE CPS: Conf on Cyber Warfare, Cyber Defense, & Cyber
+ Security (CSCI-ISCW'19: Dec. 5-7, 2019, USA); Deadline: Nov 5
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20191028175501.D9C472E16EF@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 28 Oct 2019 17:56:35.1885
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 22ac18a5-3f64-49ff-d259-08d75bd02c5d
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BYAPR08MB5957;H:world-comp.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT036.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 22ac18a5-3f64-49ff-d259-08d75bd02c5d
+X-MS-TrafficTypeDiagnostic: BYAPR08MB5957:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 Oct 2019 17:56:35.0875
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 22ac18a5-3f64-49ff-d259-08d75bd02c5d
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB5957
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.4085635
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2387.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?sT327gIN8+qJtiScFi2Lfulkcq45mrqTZNId9mCoqNSguvYMBJ9Pwp/pCsLW?=
+ =?us-ascii?Q?c7SwQt2nSAnuG4yriUxF/MDsOT3zBHEYB7NTgweoT74nd6XD7CBelPFO7tJc?=
+ =?us-ascii?Q?YtiWsgtquIxSQV4BfVLiwhDSAdnXe9VRk23nQMc/JSiXLwAMO7+ICnR7B5ZP?=
+ =?us-ascii?Q?MAsAugApoeTSYd+YcT3sz557vBdNNhvFmvSjkw1bHgiZ5D7+fdW50SHbcZlQ?=
+ =?us-ascii?Q?PYNxPVfJiy3btSPJk2Wb58gKTrd4JM8Bde4uS35An/TV/pqW/gzXzeBdBRlr?=
+ =?us-ascii?Q?LNjKXLR8yl82nUg/IIFau+mfsZerEaAHry0mX3bOvlbyRmVClNNKB/G0fdrA?=
+ =?us-ascii?Q?PXYYfby7XVF0Y9bznODChtyrYnfVoXt6GZXakGvOBkNFf1L6Re4eb7ERwIx1?=
+ =?us-ascii?Q?8pCu1dcVGlzQPmxKJL0KKJcWx0gzJvGhcpavyrf27vft29K1rU7vy8OOz0f9?=
+ =?us-ascii?Q?qJUnu0tiI/0EZPZQYDHUMrun9NHmZmQrMEOFBpzZTfkNu/XA/5I/41rDqDUY?=
+ =?us-ascii?Q?2i+TbKInGIL5jObU4NrHVJRDYYUwsRFmn7JR8P3ebmxTN+5nS1nN+DZVCdyV?=
+ =?us-ascii?Q?ifSqrFcUqEBya3xg44d5yWN4Kve9nCtbL1cZhixPhzWcmvBpxjU4XgJ5IbOl?=
+ =?us-ascii?Q?I5Hr2C1G+D7bPURa+PQwUMLCyhqS4VBFn7H0CrCSvXFPzS+a5pG44KdK1BSv?=
+ =?us-ascii?Q?n2VKXsHILpYxU12xNZhZpgYaQkEVTg+/O228Padv3BthRDJ6IMy3o4+SCTsG?=
+ =?us-ascii?Q?XXu7Tr+uNpel7oQX/noVOB6225bVQ/5nfUfK766paYd9mslubxOpoC2EVVE8?=
+ =?us-ascii?Q?Ja2W3wRma8uxrzDxCukP7Lqg2AXNFEukYGYaq4jv4CZlMgIRndU1/qY2unPN?=
+ =?us-ascii?Q?JE9CmU5CaF7so2dyAm62Z0hv9rdAh88UY3wMyre0MLX2hL3nhBIIMLrtb0Yf?=
+ =?us-ascii?Q?IfzcUh/lhMplZxF+x69pW878zLs750gabmA26TC+p133yM+6B6SJSgsJtlNP?=
+ =?us-ascii?Q?UJ5+mdnaT5wgpTqkPmHVgCFx6gaQwdB9O5/TrlvDPeg9k0moTAz0s9SNW7nS?=
+ =?us-ascii?Q?u5bGv6GCdNe/CYorhz4xLnhOZme2+kQqMZmrbZB8VdLRDvLADfR9MccNAfZq?=
+ =?us-ascii?Q?7aROEDCq6Tn0glONfEo7I5pNHfIRL3wlDqIHpFaxSOugbHPFXYGgRdo1DWQV?=
+ =?us-ascii?Q?Q6ipB+7Qeepr7pAuLpj19z1btQqO7IsqMMP6LcNm5Xr/UV5MseCMox9VAFcb?=
+ =?us-ascii?Q?KHuStlKQ4emfJVA5RioTUX0wvPOOKjr4jP0JAHPIu/VryMoR1S5rR/qOIdep?=
+ =?us-ascii?Q?nonX7w1GHMDr/vumDPW4K/3JLNcuWru1pET0zBy2bF2Up4jnN6SVMJB+U4k/?=
+ =?us-ascii?Q?pmLCcDG8kQjhVQ0RAZ15rUw5k5tz8q/zossmiQnFQbnGNMPNZH5AgFC3GUVL?=
+ =?us-ascii?Q?uLXDqnxAY+qByWZAD+GtpZsqHPEG37TY?=
+MIME-Version: 1.0
+
+
+                   CALL FOR LATE BREAKING PAPERS
+            Paper Submission Deadline: November 5, 2019
+
+International Symposium on Cyber Warfare, Cyber Defense, & Cyber Security
+
+          (CSCI-ISCW: December 5-7, 2019, Las Vegas, USA)
+    https://americancse.org/events/csci2019/Symposiums/csci_iscw 
+
+                        IEEE Xplore entry
+  https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+All accepted papers will be published in the proceedings of the 2019
+International Conference on Computational Science & Computational
+Intelligence ( CSCI: https://americancse.org/events/csci2019 ).
+
+SCOPE AND LIST OF TOPICS:
+
+   PROLOGUE:
+   Cyber Warfare adds an additional dimension to warfare. Generally, it
+   involves the battlespace use and targeting of computers and networks in
+   warfare. Cyber Warfare strategies include both offensive and defensive
+   operations pertaining to the threat of cyberattacks, espionage, sabotage,
+   disruptions to infrastructures, theft of critical information, and
+   publishing deliberate misinformation (fake news and fabricated news)
+   spread via traditional media and online social media with the intend to
+   mislead in order to disrupt the political processes of nations. The
+   methods and technologies utilized in Cyber Warfare can be countered
+   using Cyber Defense strategies. Cyber Defense strategies involve the
+   heavy and targeted use of Cyber Security. Topics of interest include:
+
+   - Cyber Warfare Technologies and Strategies
+   - Cyber Defense Technologies and Strategies
+   - Authorization Infrastructures
+   - Autonomous Security Methods
+   - Novel Biometric Methods
+   - Cloud Security
+   - Forensic Technologies
+   - Cryptography and Formal Methods
+   - Trapping Technologies
+   - Data Protection Methods
+   - Security and Reverse Engineering
+   - Vulnerability Analysis
+   - Steganography and Steganalysis
+   - Identity Management
+   - Security Policies
+   - Legislation and Regulatory Approaches for Enhancing Security
+   - Safe Computing
+   - Identification and Prevention of Online Scams
+   - Mobile Protection Techniques
+   - Security Risk Analysis, Management and Trade-offs
+   - Identity, Privacy and Trust Management
+   - Security by Design
+   - Incident Response Methods
+   - Cybercrime and Underground Economy - Identification and Prevention
+   - Detection of Malicious Software
+   - Novel Security Tools
+   - Lifecycle Security Management and Identification of the Weakest Links
+   - Internet Security
+   - Network Security
+   - Computer Security
+   - Prevention of Cyber Attacks on Critical Infrastructures
+   - Methodologies in Reducing National Vulnerability to Cyber Attacks
+   - Methods for Minimizing Damage and Recovery Time from Cyber Attacks
+   - Prevention of Fake and Fabricated News - Media Trust Management
+   - Cyber Warfare and Attack Prevention during Elections
+   - Secure Voting Systems
+   - Securing Electric Power Grids + Smart Grids
+   - Securing Communication Systems
+   - Cyber Counter-intelligence
+   - Tools in Cyber Warfare and Cyber Defense Arsenal
+   - Innovative Tools for Cyber Defense Technologies
+   - Cyber Weapons
+   - Cyber Space and Security
+   - Threats from Social Media
+   - Crime and Terrorism
+   - IT and Countering Violent Extremism
+   - Global Security
+   - Data Analytics and Cyber Warfare
+   - Prevention of Bad Data Injection
+   - Advanced Persistent Threat (APT) and Prevention
+   - Data Exfiltration
+   - Tools for Countering Attacks by Viruses, Worms, Malware, Phishing,
+     SQL Injection Attack, Cross-Site Scripting, Session Hijacking,
+     Trojan Horses, Rootkits, Botnets, ...
+   - Security and Social Engineering
+   - Tools for Countering Logic Bomb, Time Bomb, Distributed
+     Denial-of-Service Attack, ...
+   - Methodologies to Address System and Data Vulnerabilities
+   - Novel Patching Techniques
+   - Next Generation Firewalls
+   - Intrusion Detection Techniques
+   - Terrorism Databases and Resources
+   - Terrorist Networks
+   - Threat Assessment
+   - Cyber Vandalism and Defense
+   - Cyber Security and Terrorism
+   - Counter-terrorism
+   - Cyber Tools and Identification of Propaganda
+   - Security Education and Training
+
+PUBLISHER:
+
+   IEEE CPS: https://www.computer.org/conferences/cps 
+   All accepted papers will be published in the proceedings of the 2019
+   International Conference on Computational Science & Computational
+   Intelligence ( CSCI: https://americancse.org/events/csci2019 ).
+   Since its inception, all CSCI proceedings have always been approved
+   and included into IEEE Xplore indexation/digital-library citation
+   index databases. Past conference proceedings can be accessed via
+   IEEE Xplore Digital Library at:
+   Volume I (2014):  https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6822065 
+   Volume II (2014): https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6822285 
+   Volume (2015):    https://ieeexplore.ieee.org/xpl/conhome/7420813/proceeding 
+   Volume (2016):    https://ieeexplore.ieee.org/xpl/conhome/7879541/proceeding 
+   Volume (2017):    https://ieeexplore.ieee.org/xpl/conhome/8554238/proceeding 
+   Volune (2018):    Approved & Confirmed for indexation/publication in IEEE Xplore
+                     (will appear in IEEE Xplore in October/November, 2019)
+
+   Since the proceedings will be published soon after the conference
+   by IEEE CPS, we are quite FLEXIBLE with paper submission deadline.
+   WE HAVE A REVOLVING DEADLINE: ie, papers will be refereed within
+   48 hours from the date of submission using our fast-track evaluation
+   system (FTE) where referees receive a small honorarium pay for their
+   services.
+
+TYPE OF SUBMISSIONS/PAPERS (Late Breaking Papers):
+
+ - Full/Regular Research Papers (maximum of 6 pages):
+   Regular Research Papers should provide detail original research
+   contributions. They must report new research results that represent
+   a contribution to the field; sufficient details and support for
+   the results and conclusions should also be provided. The work
+   presented in regular papers are expected to be at a stage of
+   maturity that with some additional work can be published as journal
+   papers.
+
+ - Short Papers (maximum of 4 pages):
+   Short papers report on ongoing research projects. They should provide
+   overall research methodologies with some results. The work presented
+   in short papers are expected to be at a stage of maturity that with
+   some additional work can be published as regular papers.
+
+ - Poster Papers (maximum of 2 pages):
+   Poster papers report on ongoing research projects that are still in
+   their infancy (i.e., at very early stages). Such papers tend to
+   provide research methodologies without yet concrete results.
+
+REVIEW PROCESS
+
+   Each paper will be peer-reviewed by 2 to 4 peers (except for papers that
+   are philosophical in nature - such papers would be considered for panel
+   discussions.) Confidentiality of submitted material will be maintained.
+   Papers will be evaluated on the basis of originality, impact, significance,
+   quality of research, quality of writing, and contribution to conference
+   program and diversity. Papers whose authors include one or more members
+   of the program committee will be evaluated using the double-blinded
+   review process. Authors whose papers are not selected for publication
+   can submit a rebuttal letter; rebuttals will be evaluated by 4 members
+   of the Program Committee.
+
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+   https://americancse.org/events/csci2019/paper_submission 
+
+
+DEADLINES - DATES:
+
+   November 5, 2019:     Submission of Late Breaking Papers
+                         https://american-cse.org/ 
+   November 7, 2019:     Notification of acceptance/rejection
+                         Two days after the date of submission but by
+                         no later than November 7, 2019
+   November 20, 2019:    Final papers & Author Registrations
+
+   December 5-7, 2019:   International Symposium on Cyber Warfare,
+                         Cyber Defense, & Cyber Security
+                         (CSCI-ISCW: December 5-7, 2019, USA)
+           https://americancse.org/events/csci2019/Symposiums/csci_iscw 
+                         CSCI-ISCW will be held in conjunction with other
+                         affiliated research events; for more information,
+                         see https://americancse.org/events/csci2019 
+
+
+DEMOGRAPHY HISTORY (based on 2014 through 2019 participation data):
+
+   In the past, about 42% of the attendees have been from outside
+   USA; from 59 nations. 56% of registrants have been from academia,
+   32% from industry; 11% from government agencies and research labs;
+   and 1% unknown. The conference has had participants, speakers,
+   authors affiliated with over 154 different universities; including
+   many from the top 40 ranked institutions; major IT corporations,
+   including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+   Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+   Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+   Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+   Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+   BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+   Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+   major corporations, including, Exxon Mobil, JPMorgan Chase,
+   Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+   Petroleum Group, Aerospace Electronic Technology (China), Max
+   Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+   (France), Forschungszentrum Juelich (Germany), Secured Smart
+   Electric Vehicle (Korea), ...; government research agencies and
+   national laboratories, including, NSF, NIH National Institutes of
+   Health, US Air Force (multiple research labs), NSA National Security
+   Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+   Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+   Lab, US National Cancer Institute, Swedish Defence Research Agency,
+   NIST US National Institute of Standards and Technology, U.S.
+   Geological Survey, US National Library of Medicine, US Air Force
+   (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+   Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+   Army, Korea Internet & Security Agency, Suez Canal Research Center,
+   Okinawa Bureau (Japan), Canadian Medical Protective Association,
+   Osong Medical Innovation Foundation (Korea), National Institute of
+   Informatics (Japan), ...; and three Venture Capitalists and nine
+   Intellectual Property attorneys.
+
+CONTACT:
+
+   Questions and inquiries should be sent to:
+   Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.
+

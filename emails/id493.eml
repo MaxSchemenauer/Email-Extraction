@@ -1,0 +1,472 @@
+Received: from MWHPR08MB2735.namprd08.prod.outlook.com (2603:10b6:a03:80::14)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR11CA0037.NAMPRD11.PROD.OUTLOOK.COM; Wed, 18 Sep 2019 04:34:12 +0000
+Received: from BN6PR08CA0081.namprd08.prod.outlook.com (2603:10b6:404:b6::19)
+ by MWHPR08MB2735.namprd08.prod.outlook.com (2603:10b6:300:b9::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2263.23; Wed, 18 Sep
+ 2019 04:34:09 +0000
+Received: from CO1NAM04FT051.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::207) by BN6PR08CA0081.outlook.office365.com
+ (2603:10b6:404:b6::19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2284.19 via Frontend
+ Transport; Wed, 18 Sep 2019 04:34:09 +0000
+Authentication-Results: spf=none (sender IP is 209.85.208.65)
+ smtp.mailfrom=ijarem.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=ijarem-org.20150623.gappssmtp.com;calpoly.edu; dmarc=none
+ action=none header.from=ijarem.org;compauth=pass reason=106
+Received-SPF: None (protection.outlook.com: ijarem.org does not designate
+ permitted sender hosts)
+Received: from mail-ed1-f65.google.com (209.85.208.65) by
+ CO1NAM04FT051.mail.protection.outlook.com (10.152.90.255) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2263.14 via Frontend Transport; Wed, 18 Sep 2019 04:34:09 +0000
+Received: by mail-ed1-f65.google.com with SMTP id f2so5355354edw.3
+        for <foaad@calpoly.edu>; Tue, 17 Sep 2019 21:34:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ijarem-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=bGn9Jkpf0lob4JNrYpKi+WWqumz0CH7/SQ5bgBVXlYk=;
+        b=ZE0H5gRwpKduUu7kCIDWNc/FdJqtg5XdCqnRRViwowZeZVYGUoZM0LISZX33BAbhhW
+         TrLxMlxUNwa+Sq4Rcz74HQ1BFb0WNClIXIEMy9CWzghDUpDJbPuKGvM4bMZUV8CfKBlu
+         VysKjn2AdY1iJDdQXcIuskZDT6oVhe7WfG5KiKSOnt+nIUTIUj0uuOoVrBczp5CLgKGF
+         2HVjnTV2brrQt59DMm9+oMfN/aq08izZUHzta4dsGssKgGfCHr5XiTNojIP8J6g1akPP
+         w97eNQYmeamQgwlbcn9CDoA3rIyMfIaCz/Z7quYtHIE5tcu4z1slWefn/MNwAUR7PVuR
+         iyew==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=bGn9Jkpf0lob4JNrYpKi+WWqumz0CH7/SQ5bgBVXlYk=;
+        b=WZuGRe5G/bpBnxXze4Hs+x8IznCTbGu28OayzgYc3VDYPEosA7kSQkgzaCPCF19JJ/
+         bulBiYAca3qiv1R3mftojlLtV4EE+6o2F20l1/kNkJ/0tdaawAvUwE9wHkl5RpiRAu1X
+         2blSNhyIh99CdlNd+PX+jk2+VqMb6mPhYRjEiH/E6J3Jh8BWaDIJLOdSwUxCgHl3BWU1
+         8QeM9K/cYDT4GAgLP2EIajFfTSZstVP3YHXoI1895LKyTNyL5WWmw/D09Z/B1ejDh7Zw
+         nrzqC0tT1lwMM4U8MxNwIJcq3YRDa4O5dKpxtPogORE6xbfUZfijnNCfCs4qC1IC9xk1
+         vYsQ==
+X-Gm-Message-State: APjAAAX3I3GoTxga2/PGT3poWZS6SBgx1FwbgpvwDkbv2UFQjnu08GGU
+	WoaEYBsvjbBwccKde2jBY78SeFyyZ9NpWgjDDGi7XmRO
+X-Google-Smtp-Source: APXvYqzROjI3ZTMFJ3SNGX9PIgQ/3J1XVoumxWZV058VaWEf9RxS6LV4oCLjXVBXOzLGNX0hHeQDcXQkKzrd9zQQUag=
+X-Received: by 2002:a50:979b:: with SMTP id e27mr8029154edb.173.1568781247322;
+ Tue, 17 Sep 2019 21:34:07 -0700 (PDT)
+Received: from 776393159873 named unknown by gmailapi.google.com with
+ HTTPREST; Tue, 17 Sep 2019 21:34:06 -0700
+From: IJAREM Editor <submission@ijarem.org>
+Date: Tue, 17 Sep 2019 21:34:05 -0700
+Message-ID: <CAC_ZFx3kOvOh2=gFFvGx8jpwwNtRNHzavrr=sJ7x7a1aD+cVzQ@mail.gmail.com>
+Subject: Publish Your Article in Peer Reviewed International Journal (Volume
+ 05 - Issue 09)
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="000000000000fa2bcc0592cc5819"
+Return-Path: submission@ijarem.org
+X-MS-Exchange-Organization-ExpirationStartTime: 18 Sep 2019 04:34:09.0555
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 51dece9a-da5b-448c-ef05-08d73bf17282
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132132548490585167;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.65;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(428003)(23363002)(10533003)(199004)(189003)(498394004)(606006)(5660300002)(966005)(66574012)(55446002)(86362001)(75640400001)(71190400001)(14444005)(18926415008)(33964004)(16586007)(22186003)(476003)(486006)(733005)(95326003)(4006050)(59536001)(6916009)(305945005)(2171002)(15974865002)(62610400004)(61266001)(126002)(26005)(1096003)(76236002)(246002)(336012)(7596002)(7636002)(16003)(58800400005)(9686003)(356004)(21615005)(2351001)(7066003)(95476003)(8676002)(6306002)(236005)(8576002)(2361001);DIR:INB;SFP:;SCL:1;SRVR:MWHPR08MB2735;H:mail-ed1-f65.google.com;FPR:;SPF:None;LANG:en;PTR:mail-ed1-f65.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT051.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 51dece9a-da5b-448c-ef05-08d73bf17282
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600167)(711020)(4605104)(8001031)(1405096)(1407096)(1408068)(71702078);SRVR:MWHPR08MB2735;
+X-MS-TrafficTypeDiagnostic: MWHPR08MB2735:
+X-MS-Exchange-PUrlCount: 4
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 Sep 2019 04:34:09.0525
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 51dece9a-da5b-448c-ef05-08d73bf17282
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MWHPR08MB2735
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.2392122
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2284.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?L0JTVG1HRjYrekJTQ3JZUVFadnVuZG1FeU5XTHBXUkRCZ3ZpNDdaSVF6UlFV?=
+ =?utf-8?B?RDVKdXZQcmtEY0ZacUtFbGJIL2ZITTYwMnU0d3Y2QkM4YisrRXgwcGFINWkx?=
+ =?utf-8?B?dXhTc0VsTXZseDV6Um1Bbml3TTM4N0hvTXRQTE5XaFRWTjRDTWtnT0swRWNV?=
+ =?utf-8?B?R0tQQ05QZjBpRnVuaUdsZ1YrVFUwSzRValJwR3g3Z3Y3bG5uSjJRbm5jM2lw?=
+ =?utf-8?B?T0JKWE9kaHdsc2oxYTNoUVR3Z0FRL09uYUFHenh3QjFZMXVmcDBFZUZhWTA4?=
+ =?utf-8?B?SlEwdko1bFJuTnhVT3dUYXB3a1EvWnJQMTZ6VytSYjZYOGMzc2NRa3k0RXhT?=
+ =?utf-8?B?Z2RtWG0zZ0ZvUHk5c2xwRkN6TUFmN2tFT0F1dzhjZUJ6Z2NPRDRhOXNCbXFm?=
+ =?utf-8?B?MkUzWkNiZ3U1MW5ITUtuaXhYT3JXZDhUT0lKaG1SeEhUL25ua093Yk16ck13?=
+ =?utf-8?B?NTBGUWE2VFN5bjdGMFFxalRnMisyTWJOTjArMVIvRGNQeEhUb2VmNjU1OWRu?=
+ =?utf-8?B?Y2QzRGxPQXRJcXF2YWhBS3h5UXhoUkF5TGcyWkhuTkx4LzZKYURaYkoxWkVw?=
+ =?utf-8?B?UEZZREVSSWRhRVdxYS81ZWFnQlRXSHhkL0hlRFRWeUYxUE1KWlBlb2VnNDVO?=
+ =?utf-8?B?YXR3YndJbXd1TlFUbVhzSlpvczVPQ3lHZ1poQVhBM2ZlWlJCMVliakpPWndS?=
+ =?utf-8?B?bzJtU080a0dqU3VPcS95dGwzRXhVZnhkazJUdFIwR0VBMmVBZll2bVk1c0N4?=
+ =?utf-8?B?SWo4SGxqZGhuU3BwTEdxekh3UVcySFNwcjg4VlNXZkVEVStnR0hxNTlCeG05?=
+ =?utf-8?B?ZUt3ZCtFc290cXAvNUhzaDhlZGI5TEhwMnBFM1c4bVJWanZ0MW43NUNoWi9l?=
+ =?utf-8?B?SWVXTmJ6TGhBTEZmMXVxdVMzMC93am9GZksvSXlwYWV5Z0l5Z2tQNzBlWmhV?=
+ =?utf-8?B?VE8wM1IvcXQ0UTM1Ny8zcng2Qmp6SmRCSEZqK1hPejVkcGxyUzR5U29kS2w0?=
+ =?utf-8?B?cTgwcENjZGpPcGUrV3FaY0p6WXdIN1RabnJzL3hjUG1COVczWDg1OVNmeHVa?=
+ =?utf-8?B?cDRKRkgwWnNMaTlIY3haNUNUbHF0bCs3Ym52cExWemFJZlp1dDMvK2xDQUpB?=
+ =?utf-8?B?V2xRdVhEUFZSS1gzUVl0aE9tRnZFOW93RlNkL3FnQnNwZHo0VWdVU3JZbk1H?=
+ =?utf-8?B?VzVBZE5Rek9hTitQZUhkS1ArWlhmNjVOOWt2dnI1TXNnT3IzQ2FOWWxiSEE3?=
+ =?utf-8?B?NWZock9qNDRmN0dkRjRCeW1nSTB3TFBTWE5XdkU1VHBsUmwxZllEeVV6SUp0?=
+ =?utf-8?B?bjZPaGhNVXVHNHdZUkVkbk91STRwZkV6NTZ4M3VGWlR6a1dmNE5iYXNKZ0lO?=
+ =?utf-8?B?MVFReHVNbmNpb0E9PQ==?=
+MIME-Version: 1.0
+
+--000000000000fa2bcc0592cc5819
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*International Journal of*
+
+*Advanced Research in Engineering & Management (IJAREM)*
+
+
+
+We Publish Research Papers
+
+
+
+*(ISSN: 2456-2033)*
+
+*Dear Researcher,*
+*International Journal of Advanced Research in Engineering & Management
+(IJAREM) *is an International peer reviewed, open access, Engineering and
+Science Journal promoting the discovery, innovation, advancement and
+dissemination of basic and transitional knowledge in engineering, science
+and related disciplines. We aim to revolutionize industry by promoting
+legitimate and effective research.
+
+We welcome original research articles/manuscripts as long as their research
+questions are important, new, and relevant to general readers and their
+designs are appropriate and robust.
+
+*IJAREM provides individual hard copy of certificates to all authors on
+demand at their postal address after online publication.*
+
+
+Please ensure submitted articles conform to the internationally accepted
+criteria and are prepared in line with *IJAREM* Author Guidelines. Every
+research article published in the (IJAREM) is immediately accessible on to
+everyone.
+
+
+*Important dates for Sep 2019, Volume 05 - Issue 09*
+
+*Last date of paper submission:*
+
+*20 Sep 2019*
+
+*Notification of Acceptance*
+
+*Within 03-04 Days*
+
+*Publication date:*
+
+*Within 05-07 Days after registration*
+
+
+*Why publishing with The IJAREM?*
+ =C3=98  All articles published in the journals are open access: Universall=
+y
+accessible online without charge.
+=C3=98  Easy submission and peer-review makes the whole process of publishi=
+ng
+your article simple and efficient.
+=C3=98  High visibility for your work: Anyone with internet access can read=
+ or
+your download.
+=C3=98  Professional formatting and reviewing meets the standards expected =
+by
+authors and worldwide research community.
+=C3=98  *IJAREM* index all published papers in worldwide indexing (Google
+Scholar, Ulrich Periodicals, EBSCO HOST, CSA, CAB Abstract, and DOAJ).
+
+
+
+*Frequency of publication:*
+
+*IJAREM* is published as monthly journal with 12 issues per year. Special
+editions are also planned subjected to the scope and need. Currently
+* IJAREM* is also publishing peer reviewed papers of International and
+National level conferences conducted by various research and academic
+institutions.
+
+
+
+*Paper Submission:*
+
+Authors are invited to submit papers for this journal using Online
+Submission System through following link
+http://www.ijarem.org/online-submission.html or email at editor@ijarem.org
+
+
+
+Submissions must be original and should not have been published previously
+or be under consideration for publication while being evaluated for this
+Journal.
+
+
+
+For information about Journal scope, review process, publication charges
+and policies please visit www.ijarem.org
+<http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=3D5043391&l=
+=3D6c9094b8-aef9-49cc-8fbd-7c7335d3d54c&r=3Dfee52d40-e797-4cf1-a43f-9f0c4dd=
+fd0ab>
+
+
+Kindly forward this e-mail to your group of Friends/ Students/ Colleagues/
+Associates/ Fellow Researchers, who may be benefited out of this.
+
+
+
+Thanking You.
+
+
+
+
+
+*Best Regards, *
+*Editorial Board, *
+*IJAREM,*
+
+*ISSN: 2456-2033*
+
+*http://www.ijarem.org <http://www.ijarem.org/>*
+
+
+
+
+
+*You may unsubscribe
+<http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/u?u=3Dfee52d40-e=
+797-4cf1-a43f-9f0c4ddfd0ab>
+to stop receiving our emails.*
+
+--000000000000fa2bcc0592cc5819
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-=
+height:normal"><b><span style=3D"font-size:13.5pt;font-family:Arial,sans-se=
+rif;color:red">International Journal of</span></b><br></p><p class=3D"MsoNo=
+rmal" style=3D"margin-bottom:0.0001pt;line-height:normal"><b><span style=3D=
+"font-size:13.5pt;font-family:Arial,sans-serif;color:red">Advanced Research=
+ in Engineering &amp; Management (IJAREM)</span></b><span style=3D"font-siz=
+e:12pt;font-family:Arial,sans-serif"></span></p><p class=3D"MsoNormal" styl=
+e=3D"margin-bottom:0.0001pt;line-height:normal"><span style=3D"font-size:13=
+.5pt;font-family:&quot;Times New Roman&quot;,serif;color:black;background:a=
+qua">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001p=
+t;line-height:normal"><span style=3D"font-size:13.5pt;font-family:&quot;Tim=
+es New Roman&quot;,serif;color:black;background:aqua">We Publish Research P=
+apers&nbsp;</span><span style=3D"font-size:12pt;font-family:Arial,sans-seri=
+f"></span></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-h=
+eight:normal"><b><span style=3D"font-size:13.5pt;font-family:Arial,sans-ser=
+if;color:red;background:lime">&nbsp;</span></b></p><p class=3D"MsoNormal" s=
+tyle=3D"margin-bottom:0.0001pt;line-height:normal"><b><span style=3D"font-s=
+ize:13.5pt;font-family:Arial,sans-serif;color:red;background:lime">(ISSN: 2=
+456-2033)</span></b><span style=3D"font-size:9pt;font-family:Helvetica,sans=
+-serif;color:black"><br>&nbsp;<br></span><b><span style=3D"font-size:11.5pt=
+;font-family:Arial,sans-serif;color:black">Dear Researcher,</span></b><span=
+ style=3D"font-size:11.5pt;font-family:Arial,sans-serif;color:black"><br><b=
+>International Journal of Advanced Research in Engineering &amp; Management=
+ (IJAREM)&nbsp;</b>is an International peer reviewed, open access, Engineer=
+ing and Science Journal promoting the discovery, innovation, advancement an=
+d dissemination of basic and transitional knowledge in engineering, science=
+ and related disciplines.&nbsp;We aim to revolutionize industry by promotin=
+g legitimate and effective research.<br><br>We welcome original research ar=
+ticles/manuscripts as long as their research questions are important, new, =
+and relevant to general readers and their designs are appropriate and robus=
+t.&nbsp;<br>&nbsp;<br><b>IJAREM provides individual hard copy of certificat=
+es to all authors on demand at their postal address&nbsp;after online publi=
+cation.</b></span><span style=3D"font-size:12pt;font-family:Arial,sans-seri=
+f"></span></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-h=
+eight:normal"><span style=3D"font-size:11.5pt;font-family:Arial,sans-serif;=
+color:black">&nbsp;<br>Please ensure submitted articles conform to the inte=
+rnationally accepted criteria and are prepared in line with&nbsp;<b>IJAREM<=
+/b>&nbsp;Author Guidelines. Every research article published in the (IJAREM=
+) is immediately accessible on&nbsp;to everyone.<br>&nbsp;</span><span styl=
+e=3D"font-size:12pt;font-family:Arial,sans-serif"></span></p><table border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collaps=
+e"><tbody><tr style=3D"height:21.75pt"><td width=3D"697" colspan=3D"2" vali=
+gn=3D"top" style=3D"font-family:arial,sans-serif;width:522.75pt;border:1pt =
+solid rgb(75,172,198);padding:0in 5.4pt;height:21.75pt"><p class=3D"MsoNorm=
+al" align=3D"center" style=3D"margin-bottom:0.0001pt;text-align:center;line=
+-height:normal"><b><span style=3D"font-size:12.5pt;font-family:Arial,sans-s=
+erif;color:white;background:goldenrod">Important dates for Sep 2019, Volume=
+ 05 - Issue 09</span></b><span style=3D"font-size:12pt;font-family:Arial,sa=
+ns-serif"></span></p></td></tr><tr><td width=3D"361" valign=3D"top" style=
+=3D"font-family:arial,sans-serif;width:270.75pt;border-right:1pt solid wind=
+owtext;border-bottom:1pt solid windowtext;border-left:1pt solid windowtext;=
+border-top:none;padding:0in 5.4pt"><p class=3D"MsoNormal" style=3D"margin-b=
+ottom:0.0001pt;line-height:normal"><b><span style=3D"font-size:11.5pt;font-=
+family:Arial,sans-serif;color:rgb(0,32,96)">Last date of paper submission:<=
+/span></b><span style=3D"font-size:12pt;font-family:Arial,sans-serif"></spa=
+n></p></td><td width=3D"336" valign=3D"top" style=3D"font-family:arial,sans=
+-serif;width:3.5in;border-top:none;border-left:none;border-bottom:1pt solid=
+ windowtext;border-right:1pt solid windowtext;padding:0in 5.4pt"><p class=
+=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal"><b><span=
+ style=3D"font-size:11.5pt;font-family:Arial,sans-serif;color:rgb(0,32,96)"=
+>20 Sep 2019</span></b><span style=3D"font-size:12pt;font-family:Arial,sans=
+-serif"></span></p></td></tr><tr><td width=3D"361" valign=3D"top" style=3D"=
+font-family:arial,sans-serif;width:270.75pt;border-right:1pt solid windowte=
+xt;border-bottom:1pt solid windowtext;border-left:1pt solid windowtext;bord=
+er-top:none;padding:0in 5.4pt"><p class=3D"MsoNormal" style=3D"margin-botto=
+m:0.0001pt;line-height:normal"><b><span style=3D"font-size:11.5pt;font-fami=
+ly:Arial,sans-serif;color:rgb(0,32,96)">Notification of Acceptance</span></=
+b><span style=3D"font-size:12pt;font-family:Arial,sans-serif"></span></p></=
+td><td width=3D"336" valign=3D"top" style=3D"font-family:arial,sans-serif;w=
+idth:3.5in;border-top:none;border-left:none;border-bottom:1pt solid windowt=
+ext;border-right:1pt solid windowtext;padding:0in 5.4pt"><p class=3D"MsoNor=
+mal" style=3D"margin-bottom:0.0001pt;line-height:normal"><b><span style=3D"=
+font-size:11.5pt;font-family:Arial,sans-serif;color:rgb(0,32,96)">Within 03=
+-04 Days</span></b><span style=3D"font-size:12pt;font-family:Arial,sans-ser=
+if"></span></p></td></tr><tr><td width=3D"361" valign=3D"top" style=3D"font=
+-family:arial,sans-serif;width:270.75pt;border-right:1pt solid windowtext;b=
+order-bottom:1pt solid windowtext;border-left:1pt solid windowtext;border-t=
+op:none;padding:0in 5.4pt"><p class=3D"MsoNormal" style=3D"margin-bottom:0.=
+0001pt;line-height:normal"><b><span style=3D"font-size:11.5pt;font-family:A=
+rial,sans-serif;color:rgb(0,32,96)">Publication date:</span></b><span style=
+=3D"font-size:12pt;font-family:Arial,sans-serif"></span></p></td><td width=
+=3D"336" valign=3D"top" style=3D"font-family:arial,sans-serif;width:3.5in;b=
+order-top:none;border-left:none;border-bottom:1pt solid windowtext;border-r=
+ight:1pt solid windowtext;padding:0in 5.4pt"><p class=3D"MsoNormal" style=
+=3D"margin-bottom:0.0001pt;line-height:normal"><b><span style=3D"font-size:=
+11.5pt;font-family:Arial,sans-serif;color:rgb(0,32,96)">Within 05-07 Days a=
+fter registration</span></b><span style=3D"font-size:12pt;font-family:Arial=
+,sans-serif"></span></p></td></tr></tbody></table><p class=3D"MsoNormal" st=
+yle=3D"margin-bottom:0.0001pt;line-height:normal"><span style=3D"font-size:=
+11.5pt;font-family:Arial,sans-serif;color:black">&nbsp;<br></span><b><i><sp=
+an style=3D"font-size:11.5pt;font-family:Arial,sans-serif;color:red">Why pu=
+blishing with The IJAREM?</span></i></b><span style=3D"font-size:11.5pt;fon=
+t-family:Arial,sans-serif;color:black"><br>&nbsp;=C3=98&nbsp;&nbsp;All arti=
+cles published in the journals&nbsp;are&nbsp;open access: Universally acces=
+sible online without charge.<br>=C3=98&nbsp;&nbsp;Easy submission and peer-=
+review makes the&nbsp;whole process&nbsp;of publishing your article simple =
+and efficient.<br>=C3=98&nbsp;&nbsp;High visibility for your work: Anyone&n=
+bsp;with&nbsp;internet access can read or your download.<br>=C3=98&nbsp;&nb=
+sp;Professional formatting and reviewing meets&nbsp;the&nbsp;standards expe=
+cted by authors and&nbsp;worldwide research community.<br>=C3=98&nbsp;&nbsp=
+;<b>IJAREM</b>&nbsp;index all published papers in worldwide indexing (Googl=
+e Scholar, Ulrich Periodicals, EBSCO HOST, CSA, CAB Abstract, and DOAJ).</s=
+pan><span style=3D"font-size:12pt;font-family:Arial,sans-serif"></span></p>=
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<span style=3D"font-size:12pt;font-family:Arial,sans-serif">&nbsp;</span></=
+p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal=
+"><b><i><span style=3D"font-size:11.5pt;font-family:Arial,sans-serif;color:=
+red">Frequency of publication:</span></i></b><span style=3D"font-size:12pt;=
+font-family:Arial,sans-serif"></span></p><p class=3D"MsoNormal" style=3D"ma=
+rgin-bottom:0.0001pt;line-height:normal"><b><span style=3D"font-size:11.5pt=
+;font-family:Arial,sans-serif;color:black">IJAREM</span></b><span style=3D"=
+font-size:11.5pt;font-family:Arial,sans-serif;color:black">&nbsp;is publish=
+ed as monthly journal with 12 issues per year. Special editions are also pl=
+anned subjected to the scope and need. Currently<i>&nbsp;IJAREM</i>&nbsp;is=
+ also publishing peer reviewed papers of International and National level c=
+onferences conducted by various research and academic institutions.&nbsp;</=
+span><span style=3D"font-size:12pt;font-family:Arial,sans-serif"></span></p=
+><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal"=
+><span style=3D"font-size:12pt;font-family:Arial,sans-serif">&nbsp;</span><=
+/p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:norma=
+l"><b><i><span style=3D"font-size:11.5pt;font-family:Arial,sans-serif;color=
+:red">Paper Submission:</span></i></b><span style=3D"font-size:12pt;font-fa=
+mily:Arial,sans-serif"></span></p><p class=3D"MsoNormal" style=3D"margin-bo=
+ttom:0.0001pt;line-height:normal"><span style=3D"font-size:11.5pt;font-fami=
+ly:Arial,sans-serif">Authors are invited to submit papers for this journal =
+using&nbsp;Online Submission System&nbsp;through following link&nbsp;</span=
+><span style=3D"font-size:11.5pt;font-family:Arial,sans-serif"><a href=3D"h=
+ttp://www.ijarem.org/online-submission.html" target=3D"_blank">http://www.i=
+jarem.org/online-submission.html</a></span><span style=3D"font-size:11.5pt;=
+font-family:Arial,sans-serif">&nbsp;or email at&nbsp;</span><span style=3D"=
+font-size:11.5pt;font-family:Arial,sans-serif"><a href=3D"mailto:editor@ija=
+rem.org" target=3D"_blank">editor@ijarem.org</a></span><span style=3D"font-=
+size:12pt;font-family:Arial,sans-serif"></span></p><p class=3D"MsoNormal" s=
+tyle=3D"margin-bottom:0.0001pt;line-height:normal"><span style=3D"font-size=
+:12pt;font-family:Arial,sans-serif">&nbsp;</span></p><p class=3D"MsoNormal"=
+ style=3D"margin-bottom:0.0001pt;line-height:normal"><span style=3D"font-si=
+ze:11.5pt;font-family:Arial,sans-serif;color:rgb(17,17,17)">Submissions mus=
+t be original and should not have been published previously or be under con=
+sideration for publication while being evaluated for this Journal.</span><s=
+pan style=3D"font-size:12pt;font-family:Arial,sans-serif"></span></p><p cla=
+ss=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal"><span =
+style=3D"font-size:12pt;font-family:Arial,sans-serif">&nbsp;</span></p><p c=
+lass=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal"><spa=
+n style=3D"font-size:11.5pt;font-family:Arial,sans-serif;color:black">For i=
+nformation about Journal scope, review process, publication charges and pol=
+icies please visi</span><span style=3D"font-size:11.5pt;font-family:Arial,s=
+ans-serif">t&nbsp;</span><span style=3D"font-size:11.5pt;font-family:Arial,=
+sans-serif"><a href=3D"http://ec2-52-26-194-35.us-west-2.compute.amazonaws.=
+com/x/d?c=3D5043391&amp;l=3D6c9094b8-aef9-49cc-8fbd-7c7335d3d54c&amp;r=3Dfe=
+e52d40-e797-4cf1-a43f-9f0c4ddfd0ab" target=3D"_blank">www.ijarem.org</a></s=
+pan><span style=3D"font-size:12pt;font-family:Arial,sans-serif"></span></p>=
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<span style=3D"font-size:11.5pt;font-family:Arial,sans-serif;color:black">&=
+nbsp;<br>Kindly forward this e-mail to your group of Friends/ Students/ Col=
+leagues/ Associates/ Fellow Researchers, who may be benefited out of this.<=
+br>&nbsp;</span><span style=3D"font-size:12pt;font-family:Arial,sans-serif"=
+></span></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-hei=
+ght:normal"><span style=3D"font-size:11.5pt;font-family:Arial,sans-serif;co=
+lor:black"><br>Thanking You.</span><span style=3D"font-size:12pt;font-famil=
+y:Arial,sans-serif"></span></p><p class=3D"MsoNormal" style=3D"margin-botto=
+m:0.0001pt;line-height:normal"><b><span style=3D"font-size:11.5pt;font-fami=
+ly:&quot;Times New Roman&quot;,serif;color:rgb(0,32,96)">&nbsp;</span></b><=
+/p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:norma=
+l"><span style=3D"font-size:12pt;font-family:Arial,sans-serif">&nbsp;</span=
+></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:nor=
+mal"><b><span style=3D"font-size:12.5pt;font-family:&quot;Times New Roman&q=
+uot;,serif;color:rgb(15,36,62)">Best Regards,&nbsp;</span></b><span style=
+=3D"font-size:12.5pt;font-family:Helvetica,sans-serif;color:rgb(15,36,62)">=
+<br></span><b><span style=3D"font-size:12.5pt;font-family:&quot;Times New R=
+oman&quot;,serif;color:rgb(15,36,62)">Editorial Board,&nbsp;</span></b><spa=
+n style=3D"font-size:12.5pt;font-family:Helvetica,sans-serif;color:rgb(15,3=
+6,62)"><br></span><b><span style=3D"font-size:12.5pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(15,36,62)">IJAREM,</span></b></p><p class=
+=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal"><b><span=
+ style=3D"font-size:12.5pt;font-family:&quot;Times New Roman&quot;,serif;co=
+lor:rgb(15,36,62)">ISSN: 2456-2033</span></b><span style=3D"font-size:12pt;=
+font-family:Arial,sans-serif;color:rgb(15,36,62)"></span></p><p class=3D"Ms=
+oNormal" style=3D"margin-bottom:0.0001pt;line-height:normal"><b><span style=
+=3D"font-size:12.5pt;font-family:&quot;Times New Roman&quot;,serif;color:rg=
+b(15,36,62)"><a href=3D"http://www.ijarem.org/" target=3D"_blank">http://ww=
+w.ijarem.org</a></span></b></p><p class=3D"MsoNormal" style=3D"margin-botto=
+m:0.0001pt;line-height:normal"><b><br></b></p><p class=3D"MsoNormal" style=
+=3D"margin-bottom:0.0001pt;line-height:normal"><b><br></b></p><p class=3D"M=
+soNormal" style=3D"margin-bottom:0.0001pt;line-height:normal"><b><br></b></=
+p><p class=3D"MsoNormal" style=3D"text-align:center;margin-bottom:0.0001pt;=
+line-height:normal"><b>You may <a href=3D"http://ec2-52-26-194-35.us-west-2=
+.compute.amazonaws.com/x/u?u=3Dfee52d40-e797-4cf1-a43f-9f0c4ddfd0ab">unsubs=
+cribe</a> to stop receiving our emails.<br></b></p><p class=3D"MsoNormal" s=
+tyle=3D"margin-bottom:0.0001pt;line-height:normal"><b><br></b></p><p class=
+=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal"><b><br><=
+/b></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:n=
+ormal"><b><br></b></p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></di=
+v>
+<img height=3D"0" width=3D"0" src=3D"http://ec2-52-26-194-35.us-west-2.comp=
+ute.amazonaws.com/x/o?u=3Dfee52d40-e797-4cf1-a43f-9f0c4ddfd0ab&amp;c=3D5043=
+391">
+
+--000000000000fa2bcc0592cc5819--

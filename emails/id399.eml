@@ -1,0 +1,1695 @@
+Received: from CY4PR08MB2648.namprd08.prod.outlook.com (2603:10b6:a03:40::40)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0027.NAMPRD04.PROD.OUTLOOK.COM; Wed, 9 Oct 2019 23:49:55 +0000
+Received: from MWHPR08CA0008.namprd08.prod.outlook.com (2603:10b6:301:5f::21)
+ by CY4PR08MB2648.namprd08.prod.outlook.com (2603:10b6:903:f9::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16; Wed, 9 Oct
+ 2019 23:49:52 +0000
+Received: from BN3NAM04FT041.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::200) by MWHPR08CA0008.outlook.office365.com
+ (2603:10b6:301:5f::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2347.17 via Frontend
+ Transport; Wed, 9 Oct 2019 23:49:52 +0000
+Authentication-Results: spf=pass (sender IP is 144.118.38.12)
+ smtp.mailfrom=LISTS.DREXEL.EDU; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=406
+Received-SPF: Pass (protection.outlook.com: domain of LISTS.DREXEL.EDU
+ designates 144.118.38.12 as permitted sender)
+ receiver=protection.outlook.com; client-ip=144.118.38.12;
+ helo=lists.drexel.edu;
+Received: from lists.drexel.edu (144.118.38.12) by
+ BN3NAM04FT041.mail.protection.outlook.com (10.152.93.42) with Microsoft SMTP
+ Server id 15.20.2347.16 via Frontend Transport; Wed, 9 Oct 2019 23:49:52
+ +0000
+Received: from jay.irt.drexel.edu (localhost.localdomain [127.0.0.1])
+	by lists.drexel.edu (Postfix) with ESMTP id 1D0DA1DBA10
+	for <foaad@CALPOLY.EDU>; Wed,  9 Oct 2019 19:41:26 -0400 (EDT)
+Received: by LISTS.DREXEL.EDU (LISTSERV-TCP/IP release 16.0) with spool id
+          176404 for BIGDATA@LISTS.DREXEL.EDU; Wed, 9 Oct 2019 19:10:00 -0400
+Approved-By: cfp.conference2016@GMAIL.COM
+Received: from smtp.mail.drexel.edu (uplsmtp02.irt.drexel.edu [144.118.29.82])
+          by lists.drexel.edu (Postfix) with ESMTP id 2067123E1CB for
+          <bigdata@lists.drexel.edu>; Wed,  9 Oct 2019 12:35:55 -0400 (EDT)
+Received: from smtp.mail.drexel.edu (localhost [127.0.0.1]) by
+          smtp.mail.drexel.edu (Postfix) with ESMTP id 06B3A4F for
+          <bigdata@lists.drexel.edu>; Wed,  9 Oct 2019 12:35:55 -0400 (EDT)
+Received: from mail-vk1-f169.google.com (mail-vk1-f169.google.com
+          [209.85.221.169]) (using TLSv1.2 with cipher
+          ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits)) (No client certificate
+          requested) by smtp.mail.drexel.edu (Postfix) with ESMTPS id E14F14D
+          for <bigdata@lists.drexel.edu>; Wed,  9 Oct 2019 12:35:54 -0400 (EDT)
+Received: by mail-vk1-f169.google.com with SMTP id f1so677762vkh.9 for
+          <bigdata@lists.drexel.edu>; Wed, 09 Oct 2019 09:35:54 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=+lwdbggEPl5k/pCiJ07QcbwH2RiUsIAWEFPJmHpXiA8=;
+                         b=ZbQXT1pXqmjIrndoSVz5kHga2WP5LwGi68OhVbetWGt/lFWdePDDXKd81zmqzDzj9g
+                         fTL7N0gnxTsig9ka+FTe5cYtl/Jmykn8sH9z7J4i41TocKZ4b7ggJ+PTSxr876RjJ1zM
+                         hcECZY2r9wkQPC12Lwr9tfrCmzrrLCjSUVmnS3ltVr8QbKWCtPi6HBSu0whI0R29xEtY
+                         O2Pww7HAR94ZCJ/nvvQ1eGARa1PBkMLP9BDBzn/T+qnfcBugEAozM4tSueHdz5a7H8IO
+                         2cRAtA9/A6bsZFknSl84/8v3TuqSiKlseyXmCfmPsMV/Vijx9Mev1Da0wwxDr5ITOtvs
+                         Ww9w==
+X-Gm-Message-State: APjAAAXBNSj4m0x2HUCyHg5LbDpY49GlX7QUvCu+1Vfp1rYkoWLLDZy9
+                    5i4BDFxe9ttEnyczcqwEM29H7AAalTfQGdoSg5engSrK
+X-Google-Smtp-Source: APXvYqwGpGl4L+CTLrLV0PhRWU3Q2MSyZXNGKOYqHWlGjxaW70AdgzRZC/v+GtGw7lrigA1GXfT3WT2wub32lYp6Iyc=
+X-Received: by 2002:a1f:2808:: with SMTP id o8mr2528937vko.4.1570638954146;
+            Wed, 09 Oct 2019 09:35:54 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="000000000000eeb08e05947ce0f0"
+X-Virus-Scanned: ClamAV using ClamSMTP
+Message-ID: <CAEvuEAthESYccyro9AyxFC2rJda6huduui8-cgoCLh3YhJTYcQ@mail.gmail.com>
+Date: Wed, 9 Oct 2019 12:35:42 -0400
+Reply-To: CFP Conference <cfp.conference2016@GMAIL.COM>
+Sender: CCI Big Data List <BIGDATA@LISTS.DREXEL.EDU>
+From: CFP Conference <cfp.conference2016@GMAIL.COM>
+Subject: IEEE BigData 2019 Call for Workshop Papers and Posters
+To: BIGDATA@LISTS.DREXEL.EDU
+Precedence: list
+List-Help: <mailto:LISTSERV@LISTS.DREXEL.EDU?body=INFO%20BIGDATA>
+List-Unsubscribe: <mailto:BIGDATA-unsubscribe-request@LISTS.DREXEL.EDU>
+List-Subscribe: <mailto:BIGDATA-subscribe-request@LISTS.DREXEL.EDU>
+List-Owner: <mailto:BIGDATA-request@LISTS.DREXEL.EDU>
+Return-Path: owner-bigdata*foaad**CALPOLY*-EDU@LISTS.DREXEL.EDU
+X-MS-Exchange-Organization-ExpirationStartTime: 09 Oct 2019 23:49:52.3509
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4d3a7eff-a5a9-4a48-ddd6-08d74d136102
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:144.118.38.12;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(7192003)(6262002)(189003)(199004)(176002)(59536001)(356004)(6666004)(7596002)(61266001)(7636002)(6306002)(6392003)(146002)(136015008)(75640400001)(30864003)(43066004)(8576002)(16586007)(14444005)(4006050)(42186006)(82202003)(66574012)(1096003)(22416003)(246002)(8676002)(71190400001)(106002)(305945005)(95326003)(5660300002)(2860700004)(336012)(2361001)(73392003)(42882007)(347745004)(3450700001)(34206002)(88552002)(486006)(75432002)(16003)(16799955002)(126002)(476003)(2351001)(236005)(10126004)(7846003)(55446002)(26005)(606006)(33964004)(966005)(498394004)(2171002)(76482006)(579004)(569006);DIR:INB;SFP:;SCL:1;SRVR:CY4PR08MB2648;H:lists.drexel.edu;FPR:;SPF:Pass;LANG:en;PTR:lists.drexel.edu;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT041.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 4d3a7eff-a5a9-4a48-ddd6-08d74d136102
+X-MS-TrafficTypeDiagnostic: CY4PR08MB2648:
+X-MS-Exchange-PUrlCount: 47
+X-MS-Oob-TLC-OOBClassifiers: OLM:7691;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Oct 2019 23:49:52.2739
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4d3a7eff-a5a9-4a48-ddd6-08d74d136102
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY4PR08MB2648
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.1361994
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZFN3aS9NMUJHamVzNytjeFJjc215WFA2b2MzdTFYSXBTd3laV1FhNlEwUFFo?=
+ =?utf-8?B?dmROVUsvdWl0MUZDQlhoeXlUdVJIaUhOMnFXQXFTSDJwTEprSEFTanZLYlBR?=
+ =?utf-8?B?UEx0QXVvUU12TDJrSmNYeEJKZ3A3ZjJkY1I3NXFiUTY2YXUzQlR2d0ZTTFEw?=
+ =?utf-8?B?bnJ0ZGpwcGF6U2NKdWVEMC9ieTZidmc5UHlEaXI4QzhPUllLVENZVU14b3gy?=
+ =?utf-8?B?K2d4amtuZXlqVmxVK2M1OHg0N2gwSStMdEdacU0vcmQyYnNnNTYyc2VJSGQ2?=
+ =?utf-8?B?UFFaOGl5MGloR1RTa045UzBmVUJIYjVLUzZHN056b0d3aHRJbGwyQWRSMC9N?=
+ =?utf-8?B?ZXZjMVF5VWNRYjRDOFFCNVA5ald0eHdrQnp2anczMzFNWGtjTklaOEFCZlRo?=
+ =?utf-8?B?WkFFcHgzZW44SElpcVFERWJMaEFXaVVWRUwvNVkrOGJ1dHVjVm5OQ21sY0gx?=
+ =?utf-8?B?L3Z2VzE1RUpXVVhFY25HdmJqZ0ZYQmJ4NkhsL0FpZTd5VVhoQ21tQTlyc21O?=
+ =?utf-8?B?cVY5RytXdzV1cVA4R25QTEhNbHRrdGlLZDl0eG9KWllUZVN6MTNxSWpvOUVH?=
+ =?utf-8?B?SittOHh6Q2haK2JFNHpFS083TnBvd0d6Vll4bGM1SklCL0RUTWkwNnlsbEVL?=
+ =?utf-8?B?ZDM2a3BnbDFJYmNTR296UzUrVFhSREdrR1BTSzc5djZ5K1JNY0ozVkU1S1lo?=
+ =?utf-8?B?RTJXeVVQbVlBN0kyUEliazFNN004R1JNWkFvYVBkeFczd0dWc3B4NXA2aUNU?=
+ =?utf-8?B?OFc5eWpSZDhjN3VqQUxmQXltMWQ4SmJacUpMZy91MUc5MmxWWHhSYkI1QVh6?=
+ =?utf-8?B?SXhUUEM5MEZ4WEQxckM1QUFKN0FEbEp0L3NaM3BHUEZQNHNWaWhRUXRMMjlE?=
+ =?utf-8?B?S2pINkQya0NHSkxSOFBGeW9DT0J2RVVTSWs3UVE3ajlwVU5LSU15VjZOQjF5?=
+ =?utf-8?B?Y3hPYkxDRmNXczhPZEtmRGF5OGpkc0t2eUtMZEFBTS81U0VjaVh2OE1FVDRa?=
+ =?utf-8?B?MXVqRmowT2ZXbVI0N2JmTTFueFMxVFliS1FjbHB5eW1VakxjdlVjSVA2SE1h?=
+ =?utf-8?B?UTFnZ1NydzRCOGFTT2VzaU5PSzZ4d0FBQjVaZzBJUE5Cd294aERvNWZZV0Ji?=
+ =?utf-8?B?M25oS2FMWnZHa1NZWlVIZkNwak9SWUR6bVc0dUszcEpSZ2Q4R2FLYzFRUGdU?=
+ =?utf-8?B?Z0FlTWF3Nk01U0xlTTNyNURUQklFRmlRMHR1MVptbnJ2VS8vVEk5N1lNUnRW?=
+ =?utf-8?B?cE9LWkhsV0d4Vmc0Wmd2eTNZZ0lYYmhiYStza09xL2hmOWhhenU2d1FvdVY0?=
+ =?utf-8?B?TVhzNm56VE03cDEwSDNUWTBmNG1ZRWJQU1Q2WTJKazJQb1JTb3lQSzdEd1F6?=
+ =?utf-8?B?akMrWEt5cXJsMmh4UlVpUUFCL2xBSXR3QUV4d2FteXhxWk5TNGxyTTdsZ2dZ?=
+ =?utf-8?B?U0tvNitUTnVsc2h1U3plTFFhU29IZGcyTnRDWTJjcG1hQW1BTm56U01iOUFy?=
+ =?utf-8?Q?o1Y2ZM=3D?=
+MIME-Version: 1.0
+
+--000000000000eeb08e05947ce0f0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*IEEE Big Data 2019 Call for Workshop Papers & Posters*
+
+
+
+2019 IEEE International Conference on Big Data (BigData 2019)
+
+
+
+http://bigdataieee.org/BigData2019/
+
+Dec 9-12, 2019, Los Angeles, CA, USA
+
+
+
+The IEEE Big Data 2019 has received more than 600 full papers in the main
+conference and industry and government program. If you miss the submission
+deadline, there are still chances for you to submit your research work to
+the IEEE Big Data 2019 workshops and Posters. The workshop papers and
+posters are published in the conference proceedings. (EI indexed)
+
+
+
+(1)  * 44 Workshops (*Most of the workshop paper submission deadlines are
+early or middle October)
+
+
+
+
+
+
+
+
+
+*1.*
+
+Computational Archival Science: digital records in the age of big data
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S01&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*2.*
+
+International Workshop on Big Data Analytics for Cyber Threat Hunting
+(CyberHunt 2019)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S02&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*3.*
+
+The 2nd International Workshop on =E2=80=9CBig Data Engineering and Analyti=
+cs in
+Cyber-Physical Systems (BigEACPS)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S03&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*4.*
+
+6th Workshop on Performance Engineering with Advances in Software and
+Hardware for Big Data Science (PEASH)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S04&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*5.*
+
+5th International Workshop on Methodologies to Improve Managing Big Data
+projects
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S05&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*6.*
+
+4th Workshop on Real-time and Stream Analytics in Big Data & Stream Data
+Management
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S06&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*7.*
+
+Applications of Big Data Technology in the Transport Industry
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S07&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*8.*
+
+The 3rd Workshop on Benchmarking, Performance Tuning and Optimization for
+Big Data Applications (BPOD)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S08&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*9.*
+
+Advances in High Dimensional (AdHD) Big Data (AdHD Big Data)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S09&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*10.*
+
+BITS 2019: International Workshop on Big data for Intelligent
+Transportation Systems
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S10&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*11.*
+
+8th Workshop on Scalable Cloud Data Management
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S11&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*12.*
+
+5th IEEE Workshop on Big Data Analytics in Supply Chains and Transportation
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S12&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*13.*
+
+Analysis of Large-scale Disparate Data
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S13&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*14.*
+
+3rd IEEE Big Data International Workshop on Policy-based Autonomic Data
+Governance (PADG)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S14&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*15.*
+
+The 4th IEEE International Workshop on Big Spatial Data (BSD 2019)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S15&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*16.*
+
+The First International Workshop on Big Data Against Darknet Crimes
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S16&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*17.*
+
+Second International Workshop on the Internet of Things Data Analytics
+(IOTDA)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S17&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*18.*
+
+7th International Workshop on Distributed Storage and Blockchain
+Technologies for Big Data
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S18&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*19.*
+
+The 3rd International Workshop on Big Data Analytic for Cybercrime
+Investigation and Prevention
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S19&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*20.*
+
+The Third Annual Workshop on Applications of Artificial Intelligence in the
+Legal Industry
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S20&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*21.*
+
+Big Data Predictive Maintenance using Artificial Intelligence
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S21&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*22.*
+
+The 2nd International Workshop on Big Data for Marketing Intelligence and
+Operation Management
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S22&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*23.*
+
+2nd Workshop on Energy-Efficient Machine Learning and Big Data Analytics
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S23&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*24.*
+
+The First International Workshop on Big Data Tools, Methods, and Use Cases
+for Innovative Scientific Discovery (BTSD)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S24&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*25.*
+
+The Third Human-in-the-loop Methods and Human-Machine Collaboration in
+BigData
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S25&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*26.*
+
+4th Workshop on Open Science in Big Data (OSBD)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S26&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*27.*
+
+3rd International Workshop on Big Data Analytics for Cyber Intelligence and
+Defense (BDA4CID 2018)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S27&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*28.*
+
+Sixth International Workshop on High Performance Big Graph Data Management,
+Analysis, and Mining (BigGraphs 2019)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S28&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*29.*
+
+Big Data Analytic Technology for Bioinformatics and Health Informatics
+(KDDBHI)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S29&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*30.*
+
+The 3rd Workshop on Graph Techniques for Adversarial Activity Analytics
+(GTA3 3.0)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S30&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*31.*
+
+5th Solar & Stellar Astronomy Big Data (SABiD) =E2=80=93 Workshop on Manage=
+ment,
+Search and Mining of Massive Repositories of Solar and Stellar Astronomy
+Data
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S31&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*32.*
+
+2nd Workshop on Big Data for CyberSecurity (BigCyber-2019)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S32&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*33.*
+
+The 2nd International Workshop on Big Media Dataset Construction,
+Management and Applications
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S33&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*34.*
+
+Big Food and Nutrition Data Management and Analysis (BFNDMA 2019)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S34&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*35.*
+
+IoT Big Data 2019
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S35&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*36.*
+
+The Third Workshop on Big Data for Economic and Business Forecasting
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S36&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*37.*
+
+Deep Graph Learning: Methodologies and Applications (DGLMA'19)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S37&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*38.*
+
+IEEE Workshop on Machine Learning for Big Data Analytics in Remote Sensing
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S38&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*39.*
+
+The First Workshop on Security and Privacy on Blockchain
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S39&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*40.*
+
+The 3rd International Workshop on Big Data for Financial News and Data
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S40&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*41.*
+
+4th International Workshop on Big Data Transfer Learning (BDTL) --
+Heterogeneous Representation and Networks
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S41&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*42.*
+
+The next frontier of big data from LIDAR
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S42&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*43.*
+
+Streaming Systems and Real-Time Machine Learning (STREAM-ML)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S43&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+
+
+
+*44.*
+
+6th International Workshop on Privacy and Security of Big Data (PSBD 2019)
+<https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3D=
+S44&undisplay_detail=3D1=
+&wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php>
+
+
+(2) *Po**ster *(Submission deadline: Nov 10, 2019)
+
+
+
+Poster abstracts are limited to one page, the format and style are
+flexible.  Posters will be reviewed on the basis of their relevance to the
+scope of the conference and on the scientific quality of the work
+presented. Each poster paper will be published with maximum up to 3 page
+limit in the poster/workshop proceedings (EI indexed). (format instruction
+for publication will be included with the poster acceptance notification)
+
+
+
+Online Submission:
+
+https://wi-lab.com/cyberchair/2019/bigdata19/index.php
+
+
+
+
+To subscribe to this list, the user sends an email,
+
+with blank subject line, to
+listserv@lists.drexel.edu. In the text box, the user
+types:
+
+subscribe BIGDATA
+
+To unsubscribe from a list, the user sends an email to
+listserv@lists.drexel.edu with the message
+
+
+
+signoff BIGDATA
+
+########################################################################
+
+To unsubscribe from the BIGDATA list, click the following link:
+http://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3MzcxIGZvYWFkQENBTFBPTFkuRURVIEJJR0RBVEEgIK9MBw0fi7BN&c=3DSIGNOFF
+
+--000000000000eeb08e05947ce0f0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><p class=3D"MsoNormal" style=3D"margin:0in =
+0in 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-fami=
+ly:Century,serif"><b><span style=3D"font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif">IEEE Big Data 2019 Call for Workshop Papers &amp; Po=
+sters</span></b></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt=
+;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-family:Century,s=
+erif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;=
+,serif">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0=
+001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-family:Cent=
+ury,serif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&=
+quot;,serif">2019 IEEE International Conference on Big Data (BigData 2019)<=
+/span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;color:rgb=
+(0,0,0);text-align:justify;font-size:10.5pt;font-family:Century,serif"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">&n=
+bsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;colo=
+r:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-family:Century,serif"=
+><a href=3D"http://bigdataieee.org/BigData2019/" target=3D"_blank" style=3D=
+"color:rgb(149,79,114)">http://bigdataieee.org/BigData2019/</a></p><p class=
+=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;color:rgb(0,0,0);text-align=
+:justify;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,serif">Dec 9-12, 2019, Los =
+Angeles, CA, USA</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0=
+.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-family:Ce=
+ntury,serif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roma=
+n&quot;,serif">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0in =
+0in 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-fami=
+ly:Century,serif"><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,serif">The IEEE Big Data 2019 has received more than 600 full =
+papers in the main conference and industry and government program. If you m=
+iss the submission deadline, there are still chances for you to submit your=
+ research work to the IEEE Big Data 2019 workshops and Posters.&nbsp;The wo=
+rkshop papers and posters are published in the conference proceedings. (EI =
+indexed)</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;=
+color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-family:Century,se=
+rif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,=
+serif">&nbsp;</span></p><p align=3D"left" style=3D"margin:0in 0in 0.0001pt =
+0.25in;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size=
+:12pt;font-family:&quot;Times New Roman&quot;,serif">(1)<span style=3D"font=
+-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times Ne=
+w Roman&quot;">&nbsp;&nbsp;</span></span><b><span style=3D"font-size:12pt;f=
+ont-family:&quot;Times New Roman&quot;,serif">&nbsp;44 Workshops (</span></=
+b>Most of the workshop paper submission deadlines are early or middle Octob=
+er)<span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,se=
+rif"></span></p><table border=3D"0" cellpadding=3D"0" width=3D"1110" style=
+=3D"color:rgb(0,0,0);font-family:-webkit-standard;width:832.8pt"><tbody><tr=
+><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNorm=
+al" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-=
+size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-fa=
+mily:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"width=
+:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margi=
+n:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span style=
+=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td></tr>=
+<tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoN=
+ormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;fo=
+nt-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font=
+-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"wi=
+dth:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"ma=
+rgin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span sty=
+le=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td=
+ valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"rig=
+ht" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font=
+-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:Arial,sa=
+ns-serif">1.</span></b><span style=3D"font-size:9pt;font-family:Arial,sans-=
+serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" a=
+lign=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family=
+:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scr=
+ipts/submit.php?subarea=3DS01&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair=
+/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:rgb=
+(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">Co=
+mputational Archival Science: digital records in the age of big data</span>=
+</a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p><=
+/td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p clas=
+s=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align=
+:right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size=
+:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" st=
+yle=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" st=
+yle=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif">=
+<span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p=
+></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" ali=
+gn=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10=
+.5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family=
+:Arial,sans-serif">2.</span></b><span style=3D"font-size:9pt;font-family:Ar=
+ial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"Mso=
+Normal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;fo=
+nt-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigd=
+ata19/scripts/submit.php?subarea=3DS02&amp;undisplay_detail=3D1&amp;wh=3D/c=
+yberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"=
+color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-=
+serif">International Workshop on Big Data Analytics for Cyber Threat Huntin=
+g (CyberHunt 2019)</span></a><span style=3D"font-size:9pt;font-family:Arial=
+,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0=
+in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif=
+"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span><=
+/p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"Ms=
+oNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;f=
+ont-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sa=
+ns-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt">=
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;tex=
+t-align:right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D=
+"font-size:9pt;font-family:Arial,sans-serif">3.</span></b><span style=3D"fo=
+nt-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"padd=
+ing:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.=
+0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-la=
+b.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS03&amp;undisp=
+lay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" t=
+arget=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9=
+pt;font-family:Arial,sans-serif">The 2nd International Workshop on =E2=80=
+=9CBig Data Engineering and Analytics in Cyber-Physical Systems (BigEACPS)<=
+/span></a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span=
+></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><=
+p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text=
+-align:right;font-size:10.5pt;font-family:Century,serif"><span style=3D"fon=
+t-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D=
+"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"le=
+ft" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,s=
+erif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</sp=
+an></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNorma=
+l" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-s=
+ize:10.5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-=
+family:Arial,sans-serif">4.</span></b><span style=3D"font-size:9pt;font-fam=
+ily:Arial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10=
+.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/20=
+19/bigdata19/scripts/submit.php?subarea=3DS04&amp;undisplay_detail=3D1&amp;=
+wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" st=
+yle=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Aria=
+l,sans-serif">6th Workshop on Performance Engineering with Advances in Soft=
+ware and Hardware for Big Data Science (PEASH)</span></a><span style=3D"fon=
+t-size:9pt;font-family:Arial,sans-serif"></span></p></td></tr><tr><td nowra=
+p=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=
+=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5=
+pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-family:Aria=
+l,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55pt;p=
+adding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in=
+ 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-s=
+ize:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td valign=3D"t=
+op" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D=
+"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Cent=
+ury,serif"><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif">5.=
+</span></b><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></spa=
+n></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left=
+" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,ser=
+if"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.=
+php?subarea=3DS05&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdat=
+a19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149,79,114)=
+"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">5th Internatio=
+nal Workshop on Methodologies to Improve Managing Big Data projects</span><=
+/a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></=
+td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:=
+right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:=
+9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" sty=
+le=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" sty=
+le=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><=
+span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p>=
+</td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" alig=
+n=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.=
+5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:=
+Arial,sans-serif">6.</span></b><span style=3D"font-size:9pt;font-family:Ari=
+al,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoN=
+ormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;fon=
+t-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigda=
+ta19/scripts/submit.php?subarea=3DS06&amp;undisplay_detail=3D1&amp;wh=3D/cy=
+berchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"c=
+olor:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-s=
+erif">4th Workshop on Real-time and Stream Analytics in Big Data &amp; Stre=
+am Data Management</span></a><span style=3D"font-size:9pt;font-family:Arial=
+,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0=
+in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif=
+"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span><=
+/p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"Ms=
+oNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;f=
+ont-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sa=
+ns-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt">=
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;tex=
+t-align:right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D=
+"font-size:9pt;font-family:Arial,sans-serif">7.</span></b><span style=3D"fo=
+nt-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"padd=
+ing:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.=
+0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-la=
+b.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS07&amp;undisp=
+lay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" t=
+arget=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9=
+pt;font-family:Arial,sans-serif">Applications of Big Data Technology in the=
+ Transport Industry</span></a><span style=3D"font-size:9pt;font-family:Aria=
+l,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0=
+in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif=
+"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span><=
+/p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"Ms=
+oNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;f=
+ont-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sa=
+ns-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt">=
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;tex=
+t-align:right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D=
+"font-size:9pt;font-family:Arial,sans-serif">8.</span></b><span style=3D"fo=
+nt-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"padd=
+ing:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.=
+0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-la=
+b.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS08&amp;undisp=
+lay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" t=
+arget=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9=
+pt;font-family:Arial,sans-serif">The 3rd Workshop on Benchmarking, Performa=
+nce Tuning and Optimization for Big Data Applications (BPOD)</span></a><spa=
+n style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td></tr=
+><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"Mso=
+Normal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;f=
+ont-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;fon=
+t-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"w=
+idth:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"m=
+argin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span st=
+yle=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><t=
+d valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"ri=
+ght" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;fon=
+t-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:Arial,s=
+ans-serif">9.</span></b><span style=3D"font-size:9pt;font-family:Arial,sans=
+-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" =
+align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-famil=
+y:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/sc=
+ripts/submit.php?subarea=3DS09&amp;undisplay_detail=3D1&amp;wh=3D/cyberchai=
+r/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:rg=
+b(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">A=
+dvances in High Dimensional (AdHD) Big Data (AdHD Big Data)</span></a><span=
+ style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td></tr>=
+<tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoN=
+ormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;fo=
+nt-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font=
+-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"wi=
+dth:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"ma=
+rgin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span sty=
+le=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td=
+ valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"rig=
+ht" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font=
+-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:Arial,sa=
+ns-serif">10.</span></b><span style=3D"font-size:9pt;font-family:Arial,sans=
+-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" =
+align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-famil=
+y:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/sc=
+ripts/submit.php?subarea=3DS10&amp;undisplay_detail=3D1&amp;wh=3D/cyberchai=
+r/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:rg=
+b(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">B=
+ITS 2019: International Workshop on Big data for Intelligent Transportation=
+ Systems</span></a><span style=3D"font-size:9pt;font-family:Arial,sans-seri=
+f"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding=
+:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.00=
+01pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><span sty=
+le=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td=
+ width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" al=
+ign=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:=
+Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&=
+nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D=
+"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:rig=
+ht;font-size:10.5pt;font-family:Century,serif"><b><span style=3D"font-size:=
+9pt;font-family:Arial,sans-serif">11.</span></b><span style=3D"font-size:9p=
+t;font-family:Arial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"=
+><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;fon=
+t-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.com/cybe=
+rchair/2019/bigdata19/scripts/submit.php?subarea=3DS11&amp;undisplay_detail=
+=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_=
+blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-fa=
+mily:Arial,sans-serif">8th Workshop on Scalable Cloud Data Management</span=
+></a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p>=
+</td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p cla=
+ss=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-alig=
+n:right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-siz=
+e:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" s=
+tyle=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" s=
+tyle=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"=
+><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></=
+p></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" al=
+ign=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:1=
+0.5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-famil=
+y:Arial,sans-serif">12.</span></b><span style=3D"font-size:9pt;font-family:=
+Arial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"M=
+soNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;=
+font-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bi=
+gdata19/scripts/submit.php?subarea=3DS12&amp;undisplay_detail=3D1&amp;wh=3D=
+/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=
+=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,s=
+ans-serif">5th IEEE Workshop on Big Data Analytics in Supply Chains and Tra=
+nsportation</span></a><span style=3D"font-size:9pt;font-family:Arial,sans-s=
+erif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padd=
+ing:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0=
+.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><span =
+style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td>=
+<td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal"=
+ align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-fami=
+ly:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif=
+">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:=
+right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D"font-si=
+ze:9pt;font-family:Arial,sans-serif">13.</span></b><span style=3D"font-size=
+:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"padding:1.9=
+pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;=
+font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.com/c=
+yberchair/2019/bigdata19/scripts/submit.php?subarea=3DS13&amp;undisplay_det=
+ail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=
+=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;fo=
+nt-family:Arial,sans-serif">Analysis of Large-scale Disparate Data</span></=
+a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></t=
+d></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:=
+right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:=
+9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" sty=
+le=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" sty=
+le=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><=
+span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p>=
+</td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" alig=
+n=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.=
+5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:=
+Arial,sans-serif">14.</span></b><span style=3D"font-size:9pt;font-family:Ar=
+ial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"Mso=
+Normal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;fo=
+nt-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigd=
+ata19/scripts/submit.php?subarea=3DS14&amp;undisplay_detail=3D1&amp;wh=3D/c=
+yberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"=
+color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-=
+serif">3rd IEEE Big Data International Workshop on Policy-based Autonomic D=
+ata Governance (PADG)</span></a><span style=3D"font-size:9pt;font-family:Ar=
+ial,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" sty=
+le=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin=
+:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,ser=
+if"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span=
+></p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"=
+MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt=
+;font-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,=
+sans-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt=
+"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;t=
+ext-align:right;font-size:10.5pt;font-family:Century,serif"><b><span style=
+=3D"font-size:9pt;font-family:Arial,sans-serif">15.</span></b><span style=
+=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0i=
+n 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https=
+://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS15&am=
+p;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submi=
+t.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"fon=
+t-size:9pt;font-family:Arial,sans-serif">The 4th IEEE International Worksho=
+p on Big Spatial Data (BSD 2019)</span></a><span style=3D"font-size:9pt;fon=
+t-family:Arial,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=
+=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" sty=
+le=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family=
+:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">=
+&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt">=
+<p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font=
+-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-f=
+amily:Arial,sans-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"p=
+adding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0i=
+n 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><b>=
+<span style=3D"font-size:9pt;font-family:Arial,sans-serif">16.</span></b><s=
+pan style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td><t=
+d style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"ma=
+rgin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><a href=
+=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=
+=3DS16&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts=
+/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><span sty=
+le=3D"font-size:9pt;font-family:Arial,sans-serif">The First International W=
+orkshop on Big Data Against Darknet Crimes</span></a><span style=3D"font-si=
+ze:9pt;font-family:Arial,sans-serif"></span></p></td></tr><tr><td nowrap=3D=
+"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"r=
+ight" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;fo=
+nt-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,san=
+s-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55pt;paddin=
+g:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.00=
+01pt;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9=
+pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td valign=3D"top" s=
+tyle=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"marg=
+in:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,s=
+erif"><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif">17.</sp=
+an></b><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></=
+p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" st=
+yle=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif">=
+<a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?=
+subarea=3DS17&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/=
+scripts/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><s=
+pan style=3D"font-size:9pt;font-family:Arial,sans-serif">Second Internation=
+al Workshop on the Internet of Things Data Analytics (IOTDA)</span></a><spa=
+n style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td></tr=
+><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"Mso=
+Normal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;f=
+ont-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;fon=
+t-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"w=
+idth:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"m=
+argin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span st=
+yle=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><t=
+d valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"ri=
+ght" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;fon=
+t-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:Arial,s=
+ans-serif">18.</span></b><span style=3D"font-size:9pt;font-family:Arial,san=
+s-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal"=
+ align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-fami=
+ly:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/s=
+cripts/submit.php?subarea=3DS18&amp;undisplay_detail=3D1&amp;wh=3D/cybercha=
+ir/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:r=
+gb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">=
+7th International Workshop on Distributed Storage and Blockchain Technologi=
+es for Big Data</span></a><span style=3D"font-size:9pt;font-family:Arial,sa=
+ns-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"=
+padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0=
+in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><s=
+pan style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p><=
+/td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNor=
+mal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-=
+family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-s=
+erif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p c=
+lass=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-al=
+ign:right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D"fon=
+t-size:9pt;font-family:Arial,sans-serif">19.</span></b><span style=3D"font-=
+size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"padding=
+:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.000=
+1pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.c=
+om/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS19&amp;undisplay=
+_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" targ=
+et=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;=
+font-family:Arial,sans-serif">The 3rd International Workshop on Big Data An=
+alytic for Cybercrime Investigation and Prevention</span></a><span style=3D=
+"font-size:9pt;font-family:Arial,sans-serif"></span></p></td></tr><tr><td n=
+owrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" al=
+ign=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:1=
+0.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-family:A=
+rial,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55p=
+t;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in =
+0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span style=3D"fon=
+t-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td valign=
+=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" sty=
+le=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family=
+:Century,serif"><b><span style=3D"font-size:9pt;font-family:Arial,sans-seri=
+f">20.</span></b><span style=3D"font-size:9pt;font-family:Arial,sans-serif"=
+></span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=
+=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Cen=
+tury,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts=
+/submit.php?subarea=3DS20&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/201=
+9/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149=
+,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">The Th=
+ird Annual Workshop on Applications of Artificial Intelligence in the Legal=
+ Industry</span></a><span style=3D"font-size:9pt;font-family:Arial,sans-ser=
+if"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"paddin=
+g:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0=
+001pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><span st=
+yle=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><t=
+d width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" a=
+lign=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family=
+:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">=
+&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:=
+right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D"font-si=
+ze:9pt;font-family:Arial,sans-serif">21.</span></b><span style=3D"font-size=
+:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"padding:1.9=
+pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;=
+font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.com/c=
+yberchair/2019/bigdata19/scripts/submit.php?subarea=3DS21&amp;undisplay_det=
+ail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=
+=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;fo=
+nt-family:Arial,sans-serif">Big Data Predictive Maintenance using Artificia=
+l Intelligence</span></a><span style=3D"font-size:9pt;font-family:Arial,san=
+s-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"p=
+adding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0i=
+n 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><sp=
+an style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></=
+td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNorm=
+al" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-f=
+amily:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-se=
+rif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p cl=
+ass=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-ali=
+gn:right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D"font=
+-size:9pt;font-family:Arial,sans-serif">22.</span></b><span style=3D"font-s=
+ize:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"padding:=
+1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001=
+pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.co=
+m/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS22&amp;undisplay_=
+detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" targe=
+t=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;f=
+ont-family:Arial,sans-serif">The 2nd International Workshop on Big Data for=
+ Marketing Intelligence and Operation Management</span></a><span style=3D"f=
+ont-size:9pt;font-family:Arial,sans-serif"></span></p></td></tr><tr><td now=
+rap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" alig=
+n=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.=
+5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-family:Ari=
+al,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55pt;=
+padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0i=
+n 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-=
+size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td valign=3D"=
+top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=
+=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:C=
+entury,serif"><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif"=
+>23.</span></b><span style=3D"font-size:9pt;font-family:Arial,sans-serif"><=
+/span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"=
+left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century=
+,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/sub=
+mit.php?subarea=3DS23&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bi=
+gdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149,79,=
+114)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">2nd Worksh=
+op on Energy-Efficient Machine Learning and Big Data Analytics</span></a><s=
+pan style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td></=
+tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"M=
+soNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right=
+;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;f=
+ont-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D=
+"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D=
+"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span =
+style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td>=
+<td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"=
+right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;f=
+ont-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:Arial=
+,sans-serif">24.</span></b><span style=3D"font-size:9pt;font-family:Arial,s=
+ans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNorma=
+l" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-fa=
+mily:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19=
+/scripts/submit.php?subarea=3DS24&amp;undisplay_detail=3D1&amp;wh=3D/cyberc=
+hair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"color=
+:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif=
+">The First International Workshop on Big Data Tools, Methods, and Use Case=
+s for Innovative Scientific Discovery (BTSD)</span></a><span style=3D"font-=
+size:9pt;font-family:Arial,sans-serif"></span></p></td></tr><tr><td nowrap=
+=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=
+=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5=
+pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-family:Aria=
+l,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55pt;p=
+adding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in=
+ 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-s=
+ize:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td valign=3D"t=
+op" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D=
+"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Cent=
+ury,serif"><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif">25=
+.</span></b><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></sp=
+an></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"lef=
+t" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,se=
+rif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit=
+.php?subarea=3DS25&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigda=
+ta19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149,79,114=
+)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">The Third Hum=
+an-in-the-loop Methods and Human-Machine Collaboration in BigData</span></a=
+><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td=
+></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:=
+right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:=
+9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" sty=
+le=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" sty=
+le=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><=
+span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p>=
+</td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" alig=
+n=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.=
+5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:=
+Arial,sans-serif">26.</span></b><span style=3D"font-size:9pt;font-family:Ar=
+ial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"Mso=
+Normal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;fo=
+nt-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigd=
+ata19/scripts/submit.php?subarea=3DS26&amp;undisplay_detail=3D1&amp;wh=3D/c=
+yberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"=
+color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-=
+serif">4th Workshop on Open Science in Big Data (OSBD)</span></a><span styl=
+e=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td></tr><tr><=
+td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal=
+" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-si=
+ze:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-fami=
+ly:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"width:5=
+.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:=
+0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><span style=3D=
+"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td vali=
+gn=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" s=
+tyle=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-fami=
+ly:Century,serif"><b><span style=3D"font-size:9pt;font-family:Arial,sans-se=
+rif">27.</span></b><span style=3D"font-size:9pt;font-family:Arial,sans-seri=
+f"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=
+=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Cen=
+tury,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts=
+/submit.php?subarea=3DS27&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/201=
+9/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149=
+,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">3rd In=
+ternational Workshop on Big Data Analytics for Cyber Intelligence and Defen=
+se (BDA4CID 2018)</span></a><span style=3D"font-size:9pt;font-family:Arial,=
+sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0=
+in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif=
+"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span><=
+/p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"Ms=
+oNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;f=
+ont-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sa=
+ns-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt">=
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;tex=
+t-align:right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D=
+"font-size:9pt;font-family:Arial,sans-serif">28.</span></b><span style=3D"f=
+ont-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"pad=
+ding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0=
+.0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-l=
+ab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS28&amp;undis=
+play_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" =
+target=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:=
+9pt;font-family:Arial,sans-serif">Sixth International Workshop on High Perf=
+ormance Big Graph Data Management, Analysis, and Mining (BigGraphs 2019)</s=
+pan></a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span><=
+/p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p =
+class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-a=
+lign:right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-=
+size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7=
+" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left=
+" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,ser=
+if"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span=
+></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal"=
+ align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-siz=
+e:10.5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-fa=
+mily:Arial,sans-serif">29.</span></b><span style=3D"font-size:9pt;font-fami=
+ly:Arial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10=
+.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/20=
+19/bigdata19/scripts/submit.php?subarea=3DS29&amp;undisplay_detail=3D1&amp;=
+wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" st=
+yle=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Aria=
+l,sans-serif">Big Data Analytic Technology for Bioinformatics and Health In=
+formatics (KDDBHI)</span></a><span style=3D"font-size:9pt;font-family:Arial=
+,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0=
+in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif=
+"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span><=
+/p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"Ms=
+oNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;f=
+ont-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sa=
+ns-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt">=
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;tex=
+t-align:right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D=
+"font-size:9pt;font-family:Arial,sans-serif">30.</span></b><span style=3D"f=
+ont-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"pad=
+ding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0=
+.0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-l=
+ab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS30&amp;undis=
+play_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" =
+target=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:=
+9pt;font-family:Arial,sans-serif">The 3rd Workshop on Graph Techniques for =
+Adversarial Activity Analytics (GTA3 3.0)</span></a><span style=3D"font-siz=
+e:9pt;font-family:Arial,sans-serif"></span></p></td></tr><tr><td nowrap=3D"=
+" valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"ri=
+ght" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;fon=
+t-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans=
+-serif">&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55pt;padding=
+:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.000=
+1pt;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9p=
+t;font-family:Arial,sans-serif">&nbsp;</span></p></td><td valign=3D"top" st=
+yle=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margi=
+n:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,se=
+rif"><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif">31.</spa=
+n></b><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p=
+></td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" sty=
+le=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><=
+a href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?s=
+ubarea=3DS31&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/s=
+cripts/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><sp=
+an style=3D"font-size:9pt;font-family:Arial,sans-serif">5th Solar &amp; Ste=
+llar Astronomy Big Data (SABiD) =E2=80=93 Workshop on Management, Search an=
+d Mining of Massive Repositories of Solar and Stellar Astronomy Data</span>=
+</a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p><=
+/td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p clas=
+s=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align=
+:right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size=
+:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" st=
+yle=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" st=
+yle=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif">=
+<span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p=
+></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" ali=
+gn=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10=
+.5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family=
+:Arial,sans-serif">32.</span></b><span style=3D"font-size:9pt;font-family:A=
+rial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"Ms=
+oNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;f=
+ont-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/big=
+data19/scripts/submit.php?subarea=3DS32&amp;undisplay_detail=3D1&amp;wh=3D/=
+cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D=
+"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans=
+-serif">2nd Workshop on Big Data for CyberSecurity (BigCyber-2019)</span></=
+a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></t=
+d></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:=
+right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:=
+9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" sty=
+le=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" sty=
+le=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><=
+span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p>=
+</td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" alig=
+n=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.=
+5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:=
+Arial,sans-serif">33.</span></b><span style=3D"font-size:9pt;font-family:Ar=
+ial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"Mso=
+Normal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;fo=
+nt-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigd=
+ata19/scripts/submit.php?subarea=3DS33&amp;undisplay_detail=3D1&amp;wh=3D/c=
+yberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"=
+color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-=
+serif">The 2nd International Workshop on Big Media Dataset Construction, Ma=
+nagement and Applications</span></a><span style=3D"font-size:9pt;font-famil=
+y:Arial,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top"=
+ style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"ma=
+rgin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century=
+,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</=
+span></p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10=
+.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-family:Ar=
+ial,sans-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1=
+.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001=
+pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><b><span st=
+yle=3D"font-size:9pt;font-family:Arial,sans-serif">34.</span></b><span styl=
+e=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0i=
+n 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https=
+://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS34&am=
+p;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submi=
+t.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"fon=
+t-size:9pt;font-family:Arial,sans-serif">Big Food and Nutrition Data Manage=
+ment and Analysis (BFNDMA 2019)</span></a><span style=3D"font-size:9pt;font=
+-family:Arial,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=
+=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" sty=
+le=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family=
+:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">=
+&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt">=
+<p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font=
+-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;font-f=
+amily:Arial,sans-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"p=
+adding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0i=
+n 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><b>=
+<span style=3D"font-size:9pt;font-family:Arial,sans-serif">35.</span></b><s=
+pan style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td><t=
+d style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"ma=
+rgin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><a href=
+=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=
+=3DS35&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts=
+/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><span sty=
+le=3D"font-size:9pt;font-family:Arial,sans-serif">IoT Big Data 2019</span><=
+/a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></=
+td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p class=
+=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:=
+right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:=
+9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" sty=
+le=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" sty=
+le=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><=
+span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p>=
+</td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" alig=
+n=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.=
+5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family:=
+Arial,sans-serif">36.</span></b><span style=3D"font-size:9pt;font-family:Ar=
+ial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"Mso=
+Normal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;fo=
+nt-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigd=
+ata19/scripts/submit.php?subarea=3DS36&amp;undisplay_detail=3D1&amp;wh=3D/c=
+yberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D"=
+color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans-=
+serif">The Third Workshop on Big Data for Economic and Business Forecasting=
+</span></a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></spa=
+n></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt">=
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;tex=
+t-align:right;font-size:10.5pt;font-family:Century,serif"><span style=3D"fo=
+nt-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=
+=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D=
+"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Centur=
+y,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;<=
+/span></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNo=
+rmal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;fon=
+t-size:10.5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;fo=
+nt-family:Arial,sans-serif">37.</span></b><span style=3D"font-size:9pt;font=
+-family:Arial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p cl=
+ass=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size=
+:10.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair=
+/2019/bigdata19/scripts/submit.php?subarea=3DS37&amp;undisplay_detail=3D1&a=
+mp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank"=
+ style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:A=
+rial,sans-serif">Deep Graph Learning: Methodologies and Applications (DGLMA=
+'19)</span></a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"><=
+/span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9=
+pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt=
+;text-align:right;font-size:10.5pt;font-family:Century,serif"><span style=
+=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td w=
+idth=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" alig=
+n=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Ce=
+ntury,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nb=
+sp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"M=
+soNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right=
+;font-size:10.5pt;font-family:Century,serif"><b><span style=3D"font-size:9p=
+t;font-family:Arial,sans-serif">38.</span></b><span style=3D"font-size:9pt;=
+font-family:Arial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><=
+p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-=
+size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.com/cyberc=
+hair/2019/bigdata19/scripts/submit.php?subarea=3DS38&amp;undisplay_detail=
+=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_=
+blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-fa=
+mily:Arial,sans-serif">IEEE Workshop on Machine Learning for Big Data Analy=
+tics in Remote Sensing</span></a><span style=3D"font-size:9pt;font-family:A=
+rial,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" st=
+yle=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margi=
+n:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,se=
+rif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</spa=
+n></p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D=
+"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5p=
+t;font-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial=
+,sans-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9p=
+t"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;=
+text-align:right;font-size:10.5pt;font-family:Century,serif"><b><span style=
+=3D"font-size:9pt;font-family:Arial,sans-serif">39.</span></b><span style=
+=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0i=
+n 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https=
+://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS39&am=
+p;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submi=
+t.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"fon=
+t-size:9pt;font-family:Arial,sans-serif">The First Workshop on Security and=
+ Privacy on Blockchain</span></a><span style=3D"font-size:9pt;font-family:A=
+rial,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" st=
+yle=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margi=
+n:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,se=
+rif"><span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</spa=
+n></p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D=
+"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5p=
+t;font-family:Century,serif"><span style=3D"font-size:9pt;font-family:Arial=
+,sans-serif">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9p=
+t"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;=
+text-align:right;font-size:10.5pt;font-family:Century,serif"><b><span style=
+=3D"font-size:9pt;font-family:Arial,sans-serif">40.</span></b><span style=
+=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></td><td style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0i=
+n 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><a href=3D"https=
+://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS40&am=
+p;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submi=
+t.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"fon=
+t-size:9pt;font-family:Arial,sans-serif">The 3rd International Workshop on =
+Big Data for Financial News and Data</span></a><span style=3D"font-size:9pt=
+;font-family:Arial,sans-serif"></span></p></td></tr><tr><td nowrap=3D"" val=
+ign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" =
+style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-fam=
+ily:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-seri=
+f">&nbsp;</span></p></td><td width=3D"7" style=3D"width:5.55pt;padding:1.9p=
+t"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;f=
+ont-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:9pt;fon=
+t-family:Arial,sans-serif">&nbsp;</span></p></td><td valign=3D"top" style=
+=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0=
+in 0in 0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif=
+"><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif">41.</span><=
+/b><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p></=
+td><td style=3D"padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" style=
+=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif"><a =
+href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?sub=
+area=3DS41&amp;undisplay_detail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scr=
+ipts/ws_submit.php" target=3D"_blank" style=3D"color:rgb(149,79,114)"><span=
+ style=3D"font-size:9pt;font-family:Arial,sans-serif">4th International Wor=
+kshop on Big Data Transfer Learning (BDTL) -- Heterogeneous Representation =
+and Networks</span></a><span style=3D"font-size:9pt;font-family:Arial,sans-=
+serif"></span></p></td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"pad=
+ding:1.9pt"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in =
+0.0001pt;text-align:right;font-size:10.5pt;font-family:Century,serif"><span=
+ style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td=
+><td width=3D"7" style=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal=
+" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-fam=
+ily:Century,serif"><span style=3D"font-size:9pt;font-family:Arial,sans-seri=
+f">&nbsp;</span></p></td><td valign=3D"top" style=3D"padding:1.9pt"><p clas=
+s=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align=
+:right;font-size:10.5pt;font-family:Century,serif"><b><span style=3D"font-s=
+ize:9pt;font-family:Arial,sans-serif">42.</span></b><span style=3D"font-siz=
+e:9pt;font-family:Arial,sans-serif"></span></p></td><td style=3D"padding:1.=
+9pt"><p class=3D"MsoNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt=
+;font-size:10.5pt;font-family:Century,serif"><a href=3D"https://wi-lab.com/=
+cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DS42&amp;undisplay_de=
+tail=3D1&amp;wh=3D/cyberchair/2019/bigdata19/scripts/ws_submit.php" target=
+=3D"_blank" style=3D"color:rgb(149,79,114)"><span style=3D"font-size:9pt;fo=
+nt-family:Arial,sans-serif">The next frontier of big data from LIDAR</span>=
+</a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p><=
+/td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p clas=
+s=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align=
+:right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size=
+:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" st=
+yle=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" st=
+yle=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif">=
+<span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p=
+></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" ali=
+gn=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10=
+.5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family=
+:Arial,sans-serif">43.</span></b><span style=3D"font-size:9pt;font-family:A=
+rial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"Ms=
+oNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;f=
+ont-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/big=
+data19/scripts/submit.php?subarea=3DS43&amp;undisplay_detail=3D1&amp;wh=3D/=
+cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D=
+"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans=
+-serif">Streaming Systems and Real-Time Machine Learning (STREAM-ML)</span>=
+</a><span style=3D"font-size:9pt;font-family:Arial,sans-serif"></span></p><=
+/td></tr><tr><td nowrap=3D"" valign=3D"top" style=3D"padding:1.9pt"><p clas=
+s=3D"MsoNormal" align=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align=
+:right;font-size:10.5pt;font-family:Century,serif"><span style=3D"font-size=
+:9pt;font-family:Arial,sans-serif">&nbsp;</span></p></td><td width=3D"7" st=
+yle=3D"width:5.55pt;padding:1.9pt"><p class=3D"MsoNormal" align=3D"left" st=
+yle=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Century,serif">=
+<span style=3D"font-size:9pt;font-family:Arial,sans-serif">&nbsp;</span></p=
+></td><td valign=3D"top" style=3D"padding:1.9pt"><p class=3D"MsoNormal" ali=
+gn=3D"right" style=3D"margin:0in 0in 0.0001pt;text-align:right;font-size:10=
+.5pt;font-family:Century,serif"><b><span style=3D"font-size:9pt;font-family=
+:Arial,sans-serif">44.</span></b><span style=3D"font-size:9pt;font-family:A=
+rial,sans-serif"></span></p></td><td style=3D"padding:1.9pt"><p class=3D"Ms=
+oNormal" align=3D"left" style=3D"margin:0in 0in 0.0001pt;font-size:10.5pt;f=
+ont-family:Century,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/big=
+data19/scripts/submit.php?subarea=3DS44&amp;undisplay_detail=3D1&amp;wh=3D/=
+cyberchair/2019/bigdata19/scripts/ws_submit.php" target=3D"_blank" style=3D=
+"color:rgb(149,79,114)"><span style=3D"font-size:9pt;font-family:Arial,sans=
+-serif">6th International Workshop on Privacy and Security of Big Data (PSB=
+D 2019)</span></a><span style=3D"font-size:9pt;font-family:Arial,sans-serif=
+"></span></p></td></tr></tbody></table><p style=3D"margin:0in 0in 0.0001pt =
+0.25in;text-align:justify;font-size:10.5pt;font-family:Century,serif"><span=
+ style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><br=
+></span></p><p style=3D"margin:0in 0in 0.0001pt 0.25in;text-align:justify;f=
+ont-size:10.5pt;font-family:Century,serif"><span style=3D"font-size:12pt;fo=
+nt-family:&quot;Times New Roman&quot;,serif">(2)&nbsp;<b>Po</b></span><b><s=
+pan style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">=
+ster&nbsp;</span></b><span style=3D"font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif">(<span style=3D"color:red">Submission deadline: Nov =
+10, 2019</span>)</span><br></p><p class=3D"MsoNormal" style=3D"margin:0in 0=
+in 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-famil=
+y:Century,serif"><span style=3D"font-size:12pt;font-family:&quot;Times New =
+Roman&quot;,serif">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:=
+0in 0in 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-=
+family:Century,serif">Poster abstracts are limited to one page, the format =
+and style are flexible.&nbsp;&nbsp;Posters will be reviewed on the basis of=
+ their relevance to the scope of the conference and on the scientific quali=
+ty of the work presented. Each poster paper will be published with maximum =
+up to 3 page limit in the poster/workshop proceedings (EI indexed). (format=
+ instruction for publication will be included with the poster acceptance no=
+tification)</p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;colo=
+r:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-family:Century,serif"=
+><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,seri=
+f">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt=
+;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-family:Century,s=
+erif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;=
+,serif">Online Submission:</span></p><p class=3D"MsoNormal" style=3D"margin=
+:0in 0in 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font=
+-family:Century,serif"><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif"><a href=3D"https://wi-lab.com/cyberchair/2019/bigd=
+ata19/index.php" target=3D"_blank">https://wi-lab.com/cyberchair/2019/bigda=
+ta19/index.php</a></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in=
+ 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-family:=
+Century,serif"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,serif"><br></span></p><p class=3D"MsoNormal" style=3D"margin:0in =
+0in 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-fami=
+ly:Century,serif"><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,serif"><br></span></p><p class=3D"MsoNormal" style=3D"margin:0=
+in 0in 0.0001pt;color:rgb(0,0,0);text-align:justify;font-size:10.5pt;font-f=
+amily:Century,serif"><span style=3D"font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif"><br></span></p><p class=3D"MsoNormal" style=3D"margi=
+n:0in 0in 0.0001pt;font-size:medium;text-align:justify;font-family:&quot;Ti=
+mes New Roman&quot;,serif;color:black"><span style=3D"font-family:&quot;Cou=
+rier New&quot;;font-size:10pt">To subscribe to this list, the user sends an=
+ email,</span></p><p style=3D"margin:0in 0in 0.0001pt;font-size:medium;colo=
+r:rgb(0,0,0);font-family:&quot;Times New Roman&quot;,serif"><span style=3D"=
+font-size:10pt;font-family:&quot;Courier New&quot;">with blank subject line=
+, to<br><a href=3D"mailto:listserv@lists.drexel.edu" target=3D"_blank" styl=
+e=3D"color:rgb(149,79,114)">listserv@lists.drexel.edu</a>. In the text box,=
+ the user<br>types:&nbsp;<br><br>subscribe BIGDATA<br><br>To unsubscribe fr=
+om a list, the user sends an email to<br><a href=3D"mailto:listserv@lists.d=
+rexel.edu" target=3D"_blank" style=3D"color:rgb(149,79,114)">listserv@lists=
+.drexel.edu</a>&nbsp;with the message</span><span style=3D"font-size:10pt;f=
+ont-family:Verdana,sans-serif"></span></p><p style=3D"margin:0in 0in 0.0001=
+pt;font-size:medium;color:rgb(0,0,0);font-family:&quot;Times New Roman&quot=
+;,serif"><span style=3D"font-size:10pt;font-family:&quot;Courier New&quot;"=
+>&nbsp;</span><span style=3D"font-size:10pt;font-family:Verdana,sans-serif"=
+></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;font-si=
+ze:medium;font-family:&quot;Times New Roman&quot;,serif;color:black"><span =
+style=3D"font-size:10pt;font-family:&quot;Courier New&quot;">signoff&nbsp;<=
+/span><span style=3D"font-family:&quot;Courier New&quot;;font-size:13.33333=
+3015441895px">BIGDATA</span></p></div></div>
+<br>
+<hr>
+<p align=3D"center">To unsubscribe from the BIGDATA list, click the followi=
+ng link:<br>
+<a href=3D"http://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3MzcxIGZvYWFkQENB=
+TFBPTFkuRURVIEJJR0RBVEEgIK9MBw0fi7BN&amp;c=3DSIGNOFF" target=3D"_blank">htt=
+p://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3MzcxIGZvYWFkQENBTFBPTFkuRURVIE=
+JJR0RBVEEgIK9MBw0fi7BN&amp;c=3DSIGNOFF</a>
+</p>
+
+--000000000000eeb08e05947ce0f0--

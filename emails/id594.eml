@@ -1,0 +1,603 @@
+Received: from BYAPR08MB4984.namprd08.prod.outlook.com (2603:10b6:a02:80::42)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0029.PROD.EXCHANGELABS.COM; Fri, 2 Aug 2019 19:34:47 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=QSYXbJwxiWuxiLpmnhafmmfQbzcc3Swkg2rlDQIbYsg4cHY/wik7lrstZLWdBdVD2ACGgMitx9GWmM4ZAA3s+HjeVLVX7exFgvJ6ENoPnAxyYbZojmeXBWqbogfOFT9X17LyR2eJWr4XTvufvTaqC62aarV4IAoGnRxl4o7Dx//avJpt42tPX57PdjcCb0RijIlARScLDH8p/5JV4pYIP2DcX5HvQN/B35K21mHbh6OMBsfWw109Himd0+5puTUCwmo5tWhosM8mlazaRKLLVglHow0dN1oYUDDVGtXYU0MdFTym0qMJ3WCxXkKTbuExTbNDmWc1Box2vStc41+duw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=/FjYyT3coWMnckH/VKSBxEODklR+UnnDkLMUogEPjAc=;
+ b=WTq77FMZpxCC7jTzzv6oQKAkke00eYcbI2/sv3fv4/Ai96TelmqmGJ4MZPSRDazTxSHCbLWXVk+81zHGbW78oA5CzY7RgUjKcyvSC8cWxmRqJL6C8aXiPXYMPF8ZMisMQ/+GsfAgM+P7UsOWqNeUukYLmGvkwIY9hNSiSyyEwRo7st0bA3bXFw9zhEZ+rL81dA8mx/MjNiRlP9aK0HWpNwBNcDdilzttIXFCEjGwVwOW5bDnYinbQ/xmMJfZWJIsIEHxmUaY19T54RDjwYf+6Qi3gRMAC4jmgaMG+v0vKNk7sCD5avAWfJ+p68PfTvuSQtxqHbtF08rkbmJgYCR9DA==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1;spf=pass (sender ip is
+ 153.1.7.4) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=uta.fi;dmarc=fail
+ (p=none sp=none pct=100) action=none header.from=cs.uno.edu;dkim=none
+ (message not signed);arc=fail (47)
+Received: from BYAPR08CA0011.namprd08.prod.outlook.com (2603:10b6:a03:100::24)
+ by BYAPR08MB4984.namprd08.prod.outlook.com (2603:10b6:a03:6a::29) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2115.10; Fri, 2 Aug
+ 2019 19:34:46 +0000
+Received: from SN1NAM04FT007.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::206) by BYAPR08CA0011.outlook.office365.com
+ (2603:10b6:a03:100::24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.13 via Frontend
+ Transport; Fri, 2 Aug 2019 19:34:46 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=CS.UNO.EDU;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ SN1NAM04FT007.mail.protection.outlook.com (10.152.88.140) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2136.14 via Frontend Transport; Fri, 2 Aug 2019 19:34:45 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x72JUgcq018587
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Fri, 2 Aug 2019 22:30:42 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x72JUfId010193;
+	Fri, 2 Aug 2019 22:30:41 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Fri, 02 Aug 2019 22:30:41 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x72JUfjk001747
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Fri, 2 Aug 2019 22:30:41 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x72IKw35014904;
+	Fri, 2 Aug 2019 22:30:21 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          417087 for GAMESNETWORK@LISTSERV.UTA.FI; Fri, 2 Aug 2019 22:30:19
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x72JKJgN024001 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Fri, 2 Aug 2019 22:20:19 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x72JKJFL013055
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@uta.fi>; Fri, 2 Aug 2019 22:20:19 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x72JKIZd007988 for
+          <GAMESNETWORK@uta.fi>; Fri, 2 Aug 2019 22:20:18 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Fri, 02 Aug 2019 22:20:18
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from NAM03-BY2-obe.outbound.protection.outlook.com
+          (mail-eopbgr780102.outbound.protection.outlook.com [40.107.78.102])
+          by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x72JKCCo015865
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=NOT) for <GAMESNETWORK@uta.fi>; Fri, 2 Aug 2019 22:20:17 +0300
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+          b=KEwkGBa1CF9isWkf8EssudYtapA6z4awjdXAJdrkZRO1M8KCZ8z1Ca9qL32E3WMASNETK8/OAxXLljdwkmp0/2O+mXVlrW1reDK9CSggyes9CQRGMtB7/lLBxz0ohtVxIgbmLQ3cBkExH193Y1+Svcd7KF1QMHfKVRrw/IEIgb+uLzjunFC4Vw6GAcqhDriiRxEv8wnch7qhK4URyAJfVYiITD6FVGyRv/6Wwjc/MtaZET+ZUsgxpCGlHXAg0Wi7xHzgFIG4sizjOOF+eYeYBfiC0RWwEYhCTQkjnxMUU1uV/wR9rpz73vae/WHEyPb4lTKu+4kROcIcOu6LCQCkAA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+                       s=arcselector9901;
+                       h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+                       bh=lT2QE5BXgD/wkZn0H1/4ZzT4HdAD+Uzu4TcfbHDL2SQ=;
+                       b=BXfpfhpKLZliN1z8UkLoxKgEJMNKw5M9tpByXGyN2u+M3vq3ipAr76rdHwW/4xL4ioqsnemv2JWAmz+WyBfrXXMKEcqszl6n6JqXBBPsSUddOdY31Z/ySX8+6RSrQIrOYQqdrYiD4CEUBeqIOhGWXNcHuYqKbfpcRzx+FKNvATq7dZVAzRwfBos3nJmHy8UzFCm/i9X8fCZXbia6wX5u9IY5e/ZzYA3V6cA3qLMRpkpMc6oSKQW9vKuOYsv2rKp8Hnmkd9abSdIZo0ieosPmup8zTTKcUXkW5XPiYJENyeT0EGErCMsHkP8EEqtzClkwSurH69hqik5md9Z67Yr74g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1;spf=pass
+                         smtp.mailfrom=cs.uno.edu;dmarc=pass action=none
+                         header.from=cs.uno.edu;dkim=pass
+                         header.d=cs.uno.edu;arc=none
+Received: from DM5PR03MB3228.namprd03.prod.outlook.com (10.174.243.166) by
+          DM5PR03MB2716.namprd03.prod.outlook.com (10.168.198.135) with
+          Microsoft SMTP Server (version=TLS1_2,
+          cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.17; Fri,
+          2 Aug 2019 19:20:09 +0000
+Received: from DM5PR03MB3228.namprd03.prod.outlook.com
+          ([fe80::e594:3410:3901:3b01]) by
+          DM5PR03MB3228.namprd03.prod.outlook.com
+          ([fe80::e594:3410:3901:3b01%4]) with mapi id 15.20.2115.005; Fri, 2
+          Aug 2019 19:20:09 +0000
+Thread-Topic: ICIDS Doctoral Consortium Submission Deadline Extended
+Thread-Index: AQHVSWafXg6+AkeAiUeB3TTuJsacvw==
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [2600:8807:5500:f26:31ec:421d:1b09:6229]
+x-ms-publictraffictype: Email
+X-MS-Office365-Filtering-Correlation-Id: 4831d167-96bf-44c2-b62a-08d717807996
+X-Microsoft-Antispam-Untrusted:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600148)(711020)(4605104)(1401327)(2017052603328)(7193020);SRVR:DM5PR03MB2716;
+X-MS-TrafficTypeDiagnostic: DM5PR03MB2716:|BYAPR08MB4984:
+X-MS-Exchange-PUrlCount: 7
+x-microsoft-antispam-prvs: <DM5PR03MB2716AE9169C63AFCBADF59018BD90@DM5PR03MB2716.namprd03.prod.outlook.com>
+clutterbypassedbytransportruleoverride: true
+x-ms-oob-tlc-oobclassifiers: OLM:9508;OLM:8882;
+x-forefront-prvs: 011787B9DD
+X-Forefront-Antispam-Report-Untrusted:
+ SFV:NSPM;SFS:(10019020)(4636009)(136003)(39860400002)(396003)(366004)(346002)(376002)(199004)(189003)(88552002)(52536014)(66946007)(6606003)(5660300002)(316002)(2906002)(64756008)(66556008)(66476007)(66446008)(606006)(8676002)(81156014)(81166006)(8936002)(786003)(6116002)(2351001)(19627405001)(6506007)(7736002)(55016002)(7696005)(99286004)(102836004)(6436002)(74316002)(5640700003)(53376002)(53936002)(236005)(9686003)(54896002)(6306002)(68736007)(6916009)(186003)(2501003)(46003)(33656002)(71200400001)(71190400001)(25786009)(478600001)(1015004)(86362001)(14454004)(486006)(476003)(256004)(5024004)(14444005)(75432002)(76116006)(966005);DIR:OUT;SFP:1102;SCL:1;SRVR:DM5PR03MB2716;H:DM5PR03MB3228.namprd03.prod.outlook.com;FPR:;SPF:None;LANG:en;PTR:InfoNoRecords;A:1;MX:3;
+x-ms-exchange-senderadcheck: 1
+X-Microsoft-Antispam-Message-Info-Original:
+ QHqoSPCUot2x386w2RcC5tcVVm/FFTu9cocytWcjfwg1cbzTv2ak6DoucOK43T30VOAiohKuXp3lcw6gDu9FirdSturvxv3ZIANMNtKRSbYR1DzjKaw+/IocJYLzn6Dq83FjTFw/7qaNWJI061WRX0086wFfnUATF8O7RyY+28hBxyne2lZLBaIvRE7JZ4E9FgI34V6Wr0zkaLY1I36Yl5on9w8wMTxkARTUWYjlpBh/qHT5IKi37Ejo72VGFz+FIk1oRItV7RGCY9bXctEBmklZuvQrFE+D6bomah2H806Y0p0BpAaY3DboER21kbMK7MFJpKuR3A0QnLE1ROm0DWY7nMIMVm8+rgv6vpdMcUATt4N2Qb/HN340gtoONFR0Obfk7O14+R3n/sal+Mhh6UFcy8pqQdNZBqHWMF7NQjQ=
+Content-Type: multipart/alternative; boundary="_000_DM5PR03MB3228EE80DCAE1F7CA3895EC58BD90DM5PR03MB3228namp_"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM5PR03MB2716
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Fri, 02 Aug 2019 22:30:41 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,HTML_MESSAGE,L_BDY_TRGTBLNK,L_GNRC_MSGID_RGXP,L_HDR_BAD_XOIP,L_HDR_HAS_DKIM,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1004
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+Message-ID: <DM5PR03MB3228EE80DCAE1F7CA3895EC58BD90@DM5PR03MB3228.namprd03.prod.outlook.com>
+Date: Fri, 2 Aug 2019 19:20:08 +0000
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Benjamin Michael Samuel <bsamuel@CS.UNO.EDU>
+Subject: [GAMESNETWORK] ICIDS Doctoral Consortium Submission Deadline Extended
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: "Gamesnetwork"<gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Aug 2019 19:34:45.9387
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4831d167-96bf-44c2-b62a-08d717807996
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ SN1NAM04FT007.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BYAPR08MB4984;H:mxout1.uta.fi;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT007.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 0a6f37ff-4c2d-432b-e9f9-08d7177e6ef8
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(710020)(711020)(4605104)(1124261)(71702078)(7193020);SRVR:BYAPR08MB4984;
+X-MS-Exchange-Organization-SCL: 5
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Aug 2019 19:34:45.1951
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4831d167-96bf-44c2-b62a-08d717807996
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4984
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.2837916
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750119)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?+yOGHsdH/0TusE6EO3K8olC0x8FBaeGeYLMMC36KfLymmoF9nBU/+muC?=
+ =?Windows-1252?Q?LLOlxj83h1FGi43K3Ea5g0bhVMw0KjDXuclV4dEqAZ+zSubSvbg1DVKV?=
+ =?Windows-1252?Q?eBfut4haXYBvIwV+1js2Vis9qE1kn2t0LMZ/SU2NW3q8Z5VTF9+M+fPO?=
+ =?Windows-1252?Q?u6HX3ypP+0BraDiNs9Lb5JjGulgSS25GBcshPFvGBVsq+bTv+La6DD/H?=
+ =?Windows-1252?Q?7giHA6VPIYgazXB0bY0jTnhEME9eEYRxr2bTz0ZHvZU41z79HVhpoYa5?=
+ =?Windows-1252?Q?KxVTuzyrl1DotNgFPI+g+hDcA5vxGoA47b7eUHVgMkjhtFhbzjfRLiSv?=
+ =?Windows-1252?Q?RaQfevmfFRFc3UCqWmExsBcgeWNvTYjcB5oEiZPmx23DPFmmbOdShJHJ?=
+ =?Windows-1252?Q?IpH7r9ZgvE9f2yGKzWlY3zCvobwhAWptVW5ERSCgSSMPJK9YwWqh090A?=
+ =?Windows-1252?Q?qCpI378VOCnFEqtlkkgz2eYsMjSNdxJQMiBatgmLwtb0Xdutk3p7Ej0P?=
+ =?Windows-1252?Q?aWZOsf4ttwU6Tuvk1o/kaw8eyRkIWhe57n9O7xG66+uqJFC/VW/fQ3z7?=
+ =?Windows-1252?Q?yPPZC/sP73H2bKV4D1O0oHMggWoVuaBprzOPk53/i2PrvKLy/GBS1i4K?=
+ =?Windows-1252?Q?83lyE9HvLerxRoESEAgDRwxyCfW5jFolE37i78XBDKe7LDRO3cHkb0W0?=
+ =?Windows-1252?Q?M5lVWiU1WASzMoSf+0r0gmSJaQzWiOYIO1SwAaWtm0N9YGV+vcBuU82O?=
+ =?Windows-1252?Q?Qr3akkCoysoe/J7VVAyv3nu1NhXfhipYOt3/KSNze7KAqHZakbenuWMy?=
+ =?Windows-1252?Q?kh2i7d/9TPVs6KCz/VpXKDOdPu+3wAd/khmdMoLoAkjULyFDWjXtoRhF?=
+ =?Windows-1252?Q?7DB9YVlTZy0n82mojJ5iAiO5Bp0TDKZNL9P7AuYco/KbbJ/AVty+PJ/j?=
+ =?Windows-1252?Q?hescXlAQrlh7l8JfVhz6NKrbiGS39wbleg0faqhmbczAT2HkN3hr3z+E?=
+ =?Windows-1252?Q?NVp2s67Gyv+lSs9MAL4U79FK5zfF07cC/9o9Mh4/irN+Wdccsd6Z13lf?=
+ =?Windows-1252?Q?ndVTYTNuaB3an8etcSxDvS3hFtc+iwHav+xApfTgCKwZhSSoNMwiBFL0?=
+ =?Windows-1252?Q?j7iFVvx6y1JBxLjUUSvFPtOe6qNXZDQlnMgT3qdlcdsh3RrDwC5VeKzP?=
+ =?Windows-1252?Q?56rA5Z6C8R8Xqe0KomklkCIwccCsPgfwfZ3eH6Zs5kMd+7WDLGcWauhY?=
+ =?Windows-1252?Q?M3Kf7ZwDnW7F0IgD4OhJj0mUGUS+EPejMxdZxr0THL0Laz0heRyEiM9l?=
+ =?Windows-1252?Q?HuJlCAiounniRr+tgmpWmRWNbYkjxUts0qFLTFZp778C2XRPXhzePFjp?=
+ =?Windows-1252?Q?0wR2nAKe8+Fk/TYxss2PDE8zq9HlyPNsgcRhuHvIwNw79fCJeH+8ckTL?=
+ =?Windows-1252?Q?PbleCQhYYXukffhvShaB035nghnmC9VuWLrQI2/Pbrnmb+HCH7Vl6ZBX?=
+ =?Windows-1252?Q?3Sk4qZQt?=
+MIME-Version: 1.0
+
+--_000_DM5PR03MB3228EE80DCAE1F7CA3895EC58BD90DM5PR03MB3228namp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+ICIDS Doctoral Consortium Submission Deadline Extended to August 16th
+
+Are you a PhD student interested in interactive digital storytelling? Are y=
+ou looking to receive guidance or feedback on your dissertation topic from =
+the interactive storytelling community-at-large? Consider submitting to the=
+ ICIDS Doctoral Consortium!
+
+ICIDS is the premier conference for researchers and practitioners concerned=
+ with studying digital interactive forms of narrative from a variety of per=
+spectives, including theoretical, technological, and applied design lenses.=
+ The annual conference is an interdisciplinary gathering that combines tech=
+nology-focused approaches with humanities-inspired theoretical inquiry, emp=
+irical research and artistic expression.
+
+The Doctoral Consortium is an opportunity for PhD students in areas related=
+ with the topics of ICIDS to present their research work, at a stage where =
+feedback from the community might be beneficial. Students will discuss the =
+work with experts in the area and with peers in a friendly atmosphere where=
+ discussion and contributions will be encouraged. Students should have defi=
+ned their research plan, and can be in intermediate or advanced stages of t=
+heir research. Regardless of how far along the students are in their resear=
+ch, the work should still be in-progress and malleable enough to take advan=
+tage of the feedback from the Doctoral Consortium.
+
+The deadline for DC submissions has been extended to August 16th. The ICIDS=
+ website https://icids.eae.utah.edu/ will reflect this change soon.
+
+Submission
+
+DC Submissions can be completed through EasyChair at the following link: <h=
+ttps://easychair.org/conference?conf=3Dicids2019> easychair.org/conferences=
+/?conf=3Dicids2019<http://easychair.org/conferences/?conf=3Dicids2019>
+
+Log in to EasyChair (or create an account if you haven=92t yet), and then c=
+reate a new submission under the Doctoral Consortium track. You=92ll then b=
+e prompted to upload the following the files:
+
+1.) A short paper (max 4 pages in the Lecture Notes in Computer Science (LN=
+CS) Format) describing the research work, results, status and next steps. T=
+he paper will be published in the proceedings. LNCS templates can be downlo=
+aded here under the section =93Templates, Sample Files, and Useful Links=94=
+ https://www.springer.com/us/computer-science/lncs/conference-proceedings-g=
+uidelines
+
+2.) A CV of the PhD candidate (1-2 pages)
+
+3.) A letter from the supervisor addressing the benefits of participating i=
+n the Doctoral Consortium at this stage of the research work (1 page). If s=
+upervisors prefer, these may be submitted independently from the rest of th=
+e submission. Please e-mail to bsamuel (at) cs.uno.edu, making sure to incl=
+ude the name of the student and =93ICIDS 2019 DC supervisor letter=94 in th=
+e subject line.
+
+4.) You will also be asked to answer a number of questions to help us pair =
+you with a mentor relevant to your interests and aspirations.
+
+Accepted submissions will be distributed to all participants in order to pr=
+epare for the discussions during the Doctoral Consortium sessions. Addition=
+al information about how to prepare for the Doctoral Consortium will be pro=
+vided following acceptance.
+
+
+Important Dates
+
+*Doctoral consortium submission deadline *extended*: August 1st, August 16t=
+h, 2019
+*Notification of acceptance: August 27th, 2019.
+*Camera ready: September 13th, 2019.
+*Doctoral Consortium: Throughout the conference (November 19th - November 2=
+3rd)
+
+Doctoral Consortium Chair
+Ben Samuel (University of New Orleans, US)
+
+Contact Information
+If you have further questions, please contact: bsamuel (at) cs.uno.edu
+
+
+
+
+Ben Samuel, Ph.D.
+
+Assistant Professor of Computer Science
+=96
+Dept. of Computer Science
+Mathematics Building, Room 339
+2000 Lakeshore Drive
+New Orleans, LA 70148
+=96
+Office 504.280.4435
+
+NOTICE: This message, including all attachments transmitted with it, is int=
+ended solely for the use of the Addressee(s) and may contain information th=
+at is PRIVILEGED, CONFIDENTIAL, and/or EXEMPT FROM DISCLOSURE under applica=
+ble law. If you are not the intended recipient, you are hereby notified tha=
+t any disclosure, copying, distribution, or use of the information containe=
+d herein is STRICTLY PROHIBITED. If you received this communication in erro=
+r, please destroy all copies of the message, whether in electronic or hard =
+copy format, as well as attachments and immediately contact the sender by r=
+eplying to this email or contact the sender at the telephone numbers listed=
+ above. Thank you!
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--_000_DM5PR03MB3228EE80DCAE1F7CA3895EC58BD90DM5PR03MB3228namp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Helvetica,sans-serif;" dir=3D"ltr">
+<p style=3D"margin-top:0;margin-bottom:0"></p>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<b>ICIDS Doctoral Consortium Submission Deadline Extended to August 16th</b=
+></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+Are you a PhD student interested in interactive digital storytelling? Are y=
+ou looking to receive guidance or feedback on your dissertation topic from =
+the interactive storytelling community-at-large? Consider submitting to the=
+ ICIDS Doctoral Consortium!&nbsp;</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+ICIDS is the premier conference for researchers and practitioners concerned=
+ with studying digital interactive forms of narrative from a variety of per=
+spectives, including theoretical, technological, and applied design lenses.=
+ The annual conference is an interdisciplinary
+ gathering that combines technology-focused approaches with humanities-insp=
+ired theoretical inquiry, empirical research and artistic expression.&nbsp;=
+&nbsp;</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+The Doctoral Consortium is an opportunity for PhD students in areas related=
+ with the topics of ICIDS to present their research work, at a stage where =
+feedback from the community might be beneficial. Students will discuss the =
+work with experts in the area and
+ with peers in a friendly atmosphere where discussion and contributions wil=
+l be encouraged. Students should have defined their research plan, and can =
+be in intermediate or advanced stages of their research. Regardless of how =
+far along the students are in their
+ research, the work should still be in-progress and malleable enough to tak=
+e advantage of the feedback from the Doctoral Consortium.</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+The deadline for DC submissions has been extended to August 16th. The ICIDS=
+ website
+<a href=3D"https://icids.eae.utah.edu/" class=3D"OWAAutoLink">https://icids=
+.eae.utah.edu/</a>&nbsp;will reflect this change soon.</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<b>Submission</b></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<b><br>
+</b></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+DC Submissions can be completed through EasyChair at the&nbsp;following&nbs=
+p;link:&nbsp;<a href=3D"https://easychair.org/conference?conf=3Dicids2019" =
+class=3D"OWAAutoLink" title=3D"https://easychair.org/conference?conf=3Dicid=
+s2019
+Cmd&#43;Click or tap to follow the link"></a><a href=3D"http://easychair.or=
+g/conferences/?conf=3Dicids2019" style=3D"box-sizing: inherit; background-i=
+mage: initial; background-"><span style=3D"box-sizing: inherit; margin: 0px=
+; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; fo=
+nt-stretch: inherit; font-size: inherit; line-height: inherit; font-family:=
+ inherit; vertical-align: baseline;">easychair.org/conferences/?conf=3Dicid=
+s2019</span></a><span style=3D"font-family: Calibri, Helvetica, sans-serif,=
+ serif, EmojiFont; font-size: 16px;"></span></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<span style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFon=
+t; font-size: 16px;"><br>
+</span></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+Log in to EasyChair (or create an account if you haven=92t yet), and then c=
+reate a new submission under the Doctoral Consortium track. You=92ll then b=
+e prompted to upload the following the files:</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+1.)&nbsp;A short paper (max 4 pages in the Lecture Notes in Computer Scienc=
+e (LNCS) Format) describing the research work, results, status and next ste=
+ps. The paper will be published in the proceedings. LNCS templates can be d=
+ownloaded here under the section =93Templates,
+ Sample Files, and Useful Links=94&nbsp;<a href=3D"https://www.springer.com=
+/us/computer-science/lncs/conference-proceedings-guidelines" target=3D"_bla=
+nk" rel=3D"noopener noreferrer" data-auth=3D"NotApplicable" class=3D"x_OWAA=
+utoLink">https://www.springer.com/us/computer-science/lncs/conference-proce=
+edings-guidelines</a></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+2.)&nbsp;A CV of the PhD candidate (1-2 pages)</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+3.)&nbsp;A letter from the supervisor addressing the benefits of participat=
+ing in the Doctoral Consortium at this stage of the research work (1 page).=
+ If supervisors prefer, these may be submitted independently from the rest =
+of the submission. Please e-mail to bsamuel
+ (at) cs.uno.edu, making sure to include the name of the student and =93ICI=
+DS 2019 DC supervisor letter=94 in the subject line.</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+4.)&nbsp;You will also be asked to answer a number of questions to help us =
+pair you with a mentor relevant to your interests and aspirations.</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+Accepted submissions will be distributed to all participants in order to pr=
+epare for the discussions during the Doctoral Consortium sessions. Addition=
+al information about how to prepare for the Doctoral Consortium will be pro=
+vided following acceptance.&nbsp;</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<b>Important Dates</b></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<b><br>
+</b></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+*Doctoral consortium submission deadline *extended*:&nbsp;<strike>August 1s=
+t</strike>, August 16th, 2019</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+*Notification of acceptance: August 27th, 2019.</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+*Camera ready: September 13th, 2019.</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+*Doctoral Consortium: Throughout the conference (November 19th - November 2=
+3rd)</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<b>Doctoral Consortium Chair</b></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+Ben Samuel (University of New Orleans, US)&nbsp;&nbsp;</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+<b>Contact Information</b></div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif, serif, EmojiFont=
+; font-size: 16px;">
+If you have further questions, please contact: bsamuel (at) cs.uno.edu</div=
+>
+<div><br>
+</div>
+<br>
+<p></p>
+<p style=3D"margin-top:0;margin-bottom:0"><br>
+</p>
+<div id=3D"Signature">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"">
+<p style=3D"margin-top:0px; margin-bottom:0px"><b style=3D"color:rgb(1,36,6=
+9); font-family:Helvetica,Arial,sans-serif">Ben Samuel, Ph.D.</b><br>
+</p>
+<p style=3D"margin-top:0px; margin-bottom:0px"><font face=3D"Helvetica,Aria=
+l,sans-serif" size=3D"2" color=3D"#51575B"><span style=3D"font-size:15px">A=
+ssistant Professor of Computer Science</span></font><font face=3D"Helvetica=
+,Arial,sans-serif" size=3D"2" color=3D"#51575B"><span style=3D"font-size:15=
+px"><br>
+</span></font><font face=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D=
+"#6C6C6C"><span style=3D"font-size:14px">=96</span></font><font face=3D"Hel=
+vetica,Arial,sans-serif" size=3D"2" color=3D"#6C6C6C"><span style=3D"font-s=
+ize:14px"><br>
+</span></font><font face=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D=
+"#6C6C6C"><span style=3D"font-size:14px">Dept. of Computer Science</span></=
+font><font face=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D"#6C6C6C"=
+><span style=3D"font-size:14px"><br>
+</span></font><font face=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D=
+"#6C6C6C"><span style=3D"font-size:14px">Mathematics Building,&nbsp;<span t=
+abindex=3D"0" class=3D"contextualExtensionHighlight ms-font-color-themePrim=
+ary ms-border-color-themePrimary ident_187_240">Room
+ 339</span></span></font><font face=3D"Helvetica,Arial,sans-serif" size=3D"=
+2" color=3D"#6C6C6C"><span style=3D"font-size:14px"><br>
+</span></font><font face=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D=
+"#6C6C6C"><span style=3D"font-size:14px"><span tabindex=3D"0" class=3D"cont=
+extualExtensionHighlight ms-font-color-themePrimary ms-border-color-themePr=
+imary ident_187_240">2000 Lakeshore Drive</span></span></font><font face=3D=
+"Helvetica,Arial,sans-serif" size=3D"2" color=3D"#6C6C6C"><span style=3D"fo=
+nt-size:14px"><br>
+</span></font><font face=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D=
+"#6C6C6C"><span style=3D"font-size:14px"><span tabindex=3D"0" class=3D"cont=
+extualExtensionHighlight ms-font-color-themePrimary ms-border-color-themePr=
+imary ident_187_240">New Orleans, LA 70148</span></span></font><font face=
+=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D"#6C6C6C"><span style=3D=
+"font-size:14px"><br>
+</span></font><font face=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D=
+"#6C6C6C"><span style=3D"font-size:14px">=96</span></font><br style=3D"font=
+-family:Calibri,Helvetica,sans-serif,EmojiFont,&quot;Apple Color Emoji&quot=
+;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Segoe UI Symbol&quot;,&qu=
+ot;Android Emoji&quot;,EmojiSymbols; font-size:16px">
+<font face=3D"Helvetica,Arial,sans-serif" size=3D"2" color=3D"#6C6C6C"><spa=
+n style=3D"font-size:14px">Office 504.280.4435&nbsp;</span></font><span sty=
+le=3D"margin:10px 0px 0px 20px; padding:0px"></span><br>
+</p>
+</div>
+</div>
+</div>
+<br>
+NOTICE: This message, including all attachments transmitted with it, is int=
+ended solely for the use of the Addressee(s) and may contain information th=
+at is PRIVILEGED, CONFIDENTIAL, and/or EXEMPT FROM DISCLOSURE under applica=
+ble law. If you are not the intended
+ recipient, you are hereby notified that any disclosure, copying, distribut=
+ion, or use of the information contained herein is STRICTLY PROHIBITED. If =
+you received this communication in error, please destroy all copies of the =
+message, whether in electronic or
+ hard copy format, as well as attachments and immediately contact the sende=
+r by replying to this email or contact the sender at the telephone numbers =
+listed above. Thank you!
+</body>
+</html>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--_000_DM5PR03MB3228EE80DCAE1F7CA3895EC58BD90DM5PR03MB3228namp_--

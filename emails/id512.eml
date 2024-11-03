@@ -1,0 +1,879 @@
+Received: from BYAPR08MB4983.namprd08.prod.outlook.com (2603:10b6:a02:80::26)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0013.PROD.EXCHANGELABS.COM; Fri, 7 Jun 2019 14:25:29 +0000
+Received: from SN4PR0801CA0019.namprd08.prod.outlook.com
+ (2603:10b6:803:29::29) by BYAPR08MB4983.namprd08.prod.outlook.com
+ (2603:10b6:a03:6a::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.14; Fri, 7 Jun
+ 2019 14:25:27 +0000
+Received: from BN3NAM04FT039.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::207) by SN4PR0801CA0019.outlook.office365.com
+ (2603:10b6:803:29::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.15 via Frontend
+ Transport; Fri, 7 Jun 2019 14:25:27 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ BN3NAM04FT039.mail.protection.outlook.com (10.152.93.3) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1943.19 via Frontend Transport; Fri, 7 Jun 2019 14:25:26 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x57ELJjU018414
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Fri, 7 Jun 2019 17:21:20 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x57ELHOl020730;
+	Fri, 7 Jun 2019 17:21:17 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Fri, 07 Jun 2019 17:21:17 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x57ELGj9026011
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Fri, 7 Jun 2019 17:21:16 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x57AR5m5005330;
+	Fri, 7 Jun 2019 17:21:10 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          317972 for GAMESNETWORK@LISTSERV.UTA.FI; Fri, 7 Jun 2019 17:21:09
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x57EL9Ph013854 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Fri, 7 Jun 2019 17:21:09 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x57EL9Fk021649
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@uta.fi>; Fri, 7 Jun 2019 17:21:09 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x57EL7s1019789 for
+          <GAMESNETWORK@uta.fi>; Fri, 7 Jun 2019 17:21:07 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Fri, 07 Jun 2019 17:21:07
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-qt1-f182.google.com (mail-qt1-f182.google.com
+          [209.85.160.182]) by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x57EL5ow011760 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Fri, 7 Jun 2019 17:21:06 +0300
+Received: by mail-qt1-f182.google.com with SMTP id x47so2401221qtk.11 for
+          <GAMESNETWORK@uta.fi>; Fri, 07 Jun 2019 07:21:06 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:references:in-reply-to:from:date :message-id:subject:to;
+                         bh=L7GizcABzOBZBAl3f8R6Pw/rZnFc3mOoKJ60RR8EOV0=;
+                         b=h/YWmcOVP1GxuuYAUGHGEYcNh18qHgPeDeriqVDJNwlSs6p4ZQvZWGzeTU5TKf1iNe
+                         lsa09ddJzM2X2gHdRyvLuOu0dfXSqQywPKn5VOmuj0c3VjQx0Q9QA6l2o/dLYpovEsjo
+                         fUS4c7vgUI7UskmB50NLLEApkc/OPcmqyJCI7RtWme7Yo0F4NnubXCsSCOx1fq/E/5SN
+                         KUxW8LEBtekb4SXYepNsiJ408DEkQE3k6z+5KsqUEKRaYTAkv7kDN8R6H3qlGBuafJhs
+                         ezipiEWniInpOojFPTEME0C6epoTdyaOUS/oXO4myMbmnW76elxBS6r+4sn6iKmGqusy
+                         XT+A==
+X-Gm-Message-State: APjAAAU14EMsFhR9W9YznLEsMvfc79XWJHf5iwZPfW4tu8o/6aMLoafG
+                    JSFZ7LtA8jLvAQbQACPRB2KW2QbYgfTK+JNYBx/bIjdl
+X-Google-Smtp-Source: APXvYqwvSfc0r/WIepfbIssKLqXEllddojvorFNDwg2xovJFk3PUxWMYMuvHn8mDS88Xgva+WIwhuVU/1mw/ed6F/zo=
+X-Received: by 2002:a0c:9d0e:: with SMTP id m14mr43350092qvf.121.1559917264635;
+            Fri, 07 Jun 2019 07:21:04 -0700 (PDT)
+References: <0920307898158744.WA.feng.zhu.9gmail.com@listserv.uta.fi>
+            <01f69add-4b83-9ef1-ee5a-0d38271e15b6@ucalgary.ca>
+            <CAEvfOSsqbzt298-EaFGsMs2B3M4KCMaFDKAjpK7DPwxsytNM-w@mail.gmail.com>
+            <CALMoE73=3_y=L+AJ=99oGCv9fPJZCnG9JD7MEYsuKe-U6V6Gjw@mail.gmail.com>
+            <5cfa6a74.1c69fb81.11a8b.c1dc@mx.google.com>
+Content-Type: multipart/alternative; boundary="000000000000700a2a058abc8ac3"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Fri, 07 Jun 2019 17:21:17 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_PHNNUMRE1a,L_BDY_POLITE,L_BDY_TRGTBLNK,L_BDY_URL_NOHTTP,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1016
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CAEvfOSuROCx1PrfP5ZTj=Px=pBe0YT-DpLz5OBph44ed6m7Lvw@mail.gmail.com>
+Date: Fri, 7 Jun 2019 17:20:50 +0300
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Alesja Serada <alesja.serada@GMAIL.COM>
+Subject: Re: [GAMESNETWORK] CFP: The Aesthetics of Computer Games
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+In-Reply-To: <5cfa6a74.1c69fb81.11a8b.c1dc@mx.google.com>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Jun 2019 14:25:27.0332
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ b3ce4127-ce55-4fdb-7882-08d6eb53fc7c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(286005)(171004002)(189003)(199004)(176002)(51874003)(7192003)(60444003)(7596002)(66574012)(26005)(75640400001)(305945005)(59536001)(733005)(82202003)(1096003)(6392003)(15974865002)(61266001)(30864003)(7846003)(42882007)(106002)(966005)(84326002)(55176004)(40036005)(4006050)(246002)(7636002)(8676002)(71190400001)(53546011)(6666004)(356004)(146002)(8576002)(55446002)(16003)(606006)(446003)(6306002)(14444005)(5070765005)(6246003)(53386004)(498394004)(42186006)(43066004)(76176011)(33964004)(16586007)(486006)(44832011)(95326003)(229853002)(440504004)(11346002)(76482006)(236005)(53946003)(73392003)(6862004)(517774005)(66346011)(126002)(476003)(21615005)(336012);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4983;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT039.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: b3ce4127-ce55-4fdb-7882-08d6eb53fc7c
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4983;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4983:
+X-MS-Exchange-PUrlCount: 13
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Jun 2019 14:25:26.5238
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b3ce4127-ce55-4fdb-7882-08d6eb53fc7c
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4983
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.3520293
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1965.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?dzdFSi9aWUxWZGZLeTdJeXc2Q1VXU25SQlFoNFB1Rzh3RER6bFFyV2xWeUcz?=
+ =?utf-8?B?YU1WSWN2VzEzd3VRWm5BMDFSZnc1cFRQYW1JcHdwR3o4ZjRHR0NNR0gxeXhy?=
+ =?utf-8?B?SWF4Y0d2S3VkamttcGJubDMwSXZLN0hWdi9RL3ZUTlU2a1VWTUY3MXVvZndz?=
+ =?utf-8?B?Kzc2OTJ2azcraXpNZHVkQVpmenpVS2Jmem81MzZEOHVwUi92QWxONkdILzVx?=
+ =?utf-8?B?cTE4clVTWGZic2RmUGp2MUNhM2xzRGVNTms3RXBvbWF3VjlobHlFK2dYYWlN?=
+ =?utf-8?B?dWlvMWh2RUVablArUklMY2p2bTY1WjdCamZmMi9waE90MVZFb0M4WFIrQXlr?=
+ =?utf-8?B?RFY0M1g0Z09KbC9HUk5wdHdYR0hiQU5HVmhqVDFZMUtCMnhFenNnZWtLS1NV?=
+ =?utf-8?B?QmFGaURMVG1nV3J1aGNkY3UyNlpPT3dZbkljVGpzaDZDekhsQjVnUGpPOWhD?=
+ =?utf-8?B?RXhvdnRFeThnbG9qcmpYYWZHN3kxanJDNGJwZFN5eXNNTlc2YnNpZGhUS1o1?=
+ =?utf-8?B?ZUQ5NUFseWQzMG1MUzRIeWV5Y01aWi8xM2V0V1FXdFptSGVPQ28xWGcvOEt2?=
+ =?utf-8?B?TzFCQzVuSnkxdUdqWGNvYmxDUGkwVHBTTHNqOGhRZHc2TG9QUXJMUmJVcVIz?=
+ =?utf-8?B?M2JTOGhiSzhYOERUOGhQeTdVN2VZOUg3SXpERFJSOEVqRFZ2SmJYa1E1Ti9Q?=
+ =?utf-8?B?ZTM5elppYjFKZnV2WVhyTVBVaWhKRnFhdkZDaUtWb01XbFFjb2RrN2U5Tzd5?=
+ =?utf-8?B?RmxRNlZRSzNvTExXNjkwT2tWU2JwNUhpeE1YL21DQ0UzNktKYUUxa3hGVHBh?=
+ =?utf-8?B?dW44Q0NWaEtYUGd1THRzamI2N1plaENrczkrbDhya2FwbXV2Ny9VQjlRMkRn?=
+ =?utf-8?B?TTFXd2U0YWtXQ1VoZXFNamJGU3FSUHZ6OUpZd3lpUnFmNlRMbVROMnAxL0tp?=
+ =?utf-8?B?VnR1b3lOMms4RDFubjdkWkU4R1kzMVUvdEZncVo3UTF6b242NDVoQ054RUp3?=
+ =?utf-8?B?d0h1MjlUTnhTQ2pvNjhLamJNU1NDeWwrK2pyZ2kxUXhpNFZmK1IwWUJEekpO?=
+ =?utf-8?B?SEVXMmQ3N2ZjZkRRTTRSOGEvUGg3QXNvVTFBY200L1lHczBuMzM3UkNDRXY3?=
+ =?utf-8?B?RHJ2QVdQWHViVE9vbUZFRU1aVDQ1aXBaSWJOY1VTTTYvQjNEekJvamp1SjBo?=
+ =?utf-8?B?RzJ3TDd4ZFhreUM5cUtMY3hnWm0xZXB6WjIyL1FEMi80cWNSZFAxbWYvZmdL?=
+ =?utf-8?B?UG9ld1dFTExVellQbmZBVzR6bzhXdHU4bjludzI2endvdUNJMEozV0pHZjVU?=
+ =?utf-8?Q?2vGdlHCf3UTslLrbV3fAmT/UWul5hN7Ncl?=
+MIME-Version: 1.0
+
+--000000000000700a2a058abc8ac3
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+OK I must admit: Russia is not exactly the place where laws work, but there
+is nothing scary about it. And no one cares about foreigners as long as
+they don't get actively involved in local politics. If, by some obscure and
+extremely rare occasion, the authorities even bother finding out about any
+cases of online activism worth their acknowledgement, that person won't get
+a visa, that's all.
+Come to Belarus, we have it much worse :D
+AS
+
+On Fri, Jun 7, 2019 at 4:46 PM Phoenix Perry <contact@phoenixperry.com>
+wrote:
+
+> Hi folks,
+>
+>
+>
+> Does anyone know the actual law for those of us who are activists online?
+> I googled and being out doesn=E2=80=99t appear to be illegal to be gay an=
+d being a
+> foreigner would be ok?  This is actually a bit scary.
+>
+>
+>
+> Thanks in advance,
+>
+>
+>
+> Phoenix
+>
+>
+>
+>
+>
+>
+>
+> *From: *Feng Zhu <feng.zhu.9@GMAIL.COM>
+> *Sent: *Friday, June 7, 2019 2:01 PM
+> *To: *Gamesnetwork <gamesnetwork@uta.fi>
+> *Subject: *Re: [GAMESNETWORK] CFP: The Aesthetics of Computer Games
+>
+>
+>
+> Dear Dr Parker,
+>
+> Thanks for asking a question that may have been on many people=E2=80=99s =
+minds. I
+> have been discussing this issue with Alina Latypova, the conference chair=
+.
+> My understanding is that St Petersburg is an international city, and that
+> it is extremely unlikely that there will be any LGBT directed harassment.
+> There also appear to be high levels of support for equal rights for the
+> LGBT community in response to the government=E2=80=99s lamentable positio=
+n. Of
+> course nobody can give definitive assurances about any city, but I hope
+> that we can offer some reassurances. We have an inclusivity policy that i=
+s
+> stated on the website. Anyone is welcome to write to us to continue this
+> discussion: feng.zhu@kcl.ac.uk
+>
+> Kind regards,
+>
+> Feng
+>
+>
+>
+> On Thu, Jun 6, 2019 at 8:01 PM Alesja Serada <alesja.serada@gmail.com>
+> wrote:
+>
+> I travel to Russia on a regular basis, to this particular research center
+> as well (and they are doing a great job!). Saint Petersburg is a very
+> welcoming place, just like any big European city. Can't say anything abou=
+t
+> being gay in Russia in general, but in Saint Petersburg, in most social
+> situations, I suppose, it will be completely safe.
+>
+> AS
+>
+>
+>
+> On Thu, Jun 6, 2019 at 9:48 PM Parker <jparker@ucalgary.ca> wrote:
+>
+> Is Russia a safe place to visit? Are the gay members of our community
+> going to be safe?
+>
+>
+>
+> On 2019-06-06 3:27 a.m., Feng Zhu wrote:
+>
+> *Call for papers *
+>
+> *The 13th International Conference on the Philosophy of Computer Games:
+> The Aesthetics of Computer Games *
+>
+> *Conference Committee: *
+>
+> Program Chair:
+> Feng Zhu (King=E2=80=99s College London)
+> feng.zhu@kcl.ac.uk
+>
+> Conference Chairs:
+> Alina Latypova (St Petersburg State University)
+> latypova.al@gmail.com
+> Konstantin Ocheretyany (St Petersburg State University)
+> kocheretyany@gmail.com
+>
+>
+> We invite submissions to the *13th International Conference on the
+> Philosophy of Computer Games, organised by the Game Philosophy Network,
+> together with the Centre for Media Philosophy and Laboratory for Computer
+> Games Research, in St Petersburg, Russia, on October 21=E2=80=9324, 2019.=
+ *
+>
+> The theme of this year=E2=80=99s conference is *=E2=80=98The Aesthetics o=
+f Computer
+> Games=E2=80=99.* Playing games yields particular kinds of playful experie=
+nces or
+> perceptions through the senses, which can be studied with an aesthetic
+> focus, emphasising a=C3=ADsth=C4=93sis over no=C3=AAsis. Computer games c=
+an be regarded as
+> playful media that organise our perceptions and modify our sensibilities.
+> For this conference, we welcome submissions on (but not limited to) the
+> following themes and questions:
+>
+> *1. Aesthetics as aesthesis (a=C3=ADsth=C4=93sis).* Is there an aesthetic=
+s or mode
+> of experience that is specific to computer games? How do their visual,
+> audio, and haptic aspects come together to produce distinctive experience=
+s?
+> How are =E2=80=98experience=E2=80=99 and =E2=80=98perception=E2=80=99 exp=
+lored in computer games and shaped
+> by them? Can concepts such as =E2=80=98affect=E2=80=99, =E2=80=98atmosphe=
+re=E2=80=99, and =E2=80=98rhythm=E2=80=99 be
+> productively applied to computer games? What is the role of game interfac=
+es
+> on player experience?
+>
+> *2. Games as art?* What are the conditions of possibility of games being
+> art? How do computer games fit into established categories or conventions
+> of aesthetics, and how do they contribute to new ones? Do games recognise=
+d
+> as having a claim to artistic status differ from mainstream games? How do
+> accounts of art based on necessary and sufficient conditions match up
+> against anti-essentialist accounts in terms of gauging the status of
+> computer games?
+>
+> *3. The aesthetics of gaming practices.* Are games collaboratively
+> authored? How do different kinds of play, or player-game conjunctions,
+> bring about different kinds of gaming pleasures or aesthetic experiences?
+> How do different bodies encounter computer games and what can be said abo=
+ut
+> the way in which gameplay experience is mediated by our bodies?
+> Do some kinds of gameplay or extra-gamic player practices have an
+> aesthetic orientation? Are computer games performances?
+>
+> *4. The ethical, political, and social dimensions of game aesthetics.*
+> What is the transformative potential of computer games and how does this
+> compare to the transformative capabilities ascribed to artworks? How do
+> aesthetic issues interconnect with ethical, social, and political ones =
+=E2=80=93
+> what is the autonomy or heteronomy of the aesthetic domain? How are taste=
+,
+> sensibility, and habit acquired with respect to gameplay and what are the
+> social implications of this?
+>
+> In addition to this central theme, the conference also features an open
+> category, for which we invite welcome contributions that do not fit this
+> year=E2=80=99s theme, but that nonetheless offer a valuable contribution =
+to the
+> philosophy of computer games.
+>
+> Submitted proposals should have a clear focus on philosophy and
+> philosophical (including media philosophical) issues in relation to
+> computer games. They should also refer to specific games rather than invo=
+ke
+> them in more general terms. *Submissions should be made in the form of
+> extended abstracts of up to 1000 words (excluding bibliography).* Please
+> indicate if you intend your paper to fit in the open category. *The
+> deadline for submissions is 23:59 GMT, Sunday, 11th August, 2019.* Please
+> submit your abstract through *review.gamephilosophy.org
+> <http://review.gamephilosophy.org>.* All submitted abstracts will be
+> subject to a double-blind peer review process.
+>
+> Notification of accepted submissions will be sent out in late August 2019=
+.
+> A full paper draft must then be submitted by Monday, 14th October 2019 an=
+d
+> will be made available on the conference website.
+>
+> *We also invite proposals for themed panels and workshops that will take
+> place on the 20th and 24th October, 2019.* Please contact the program
+> committee chair if you are interested in organising one.
+>
+> *We cannot provide grants or subsidies for participants. There will,
+> however, be no conference fee.*
+>
+> For more information about the conference please visit
+> http://gameconference.mediaphilosophy.ru/pcg2019.html and
+> gamephilosophy.org.
+>
+>
+> *Visa information*
+>
+> Please note that you may need to obtain a visa to enter Russia.
+>
+> If you need a visa you should apply for it at the Russian consulate in
+> your country or at the visa service (the most popular is VisaGlobal
+> <https://www.vfsglobal.com>). All visa services have an additional fee.
+> St. Petersburg State University provides attendees with an invitation
+> letter, which helps to obtain the humanitarian visa. Normally the costs o=
+f
+> the humanitarian visa is less than the tourist or business one (for Germa=
+n
+> and Polish citizens, for instance, the humanitarian visa is free if they
+> apply for it in the consulate).
+>
+> The cost of visas varies from country to country. Here is a list of some
+> countries <http://gameconference.mediaphilosophy.ru/files/HVR.pdf>.
+>
+> All the information concerning the visa costs and the processing time
+> (normally it takes from 4 to 20 days, depending on the country) is
+> available here: https://www.vfsglobal.com. If you have any questions
+> concerning visas, do not hesitate to contact Alina Latypova (
+> latypova.al@gmail.com).
+>
+> Attendees from the following countries do not need to obtain a Russian
+> visa:
+>
+> *Azerbaijan, Armenia, Belarus, Kazakhstan, Kyrgyzstan, Moldova,
+> Tajikistan, Turkmenistan, Uzbekistan, Ukraine.*
+> Citizens of the countries of the CIS (the Commonwealth of Independent
+> States) are permitted to stay in the Russian Federation for up to 90 days
+> without a visa.
+>
+> *Argentina, Brazil, Chile, Colombia, Israel, Nicaragua, Peru, Venezuela.*
+> Citizens of these countries are allowed to stay in the Russian Federation
+> without a visa for up to 90 days in each 180-day period, provided they wi=
+ll
+> not be involved in any commercial or work-related activities during their
+> stay.
+>
+> *Cuba, Montenegro, Serbia (with biometric passport), Thailand, Hong Kong
+> SAR (up to 14 days), Macao SAR.*
+> Citizens of the countries in this group can stay in the Russian Federatio=
+n
+> for up to 30 days without a visa. They are not entitled to work while in
+> Russia.
+>
+> *Bosnia and Herzegovina, Macedonia.*
+> Citizens of these Balkan countries can also stay in Russia without a visa
+> for up to 30 days, but must also show tourist documents (tourist
+> confirmation and tourist voucher) or an official invitation to immigratio=
+n
+> officials.
+>
+>
+> *About*
+>
+> The Centre for Media Philosophy at the Institute of Philosophy, St.
+> Petersburg State University, in collaboration with the Game Philosophy
+> Network, have come together to organize a double conference on
+> philosophical issues raised by computer games.
+>
+> The 13th International Philosophy of Computer Games Conference, "The
+> Aesthetics of Computer Games"
+> <http://gameconference.mediaphilosophy.ru/pcg2019.html> (Oct 21-24), will
+> explore various philosophical issues in thinking about the aesthetics of
+> games and gameplay, whilst "Computer Games as Interfaces to Media Reality=
+"
+> <http://gameconference.mediaphilosophy.ru/subtitle1> (Oct 21-25) will
+> address issues that spring from considering computer games to be
+> =E2=80=9Cexperience machines=E2=80=9D for the modification of sensibility=
+, thought, and
+> imagination. Our aim is to provide a meeting place for scholars of media
+> philosophy and game philosophy in order to inspire future investigations
+> into the commonalities and differences between these approaches.
+>
+>
+> *Conference Committee (full)*
+>
+> Program Committee:
+>
+> Alina Latypova (St Petersburg State University)
+> Anita Leirfall (University of Bergen)
+> Darshana Jayemanne (Abertay University)
+> Feng Zhu (King=E2=80=99s College London)(chair)
+> Grant Tavinor (Lincoln University)
+> Hans-Joachim Backe (IT University of Copenhagen)
+> John Richard Sageng (Game Philosophy Network)
+> Konstantin Ocheretyany (St Petersburg State University)
+> Marc Bonner (University of Cologne)
+> Margarita Skomorokh (St Petersburg State University)
+> Mathias Fuchs (Leuphana University of L=C3=BCneburg)
+> Olli Leino (City University of Hong Kong)
+> Pawel Grabarczyk (IT University of Copenhagen)
+> Sebastian M=C3=B6ring (University of Potsdam)
+> Sonia Fizek (Media Academy Stuttgart)
+> Veli-Matti Karhulahti (University of Jyv=C3=A4skyl=C3=A4/University of Tu=
+rku)
+> William Huber (Abertay University)
+>
+> Organizing Committee:
+> Alexander Lenkevich (St Petersburg State University)
+> Alina Latypova (St Petersburg State University)(chair)
+> Konstantin Ocheretyany (St Petersburg State University)(chair)
+> Margarita Skomorokh (St Petersburg State University)
+>
+>
+> For additional queries, do not hesitate to email the organisers using the
+> following email address: *feng (dot) zhu (at) kcl (dot) ac (dot) uk*
+>
+> Warm regards,
+>
+> Feng Zhu
+>
+>
+> Teaching Fellow in Digital Media and Culture
+> Department of Digital Humanities
+> King's College London
+> Room C0.07, Chesham Building
+> London, WC2R 2LS
+> -- Gamesnetwork, discussion list of Digital Games Research Association,
+> www.digra.org Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to
+> LISTSERV@UTA.FI from your subscribed email account. Web interface to
+> subscribe and manage your subscription:
+> https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 . The list
+> archive is available online at:
+> https://listserv.uta.fi/archives/gamesnetwork.html
+>
+> --
+>
+>
+>
+> --
+>
+> Dr. J Parker                              Author of "Python - An Introduc=
+tion to Programming'
+>
+> University of Calgary                               "Python 3 Pocket Prim=
+er"
+>
+> Department of Art
+>
+> 403 220 6784
+>
+> http://people.ucalgary.ca/~jparker/cv.html
+>
+>
+>
+> [image:
+> https://ipmcdn.avast.com/images/icons/icon-envelope-tick-green-avg-v1.png=
+]
+> <http://www.avg.com/email-signature?utm_medium=3Demail&utm_source=3Dlink&=
+utm_campaign=3Dsig-email&utm_content=3Demailclient>
+>
+> Virus-free. www.avg.com
+> <http://www.avg.com/email-signature?utm_medium=3Demail&utm_source=3Dlink&=
+utm_campaign=3Dsig-email&utm_content=3Demailclient>
+>
+> -- Gamesnetwork, discussion list of Digital Games Research Association,
+> www.digra.org Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to
+> LISTSERV@UTA.FI from your subscribed email account. Web interface to
+> subscribe and manage your subscription:
+> https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 . The list
+> archive is available online at:
+> https://listserv.uta.fi/archives/gamesnetwork.html
+>
+> -- Gamesnetwork, discussion list of Digital Games Research Association,
+> www.digra.org Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to
+> LISTSERV@UTA.FI from your subscribed email account. Web interface to
+> subscribe and manage your subscription:
+> https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 . The list
+> archive is available online at:
+> https://listserv.uta.fi/archives/gamesnetwork.html
+>
+> -- Gamesnetwork, discussion list of Digital Games Research Association,
+> www.digra.org Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to
+> LISTSERV@UTA.FI from your subscribed email account. Web interface to
+> subscribe and manage your subscription:
+> https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 . The list
+> archive is available online at:
+> https://listserv.uta.fi/archives/gamesnetwork.html
+>
+>
+> -- Gamesnetwork, discussion list of Digital Games Research Association,
+> www.digra.org Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to
+> LISTSERV@UTA.FI from your subscribed email account. Web interface to
+> subscribe and manage your subscription:
+> https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 . The list
+> archive is available online at:
+> https://listserv.uta.fi/archives/gamesnetwork.html
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--000000000000700a2a058abc8ac3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">OK I must admit: Russia is not exactly the place where laws =
+work, but there is nothing scary about it. And no one cares about foreigner=
+s as long as they don't get actively involved in local politics. If, by som=
+e obscure and extremely rare occasion, the authorities even bother finding =
+out about any cases of online activism worth their acknowledgement, that pe=
+rson won't get a visa, that's all.<div>Come to Belarus, we have it much wor=
+se :D</div><div>AS</div></div><br><div class=3D"gmail_quote"><div dir=3D"lt=
+r" class=3D"gmail_attr">On Fri, Jun 7, 2019 at 4:46 PM Phoenix Perry &lt;<a=
+ href=3D"mailto:contact@phoenixperry.com">contact@phoenixperry.com</a>&gt; =
+wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0=
+px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div lang=
+=3D"EN-US"><div class=3D"gmail-m_6173109000174958282WordSection1"><p class=
+=3D"MsoNormal">Hi folks, </p><p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p=
+><p class=3D"MsoNormal">Does anyone know the actual law for those of us who=
+ are activists online? I googled and being out doesn=E2=80=99t appear to be=
+ illegal to be gay and being a foreigner would be ok?&nbsp; This is actuall=
+y a bit scary. </p><p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p><p class=
+=3D"MsoNormal">Thanks in advance, </p><p class=3D"MsoNormal"><u></u>&nbsp;<=
+u></u></p><p class=3D"MsoNormal">Phoenix </p><p class=3D"MsoNormal"><u></u>=
+&nbsp;<u></u></p><p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p><p class=3D=
+"MsoNormal"><u></u>&nbsp;<u></u></p><div style=3D"border-right:none;border-=
+bottom:none;border-left:none;border-top:1pt solid rgb(225,225,225);padding:=
+3pt 0in 0in"><p class=3D"MsoNormal" style=3D"border:none;padding:0in"><b>Fr=
+om: </b><a href=3D"mailto:feng.zhu.9@GMAIL.COM" target=3D"_blank">Feng Zhu<=
+/a><br><b>Sent: </b>Friday, June 7, 2019 2:01 PM<br><b>To: </b><a href=3D"m=
+ailto:gamesnetwork@uta.fi" target=3D"_blank">Gamesnetwork</a><br><b>Subject=
+: </b>Re: [GAMESNETWORK] CFP: The Aesthetics of Computer Games</p></div><p =
+class=3D"MsoNormal"><u></u>&nbsp;<u></u></p><div><p>Dear Dr Parker,</p><p>T=
+hanks for asking a question that may have been on many people=E2=80=99s min=
+ds. I have been discussing this issue with Alina Latypova, the conference c=
+hair. My understanding is that St Petersburg is an international city, and =
+that it is extremely unlikely that there will be any LGBT directed harassme=
+nt. There also appear to be high levels of support for equal rights for the=
+ LGBT community in response to the government=E2=80=99s lamentable position=
+. Of course nobody can give definitive assurances about any city, but I hop=
+e that we can offer some reassurances. We have an inclusivity policy that i=
+s stated on the website. Anyone is welcome to write to us to continue this =
+discussion: <a href=3D"mailto:feng.zhu@kcl.ac.uk" target=3D"_blank">feng.zh=
+u@kcl.ac.uk</a></p><p>Kind regards,</p><p>Feng</p></div><p class=3D"MsoNorm=
+al"><u></u>&nbsp;<u></u></p><div><div><p class=3D"MsoNormal">On Thu, Jun 6,=
+ 2019 at 8:01 PM Alesja Serada &lt;<a href=3D"mailto:alesja.serada@gmail.co=
+m" target=3D"_blank">alesja.serada@gmail.com</a>&gt; wrote:</p></div><block=
+quote style=3D"border-top:none;border-right:none;border-bottom:none;border-=
+left:1pt solid rgb(204,204,204);padding:0in 0in 0in 6pt;margin-left:4.8pt;m=
+argin-right:0in"><div><p class=3D"MsoNormal">I travel to Russia on a regula=
+r basis, to this particular research center as well (and they are doing a g=
+reat job!). Saint Petersburg is a very welcoming place, just like any big E=
+uropean city. Can't say anything about being gay in Russia in general, but =
+in Saint Petersburg, in most social situations, I suppose, it will be compl=
+etely safe.</p><div><p class=3D"MsoNormal">AS</p></div></div><p class=3D"Ms=
+oNormal"><u></u>&nbsp;<u></u></p><div><div><p class=3D"MsoNormal">On Thu, J=
+un 6, 2019 at 9:48 PM Parker &lt;<a href=3D"mailto:jparker@ucalgary.ca" tar=
+get=3D"_blank">jparker@ucalgary.ca</a>&gt; wrote:</p></div><blockquote styl=
+e=3D"border-top:none;border-right:none;border-bottom:none;border-left:1pt s=
+olid rgb(204,204,204);padding:0in 0in 0in 6pt;margin-left:4.8pt;margin-righ=
+t:0in"><div><p>Is Russia a safe place to visit? Are the gay members of our =
+community going to be safe?</p><p><u></u>&nbsp;<u></u></p><div><p class=3D"=
+MsoNormal">On 2019-06-06 3:27 a.m., Feng Zhu wrote:<u></u><u></u></p></div>=
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt"><p class=3D"MsoNorma=
+l"><b>Call for papers </b><br><br><b>The 13th International Conference on t=
+he Philosophy of Computer Games: The Aesthetics of Computer Games </b><br><=
+br><b>Conference Committee: </b><br><br>Program Chair: <br>Feng Zhu (King=
+=E2=80=99s College London) <br><a href=3D"mailto:feng.zhu@kcl.ac.uk" target=
+=3D"_blank">feng.zhu@kcl.ac.uk</a><br><br>Conference Chairs: <br>Alina Laty=
+pova (St Petersburg State University) <br><a href=3D"mailto:latypova.al@gma=
+il.com" target=3D"_blank">latypova.al@gmail.com</a><br>Konstantin Ocheretya=
+ny (St Petersburg State University) <br><a href=3D"mailto:kocheretyany@gmai=
+l.com" target=3D"_blank">kocheretyany@gmail.com</a><br><br><br>We invite su=
+bmissions to the <b>13th International Conference on the Philosophy of Comp=
+uter Games, organised by the Game Philosophy Network, together with the Cen=
+tre for Media Philosophy and Laboratory for Computer Games Research, in St =
+Petersburg, Russia, on October 21=E2=80=9324, 2019. </b><br><br>The theme o=
+f this year=E2=80=99s conference is <b>=E2=80=98The Aesthetics of Computer =
+Games=E2=80=99.</b> Playing games yields particular kinds of playful experi=
+ences or perceptions through the senses, which can be studied with an aesth=
+etic focus, emphasising a=C3=ADsth=C4=93sis over no=C3=AAsis. Computer game=
+s can be regarded as playful media that organise our perceptions and modify=
+ our sensibilities. For this conference, we welcome submissions on (but not=
+ limited to) the following themes and questions: <br><br><b>1. Aesthetics a=
+s aesthesis (a=C3=ADsth=C4=93sis).</b> Is there an aesthetics or mode of ex=
+perience that is specific to computer games? How do their visual, audio, an=
+d haptic aspects come together to produce distinctive experiences? How are =
+=E2=80=98experience=E2=80=99 and =E2=80=98perception=E2=80=99 explored in c=
+omputer games and shaped by them? Can concepts such as =E2=80=98affect=E2=
+=80=99, =E2=80=98atmosphere=E2=80=99, and =E2=80=98rhythm=E2=80=99 be produ=
+ctively applied to computer games? What is the role of game interfaces on p=
+layer experience? <br><br><b>2. Games as art?</b> What are the conditions o=
+f possibility of games being art? How do computer games fit into establishe=
+d categories or conventions of aesthetics, and how do they contribute to ne=
+w ones? Do games recognised as having a claim to artistic status differ fro=
+m mainstream games? How do accounts of art based on necessary and sufficien=
+t conditions match up against anti-essentialist accounts in terms of gaugin=
+g the status of computer games? <br><br><b>3. The aesthetics of gaming prac=
+tices.</b> Are games collaboratively authored? How do different kinds of pl=
+ay, or player-game conjunctions, bring about different kinds of gaming plea=
+sures or aesthetic experiences? How do different bodies encounter computer =
+games and what can be said about the way in which gameplay experience is me=
+diated by our bodies? <br>Do some kinds of gameplay or extra-gamic player p=
+ractices have an aesthetic orientation? Are computer games performances? <b=
+r><br><b>4. The ethical, political, and social dimensions of game aesthetic=
+s.</b> What is the transformative potential of computer games and how does =
+this compare to the transformative capabilities ascribed to artworks? How d=
+o aesthetic issues interconnect with ethical, social, and political ones =
+=E2=80=93 what is the autonomy or heteronomy of the aesthetic domain? How a=
+re taste, sensibility, and habit acquired with respect to gameplay and what=
+ are the social implications of this? <br><br>In addition to this central t=
+heme, the conference also features an open category, for which we invite we=
+lcome contributions that do not fit this year=E2=80=99s theme, but that non=
+etheless offer a valuable contribution to the philosophy of computer games.=
+ <br><br>Submitted proposals should have a clear focus on philosophy and ph=
+ilosophical (including media philosophical) issues in relation to computer =
+games. They should also refer to specific games rather than invoke them in =
+more general terms. <b>Submissions should be made in the form of extended a=
+bstracts of up to 1000 words (excluding bibliography).</b> Please indicate =
+if you intend your paper to fit in the open category. <b>The deadline for s=
+ubmissions is 23:59 GMT, Sunday, 11th August, 2019.</b> Please submit your =
+abstract through <b><a href=3D"http://review.gamephilosophy.org" target=3D"=
+_blank">review.gamephilosophy.org</a>.</b> All submitted abstracts will be =
+subject to a double-blind peer review process. <br><br>Notification of acce=
+pted submissions will be sent out in late August 2019. A full paper draft m=
+ust then be submitted by Monday, 14th October 2019 and will be made availab=
+le on the conference website. <br><br><b>We also invite proposals for theme=
+d panels and workshops that will take place on the 20th and 24th October, 2=
+019.</b> Please contact the program committee chair if you are interested i=
+n organising one. <br><br><b>We cannot provide grants or subsidies for part=
+icipants. There will, however, be no conference fee.</b><br><br>For more in=
+formation about the conference please visit <a href=3D"http://gameconferenc=
+e.mediaphilosophy.ru/pcg2019.html" target=3D"_blank">http://gameconference.=
+mediaphilosophy.ru/pcg2019.html</a> and <a href=3D"http://gamephilosophy.or=
+g" target=3D"_blank">gamephilosophy.org</a>. <br><br><br><b>Visa informatio=
+n</b><br><br>Please note that you may need to obtain a visa to enter Russia=
+. <br><br>If you need a visa you should apply for it at the Russian consula=
+te in your country or at the visa service (the most popular is <a href=3D"h=
+ttps://www.vfsglobal.com" target=3D"_blank">VisaGlobal</a>). All visa servi=
+ces have an additional fee. St. Petersburg State University provides attend=
+ees with an invitation letter, which helps to obtain the humanitarian visa.=
+ Normally the costs of the humanitarian visa is less than the tourist or bu=
+siness one (for German and Polish citizens, for instance, the humanitarian =
+visa is free if they apply for it in the consulate). <br><br>The cost of vi=
+sas varies from country to country. Here is a <a href=3D"http://gameconfere=
+nce.mediaphilosophy.ru/files/HVR.pdf" target=3D"_blank">list of some countr=
+ies</a>. <br><br>All the information concerning the visa costs and the proc=
+essing time (normally it takes from 4 to 20 days, depending on the country)=
+ is available here: <a href=3D"https://www.vfsglobal.com" target=3D"_blank"=
+>https://www.vfsglobal.com</a>. If you have any questions concerning visas,=
+ do not hesitate to contact Alina Latypova (<a href=3D"mailto:latypova.al@g=
+mail.com" target=3D"_blank">latypova.al@gmail.com</a>).<br><br>Attendees fr=
+om the following countries do not need to obtain a Russian visa: <br><br><b=
+>Azerbaijan, Armenia, Belarus, Kazakhstan, Kyrgyzstan, Moldova, Tajikistan,=
+ Turkmenistan, Uzbekistan, Ukraine.</b><br>Citizens of the countries of the=
+ CIS (the Commonwealth of Independent States) are permitted to stay in the =
+Russian Federation for up to 90 days without a visa. <br><br><b>Argentina, =
+Brazil, Chile, Colombia, Israel, Nicaragua, Peru, Venezuela.</b><br>Citizen=
+s of these countries are allowed to stay in the Russian Federation without =
+a visa for up to 90 days in each 180-day period, provided they will not be =
+involved in any commercial or work-related activities during their stay. <b=
+r><br><b>Cuba, Montenegro, Serbia (with biometric passport), Thailand, Hong=
+ Kong SAR (up to 14 days), Macao SAR.</b><br>Citizens of the countries in t=
+his group can stay in the Russian Federation for up to 30 days without a vi=
+sa. They are not entitled to work while in Russia. <br><br><b>Bosnia and He=
+rzegovina, Macedonia.</b><br>Citizens of these Balkan countries can also st=
+ay in Russia without a visa for up to 30 days, but must also show tourist d=
+ocuments (tourist confirmation and tourist voucher) or an official invitati=
+on to immigration officials. <br><br><br><b>About</b><br><br>The Centre for=
+ Media Philosophy at the Institute of Philosophy, St. Petersburg State Univ=
+ersity, in collaboration with the Game Philosophy Network, have come togeth=
+er to organize a double conference on philosophical issues raised by comput=
+er games. <br><br>The 13th International Philosophy of Computer Games Confe=
+rence, <a href=3D"http://gameconference.mediaphilosophy.ru/pcg2019.html" ta=
+rget=3D"_blank">&quot;The Aesthetics of Computer Games&quot;</a> (Oct 21-24=
+), will explore various philosophical issues in thinking about the aestheti=
+cs of games and gameplay, whilst <a href=3D"http://gameconference.mediaphil=
+osophy.ru/subtitle1" target=3D"_blank">&quot;Computer Games as Interfaces t=
+o Media Reality&quot;</a> (Oct 21-25) will address issues that spring from =
+considering computer games to be =E2=80=9Cexperience machines=E2=80=9D for =
+the modification of sensibility, thought, and imagination. Our aim is to pr=
+ovide a meeting place for scholars of media philosophy and game philosophy =
+in order to inspire future investigations into the commonalities and differ=
+ences between these approaches.<br><br><br><b>Conference Committee (full)</=
+b><br><br>Program Committee: <br><br>Alina Latypova (St Petersburg State Un=
+iversity) <br>Anita Leirfall (University of Bergen) <br>Darshana Jayemanne =
+(Abertay University) <br>Feng Zhu (King=E2=80=99s College London)(chair) <b=
+r>Grant Tavinor (Lincoln University) <br>Hans-Joachim Backe (IT University =
+of Copenhagen) <br>John Richard Sageng (Game Philosophy Network) <br>Konsta=
+ntin Ocheretyany (St Petersburg State University) <br>Marc Bonner (Universi=
+ty of Cologne) <br>Margarita Skomorokh (St Petersburg State University) <br=
+>Mathias Fuchs (Leuphana University of L=C3=BCneburg) <br>Olli Leino (City =
+University of Hong Kong) <br>Pawel Grabarczyk (IT University of Copenhagen)=
+ <br>Sebastian M=C3=B6ring (University of Potsdam) <br>Sonia Fizek (Media A=
+cademy Stuttgart) <br>Veli-Matti Karhulahti (University of Jyv=C3=A4skyl=C3=
+=A4/University of Turku) <br>William Huber (Abertay University) <br><br>Org=
+anizing Committee: <br>Alexander Lenkevich (St Petersburg State University)=
+ <br>Alina Latypova (St Petersburg State University)(chair) <br>Konstantin =
+Ocheretyany (St Petersburg State University)(chair) <br>Margarita Skomorokh=
+ (St Petersburg State University) <br><br><br>For additional queries, do no=
+t hesitate to email the organisers using the following email address: <b>fe=
+ng (dot) zhu (at) kcl (dot) ac (dot) uk</b><br><br>Warm regards, <br><br>Fe=
+ng Zhu<br><br><br>Teaching Fellow in Digital Media and Culture<br>Departmen=
+t of Digital Humanities<br>King's College London<br>Room C0.07, Chesham Bui=
+lding <br>London, WC2R 2LS<br>-- Gamesnetwork, discussion list of Digital G=
+ames Research Association, <a href=3D"http://www.digra.org" target=3D"_blan=
+k">www.digra.org</a> Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETW=
+ORK&quot; to <a href=3D"mailto:LISTSERV@UTA.FI" target=3D"_blank">LISTSERV@=
+UTA.FI</a> from your subscribed email account. Web interface to subscribe a=
+nd manage your subscription: <a href=3D"https://listserv.uta.fi/cgi-bin/wa?=
+SUBED1=3DGAMESNETWORK&amp;A=3D1" target=3D"_blank">https://listserv.uta.fi/=
+cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=3D1</a> . The list archive is availa=
+ble online at: <a href=3D"https://listserv.uta.fi/archives/gamesnetwork.htm=
+l" target=3D"_blank">https://listserv.uta.fi/archives/gamesnetwork.html</a>=
+ <u></u><u></u></p></blockquote><pre>-- </pre><pre><u></u>&nbsp;<u></u></pr=
+e><pre>--</pre><pre>Dr. J Parker&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author of &quot;Python =
+- An Introduction to Programming'</pre><pre>University of Calgary&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp; &nbsp;&nbsp;&quot;Python 3 Pocket Primer&quot;</pre><pre>Department of =
+Art&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp; </pre><pre>403 220 6784</pre><pre><a href=3D"http://people.uca=
+lgary.ca/~jparker/cv.html" target=3D"_blank">http://people.ucalgary.ca/~jpa=
+rker/cv.html</a></pre><div id=3D"gmail-m_6173109000174958282gmail-m_-427826=
+0077130859638gmail-m_-3471463655356352657DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FD=
+F2"><p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p><table class=3D"gmail-m_=
+6173109000174958282MsoNormalTable" border=3D"1" cellpadding=3D"0" style=3D"=
+border-right:none;border-bottom:none;border-left:none;border-top:1pt solid =
+rgb(211,212,222)"><tbody><tr><td width=3D"55" style=3D"width:41.25pt;border=
+:none;padding:9.75pt 0.75pt 0.75pt"><p class=3D"MsoNormal"><a href=3D"http:=
+//www.avg.com/email-signature?utm_medium=3Demail&amp;utm_source=3Dlink&amp;=
+utm_campaign=3Dsig-email&amp;utm_content=3Demailclient" target=3D"_blank"><=
+span style=3D"text-decoration:none"><img border=3D"0" width=3D"46" height=
+=3D"29" style=3D"width: 0.4791in; height: 0.302in;" id=3D"gmail-m_617310900=
+0174958282_x0000_i1025" src=3D"https://ipmcdn.avast.com/images/icons/icon-e=
+nvelope-tick-green-avg-v1.png" alt=3D"https://ipmcdn.avast.com/images/icons=
+/icon-envelope-tick-green-avg-v1.png"></span></a></p></td><td width=3D"470"=
+ style=3D"width:352.5pt;border:none;padding:9pt 0.75pt 0.75pt"><p class=3D"=
+MsoNormal" style=3D"line-height:13.5pt"><span style=3D"font-size:10pt;font-=
+family:Arial,sans-serif;color:rgb(65,66,78)">Virus-free. <a href=3D"http://=
+www.avg.com/email-signature?utm_medium=3Demail&amp;utm_source=3Dlink&amp;ut=
+m_campaign=3Dsig-email&amp;utm_content=3Demailclient" target=3D"_blank"><sp=
+an style=3D"color:rgb(68,83,234)">www.avg.com</span></a> <u></u><u></u></sp=
+an></p></td></tr></tbody></table></div></div><p class=3D"MsoNormal">-- Game=
+snetwork, discussion list of Digital Games Research Association, <a href=3D=
+"http://www.digra.org" target=3D"_blank">www.digra.org</a> Note: to unsubsc=
+ribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=3D"mailto:LISTSE=
+RV@UTA.FI" target=3D"_blank">LISTSERV@UTA.FI</a> from your subscribed email=
+ account. Web interface to subscribe and manage your subscription: <a href=
+=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=3D1" tar=
+get=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp=
+;A=3D1</a> . The list archive is available online at: <a href=3D"https://li=
+stserv.uta.fi/archives/gamesnetwork.html" target=3D"_blank">https://listser=
+v.uta.fi/archives/gamesnetwork.html</a> <u></u><u></u></p></blockquote></di=
+v><p class=3D"MsoNormal">-- Gamesnetwork, discussion list of Digital Games =
+Research Association, <a href=3D"http://www.digra.org" target=3D"_blank">ww=
+w.digra.org</a> Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&q=
+uot; to <a href=3D"mailto:LISTSERV@UTA.FI" target=3D"_blank">LISTSERV@UTA.F=
+I</a> from your subscribed email account. Web interface to subscribe and ma=
+nage your subscription: <a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED=
+1=3DGAMESNETWORK&amp;A=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-b=
+in/wa?SUBED1=3DGAMESNETWORK&amp;A=3D1</a> . The list archive is available o=
+nline at: <a href=3D"https://listserv.uta.fi/archives/gamesnetwork.html" ta=
+rget=3D"_blank">https://listserv.uta.fi/archives/gamesnetwork.html</a> </p>=
+</blockquote></div><p class=3D"MsoNormal">-- Gamesnetwork, discussion list =
+of Digital Games Research Association, <a href=3D"http://www.digra.org" tar=
+get=3D"_blank">www.digra.org</a> Note: to unsubscribe, send &quot;UNSUBSCRI=
+BE GAMESNETWORK&quot; to <a href=3D"mailto:LISTSERV@UTA.FI" target=3D"_blan=
+k">LISTSERV@UTA.FI</a> from your subscribed email account. Web interface to=
+ subscribe and manage your subscription: <a href=3D"https://listserv.uta.fi=
+/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=3D1" target=3D"_blank">https://list=
+serv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=3D1</a> . The list archi=
+ve is available online at: <a href=3D"https://listserv.uta.fi/archives/game=
+snetwork.html" target=3D"_blank">https://listserv.uta.fi/archives/gamesnetw=
+ork.html</a> </p><p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p></div></div=
+>--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI" target=3D"_blank">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+</blockquote></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--000000000000700a2a058abc8ac3--

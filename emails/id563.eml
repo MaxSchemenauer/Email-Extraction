@@ -1,0 +1,1487 @@
+Received: from DM5PR08MB2491.namprd08.prod.outlook.com (2603:10b6:a03:80::34)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR11CA0057.NAMPRD11.PROD.OUTLOOK.COM; Fri, 13 Sep 2019 11:59:53 +0000
+Received: from DM5PR08CA0046.namprd08.prod.outlook.com (2603:10b6:4:60::35) by
+ DM5PR08MB2491.namprd08.prod.outlook.com (2603:10b6:3:6d::11) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2241.20; Fri, 13 Sep 2019 11:59:50 +0000
+Received: from SN1NAM04FT057.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::207) by DM5PR08CA0046.outlook.office365.com
+ (2603:10b6:4:60::35) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2241.18 via Frontend
+ Transport; Fri, 13 Sep 2019 11:59:50 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.8.85)
+ smtp.mailfrom=amazonses.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=icenteconf.com;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=icenteconf.com;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of amazonses.com designates
+ 54.240.8.85 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.8.85; helo=a8-85.smtp-out.amazonses.com;
+Received: from a8-85.smtp-out.amazonses.com (54.240.8.85) by
+ SN1NAM04FT057.mail.protection.outlook.com (10.152.89.46) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2263.14 via Frontend Transport; Fri, 13 Sep 2019 11:59:50 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=dt2z4h7dvuiw2icpiurwollhtknhelt4; d=icenteconf.com; t=1568375989;
+	h=Date:To:From:Reply-to:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type;
+	bh=Hy73ArwPARkCyYnc+qlEKxSUMTyUwN1cLz6yYXeB1Ic=;
+	b=rpf4giphStFSqMSPidfnty6ldU+ykBkT1M6Nr2jkd4fG2eZxp47EWmVxxgl3XFFX
+	HqDps+M1FwtizlVNRhPmmsJ4fKLzzo5bXXgT4r/p4Gu/4pnKO36Iyjeb3yRGbRtK6vT
+	fqgJR+FI7/4YUszDjT/r0HV32qciNmOvme7Ysb8I=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1568375989;
+	h=Date:To:From:Reply-to:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Feedback-ID;
+	bh=Hy73ArwPARkCyYnc+qlEKxSUMTyUwN1cLz6yYXeB1Ic=;
+	b=VMJTKHf7GPYRobMH6g91tl/4AVFVN24Zm3TMiFqSHWq7JkqHcZ25Px8J7pw86fxl
+	veG0rDHciDCDfWR7sMHXa5cGoHnWzFcruurdinS9dqdxFQneKl0H1zqo3njCODpj747
+	ZjgW0v60YbL7IOuOpgk+lOFx+YjLT2ZsoA6jeIZk=
+Date: Fri, 13 Sep 2019 11:59:49 +0000
+To: Noname <foaad@calpoly.edu>
+From: ICENTE 2019 <info@icenteconf.com>
+Reply-to: ICENTE 2019 <info@icenteconf.com>
+Subject: [CFP] International Conference on Engineering Technologies
+Message-ID: <0100016d2a7e6452-a03836ea-b5da-40fa-ad4f-617a463786cb-000000@email.amazonses.com>
+X-Mailer: PHPMailer 5.1 (phpmailer.sourceforge.net)
+List-Unsubscribe: <http://icente.selcuk.edu.tr/send/unsubscribe/Zn9fN8ctLuoUJ0HZV892fukN86lbM8k763cIRwFFyjTuNYA/P5nhbBKo5XLjgMASROw0Cw/hRlsjTwwY4nfplR1W763e9OQ>
+Content-Type: multipart/alternative;
+	boundary="b1_0e5d786c03a78d4f7a188a71b5b557d7"
+X-SES-Outgoing: 2019.09.13-54.240.8.85
+Feedback-ID: 1.us-east-1.udb8UQMozU0hyLoLnSVaZnKZKI0EBKZ/V7n+7muR1wc=:AmazonSES
+Return-Path:
+ 0100016d2a7e6452-a03836ea-b5da-40fa-ad4f-617a463786cb-000000@amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 13 Sep 2019 11:59:50.5748
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ab303761-b15a-4df9-3658-08d73841e1a2
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:54.240.8.85;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(286005)(189003)(199004)(14444005)(606006)(53346004)(19630485002)(71190400001)(7636002)(956004)(19627405001)(58800400005)(8676002)(356004)(476003)(106002)(146002)(126002)(6306002)(9686003)(6512007)(16003)(76236002)(733005)(66574012)(42882007)(3820100002)(246002)(4006050)(486006)(336012)(6506007)(236005)(36736006)(26005)(53946003)(3450700001)(75640400001)(25786009)(23466002)(7596002)(6916009)(71280400001)(7066003)(43066004)(22186003)(16586007)(2171002)(50226002)(966005)(6486002)(81686011)(79850400001)(90596002)(1096003)(130870200001)(579004);DIR:INB;SFP:;SCL:1;SRVR:DM5PR08MB2491;H:a8-85.smtp-out.amazonses.com;FPR:;SPF:Pass;LANG:en;PTR:a8-85.smtp-out.amazonses.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT057.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: ab303761-b15a-4df9-3658-08d73841e1a2
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(4709080)(8001031)(1414054)(71702078);SRVR:DM5PR08MB2491;
+X-MS-TrafficTypeDiagnostic: DM5PR08MB2491:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 13 Sep 2019 11:59:50.4657
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ab303761-b15a-4df9-3658-08d73841e1a2
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM5PR08MB2491
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8571845
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2263.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZmxDZUhzV3ZHTEhDNDA2SmtSWTN1R2Zia2V6WmF4a0Z5clZHS0lmcGlwbTBF?=
+ =?utf-8?B?cmZWUHhjTkExM1lsMHRrbTRQdXFHaG1KamlnbG5GWTgzTnhjcjI1UDVONlpQ?=
+ =?utf-8?B?Y0tISVhJZzlXTXRxYmQvSjdzTklONytQaVd2NXRYSkJUMnp4Vms5alo5ekdw?=
+ =?utf-8?B?Y25veFVTWDk4YUw3Q0tkaGNRbzZjYUVES2UvOG5TMElRbEkvQkhIOUxxMjBr?=
+ =?utf-8?B?OXFnZmhTYUZkWGNwM242UUJORk56T2hZVStIRCtHOWxDOUwxWWlLZmpmNUQw?=
+ =?utf-8?B?bXVVTnROUm1rcUt0dERwaTNRYnUrSkdiUmRKNGxhTllCZE5vN2NMVTdwbTk2?=
+ =?utf-8?B?cEMzb1pqOW8vbmdWWXQ0N3V6bUNRYmxhakVKcHNQU2lUWG1FdkIzSS9wdmNP?=
+ =?utf-8?B?STJiRGpBbFE2Y0RmdTBMSXJJU3h1VzVzNjEva3d0aUV6ckZTN3QwTjkxZkh6?=
+ =?utf-8?B?end3QmM1cVRlL1NmTnRVOW81WC84aWI0TkJGRFVsUWxBeW5TQWluZlpBR0VO?=
+ =?utf-8?B?djA4VURDcUJLMnQrWng1bnphNm9FWDBhSHZlV3ZlMGpxUzYycEwzTjhEbmU5?=
+ =?utf-8?B?M3FlUi9iL1B1eHBid215bnVmeWFmQnl3MGpLUWRwK1pVSktad2xwaGptSkxY?=
+ =?utf-8?B?ck03TDVRM3ZYVUIrNTl6dXRUSUJ3aEVJWGpvTE4wQUJrcGJSQkhjTm1nUVor?=
+ =?utf-8?B?VzVUWE44eStpQWw5SFNkSTZzeTkzTE9Ecy9jL2hDRk1sVGhqVTlJSG9LS2t4?=
+ =?utf-8?B?d2NWNzNrRW5GRmlxWkxTeFMxMVFxR09ZdlhoZjlvYzR4MEpqcEV1WVEvOUhK?=
+ =?utf-8?B?RjgydjBWc3NsNzhIazNrbmhnaFhQeS9kanZ6NDhVejU5MkQ5bDhrM3BrN3pK?=
+ =?utf-8?B?Q2JVTEZYSitQa1hidHBITFAxLzUrT3hreTFyZGVueWFjUE1EU3luNlNueVN1?=
+ =?utf-8?B?bjB2MUtZKzcyRnI3bUNtcmgwY2d5bFRsYm9zNnVvNzVOa2RiOWkyQ01BRlZ6?=
+ =?utf-8?B?bHk0dmdSTHlyY0JBc3NoUUJudFpacWdjNlZwOTlmeWZEaFY2QVJmWEtoc05S?=
+ =?utf-8?B?WlNQSWxlREtuNklTT2NNNkVDd0x0Y2ZqSXREOW8wcXNOdkhMa2FlcmtmTUll?=
+ =?utf-8?B?WFhueWZPWDRFUk1kN3dxL1BCbzdQUlB6YVoyUWtNQVNYV3VHVVFDTnI4Ly9h?=
+ =?utf-8?B?a0NxRk1oVHhoeEJVK3FyV0V3YWJvbCtia2lCUnhGWVJtd3llMEY1QncwczZW?=
+ =?utf-8?B?UGZZNjYzRWJjMFJ3SmlOSDNoM2pjeE1Ob1NrU2dMajUydW9EUDFwdVdLeHc4?=
+ =?utf-8?B?WjlxbE1FRXcvaWhicGlEa2JlQ2FMdjQ3OG1SMWEyZE5hVUsyTlk1cXVobkVj?=
+ =?utf-8?B?QnF0NnNYQ2hMV2c9PQ==?=
+MIME-Version: 1.0
+
+--b1_0e5d786c03a78d4f7a188a71b5b557d7
+Content-Type: text/plain; charset = "UTF-8"
+Content-Transfer-Encoding: 8bit
+
+ 
+		
+		
+			
+			
+				
+					
+						
+						
+							
+								
+									
+									
+										
+											
+												
+											
+										
+									
+									
+								
+							
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		
+																		International Conference on Engineering Technologies (ICENTE&#39;19)
+
+																		icente.selcuk.edu.tr
+
+																		October 25-27, 2019 Konya - TURKEY
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												
+												
+													
+														
+															
+															
+															
+
+															 
+															
+															
+														
+													
+												
+												
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		
+																		Dear colleagues,
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		
+																		
+																		
+
+																		 
+																		
+																		
+																	
+																
+															
+															
+															
+															
+																
+																	
+																		
+																		
+																		International Conference on Engineering Technologies will be held on October 25 - 27, 2019, at Selcuk University in Konya, Turkey.
+
+																		The ICENTE19 conference is designed to bring together leading international and interdisciplinary research communities, developers, and users of advanced technologies and to discuss theoretical and practical issues in all the field of technologies.
+																		
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		Topic
+																	
+																	
+																		 
+																	
+																	
+																		
+																		The main objective of ICENTE&#39;19 is to present the latest research and results of scientists related to Computer Sciences, Electrical & Electronics, Energy Technologies, Mechaninal Engineering, Manufacturing Technologies, Mechatronics and Biomedical Technologies.
+																		
+																	
+																
+															
+															
+															
+															
+																
+																	
+																		
+																		
+																		
+
+																		 
+																		
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		
+																		
+																		Selected Papers
+																		
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		
+																		The contributions will be evaluated by the Scientific Committee. The papers approved by the scientific committee will be presented. The selected papers presented in the conference that match with the topics of the journals will be published in the journal of Selçuk-Teknik
+																		We hope this conference will be of your interest.
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+						
+					
+					
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		
+																		
+																			
+																				
+																					
+																				
+																			
+																		
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												
+												
+													
+														
+															
+															
+																
+																	
+																		
+																		
+																		ICENTE&#39;19  - Contact Us
+																		E-mail : icente@selcuk.edu.tr
+																		Phone : +90.332.223 33 32
+																		Web : http://icente.selcuk.edu.tr/
+																		
+																		
+																	
+																
+															
+															
+														
+													
+												
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+					
+					
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+												CONTACT
+												 If you have any question, please feel free to contact.
+
+												This email was sent to foaad@calpoly.edu
+
+												 
+												
+
+												Unsubscribe here
+												
+											
+											
+												 
+											
+										
+									
+									
+								
+							
+						
+						
+					
+					
+						
+						
+							
+								
+									
+									
+										
+											
+												 
+											
+											
+												
+												
+												© 2019 ICENTE
+												
+												
+											
+											
+												 
+
+
+--b1_0e5d786c03a78d4f7a188a71b5b557d7
+Content-Type: text/html; charset = "UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="x-apple-disable-message-reformatting"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no">
+	<title></title>
+	<style type="text/css">/* Resets */
+        .ReadMsgBody { width: 100%; background-color: #ebebeb;}
+        .ExternalClass {width: 100%; background-color: #ebebeb;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
+        a[x-apple-data-detectors]{
+            color:inherit !important;
+            text-decoration:none !important;
+            font-size:inherit !important;
+            font-family:inherit !important;
+            font-weight:inherit !important;
+            line-height:inherit !important;
+        }        
+        body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+        body {margin:0; padding:0;}
+        .yshortcuts a {border-bottom: none !important;}
+        .rnb-del-min-width{ min-width: 0 !important; }
+
+        /* Add new outlook css start */
+        .templateContainer{
+            max-width:590px !important;
+            width:auto !important;
+        }
+        /* Add new outlook css end */
+
+        /* Image width by default for 3 columns */
+        img[class="rnb-col-3-img"] {
+        max-width:170px;
+        }
+
+        /* Image width by default for 2 columns */
+        img[class="rnb-col-2-img"] {
+        max-width:264px;
+        }
+
+        /* Image width by default for 2 columns aside small size */
+        img[class="rnb-col-2-img-side-xs"] {
+        max-width:180px;
+        }
+
+        /* Image width by default for 2 columns aside big size */
+        img[class="rnb-col-2-img-side-xl"] {
+        max-width:350px;
+        }
+
+        /* Image width by default for 1 column */
+        img[class="rnb-col-1-img"] {
+        max-width:550px;
+        }
+
+        /* Image width by default for header */
+        img[class="rnb-header-img"] {
+        max-width:590px;
+        }
+
+        /* Ckeditor line-height spacing */
+        .rnb-force-col p, ul, ol{margin:0px!important;}
+        .rnb-del-min-width p, ul, ol{margin:0px!important;}
+
+        /* tmpl-2 preview */
+        .rnb-tmpl-width{ width:100%!important;}
+
+        /* tmpl-11 preview */
+        .rnb-social-width{padding-right:15px!important;}
+
+        /* tmpl-11 preview */
+        .rnb-social-align{float:right!important;}
+
+        /* Ul Li outlook extra spacing fix */
+        li{mso-margin-top-alt: 0; mso-margin-bottom-alt: 0;}        
+
+        /* Outlook fix */
+        table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+    
+        /* Outlook fix */
+        table, tr, td {border-collapse: collapse;}
+
+        /* Outlook fix */
+        p,a,li,blockquote {mso-line-height-rule:exactly;} 
+
+        /* Outlook fix */
+        .msib-right-img { mso-padding-alt: 0 !important;}
+
+        /* Fix text line height on preview */
+        .content-spacing div {display: list-item; list-style-type: none;}
+
+        @media only screen and (min-width:590px){
+        /* mac fix width */
+        .templateContainer{width:590px !important;}
+        }
+
+        @media screen and (max-width: 360px){
+        /* yahoo app fix width "tmpl-2 tmpl-10 tmpl-13" in android devices */
+        .rnb-yahoo-width{ width:360px !important;}
+        }
+
+        @media screen and (max-width: 380px){
+        /* fix width and font size "tmpl-4 tmpl-6" in mobile preview */
+        .element-img-text{ font-size:24px !important;}
+        .element-img-text2{ width:230px !important;}
+        .content-img-text-tmpl-6{ font-size:24px !important;}
+        .content-img-text2-tmpl-6{ width:220px !important;}
+        }
+
+        @media screen and (max-width: 480px) {
+        td[class="rnb-container-padding"] {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        }
+
+        /* force container nav to (horizontal) blocks */
+        td.rnb-force-nav {
+        display: inherit;
+        }
+        }
+
+        @media only screen and (max-width: 600px) {
+
+        /* center the address & social icons */
+        .rnb-text-center {text-align:center !important;}
+
+        /* force container columns to (horizontal) blocks */
+        td.rnb-force-col {
+        display: block;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        width:100%;
+        }
+
+        table.rnb-container {
+         width: 100% !important;
+        }
+
+        table.rnb-btn-col-content {
+        width: 100% !important;
+        }
+        table.rnb-col-3 {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+
+        /* change left/right padding and margins to top/bottom ones */
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        /*border-bottom: 1px solid #eee;*/
+        }
+
+        table.rnb-last-col-3 {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+        }
+
+        table[class~="rnb-col-2"] {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+
+        /* change left/right padding and margins to top/bottom ones */
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        /*border-bottom: 1px solid #eee;*/
+        }
+
+        table.rnb-col-2-noborder-onright {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+
+        /* change left/right padding and margins to top/bottom ones */
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        }
+
+        table.rnb-col-2-noborder-onleft {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+
+        /* change left/right padding and margins to top/bottom ones */
+        margin-top: 10px;
+        padding-top: 10px;
+        }
+
+        table.rnb-last-col-2 {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+        }
+
+        table.rnb-col-1 {
+        /* unset table align="left/right" */
+        float: none !important;
+        width: 100% !important;
+        }
+
+        img.rnb-col-3-img {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img.rnb-col-2-img {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img.rnb-col-2-img-side-xs {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img.rnb-col-2-img-side-xl {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img.rnb-col-1-img {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        img.rnb-header-img {
+        /**max-width:none !important;**/
+        width:100% !important;
+        margin:0 auto;
+        }
+
+        img.rnb-logo-img {
+        /**max-width:none !important;**/
+        width:100% !important;
+        }
+
+        td.rnb-mbl-float-none {
+        float:inherit !important;
+        }
+
+        .img-block-center{text-align:center !important;}
+
+        .logo-img-center
+        {
+            float:inherit !important;
+        }
+
+        /* tmpl-11 preview */
+        .rnb-social-align{margin:0 auto !important; float:inherit !important;}
+
+        /* tmpl-11 preview */
+        .rnb-social-center{display:inline-block;}
+
+        /* tmpl-11 preview */
+        .social-text-spacing{margin-bottom:0px !important; padding-bottom:0px !important;}
+
+        /* tmpl-11 preview */
+        .social-text-spacing2{padding-top:15px !important;}
+
+    }
+	</style>
+	<!--[if gte mso 11]><style type="text/css">table{border-spacing: 0; }table td {border-collapse: separate;}</style><![endif]--><!--[if !mso]><!-->
+	<style type="text/css">table{border-spacing: 0;} table td {border-collapse: collapse;}
+	</style>
+	<!--<![endif]--><!--[if gte mso 15]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+</head>
+<body>
+<table align="center" bgcolor="#efefef" border="0" cellpadding="0" cellspacing="0" class="main-template" style="background-color: rgb(239, 239, 239);" width="100%">
+	<tbody>
+		<tr style="display:none !important; font-size:1px; mso-hide: all;">
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center" valign="top"><!--[if gte mso 9]>
+                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="590" style="width:590px;">
+                        <tr>
+                        <td align="center" valign="top" width="590" style="width:590px;">
+                        <![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="max-width:590px!important; width: 590px;" width="100%">
+				<tbody>
+					<tr>
+						<td align="center" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_5976">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" style="min-width:590px;" valign="top">
+									<table border="0" cellpadding="0" cellspacing="0" height="30" width="100%">
+										<tbody>
+											<tr>
+												<td height="30" valign="top"><img alt="" height="30" src="http://img.mailinblue.com/new_images/rnb/rnb_space.gif" style="display:block; max-height:30px; max-width:20px;" width="20"></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<div style="background-color: rgb(0, 0, 0); border-radius: 0px;"><!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]--><!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_6" style="min-width:100%;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" valign="top">
+									<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(0, 0, 0); padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+										<tbody>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="left" class="rnb-container-padding" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col" style="padding-right: 0px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+																<tbody>
+																	<tr>
+																		<td class="content-spacing" style="font-size:14px; font-family:'Verdana',Geneva,sans-serif, sans-serif; color:#ffffff; line-height: 21px;">
+																		<div style="text-align: center;"><a href="http://icente.selcuk.edu.tr/send/l/rOfPC3892a1MbOPfwsfRH72A/6kV7Tb9PFdKdkSjCRCpgww/hRlsjTwwY4nfplR1W763e9OQ" style="text-decoration: solid; color: rgb(250, 250, 250);"><span style="font-size:20px;">International Conference on Engineering Technologies (ICENTE'19)</span></a></div>
+
+																		<div style="text-align: center;"><a href="http://icente.selcuk.edu.tr/send/l/rOfPC3892a1MbOPfwsfRH72A/6kV7Tb9PFdKdkSjCRCpgww/hRlsjTwwY4nfplR1W763e9OQ" style="text-decoration: solid; color: rgb(250, 250, 250);"><span style="font-size: 20px;">icente.selcuk.edu.tr</span></a></div>
+
+																		<div style="text-align: center;"><span style="font-size:20px;">October 25-27, 2019 Konya - TURKEY</span></div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+                </td>
+                <![endif]--><!--[if mso]>
+                </tr>
+                </table>
+                <![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<div style="background-color: rgb(255, 255, 255);"><!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]--><!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_20" name="Layout_20" style="min-width:100%; -webkit-backface-visibility: hidden; line-height: 10px;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" style="min-width: 590px;" valign="top">
+									<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(255, 255, 255);" width="100%">
+										<tbody>
+											<tr>
+												<td align="center" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tbody>
+														<tr>
+															<td>
+															<div style="display:block; border-radius:0px; width:590;max-width:700px !important;border-top:0px None #000;border-right:0px None #000;border-bottom:0px None #000;border-left:0px None #000;border-collapse: separate;border-radius: 0px;">
+															<div><a href="http://icente.selcuk.edu.tr/send/l/rOfPC3892a1MbOPfwsfRH72A/6kV7Tb9PFdKdkSjCRCpgww/hRlsjTwwY4nfplR1W763e9OQ" style="text-decoration:none;" target="_blank"><img alt="" border="0" class="rnb-header-img" hspace="0" ng-if="col.img.source != 'url'" src="http://img.mailinblue.com/1405804/images/rnb/original/5d35f2c6e747aa6d8d48a6af.jpg" style="display:block; float:left; border-radius: 0px; " vspace="0" width="590"></a></div>
+
+															<div style="clear:both;">&nbsp;</div>
+															</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+                </td>
+                <![endif]--><!--[if mso]>
+                </tr>
+                </table>
+                <![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<div style="border-radius: 0px;"><!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]--><!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_11" style="min-width:100%;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" valign="top">
+									<table bgcolor="# #ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+										<tbody>
+											<tr>
+												<td height="30" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="left" class="rnb-container-padding" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col" style="padding-right: 0px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+																<tbody>
+																	<tr>
+																		<td class="content-spacing" style="font-size:24px; font-family:'Verdana',Geneva,sans-serif, sans-serif; color: #33c0c9; line-height: 21px;">
+																		<div><span style="color:#000000;"><span style="font-size:24px;">Dear colleagues,</span></span></div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="0" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+                </td>
+                <![endif]--><!--[if mso]>
+                </tr>
+                </table>
+                <![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<div style="background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso 15]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]--><!--[if mso 15]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_14" name="Layout_14" style="min-width:100%;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" valign="top">
+									<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="max-width: 100%; min-width: 100%; table-layout: fixed; background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(239, 239, 239); border-radius: 0px; border-collapse: separate; padding: 8px 20px 2px;" width="100%">
+										<tbody>
+											<tr>
+												<td align="left" class="rnb-container-padding" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col img-block-center" style="padding-right: 20px;" valign="top" width="265">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-2-noborder-onright" valign="top" width="265">
+																<tbody>
+																	<tr>
+																		<td align="center" class="img-block-center" style="line-height: 1px;" valign="top" width="100%">
+																		<div style="border-top:0px none #000;border-right:0px None #000;border-bottom:0px None #000;border-left:0px None #000;display:inline-block;">
+																		<div><img alt="" border="0" class="rnb-col-2-img-side-xl" hspace="0" src="http://img.mailinblue.com/1405804/images/rnb/original/5b278bc99d579c08dd7e3a2a.jpg" style="vertical-align:top; float: left; width:265px;max-width:400px !important; " vspace="0" width="265"></div>
+
+																		<div style="clear:both;">&nbsp;</div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+															<td class="rnb-force-col" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-last-col-2" valign="top" width="265">
+																<tbody>
+																	<tr>
+																		<td class="rnb-mbl-float-none" style="font-size:16px; font-family:'Arial',Helvetica,sans-serif;color:#999999;float:right;width:265px; line-height: 21px;">
+																		<div style="line-height:150%;">
+																		<div><strong><a href="http://icente.selcuk.edu.tr/send/l/rOfPC3892a1MbOPfwsfRH72A/6kV7Tb9PFdKdkSjCRCpgww/hRlsjTwwY4nfplR1W763e9OQ" style="text-decoration: solid; color: rgb(153, 153, 153);">International Conference on Engineering Technologies</a> </strong>will be held on <strong>October 25 - 27, 2019, at Selcuk University in Konya, Turkey.</strong></div>
+
+																		<div>The ICENTE19 conference is designed to bring together leading international and interdisciplinary research communities, developers, and users of advanced technologies and to discuss theoretical and practical issues in all the field of technologies.</div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso 15]>
+                </td>
+                <![endif]--><!--[if mso 15]>
+                </tr>
+                </table>
+                <![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<div style="background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso 15]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]--><!--[if mso 15]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_13" name="Layout_13" style="min-width:100%;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" valign="top">
+									<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="max-width: 100%; min-width: 100%; table-layout: fixed; background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(239, 239, 239); border-radius: 0px; border-collapse: separate; padding: 0px 20px;" width="100%">
+										<tbody>
+											<tr>
+												<td align="left" class="rnb-container-padding" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-last-col-2" valign="top" width="265">
+																<tbody>
+																	<tr>
+																		<td style="font-size:16px; font-family:'Verdana',Geneva,sans-serif; color:#33c0c9; font-weight:bold;text-align:left;"><span style="color:#33c0c9; font-weight:bold;"><span style="color:#000000;">Topic</span></span></td>
+																	</tr>
+																	<tr>
+																		<td height="10" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td class="rnb-mbl-float-none" style="font-size:16px; font-family:'Arial',Helvetica,sans-serif;color:#999999;float:left;width:265px; line-height: 21px;">
+																		<div style="line-height:150%;">The main objective of ICENTE'19 is to present the latest research and results of scientists related to <strong>Computer Sciences, Electrical &amp; Electronics, Energy Technologies, Mechaninal Engineering, Manufacturing Technologies, Mechatronics and Biomedical Technologies.</strong></div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+															<td class="msib-right-img rnb-force-col img-block-center" style="padding-left: 0px;" valign="top" width="285">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-2-noborder-onleft" valign="top" width="100%">
+																<tbody>
+																	<tr>
+																		<td align="center" class="img-block-center" style="line-height: 1px;" valign="top" width="100%">
+																		<div style="border-top:0px none #000;border-right:0px None #000;border-bottom:0px None #000;border-left:0px None #000;display:inline-block;">
+																		<div><a href="http://icente.selcuk.edu.tr/send/l/rOfPC3892a1MbOPfwsfRH72A/EHyztGvLuSdPR1c5E52AhQ/hRlsjTwwY4nfplR1W763e9OQ" target="_blank"><img alt="" border="0" class="rnb-col-2-img-side-xl" hspace="0" src="http://img.mailinblue.com/1405804/images/rnb/original/5b278c46bbddbd4db913b936.png" style="vertical-align:top; float: left; max-width:500px !important; " vspace="0" width="285"></a></div>
+
+																		<div style="clear:both;">&nbsp;</div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso 15]>
+                </td>
+                <![endif]--><!--[if mso 15]>
+                </tr>
+                </table>
+                <![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<div style="border-radius: 0px;"><!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]--><!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_16" style="min-width:100%;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" valign="top">
+									<table bgcolor="# #ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+										<tbody>
+											<tr>
+												<td height="30" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="left" class="rnb-container-padding" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col" style="padding-right: 0px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+																<tbody>
+																	<tr>
+																		<td class="content-spacing" style="font-size:24px; font-family:'Verdana',Geneva,sans-serif, sans-serif; color: #33c0c9; line-height: 21px;">
+																		<div style="line-height: 150%; text-align: center;">
+																		<div><span style="color:#000000;">Selected Papers</span></div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="0" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+                </td>
+                <![endif]--><!--[if mso]>
+                </tr>
+                </table>
+                <![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<div style="border-radius: 0px;"><!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]--><!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_17" style="min-width:100%;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" valign="top">
+									<table bgcolor="# #ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+										<tbody>
+											<tr>
+												<td height="10" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="left" class="rnb-container-padding" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col" style="padding-right: 0px;" valign="top">
+															<table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+																<tbody>
+																	<tr>
+																		<td class="content-spacing" style="font-size:20px; font-family:'Arial',Helvetica,sans-serif, sans-serif; color:#999; line-height: 21px;">
+																		<div style="line-height: 150%; text-align: center;">The contributions will be evaluated by the Scientific Committee. The papers approved by the scientific committee will be presented. The selected papers presented in the conference that match with the topics of the journals will be published in the journal of<a href="http://icente.selcuk.edu.tr/send/l/rOfPC3892a1MbOPfwsfRH72A/cfrnNjv7lYJGJhm3cqKMnw/hRlsjTwwY4nfplR1W763e9OQ" style="text-decoration: underline; color: rgb(87, 87, 87);"> Selçuk-Teknik</a><br>
+																		We hope this conference will be of your interest.</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="30" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if mso]>
+                </td>
+                <![endif]--><!--[if mso]>
+                </tr>
+                </table>
+                <![endif]--></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width rnb-tmpl-width" id="Layout_5" name="Layout_5" style="min-width:590px;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#efefef" class="rnb-del-min-width" style="min-width:590px; background-color: #efefef;" valign="top">
+									<table align="center" bgcolor="#efefef" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(239, 239, 239);" width="590">
+										<tbody>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td align="center" class="rnb-container-padding" style="font-size: 14px; font-family: 'Arial',Helvetica,sans-serif; color: #919191;" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+													<tbody>
+														<tr>
+															<td class="rnb-force-col rnb-social-width2" style="mso-padding-alt: 0 20px 0 20px; padding-right: 28px; padding-left: 28px;" valign="top">
+															<table align="center" border="0" cellpadding="0" cellspacing="0" class="rnb-last-col-2" valign="top" width="533">
+																<tbody>
+																	<tr>
+																		<td valign="top">
+																		<table align="center" border="0" cellpadding="0" cellspacing="0" class="rnb-social-align2">
+																			<tbody>
+																				<tr>
+																					<td align="center" class="rnb-text-center" ng-init="width=setSocialIconsBlockWidth(item)" style="line-height: 0px;" valign="middle" width="533"><!--[if mso]>
+                                                                        <table align="center" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                        <![endif]--><!--[if mso]>
+                                                                        </tr>
+                                                                        </table>
+                                                                        <![endif]--></td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td class="rnb-force-col" style="padding-top:15px; padding-right:20px; padding-left:20px; mso-padding-alt: 20px 0 0 20px;" valign="top">
+												<table align="center" border="0" cellpadding="0" cellspacing="0" class="rnb-col-2 social-text-spacing" style="border-bottom:0;" valign="top" width="264">
+													<tbody>
+														<tr>
+															<td valign="top">
+															<table align="center" border="0" cellpadding="0" cellspacing="0" class="rnb-btn-col-content">
+																<tbody>
+																	<tr>
+																		<td align="center" class="rnb-text-center" style="font-size:14px; font-family:'Arial',Helvetica,sans-serif; color:#919191;" valign="middle">
+																		<div>
+																		<div style="line-height:150%;">ICENTE'19&nbsp; - Contact Us<br>
+																		E-mail : <a href="mailto:icente@selcuk.edu.tr?subject=ICENTE18" style="text-decoration: none; color: rgb(204, 204, 204);">icente@selcuk.edu.tr</a><br>
+																		Phone : &#43;90.332.223 33 32<br>
+																		Web : <a href="http://icente.selcuk.edu.tr/send/l/rOfPC3892a1MbOPfwsfRH72A/LwU1pal9BhcV1S7633bpIrDw/hRlsjTwwY4nfplR1W763e9OQ" style="text-decoration: none; color: rgb(204, 204, 204);">http://icente.selcuk.edu.tr/</a></div>
+																		</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height="0" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width rnb-tmpl-width" id="Layout_3" name="Layout_3" style="min-width:590px;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#efefef" class="rnb-del-min-width" style="min-width:590px; background-color: #efefef; text-align: center;" valign="top">
+									<table align="center" bgcolor="#efefef" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="padding-right: 20px; padding-left: 20px; background-color: rgb(239, 239, 239);" width="590">
+										<tbody>
+											<tr>
+												<td height="10" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td>
+												<div style="font-size:14px; color:#919191; font-weight:normal; text-align:center; font-family:'Arial',Helvetica,sans-serif;">
+												<p style="line-height:125%;">CONTACT<br>
+												&nbsp;If you have any question, please feel free to contact.</p>
+
+												<p style="line-height:125%;">This email was sent to foaad@calpoly.edu</p>
+
+												<p style="line-height:125%;">&nbsp;</p>
+												</div>
+
+												<div style="display: block; text-align: center;"><span style="font-size:14px; font-weight:normal; display: inline-block; text-align:center; font-family:'Arial',Helvetica,sans-serif;"><a href="http://icente.selcuk.edu.tr/send/unsubscribe/Zn9fN8ctLuoUJ0HZV892fukN86lbM8k763cIRwFFyjTuNYA/P5nhbBKo5XLjgMASROw0Cw/hRlsjTwwY4nfplR1W763e9OQ" style="text-decoration:none; color:#919191;font-size:14px;font-weight:normal;font-family:'Arial',Helvetica,sans-serif;" target="_blank">Unsubscribe here</a></span></div>
+												</td>
+											</tr>
+											<tr>
+												<td height="10" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width rnb-tmpl-width" id="Layout_4" name="Layout_4" style="min-width:590px;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="rnb-del-min-width" style="min-width:590px;" valign="top">
+									<table align="center" bgcolor="#33c0c9" border="0" cellpadding="0" cellspacing="0" style="padding-right: 20px; padding-left: 20px; background-color: rgb(51, 192, 201);" width="100%">
+										<tbody>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size:13px; color:#ffffff; font-weight:normal; text-align:center; font-family:'Arial',Helvetica,sans-serif;">
+												<div>
+												<div>© 2019 ICENTE</div>
+												</div>
+												</td>
+											</tr>
+											<tr>
+												<td height="20" style="font-size:1px; line-height:0px; mso-hide: all;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--[if gte mso 9]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]--></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+<img src="http://icente.selcuk.edu.tr/send/t/hRlsjTwwY4nfplR1W763e9OQ/rOfPC3892a1MbOPfwsfRH72A" alt="">
+
+
+
+--b1_0e5d786c03a78d4f7a188a71b5b557d7--

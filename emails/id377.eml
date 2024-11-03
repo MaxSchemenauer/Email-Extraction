@@ -1,0 +1,166 @@
+Received: from BN7PR08MB5153.namprd08.prod.outlook.com (2603:10b6:a03:114::36)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR21CA0026.NAMPRD21.PROD.OUTLOOK.COM; Sat, 5 Oct 2019 09:46:12 +0000
+Received: from DM5PR08CA0033.namprd08.prod.outlook.com (2603:10b6:4:60::22) by
+ BN7PR08MB5153.namprd08.prod.outlook.com (2603:10b6:408:29::18) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2305.15; Sat, 5 Oct 2019 09:46:12 +0000
+Received: from CO1NAM04FT030.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::205) by DM5PR08CA0033.outlook.office365.com
+ (2603:10b6:4:60::22) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2284.19 via Frontend
+ Transport; Sat, 5 Oct 2019 09:46:11 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.11.168)
+ smtp.mailfrom=amazonses.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=amazonses.com;calpoly.edu; dmarc=none action=none
+ header.from=thesai.org;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of amazonses.com designates
+ 54.240.11.168 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.11.168; helo=a11-168.smtp-out.amazonses.com;
+Received: from a11-168.smtp-out.amazonses.com (54.240.11.168) by
+ CO1NAM04FT030.mail.protection.outlook.com (10.152.90.153) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2327.20 via Frontend Transport; Sat, 5 Oct 2019 09:46:11 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1570268770;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Feedback-ID;
+	bh=qh6V/Oow8o35aVn/Io34/yaTqm+SDrgf1e2NXhzo61A=;
+	b=d/7XdVCSLwoj1zbTzl/9nraWnEJdGObhJltmkVCfVwOM2Y+UhmXx7S3WDAc5exsr
+	V62yIWLoKWOaU830oBn/HwaMys2+tkEzbYv6Na7T9esjqZiXXnpccz8Tr5sp40aWM2X
+	Epl0uQhO0pcipvUy/YIdNdFXu/V/S68Wbbu3qaBo=
+Date: Sat, 5 Oct 2019 09:46:10 +0000
+To: foaad@calpoly.edu
+From: Computing Conference <conference@thesai.org>
+Reply-To: Computing Conference <conference@thesai.org>
+Subject: Final Call for Papers - Computing Conference 2020 - London, UK
+Message-ID: <0100016d9b4ff175-cfb29321-bae7-49a7-80a3-aa2c4a58fd7c-000000@email.amazonses.com>
+X-Mailer: Sendy (https://sendy.co)
+List-Unsubscribe: <http://52.21.30.170/sendy/unsubscribe/XVYl7Zlp2QqJ763xOyxe9q50BHNVJGlSUpvq5kLRbifQY/tzhWOrYBvVgcLsPus55vYA/PyumXRAbmwTa892yp2SCYVCA>
+Content-Type: text/html; charset=UTF-8
+X-SES-Outgoing: 2019.10.05-54.240.11.168
+Feedback-ID: 1.us-east-1.2G1TzVyFwUkgUZP/A244FHSGpGSk8PXaiBksQsEJ0hk=:AmazonSES
+Return-Path:
+ 0100016d9b4ff175-cfb29321-bae7-49a7-80a3-aa2c4a58fd7c-000000@amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Oct 2019 09:46:11.6098
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ df76ebf1-3f43-4551-c36a-08d74978db0b
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:54.240.11.168;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BN7PR08MB5153;H:a11-168.smtp-out.amazonses.com;FPR:;SPF:None;LANG:en;CAT:SPOOF;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT030.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: df76ebf1-3f43-4551-c36a-08d74978db0b
+X-MS-TrafficTypeDiagnostic: BN7PR08MB5153:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 6
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Oct 2019 09:46:11.4097
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: df76ebf1-3f43-4551-c36a-08d74978db0b
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB5153
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.4787258
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2327.004
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?a0tVZlhxV2crd2lWYjdhSGFidjJmallyNVVEVGRCelkvbnpaRW9vOXJCQmF2?=
+ =?utf-8?B?YVpmYmpsYjZibkhEQWtUVlBua1Z2bDFWbHNvbUl4eTc2WWJoRTFBeTJNdVor?=
+ =?utf-8?B?dVdTQWsxY1A2akFPZkV2ajhGQVlwbHJ0T0k3d2VNZUhla3c5U0tneElybnFu?=
+ =?utf-8?B?bnhHbkVoWkJ3T2I2SDBVT3ZrN3FTY1NjOFNZUUhmMWIrTnNrYXJhdTZBYlFC?=
+ =?utf-8?B?QnNJUHNmTUFDUVlIV0h2SnlXakgzSEllbnBTcEJOc25HS1dYbzhabFh6ZGtI?=
+ =?utf-8?B?VExkMXN4UlMyUGtnMUV3WWFKN0NmaUgzWXRVcHZiM0NiVGJOeC9ONVBidDZD?=
+ =?utf-8?B?Vmw1U1VSTG55VEJWK3VhaU82MnBwWk4wZ0g3OGpRbDRUTUFsdG9DNFJrSllw?=
+ =?utf-8?B?bUlNVkNGbnhjVzg5SVY4MDRremYrYXhoMStQSFNFYnZLNFZSTUJZTUx2UU0z?=
+ =?utf-8?B?RjBOM2VaeTVMSS9yYUlBZ1RWRFBTVmlYT0hYMG43RmRZOTRhRlAvekNPMWhX?=
+ =?utf-8?B?d1NEeG5Za3UxMXMvbTFsWGxIWUhzZmN6c1VDaVFGc3lwSzEzVmJVS1RJMFhk?=
+ =?utf-8?B?c005dXhaUlJhYUxlb3ZPZGt3OXZKOFFBRWJaaTVQeEtyd3FaN2g1anIyOFlr?=
+ =?utf-8?B?RFdqaWY0ZjNNT1dwNGxhdU93a3VYTTJPMndTS1cwV1B3RjBMV21lVjJMVlFv?=
+ =?utf-8?B?MlBFNHRNeXhnai9NTExQdXFKbFBjclBLbFJMU1hBTERwOVRhalJYMlVkajlG?=
+ =?utf-8?B?cGxwUm1TbC9MSHJMcWNsUkVyYnZZdWMrUG5ZKzZ2VnNlajZTMHAyemQ2aVAz?=
+ =?utf-8?B?aUgrMklsSEJlcTJVUWRVVHYraUtYK1BaVWViTExnVUM4TUpja1FDbGNKODZQ?=
+ =?utf-8?B?dXFvRHZSVjZ6ZTBsbjhYWXpmTFpSUGswOWl1cGhZZUNQa0dYYkFIZzNhaGg5?=
+ =?utf-8?B?RWFHclVlSGVaYkh1SkVRQVR5emZidUMybHhSTTF0UWdjeVlQUURvS0t6aWFR?=
+ =?utf-8?B?bGpzTEZFUmNFTlBlZzFaQzlNbWdSUmFSMUY5TWFLTHlEWWVUYzRIamh5dVdj?=
+ =?utf-8?B?cEFTUE04cnNNK0JKdTk5dVVXS3UydG1WTUVqbHBiL3VpNHR0VzQvRHpMcnE1?=
+ =?utf-8?B?Yk9UOG1QOCtGcXhib3k2RWprMHZ5K0MyOHZaZXI2MGI4enVqSnp4VXhTdFFE?=
+ =?utf-8?B?aUQ4UHgvb3RscWlFTk54UW9YZEFmUGFmUjErL295dnRsWGl3TWtVUGhQUzJM?=
+ =?utf-8?B?RVVGczBMcm1Nd0hvR01VenM4VGtQdXdHRnlOS2R6YTdEbVM4Uk1mRkw5T3Ft?=
+ =?utf-8?B?US9yMktZVFA1Vko4aS9TVzFLTHB3WGxwSWp2enRXS2YyeDBHTm01YUJqVGJ1?=
+ =?utf-8?B?NXZuT3l0OE1MdnFtSmhmYmRWMENhSVNzMktra1lZUzJ4cUx5S2lxTE1UbS93?=
+ =?utf-8?B?VDBNMHgzMjhYcCsvS0JndGUvUVBWR3AvMEdSSFhQRzAwclE1eVFwT1hWTkVI?=
+ =?utf-8?B?Q1pWUWh5R0J1eFJnbGZWSlhVcm1ZMnRtVk5LMGJyNmw5bUhiZ2puVmRaYU1n?=
+ =?utf-8?B?QmE0SThYUnVzemZMVVMrYmNnVE5sSXJxa1Nld0Nzb3I1VUZEZGJsaXZFS2cx?=
+ =?utf-8?B?T3VxRlRNYUtOQkRrdTNzL25VSmtGSjRudkNJZEx3b0REMGZETTFhdWRDbFpR?=
+ =?utf-8?B?U09wY0I0bFk0WWdxU0Z1WDlaSVZNdHJtQlV4RWNxRVQxRDNXWU9uVHVRMEdv?=
+ =?utf-8?B?YURXb2hYcmtvV2loUXgzaFRhdjJHQlRGNkhBZXM0QVRhb2dvYzdhcGk0dENO?=
+ =?utf-8?B?UDVYN3VIZUpwbk9aQ0srNmZSazVpUkExNkpmbFZzSitZK0RSeTlnZHEvYjBE?=
+ =?utf-8?B?WUQvWHBUSXF5cmNCa21IeDFjeDBndUtVcUpxMXp5cS9uQStpaFZBdklQOWhq?=
+ =?utf-8?B?amtmUTZVZ0JTZDBGWTVIWGt5Uk9Nc3dlRWM5TWQzY2xpc0lLNTRDOGJ1NDJx?=
+ =?utf-8?B?QXJVTUVzNDYzM3VTZXcyTFNWZEJHekRsc0ZiZ1l4S1BMNUUyTU5QU2M0aTdR?=
+ =?utf-8?B?WUlWSGxtamdvOWY0T2VYb3VjQkpKeEZOUFN6NjQ3Z2RxSnowL1VRUktXS2tE?=
+ =?utf-8?B?ZmkrdEFwMFdiTUozakV5K2p2b2I0bStOaCt5c2V3UXJ3c2hpZWpPZkc1TS9F?=
+ =?utf-8?Q?p0FVo6sThTrtExo9D/ohEKZopi2tdeLOziupIGIHCS+m?=
+MIME-Version: 1.0
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title></title>
+</head>
+<body>
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Dear Colleague,</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">We would like to let you know that the final submission due date for the Computing Conference 2020 is 15 October 2019.</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Please consider and plan for submitting papers and encourage your colleagues, research group members and fellow scientists to contribute and participate in this conference.&nbsp;</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Computing Conference 2020 proceedings will be published in the Springer series &quot;Advances in Intelligent Systems and Computing&quot; and submitted for indexing to ISI Proceedings, EI-Compendex, DBLP, SCOPUS, Google Scholar and Springerlink.&nbsp;</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Online Submission System:&nbsp;<a href="https://saiconference.com/Computing2020/Submit">https://saiconference.com/Computing2020/Submit</a></span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Best,<br>
+Supriya Kapoor</span></span><br>
+<font face="helvetica"><span style="font-size: 12px;">Conference Manager</span></font></p>
+
+<p>___________________________________________________________________________</p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;"><strong>Computing Conference 2020 - Call for Papers</strong><br>
+16-17 July 2020 - London, United Kingdom<br>
+&nbsp;<br>
+We'd like to invite you to submit your papers&nbsp;for the Computing Conference 2020 to be held from 16-17 July 2020 in London, UK.</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Computing Conference is a research conference held in London&nbsp;since 2013. The conference series has featured keynote talks, special sessions, poster presentation, tutorials, workshops, and contributed papers each year.&nbsp;</span></span><span style="font-size:12px;"><span style="font-family:helvetica;">The goal of the conference is to be a premier venue for researchers and industry practitioners to share new ideas, research results and development experiences in computing and related fields.</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Conference Tracks include&nbsp;Computing, Artificial Intelligence, Machine Vision, Security, Communication, Ambient Intelligence, e-Learning etc.</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;"><strong>Important Dates (Regular Submission):&nbsp;</strong><br>
+Paper Submission Due: 15 October 2019<br>
+Acceptance Notification : 15 November 2019<br>
+Author Registration : 01 December 2019<br>
+Camera Ready Submission : 01 January 2019<br>
+Conference Dates : 16-17 July 2020</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Complete details are available on the conference website : <a href="http://saiconference.com/Computing">http://saiconference.com/Computing</a></span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Computing Conference 2020 proceedings will be published in Springer series &quot;Advances in Intelligent Systems and Computing&quot; and submitted for indexing to ISI Proceedings, EI-Compendex, DBLP, SCOPUS, Google Scholar and Springerlink. The publications within &quot;Advances in Intelligent Systems and Computing&quot; are primarily proceedings of important conferences, symposia and congresses. They cover significant recent developments in the field, both of a foundational and applicable character.</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Please get in touch if you would like to contribute in more ways; and feel free to circulate this information among your colleagues/students.</span></span></p>
+
+<p><span style="font-size:12px;"><span style="font-family:helvetica;">Looking forward to your contributions.&nbsp;<br>
+&nbsp;<br>
+Regards,<br>
+Kohei Arai<br>
+Program Chair, Computing Conference 2020</span></span></p>
+
+<p><a href="http://52.21.30.170/sendy/unsubscribe/XVYl7Zlp2QqJ763xOyxe9q50BHNVJGlSUpvq5kLRbifQY/tzhWOrYBvVgcLsPus55vYA/PyumXRAbmwTa892yp2SCYVCA"><span style="font-family:helvetica;"><span style="font-size:10px;">Click here to Unsubscribe</span></span></a></p>
+</body>
+</html>

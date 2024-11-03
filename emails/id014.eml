@@ -1,0 +1,354 @@
+Received: from BYAPR08MB4375.namprd08.prod.outlook.com (2603:10b6:a03:114::23)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR21CA0013.NAMPRD21.PROD.OUTLOOK.COM; Thu, 5 Dec 2019 05:08:21 +0000
+Received: from MWHPR14CA0028.namprd14.prod.outlook.com (2603:10b6:300:12b::14)
+ by BYAPR08MB4375.namprd08.prod.outlook.com (2603:10b6:a02:f7::24) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2495.21; Thu, 5 Dec
+ 2019 05:08:20 +0000
+Received: from CO1NAM04FT023.eop-NAM04.prod.protection.outlook.com
+ (2603:10b6:300:12b:cafe::dc) by MWHPR14CA0028.outlook.office365.com
+ (2603:10b6:300:12b::14) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2516.12 via Frontend
+ Transport; Thu, 5 Dec 2019 05:08:20 +0000
+Authentication-Results: spf=pass (sender IP is 185.189.236.28)
+ smtp.mailfrom=bnc3.mailjet.com; calpoly.edu; dkim=pass (signature was
+ verified) header.d=bnc3.mailjet.com;calpoly.edu; dmarc=fail action=none
+ header.from=icict.co.uk;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of bnc3.mailjet.com
+ designates 185.189.236.28 as permitted sender)
+ receiver=protection.outlook.com; client-ip=185.189.236.28;
+ helo=o28.p25.mailjet.com;
+Received: from o28.p25.mailjet.com (185.189.236.28) by
+ CO1NAM04FT023.mail.protection.outlook.com (10.152.90.148) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2495.18 via Frontend Transport; Thu, 5 Dec 2019 05:08:19 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; q=dns/txt;
+  d=bnc3.mailjet.com; i=support=3Dicict.co.uk@bnc3.mailjet.com; s=mailjet;
+  h=message-id:mime-version:from:to:subject:date:list-id:list-unsubscribe-post:
+  list-unsubscribe:precedence:x-campaignid:x-csa-complaints:x-mj-mid:
+  x-mj-smtpguid:x-report-abuse-to:feedback-id:content-type;
+  bh=OOfPe/kwB8Yq34Jvw+G6m3U+yNPncXycUgY6ZyP0puc=;
+  b=jz2VKkkObWhyc8NEBTdacPlMCn8Q5uc4be92mZkaLFgXJiEBIblKGvxho
+ 1qoGLUIbrymCfLugR34gd03V6Suxgt50NTa+ued4dwxrZ+/oaabTApl6Yb41
+ mTLZqGQPJchS7Lbg+in8sBEUDl09YjKUpuMClFHGdGh1ZATP12qWtU=
+Message-Id: <ec6474ac.AL4AAFk7zrAAAAABUZwAAACVzPsAAAAAIlEAABHkAA_bpQBd6JDB@mailjet.com>
+From: ICICT 2020 London <support@icict.co.uk>
+To: foaad@calpoly.edu
+Subject: 5th ICICT 2020 - Call for Submissions : (Proceedings by Springer)
+ :: 20 - 21 February, 2020, London
+Date: Thu,  5 Dec 2019 05:08:17 +0000 (UTC)
+List-Id: <support.icict.co.uk.xpzk3-l0i.mj>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe:
+ <mailto:unsub-ec6474ac.xpzk3.swg0420r37ww@bnc3.mailjet.com>,
+	<https://xpzk3.mjt.lu/unsub2?m=AL4AAFk7zrAAAAABUZwAAACVzPsAAAAAIlEAABHkAA_bpQBd6JDBfOqHnKCQTnue3EuqPvfY_wAPmaE&b=ec6474ac&e=e8078497&x=pRne8ppQzs9GxPYsMmezo1bvy4UQfpLF7peOVeyDXr0>
+Precedence: bulk
+X-CampaignID: 86428
+X-CSA-Complaints: whitelist-complaints@eco.de
+X-MJ-Mid:
+ AL4AAFk7zrAAAAABUZwAAACVzPsAAAAAIlEAABHkAA_bpQBd6JDBfOqHnKCQTnue3EuqPvfY_wAPmaE
+X-MJ-SMTPGUID: 7cea879c-a090-4e7b-9edc-4baa3ef7d8ff
+X-REPORT-ABUSE-TO: Message sent by Mailjet please report to
+	abuse@mailjet.com with a copy of the message
+Feedback-Id: 1022369.1039269:MJ
+Content-Type: multipart/alternative; boundary="=-Fq3IHtKDpXdnCyLu+MUU"
+Return-Path:
+ ec6474ac.AL4AAFk7zrAAAAABUZwAAACVzPsAAAAAIlEAABHkAA_bpQBd6JDB@bnc3.mailjet.com
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Dec 2019 05:08:19.9827
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ bb67eaf0-8173-4e2e-1a12-08d77941252e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:185.189.236.28;IPV:NLI;CTRY:FR;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(286005)(45074003)(189003)(199004)(1096003)(36756003)(966005)(36736006)(15188155005)(19810500001)(6916009)(7636002)(305945005)(7596002)(22186003)(18926415008)(71190400001)(58800400005)(4006050)(356004)(75640400001)(2351001)(76236002)(33964004)(6506007)(956004)(336012)(14444005)(246002)(6306002)(42882007)(16799955002)(8676002)(6486002)(16586007)(9686003)(7696005)(2361001)(28505004)(2171002)(25786009)(26005)(13710500001);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4375;H:o28.p25.mailjet.com;FPR:;SPF:Pass;LANG:en;PTR:o28.p25.mailjet.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT023.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: bb67eaf0-8173-4e2e-1a12-08d77941252e
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4375:
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:2;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Dec 2019 05:08:19.6425
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: bb67eaf0-8173-4e2e-1a12-08d77941252e
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4375
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.0937681
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2516.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?Rk1kSWxpQnNGdHpTd3B1cy9yV2dFS3oxd21ncmVMVk8zdzAxb1dUbGZsWWRE?=
+ =?utf-8?B?MkowSlM5am5BVFp0cnlmT3FRUmg1VEt5VWpHM0NuVUp0OTZHbjF3enc3MG1S?=
+ =?utf-8?B?bE43L2cvUUQvODltOFdCRThaakIyREtpZUw2RVV3TVVzbWNrSldsZkx0d0ti?=
+ =?utf-8?B?UFQ3WjV2V2trYTcxZjVDT3QxUzljWTBCSE9zMXlNelBOV2lTdy91L1ROVW5t?=
+ =?utf-8?B?eHZrenhZdFhBNENvcUIraGNjV3N5TmRKMUo5Q3JIVFlhUGhBMnhpMzRrOXcy?=
+ =?utf-8?B?RU1LZXdvck83SnpUZnE4eGNlZjlZcEIrWU43WFpIeWpiOTh1NVBrSGNuMUdH?=
+ =?utf-8?B?M1B6b0ptS1VqMnFzZGxoTkd0TUt0TDdrU1M3TWJmeHhyNHlyV2lhRk5Kc1Iz?=
+ =?utf-8?B?YTQ4SGQxNHRxSVl5bk5GZTNvdmpwdHNQZS9PejN3QnZRR3pLWm9PY29nMG5n?=
+ =?utf-8?B?S3pxcURURkhUSXNSeHNiTWhXc2hUMlhFWU96Mys4UDRUQkczMnlEMjAxVXIx?=
+ =?utf-8?B?bDFxYWc2Sm14R3BMcGxwcThDVzIySFJEV2s0VE5JaWNveTJZczNqYWJwcHJW?=
+ =?utf-8?B?dElIc1JDUVA0a1JkRXgvODVMOERjN3h2ODZhWjRFeEx4Y051T0JjMjA2NUF4?=
+ =?utf-8?B?TThYSlplMHV1TjNIeVVScndJemcyWFp4MGQvTUhpeTN6dHp6UVB1S2pFaXM2?=
+ =?utf-8?B?ZDBRd1pqWStzMmZ0UVZBSDNCQ29IR1VVS3lxOHNIZWpadUJWQllxTjRPZzhm?=
+ =?utf-8?B?bTVmUXhBbjhIK0VmYm9JWWlQb09UL3JDenppeVVmSXIvSEJ1eFd3OE5NY2dJ?=
+ =?utf-8?B?MXl1VkZIaHlyMnBDRWNBSnBKaGxvMkVITjV5MTlSVmMvZ0krQnYzb2F6Z2pq?=
+ =?utf-8?B?QStRVDYwU3dWZlREWE5LSjU0YWRIZnhwczJYeDk5MjRrTXhYM3FnWS94a1lO?=
+ =?utf-8?B?ZjBSZ2ZHaGx4NGlFSmp6Z0psTWN1Z3JuSDRpTzc1RS9iUVVJaFN0cndmZ1Y1?=
+ =?utf-8?B?S01oNnNaQ0tGMGo3ekZBcVRBaFFNak9SQ2pvQ3Bia1ptMDJXajM5K2ZsbTJB?=
+ =?utf-8?B?ZXVSdFFlaTlTYnpGZVRtMXY3SkxBeHFoVTkrYTlDelBLR2dTZjZyb3dvQ3hW?=
+ =?utf-8?B?QTVIR3RaTWI5c3hTcXdTQkdXZDBBVXZYZlBNYWNleS80QTlKZ2NRbSsvVkw1?=
+ =?utf-8?B?WVhNYjc5T2FvTDhMSFNRWjE5Z05HZ1NQVTBEcWYzYk44SzliOGpoMkpQTWhr?=
+ =?utf-8?B?NndhbW1BWkwyekI2c2Q1ajlYWmhKUDNQWDJaRUJZOW9zclBCM0RWNHE3R3Az?=
+ =?utf-8?B?NGxkS2ltQkxoNXV3bnhsNXMxYmQxM3JsZ0h4RjFKZHBxcWhITmVPc0VKS0Zw?=
+ =?utf-8?B?WUF0ZDdLSkQ1VEZhZG1PTEF1blpzVHFGOU5TdWljdkViVWFOYjgyL2RxOG0y?=
+ =?utf-8?B?dlhKSTh5QkdaTVZGbnI4MXJydWFvQklZWnZiM2ZlYmJrQzJHQmVYaTlpR1Nx?=
+ =?utf-8?B?NFhTb2J0cVh6UVZEZ0dZeTcwTFZCdzcvM3hJNkNCL1BIVlBMNS9DYmdwblJF?=
+ =?utf-8?Q?GoCVR/Y5freTapbkR35suEW+M=3D?=
+MIME-Version: 1.0
+
+--=-Fq3IHtKDpXdnCyLu+MUU
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+[Apologies if you receive multiple copies of this CFP]
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D
+ =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D
+ Springer ICICT 2020 | 20 - 21 February 2020 | London,=C2=A0United Kingdom.=
+Fifth International Congress on Information and Communication Technology
+ https://icict.co.uk/ [https://icict.co.uk/]
+ =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D
+ =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D
+=20
+Early Bird Important Dates:
+=20
+- 30 October 2019 : Paper Submission Deadline
+ - 20 November 2019 : Author Notifications
+ - 30 November 2019: Camera-Ready Versions Due
+ Publication :All ICICT 2020 presented papers will be published in conferen=
+ce proceedings by Springer AISC. ISBN Number - 2194-5357 Series:=20
+ http://www.springer.com/
+series/11156
+[http://www.springer.com/series/11156]
+=20
+
+Indexing :  The books of this series are submitted to ISI Proceedings, EI-C=
+ompendex, DBLP, SCOPUS, Google Scholar and Springerlink **).
+
+PAPERS SUBMISSION :  Submissions of high quality papers in all areas of ICT=
+ and its applications.The submissions are handled only through the Easychai=
+r website at: http://icict.co.uk/call-for-
+ papers.php#section02
+=20
+
+Organizing & Associated Partners=C2=A0:City of Oxford College, Active Learn=
+ing, InterYIT -IFIP, Global Knowledge Research  Foundation.
+
+Venue=C2=A0:Newton Room, Hamilton Centre, Brunel Conference Services, Kings=
+ton Lane, Uxbridge UB8 3PH, London, UK.
+=20
+Dear Friends and Colleagues,
+
+ICICT 2020 invites various research associates to discuss the current statu=
+s, technical challenges, of the future services and applications, as part o=
+f a rich conference program including Keynote talks, Paper Presentation as =
+well as Regular and Special Sessions.
+=20
+The fifth edition of ICT conference will target state-of-the-art as well as=
+ emerging topics pertaining to ICT and its Supported e-Agriculture and Rura=
+l Development Technologies, e-Education and Computing Technologies, e-Minin=
+g and Inclusive Technologies for implementation for Engineering and Manager=
+ial Applications through ICT.
+
+
+The topics of interest include but are not limited to the following:
+  * Track 1:  COMMUNICATIONS
+ * Track 2:  INFRASTRUCTURE AND COMPUTATION
+ * Track 3:  ENGINEERING APPLICATIONS
+ * Track 4:  E-GOVERNANCE AND GOVERNMENT
+ * Track 5:  TECHNOLOGY COMPUTATION
+ * Track 6:  INTELLIGENT SYSTEMS
+ * Track 7:  ELECTRONIC SYSTEMS & CIRCUITS
+ * Track 8:  SIGNAL AND IMAGE PROCESSING
+ * Track 9:  HEALTH INFORMATICS
+
+
+Authors are kindly invited to submit their formatted full papers including =
+results, tables, figures, and references. All submissions are handled throu=
+gh the EasyChair at=20
+ http://icict.co.uk/call-for-
+papers.php#section02
+[https://sable.madmimi.com/c/257469?id=3D190485.623.1.65d8ae1e508cb99a541ae=
+4a5147ce2ea] =20
+=20
+
+
+For any query, Please write mail on=20
+ info@icict.co.uk [info@icict.co.uk]  or a drop message on=20
+ https://icict.co.uk/contact.
+php
+[https://icict.co.uk/contact.php]  .=
+
+--=-Fq3IHtKDpXdnCyLu+MUU
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+>[Apologies if you receive multiple copies of this CFP]</p>
+<div dir=3D"ltr">=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</div>
+<div dir=3D"ltr"><span style=3D"color: #000080;"><strong>5<sup>th</sup>&nbs=
+p;</strong><strong>ICICT 2020&nbsp;( Proceedings by Springer )</strong></sp=
+an>&nbsp;|&nbsp;20 - 21 February 2020 | London,&nbsp;United Kingdom</div>
+<div dir=3D"ltr"><strong>Fifth International Congress on Information and Co=
+mmunication Technology&nbsp;</strong></div>
+<div dir=3D"ltr"><a href=3D"http://xpzk3.mjt.lu/lnk/AL4AAFk7zrAAAAABUZwAAAC=
+VzPsAAAAAIlEAABHkAA_bpQBd6JDBfOqHnKCQTnue3EuqPvfY_wAPmaE/1/zquHzJiS1AEk_YeN=
+3825bQ/aHR0cDovL3hwemszLm1qdC5sdS9sbmsvQU1NQUFGRFEyeG9BQUFBQXYtSUFBQUNSbzFn=
+QUFBQUFJbEVBQUJGMkFBX2JwUUJkcnhFa0lhY3pET0gyVGQyd2wyQVFSSTQ2WUFBUG1hRS8xL3B=
+oZHIxMTVfMW5JNzdYd2cxT0tscGcvYUhSMGNITTZMeTlwWTJsamRDNWpieTUxYXk4" target=
+=3D"_blank" rel=3D"noreferrer" data-saferedirecturl=3D"https://www.google.c=
+om/url?q=3Dhttp://xpzk3.mjt.lu/lnk/AMMAAFDQ2xoAAAAAv-IAAACRo1gAAAAAIlEAABF2=
+AA_bpQBdrxEkIaczDOH2Td2wl2AQRI46YAAPmaE/1/phdr115_1nI77Xwg1OKlpg/aHR0cHM6Ly=
+9pY2ljdC5jby51ay8&amp;source=3Dgmail&amp;ust=3D1572670724244000&amp;usg=3DA=
+FQjCNFkPeD8eMR-d6oDRetLr8B91QybVQ">https://icict.co.uk/</a></div>
+<div dir=3D"ltr">=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</div>
+
+<p><span style=3D"color: #000080;"><strong>Important Date<span class=3D"gma=
+il_default">&nbsp;</span>:&nbsp;<span style=3D"color: #000000;">10th Januar=
+y 2020</span><span style=3D"color: #000080;"><strong>[&nbsp;Extended Paper =
+Submission Deadline ]</strong></span></strong></span></p>
+<p><span style=3D"color: #000080;"><strong>Venue<span class=3D"gmail_defaul=
+t">&nbsp;:&nbsp;</span><span style=3D"color: #000000;">Newton Room, Brunel =
+Conference Services, Kingston Lane, Uxbridge UB8 3PH, London, UK.</span></s=
+trong></span></p>
+<div><strong><span style=3D"color: #000080;">Publication&nbsp;</span><span =
+class=3D"gmail_default"><span style=3D"color: #000080;">:</span>&nbsp;</spa=
+n></strong>All ICICT 2020 presented papers will be published in conference =
+proceedings by Springer AISC. ISBN Number - 2194-5357 Series:&nbsp;<a href=
+=3D"http://xpzk3.mjt.lu/lnk/AL4AAFk7zrAAAAABUZwAAACVzPsAAAAAIlEAABHkAA_bpQB=
+d6JDBfOqHnKCQTnue3EuqPvfY_wAPmaE/2/V__plBzEqSQYN_V_TDE-Hw/aHR0cDovL3hwemszL=
+m1qdC5sdS9sbmsvQU1NQUFGRFEyeG9BQUFBQXYtSUFBQUNSbzFnQUFBQUFJbEVBQUJGMkFBX2Jw=
+UUJkcnhFa0lhY3pET0gyVGQyd2wyQVFSSTQ2WUFBUG1hRS8yL2twbE52azNmb2R5NENzcnctSjF=
+FMGcvYUhSMGNEb3ZMM2QzZHk1emNISnBibWRsY2k1amIyMHZjMlZ5YVdWekx6RXhNVFUy" targ=
+et=3D"_blank" rel=3D"noreferrer" data-saferedirecturl=3D"https://www.google=
+.com/url?q=3Dhttp://xpzk3.mjt.lu/lnk/AMMAAFDQ2xoAAAAAv-IAAACRo1gAAAAAIlEAAB=
+F2AA_bpQBdrxEkIaczDOH2Td2wl2AQRI46YAAPmaE/2/kplNvk3fody4Csrw-J1E0g/aHR0cDov=
+L3d3dy5zcHJpbmdlci5jb20vc2VyaWVzLzExMTU2&amp;source=3Dgmail&amp;ust=3D15726=
+70724245000&amp;usg=3DAFQjCNFdSH4R-fRpXsAyitEEitWUSMFqEQ">http://www.spring=
+er.com/ series/11156</a>&nbsp;</div>
+<div>
+<p><span style=3D"color: #000080;"><strong>Indexing :</strong></span>&nbsp;=
+The books of this series are submitted to ISI Proceedings, EI-Compendex, DB=
+LP, SCOPUS, Google Scholar and Springerlink **).&nbsp;</p>
+</div>
+
+</div>
+<div dir=3D"ltr">
+<p><span style=3D"color: #000080;"><strong>Papers Submission :</strong></sp=
+an>&nbsp;Submissions of high quality papers in all areas of ICT and its app=
+lications.The submissions are handled only through the Easychair website at=
+:&nbsp;<a href=3D"http://xpzk3.mjt.lu/lnk/AL4AAFk7zrAAAAABUZwAAACVzPsAAAAAI=
+lEAABHkAA_bpQBd6JDBfOqHnKCQTnue3EuqPvfY_wAPmaE/3/WSByYV1qpFrgkgAj1WNGVA/aHR=
+0cDovL2ljaWN0LmNvLnVrL2NhbGwtZm9yLXBhcGVycy5waHAjc2VjdGlvbjAy#section02" ta=
+rget=3D"_blank" rel=3D"noreferrer" data-saferedirecturl=3D"https://www.goog=
+le.com/url?q=3Dhttp://icict.co.uk/call-for-papers.php%23section02&amp;sourc=
+e=3Dgmail&amp;ust=3D1572670724245000&amp;usg=3DAFQjCNHMENRKsOO-YA5vgLbKK_r8=
+PP5QOA">http://icict.co.uk/call-for-<wbr>papers.php#section02</a></p>
+<p><strong><span style=3D"color: #000080;">Organizing &amp; Associated Part=
+ners</span><span class=3D"gmail_default"><span style=3D"color: #000080;">&n=
+bsp;:</span>&nbsp;</span></strong>G<span class=3D"gmail_default">lobal Know=
+ledge Research</span>&nbsp;Foundation, Activate Learning, InterYIT&nbsp;<sp=
+an class=3D"gmail_default">-&nbsp;</span>International Federation for Infor=
+mation Processing,  Springer.</p>
+</div>
+
+<p><span style=3D"color: #000080;"><strong>Dear Friends and Colleagues,</st=
+rong></span></p>
+<p>ICICT 2020 invites various research associates to discuss the current st=
+atus, technical challenges, of the future services and applications, as par=
+t of a rich conference program including Keynote talks, Paper Presentation =
+as well as Regular and Special Sessions.</p>
+<p><br>The fifth edition of ICT conference&nbsp;will target state-of-the-ar=
+t as well as emerging topics pertaining to ICT and its Supported e-Agricult=
+ure and Rural Development Technologies, e-Education and Computing Technolog=
+ies, e-Mining and Inclusive Technologies for implementation for Engineering=
+ and Managerial Applications through ICT.</p>
+<div dir=3D"ltr">&nbsp;</div>
+<div dir=3D"ltr"><span style=3D"color: #000080;"><strong>The Topics of inte=
+rest include but are not limited to the following<span class=3D"gmail_defau=
+lt">&nbsp;</span>:</strong></span>
+<ul type=3D"disc">
+<li><span style=3D"color: #000000;"><strong>Track 1:</strong></span>&nbsp;C=
+OMMUNICATIONS</li>
+<li><strong>Track 2:</strong>&nbsp;INFRASTRUCTURE AND COMPUTATION</li>
+<li><strong>Track 3:</strong>&nbsp;ENGINEERING APPLICATIONS</li>
+<li><strong>Track 4:</strong>&nbsp;E-GOVERNANCE AND GOVERNMENT</li>
+<li><strong>Track 5:</strong>&nbsp;TECHNOLOGY COMPUTATION</li>
+<li><strong>Track 6:</strong>&nbsp;INTELLIGENT SYSTEMS</li>
+<li><strong>Track 7:</strong>&nbsp;ELECTRONIC SYSTEMS &amp; CIRCUITS</li>
+<li><strong>Track 8:</strong>&nbsp;SIGNAL AND IMAGE PROCESSING</li>
+<li><strong>Track 9:</strong>&nbsp;HEALTH INFORMATICS</li>
+</ul>
+</div>
+<div dir=3D"ltr">&nbsp;</div>
+<div dir=3D"ltr">Authors are kindly invited to submit their formatted full =
+papers including results, tables, figures, and references. All submissions =
+are handled through the Easy<span class=3D"gmail_default">&nbsp;</span><spa=
+n class=3D"gmail_default">C</span>hair at&nbsp;<a href=3D"http://xpzk3.mjt.=
+lu/lnk/AL4AAFk7zrAAAAABUZwAAACVzPsAAAAAIlEAABHkAA_bpQBd6JDBfOqHnKCQTnue3Euq=
+PvfY_wAPmaE/4/EvE4VdTYOd1LIuZXpWIl9g/aHR0cDovL3hwemszLm1qdC5sdS9sbmsvQU1NQU=
+FGRFEyeG9BQUFBQXYtSUFBQUNSbzFnQUFBQUFJbEVBQUJGMkFBX2JwUUJkcnhFa0lhY3pET0gyV=
+GQyd2wyQVFSSTQ2WUFBUG1hRS8zL09aYkY3aDFGU3N0TFlKRXYxWUNTN3cvYUhSMGNITTZMeTl6=
+WVdKc1pTNXRZV1J0YVcxcExtTnZiUzlqTHpJMU56UTJPVDlwWkQweE9UQTBPRFV1TmpJekxqRXV=
+OalZrT0dGbE1XVTFNRGhqWWprNVlUVTBNV0ZsTkdFMU1UUTNZMlV5WldF" target=3D"_blank=
+" rel=3D"noreferrer" data-saferedirecturl=3D"https://www.google.com/url?q=
+=3Dhttp://xpzk3.mjt.lu/lnk/AMMAAFDQ2xoAAAAAv-IAAACRo1gAAAAAIlEAABF2AA_bpQBd=
+rxEkIaczDOH2Td2wl2AQRI46YAAPmaE/3/OZbF7h1FSstLYJEv1YCS7w/aHR0cHM6Ly9zYWJsZS=
+5tYWRtaW1pLmNvbS9jLzI1NzQ2OT9pZD0xOTA0ODUuNjIzLjEuNjVkOGFlMWU1MDhjYjk5YTU0M=
+WFlNGE1MTQ3Y2UyZWE&amp;source=3Dgmail&amp;ust=3D1572670724245000&amp;usg=3D=
+AFQjCNHHKfcT0f9iNGem-56wpvosNlIgWg">http://icict.co.uk/call-for- papers.php=
+#section02</a></div>
+<div dir=3D"ltr">&nbsp;</div>
+<div dir=3D"ltr">For any query, Please write mail on&nbsp;<a href=3D"mailto=
+:info@icict.co.uk" target=3D"_blank" rel=3D"noreferrer">info@icict.co.uk</a=
+>&nbsp;or a drop message on&nbsp;<a href=3D"http://xpzk3.mjt.lu/lnk/AL4AAFk=
+7zrAAAAABUZwAAACVzPsAAAAAIlEAABHkAA_bpQBd6JDBfOqHnKCQTnue3EuqPvfY_wAPmaE/5/=
+l98QuekCacluuPo0AzCaHA/aHR0cDovL3hwemszLm1qdC5sdS9sbmsvQU1NQUFGRFEyeG9BQUFB=
+QXYtSUFBQUNSbzFnQUFBQUFJbEVBQUJGMkFBX2JwUUJkcnhFa0lhY3pET0gyVGQyd2wyQVFSSTQ=
+2WUFBUG1hRS80L3hCOWNrS1BlMXlJcjlvRjJkQmoyQUEvYUhSMGNITTZMeTlwWTJsamRDNWpieT=
+UxYXk5amIyNTBZV04wTG5Cb2NB" target=3D"_blank" rel=3D"noreferrer" data-safer=
+edirecturl=3D"https://www.google.com/url?q=3Dhttp://xpzk3.mjt.lu/lnk/AMMAAF=
+DQ2xoAAAAAv-IAAACRo1gAAAAAIlEAABF2AA_bpQBdrxEkIaczDOH2Td2wl2AQRI46YAAPmaE/4=
+/xB9ckKPe1yIr9oF2dBj2AA/aHR0cHM6Ly9pY2ljdC5jby51ay9jb250YWN0LnBocA&amp;sour=
+ce=3Dgmail&amp;ust=3D1572670724245000&amp;usg=3DAFQjCNEja20E6kuZ9-wqsptBPRD=
+lnp9W-g">https://icict.co.uk/contact. php&nbsp;</a>&nbsp;</div>
+<p>Sincerely Yours - Convener ICICT 2020</p>
+
+<center><a href=3D"http://xpzk3.mjt.lu/unsub2?hl=3Den&amp;m=3DAL4AAFk7zrAAA=
+AABUZwAAACVzPsAAAAAIlEAABHkAA_bpQBd6JDBfOqHnKCQTnue3EuqPvfY_wAPmaE&amp;b=3D=
+ec6474ac&amp;e=3De8078497&amp;x=3DpRne8ppQzs9GxPYsMmezo1bvy4UQfpLF7peOVeyDX=
+r0">CLICK HERE TO UNSUBSCRIBE</a></center>
+
+<br><img src=3D"http://xpzk3.mjt.lu/oo/AL4AAFk7zrAAAAABUZwAAACVzPsAAAAAIlEA=
+ABHkAA_bpQBd6JDBfOqHnKCQTnue3EuqPvfY_wAPmaE/ef6a6454/e.gif" height=3D"1" wi=
+dth=3D"1" alt=3D"" border=3D"0" style=3D"height:1px;width:1px;border:0;">
+
+--=-Fq3IHtKDpXdnCyLu+MUU--

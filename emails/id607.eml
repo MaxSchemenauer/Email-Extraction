@@ -1,0 +1,492 @@
+Received: from MWHPR0801MB3771.namprd08.prod.outlook.com
+ (2603:10b6:a03:74::24) by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS
+ via BYAPR05CA0047.NAMPRD05.PROD.OUTLOOK.COM; Wed, 22 Jan 2020 09:39:15 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=fA7jGwPVxfh6FrqAHsGn8NYtW505J4WaQI346W94/ILB4ofPFZNR4GqJOtIlNSrS/hsILW9lgMqWDYXtq+a07tpFJt9Am+4Vvgvt+iL4FaxckYTzTHkk6irBc2NNwxlS6r0e/dIrtnYzenH/IVA9BERCPBTpuCTnJQY+84ZjFz7voZ7aglvpx88QUEIYINPplEdyI0gXMkYNK1dvcotIIfYvoUv8Mmwxu4eh0rmiTeVNOINun/+4A57+4jsof1q7XeX4X9mtwtDjakG9Vpk6Mn43tudo/LzcyGBIwluqYB7MmxZfLu3mE4xIMPMhn4H871VG4WCh3kWcMm4L5tFbLQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=ckk8QuNDcM+yuV0kfn4zUC2Ea0n78xkXWlY3ebcaHt8=;
+ b=H3AIamLabn0PXhzEwhg7CgskzFM3d69FEl+VyL0g1Dlo4YrXUXcEGR96GlY+vWKbt7lkd0prt0eQwIrI1QTn+N5WFSvjtnLdSUmyAWlNrMd9XXkOXOzfArgyPYbpPlEFvml/aDI6zUXxQJPzP6j9Txvwxlp25FbGWL6UInBNGoSUncXmjSr73OCqUit00HVHTcfiuJ6HXay+24P71nejG6cJ+FYiYEF7xjPW0ZDY9eET+sOMGqg73vUq9t0GDVaalqJNnl4Xhdk2MXKdE/Bxyexp+pZktyjRilxeEw6303+HXXQ4AoSsfqldL5ocBkv0myBaflJ3t1wp+oyQrLYfyg==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 193.166.164.159) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=lists.tuni.fi;
+ dmarc=fail (p=none sp=quarantine pct=100) action=none header.from=gmail.com;
+ dkim=fail (signature did not verify) header.d=tuni.onmicrosoft.com; dkim=fail
+ (signature did not verify) header.d=gmail.com; arc=fail (47)
+Received: from BYAPR08CA0047.namprd08.prod.outlook.com (2603:10b6:a03:117::24)
+ by MWHPR0801MB3771.namprd08.prod.outlook.com (2603:10b6:301:80::32) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2644.24; Wed, 22 Jan
+ 2020 09:39:03 +0000
+Received: from CO1NAM04FT011.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::201) by BYAPR08CA0047.outlook.office365.com
+ (2603:10b6:a03:117::24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2644.18 via Frontend
+ Transport; Wed, 22 Jan 2020 09:39:03 +0000
+Authentication-Results: spf=pass (sender IP is 193.166.164.159)
+ smtp.mailfrom=lists.tuni.fi; calpoly.edu; dkim=fail (signature did not
+ verify) header.d=tuni.onmicrosoft.com;calpoly.edu; dmarc=fail action=none
+ header.from=gmail.com;compauth=pass reason=102
+Received-SPF: Pass (protection.outlook.com: domain of lists.tuni.fi designates
+ 193.166.164.159 as permitted sender) receiver=protection.outlook.com;
+ client-ip=193.166.164.159; helo=smtp2.tuni.fi;
+Received: from smtp2.tuni.fi (193.166.164.159) by
+ CO1NAM04FT011.mail.protection.outlook.com (10.152.90.158) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2665.18 via Frontend Transport; Wed, 22 Jan 2020 09:39:01 +0000
+Received: from lists.tuni.fi (lists.tuni.fi [193.166.164.155])
+	by smtp2.tuni.fi (Postfix) with ESMTP id 707D3214C;
+	Wed, 22 Jan 2020 11:38:58 +0200 (EET)
+Received: from lists.tuni.fi (localhost [127.0.0.1])
+	by lists.tuni.fi (Postfix) with ESMTP id 56B172738;
+	Wed, 22 Jan 2020 11:38:58 +0200 (EET)
+X-Original-To: gamesnetwork@listrelay.tuni.fi
+Delivered-To: gamesnetwork@listrelay.tuni.fi
+Received: from EUR01-DB5-obe.outbound.protection.outlook.com
+ (mail-eopbgr150110.outbound.protection.outlook.com [40.107.15.110])
+ by lists.tuni.fi (Postfix) with ESMTP id 84E7B23C3
+ for <gamesnetwork@listrelay.tuni.fi>; Wed, 22 Jan 2020 11:38:56 +0200 (EET)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=AUuPey+wBq3t7hmOZ2awQqaQCR8nYBZ8w+6ePPrZ1QDsKqHaZiCTEI9+fJxFGzGKULuzFctipuJUmVxdiBDqVPacDcwTdz13usPoGmrAqXVhPD55ZWDDOMH8XZu6BzChDCjlpeQPakKLDzlO/Jh/g3YPVFOhpwRNg004hX7PpQQJzgY1d2n/mo+1ny3D8fsWxP+AA8Z5WCpnyN70YGPw4EQxXt77hOE6jm6noLC7/e/DwMDDeeMEJKOBOd09wO9qeyvVktlxv4yWJ5Q1XxTQIXvsLWZpiSIbgxrfsMr1/pQVLle14+nTph09HPDCa2L3L79iD/kz9jWG4KqL9RTNJQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=IlxjwNCjy9gL2q5WH2UFyu2GHeXSF08nV/oY0gEBLC4=;
+ b=jmTQDBK5kJ+9HmuT/BgAWPbyxqsMW310wF+FuiHQ1w897mOLBioOYvQqAVYIDcyvg4XxAXyS80K8B/JQ98xedjV04QcTJ2alOLfDymmsJPEU1WA+HB7p900cs1edbRNQTHQ8fh3Q5WNCEdTdbUVIcj+hoY3E0geH1w4E9qG8fDodd851x3gy5NyrQLh5DPP0B52gaoNEMPnX9G5yh44+laF/nwvBdxUXF0Z3vwRFuiJvBob2y9uU3yyVSj+6ycLNHpF+fVT74nnlv6+l3+4NMfx8nnqJ/DK23+aA5kOEmiTSQfrj5c0hHOBW1SfuXHg/UwlOP6J2Wbzs0sSxar+k2g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=tuni.onmicrosoft.com; 
+ s=selector2-tuni-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=IlxjwNCjy9gL2q5WH2UFyu2GHeXSF08nV/oY0gEBLC4=;
+ b=Zx2A5IrbuJUf5VWx+cR6v//EE6ExZVb4NROomPlucSI/NbqECLvIFl7VlG0N5awBhNXNMkymN8FGE03RjMJ3UX1JYBY0dNI1CRYzna+o2BhopkEBLmUQz4ss5EgillG6/VIsDeh/vULjQlhXPgqcCmZBeim2eym1CzF5J2bVFrE=
+Resent-From: <gamesnetwork@lists.tuni.fi>
+Received: from DB6PR0801CA0051.eurprd08.prod.outlook.com (2603:10a6:4:2b::19)
+ by VE1PR08MB5133.eurprd08.prod.outlook.com (2603:10a6:803:109::28)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2644.24; Wed, 22 Jan
+ 2020 09:38:53 +0000
+Received: from HE1EUR04FT047.eop-eur04.prod.protection.outlook.com
+ (2a01:111:f400:7e0d::208) by DB6PR0801CA0051.outlook.office365.com
+ (2603:10a6:4:2b::19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2644.20 via Frontend
+ Transport; Wed, 22 Jan 2020 09:38:53 +0000
+Authentication-Results-Original: spf=softfail (sender IP is 193.166.164.156)
+ smtp.mailfrom=gmail.com; lists.tuni.fi; dkim=pass (signature was verified)
+ header.d=gmail.com;lists.tuni.fi; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ gmail.com discourages use of 193.166.164.156 as permitted sender)
+Received: from mail1.tuni.fi (193.166.164.156) by
+ HE1EUR04FT047.mail.protection.outlook.com (10.152.26.143) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2665.18 via Frontend Transport; Wed, 22 Jan 2020 09:38:53 +0000
+Received: from mail-wr1-f43.google.com (mail-wr1-f43.google.com
+ [209.85.221.43]) by mail1.tuni.fi (Postfix) with ESMTPS id D9A113F945
+ for <GAMESNETWORK@uta.fi>; Wed, 22 Jan 2020 11:38:52 +0200 (EET)
+Received: by mail-wr1-f43.google.com with SMTP id y17so6480630wrh.5
+ for <GAMESNETWORK@uta.fi>; Wed, 22 Jan 2020 01:38:52 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:from:date:message-id:subject:to;
+ bh=IlxjwNCjy9gL2q5WH2UFyu2GHeXSF08nV/oY0gEBLC4=;
+ b=BHUc6nJou6q8TEkh6iDgAL6YoXEDEKOmPV1/6xBMxhzveek9/OD+SUm/AfKIPTF2uG
+ Zo64gU6GnQcPKD2qtGrcJSgFGXF8p4rHBUkzj4QuheuJTa2H+U7e7wTklEJfuJ4Vizp4
+ L1feIwoXXZH8ojU9oNkFK+dwfKzZ28hFYrUGn475Jt27aRcAX0eKWKrpPWRN+zmiSNaS
+ AD9zaXGDi8v9VCGGb16U4bwWtIakepwUz42oPcwuqO0NxK9OF3PoFMcLYmF9U/V5iDPJ
+ r0252H7w4rQatq6nO0R23ctgvuWcLn/50p/5q/LExv8gMWbQTfsLLVnI5vNSCpUnCRO0
+ S7Ng==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+ bh=IlxjwNCjy9gL2q5WH2UFyu2GHeXSF08nV/oY0gEBLC4=;
+ b=cTV9HY/GUu7M/6g04g00uhmyyzGg84oxaWUnUEsvReLRpIHmBoyTVyz0M1ydCTvaQv
+ w4zEiY5JbteICHgZc3obDmNF5P6EFjSV6S3tT/AUZcZ6giYU9Anj6GGPMB6zSnSXmwVL
+ sZioTCDZHzPgtfahGdncqH3S66IUIXOyokuRXc3Ob/8dtduRyrpDSPLT1GowoyYOSsJ5
+ wr35WXTgsIu34/JCigXtmF5MY/FIn+q+sxNgPfmzAqoM5kjf3rOebAvojFSjEwBF8mUW
+ tYmKmWdpFASs6XwMIYFbiaqYy2QU1DhTESMfytn9LlXnERYAeYxuBcmfCogFVhv/B70L
+ /4lA==
+X-Gm-Message-State: APjAAAXR0pmO4BNj5DjEQ25r9Aii0NFrW7ESwxODzuaRuRWslLwvLXQf
+ GsrYEvTUDfZKR1eyg4Abt+icRnwJuUzFUm4AFmKpQoz8
+X-Google-Smtp-Source: APXvYqws5FQZ2UrF003uL+tNZDp1UefTVPBpCrhr5KjuYW1FNJaItZd24jhJmQgqFl6EAQS9pxPuoByqj311UwRJd7w=
+X-Received: by 2002:adf:ea4f:: with SMTP id j15mr10250920wrn.356.1579685931852; 
+ Wed, 22 Jan 2020 01:38:51 -0800 (PST)
+From: Yoram Chisik <ychisik@gmail.com>
+Date: Wed, 22 Jan 2020 11:38:40 +0200
+Message-ID: <CA+J_W+PQRTRtEubjpj1UHuHfcHq3=OaB-J4oDmyydxCmiBX_MQ@mail.gmail.com>
+To: Games Research Network <GAMESNETWORK@uta.fi>
+X-EOPAttributedMessage: 1
+X-Forefront-Antispam-Report-Untrusted: CIP:193.166.164.156; IPV:; CTRY:FI;
+ EFV:NLI; SFV:NSPM;
+ SFS:(10019020)(4636009)(396003)(39860400002)(346002)(376002)(136003)(199004)(189003)(33964004)(45080400002)(73392003)(66574012)(356004)(26005)(55446002)(336012)(2906002)(76482006)(786003)(68406010)(2160300002)(6666004)(6862004)(5660300002)(8676002)(498600001)(86362001)(36906005)(82202003)(246002)(7596002)(42186006)(70586007)(316002)(7636002)(966005)(25060200004);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:VE1PR08MB5133; H:mail1.tuni.fi; FPR:;
+ SPF:SoftFail; LANG:en; PTR:mail1.tuni.fi; A:1; MX:1; 
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: b6bb86a8-235d-47d7-ba85-08d79f1eea47
+X-MS-TrafficTypeDiagnostic: VE1PR08MB5133:|VE1PR08MB5133:|MWHPR0801MB3771:
+X-LD-Processed: fa6944af-cc7c-4cd8-9154-c01132798910,ExtFwd
+X-MS-Exchange-Transport-Forked: True
+X-Microsoft-Antispam-PRVS: <VE1PR08MB51331ED99C141B06127D8BF4B10C0@VE1PR08MB5133.eurprd08.prod.outlook.com>
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;OLM:8273;
+X-Forefront-PRVS: 029097202E
+X-MS-Exchange-SenderADCheck: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ E2L073rWjneXjxTdUMq9lqCEAWVlM2XIYrLbSTIUZo2FbYuU7mM75T+uDbpVTrb+VGt+Ss5ndG+OZImFYww6OXNvfMniCcy0AprjC2g/gHmCdgp/dUF/EZpDPAWweX8CsVo3p/lARP1gOLUvBylSnzs3aaBzenouTDUVQlFmlkUHBDck0A9o4RGv1LlYCSbqLEpOAQ+/gTqieybq5zatfNdim402ohymhObkMQZZBWk0gzUigu6BtuRayuLxpnJlQPk0FTXS/ilSFuMSpF3jKHKG4jNuGrlZKAkU+wYzo9hbM2asra8KZwgRpwjvkTh2y2ieUxfXds8Vspe/y0bHkdu0uLTj6gzu2GP3Ogn58YLEUjn8xMddF5e0EUPBz8fHEQz6d0zdZS+p0ml8YuvVHBnlEFkBrm1fbjXl2F5vOUyLntopBX4APEtHV3R2mt6pRlUvXciejETu/dCLXSXjRa8z9VW8BurLXkeqzdPIoAGEdwXPipwPwpV31D1U3VMuD4FZvbCP1WnxJZXHq4IuCATdYnYiX4BpEcZPnAniRC6XUZZlxohkQ/dJDzmJ5avZYzdhmN4rkI2rMZK9CmgdxphsKqwUqxHI0qdtkZbMhZTgPRUzP2vZ70ooUSVKh9Tt
+X-ExternalRecipientOutboundConnectors: fa6944af-cc7c-4cd8-9154-c01132798910
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: VE1PR08MB5133
+Subject: [Gamesnetwork] 2nd CFP: Urban Play and the Playable City: A
+ Critical Perspective - A DiGRA 2020 Workshop
+X-BeenThere: gamesnetwork@lists.tuni.fi
+X-Mailman-Version: 2.1.15
+Precedence: list
+List-Id: <gamesnetwork.lists.tuni.fi>
+List-Unsubscribe: <https://lists.tuni.fi/mailman/options/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=unsubscribe>
+List-Archive: <https://lists.tuni.fi/mailman/private/gamesnetwork/>
+List-Post: <mailto:gamesnetwork@lists.tuni.fi>
+List-Help: <mailto:gamesnetwork-request@lists.tuni.fi?subject=help>
+List-Subscribe: <https://lists.tuni.fi/mailman/listinfo/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=subscribe>
+Content-Type: multipart/mixed; boundary="===============0032619295163764073=="
+Errors-To: gamesnetwork-bounces@lists.tuni.fi
+Sender: "Gamesnetwork" <gamesnetwork-bounces@lists.tuni.fi>
+Resent-Message-Id: <20200122093858.56B172738@lists.tuni.fi>
+Resent-Date: Wed, 22 Jan 2020 11:38:58 +0200 (EET)
+Return-Path: gamesnetwork-bounces@lists.tuni.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 22 Jan 2020 09:39:02.4619
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ b6bb86a8-235d-47d7-ba85-08d79f1eea47
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ CO1NAM04FT011.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:193.166.164.159;IPV:;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(286005)(199004)(189003)(42186006)(336012)(2160300002)(6666004)(9036002)(1096003)(8676002)(73392003)(76482006)(42882007)(55446002)(75640400001)(44144004)(33964004)(7636002)(7596002)(7846003)(26005)(966005)(246002)(6862004)(4006050)(19810500001)(82202003)(66574012)(8636004)(63766006)(16670700002)(25060200004);DIR:INB;SFP:;SCL:1;SRVR:MWHPR0801MB3771;H:smtp2.tuni.fi;FPR:;SPF:Pass;LANG:en;PTR:smtp2.tuni.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT011.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ e38cfe4a-97b9-4496-a79e-08d79f1ee4e3
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Jan 2020 09:39:01.9112
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b6bb86a8-235d-47d7-ba85-08d79f1eea47
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MWHPR0801MB3771
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:14.0565457
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2644.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?SjRKQzgyVE5admZNYWMrOTkrZGZ3dzlhR2MwclB0eFkza0RMalFXWmhRcHFE?=
+ =?utf-8?B?TnZtZnRWQ3cwS09nR2JjNTFRTmp3R1h0Rk9LWExiYjk3RzdsdWtYTHFERExF?=
+ =?utf-8?B?bHBocVc3ZEVKcFZlWTdlU20yb1B4WDU3MFdnMS9Xc0NIZWl2elIxV2MzeU1G?=
+ =?utf-8?B?YWJ6TWdGQjUrWXg3WDIxaWNGcENvQVBsUyttZDZtUUg0cmdLWVB6azFHUW9P?=
+ =?utf-8?B?NGh2SW1hTzB0aEIrQTVjWUNxdkp2dWhJSXdzRUJUWkdtQ01ndVBCMXppSzZX?=
+ =?utf-8?B?dmlJUkhHOE5rNGYrOElTRkQxWXpVRDhtZUVRWitFOGF1V3RIUXBXVkRvVkdD?=
+ =?utf-8?B?ZTE1QkY3M01XcWtzYTBkcnREQisySmRrc2xmTVJ2L05WQ0l0ejhrSGhaVzFN?=
+ =?utf-8?B?ZGk5Y2FtUjhlTWFaWjd3aWpsVmF0dXkrMnFyVkhqeDM2YkhWZG93RVBCZ0cz?=
+ =?utf-8?B?QVhyb0Q3R2o3dzlOS1pBY2dISW1VWkYzUXE2SUZpT2NWMjZTQzduUWgzMVRX?=
+ =?utf-8?B?SnhrK0Rid2Q5UjhPSHBTalg1d1l5ZmdCM2ZldnA0ZFJISEFRRWwvYS9PQmg3?=
+ =?utf-8?B?djZMbXpWVGRreXdoc1BNaWJWaW0zWDNjanQrc2ZhZGR1cXVDaEdHR1g2b05k?=
+ =?utf-8?B?S0k1anRYV2hwOGZSYS9jOGVlWWRVbTZYS1JvTHozNTVDdWdkYm5iMEd2U3Jj?=
+ =?utf-8?B?aEtWM0tnRkljcFd5TlhlSFFCbWdTY3l4UUZ2dWRqSGI4NXJrZ2RKZ3ZmY1dx?=
+ =?utf-8?B?RzRyOGw3ZCtqNVNCbmtFdlNZaHRraFpyTTVpWG9xOUVLc2I0Z1NVV3o5bUpZ?=
+ =?utf-8?B?UENWVHg1Z0hVZUsxdE5QNXFncWZZQnNyK2NjcFlud3NRbCtvcUQ2bCtCSmFm?=
+ =?utf-8?B?MWNseEREUkl6R2plWDdNQXNFSE5JU2pDWWZ6OGFldXZQblFBQ3NLTG5ubFFR?=
+ =?utf-8?B?WXlVL3hKVFZVakFiMmRIL0pvYVZjSnRJRlQ5MmtlTmpLSnhOdFIyOFQxZHVC?=
+ =?utf-8?B?M3dRbHFBc291TVZHRCttTmdmbUNHcUtZekFJekxkMURWUmExYkF3OVpUN083?=
+ =?utf-8?B?SEFvNWFBTitCZU50WWtDOUdOUTYvWkZoclQ5U3UxUFZNMEgrN0pCYWJUOThl?=
+ =?utf-8?B?VS9CUlpDV0doVU9wMlVyWXdnWWFJazNjaHlBd29ZdTE3OGJCSGNCczBFU0Ur?=
+ =?utf-8?B?OFpJZkVRNGVmSmFiU25tZHBoL1BSQWdtc0V2MnI2SXNJamt5VmVOK0RSYnBn?=
+ =?utf-8?B?cjFuRTNtTWRHTlRTVVZBWkVMRWVDSERNdWtFZDdkNWlQRG5FQzcyR0FZNTVq?=
+ =?utf-8?B?SHlPMk03SlZjTStYZ0RmNTAwaFRBWnlGbkFFa3dnZXVQeU5uTEd0Y2xPcmN0?=
+ =?utf-8?B?VUlxM21sV0dyemZBSlRLc25YcGRhdkRoWVFrU2VPSllTd3VnTTJyanVNVm50?=
+ =?utf-8?B?NjFFdm5OUnpTdEc3WXBYUitsYy80T1grWnZwVkw1YlpTNHMyamlhaDdYa3dQ?=
+ =?utf-8?B?aTgzT1EyMnNERUg0N3JyUWlnSVNiNVNobEt1cnh1ZEhyMkJ4ZXZYVkhRaUtx?=
+ =?utf-8?B?dXZ3Z1N4cldTZWYvYmxHZXViN0x0VWYrR2tMNytHb21vRFhTbFVmQ1ZxNmRq?=
+ =?utf-8?Q?YskUwPtW3aejpmaxnSbKtXoYZ5c1W1C84kICukUZhmdo=3D?=
+MIME-Version: 1.0
+
+--===============0032619295163764073==
+Content-Type: multipart/alternative; boundary="000000000000d32976059cb74ac5"
+
+--000000000000d32976059cb74ac5
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Urban Play and the Playable City: A Critical Perspective
+
+A workshop held as part of DiGRA 2020
+
+2 June 2020, Tampere, Finland
+
+
+
+Call for Participation
+
+
+
+Recently the notion of the playable city has emerged as a counterpoint to
+the =E2=80=9Csmart city=E2=80=9D whereby the array of sensors and actuators=
+ that enable
+smart city infrastructure can be harnessed to create novel interactions and
+playful experiences within the city by lending an ear to trees, giving a
+voice to park benches, stairs and garbage cans or reviving the shadows that
+pass in the night thereby enabling a host of new interactions and
+experiences and raising new challenges and concerns about distraction and
+duplicity.
+
+
+
+Building on three previous workshops that focused specifically on the
+notion of the playable city and that were held as part of Intetain 2016,
+Intetain 2017 and ArtsIT 2018, In this full-day workshop held as part of
+the Digital Games Research Association 2020 Conference (*DiGRA 2020*
+<https://digra2020.org/>), we aim to compare and contrast the various forms
+of play that occur in urban environments from simple hide and seek games to
+augmented reality games such as Pok=C3=A9mon Go and The Walking Dead: Our W=
+orld
+with the notion of the playable city, i.e. urban installations or
+environments in which the sensors, actuators and digital communication
+networks that form the backbone of smart city infrastructure are used to
+create novel interfaces and interventions intended to inject fun and
+playfulness into the urban environment both as a simple source of pleasure
+and as a means of facilitating and fostering urban and social interactions
+while exploring current innovations and the future potential of the ideas
+and technologies involved with the intent of producing an edited volume of
+the collected articles and ideas.
+
+
+
+Topics of interest include, but are not limited to:
+
+=E2=80=A2 Play in the city =E2=80=93 reimagining the playground and the not=
+ion of urban play
+
+=E2=80=A2 Play with the city =E2=80=93 incorporating play and playfulness i=
+nto the very
+fabric of the city
+
+=E2=80=A2 Play for the city =E2=80=93 using play and gamification to addres=
+s urban issues
+from infrastructure maintenance to social and environmental issues
+
+=E2=80=A2 Are we playing with the city or being played with? Critical persp=
+ectives
+on the notion of the playable city
+
+=E2=80=A2 Wearable technology and the (smart) city
+
+=E2=80=A2 The autonomous vehicle as a mobile playground or an urban playthi=
+ng
+
+=E2=80=A2 Interactive street art, augmented storytelling and other forms of=
+ urban
+=E2=80=9Cplay=E2=80=9D
+
+
+
+Prospective participants should submit an anonymized position paper (which
+may be up to ~5000 words, excluding references) as a PDF file created using
+the *Microsoft Word
+<https://www.dropbox.com/s/ekv1j4a1ljctj83/DiGRA_Submission_Template_2020.d=
+otm?dl=3D0>
+*
+or *Latex
+<https://www.dropbox.com/s/sqtv1q8j8b1r3gj/DiGRATex-master.zip?dl=3D0> *DiG=
+RA
+submission template via *easychair
+<https://easychair.org/conferences/?conf=3Dtpc2020.> *by 10th February 2020=
+.
+All submissions will undergo a blind peer review process and will be
+selected based on their quality and relevance to the workshop with an eye
+for future publication as part of an edited volume. At least one author of
+each accepted position paper must attend the workshop and pay the
+appropriate *DiGRA 2020 registration fee* <https://digra2020.org/fees/>.
+<https://digra2020.org/fees/>
+
+
+
+*Important Dates*
+
+Submission Deadline: 10 February 2020
+
+Notification Deadline: 18 February 2020
+
+Workshop Date: 2 June 2020
+
+
+
+*Organizers*
+
+Anton Nijholt, University of Twente, Enschede, The Netherlands
+
+Yoram Chisik, Independent Scholar, Haifa, Israel
+
+Ben Schouten, TU Eindhoven, The Netherlands
+
+Mattia Thibault, University of Tampere, Finland
+
+
+
+For further information see:
+https://sites.google.com/view/theplayablecity/home
+
+--000000000000d32976059cb74ac5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><p class=3D"MsoNormal" align=3D"center" sty=
+le=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:=
+rgb(0,0,0);text-align:center"><span lang=3D"EN-GB">Urban Play and the Playa=
+ble City: A Critical Perspective&nbsp;&nbsp;<span></span></span></p><p clas=
+s=3D"MsoNormal" align=3D"center" style=3D"margin:0cm 0cm 0.0001pt;font-size=
+:medium;font-family:Helvetica;color:rgb(0,0,0);text-align:center"><span lan=
+g=3D"EN-GB">A workshop held as part of DiGRA 2020<span></span></span></p><p=
+ class=3D"MsoNormal" align=3D"center" style=3D"margin:0cm 0cm 0.0001pt;font=
+-size:medium;font-family:Helvetica;color:rgb(0,0,0);text-align:center"><spa=
+n lang=3D"EN-GB">2 June 2020, Tampere, Finland<span></span></span></p><p cl=
+ass=3D"MsoNormal" align=3D"center" style=3D"margin:0cm 0cm 0.0001pt;font-si=
+ze:medium;font-family:Helvetica;color:rgb(0,0,0);text-align:center"><span l=
+ang=3D"EN-GB">&nbsp;</span></p><p class=3D"MsoNormal" align=3D"center" styl=
+e=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:r=
+gb(0,0,0);text-align:center"><span lang=3D"EN-GB">Call for Participation<sp=
+an></span></span></p><p class=3D"MsoNormal" align=3D"center" style=3D"margi=
+n:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0);=
+text-align:center"><span lang=3D"EN-GB">&nbsp;</span></p><p class=3D"MsoNor=
+mal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetic=
+a;color:rgb(0,0,0);text-align:justify">Recently the notion of the playable =
+city has emerged as a counterpoint to the =E2=80=9Csmart city=E2=80=9D wher=
+eby the array of sensors and actuators that enable smart city infrastructur=
+e can be harnessed to create novel interactions and playful experiences wit=
+hin the city by lending an ear to trees, giving a voice to park benches, st=
+airs and garbage cans or reviving the shadows that pass in the night thereb=
+y enabling a host of new interactions and experiences and raising new chall=
+enges and concerns about distraction and duplicity.<span></span></p><p clas=
+s=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-fami=
+ly:Helvetica;color:rgb(0,0,0)"><span>&nbsp;</span></p><p class=3D"MsoNormal=
+" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;c=
+olor:rgb(0,0,0);text-align:justify">Building on three previous workshops th=
+at focused specifically on the notion of the playable city and that were he=
+ld as part of Intetain 2016, Intetain 2017 and ArtsIT 2018, In this full-da=
+y workshop held as part of the Digital Games Research Association 2020 Conf=
+erence (<a href=3D"https://digra2020.org/" style=3D"color:rgb(149,79,114)">=
+<b>DiGRA 2020</b></a>), we aim to compare and contrast the various forms of=
+ play that occur in urban environments from simple hide and seek games to a=
+ugmented reality games such as Pok=C3=A9mon Go and The Walking Dead: Our Wo=
+rld with the notion of the playable city, i.e. urban installations or envir=
+onments in which the sensors, actuators and digital communication networks =
+that form the backbone of smart city infrastructure are used to create nove=
+l interfaces and interventions intended to inject fun and playfulness into =
+the urban environment both as a simple source of pleasure and as a means of=
+ facilitating and fostering urban and social interactions while exploring c=
+urrent innovations and the future potential of the ideas and technologies i=
+nvolved with the intent of producing an edited volume of the collected arti=
+cles and ideas.<span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm =
+0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0);text-a=
+lign:justify"><span>&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin=
+:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)">=
+Topics of interest include, but are not limited to:<span></span></p><p clas=
+s=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-fami=
+ly:Helvetica;color:rgb(0,0,0)">=E2=80=A2 Play in the city =E2=80=93 reimagi=
+ning the playground and the notion of urban play<span></span></p><p class=
+=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-famil=
+y:Helvetica;color:rgb(0,0,0)">=E2=80=A2 Play with the city =E2=80=93 incorp=
+orating play and playfulness into the very fabric of the city<span></span><=
+/p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium=
+;font-family:Helvetica;color:rgb(0,0,0)">=E2=80=A2 Play for the city =E2=80=
+=93 using play and gamification to address urban issues from infrastructure=
+ maintenance to social and environmental issues<span></span></p><p class=3D=
+"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:H=
+elvetica;color:rgb(0,0,0)">=E2=80=A2 Are we playing with the city or being =
+played with? Critical perspectives on the notion of the playable city<span>=
+</span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-siz=
+e:medium;font-family:Helvetica;color:rgb(0,0,0)">=E2=80=A2 Wearable technol=
+ogy and the (smart) city<span></span></p><p class=3D"MsoNormal" style=3D"ma=
+rgin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,=
+0)">=E2=80=A2 The autonomous vehicle as a mobile playground or an urban pla=
+ything<span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.000=
+1pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)">=E2=80=A2 Inte=
+ractive street art, augmented storytelling and other forms of urban =E2=80=
+=9Cplay=E2=80=9D<span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm=
+ 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)"><spa=
+n>&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;=
+font-size:medium;font-family:Helvetica;color:rgb(0,0,0);text-align:justify"=
+>Prospective participants should submit an anonymized position paper (which=
+ may be up to ~5000 words, excluding references) as a PDF file created usin=
+g the&nbsp;<span lang=3D"EN-GB"><b style=3D"color:rgb(149,79,114)"><span la=
+ng=3D"EN-US"><a href=3D"https://www.dropbox.com/s/ekv1j4a1ljctj83/DiGRA_Sub=
+mission_Template_2020.dotm?dl=3D0" style=3D"color:rgb(149,79,114)">Microsof=
+t Word</a>&nbsp;</span></b></span>or&nbsp;<span lang=3D"EN-GB"><b style=3D"=
+color:rgb(149,79,114)"><span lang=3D"EN-US"><a href=3D"https://www.dropbox.=
+com/s/sqtv1q8j8b1r3gj/DiGRATex-master.zip?dl=3D0" style=3D"color:rgb(149,79=
+,114)">Latex</a>&nbsp;</span></b></span>DiGRA submission template via&nbsp;=
+<b style=3D"color:rgb(149,79,114)"><a href=3D"https://easychair.org/confere=
+nces/?conf=3Dtpc2020." style=3D"color:rgb(149,79,114)">easychair</a>&nbsp;<=
+/b><span lang=3D"EN-GB"></span>by 10th February 2020.&nbsp; All submissions=
+ will undergo a blind peer review process and will be selected based on the=
+ir quality and relevance to the workshop with an eye for future publication=
+ as part of an edited volume. At least one author of each accepted position=
+ paper must attend the workshop and pay the appropriate&nbsp;<a href=3D"htt=
+ps://digra2020.org/fees/" style=3D"color:rgb(149,79,114)"><b>DiGRA 2020 reg=
+istration fee</b></a><span lang=3D"EN-GB"><a href=3D"https://digra2020.org/=
+fees/" style=3D"color:rgb(149,79,114)"><span lang=3D"EN-US">.</span></a></s=
+pan><span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001p=
+t;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)"><b>&nbsp;</b></p=
+><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;f=
+ont-family:Helvetica;color:rgb(0,0,0)"><b>Important Dates<span></span></b><=
+/p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium=
+;font-family:Helvetica;color:rgb(0,0,0)">Submission Deadline: 10 February 2=
+020&nbsp;<span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.=
+0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)">Notificatio=
+n Deadline: 18 February 2020<span></span></p><p class=3D"MsoNormal" style=
+=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rg=
+b(0,0,0)">Workshop Date: 2 June 2020<span></span></p><p class=3D"MsoNormal"=
+ style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;co=
+lor:rgb(0,0,0)"><span>&nbsp;</span></p><p class=3D"MsoNormal" style=3D"marg=
+in:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)=
+"><b>Organizers<span></span></b></p><p class=3D"MsoNormal" style=3D"margin:=
+0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)">A=
+nton Nijholt, University of Twente, Enschede, The Netherlands<span></span><=
+/p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium=
+;font-family:Helvetica;color:rgb(0,0,0)">Yoram Chisik, Independent Scholar,=
+ Haifa, Israel<span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0=
+cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)">Ben Sc=
+houten, TU Eindhoven, The Netherlands<span></span></p><p class=3D"MsoNormal=
+" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;c=
+olor:rgb(0,0,0)">Mattia Thibault, University of Tampere, Finland<span></spa=
+n></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:med=
+ium;font-family:Helvetica;color:rgb(0,0,0)"><span>&nbsp;</span></p><p class=
+=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-famil=
+y:Helvetica;color:rgb(0,0,0)">For further information see:&nbsp;<span lang=
+=3D"EN-GB"><a href=3D"https://sites.google.com/view/theplayablecity/home" s=
+tyle=3D"color:rgb(149,79,114)"><span lang=3D"EN-US">https://sites.google.co=
+m/view/theplayablecity/home</span></a></span><span></span></p><p class=3D"M=
+soNormal" style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Hel=
+vetica;color:rgb(0,0,0)"><span>&nbsp;</span></p><p class=3D"MsoNormal" styl=
+e=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:r=
+gb(0,0,0)"><span>&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0c=
+m 0cm 0.0001pt;font-size:medium;font-family:Helvetica;color:rgb(0,0,0)"><sp=
+an lang=3D"EN-GB">&nbsp;</span></p><p class=3D"MsoNormal" align=3D"center" =
+style=3D"margin:0cm 0cm 0.0001pt;font-size:medium;font-family:Helvetica;col=
+or:rgb(0,0,0);text-align:center"><span lang=3D"EN-GB">&nbsp;</span></p></di=
+v></div>
+
+--000000000000d32976059cb74ac5--
+
+--===============0032619295163764073==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Gamesnetwork@lists.tuni.fi is the discussion list of DiGRA, the Digital Games Research Association. You can unsubscribe, edit your subscription address, etc. at the web interface:
+https://lists.tuni.fi/mailman/listinfo/gamesnetwork
+--===============0032619295163764073==--

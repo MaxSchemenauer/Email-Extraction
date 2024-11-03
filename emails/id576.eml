@@ -1,0 +1,444 @@
+Received: from BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:a03:40::23)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0010.NAMPRD04.PROD.OUTLOOK.COM; Mon, 29 Apr 2019 15:11:36 +0000
+Received: from BN6PR08CA0067.namprd08.prod.outlook.com (2603:10b6:404:b9::29)
+ by BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:408:28::30) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1835.12; Mon, 29 Apr
+ 2019 15:11:34 +0000
+Received: from BN3NAM04FT033.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::208) by BN6PR08CA0067.outlook.office365.com
+ (2603:10b6:404:b9::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1835.13 via Frontend
+ Transport; Mon, 29 Apr 2019 15:11:34 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ BN3NAM04FT033.mail.protection.outlook.com (10.152.92.165) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1835.13 via Frontend Transport; Mon, 29 Apr 2019 15:11:33 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x3TF6wFh024561
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Mon, 29 Apr 2019 18:06:58 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x3TF6v9o002849;
+	Mon, 29 Apr 2019 18:06:57 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Mon, 29 Apr 2019 18:06:57 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x3TF6uGV006018
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Mon, 29 Apr 2019 18:06:56 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x3TBp01Q021520;
+	Mon, 29 Apr 2019 18:06:49 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          143578 for GAMESNETWORK@LISTSERV.UTA.FI; Mon, 29 Apr 2019 18:06:47
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x3TF6lg5018510 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Mon, 29 Apr 2019 18:06:47 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x3TF6lUf024528 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 18:06:47 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x3TF6kkT002804 for
+          <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 18:06:46 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Mon, 29 Apr 2019 18:06:46
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-lf1-f49.google.com (mail-lf1-f49.google.com
+          [209.85.167.49]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x3TF6jvx005899 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 18:06:46 +0300
+Received: by mail-lf1-f49.google.com with SMTP id u17so8298249lfi.3 for
+          <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 08:06:45 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:date:from:to:message-id:in-reply-to:references :subject:mime-version;
+                         bh=6TPc9cAHw50hZn6u6tSSQqqkDV4yTn1SHNWu+ikB/+0=;
+                         b=rbZ2UVMqmRD0cVpG4cWeGtjVOA+UiIB1PStn9gyDKZZbgx2mq5KOubPz8KoKzmGylU
+                         V478i01/qn1xNWbBX9BM8L5+Vzpvp7sTZbkWOTKpWYiNp5L6EzPaGp5ZNGF2MxHcIdb3
+                         3rxC9m+pOzxg9UpvKnbJL7CqL71FCRtXaEz71DoMZvTdz5j5QJ7DQEuBFjwaESNBoO+Q
+                         s5HRrW+LKfblsOduHx/aWQscEP7l0uYyJDbwpv6a12/GFbKHVn5EqLg9lAEqGdtZCvAa
+                         ktH2ClZjEyAfEF6RSAWmoPnAG31J1rsqrfvUz0IrvlBj+Vpa1nyTThYbp23e0M8wmplM
+                         wWkA==
+X-Gm-Message-State: APjAAAXUnP8wn7S0eCgCJo69b+HGM9iG6AVWZ5NcGr633lVotvioGvAb
+                    Ln4ND4muNLF2Nz07RULm5lPwGLGr
+X-Google-Smtp-Source: APXvYqwMpBTT2/V17jJznjlIMZbBvF42A4u3gGyv1ogVnvPO2OPUPskN6epZYXKVl58Jbe2cSnJbzg==
+X-Received: by 2002:a19:ed04:: with SMTP id y4mr7477540lfy.165.1556550404344;
+            Mon, 29 Apr 2019 08:06:44 -0700 (PDT)
+Received: from [10.204.26.85] ([193.11.40.10]) by smtp.gmail.com with ESMTPSA
+          id f15sm7394284lfa.89.2019.04.29.08.06.43 for <GAMESNETWORK@uta.fi>
+          (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+          Mon, 29 Apr 2019 08:06:43 -0700 (PDT)
+References: <AM0PR05MB6068D54B5C2136C2D752D8B5DB380@AM0PR05MB6068.eurprd05.prod.outlook.com>
+X-Readdle-Message-ID: a0b49e75-31f9-423a-a2a5-a0bed93ea0e6@Spark
+Content-Type: multipart/alternative; boundary="5cc71302_47398c89_4ab"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Mon, 29 Apr 2019 18:06:57 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_TRGTBLNK,L_BDY_URL_NOHTTP,L_GOOGLE_APPS_MSG,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1020
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <a0b49e75-31f9-423a-a2a5-a0bed93ea0e6@Spark>
+Date: Mon, 29 Apr 2019 17:06:37 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Mirjam P Eladhari <mirjame@GMAIL.COM>
+Subject: [GAMESNETWORK] CFP: Workshop on Teaching Games:Pedagogical Approaches (TGPA:DiGRA2019)
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+In-Reply-To: <AM0PR05MB6068D54B5C2136C2D752D8B5DB380@AM0PR05MB6068.eurprd05.prod.outlook.com>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Apr 2019 15:11:34.3772
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ dd532b7a-f166-4164-6847-08d6ccb4f7d7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(7916004)(3000300001)(286005)(7192003)(199004)(189003)(176002)(33716001)(76482006)(6862004)(53386004)(55176004)(16003)(31686004)(14444005)(6392003)(7846003)(40036005)(15974865002)(16586007)(31696002)(60616004)(87572001)(7636002)(7596002)(77096007)(126002)(476003)(956004)(11346002)(486006)(446003)(966005)(26005)(95636005)(71190400001)(426003)(336012)(73392003)(356004)(42882007)(6666004)(4006050)(236005)(9686003)(6306002)(66574012)(33964004)(59536001)(30864003)(8676002)(106002)(1096003)(82202003)(75640400001)(60626007)(44144004)(246002)(76786011)(76176011)(84326002)(66346011)(93516011)(21615005)(95326003)(146002)(606006)(43066004)(16351025005);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4980;H:mxout1.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout1.uta.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT033.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: dd532b7a-f166-4164-6847-08d6ccb4f7d7
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600141)(711020)(4605104)(1401320)(1421009)(71702078);SRVR:BN7PR08MB4980;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4980:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Apr 2019 15:11:33.8668
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: dd532b7a-f166-4164-6847-08d6ccb4f7d7
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4980
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5368530
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1835.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UnhCRnZ4cmswTTlJUXoxTWpNdmFsdjBmSDRTRnhNbkxiUGVNRkVNdk5nYkJq?=
+ =?utf-8?B?aXdWYTlYOHFNVjQ4cndFc1RQQWprLzg2dkJSUDBrQTlpTWNXUTZ4THEzMkt0?=
+ =?utf-8?B?ZmRnRTZXQXh3RDJpY2hJaVo0UlJqMS9zY0xBWWtCVzFDWHRvRGt5Qk1ydU1V?=
+ =?utf-8?B?dVlEMWJhRzVwUnN0bTRsblp2aXM3VHZIbFNjWkNuREozYXR4SUt2a1lCcE9r?=
+ =?utf-8?B?VklGWXpmejZEYVE5TU5Mb2JOVjZ4NmN2RGxRSUlwSG1WanZXbHZEcWZMekdS?=
+ =?utf-8?B?MFc4eHNmNjJtdTUxY3g5NGdrRGwwQTJuMG85WXB3RDZjaG1nekJQQmUxNDg4?=
+ =?utf-8?B?L3VzL3VKYU91ZHhlR0NibjIwSGpQdVRKQkZ1dW5TcCt5UCtFalJ5cmNWeEZC?=
+ =?utf-8?B?eVNzeHM4RzZ6UG01NkRCRHpDTjZtRFZhbDVJeW9ET0dTUUpSYVdWT1AzNDJX?=
+ =?utf-8?B?Ymt6cDNHcTQ3N2NyY3I2QlF0ZWZmSGJDR251eGlRdnc2cmpOTWk5cmdJOTBo?=
+ =?utf-8?B?RjdXR0FIOFpML3NRQyt2aWJaTTRVK2ErTEgwR0VWTFhiRTFxSDFNRWpIT2pI?=
+ =?utf-8?B?VnROSDFxMlo5b01UbWY4d1dGektyNTd2NUtMRkhsM1hjZWJ3N1RFakR6dmND?=
+ =?utf-8?B?ZVdCNWdNUXFUQkpDUlB2TXVQSDBuY2pMQytNbW1XOTZlNWo1cEY1N1NVNE5q?=
+ =?utf-8?B?ek5TQXRkU2kyaEJlMVF3cTFSR0lZVExaZUpaZEpPdDVtMWZyMGduWmx6RmNC?=
+ =?utf-8?B?NEgyUEhzR1lxUjJVaXQ2Tm1BRXZaMVZzWjVDcjdFRGhrTm9UQjJFbHc3OU5t?=
+ =?utf-8?B?NTNPYm1FdlY4TGZXc0E2QjJjZkNRdWM4SmFOem9VSnczWURDOENQWi9XSXVO?=
+ =?utf-8?B?S1dDYTRPWXRwcEtBWDdhN2REN3FBZjRrVzVFMS8yK1U3cmphSDg5aHhTRTJn?=
+ =?utf-8?B?OTFsMnIwVmtIaUVhYllQbDhzVmZNbVhZekNSTm5mK3o5Y0NZV0Y1MFhpYk1h?=
+ =?utf-8?B?VHIxcEdxNnFKYVRWVkR3amM1Nms2SEJtc20xMHJKc0NMMmVPaXVnNnpvMENu?=
+ =?utf-8?B?c0NydUc3cTh1elJOOXlTalA3ajFzdFJhZDFGSTRqaFZBbk51WlkyMlRhMmt1?=
+ =?utf-8?B?N3NaT3lNNXB5N3JWNFNoQitkbmNWQXBMY0lJNWFRQWQxNEVPNzR2SnJ6U1dx?=
+ =?utf-8?B?WnB6UFM5TDFPbjR0N29ETnpyL0Q0NElUczZVT09DeXJjSnI1NDE4KzR4My9J?=
+ =?utf-8?B?L1Vjb0E4Tk1FdTJCNXk5K2F0VWVuR2VNQm4wTlgwT3RxeGdnVVV2aStBWmhZ?=
+ =?utf-8?Q?PPAIhBm/V4jqH8n9mugoeDewGS+aV6VNcP?=
+MIME-Version: 1.0
+
+--5cc71302_47398c89_4ab
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+CALL =46OR PAPERS
+Teaching Games:Pedagogical Approaches DiGRA 2019 Pre-Conference Workshop =
+(TGPA:DiGRA2019)
+
+Context of Teaching Games
+Game studies, art, design, narrative, development, and game research meth=
+od courses are proliferating across colleges and universities. Some class=
+es are organized into formal game design programs while others are not. T=
+hey can be offered in a wide range of departments and disciplines, includ=
+ing media studies, communications, computer science, sociology, English, =
+education, political science, art, and many others. The primary goal of s=
+uch courses is varied: to teach game design skills, game writing, product=
+ion, development, critical analysis skills, as well as the history and co=
+ntext of digital games. This workshop is for instructors in higher educat=
+ion of all such courses to discuss their approaches, troubleshoot issues,=
+ as well as identify best practices for the course and assignment design.=
+
+The workshop is co-located and organized with the 2019 DiGRA 2019 confere=
+nce in Kyoto, Japan, and will take place on August 6th, 2019. It builds o=
+n successful past versions of the workshop run at both DiGRA and =46DG in=
+ 2014 and 2015, as well as on a later workshop on transgressive teaching =
+strategies in game studies at NDigra in 2018 and HEVGA Game Educators=E2=80=
+=99 Summits and symposia held in 2017 and 2018. The aim of this iteration=
+ is threefold: to broaden the scope of teaching about games more generall=
+y, to build a community around pedagogy and to generate scholarship that =
+will result in a peer-reviewed publication.
+
+Objectives and Outcomes
+The aim of the workshop is to benefit pedagogy about games by discussing =
+current issues and potential future directions in games teaching as well =
+as to provide a forum for sharing and critiquing pedagogical practices. T=
+he latter will be especially valuable for scholars who are among the only=
+ faculty at their institution teaching games.
+The workshop will be conducted in two parts: The morning session will be =
+dedicated to paper presentations and discussions. The post-lunch session =
+will be organized as work sessions, where groups discuss particular topic=
+s (self-organized by interests).
+
+*** Topics ***
+The workshop invites papers about teaching games in higher education. The=
+ following list suggests topics, but other topics relevant to pedagogical=
+ approaches in teaching games are welcome.
+=E2=97=8F Pedagogical methods to teaching games
+=E2=97=8F Integrating games into a pre-existing curriculum
+=E2=97=8F Case studies=E2=80=94teaching specific topics or areas
+=E2=97=8F Bridging theory and practice through the curriculum
+=E2=97=8F Creating new teaching resources and tools
+=E2=97=8F Teaching students to study players
+=E2=97=8F Teaching game research methods
+=E2=97=8F Industry partnerships
+=E2=97=8F Working with diverse groups of students and multi-disciplinary =
+faculty
+=E2=97=8F Logistical challenges of teaching games (access to games, prese=
+rvation, and fair use)
+
+*** Submission guidelines ***
+We will accept submissions for short papers between 1000 and 3000 words i=
+n length (excluding references). Submissions will be subject to double-bl=
+ind peer review. Each submission will receive feedback from at least two =
+reviewers. Authors of accepted submissions will be invited to give an ora=
+l presentation of their submission. Submissions must use the provided MS =
+Word template or the LaTeX template for the workshop (both templates are =
+available at hevga.org/digracfp - in case the page is down, see links bel=
+ow).
+
+All submissions should be in the PD=46 format and be submitted through Ea=
+syChair. Accepted papers will be made available online at the workshop we=
+bpage.
+
+A special issue of the ToDiGRA Journal (published by ETC Press at Carnegi=
+e Mellon) is a planned outcome of the workshop. Selected workshop papers =
+will be invited to submit a journal article version for inclusion in a sp=
+ecial issue of the ToDiGRA Journal. Publication in the special issue will=
+ require passing a second round of peer reviews.
+
+*** Workshop Deadlines ***
+Deadline for paper submissions: May 31, 2019
+Notification of acceptance: June 28, 2019
+=46inal drafts of papers due: July 19, 2019
+Workshop: August 6, 2019
+Revised papers submitted to journal for publication: October 1, 2019
+
+*** Webpages ***
+Workshop webpage: hevga.org/digracfp
+Submissions page: easychair.org/conferences/=3Fconf=3Dtgpa19
+Template .docx: interactivenarrativedesign.org/digrawstemplate.docx
+Template LaTeX: www.overleaf.com/latex/templates/tgap-workshop-digra-temp=
+late-2019/prjhkzzstyym
+
+
+*** Workshop Location and Time ***
+Location: Room Zonshin 206, Ritsumeikan University Kinugasa Campus, Kyoto=
+, Japan
+Date and Time: August 6, 2019, 9:00-15:50 with a lunch break 12:00-13:00
+
+Welcome=21
+
+On behalf of the organizers,
+Mia Consalvo, Mirjam P Eladhari, Jonathan Elmergreen, Clara =46ern=C3=A1n=
+dez-Vara, William Huber, Hartmut Koenitz, Petri Lankoski, Adam Mayes, And=
+y Phelps
+
+
+
+**********************************************************************
+Mirjam Palosaari Eladhari,
+
+Research: sites.google.com/site/mirjame/publications
+Art: www.saatchiart.com/mirjame
+
+Time zone: Central European time (CET), =3D UTC/GMT +1 hour, =3D PST - 9,=
+ =3D EST - 6 CST -7
+
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--5cc71302_47398c89_4ab
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle></title>
+</head>
+<body>
+<div name=3D"messageBodySection" style=3D"font-size: 14px; font-family: -ap=
+ple-system, BlinkMacSystemFont, sans-serif;">
+<div>
+<div>CALL FOR PAPERS<br>
+Teaching Games:Pedagogical Approaches DiGRA 2019 Pre-Conference Workshop (T=
+GPA:DiGRA2019)<br>
+<br>
+Context of Teaching Games<br>
+Game studies, art, design, narrative, development, and game research method=
+ courses are proliferating across colleges and universities. Some classes a=
+re organized into formal game design programs while others are not. They ca=
+n be offered in a wide range of departments and disciplines, including medi=
+a studies, communications, computer science, sociology, English, education,=
+ political science, art, and many others. The primary goal of such courses =
+is varied: to teach game design skills, game writing, production, developme=
+nt, critical analysis skills, as well as the history and context of digital=
+ games. This workshop is for instructors in higher education of all such co=
+urses to discuss their approaches, troubleshoot issues, as well as identify=
+ best practices for the course and assignment design.<br>
+The workshop is co-located and organized with the 2019 DiGRA 2019 conferenc=
+e in Kyoto, Japan, and will take place on August 6th, 2019. It builds on su=
+ccessful past versions of the workshop run at both DiGRA and FDG in 2014 an=
+d 2015, as well as on a later workshop on transgressive teaching strategies=
+ in game studies at NDigra in 2018 and HEVGA Game Educators=E2=80=99 Summit=
+s and symposia held in 2017 and 2018. The aim of this iteration is threefol=
+d: to broaden the scope of teaching about games more generally, to build a =
+community around pedagogy and to generate scholarship that will result in a=
+ peer-reviewed publication.<br>
+<br>
+Objectives and Outcomes<br>
+The aim of the workshop is to benefit pedagogy about games by discussing cu=
+rrent issues and potential future directions in games teaching as well as t=
+o provide a forum for sharing and critiquing pedagogical practices. The lat=
+ter will be especially valuable for scholars who are among the only faculty=
+ at their institution teaching games.<br>
+The workshop will be conducted in two parts: The morning session will be de=
+dicated to paper presentations and discussions. The post-lunch session will=
+ be organized as work sessions, where groups discuss particular topics (sel=
+f-organized by interests).<br>
+<br>
+*** Topics ***<br>
+The workshop invites papers about teaching games in higher education. The f=
+ollowing list suggests topics, but other topics relevant to pedagogical app=
+roaches in teaching games are welcome.<br>
+=E2=97=8F Pedagogical methods to teaching games<br>
+=E2=97=8F Integrating games into a pre-existing curriculum<br>
+=E2=97=8F Case studies=E2=80=94teaching specific topics or areas<br>
+=E2=97=8F Bridging theory and practice through the curriculum<br>
+=E2=97=8F Creating new teaching resources and tools<br>
+=E2=97=8F Teaching students to study players<br>
+=E2=97=8F Teaching game research methods<br>
+=E2=97=8F Industry partnerships<br>
+=E2=97=8F Working with diverse groups of students and multi-disciplinary fa=
+culty<br>
+=E2=97=8F Logistical challenges of teaching games (access to games, preserv=
+ation, and fair use)<br>
+<br>
+*** Submission guidelines ***<br>
+We will accept submissions for short papers between 1000 and 3000 words in =
+length (excluding references). Submissions will be subject to double-blind =
+peer review. Each submission will receive feedback from at least two review=
+ers. Authors of accepted submissions will be invited to give an oral presen=
+tation of their submission. Submissions must use the provided MS Word templ=
+ate or the LaTeX template for the workshop (both templates are available at=
+ hevga.org/digracfp - in case the page is down, see links below).<br>
+<br>
+All submissions should be in the PDF format and be submitted through EasyCh=
+air. Accepted papers will be made available online at the workshop webpage.=
+<br>
+<br>
+A special issue of the ToDiGRA Journal (published by ETC Press at Carnegie =
+Mellon) is a planned outcome of the workshop. Selected workshop papers will=
+ be invited to submit a journal article version for inclusion in a special =
+issue of the ToDiGRA Journal. Publication in the special issue will require=
+ passing a second round of peer reviews.<br>
+<br>
+*** Workshop Deadlines ***<br>
+Deadline for paper submissions: May 31, 2019<br>
+Notification of acceptance: June 28, 2019<br>
+Final drafts of papers due: July 19, 2019<br>
+Workshop: August 6, 2019<br>
+Revised papers submitted to journal for publication: October 1, 2019<br>
+<br>
+*** Webpages ***<br>
+Workshop webpage: hevga.org/digracfp<br>
+Submissions page: easychair.org/conferences/?conf=3Dtgpa19<br>
+Template .docx: interactivenarrativedesign.org/digrawstemplate.docx<br>
+Template LaTeX: www.overleaf.com/latex/templates/tgap-workshop-digra-templa=
+te-2019/prjhkzzstyym<br>
+<br>
+<br>
+*** Workshop Location and Time ***<br>
+Location: Room Zonshin 206, Ritsumeikan University Kinugasa Campus, Kyoto, =
+Japan<br>
+Date and Time: August 6, 2019, 9:00-15:50 with a lunch break 12:00-13:00<br=
+>
+<br>
+Welcome!<br>
+<br>
+On behalf of the organizers,<br>
+Mia Consalvo, Mirjam P Eladhari, Jonathan Elmergreen, Clara Fern=C3=A1ndez-=
+Vara, William Huber, Hartmut Koenitz, Petri Lankoski, Adam Mayes, Andy Phel=
+ps<br>
+<br>
+<br>
+<br>
+**********************************************************************<br>
+Mirjam Palosaari Eladhari,<br>
+<br>
+Research: sites.google.com/site/mirjame/publications<br>
+Art: www.saatchiart.com/mirjame<br>
+<br>
+Time zone: Central European time (CET), =3D UTC/GMT &#43;1 hour, =3D PST - =
+9, =3D EST - 6 CST -7</div>
+</div>
+</div>
+<div name=3D"messageReplySection" style=3D"font-size: 14px; font-family: -a=
+pple-system, BlinkMacSystemFont, sans-serif;"><br>
+<blockquote type=3D"cite" style=3D"margin: 5px 5px; padding-left: 10px; bor=
+der-left: thin solid #1abc9c;"></blockquote>
+</div>
+</body>
+</html>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--5cc71302_47398c89_4ab--

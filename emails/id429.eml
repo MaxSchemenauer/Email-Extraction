@@ -1,0 +1,642 @@
+Received: from SN6PR08MB4383.namprd08.prod.outlook.com (2603:10b6:a03:1b8::28)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR17CA0015.NAMPRD17.PROD.OUTLOOK.COM; Wed, 18 Sep 2019 08:26:43 +0000
+Received: from BN6PR08CA0090.namprd08.prod.outlook.com (2603:10b6:404:b6::28)
+ by SN6PR08MB4383.namprd08.prod.outlook.com (2603:10b6:805:39::30) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2263.23; Wed, 18 Sep
+ 2019 08:26:42 +0000
+Received: from BN3NAM04FT017.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::202) by BN6PR08CA0090.outlook.office365.com
+ (2603:10b6:404:b6::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2284.20 via Frontend
+ Transport; Wed, 18 Sep 2019 08:26:42 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.166.66)
+ smtp.mailfrom=hbrppublication.com; calpoly.edu; dkim=pass (signature was
+ verified) header.d=hbrppublication.com;calpoly.edu; dmarc=pass action=none
+ header.from=hbrppublication.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of hbrppublication.com
+ designates 209.85.166.66 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.85.166.66;
+ helo=mail-io1-f66.google.com;
+Received: from mail-io1-f66.google.com (209.85.166.66) by
+ BN3NAM04FT017.mail.protection.outlook.com (10.152.92.147) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2263.14 via Frontend Transport; Wed, 18 Sep 2019 08:26:42 +0000
+Received: by mail-io1-f66.google.com with SMTP id j4so14077338iog.11
+        for <foaad@calpoly.edu>; Wed, 18 Sep 2019 01:26:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=hbrppublication.com; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=y3/8zcM8ef8CaeBCjxmaj7wAJqjapIwNYBT0dnv7CkU=;
+        b=JDSjJBdfwHa0zcBGzjMA0UCw1Wmrx9kkGfThQ/B5mJk4yw079zRxaSbZjda1gvTJra
+         RZfLBxpBN8V90WiJVSxc6MeoSVKm1ENkn8KXG7ypE4khEsypMxjj3TGjvGfB/8XAHp0X
+         ePXSmbDB8u1fhZ49LwnQR+QPZ3BHEXEnv/mTr9Ef2MynrxM/Trahem01ZIWply+7s/Qx
+         NM4VQnSbsRC4tqpBEZFrrkfh10jCAkecUNiKw51DW8Gc4Nl1LS7B20TvCXmJld3jdWir
+         5I49WZR2+Khu4M1dS3Fq9zbe6sALSG0CQ7fKDByQ3QqFljcVQnP13sjJu+uJC7SPewH1
+         XJMQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=y3/8zcM8ef8CaeBCjxmaj7wAJqjapIwNYBT0dnv7CkU=;
+        b=NkW50V0WvKH350h4JAjm1L1RZ5IcuHwuUCDgUq1x0NuhbjDBv7/M7PZaip5FgRhX+q
+         mbGue1wgz4z7JQjd7/NUaN+23m5cPR78O9lXN96+4bqmmr7+3NswMFUJw7BwubkZOBtX
+         ddJdO7D4kUVdf1qt07MGgUivXMVoDCJh7fCixOZb4mp8UP6HCWyLzvT29BVIfk7Ka65B
+         FnqeJ5xhuDCCTF2VYupqj/CRRrigo2Kgbhxb9QEcbzU62gavlo/jn5yuMEAvjot+nFBL
+         Ie8bfsxEXEF2jcht8SOzv8Gbn0DiLIOi8KhiYRT9+OZBubUrApcYj7TfZgiY21905vhe
+         LaEg==
+X-Gm-Message-State: APjAAAUX69ZH7hHT33QhjM7y0jbPdBFQCcuctq+OGdiFBtM4+cKAIeU0
+	1QrQvCoJvvMIj0ipCIxz5w1Q75iTlRTi9mydqSt32g==
+X-Google-Smtp-Source: APXvYqx+qR005uNDValV3TdcNd4eXAF4w+f22YqDu5Fnym+53rRss6gf9ON1ByyMGqq5Byia92xnqsBceVfxwxEU32k=
+X-Received: by 2002:a6b:8d84:: with SMTP id p126mr2922875iod.111.1568795201274;
+ Wed, 18 Sep 2019 01:26:41 -0700 (PDT)
+From: HBRP COMPUTER <Neha.s@hbrppublication.com>
+Date: Wed, 18 Sep 2019 13:56:25 +0530
+Message-ID: <CAHezegSeNNDFCHqfM+U3q9qnWrY4vOoRe1Z8YYHbPB_0Oz9O2w@mail.gmail.com>
+Subject: Inviting Manuscripts for December 2019 issue (Computer Science
+ Engineering)- HBRP Publication
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000b28e6c0592cf9898"
+Bcc: foaad@calpoly.edu
+Return-Path: neha.s@hbrppublication.com
+X-MS-Exchange-Organization-ExpirationStartTime: 18 Sep 2019 08:26:42.0045
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 0407ddc3-591d-4ff7-fdd6-08d73c11ef1d
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132132688020245429;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.166.66;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(189003)(199004)(16003)(15974865002)(71190400001)(59536001)(7596002)(5070765005)(22186003)(95326003)(881003)(498394004)(8576002)(356004)(733005)(486006)(8676002)(6666004)(21615005)(15188155005)(16799955002)(55446002)(2160300002)(1096003)(246002)(413944005)(966005)(4006050)(236005)(109986005)(7636002)(305945005)(6306002)(61266001)(476003)(86362001)(606006)(42186006)(9686003)(16586007)(106002)(14444005)(33964004)(5660300002)(26005)(58800400005)(336012)(75640400001)(126002)(66574012)(15660700003)(99710200001)(127190200001)(244015003)(19627285001);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4383;H:mail-io1-f66.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-io1-f66.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT017.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 0407ddc3-591d-4ff7-fdd6-08d73c11ef1d
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600167)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:SN6PR08MB4383;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4383:
+X-MS-Exchange-PUrlCount: 19
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 Sep 2019 08:26:42.0015
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0407ddc3-591d-4ff7-fdd6-08d73c11ef1d
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4383
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6593777
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2284.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UnJ3elpZM2lMcnkycldvWWdHVnZkalJqOWtabWpNcGZMZE1yV3B4cmNiVS9w?=
+ =?utf-8?B?b2VOZzR5bm5JaEE3UXkrZXg0cG9Gb2lxV05lRStGeUlHQk1uVU5JY3JlR1VM?=
+ =?utf-8?B?cEFqL2t1WHY1RjBGTkg0cTBBcmxjUmFWQU9JcHV6TmhFL2hCK3kvcENnelFt?=
+ =?utf-8?B?QUIraUgrVGtkOHpyRGpyT1oxNk9vN2JRTHpiZTM2NXcyMGM3UklOeExtQ3RE?=
+ =?utf-8?B?TXk0d3RMSnBQNmh1YTJsQVN0MGFZM2xRNmJGbkJwQXluM0p2WkZNb2syN1BU?=
+ =?utf-8?B?Tm83VWhXMEltUmc4N1ZlL2h1L2wzWGZpSTZJYVhOUTdhSG42SlhxUm5EckhQ?=
+ =?utf-8?B?ZXk5TGk0aC85eTl6WmcyZG5yZG9ndzE3RDJUWXhhWVlzanNOMzg2UnhWcG5B?=
+ =?utf-8?B?OU9vVnhiWGlVcTdoREJOQ0RZWUwyZEtDdEo0TXd6RWRua1dzZTdTV0ZJOWgr?=
+ =?utf-8?B?bnpxQjYyU1Z6aE1DZytSeU1xdEMxdm1DQzBuSE1NT2wvaDhnd3paM1FvWnFF?=
+ =?utf-8?B?S2F6ckMrNGpMejB3TzYyWUlzR0sxbGxjVUxDWm1lOEFjdmVKZnNqQ08vMkJR?=
+ =?utf-8?B?Wit4TWtTUHR4Ny9xVi8vZmx4UnNIMGZsMENkU0NuZkp4enR3d0E4eWJIQUIx?=
+ =?utf-8?B?VTZaL3dQUitiaUF2Z1pxTndEaWs3aVZNVFZ3a1FwbDluVU1ZcWJ4MlVkRm1l?=
+ =?utf-8?B?eE1TekZFSkNWQjNwTXlqZUhsRWxBU0hMR1lvdTcvczJZU3B4YVo4VVdYOWJr?=
+ =?utf-8?B?WFpMdlhMb0xLVEpuZk9wSGpLOGNJeFNLdXk4UnkvS2xKOEVnVnh6OWc4MFpW?=
+ =?utf-8?B?eTllQlVicXpIempJQkE2NGFiZWhpd0pEQzUxOStDUUl6NlhBcnhrMXFEdkd2?=
+ =?utf-8?B?T29CZWJ5WUJtdlZRQ1g5M1VtT0V3OHhWajhtUy9JNk10Y1lIOFVBQitnN0tC?=
+ =?utf-8?B?YS9tekN1ZVZwdmxaVG5iZ3lWVVNxWkwwM1gxOGhyR1dzeldKdUxWWmMwdUdU?=
+ =?utf-8?B?NmtZUU0veEo2ZHNtdGhKR1JvMmhpZ1Btb0FLR1VUZVk4K05ZRExsYkI4R1E4?=
+ =?utf-8?B?TFEwUTYyeUhCQjRDUDRsVytKbFdyT2tneWRMK3FLL1NKdVFJVWtzWnAxR25Q?=
+ =?utf-8?B?QkxscWI1TC8zQ3FmWmFJNGxVRzJKQmV0NnlMYnEzK1JUdCtwRDQzUlZyRUxU?=
+ =?utf-8?B?N0QvK2hYUDVDVXgzV2FINERVelhGT0NDR0NsM2g2NENocENEWExZTjgwMk5P?=
+ =?utf-8?B?eDFZOUxYZkZHY3ZrcHhhU0lPNVhONm50OEg3cHBHSHRXZ3c0akNHR090Q2J1?=
+ =?utf-8?Q?Whjcn/E8zvuFKpK8FS+8EA5wjden6/fMuH?=
+MIME-Version: 1.0
+
+--000000000000b28e6c0592cf9898
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Sir/Madam,
+
+Greetings from *HBRP Publication*..!!
+
+
+
+We are very pleased to inform you that we have started working on *December
+issue* publication so, we would request all the academicians, students and
+professionals to submit their research/review work or short article for
+publication in any of the below mentioned journal title as earliest as
+possible:
+
+*Computer Engineering Journals:*
+
+1) *Advancement of Computer Technology and its Applications*
+<http://www.hbrppublication.com/Advancement_of_Computer_Technology_and_its_=
+Applications.html>
+
+2) *Research and Reviews: Advancement in Robotics*
+<http://www.hbrppublication.com/Research_an_%20Reviews_Advancement_in_Robot=
+ics.html>
+
+3) *Recent Trends in Information Technology and its Application*
+<http://www.hbrppublication.com/Recent_Trends_in_Information_Technology_and=
+_its_Application.html>
+
+4) *Journal of Advancement in Software Engineering and Testing*
+<http://www.hbrppublication.com/Journal_of_Advancement_in_Software_Engineer=
+ing_and_Testing.html>
+
+
+5) *Advancement in Image Processing and Pattern Recognition*
+<http://www.hbrppublication.com/Advancement_in_Image_Processing_and_Pattern=
+_Recognition.html>
+
+6) *Journal of Network Security and Data Mining*
+<http://www.hbrppublication.com/Journal_of_Network_Security_and_Data_Mining=
+.html>
+
+7) *Journal of Advancement in Parallel Computing*
+<http://www.hbrppublication.com/Journal_of_Advancement_in_Parallel_Computin=
+g.html>
+
+
+8) *Research and Applications of Web Development and Design*
+<http://www.hbrppublication.com/Research_and_Applications_of_Web_Developmen=
+t_and_Design.html>
+
+
+9) *Recent Innovations in Wireless Network Security*
+<http://hbrppublication.com/Recent_Innovations_in_Wireless_Network_Security=
+.htm>
+
+   10) *Advanced Innovations in Computer Programming Languages*
+<http://hbrppublication.com/Advanced_Innovations_in_Computer_Programming_La=
+nguages.htm>
+
+11) *Journal of Advances in Computational Intelligence Theory*
+<http://hbrppublication.com/Journal_of_Advances_in_Computational_Intelligen=
+ce_Theory.htm>
+
+12) *Recent Trends in Computer Graphics and Multimedia Technology*
+<http://hbrppublication.com/Recent_Trends_in_Computer_Graphics_and_Multimed=
+ia_Technology.htm>
+
+13) *Journal of Advance Research in Mobile Computing*
+<http://hbrppublication.com/Journal_of_Advance_Research_in_Mobile_Computing=
+.htm>
+
+14) *Research & Reviews: Journal of Internet & Networking*
+<http://hbrppublication.com/Research_Reviews_Journal_of_Internet_Networking=
+.htm>
+
+15) *Recent Trends in Androids and IOS Applications*
+<http://hbrppublication.com/Recent_Trends_in_Androids_and_IOS_Applications.=
+htm>
+
+16)* Recent Trends in Cloud Computing and Web Engineering
+<http://hbrppublication.com/Recent_Trends_in_Cloud_Computing_and_Web_Engine=
+ering.htm>*
+
+
+
+We would also request you to ask your colleagues/students/peers to
+contribute their manuscript(s) in any of the above mentioned journal title.
+
+
+
+*We do not charge Publication fee from authors and **e-certificate of your
+published manuscript will also be provided to you without any charges. *
+
+
+
+*Moreover, we would like to convey you that if any Author Provides us 5 or
+more than 5 Papers in any Issue, then we will provide one Journal Hard Copy
+& Certificate free of cost (In India only).*
+
+
+
+You can submit your manuscript at
+*http://hbrppublication.com/SubmitManuscript.php*
+<http://hbrppublication.com/SubmitManuscript.php> or via e-mail at*
+neha@hbrppublication.com
+<neha@hbrppublication.com>*(word file only)
+
+
+
+*Last Date of Manuscript Submission: 30th September **2019*
+
+*Publication Month:* *Month of December *
+
+
+*Free of cost DOI for your published manuscript will also be provided to
+you.*
+
+
+
+If interested to join our Editorial Board feel free to revert.
+
+
+
+*PUBLISH YOUR CONFERENCE PROCEEDINGS WITH US!!*
+
+*Thanks & Regards,*
+
+Neha Srivastava
+
+Associate Editor (Publication)
+
+HBRP Publication Pvt. Ltd.
+
+*Website:* www.hbrppublication.com
+
+*Tel:* +91-0120=E2=80=934584629
+
+*Mob: *9818499209
+
+=E1=90=A7
+
+--000000000000b28e6c0592cf9898
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line=
+-height:12.65pt;background-image:initial;background-position:initial;backgr=
+ound-size:initial;background-repeat:initial;background-origin:initial;backg=
+round-clip:initial;font-size:11pt;font-family:Calibri,sans-serif"><span sty=
+le=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">Dear Si=
+r/Madam,</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;=
+line-height:12.65pt;background-image:initial;background-position:initial;ba=
+ckground-size:initial;background-repeat:initial;background-origin:initial;b=
+ackground-clip:initial;font-size:11pt;font-family:Calibri,sans-serif"><span=
+ style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">Gre=
+etings from&nbsp;<b>HBRP Publication</b>..!!</span></p><p class=3D"MsoNorma=
+l" style=3D"margin:0in 0in 0.0001pt;line-height:12.65pt;background-image:in=
+itial;background-position:initial;background-size:initial;background-repeat=
+:initial;background-origin:initial;background-clip:initial;font-size:11pt;f=
+ont-family:Calibri,sans-serif"><span style=3D"font-size:12pt;font-family:&q=
+uot;Times New Roman&quot;,serif">&nbsp;</span></p><p class=3D"MsoNormal" st=
+yle=3D"margin:0in 0in 10pt;line-height:14.65pt;background-image:initial;bac=
+kground-position:initial;background-size:initial;background-repeat:initial;=
+background-origin:initial;background-clip:initial;font-size:11pt;font-famil=
+y:Calibri,sans-serif"><span style=3D"font-size:12pt;font-family:&quot;Times=
+ New Roman&quot;,serif">We are very pleased to inform you that we have star=
+ted working on</span><span style=3D"font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif">&nbsp;<span style=3D"background:yellow"><b>December =
+issue</b></span>&nbsp;publication&nbsp;</span><span style=3D"font-size:12pt=
+;font-family:&quot;Times New Roman&quot;,serif;color:black">so, we would re=
+quest all the&nbsp;academicians, students and professionals&nbsp;to submit =
+their research/review work or short article for publication in any of the b=
+elow mentioned journal title as earliest as possible:</span></p><p class=3D=
+"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:14.65pt;background-ima=
+ge:initial;background-position:initial;background-size:initial;background-r=
+epeat:initial;background-origin:initial;background-clip:initial;font-size:1=
+1pt;font-family:Calibri,sans-serif"><b><u><span style=3D"font-size:12pt;fon=
+t-family:&quot;Times New Roman&quot;,serif;color:black">Computer Engineerin=
+g Journals:</span></u></b></p><p class=3D"MsoNormal" style=3D"margin:0in 1.=
+5in 0.0001pt 9pt;line-height:12.65pt;background-image:initial;background-po=
+sition:initial;background-size:initial;background-repeat:initial;background=
+-origin:initial;background-clip:initial;font-size:11pt;font-family:Calibri,=
+sans-serif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman=
+&quot;,serif">1)&nbsp;<a href=3D"http://www.hbrppublication.com/Advancement=
+_of_Computer_Technology_and_its_Applications.html" target=3D"_blank"><b><i>=
+Advancement of Computer Technology and its Applications</i></b></a></span><=
+/p><p class=3D"MsoNormal" style=3D"margin:0in 1.5in 0.0001pt 9pt;line-heigh=
+t:12.65pt;background-image:initial;background-position:initial;background-s=
+ize:initial;background-repeat:initial;background-origin:initial;background-=
+clip:initial;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"=
+font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">2)<i>&nbsp;</=
+i><a href=3D"http://www.hbrppublication.com/Research_an_%20Reviews_Advancem=
+ent_in_Robotics.html" target=3D"_blank"><b><i>Research and Reviews: Advance=
+ment in Robotics</i></b></a></span></p><p class=3D"MsoNormal" style=3D"marg=
+in:0in 1.5in 0.0001pt 9pt;line-height:12.65pt;background-image:initial;back=
+ground-position:initial;background-size:initial;background-repeat:initial;b=
+ackground-origin:initial;background-clip:initial;font-size:11pt;font-family=
+:Calibri,sans-serif"><span style=3D"font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif">3)&nbsp;<a href=3D"http://www.hbrppublication.com/Re=
+cent_Trends_in_Information_Technology_and_its_Application.html" target=3D"_=
+blank"><b><i>Recent Trends in Information Technology and its Application</i=
+></b></a></span></p><p class=3D"MsoNormal" style=3D"margin:0in 1.5in 0.0001=
+pt 9pt;line-height:12.65pt;background-image:initial;background-position:ini=
+tial;background-size:initial;background-repeat:initial;background-origin:in=
+itial;background-clip:initial;font-size:11pt;font-family:Calibri,sans-serif=
+"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,ser=
+if">4)<i>&nbsp;</i><a href=3D"http://www.hbrppublication.com/Journal_of_Adv=
+ancement_in_Software_Engineering_and_Testing.html" target=3D"_blank"><b><i>=
+Journal of Advancement in Software Engineering and Testing</i></b></a></spa=
+n><b><i><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quo=
+t;,serif;color:blue">&nbsp;</span></i></b></p><p class=3D"MsoNormal" style=
+=3D"margin:0in 1.5in 0.0001pt 9pt;line-height:12.65pt;background-image:init=
+ial;background-position:initial;background-size:initial;background-repeat:i=
+nitial;background-origin:initial;background-clip:initial;font-size:11pt;fon=
+t-family:Calibri,sans-serif"><span style=3D"font-size:12pt;font-family:&quo=
+t;Times New Roman&quot;,serif">5)&nbsp;<a href=3D"http://www.hbrppublicatio=
+n.com/Advancement_in_Image_Processing_and_Pattern_Recognition.html" target=
+=3D"_blank"><b><i>Advancement in Image Processing and Pattern&nbsp;Recognit=
+ion</i></b></a></span></p><p class=3D"MsoNormal" style=3D"margin:0in 1.5in =
+0.0001pt 9pt;line-height:12.65pt;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;font-size:11pt;font-family:Calibri,sans=
+-serif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quo=
+t;,serif">6)<i>&nbsp;</i><a href=3D"http://www.hbrppublication.com/Journal_=
+of_Network_Security_and_Data_Mining.html" target=3D"_blank"><b><i>Journal o=
+f Network Security and Data Mining</i></b></a></span></p><p class=3D"MsoNor=
+mal" style=3D"margin:0in 1.5in 0.0001pt 9pt;line-height:12.65pt;background-=
+image:initial;background-position:initial;background-size:initial;backgroun=
+d-repeat:initial;background-origin:initial;background-clip:initial;font-siz=
+e:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:12pt;font-f=
+amily:&quot;Times New Roman&quot;,serif">7)&nbsp;<a href=3D"http://www.hbrp=
+publication.com/Journal_of_Advancement_in_Parallel_Computing.html" target=
+=3D"_blank"><b><i>Journal of Advancement in Parallel Computing</i></b></a><=
+/span><b><i><span style=3D"font-size:12pt;font-family:&quot;Times New Roman=
+&quot;,serif;color:blue">&nbsp;</span></i></b></p><p class=3D"MsoNormal" st=
+yle=3D"margin:0in 1.5in 0.0001pt 9pt;line-height:12.65pt;background-image:i=
+nitial;background-position:initial;background-size:initial;background-repea=
+t:initial;background-origin:initial;background-clip:initial;font-size:11pt;=
+font-family:Calibri,sans-serif"><span style=3D"font-size:12pt;font-family:&=
+quot;Times New Roman&quot;,serif">8)&nbsp;<a href=3D"http://www.hbrppublica=
+tion.com/Research_and_Applications_of_Web_Development_and_Design.html" targ=
+et=3D"_blank"><b><i>Research and Applications of Web Development and Design=
+</i></b></a></span><b><i><span style=3D"font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif;color:blue">&nbsp;</span></i></b></p><p class=3D"=
+MsoNormal" style=3D"margin:0in 1.5in 0.0001pt 9pt;line-height:12.65pt;backg=
+round-image:initial;background-position:initial;background-size:initial;bac=
+kground-repeat:initial;background-origin:initial;background-clip:initial;fo=
+nt-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:12pt;=
+font-family:&quot;Times New Roman&quot;,serif">9)<i>&nbsp;</i><a href=3D"ht=
+tp://hbrppublication.com/Recent_Innovations_in_Wireless_Network_Security.ht=
+m" target=3D"_blank"><b><i>Recent Innovations in Wireless Network Security<=
+/i></b></a></span></p><p class=3D"MsoNormal" style=3D"margin:0in 1.5in 0.00=
+01pt 0in;line-height:12.65pt;background-image:initial;background-position:i=
+nitial;background-size:initial;background-repeat:initial;background-origin:=
+initial;background-clip:initial;font-size:11pt;font-family:Calibri,sans-ser=
+if"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,s=
+erif">&nbsp; &nbsp;10)<i>&nbsp;</i><a href=3D"http://hbrppublication.com/Ad=
+vanced_Innovations_in_Computer_Programming_Languages.htm" target=3D"_blank"=
+><b><i>Advanced Innovations in Computer Programming Languages</i></b></a></=
+span></p><p class=3D"MsoNormal" style=3D"margin:0in 1.5in 0.0001pt 9pt;line=
+-height:12.65pt;background-image:initial;background-position:initial;backgr=
+ound-size:initial;background-repeat:initial;background-origin:initial;backg=
+round-clip:initial;font-size:11pt;font-family:Calibri,sans-serif"><span sty=
+le=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">11)<i>&=
+nbsp;</i><a href=3D"http://hbrppublication.com/Journal_of_Advances_in_Compu=
+tational_Intelligence_Theory.htm" target=3D"_blank"><b><i>Journal of Advanc=
+es in Computational Intelligence Theory</i></b></a></span></p><p class=3D"M=
+soNormal" style=3D"margin:0in 1.5in 0.0001pt 9pt;line-height:12.65pt;backgr=
+ound-image:initial;background-position:initial;background-size:initial;back=
+ground-repeat:initial;background-origin:initial;background-clip:initial;fon=
+t-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:12pt;f=
+ont-family:&quot;Times New Roman&quot;,serif">12)&nbsp;<a href=3D"http://hb=
+rppublication.com/Recent_Trends_in_Computer_Graphics_and_Multimedia_Technol=
+ogy.htm" target=3D"_blank"><b><i>Recent Trends in Computer Graphics and Mul=
+timedia Technology</i></b></a></span></p><p class=3D"MsoNormal" style=3D"ma=
+rgin:0in 1.5in 0.0001pt 9pt;line-height:12.65pt;background-image:initial;ba=
+ckground-position:initial;background-size:initial;background-repeat:initial=
+;background-origin:initial;background-clip:initial;font-size:11pt;font-fami=
+ly:Calibri,sans-serif"><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif">13)<i>&nbsp;</i><a href=3D"http://hbrppublication.=
+com/Journal_of_Advance_Research_in_Mobile_Computing.htm" target=3D"_blank">=
+<b><i>Journal of Advance Research in Mobile Computing</i></b></a></span></p=
+><p class=3D"MsoNormal" style=3D"margin:0in 1.5in 0.0001pt 9pt;line-height:=
+12.65pt;background-image:initial;background-position:initial;background-siz=
+e:initial;background-repeat:initial;background-origin:initial;background-cl=
+ip:initial;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"fo=
+nt-size:12pt;font-family:&quot;Times New Roman&quot;,serif">14)&nbsp;<a hre=
+f=3D"http://hbrppublication.com/Research_Reviews_Journal_of_Internet_Networ=
+king.htm" target=3D"_blank"><b><i>Research &amp; Reviews: Journal of Intern=
+et &amp; Networking</i></b></a></span></p><p class=3D"MsoNormal" style=3D"m=
+argin:0in 1.5in 0.0001pt 9pt;line-height:12.65pt;background-image:initial;b=
+ackground-position:initial;background-size:initial;background-repeat:initia=
+l;background-origin:initial;background-clip:initial;font-size:11pt;font-fam=
+ily:Calibri,sans-serif"><span style=3D"font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,serif">15)<i>&nbsp;</i><a href=3D"http://hbrppublication=
+.com/Recent_Trends_in_Androids_and_IOS_Applications.htm" target=3D"_blank">=
+<b><i>Recent Trends in Androids and IOS Applications</i></b></a></span></p>=
+<p class=3D"MsoNormal" style=3D"margin:0in 1.5in 10pt 9pt;line-height:12.65=
+pt;background-image:initial;background-position:initial;background-size:ini=
+tial;background-repeat:initial;background-origin:initial;background-clip:in=
+itial;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,serif">16)<i>&nbsp;<b><a hr=
+ef=3D"http://hbrppublication.com/Recent_Trends_in_Cloud_Computing_and_Web_E=
+ngineering.htm" target=3D"_blank">Recent Trends in Cloud Computing and Web =
+Engineering</a></b></i></span></p><p class=3D"MsoNormal" style=3D"margin:0i=
+n 0in 0.0001pt;line-height:normal;background-image:initial;background-posit=
+ion:initial;background-size:initial;background-repeat:initial;background-or=
+igin:initial;background-clip:initial;font-size:11pt;font-family:Calibri,san=
+s-serif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&qu=
+ot;,serif">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in =
+0.0001pt;line-height:14.4pt;background-image:initial;background-position:in=
+itial;background-size:initial;background-repeat:initial;background-origin:i=
+nitial;background-clip:initial;font-size:11pt;font-family:Calibri,sans-seri=
+f"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,se=
+rif;color:black">We would also request you to ask your colleagues/students/=
+peers to contribute their manuscript(s) in any of the above mentioned journ=
+al title.</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt=
+;line-height:14.4pt;background-image:initial;background-position:initial;ba=
+ckground-size:initial;background-repeat:initial;background-origin:initial;b=
+ackground-clip:initial;font-size:11pt;font-family:Calibri,sans-serif"><span=
+ style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif;colo=
+r:black">&nbsp;</span><span style=3D"font-size:12pt;font-family:&quot;Times=
+ New Roman&quot;,serif">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"ma=
+rgin:0in 0in 0.0001pt;line-height:normal;background-image:initial;backgroun=
+d-position:initial;background-size:initial;background-repeat:initial;backgr=
+ound-origin:initial;background-clip:initial;font-size:11pt;font-family:Cali=
+bri,sans-serif"><b><span style=3D"font-size:12pt;font-family:&quot;Times Ne=
+w Roman&quot;,serif;color:black;background:yellow">We do not charge Publica=
+tion fee from authors and&nbsp;</span></b><b><span style=3D"font-size:12pt;=
+font-family:&quot;Times New Roman&quot;,serif;background:yellow">e-certific=
+ate of your published manuscript will also be provided to you without any c=
+harges.&nbsp;</span></b></p><p class=3D"MsoNormal" style=3D"margin:0in 0in =
+0.0001pt;line-height:normal;background-image:initial;background-position:in=
+itial;background-size:initial;background-repeat:initial;background-origin:i=
+nitial;background-clip:initial;font-size:11pt;font-family:Calibri,sans-seri=
+f"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,se=
+rif">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001=
+pt;line-height:normal;background-image:initial;background-position:initial;=
+background-size:initial;background-repeat:initial;background-origin:initial=
+;background-clip:initial;font-size:11pt;font-family:Calibri,sans-serif"><b>=
+<span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif=
+;background:yellow">Moreover, we would like to convey you that if any Autho=
+r Provides us 5 or more than 5 Papers in any Issue, then we will provide on=
+e Journal Hard Copy &amp;&nbsp;Certificate free of cost&nbsp;(In India only=
+).</span></b>&nbsp;&nbsp;&nbsp;&nbsp;</p><p class=3D"MsoNormal" style=3D"ma=
+rgin:0in 0in 0.0001pt;line-height:normal;background-image:initial;backgroun=
+d-position:initial;background-size:initial;background-repeat:initial;backgr=
+ound-origin:initial;background-clip:initial;font-size:11pt;font-family:Cali=
+bri,sans-serif">&nbsp;<span style=3D"font-size:12pt;font-family:&quot;Times=
+ New Roman&quot;,serif"><br></span></p><p class=3D"MsoNormal" style=3D"marg=
+in:0in 0in 0.0001pt;line-height:normal;background-image:initial;background-=
+position:initial;background-size:initial;background-repeat:initial;backgrou=
+nd-origin:initial;background-clip:initial;font-size:11pt;font-family:Calibr=
+i,sans-serif"><span style=3D"font-size:12pt;font-family:&quot;Times New Rom=
+an&quot;,serif;color:black">You can submit your manuscript at&nbsp;</span><=
+span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"=
+><a href=3D"http://hbrppublication.com/SubmitManuscript.php" target=3D"_bla=
+nk"><b><span style=3D"color:blue">http://hbrppublication.com/SubmitManuscri=
+pt.php</span></b></a></span><span style=3D"font-size:12pt;font-family:&quot=
+;Times New Roman&quot;,serif"><font color=3D"#000000">&nbsp;or via e-mail a=
+t</font><b><font color=3D"#000000">&nbsp;</font><u><a href=3D"mailto:neha@h=
+brppublication.com" target=3D"_blank"><font color=3D"#0000ff">neha@hbrppubl=
+ication.com</font></a></u></b></span><span style=3D"font-size:12pt;font-fam=
+ily:&quot;Times New Roman&quot;,serif">(word file only)</span></p><p class=
+=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;backgrou=
+nd-image:initial;background-position:initial;background-size:initial;backgr=
+ound-repeat:initial;background-origin:initial;background-clip:initial;font-=
+size:11pt;font-family:Calibri,sans-serif"><b><span style=3D"font-size:12pt;=
+font-family:&quot;Times New Roman&quot;,serif;color:black">&nbsp;</span></b=
+></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:no=
+rmal;background-image:initial;background-position:initial;background-size:i=
+nitial;background-repeat:initial;background-origin:initial;background-clip:=
+initial;font-size:11pt;font-family:Calibri,sans-serif"><b><span style=3D"fo=
+nt-size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:black">Las=
+t Date of Manuscript Submission:<span style=3D"background:yellow">&nbsp;30t=
+h September&nbsp;</span></span></b><b><span style=3D"font-size:12pt;font-fa=
+mily:&quot;Times New Roman&quot;,serif;background:yellow">2019</span></b><b=
+><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,seri=
+f;color:black;background:yellow">&nbsp;</span></b></p><p class=3D"MsoNormal=
+" style=3D"margin:0in 0in 0.0001pt;line-height:normal;background-image:init=
+ial;background-position:initial;background-size:initial;background-repeat:i=
+nitial;background-origin:initial;background-clip:initial;font-size:11pt;fon=
+t-family:Calibri,sans-serif"><b><span style=3D"font-size:12pt;font-family:&=
+quot;Times New Roman&quot;,serif;color:black">Publication Month:</span></b>=
+<span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif=
+;color:rgb(53,28,117)">&nbsp;</span><b><span style=3D"font-size:12pt;font-f=
+amily:&quot;Times New Roman&quot;,serif;color:black;background:yellow">Mont=
+h of December&nbsp;</span></b></p><p class=3D"MsoNormal" style=3D"margin:0i=
+n 0in 0.0001pt;line-height:normal;background-image:initial;background-posit=
+ion:initial;background-size:initial;background-repeat:initial;background-or=
+igin:initial;background-clip:initial;font-size:11pt;font-family:Calibri,san=
+s-serif"><b style=3D"color:rgb(0,0,0);font-family:&quot;Times New Roman&quo=
+t;,serif;font-size:16px"><br class=3D"m_2738065059591536315m_-7229831038060=
+049556gmail-m_-5347008295940512974m_1221568499949966371gmail-m_-16903897474=
+70030013gmail-m_8139418604044270570m_8349938695936984081gmail-m_-7201104472=
+143741928m_2731671618815923600gmail-m_-7620626567380097046m_789299307639059=
+4774gmail-m_3511552786165458382m_-2720856217820302869gmail-m_-1624002523917=
+798436m_-748838840574619769gmail-m_-444362534523247646m_5841022597175032187=
+gmail-m_3662699864454658135gmail-m_5969318333637820347gmail-m_1940871411102=
+238197gmail-m_1782680084996740439gmail-m_8630731397311735949gmail-m_8949588=
+399927963931gmail-m_-6692372950246961290gmail-m_-7447615114119014147gmail-m=
+_367413226970920149gmail-m_7634036971780506000gmail-m_-2289191636394730562m=
+_-2249736083632665338gmail-m_6452647466795262468gmail-m_-435325670670348829=
+7gmail-m_-7716614670009882140gmail-m_-3036682771082613555gmail-m_7906539148=
+598584041gmail-m_-2651538259725682024gmail-m_476563089102578832gmail-m_-257=
+0762572486262549m_3961064912888545438gmail-m_-7877157768942192774gmail-m_66=
+47910664924116676m_-6149103406113977719m_7404846650683903939gmail-m_-533771=
+193879176250gmail-m_-3157583719992304763gmail-m_3236955076972433853gmail-m_=
+7565981299368278040gmail-m_1718984244881258825gmail-m_3475239356830789661gm=
+ail-m_6655945179608141731gmail-m_-6469646228927732817m_6506618340684357611m=
+_4562825343593301553gmail-m_-8651309681009843028gmail-m_-756144411781741049=
+9gmail-m_-5584771270210659790gmail-m_-507878810440890459gmail-m_19305290748=
+21529387m_5738397079564969715gmail-m_-3450669861953131617gmail-m_-728568639=
+3163238010gmail-m_-5928188148720710085gmail-m_-5487318462209630681gmail-m_-=
+7886011775374274327gmail-m_-3695354974889435795gmail-m_-5542902466728705930=
+m_-100767564254300348gmail-m_4128129996531720712gmail-m_2387211000028192905=
+gmail-m_-452929828005141872gmail-m_-1420011633439301257gmail-m_-36105407125=
+33872641gmail-m_3714947793367681723gmail-m_2755000954767955812gmail-m_-4482=
+110541406536370gmail-m_7211189443075138369gmail-m_5810706066048470445gmail-=
+m_-8219319100156066833gmail-m_-9176298818985829815gmail-m_-4450380373497750=
+342gmail-m_-2367665209099734748gmail-m_-7400343434788205534gmail-m_38021155=
+34005745130gmail-m_-5073421560345830884gmail-m_-4163485057760909306gmail-m_=
+2361115293198243260gmail-m_8533585291493301771gmail-m_-6541321153594927576g=
+mail-m_2037636512157727755gmail-m_4040400126839169058gmail-m_-7857947985949=
+899592gmail-m_-6811829418859383894gmail-m_-4305885388333768513gmail-m_91412=
+32777867955146gmail-m_-9092513710951936589gmail-m_-5527056783566412748m_185=
+3750713552499698gmail-m_821822801378659920gmail-m_5927365677602584044gmail-=
+m_4827455250815646675gmail-m_-2959601264311760276gmail-m_614326579911906469=
+0gmail-m_8677987665470470565gmail-m_5089120873818340675gmail-m_-72300892913=
+29820950gmail-m_105236435314434475gmail-m_6855954267984885737gmail-m_-22258=
+00763119271017gmail-m_1323946438418438952gmail-m_-123119107923606354gmail-m=
+_2296253762333083447gmail-m_3940372721596562927gmail-m_4668415274933256142g=
+mail-m_-1790444466202228556gmail-m_-7539622570663361317gmail-m_409184589421=
+6005383gmail-m_8262833806893637624gmail-m_-2823096741748518391gmail-m_48047=
+47290143280917gmail-m_-1456736888880421026gmail-m_2494793220613451040gmail-=
+m_6827598335165772900gmail-m_-874293165221832037gmail-m_7424978112483467230=
+gmail-m_7484113348942133980gmail-m_-4989055364437882160gmail-m_739149486148=
+7825303gmail-m_8687752701274990077m_-5155644370159261053gmail-m_-3724115684=
+993717972gmail-m_5546176676739954395gmail-m_1427267670127666192gmail-m_-392=
+8555824573269998gmail-m_7053303268349485445gmail-m_1700353943154534302gmail=
+-m_63201192927461006gmail-m_8140639824667817056gmail-m_6622336255356890909g=
+mail-m_2827088547352484461gmail-m_5347515803398447672gmail-m_-1118288658428=
+119780gmail-Apple-interchange-newline"><span style=3D"background-color:rgb(=
+255,255,0)">Free of cost DOI for your published manuscript will also be pro=
+vided to you.</span></b><span style=3D"background-color:rgb(255,255,0)">&nb=
+sp;</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-=
+height:normal;background-image:initial;background-position:initial;backgrou=
+nd-size:initial;background-repeat:initial;background-origin:initial;backgro=
+und-clip:initial;font-size:11pt;font-family:Calibri,sans-serif">&nbsp;<b><s=
+pan style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif;c=
+olor:blue"><br></span></b></p><p class=3D"MsoNormal" style=3D"margin:0in 0i=
+n 0.0001pt;line-height:normal;background-image:initial;background-position:=
+initial;background-size:initial;background-repeat:initial;background-origin=
+:initial;background-clip:initial;font-size:11pt;font-family:Calibri,sans-se=
+rif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,=
+serif;color:black">If interested to join our Editorial Board feel free to r=
+evert.</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;li=
+ne-height:normal;background-image:initial;background-position:initial;backg=
+round-size:initial;background-repeat:initial;background-origin:initial;back=
+ground-clip:initial;font-size:11pt;font-family:Calibri,sans-serif"><span st=
+yle=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">&nbsp;=
+</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-hei=
+ght:12.65pt;background-image:initial;background-position:initial;background=
+-size:initial;background-repeat:initial;background-origin:initial;backgroun=
+d-clip:initial;font-size:11pt;font-family:Calibri,sans-serif"><b><i><span s=
+tyle=3D"font-size:10pt;font-family:&quot;Times New Roman&quot;,serif;color:=
+rgb(56,118,29)">PUBLISH YOUR CONFERENCE PROCEEDINGS WITH US!!</span></i></b=
+></p><div><div dir=3D"ltr" class=3D"m_2738065059591536315m_-722983103806004=
+9556gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-=
+height:normal;background-image:initial;background-position:initial;backgrou=
+nd-repeat:initial"><b style=3D"font-family:Calibri,sans-serif;font-size:11p=
+t"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,se=
+rif;color:black">Thanks &amp; Regards,</span></b><br></p><p class=3D"MsoNor=
+mal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;font-size:11pt;fon=
+t-family:Calibri,sans-serif"><span style=3D"font-size:12pt;font-family:&quo=
+t;Times New Roman&quot;,serif"></span></p><p class=3D"MsoNormal" style=3D"m=
+argin:0in 0in 0.0001pt;line-height:normal;font-size:11pt;font-family:Calibr=
+i,sans-serif"><span style=3D"font-size:12pt;font-family:&quot;Times New Rom=
+an&quot;,serif;color:black">Neha Srivastava</span><span style=3D"font-size:=
+12pt;font-family:&quot;Times New Roman&quot;,serif"></span></p><p class=3D"=
+MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;font-size:11=
+pt;font-family:Calibri,sans-serif"><span style=3D"font-size:12pt;font-famil=
+y:&quot;Times New Roman&quot;,serif;color:black">Associate Editor&nbsp;(Pub=
+lication)</span><span style=3D"font-size:12pt;font-family:&quot;Times New R=
+oman&quot;,serif"></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in=
+ 0.0001pt;line-height:normal;font-size:11pt;font-family:Calibri,sans-serif"=
+><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,seri=
+f;color:black">HBRP Publication&nbsp;Pvt. Ltd.</span><span style=3D"font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,serif"></span></p><p class=
+=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;font-siz=
+e:11pt;font-family:Calibri,sans-serif"><b><span style=3D"font-size:12pt;fon=
+t-family:&quot;Times New Roman&quot;,serif;color:black">Website:</span></b>=
+<b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,se=
+rif;color:rgb(136,136,136)">&nbsp;</span></b><span style=3D"font-size:12pt;=
+font-family:&quot;Times New Roman&quot;,serif"><a href=3D"http://www.hbrppu=
+blication.com/" style=3D"color:rgb(17,85,204)" target=3D"_blank">www.hbrppu=
+blication.com</a></span><b><span style=3D"font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,serif;color:rgb(53,28,117)">&nbsp;</span></b><span st=
+yle=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"></span=
+></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:no=
+rmal;font-size:11pt;font-family:Calibri,sans-serif"><b><span style=3D"font-=
+size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:black">Tel:</=
+span></b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&qu=
+ot;,serif;color:black">&nbsp;&#43;91-0120=E2=80=934584629&nbsp;</span></p><=
+p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;f=
+ont-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:12pt=
+;font-family:&quot;Times New Roman&quot;,serif;color:black"><b>Mob:&nbsp;</=
+b>9818499209</span></p></div><div dir=3D"ltr"><font color=3D"#351c75" face=
+=3D"arial black, sans-serif"><b><br></b></font></div></div></div></div></di=
+v><div hspace=3D"streak-pt-mark" style=3D"max-height:1px"><img alt=3D"" sty=
+le=3D"width:0px;max-height:0px;overflow:hidden" src=3D"https://mailfoogae.a=
+ppspot.com/t?sender=3DabmVoYS5zQGhicnBwdWJsaWNhdGlvbi5jb20%3D&amp;type=3Dze=
+rocontent&amp;guid=3D28d692a7-67a7-40d1-bac6-fe0d50cb77bf"><font color=3D"#=
+ffffff" size=3D"1">=E1=90=A7</font></div>
+
+--000000000000b28e6c0592cf9898--

@@ -1,0 +1,251 @@
+Received: from MWHPR08MB2670.namprd08.prod.outlook.com (2603:10b6:a03:f4::39)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR11CA0098.NAMPRD11.PROD.OUTLOOK.COM; Sat, 9 Nov 2019 04:08:09 +0000
+Received: from MWHPR08CA0032.namprd08.prod.outlook.com (2603:10b6:301:5f::45)
+ by MWHPR08MB2670.namprd08.prod.outlook.com (2603:10b6:300:b6::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2430.24; Sat, 9 Nov
+ 2019 04:08:07 +0000
+Received: from BN3NAM04FT052.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::204) by MWHPR08CA0032.outlook.office365.com
+ (2603:10b6:301:5f::45) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2408.24 via Frontend
+ Transport; Sat, 9 Nov 2019 04:08:07 +0000
+Authentication-Results: spf=none (sender IP is 209.85.208.196)
+ smtp.mailfrom=ijctc.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=ijctc-org.20150623.gappssmtp.com;calpoly.edu; dmarc=none action=none
+ header.from=ijctc.org;compauth=pass reason=106
+Received-SPF: None (protection.outlook.com: ijctc.org does not designate
+ permitted sender hosts)
+Received: from mail-lj1-f196.google.com (209.85.208.196) by
+ BN3NAM04FT052.mail.protection.outlook.com (10.152.92.241) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2430.20 via Frontend Transport; Sat, 9 Nov 2019 04:08:06 +0000
+Received: by mail-lj1-f196.google.com with SMTP id l21so959287ljg.4
+        for <foaad@calpoly.edu>; Fri, 08 Nov 2019 20:08:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ijctc-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=bJinXTJYrnXRsq4WWYjIhl0d497SOxYA8l8wIIf7ueA=;
+        b=t11ugbkp4CUVfLf8W23CubC57FRYtB0Jo7Nwk6Nb1wgpjeyEc8lxL+rwbuyWO5E6nT
+         LvLq33+OYeNqHLopvkNE91kQHswvK+6sRMZnGdVLsFsSfNJOJ8mUqOoMXvJzT9fgQBvF
+         ozUvHDx3/BQ/RrTRErya1DWOIuYUo7KD1miQi37k2upATEjWRSZkM4phClMKVZutPhHU
+         ZbmPuhIFQaDyMUP8Oxmm6xe4tWWgTKFKMD8uacRGL3Rt2LaMqeGQD5ouSxPj7BdkmNDN
+         djnTK2IKVz7ojVjUPJqqqOm/E5NEagInVtusjGD9OcxoAHsox5dR/W31gAhrOWxVRdyl
+         Ty1A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=bJinXTJYrnXRsq4WWYjIhl0d497SOxYA8l8wIIf7ueA=;
+        b=XlTl28FBXaoconfPBFRNUTEAWRyKYxLUlpi3VdBU6oOiu71X4RN5c2DprxI1SoL67d
+         6cXsA3Z+cF0Q4dI01zzTvRs4oCyMcoXjrgY4/jNyTRL3NDkZxrCPKfXljN/VSZ12cYAa
+         wE5PYZmR6Ip6JrU7sEPKqJ9qI8HaQm0+U9y4rTCs7rzC/yjKn3fOIodTyn/abm9G3ImW
+         IMkFUuITADWvzglacRXE26i7H53Nh6XY3mBxaGK5eQWQyzWZXmwqg1LNTTkza0kicVbo
+         f56q4ChVk7CjJQ5mVCq7BuDbipcJ7C+klbHGtf+QhVPsllcqn/WZ2MsVlTV1kYp6Gj8X
+         nGYQ==
+X-Gm-Message-State: APjAAAXGyG7ZDYHu0Og6cAy3lyfWcji33g6mOWYz+Li+Hj40PU1NH+JC
+	alT6CTL4fv9CnaZcEwekSbEdFP3aterkhtiaKWmYXZi4hUl4Zw==
+X-Google-Smtp-Source: APXvYqyK0LynFKWsJ31Ho6YBQC6dYnEhOffXNuauF5xUJEPKI+J508SLi9pWQjaLhJVsxlY5K3xzENh2JaByFir4DPw=
+X-Received: by 2002:a2e:7e0b:: with SMTP id z11mr8847244ljc.45.1573272485479;
+ Fri, 08 Nov 2019 20:08:05 -0800 (PST)
+From: Riley Taylor <paper@ijctc.org>
+Date: Sat, 9 Nov 2019 12:07:54 +0800
+Message-ID: <CAApF80Rea2=3-wL207fpodc0DLM6oOtvQ-3buTs=t+uB-J3-uQ@mail.gmail.com>
+Subject: Dear Fowler, A; Khosmood, F: A Special Issue Intends to Draw Together
+ Ideas on Health Care
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="000000000000a1d5740596e20bd0"
+Return-Path: paper@ijctc.org
+X-MS-Exchange-Organization-ExpirationStartTime: 09 Nov 2019 04:08:06.9272
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 067f028e-5f74-4154-1482-08d764ca6ce4
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132177460869292722;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.196;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(428003)(189003)(199004)(6306002)(95326003)(59536001)(733005)(569274001)(86362001)(61266001)(16586007)(16003)(126002)(2171002)(22186003)(2361001)(4006050)(2160300002)(2351001)(476003)(486006)(58800400005)(336012)(75640400001)(26005)(7596002)(305945005)(7636002)(55446002)(6916009)(71190400001)(33964004)(5660300002)(6666004)(356004)(14444005)(8576002)(9686003)(8676002)(498394004)(1096003)(966005)(606006)(236005)(42186006)(246002)(167793001);DIR:INB;SFP:;SCL:1;SRVR:MWHPR08MB2670;H:mail-lj1-f196.google.com;FPR:;SPF:None;LANG:en;PTR:mail-lj1-f196.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT052.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 067f028e-5f74-4154-1482-08d764ca6ce4
+X-MS-TrafficTypeDiagnostic: MWHPR08MB2670:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Nov 2019 04:08:06.9242
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 067f028e-5f74-4154-1482-08d764ca6ce4
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MWHPR08MB2670
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.0648021
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2430.004
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?K2p1TjNSSkg5bExGYzFDYktkYXpYYXpQMjh0T001bnF6VlFZMERHaXBxeTJR?=
+ =?utf-8?B?WkczUURCMXNISkloR1ZNRDlnNGd3WG5pWVY5djNqbUtTcTh0U3JmdTEwVml0?=
+ =?utf-8?B?elRlQnlXMFEyZ3paVU9ZcmZRTWRVR2VjSk5HMmRiVWdYMC91d3lkMTZNV2Ny?=
+ =?utf-8?B?MVZJYXRXNTRhNnZ0WVlVTE5aWVljVVBDWWhIcjFCOXQzOEtYM0NCVXNzR0FM?=
+ =?utf-8?B?elZwNVZiZ2ZqMkFWSnZRWWpaQ1Z6cHRneDYxZEpKSEJrTUZSNDZ3WDRsTWlX?=
+ =?utf-8?B?SnJjWWFFV0c5TVdNRm5EUmk1cWxKc21PdEkxL2laNkM1Z3VmekQ5enZRUUQv?=
+ =?utf-8?B?eURsemFBdmtCeWRIZnBLbmJtNzc5aFdmcUh2MFFRTUFEQXQ0eXBwWlpOMXhv?=
+ =?utf-8?B?cy9ETjN5QjUxaVBzSGFLL2FUMlEvUVQvQmF6cnZ1Nk1VOWRRM1Q5UytROWpO?=
+ =?utf-8?B?R0M2UE5ZSDh5b1ArQ2U2cTczTitYc2RORnI5eC84UkZyVEJxbjhDc2hrdE4v?=
+ =?utf-8?B?dkVzcElxZzNSQWRLaGo1djgwU3paemF5cEJHUkhoU2hBYklNN1VRRlVuVlpi?=
+ =?utf-8?B?RXZPQzVvM0ZsUEJQamVleSs1TFBNZWh1RjV3a0xhUThscTRYYXRLcTd2N29L?=
+ =?utf-8?B?VU14QTVFVXl6dytCZHU1RmVqdFpiRzBPWDVSTVRSTnk4RVBQT21YdnVEeE5U?=
+ =?utf-8?B?d2tsY2FGY0VURUI1UzZjTHhoTVZuOWVqM3piZDZLY01BODdBSDBPK201Wnl0?=
+ =?utf-8?B?cjg3Qk8ralZGeEc1YndnblZMTFFyczN3aGVicklnUGpUZzRoMTdQa25DK0s5?=
+ =?utf-8?B?QmFRYTNMYW1xYldNTEE3c3FEdGJiRCtlazRGRFFNV05yYjFUaXIzRXNLdmZh?=
+ =?utf-8?B?dmxxcWtsQlRUV3ZVRmVlLzFOL3JpOGY1UlZHNnVENHptdlZjczZXNmdTOUFK?=
+ =?utf-8?B?U2MwWVFmVkZ3NnpNZCtOZ05rK05WTS9jUTdxUFB1UEJwV0J1dWQwbk1tbHdo?=
+ =?utf-8?B?WHdEQTExSnlGRmV1QzdyU2V5UnBJMmNhOFNNd2tvcm9HNGdQU0ZQS3kydWQv?=
+ =?utf-8?B?c2F0L0NMSXltblRkQkJ6RGx6cmJNY2E4S1ZqOXdPSXp4NkN5bTlieE9sYWhv?=
+ =?utf-8?B?SElOeC84QWNML004OGxHUEFXUS9Vb3U3dnJIUm1jSmNyT3ExSjI4bDBQcWRk?=
+ =?utf-8?B?ZHFsVGpyelMyTkZhRnVieUtOWDBsZkJJeXRqN1Y5WFFDcXA2RjJZRC95Uldh?=
+ =?utf-8?B?RlBnTS8zclpXTVV5K0RNU0VwZEdQeDhjRlBxQ09xK0YrSGNGUnlCbmNzOXUv?=
+ =?utf-8?B?amlyc0tDT08yMUJZMXMxeDhhN0s0UE5hVkpuYWVsdGtCaGJ4UmRrc1N6a3FU?=
+ =?utf-8?Q?RYgjg32Jpd5lFZOFr3MSfmIyIyOgpxNQ=3D?=
+MIME-Version: 1.0
+
+--000000000000a1d5740596e20bd0
+Content-Type: text/plain; charset="UTF-8"
+
+Special Issue: Cancer, Health Care Needs and Cancer Patients' Life Quality
+Lead Guest Editor: Gamze Temiz
+Affiliation: University of Health Sciences,Turkey
+Dear Fowler, A; Khosmood, F,
+Warmest greetings.
+With the joint efforts of the lead guest editor Gamze Temiz and other 4
+guest editors, the special issue titled Cancer, Health Care Needs and
+Cancer Patients' Life Quality (http://www.crjournal.org/sinfo/158012/y8nE)
+<http://www.crjournal.org/sinfo/158012/y8nE> has been proposed under Cancer
+Research Journal (http://www.crjournal.org/index/y8nE)
+<http://www.crjournal.org/index/y8nE>. It is an open platform for
+researchers in the same field to spread their research achievements and
+accomplishments.
+They aim to gather together scholars in the same scientific community via
+the special issue, in order to exchange and disseminate their achievements
+and experience about Health Care.
+If you, as a member of the scientific community, have any new achievements
+in the field, be sure to share your insights and experiences with more
+academic peers. Your contribution will have particular value to the
+scientific community.
+Contribute Your Research Papers
+Novel insights and fundamental research around the following topics are
+welcome.
+Here are some of the topics of interest:
+
+   1. Symptom management
+   2. Quality of life
+   3. Education
+
+
+   1. Cancer patient
+   2. Unmet need
+   3. Chemotherapeutic drug application
+
+The submission deadline is February 20, 2020.
+Submission system: http://www.crjournal.org/submission/y8nE
+Any questions, please feel free to contact us.
+We're looking forward to your paper submission.
+Warmly,
+Amelia Ford
+
+--000000000000a1d5740596e20bd0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">
+<br><br><div style=3D"font-family:&quot;Arial&quot;;font-size:13px;line-hei=
+ght:22px;background:rgb(252,252,251) none repeat scroll 0% 0%;color:rgb(6,6=
+,6);padding:21px;width:99%;text-align:justify"> 	<div style=3D"width:770px;=
+background:rgb(253,255,255) none repeat scroll 0% 0%;padding:13px;border-ra=
+dius:11px"> 		<div style=3D"border:3px solid rgb(233,218,206);border-radius=
+:11px"> 			<div style=3D"text-align:left;padding:10px 23px"> 				<img src=
+=3D"http://img.crjournal.org/logo/1116.gif" style=3D"width: 140px; max-widt=
+h: 140px;" width=3D"140px" border=3D"0"> 			</div> 			<div style=3D"padding=
+:15px 20px;background:rgb(244,237,231) none repeat scroll 0% 0%">	 				<div=
+ style=3D"display:table-cell;vertical-align:top;padding-right:24px"><img sr=
+c=3D"http://img.crjournal.org/sc/9459.gif" style=3D"width: 120px; max-width=
+: 120px;" width=3D"120px;" border=3D"0"></div> 				<div style=3D"display:ta=
+ble-cell;vertical-align:middle;width:580px;line-height:26px;font-family:&qu=
+ot;Verdana&quot;"> 					<div style=3D"text-align:left;font-weight:bold;padd=
+ing-bottom:10px"><span style=3D"font-size:16px">Special Issue: </span><span=
+ style=3D"font-style:italic;font-size:13px">Cancer, Health Care Needs and C=
+ancer Patients' Life Quality</span></div> 					<div><span style=3D"font-siz=
+e:12px;font-weight:bold">Lead Guest Editor:</span> Gamze Temiz</div> 					<=
+div><span style=3D"font-size:12px;font-weight:bold">Affiliation:</span> Uni=
+versity of Health Sciences,Turkey</div> 				</div> 			</div> 			<div style=
+=3D"padding:5px 15px 15px"> 				<div style=3D"padding:13px;border-radius:9p=
+x;margin-bottom:15px"> 					<div style=3D"padding-bottom:10px">Dear Fowler,=
+ A; Khosmood, F,</div> 					<div style=3D"padding-bottom:12px">Warmest gree=
+tings.</div> 					<div>With the joint efforts of the lead guest editor Gamz=
+e Temiz and other 4 guest editors, the special issue titled <span style=3D"=
+font-style:italic">Cancer, Health Care Needs and Cancer Patients' Life Qual=
+ity</span> <a href=3D"http://www.crjournal.org/sinfo/158012/y8nE" border=3D=
+"0" target=3D"_blank" style=3D"text-decoration:none;color:rgb(0,76,255);whi=
+te-space:nowrap">(http://www.crjournal.org/sinfo/158012/y8nE)</a> has been =
+proposed under <span style=3D"font-style:italic">Cancer Research Journal</s=
+pan> <a href=3D"http://www.crjournal.org/index/y8nE" border=3D"0" target=3D=
+"_blank" style=3D"text-decoration:none;color:rgb(0,76,255);white-space:nowr=
+ap">(http://www.crjournal.org/index/y8nE)</a>. It is an open platform for r=
+esearchers in the same field to spread their research achievements and acco=
+mplishments.</div> 				</div> 				<div style=3D"padding:13px;border-radius:=
+9px;margin-bottom:15px"> 					<div style=3D"padding-bottom:12px">They
+ aim to gather together scholars in the same scientific community via=20
+the special issue, in order to exchange and disseminate their=20
+achievements and experience about Health Care.</div> 					<div>If you,=20
+as a member of the scientific community, have any new achievements in=20
+the field, be sure to share your insights and experiences with more=20
+academic peers. Your contribution will have particular value to the=20
+scientific community.</div> 				</div> 				<div style=3D"padding:13px;borde=
+r-radius:9px;margin-bottom:15px"> 					<div style=3D"font-family:&quot;Time=
+s New Roman&quot;;font-size:17px"><div style=3D"padding:0px;text-align:cent=
+er;line-height:22px">	<div style=3D"display:inline-block;border-radius:12px=
+;color:rgb(155,90,36);font-weight:bold;border:1px solid rgb(155,90,36);padd=
+ing:2px 10px">Contribute Your Research Papers</div></div></div> 					<div s=
+tyle=3D"padding:12px 0px 8px">Novel insights and fundamental research aroun=
+d the following topics are welcome.</div> 					<div style=3D"font-size:13px=
+;font-weight:bold;font-family:&quot;Verdana&quot;;padding-bottom:8px">Here =
+are some of the topics of interest:</div> 					<div style=3D"padding-bottom=
+:10px"> 						<div style=3D"display:table-cell;vertical-align:top;width:275=
+px;padding-right:18px"> 							<ol style=3D"padding:0px 0px 0px 15px;margin=
+:0px;list-style-type:disc;font-weight:bold;color:rgb(155,90,36)"><li><span =
+style=3D"font-weight:normal;color:rgb(6,6,6)">Symptom management</span></li=
+><li><span style=3D"font-weight:normal;color:rgb(6,6,6)">Quality of life</s=
+pan></li><li><span style=3D"font-weight:normal;color:rgb(6,6,6)">Education<=
+/span></li></ol> 						</div> 						<div style=3D"display:table-cell;vertic=
+al-align:top;width:275px"> 							<ol style=3D"padding:0px 0px 0px 15px;mar=
+gin:0px;list-style-type:disc;font-weight:bold;color:rgb(155,90,36)"><li><sp=
+an style=3D"font-weight:normal;color:rgb(6,6,6)">Cancer patient</span></li>=
+<li><span style=3D"font-weight:normal;color:rgb(6,6,6)">Unmet need</span></=
+li><li><span style=3D"font-weight:normal;color:rgb(6,6,6)">Chemotherapeutic=
+ drug application</span></li></ol> 						</div> 					</div> 					<div style=
+=3D"padding-bottom:6px;text-align:left">The submission deadline is <span st=
+yle=3D"font-size:13px;font-weight:bold;color:rgb(255,252,252);background-co=
+lor:rgb(251,98,47);padding:2px 4px;border-radius:5px;white-space:nowrap">Fe=
+bruary 20, 2020</span>.</div> 					<div style=3D"text-align:left">Submissio=
+n system: <a href=3D"http://www.crjournal.org/submission/y8nE" border=3D"0"=
+ target=3D"_blank" style=3D"text-decoration:none;color:rgb(0,76,255);white-=
+space:nowrap">http://www.crjournal.org/submission/y8nE</a></div> 				</div>=
+ 				<div style=3D"padding:13px;border-radius:9px"> 					<div style=3D"padd=
+ing-bottom:20px">Any questions, please feel free to contact us.</div> 					=
+ 					<div style=3D"padding-bottom:16px">We're looking forward to your pape=
+r submission.</div> 					<div style=3D"line-height:25px"> 						<div>Warmly=
+,</div> 						<div>Amelia Ford</div> 							</div> 				</div> 			</div> 		<=
+/div> 	</div> </div>=20
+
+</div>
+
+--000000000000a1d5740596e20bd0--

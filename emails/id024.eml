@@ -1,0 +1,311 @@
+Received: from BN7PR08MB4978.namprd08.prod.outlook.com (2603:10b6:a03:94::30)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0053.PROD.EXCHANGELABS.COM; Fri, 5 Jul 2019 06:54:57 +0000
+Received: from CY4PR08CA0042.namprd08.prod.outlook.com (10.173.247.156) by
+ BN7PR08MB4978.namprd08.prod.outlook.com (20.176.176.28) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2032.20; Fri, 5 Jul 2019 06:54:54 +0000
+Received: from BN3NAM04FT042.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::205) by CY4PR08CA0042.outlook.office365.com
+ (2603:10b6:903:151::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2052.17 via Frontend
+ Transport; Fri, 5 Jul 2019 06:54:53 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.221.194)
+ smtp.mailfrom=gmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=gmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.221.194 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.221.194; helo=mail-vk1-f194.google.com;
+Received: from mail-vk1-f194.google.com (209.85.221.194) by
+ BN3NAM04FT042.mail.protection.outlook.com (10.152.93.52) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2052.18 via Frontend Transport; Fri, 5 Jul 2019 06:54:53 +0000
+Received: by mail-vk1-f194.google.com with SMTP id m17so1001523vkl.2
+        for <foaad@calpoly.edu>; Thu, 04 Jul 2019 23:54:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=Ac9pixmWnLo+Hd/PC0UgIjQuiNKgufQoCQLWFUTGaQU=;
+        b=Ira7+g8Nhi6o2hGmF1e20i0d1dcuASwmBiQWh8EyhIA4Vb+C3Asdx0ZO857QRzbMQP
+         gjJOzh5Z5Q5f1juyIGFpOEmsOh68yxI4GvuREemmJC35eEvfKy9CR+Gj/SiYFf+Zes39
+         xT8G7AUTBdPESOvzbG7knCxbvPWL9lblDKtk2P2CyHHTGNu26AUo1nXc1FjScbuB1ElY
+         HvUFPQ6Uh0Ri4eq22rGzugs3wy3bBwrWfiN3FJ5XAAIHF3WBzne8MJt13t8NmFwwLQV/
+         dqiCWAvTRjHHHg2sHyAXm7u7bx8oUAsQKopryjBCW/LKK26n00f5LUcMPZ/8mVuY8O/h
+         ssqw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=Ac9pixmWnLo+Hd/PC0UgIjQuiNKgufQoCQLWFUTGaQU=;
+        b=lDgq5Y0g4qtzl0EVPtpoxcLdCqzJzNs6Hr6aA86cFOtPCJy8VE1HyFoJvK/8hWT3OZ
+         JKiNBPZUbLdBcSTPqFL99m1sOaVmCxBpVi2ZrKTjvZ8rK2Wo5KP4n6X0GoqBAAl9zLh1
+         TjYNGGpWQvvTV+OLFDWSlJll9bPelS78AapOOYEKtbHIW09fjGObEsiqGyfMUsY7t0mN
+         qAiiN2g266PRyudQBmK3ARoNll4wMGWeIH9XnKGm4BbGZPnWnw3PiU7ZFRaMabARwDp/
+         eYm5kVotsEO19jvAK1t/lTwID8DUOd8qzMODy0+GW+qeeoPEsMLiHWlCQYLKK/Om0baS
+         S9BA==
+X-Gm-Message-State: APjAAAXOGrgAZbYAQZ+gfLnMtAhUvRnc6uUaRQd86SQ6+Bp1bIrN9irQ
+	B2Yk+xtXvbnG3bRG5T7mOj2cpc9uowIm+4GvJg8=
+X-Google-Smtp-Source: APXvYqyss+Q4R1LywUj3j81WsNsSMgC6xcUXQo1vJ+fpILzY4/GdI2SuOz8kihqCgL7VBcCORG5X3fCYomIbM22yB60=
+X-Received: by 2002:a1f:2cce:: with SMTP id s197mr532190vks.28.1562309692942;
+ Thu, 04 Jul 2019 23:54:52 -0700 (PDT)
+From: Edito GJESRM <infogjesrm@gmail.com>
+Date: Fri, 5 Jul 2019 12:24:40 +0530
+Message-ID: <CAJ-T2tahZYfi+1R-TCCb4qxhU1Q_XnMFBqL5zn4v2gZ9WoSAyg@mail.gmail.com>
+Subject: CALL FOR PAPER FOR VOLUME 6, ISSUE 7 FOR THE MONTH OF JULY 2019
+ (INDEXED:THOMSON REUTERS ENDNOTE)
+To: Infogjesrm@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000004704a5058ce992df"
+BCC: <foaad@calpoly.edu>
+Return-Path: infogjesrm@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Jul 2019 06:54:53.6001
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 7a48ffbf-095f-4990-ee32-08d70115aede
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132067832936581549;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.221.194;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(2980300002)(10533003)(199004)(189003)(10913002)(75640400001)(42186006)(86362001)(4006050)(16586007)(2361001)(2351001)(26005)(606006)(16799955002)(14444005)(73972006)(15188155005)(34206002)(5660300002)(15974865002)(33964004)(73392003)(336012)(55446002)(325944009)(106002)(61266001)(19625735003)(966005)(58800400005)(413944005)(8676002)(1096003)(16003)(66574012)(476003)(7596002)(246002)(356004)(22186003)(126002)(2160300002)(8576002)(6666004)(95326003)(7636002)(76482006)(486006)(498394004)(59536001)(305945005)(236005)(6306002)(71190400001)(82202003)(130430200001)(71626007);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4978;H:mail-vk1-f194.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-vk1-f194.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT042.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 7a48ffbf-095f-4990-ee32-08d70115aede
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:BN7PR08MB4978;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4978:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:2276;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jul 2019 06:54:53.5971
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7a48ffbf-095f-4990-ee32-08d70115aede
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4978
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.8876839
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2032.008
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?WCsyTW42QjRrUUxEMHBpVmFSUUxLUTA1OVg2WGxJQi9RbmtMOUhNblFmejBs?=
+ =?utf-8?B?ZC9yMlA1WERiclBhbVFUWUduZEQvU2o3cThRemhkREJrMmVNbmdFNm1NUHJq?=
+ =?utf-8?B?UzVXQUFvWTlzU1krYTcvUnh1dmwrbmJsN1RhbEt4Q0xGeExZNGxEanZyN1Z5?=
+ =?utf-8?B?S09kSlBLYzI0L0IzaFZkU1grVmQ2ZDZGUWVMU0dNT1d1R3l4eHZtaGUrN1dB?=
+ =?utf-8?B?ZVh2aFdPZzM4SlRUZHBBbGZuMENVVE9XWW9VbFEzbE43V1VLOEs1c3N4N0V0?=
+ =?utf-8?B?NFo2Mm54WGlKY2tBRFVNL2VEU1R5NmpGcks1dVZpNGhpbW9IWitET0lqM0pv?=
+ =?utf-8?B?cTRlMEtyTmJvbHNBYTd1UHVPQVYwYStsOGdqelVDdzFYMlZpVWVPZG4xbUQw?=
+ =?utf-8?B?MlJsWVdxcGpqalFoU2RQUGZSN2EvYjZSWnNRQm9qZDAxakQ3aHA3YU80QjJD?=
+ =?utf-8?B?WjI3TzFDOVN2c2p2NDAxT0paZU9IUXFTMzM2NHdaME13RnFkOXkzRkNReDg5?=
+ =?utf-8?B?blYrY1R0QUFEZ0NXYTRUVDBDNlU5T2R2eEF5NStKaFR0OUk4UDJuNUFkWkpy?=
+ =?utf-8?B?VDdZMk1uUWJnRHU4Sk9HS2pMY2JZYW5VSkRnWDNmRGZNai9EbHFKblFLOHRM?=
+ =?utf-8?B?NmhEWDlwSGwxY2pnenExSC9zTWplcnU4cHZKV3ZUb3pkVEhZd2dpYndrbUpx?=
+ =?utf-8?B?TWEzL2NnVnlHK090MkFYLyt1cDRORFR6Z05IaXA0ZzNoUk50L2pvZXY5eWFX?=
+ =?utf-8?B?UjN0ZnZJcEZOdlJKd0hvcWNhRk02Nkp5UTRwc3BobXh5Ulo4L05RNEZIYmNy?=
+ =?utf-8?B?L1NHMDBDS1NlVnZOdkhlcG5wdkZwS2ZuWExyN25MUjdTS2tVV1dkMVR6NSs2?=
+ =?utf-8?B?L2o0M0FzTzJKR09Db0FWWUJWMVUraEFSYlJUaGVqUTJ0bU5NYkxpNE1PS1Jn?=
+ =?utf-8?B?aUJlcHl3bERTV3JHY21PL3MwL3FVSkhuRnA3aWRCdWRkNEdJUkpUK05MUnJp?=
+ =?utf-8?B?WjFLSmxXZTM2R1ZQenVuMHZZSXFIMzUwYWE4M1RIRENNYmdkTG4wanh3a2NU?=
+ =?utf-8?B?eU5JWHFVZkE1dUd6aFlYckhUQ29TUWN5SWJGY3ZYMHc0QVE3Q29BQkJpNFpB?=
+ =?utf-8?B?dmJ4UysrWTlGTTU0STNDRlVtYjA4TkJCa0pwR0k5bUxmYWFvZlZtYlkrQWpU?=
+ =?utf-8?B?M2tJaS9aR05EK2FjaFpKYVZ4YzRZZGpSekNaOUYzUmw5Wis1b2l2eitUWEpI?=
+ =?utf-8?B?WUZ4Sk84c25lbjd2aDVmUWpCalAwQmpXRkNLZDhuZmVPYVVrMG5seUZuanZm?=
+ =?utf-8?Q?VN0OWCTH9J8Rp500XR1fjeBHKCl2UqP4WP?=
+MIME-Version: 1.0
+
+--0000000000004704a5058ce992df
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Dear Author/Researcher,*
+
+*Global Journal of Engineering Science and Research Management **(GJESRM,
+ISSN **2349-4506**),*
+
+We are pleased to inform you that GJESRM is going to launch its upcoming
+issue for the month of *July*, 2019. We would like to invite you to
+contribute a Research Paper for publication in GJESRM for International
+Journal. GJESRM covers all areas of *Computer Science, Electronics
+Engineering, Information Technology, *and all other streams of *science*
+and *Management* for our International Journal. We publish original
+research articles, review articles and technical notes.
+
+*Invites you to submit your research paper for publishing in *  *Volume 6,
+Issue 7 (JULY - 2019)*
+
+INDEXED IN THOMSON REUTER *ENDNOTE: **ResearcherID:**D-6904-2018*
+
+*http://www.researcherid.com/rid/D-6904-2018
+<http://www.researcherid.com/rid/D-6904-2018>  *
+
+The journal reviews papers within one week of submission and publishes
+accepted articles on the internet immediately upon receiving the final
+versions. The articles should be in proper format as in the sample format.
+
+*FOR ONLINE SUBMISSION MANUSCRIPT*
+
+*http://www.gjesrm.com/submit_manuscript_online.php
+<http://www.gjesrm.com/submit_manuscript_online.php>*
+
+Authors are invited to submit the paper online or through E-mail at
+*Infogjesrm@gmail.com* <Infogjesrm@gmail.com> Submissions must be original
+and should not have been submitted or published previously anywhere else
+for publication.
+
+*Important Dates:*
+
+*=C2=B7Paper Submission:   05 July 2019.*
+
+=C2=B7Review Results (Acceptance/Rejection) Notification: Within 02  Days a=
+fter
+submitting paper.
+
+*=C2=B7Published Online on : 10 July 2019.*
+
+*Publication Charges:*
+
+*Indian Author(s)*
+
+Rs 1500/- upto 3 authors, after 3 authors charges will be Rs 500/author
+
+Rs 300/author for Hard copy of certificate.
+
+*Foreign Author(s)*
+
+$ 80 USD upto 6 Authors
+
+*Editor in Chief:*
+*GLOBAL JOURNAL OF ENGINEERING SCIENCES AND RESEARCH MANAGEMENT (GJESRM,
+ISSN 2349-4506),*
+
+*Website: www.gjesrm.com <http://www.gjesrm.com/>*
+
+*Paper Submission Email: infogjesrm@gmail.com <infogjesrm@gmail.com>*
+
+*For any Query, Please feel free to contact at: infogjesrm@gmail.com
+<infogjesrm@gmail.com>*
+
+--0000000000004704a5058ce992df
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div><b><font size=3D"4">Dear Author/Researcher,</font></b><=
+/div><div><br></div><div><b style=3D"color:rgb(80,0,80);font-family:&quot;t=
+imes new roman&quot;,serif;font-size:large"><font style=3D"vertical-align:i=
+nherit"><font style=3D"vertical-align:inherit">Global Journal of Engineerin=
+g Science and Research Management&nbsp;</font></font></b><font style=3D"fon=
+t-family:arial,sans-serif;font-size:13px;vertical-align:inherit"><font size=
+=3D"4"><b><font style=3D"vertical-align:inherit">(GJESRM, ISSN&nbsp;</font>=
+</b></font><font size=3D"4"><b><font style=3D"vertical-align:inherit">2349-=
+4506</font></b></font><font size=3D"4"><b><font style=3D"vertical-align:inh=
+erit">),</font></b></font></font><b style=3D"font-family:arial,sans-serif;f=
+ont-size:13px"><font size=3D"3">&nbsp;</font><font size=3D"6">&nbsp;</font>=
+</b>&nbsp;&nbsp;<br></div><div><br></div><div><font size=3D"4">We are pleas=
+ed to inform you that GJESRM is going to launch its upcoming issue for the =
+month of&nbsp;<b>July</b>, 2019. We would like to invite you to contribute =
+a Research Paper for publication in GJESRM for International Journal. GJESR=
+M covers all areas of <b>Computer Science, Electronics Engineering, Informa=
+tion Technology, </b>and all other streams of <b>science</b> and <b>Managem=
+ent</b> for our International Journal. We publish original research article=
+s, review articles and technical notes.</font></div><div><b style=3D"font-f=
+amily:arial,sans-serif;font-size:13px"><span style=3D"font-size:12pt"><font=
+ style=3D"vertical-align:inherit"><font style=3D"vertical-align:inherit"><b=
+r></font></font></span></b></div><div><b style=3D"font-family:arial,sans-se=
+rif;font-size:13px"><span style=3D"font-size:12pt"><font style=3D"vertical-=
+align:inherit"><font style=3D"vertical-align:inherit">Invites you to submit=
+ your research&nbsp;paper&nbsp;for&nbsp;publishing in&nbsp;</font></font></=
+span></b>&nbsp;&nbsp;<b><font size=3D"4" color=3D"#000000" style=3D"backgro=
+und-color:rgb(255,255,0)">Volume 6, Issue 7 (JULY - 2019)</font></b></div><=
+div><span style=3D"font-family:arial,sans-serif;font-size:xx-large;text-ali=
+gn:center"><font style=3D"vertical-align:inherit"><font style=3D"vertical-a=
+lign:inherit"><br></font></font></span></div><div><span style=3D"font-famil=
+y:arial,sans-serif;font-size:xx-large;text-align:center"><font style=3D"ver=
+tical-align:inherit"><font style=3D"vertical-align:inherit">INDEXED IN THOM=
+SON REUTER&nbsp;</font></font></span><strong style=3D"font-size:12.8px;colo=
+r:rgb(0,0,0);font-family:helveticaneue,&quot;helvetica neue&quot;,helvetica=
+,arial,&quot;lucida grande&quot;,sans-serif;text-align:center"><span style=
+=3D"font-family:cambria,serif"><font size=3D"4"><font style=3D"vertical-ali=
+gn:inherit"><font style=3D"vertical-align:inherit">ENDNOTE:&nbsp;</font></f=
+ont></font></span></strong><b style=3D"text-align:center;color:rgb(0,0,0);f=
+ont-family:helveticaneue,&quot;helvetica neue&quot;,helvetica,arial,&quot;l=
+ucida grande&quot;,sans-serif;font-size:16px"><font style=3D"vertical-align=
+:inherit"><font style=3D"vertical-align:inherit">ResearcherID:</font></font=
+></b><font style=3D"font-family:arial,sans-serif;font-size:13px;vertical-al=
+ign:inherit"><b><span style=3D"color:rgb(0,0,0);font-family:&quot;times new=
+ roman&quot;,times;font-size:13.3333px"><font style=3D"vertical-align:inher=
+it">D-6904-2018</font></span></b></font><span style=3D"text-align:center;co=
+lor:rgb(0,0,0);font-family:helveticaneue,&quot;helvetica neue&quot;,helveti=
+ca,arial,&quot;lucida grande&quot;,sans-serif;font-size:16px">&nbsp;</span>=
+<b style=3D"font-family:arial,sans-serif;font-size:13px"><span style=3D"col=
+or:rgb(0,0,0);font-family:&quot;times new roman&quot;,times;font-size:13.33=
+33px"><font style=3D"vertical-align:inherit"></font></span>&nbsp;</b><br></=
+div><div><p style=3D"font-family:arial,sans-serif;font-size:13px"><b><a hre=
+f=3D"http://www.researcherid.com/rid/D-6904-2018" target=3D"_blank" style=
+=3D"font-size:12.8px;font-weight:400"><font style=3D"vertical-align:inherit=
+"><font style=3D"vertical-align:inherit">http://www.researcherid.com/</font=
+></font><font style=3D"vertical-align:inherit"><font style=3D"vertical-alig=
+n:inherit">rid/D-6904-2018</font></font></a>&nbsp;&nbsp;</b></p></div><div>=
+<br></div><div><font size=3D"4">The journal reviews papers within one week =
+of submission and publishes accepted articles on the internet immediately u=
+pon receiving the final versions. The articles should be in proper format a=
+s in the sample format.</font></div><div><br></div><div><b><font size=3D"4"=
+>FOR ONLINE SUBMISSION MANUSCRIPT</font></b></div><div><br></div><div><b><a=
+ href=3D"http://www.gjesrm.com/submit_manuscript_online.php" target=3D"_bla=
+nk">http://www.gjesrm.com/submit_manuscript_online.php</a></b></div><div><b=
+><br></b></div><div><font size=3D"4">Authors are invited to submit the pape=
+r online or through E-mail at&nbsp;<a href=3D"mailto:Infogjesrm@gmail.com" =
+target=3D"_blank"><b>Infogjesrm@gmail.com</b></a>&nbsp;Submissions must be =
+original and should not have been submitted or published previously anywher=
+e else for publication.</font></div><div><br></div><div><b><font size=3D"4"=
+>Important Dates:</font></b></div><div><b><font size=3D"4"><br></font></b><=
+/div><div><b><font size=3D"4">=C2=B7Paper Submission:&nbsp; &nbsp;<font sty=
+le=3D"background-color:rgb(255,255,0)">05 July 2019.</font></font></b></div=
+><div><b><font size=3D"4"><br></font></b></div><div><font size=3D"4">=C2=B7=
+Review Results (Acceptance/Rejection) Notification: Within 02&nbsp; Days af=
+ter submitting paper.</font></div><div><b><font size=3D"4"><br></font></b><=
+/div><div><b><font size=3D"4">=C2=B7Published Online on :&nbsp;<font style=
+=3D"background-color:rgb(255,255,0)">10 July 2019.</font></font></b></div><=
+div><font size=3D"4"><br></font></div><div><p style=3D"font-family:arial,sa=
+ns-serif;font-size:13px"><b><span style=3D"font-family:&quot;times new roma=
+n&quot;,serif;font-size:13.5pt"><font style=3D"vertical-align:inherit"><fon=
+t style=3D"vertical-align:inherit">Publication Charges:</font></font></span=
+></b></p><p style=3D"font-family:arial,sans-serif;font-size:13px"><font fac=
+e=3D"Times New Roman, serif"><span style=3D"font-size:18px"><b><i><font sty=
+le=3D"vertical-align:inherit"><font style=3D"vertical-align:inherit">Indian=
+ Author(s)</font></font></i></b></span></font></p><p style=3D"font-family:a=
+rial,sans-serif;font-size:13px"><font face=3D"Times New Roman, serif"><span=
+ style=3D"font-size:18px"><font style=3D"vertical-align:inherit"><font styl=
+e=3D"vertical-align:inherit">Rs 1500/- upto 3 authors, after 3 authors char=
+ges will be Rs 500/author&nbsp;</font></font></span></font></p><p style=3D"=
+font-family:arial,sans-serif;font-size:13px"><font face=3D"Times New Roman,=
+ serif"><span style=3D"font-size:18px"><font style=3D"vertical-align:inheri=
+t"><font style=3D"vertical-align:inherit">Rs 300/author for Hard copy of ce=
+rtificate.</font></font></span></font></p><p style=3D"font-family:arial,san=
+s-serif;font-size:13px"><font face=3D"Times New Roman, serif"><span style=
+=3D"font-size:18px"><b><i><font style=3D"vertical-align:inherit"><font styl=
+e=3D"vertical-align:inherit">Foreign Author(s)</font></font></i></b></span>=
+</font></p><p style=3D"font-family:arial,sans-serif;font-size:13px"><font f=
+ace=3D"Times New Roman, serif"><span style=3D"font-size:18px"><font style=
+=3D"vertical-align:inherit"><font style=3D"vertical-align:inherit">$ 80 USD=
+ upto 6 Authors</font></font></span></font><span style=3D"font-size:13.5pt;=
+font-family:&quot;times new roman&quot;,serif">&nbsp;</span></p></div><div>=
+<b><font size=3D"4"><br></font></b></div><div><b><font size=3D"4">Editor in=
+ Chief:</font></b></div><div><b><font size=3D"4">GLOBAL JOURNAL OF ENGINEER=
+ING SCIENCES AND RESEARCH MANAGEMENT (GJESRM, ISSN 2349-4506),</font></b></=
+div><div><b><font size=3D"4"><br></font></b></div><div><b><font size=3D"4">=
+Website:&nbsp;<span style=3D"background-color:rgb(255,255,0)"><a href=3D"ht=
+tp://www.gjesrm.com/" target=3D"_blank">www.gjesrm.com</a></span></font></b=
+></div><div><b><font size=3D"4"><br></font></b></div><div><b><font size=3D"=
+4">Paper Submission Email:&nbsp;<a href=3D"mailto:infogjesrm@gmail.com" tar=
+get=3D"_blank">infogjesrm@gmail.com</a></font></b></div><div><b><font size=
+=3D"4"><br></font></b></div><div><b><font size=3D"4">For any Query, Please =
+feel free to contact at:&nbsp;<a href=3D"mailto:infogjesrm@gmail.com" targe=
+t=3D"_blank">infogjesrm@gmail.com</a></font></b></div></div>
+
+--0000000000004704a5058ce992df--

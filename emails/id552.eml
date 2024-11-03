@@ -1,0 +1,204 @@
+Received: from SN6PR08MB4991.namprd08.prod.outlook.com (2603:10b6:a03:60::25)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR07CA0048.NAMPRD07.PROD.OUTLOOK.COM; Sun, 4 Aug 2019 04:26:39 +0000
+Received: from DM6PR08CA0046.namprd08.prod.outlook.com (2603:10b6:5:1e0::20)
+ by SN6PR08MB4991.namprd08.prod.outlook.com (2603:10b6:805:6e::28) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.17; Sun, 4 Aug
+ 2019 04:26:35 +0000
+Received: from CO1NAM04FT027.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::202) by DM6PR08CA0046.outlook.office365.com
+ (2603:10b6:5:1e0::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.16 via Frontend
+ Transport; Sun, 4 Aug 2019 04:26:35 +0000
+Authentication-Results: spf=pass (sender IP is 114.31.224.106)
+ smtp.mailfrom=rediffmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=rediffmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=rediffmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of rediffmail.com
+ designates 114.31.224.106 as permitted sender)
+ receiver=protection.outlook.com; client-ip=114.31.224.106;
+ helo=rediffmail.com;
+Received: from rediffmail.com (114.31.224.106) by
+ CO1NAM04FT027.mail.protection.outlook.com (10.152.90.164) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2136.14 via Frontend Transport; Sun, 4 Aug 2019 04:26:34 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rediffmail.com;
+	s=mail; t=1564892791;
+	bh=cWuo5NIxhPK869So0luIrYeURyY98qYQLUSqZCnPabY=;
+	h=MIME-Version:From:Date:Message-ID:Subject:To:Content-Type;
+	b=Moqi3KIXXW5kj2QM8fMV/pSWl0lH9jzcuseb62Vq6nr3Mu2AmqOx1kAl4VeIL/Wbt
+	 BIn1JCKLysBOh6CLZhJTmv80c0DX04C/z8BZ2PPZP8EaUM0muulFTKBWoolLhtDn/D
+	 a13dFKyxLbzbXmWRFC765TTZEkY/sqvhxWi/4in4=
+Received: (qmail 3528 invoked by uid 510); 4 Aug 2019 04:26:31 -0000
+x-m-msg: asd54ad564ad7aa6sd5as6d5; a6da7d6asas6dasd77; 5dad65ad5sd;
+X-OUT-VDRT-SpamState: 0\LEGIT
+X-OUT-VDRT-SpamScore: 0
+X-OUT-VDRT-SpamCause: gggruggvucftvghtrhhoucdtuddrgeduvddruddtfedgkedtucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecutffgfffkhffhpdfqfgfvnecuuegrihhlohhuthemuceftddtnecunecujfgurhepfffkggfvshfuhfgtsegrtddvredttdejnecuhfhrohhmpedfphhusghlihhshhdfuceophhusghlihhshhhrvghsvggrrhgthhekgeejsehrvgguihhffhhmrghilhdrtghomheqnecukfhppeegjedrfedurdduheeirddvtdegnecurfgrrhgrmhepmhhouggvpehsmhhtphhouhhtnecuvehluhhsthgvrhfuihiivgepud
+X-Remote-IP: 47.31.156.204
+X-REDF-OSEN: publishresearch847@rediffmail.com
+Date: 4 Aug 2019 04:26:31 -0000
+Message-ID: <20190804042631.3512.qmail@f5mail-224-106.rediffmail.com>
+To: <gdcc@cin.ufpe.br>, <vladimir.ciric@elfak.ni.ac.rs>,
+  <ivan.milentijevic@elfak.ni.ac.rs>, <oliver.vojinovic@elfak.ni.ac.rs>,
+  <nemanja.manic@elfak.rs>, <guillermo.santamaria@ineel.mx>,
+  <gescobedo@ineel.mx>, <mperez@ineel.mx>, <garroyo@ineel.mx>,
+  <20131259@student.ciu.edu.tr>, <mnat@ciu.edu.tr>, <kazanidis@teiemt.gr>,
+  <npellas@aegean.gr>, <daniel.shen@connect.um.edu.mo>, <jzguo@um.edu.mo>,
+  <acpena@ieee.org>, <foaad@calpoly.edu>, <jfastowicz@zut.edu.pl>,
+  <m.sypetkowski@gmail.com>, <grzegorz.sarwas@ee.pw.edu.pl>,
+  <t.trzcinski@ii.pw.edu.pl>, <wrawat10@gmail.com>, <wangzengh@gmail.com>,
+  <michalak.hubert@zut.edu.pl>, <okarma@zut.edu.pl>,
+  <dominik.pieczynski@put.poznan.pl>, <marek.kraft@put.poznan.pl>,
+  <michal.fularz@put.poznan.pl>, <lukasz.apiecionek@ukw.edu.pl>,
+  <marcel.grossmann@uni-bamberg.de>
+Received: from unknown 47.31.156.204 by rediffmail.com via HTTP; 04 Aug 2019 04:26:31 -0000
+X-Senderscore: D=0&S=2
+Sender: publishresearch847@rediffmail.com
+Subject: =?utf-8?B?VG9wIDIwIHdvcmxkIGpvdXJuYWwgbGlzdCAg?=
+From: "publish" <publishresearch847@rediffmail.com>
+Content-Type: multipart/alternative;
+	boundary="=_e93ee9a7f9bcf9b35ffd8ab52628961c"
+Return-Path: publishresearch847@rediffmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 04 Aug 2019 04:26:35.0137
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 0ba35d8d-d5d5-4717-e815-08d71893ef4a
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:114.31.224.106;IPV:NLI;CTRY:IN;EFV:NLI;SFV:SPM;SFS:(10001)(979002)(4636009)(2980300002)(189003)(199004)(2171002)(7636002)(305945005)(110136005)(14444005)(58800400005)(246002)(16586007)(1096003)(71190400001)(8676002)(86362001)(426003)(356004)(55666002)(45736002)(40036005)(16003)(75640400001)(70596004)(22756006)(4006050)(88526003)(336012)(5070765005)(33964004)(956004)(2201001)(22186003)(7846003)(6392003)(476003)(126002)(106002)(1076003)(5970100001)(63326003)(26005)(486006)(5660300002)(17816001)(128850200001)(921003)(1121003)(14943795004)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:5;SRVR:SN6PR08MB4991;H:rediffmail.com;FPR:;SPF:Pass;LANG:en;PTR:f5mail-224-106.rediffmail.com;MX:1;A:1;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT027.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 0ba35d8d-d5d5-4717-e815-08d71893ef4a
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:SN6PR08MB4991;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4991:
+X-MS-Oob-TLC-OOBClassifiers: OLM:5236;
+X-MS-Exchange-Organization-SCL: 5
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 Aug 2019 04:26:34.1131
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0ba35d8d-d5d5-4717-e815-08d71893ef4a
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4991
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.1687368
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750119)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?NkJIUUFxVm1XMW55NTd5cWpoZUJ1NTJBM2ZHenpxRUxSakM4YmV3QWtuRnBm?=
+ =?utf-8?B?UnhZeHROcUZRVVgwWGR1eWtTaUdwemxkSWczQUlHUTh6QjJHUm5jNTN3c2oz?=
+ =?utf-8?B?K2tDM1dJZWJjN3hxOWJvZVIxbHArV1lUS28zYzFFWm0rUXhoajJoa3pmRkFt?=
+ =?utf-8?B?WDl1ZTRLNHdwQXpZUzlSSmlOZk52N1FvZXYra0huNS9RVUFxWXFtZERDVW0x?=
+ =?utf-8?B?SjhLVDJIRWtIU0pwTUFyN25zN3VFSFNYY2NkVTJqMGhNZzJKcittVVlGRnAw?=
+ =?utf-8?B?WkxBYjM4Y1RLY0xYUm5uRnh3WFBSOUJjbVpId0RxZ2w3L2pqQ01vT0t2N050?=
+ =?utf-8?B?SE1aQzVubnE2YzRFcmlTU3FsdkF6WE01cGM1ay9ycmNiaHJ5WUMyTkJ4Qkc5?=
+ =?utf-8?B?amNFUlRtUG55TTJVVVhORWprRjAzMmxQTmYveDRNai9Sb2E3dm9hME5qbjUz?=
+ =?utf-8?B?UjVDSkNFQ3Bia09wZWJvbTYxNzZsRWx0eDBOeWRlRVpRYTlVZW4rOHlKZEJF?=
+ =?utf-8?B?VEtMOXR2VllGTW9LMGdYdmlaWlRiZEovSXBqSjhjd2hCV3BCcjlLQzhIbmpT?=
+ =?utf-8?B?SGM2TUZuL041SFpEa3dzUDR6dTBJMDhiZFNPYmFuTnlxWENhcW9OT2hJWEJZ?=
+ =?utf-8?B?UkhnUnFZRUhCRmc2UGxYNmM5WXdFUXpnU0xVeVZIUW5OMWJ4V1RUVWtsOVRX?=
+ =?utf-8?B?RExrbFc4cVlWek1WM0MwK1A3STdMazF2THJrZ1JDSlR5eitQQUxlK1gvN09X?=
+ =?utf-8?B?aEE4UGhSTnhoTVpVaVdaYm05amZHTTdDaGE1Nzk5eGdUQTB1NHpudVA1bzB3?=
+ =?utf-8?B?S0MxcmFmTi9XMUlLQ0dFS0dRbkJTbnYxOWhROHNpalNKMTAvWDZlL1NoemhI?=
+ =?utf-8?B?UUhDSWhRNzJkaWtnRm00WFRqaU9od2hsU3BvK1A1WVFSc3VTZE1zamc3UUVw?=
+ =?utf-8?B?K3YwSVg4a09aMTRNdTNXeUYrT2NDcEUvdGc0QTdZVllVcXk0NU13ZkdXOTJ0?=
+ =?utf-8?B?K3NoTm9icnVUejQ0Mkc4QW5INnpISUUySzJtazJlazlRRmp5OENKbzRaMnRu?=
+ =?utf-8?B?Mk5GZnJFclBXMERaUlhTUjdFT1V2WkY3U0F5L1lhMEg5bzF5UUxhU3BXcHFR?=
+ =?utf-8?B?TGdTOFIyTU1IbXlBRmNLVnY1RUJXRittSmRjYzc3cUZqNGpxbXEyOXFWd0N0?=
+ =?utf-8?B?YXQweG52TVVhdXRteVAxWFE4OXIzdVZxWVJrb3hoRExlaVJ4MkprenV3MlBu?=
+ =?utf-8?B?M2ZRaEVuMUVFRCtkc0VCcjNPN2tWZEpMYkd4RjdoSnRYc0FQcjgvY244Ymxy?=
+ =?utf-8?B?V0ZzNDlKSmlBcW41ZzBZcGZYYll5UktvN3ZSUkZaZ3VDNXcxL2J0eUlTQkVE?=
+ =?utf-8?B?KzdrU3JLMFB4NHRHYlVwNzAva1JCTHhiSVBEeCtEckdxRVRqSURqd09mak8r?=
+ =?utf-8?B?UUd0eDdiTk9PZkZTenhaOTNVbitBOXdyOFgwYkVGWUdmQ1RWZnZwT295SzJI?=
+ =?utf-8?B?SmxiYXFFSURuK3JxWVdHTk5pODBzSHhFclNjekZyUCtIemVVUzdVaW9uZjV2?=
+ =?utf-8?B?dGtKVityeDUzLzdMNFIvRHk3UzFkdllNdzJvTlJZT0U5eTlMWGhRNjh0bHFl?=
+ =?utf-8?B?WWxOWUQwY3lTOU5XWXJ3SFlXOHp2T3RCbStPVzlaRUIzWmluUkpEY2ZWcEUw?=
+ =?utf-8?B?bnJqUGNLUFpla3gwK1lkbk82ZkdIVFo4NUFNbGFWQ255U1ZRZlNGRFM3OTFl?=
+ =?utf-8?B?ci9rRW9mUG91M1ZLNS8yTmEwamhKdUhRQisvbnlIclVlaU9rellKWFBUaDRy?=
+ =?utf-8?Q?MzfyS7js/0vq+psk3Y3l/gyXEhMr/RLiSdbKI=3D?=
+MIME-Version: 1.0
+
+--=_e93ee9a7f9bcf9b35ffd8ab52628961c
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="UTF-8"
+
+International Organization of Scientific ResearchDear Sir,&nbsp;We are happy to announce you that IOSR Journals&nbsp;have come under&nbsp;AQCJ - 2019 Top 20 Journals Raking.&nbsp;It was calculated on the basis of&nbsp;&ldquo;Google Scholar Citation&rdquo;&nbsp;of published articles.&nbsp;&nbsp;Mail id:&nbsp;editors.submit@gmail.com&nbsp;&nbsp;&nbsp;Journals got 9th&nbsp;Ranking by AQCJ (African Quality Center for Journals) - Top 20 Journals Ranking.&nbsp;Indexing:&nbsp;Index Copernicus, Cross Ref (USA),&nbsp;NASA ads, ANED (American national Engineering Database),&nbsp;Google Scholar, Open- J Gate.&nbsp;&nbsp;Journals provides DOI (Digital Object Identifier) to each article. IOSR Journals DOI is 10.9790&nbsp;Papers are invited for IOSR Journals August&nbsp;&nbsp;2019 Issue related to all field of Engineering, Management, Medical &amp; Dental Science, Pharmacy, Applied Sciences, Nursing, Humanities and Social Science etc.&nbsp;Important Dates: August 2019Submission last date 15th&nbsp;August 2019Acknowledgement of submission Within 24 hrsAcceptance notification After 10 Days of submission (Blind peer review process)Publication Date 25th&nbsp;August 2019RegardsDirector General,(A Unit of International Organization of Scientific Research)&nbsp;&nbsp;
+&nbsp;
+--=_e93ee9a7f9bcf9b35ffd8ab52628961c
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><s=
+pan style=3D"background: yellow;"><span style=3D"color: blue;"><span style=
+=3D"font-family: &quot;comic sans ms&quot;;"><span style=3D"font-size: 15pt=
+;">International Organization of Scientific Research</span></span></span></=
+span><br><span style=3D"color: rgb(0, 0, 0);"><span style=3D"font-family: &=
+quot;comic sans ms&quot;;"><span style=3D"font-size: 9.5pt;">Dear Sir,</spa=
+n></span></span><br>&nbsp;<br><span style=3D"color: rgb(0, 0, 0);"><span st=
+yle=3D"font-family: &quot;comic sans ms&quot;;"><span style=3D"font-size: 9=
+.5pt;">We are happy to announce you that IOSR Journals&nbsp;have come under=
+&nbsp;<span style=3D"font-weight: 700; font-family: Helvetica, sans-serif, =
+arial;">AQCJ - 2019 Top 20 Journals Raking</span>.&nbsp;It was calculated o=
+n the basis of&nbsp;=E2=80=9C</span></span></span><span style=3D"font-famil=
+y: &quot;comic sans ms&quot;;"><span style=3D"font-size: 9.5pt;">Google Sch=
+olar Citation=E2=80=9D</span></span><span style=3D"color: rgb(0, 0, 0);"><s=
+pan style=3D"font-family: &quot;comic sans ms&quot;;"><span style=3D"font-s=
+ize: 9.5pt;">&nbsp;of published articles.&nbsp;</span></span></span>&nbsp;<=
+span style=3D"font-family: &quot;comic sans ms&quot;;"><span style=3D"font-=
+size: 9.5pt;">Mail id:&nbsp;</span></span>editors.submit@gmail.com&nbsp;&nb=
+sp;<br class=3D"gmail-Apple-interchange-newline">&nbsp;<br><span style=3D"f=
+ont-family: &quot;comic sans ms&quot;;"><span style=3D"font-size: 9.5pt;">J=
+ournals got 9<sup>th</sup>&nbsp;Ranking by AQCJ (African Quality Center for=
+ Journals) - Top 20 Journals Ranking.</span></span><br>&nbsp;<br><span styl=
+e=3D"font-weight: 700;"><span style=3D"color: rgb(99, 36, 35);"><span style=
+=3D"font-family: &quot;comic sans ms&quot;;"><span style=3D"font-size: 9.5p=
+t;">Indexing:</span></span></span></span>&nbsp;<span style=3D"font-family: =
+&quot;comic sans ms&quot;;"><span style=3D"font-size: 9.5pt;">Index Coperni=
+cus</span></span><span style=3D"color: rgb(15, 36, 62);"><span style=3D"fon=
+t-family: &quot;comic sans ms&quot;;"><span style=3D"font-size: 9.5pt;">, C=
+ross Ref (USA),&nbsp;</span></span></span><span style=3D"font-weight: 700;"=
+><span style=3D"color: rgb(0, 112, 192);"><span style=3D"font-family: &quot=
+;comic sans ms&quot;;"><span style=3D"font-size: 10pt;">NASA ads</span></sp=
+an></span></span><span style=3D"color: rgb(15, 36, 62);"><span style=3D"fon=
+t-family: &quot;comic sans ms&quot;;"><span style=3D"font-size: 9.5pt;">, A=
+NED (American national Engineering Database),&nbsp;</span></span></span><sp=
+an style=3D"font-weight: 700;"><span style=3D"color: rgb(0, 112, 192);"><sp=
+an style=3D"font-family: &quot;comic sans ms&quot;;"><span style=3D"font-si=
+ze: 10pt;">Google Scholar</span></span></span></span><span style=3D"color: =
+rgb(15, 36, 62);"><span style=3D"font-family: &quot;comic sans ms&quot;;"><=
+span style=3D"font-size: 9.5pt;">, Open- J Gate.</span></span></span><br><s=
+pan style=3D"color: rgb(0, 0, 0);"><span style=3D"font-family: &quot;comic =
+sans ms&quot;;"><span style=3D"font-size: 10pt;">&nbsp;<br>&nbsp;</span></s=
+pan></span><br><span style=3D"font-family: &quot;comic sans ms&quot;;"><spa=
+n style=3D"font-size: 9.5pt;">Journals provides DOI (Digital Object Identif=
+ier) to each article. IOSR Journals DOI is 10.9790</span></span><br>&nbsp;<=
+br><span style=3D"color: rgb(0, 0, 0);"><span style=3D"font-family: &quot;c=
+omic sans ms&quot;;"><span style=3D"font-size: 9.5pt;">Papers are invited f=
+or IOSR Journals August</span></span></span>&nbsp;<span style=3D"color: rgb=
+(0, 0, 0);"><span style=3D"font-family: &quot;comic sans ms&quot;;"><span s=
+tyle=3D"font-size: 9.5pt;">&nbsp;2019 Issue related to all field of Enginee=
+ring, Management, Medical &amp; Dental Science, Pharmacy, Applied Sciences,=
+ Nursing, Humanities and Social Science etc.&nbsp;</span></span></span><br>=
+<span style=3D"font-weight: 700;"><span style=3D"font-family: arial, sans-s=
+erif;">Important Dates: August 2019</span></span><br><span style=3D"font-fa=
+mily: arial, sans-serif;">Submission last date 15<sup>th</sup>&nbsp;August =
+2019<br>Acknowledgement of submission Within 24 hrs</span><br><span style=
+=3D"font-family: arial, sans-serif;">Acceptance notification After 10 Days =
+of submission (Blind peer review process)<br>Publication Date 25<sup>th</su=
+p>&nbsp;August 2019</span><br><span style=3D"font-family: &quot;comic sans =
+ms&quot;;"><span style=3D"font-size: 9.5pt;">Regards</span></span><br><span=
+ style=3D"font-family: &quot;comic sans ms&quot;;"><span style=3D"font-size=
+: 9.5pt;">Director General,</span></span><br><span style=3D"font-size: 9.5p=
+t;"><span style=3D"font-family: &quot;comic sans ms&quot;;">(A Unit of Inte=
+rnational Organization of Scientific Research)</span></span>&nbsp;&nbsp;
+<div>&nbsp;</div><br>=
+
+--=_e93ee9a7f9bcf9b35ffd8ab52628961c--

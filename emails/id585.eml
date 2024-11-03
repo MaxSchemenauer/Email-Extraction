@@ -1,0 +1,486 @@
+Received: from DM5PR08MB3371.namprd08.prod.outlook.com (2603:10b6:301:2a::40)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ MWHPR1001CA0027.NAMPRD10.PROD.OUTLOOK.COM; Tue, 21 May 2019 15:44:28 +0000
+Received: from BN6PR08CA0095.namprd08.prod.outlook.com (2603:10b6:404:b6::33)
+ by DM5PR08MB3371.namprd08.prod.outlook.com (2603:10b6:4:69::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1900.17; Tue, 21 May
+ 2019 15:44:26 +0000
+Received: from BN3NAM04FT052.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::204) by BN6PR08CA0095.outlook.office365.com
+ (2603:10b6:404:b6::33) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1900.17 via Frontend
+ Transport; Tue, 21 May 2019 15:44:26 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=none action=none
+ header.from=UNI-KOELN.DE;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ BN3NAM04FT052.mail.protection.outlook.com (10.152.92.241) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1900.16 via Frontend Transport; Tue, 21 May 2019 15:44:25 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x4LFedU0011824
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Tue, 21 May 2019 18:40:39 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x4LFedoj021873;
+	Tue, 21 May 2019 18:40:39 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Tue, 21 May 2019 18:40:39 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x4LFedMk002885
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Tue, 21 May 2019 18:40:39 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x4L9PGoB001899;
+	Tue, 21 May 2019 18:40:18 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          264236 for GAMESNETWORK@LISTSERV.UTA.FI; Tue, 21 May 2019 18:40:17
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4LFeHwi022813 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Tue, 21 May 2019 18:40:17 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4LFeHVQ011782 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Tue, 21 May 2019 18:40:17 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4LFeFth027983 for
+          <GAMESNETWORK@uta.fi>; Tue, 21 May 2019 18:40:15 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Tue, 21 May 2019 18:40:15
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-out-v2.uni-koeln.de (mail-out-v2.uni-koeln.de
+          [134.95.86.59]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x4LFeDfj002601 (version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384
+          bits=256 verify=NOT) for <GAMESNETWORK@uta.fi>; Tue, 21 May 2019
+          18:40:15 +0300
+Received: from smtp-out.rrz.uni-koeln.de ([IPv6:2a00:a200:0:12::25]) by
+          mail-out-v2.uni-koeln.de with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384; 21
+          May 2019 17:40:12 +0200
+Received: from smtp-auth.rrz.uni-koeln.de (smtp-auth.rrz.uni-koeln.de
+          [IPv6:2a00:a200:0:10::28]) by smtp-out.rrz.uni-koeln.de
+          (8.14.4/8.14.4) with ESMTP id x4LFeBIX031446 for
+          <GAMESNETWORK@uta.fi>; Tue, 21 May 2019 17:40:12 +0200
+Received: from DESKTOPSOCOJ9N ([IPv6:2a00:a200:0:820:e024:b129:9fb8:f645])
+          (authenticated as user schmic16 using NTLM bits=0) by
+          smtp-auth.uni-koeln.de (8.14.4/8.14.4) with ESMTP id x4LFeAvj050993
+          (version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=NOT) for <GAMESNETWORK@uta.fi>; Tue, 21 May 2019 17:40:11 +0200
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0027_01D50FFC.3C823880"
+X-Mailer: Microsoft Outlook 16.0
+Content-Language: de
+Thread-Index: AdUP63dtO1jPES+YQPCgcqTMV/tcOw==
+X-Antivirus: Avast (VPS 190521-2, 21.05.2019), Outbound message
+X-Antivirus-Status: Clean
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Tue, 21 May 2019 18:40:39 +0300 (EEST)
+X-Spam-Level: xx-------
+X-Spam-Report: BAYES_00,HTML_MESSAGE,L_BDY_POLITE,L_BDY_TRGTBLNK,L_HDR_HAS_DKIM,URIBL_BLOCKED
+X-Spam-Status: NO ; -28
+Message-ID: <002601d50feb$78f76cb0$6ae64610$@uni-koeln.de>
+Date: Tue, 21 May 2019 17:40:08 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Hanns Christian Schmidt <schmidt.c@UNI-KOELN.DE>
+Subject: [GAMESNETWORK] CfP: Paratextualizing Games
+Comments: To: GAMESNETWORK@uta.fi
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 21 May 2019 15:44:26.1246
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ bd3c3e0f-cb6f-46af-ae4e-08d6de03342e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(286005)(7192003)(176002)(189003)(199004)(42882007)(336012)(8676002)(43066004)(50226002)(426003)(66574012)(606006)(486006)(74482002)(26005)(2616005)(476003)(1096003)(106002)(21615005)(126002)(146002)(46816001)(14444005)(71190400001)(15974865002)(102836004)(19627235002)(356004)(66346011)(75640400001)(36756003)(6666004)(4006050)(55176004)(33964004)(61296003)(790700001)(1420700001)(16586007)(7066003)(53386004)(40036005)(6862004)(71636004)(84116003)(7596002)(7636002)(84326002)(16003)(7846003)(44736005)(6306002)(54896002)(7826002)(966005)(6392003)(236005)(246002);DIR:INB;SFP:;SCL:1;SRVR:DM5PR08MB3371;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT052.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: bd3c3e0f-cb6f-46af-ae4e-08d6de03342e
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600141)(711020)(4605104)(1401320)(1421009)(71702078);SRVR:DM5PR08MB3371;
+X-MS-TrafficTypeDiagnostic: DM5PR08MB3371:
+X-MS-Exchange-PUrlCount: 8
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 21 May 2019 15:44:25.6202
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: bd3c3e0f-cb6f-46af-ae4e-08d6de03342e
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM5PR08MB3371
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5528478
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1900.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?RHRJdGErLzlqcmhrcmVMZFNWTzNWaFJkdHRVaHdpcGpSa0VEYkZib3AyQ2Er?=
+ =?utf-8?B?RDh3VXlra3JTV3ZZZ3dnb1RDU1BXSURGeXpFZ1RkRXpuTmpzN2ZPVjBqRUhS?=
+ =?utf-8?B?elRBaVhhc1RmM2VRN0hQNlFvQmxlcnk0L2toZVU3NzA4SjhQTXBhc1dPRVJk?=
+ =?utf-8?B?Y2R4RXNUK2NsVWFwYzdTNWs0eFZSd0VEdTYrWThTNWpic1F1eVV2dG5TSVcz?=
+ =?utf-8?B?azE4K01teWdyWldxLzdlTVpHTStvT3NYeWYyUkJZUEs0SEdmQW4zdGhSYlB3?=
+ =?utf-8?B?OExVWnY1bC9PWTRKVkcwaGhEL3QyQnNxREFNVjZubi81ajgxZzZFSEFyY2tE?=
+ =?utf-8?B?WjI0WjJPWkcvTThxNzlVNnBLckZZVTlaaE00dDZadjZIV0pXc05lZGY2WnVC?=
+ =?utf-8?B?YTJBNjVhQWgxdnpEcS9oT0pwUHRRTUIrUVB4VnNFNEtreDRIT2ZTQTBxOVhw?=
+ =?utf-8?B?S0tQVDZtQ2E5TFZzemhTQnB5WWJEWW9OVmNsOGlrZjJEYVpFU2YyZTFkN2Jp?=
+ =?utf-8?B?YzYzRTlNZFNkTEZ2LzZFR1VBbVJMS2pJb0lKQi9tTWJGbnlYWmxRN0RDakI3?=
+ =?utf-8?B?UnNBd2dOQXoxd1F2b20zQ09RVVRlU2pTeVhiK0F5ZHlmcGlralo3WkZ5UHR5?=
+ =?utf-8?B?dmp2a0lJRzlvNXdBT1BvU3ZvWUVpeEpmbVdsTTRaSzk5MlgxRE5EK041OXh3?=
+ =?utf-8?B?U0REZ05STXIrZjF2YXlHSWkrU0dhbXVVTzYwWWxaYUNJdjJ3Yy9reXhIWUVx?=
+ =?utf-8?B?TDZvR3k3UTlsdWM1QjRZa2VOTlUyYTlPM2ZuZm1mMFJVYy9jZzE1UFRyWVpI?=
+ =?utf-8?B?b0FpVTBEUlVYeUZNZkZoS3E0RVYzcmVVQllCNCtPd0kvcGJXb0k4MnBhYlNk?=
+ =?utf-8?B?Ti9XM0dHYjhCRy9wYWtkQ2RiQ04ySnAzOHRuTytJa2V0SE5URjdKRE9UZXJh?=
+ =?utf-8?B?QzlsbTQ1aWtqNy9JOUI2QXh4cXhIT1B3OEJNSFpFeUtOaGJGSkdabDVWS3Mw?=
+ =?utf-8?B?VzVTV0NFWThteityOXVVZUdYbVU2WG4wUUlxNkFsbVVLRmhldGxBZldDOXFV?=
+ =?utf-8?B?Z2FENGVTd1JBWTlLTkh0Q0prcVJmdi9XZ0ZkRHhaYlozQzU1ZVJSTE50VmIw?=
+ =?utf-8?B?bk9RTzhGa3diMmZ3eG9LZzUrek96RloyazNDWU05WEpyUjlZU3FJSzh1OWhH?=
+ =?utf-8?B?ejNmZnBZV2twVGl5UWFva3JpcUhCVEk0TFA3SWg1eFJxTnJFMzY4UU85Y2hj?=
+ =?utf-8?B?MnNvcVRmL2VwcTVXNWZkMHhlUmtrMUxhSzJNZytFZERlaFN2QXZ0Sk4xOUg0?=
+ =?utf-8?Q?u7n5I+h7/ErxMDo8glfOZtMOex6msELLaY?=
+MIME-Version: 1.0
+
+------=_NextPart_000_0027_01D50FFC.3C823880
+content-type: text/plain; charset="WINDOWS-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Game Studies scholars,
+
+
+on November 19-21 2019 the Clash of Realities international research
+conference in Cologne, Germany will provide the opportunity for
+interdisciplinary exchange and dialogue. Experts from the academy, science
+and research, economics, politics, and the game industry will discuss
+pressing questions concerning the artistic design, technological
+development, and social perception of digital games, as well as the
+spreading of games literacy.=20
+
+=20
+
+For our summit day on November 20, we are still looking for contributions
+for our Game Studies Summit. If you should be interested in (new forms) of
+paratexts and games, we would be happy to hear from you. Please send your
+proposals to  <mailto:hcs@colognegamelab.de> hcs@colognegamelab.de - it
+would be great to see you at the 10th (!) Clash of Realities conference at
+the Cologne Game Lab.=20=20
+
+=20
+
+--
+
+=20
+
+Games Studies Summit: Paratextualizing Games=20
+
+The fact that new communication media have always produced new possibilities
+for cultural evaluation, analysis, and participation is particularly true of
+digital games. Gaming no longer only takes place as a =93closed interactive
+experience=94 in front of TV screens or PC monitors at home (or at work), b=
+ut
+also as broadcast on video-sharing and streaming platforms or as cultural
+events in exhibition centers and e-sport arenas. The development and
+popularization of new technologies, forms of expression and online services
+=96 from Let=92s Play videos to live streams, from video essays to podcasts=
+ =96
+has a considerable influence on the academic and journalistic as well as on
+the popular discourse about games.
+
+Ian Bogost asks in his 2015 collection of essays: How to talk about
+Videogames? To further investigate and to expand upon this question is the
+pivotal point of this year=92s Clash of Realities=92 Game Studies Summit. W=
+e do
+not just want to ask which paratexts gaming cultures have produced, i.e., in
+which forms and formats and through which channels we talk (and write) about
+games. We also ask: How do paratexts influence the development of games? How
+is knowledge about games generated and shaped today and how do boundaries
+between (popular) criticism, journalism, and scholarship have started to
+blur? How do new forms of communicating about games affect the medium of the
+game itself? In short: How does the paratext change the text?
+
+The Game Studies Summit is hosted by the Cologne Game Lab and the Institute
+for Media Culture and Theatre (University of Cologne). It will take place on
+November 20, 2019.
+
+Call for Papers: [
+<http://p.newslettertogo.com/wl5n92zb-deso4moy-o4agiohz-fk0> PDF]
+Deadline for submissions: June 30, 2019
+Please send abstracts (no longer than 300 words) along with a short
+bibliography/ludography to  <mailto:hcs@colognegamelab.de>
+hcs@colognegamelab.de
+Notifications of acceptance/rejection will be sent by the end of August. In
+special cases, we will be able to cover for travel and accommodation costs.=
+=20
+
+--
+
+=20
+
+All the best
+
+=20
+
+Christian
+
+=20
+
+--=20
+
+Hanns Christian Schmidt (M.A.)=20
+wissenschaftlicher Mitarbeiter
+Cologne Game Lab
+
+T: +49 221-8275-2404
+E:  <mailto:hcs@colognegamelab.de> hcs@colognegamelab.de
+
+=20
+
+=20
+
+=20
+
+--
+
+=20
+
+Hanns Christian Schmidt
+
+wiss. Mitarbeiter
+Universit=E4t zu K=F6ln
+Institut f=FCr Medienkultur und Theater
+Meister-Ekkehart-Stra=DFe 11
+50937 K=F6ln
+
+=20
+
+E-Mail:  <mailto:schmidt.c@uni-koeln.de> schmidt.c@uni-koeln.de
+
+Homepage:
+<http://www.mekuwi.phil-fak.uni-koeln.de/hanns_christian_schmidt.html>
+Institut f=FCr Medienkultur und Theater
+
+Forschungsprojekt:  <http://www.colognegamelab.de/research/lds/> Literalit=
+=E4t
+des Spiel(en)s
+
+=20
+
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.di=
+gra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI fr=
+om
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/g=
+amesnetwork.html
+
+------=_NextPart_000_0027_01D50FFC.3C823880
+content-type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><m=
+eta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)"><sty=
+le><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.E-MailFormatvorlage17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3D"DE" link=3D"#0563C1"=
+ vlink=3D"#954F72"><div class=3D"WordSection1"><p class=3D"MsoNormal"><span=
+ lang=3D"EN-US" style=3D"font-size:10.5pt;color:#1C1E21">Dear Game Studies =
+scholars,</span><span lang=3D"EN-US"><o:p></o:p></span></p><p class=3D"MsoN=
+ormal"><span lang=3D"EN-US"><br>on November 19-21 2019 the Clash of Realiti=
+es international research conference in Cologne, Germany will provide the o=
+pportunity for interdisciplinary exchange and dialogue. Experts from the ac=
+ademy, science and research, economics, politics, and the game industry wil=
+l discuss pressing questions concerning the artistic design, technological =
+development, and social perception of digital games, as well as the spreadi=
+ng of games literacy.&nbsp;<o:p></o:p></span></p><p class=3D"MsoNormal"><sp=
+an lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span =
+lang=3D"EN-US">For our summit day on November 20, we are still looking for =
+contributions for our Game Studies Summit. If you should be interested in (=
+new forms) of paratexts and games, we would be happy to hear from you. Plea=
+se send your proposals to&nbsp;</span><a href=3D"mailto:hcs@colognegamelab.=
+de" target=3D"_blank"><span lang=3D"EN-US" style=3D"color:#1155CC">hcs@colo=
+gnegamelab.de</span></a><span lang=3D"EN-US">&nbsp;- it would be great to s=
+ee you at the 10th (!) Clash of Realities conference at the Cologne Game La=
+b.&nbsp;&nbsp;<o:p></o:p></span></p><p class=3D"MsoNormal"><span lang=3D"EN=
+-US"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span lang=3D"EN-US=
+">--<o:p></o:p></span></p><p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>=
+&nbsp;</o:p></span></p><p class=3D"MsoNormal"><b><span lang=3D"EN-US" style=
+=3D"font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#004D9D=
+">Games Studies Summit: Paratextualizing Games&nbsp;</span></b><span lang=
+=3D"EN-US" style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,sans-ser=
+if;color:#303030"><br><br>The fact that new communication media have always=
+ produced new possibilities for cultural evaluation, analysis, and particip=
+ation is particularly true of digital games. Gaming no longer only takes pl=
+ace as a =E2=80=9Cclosed interactive experience=E2=80=9D in front of TV scr=
+eens or PC monitors at home (or at work), but also as broadcast on video-sh=
+aring and streaming platforms or as cultural events in exhibition centers a=
+nd e-sport arenas. The development and popularization of new technologies, =
+forms of expression and online services =E2=80=93 from Let=E2=80=99s Play v=
+ideos to live streams, from video essays to podcasts =E2=80=93 has a consid=
+erable influence on the academic and journalistic as well as on the popular=
+ discourse about games.<br><br>Ian Bogost asks in his 2015 collection of es=
+says: How to talk about Videogames? To further investigate and to expand up=
+on this question is the pivotal point of this year=E2=80=99s Clash of Reali=
+ties=E2=80=99 Game Studies Summit. We do not just want to ask which paratex=
+ts gaming cultures have produced, i.e., in which forms and formats and thro=
+ugh which channels we talk (and write) about games. We also ask: How do par=
+atexts influence the development of games? How is knowledge about games gen=
+erated and shaped today and how do boundaries between (popular) criticism, =
+journalism, and scholarship have started to blur? How do new forms of commu=
+nicating about games affect the medium of the game itself? In short: How do=
+es the paratext change the text?<br><br>The Game Studies Summit is hosted b=
+y the&nbsp;</span><b><span lang=3D"EN-US" style=3D"font-size:10.5pt;font-fa=
+mily:&quot;Arial&quot;,sans-serif;color:#004D9D">Cologne Game Lab</span></b=
+><span lang=3D"EN-US" style=3D"font-size:10.5pt;font-family:&quot;Arial&quo=
+t;,sans-serif;color:#303030">&nbsp;and the&nbsp;</span><b><span lang=3D"EN-=
+US" style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;colo=
+r:#004D9D">Institute for Media Culture and Theatre (University of Cologne)<=
+/span></b><span lang=3D"EN-US" style=3D"font-size:10.5pt;font-family:&quot;=
+Arial&quot;,sans-serif;color:#303030">. It will take place on November 20, =
+2019.<br><br>Call for Papers: [</span><span style=3D"font-size:10.5pt;font-=
+family:&quot;Arial&quot;,sans-serif;color:#303030"><a href=3D"http://p.news=
+lettertogo.com/wl5n92zb-deso4moy-o4agiohz-fk0" target=3D"_blank"><b><span l=
+ang=3D"EN-US" style=3D"color:#004D9D">PDF</span></b></a></span><span lang=
+=3D"EN-US" style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,sans-ser=
+if;color:#303030">]<br>Deadline for submissions:&nbsp;</span><b><span lang=
+=3D"EN-US" style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,sans-ser=
+if;color:#004D9D">June 30, 2019</span></b><span lang=3D"EN-US" style=3D"fon=
+t-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#303030"><br>P=
+lease send abstracts (no longer than 300 words) along with a short bibliogr=
+aphy/ludography to&nbsp;</span><b><span style=3D"font-size:10.5pt;font-fami=
+ly:&quot;Arial&quot;,sans-serif;color:#303030"><a href=3D"mailto:hcs@cologn=
+egamelab.de" target=3D"_blank"><span lang=3D"EN-US" style=3D"color:#004D9D"=
+>hcs@colognegamelab.de</span></a></span></b><span lang=3D"EN-US" style=3D"f=
+ont-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#303030"><br=
+>Notifications of acceptance/rejection will be sent by the&nbsp;</span><b><=
+span lang=3D"EN-US" style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;=
+,sans-serif;color:#004D9D">end of August</span></b><span lang=3D"EN-US" sty=
+le=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,sans-serif;color:#3030=
+30">. In special cases, we will be able to cover for travel and accommodati=
+on costs.&nbsp;</span><span lang=3D"EN-US"><br><br clear=3D"all">--<o:p></o=
+:p></span></p><p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p>=
+</span></p><p class=3D"MsoNormal"><span lang=3D"EN-US">All the best<o:p></o=
+:p></span></p><p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p>=
+</span></p><p class=3D"MsoNormal"><span lang=3D"EN-US">Christian<o:p></o:p>=
+</span></p><p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></s=
+pan></p><p class=3D"MsoNormal">--&nbsp;<o:p></o:p></p><p class=3D"MsoNormal=
+" style=3D"background:white"><b><span style=3D"font-size:10.0pt;font-family=
+:&quot;Arial&quot;,sans-serif;color:#222222">Hanns Christian Schmidt (M.A.)=
+&nbsp;</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&qu=
+ot;,sans-serif;color:#222222"><br>wissenschaftlicher Mitarbeiter<br>Cologne=
+ Game Lab</span><span style=3D"font-size:12.0pt;font-family:&quot;Arial&quo=
+t;,sans-serif;color:#222222"><br><br></span><span style=3D"font-size:10.0pt=
+;font-family:&quot;Arial&quot;,sans-serif;color:#222222">T: &#43;49 221-827=
+5-2404<br>E:&nbsp;<a href=3D"mailto:hcs@colognegamelab.de" target=3D"_blank=
+"><span style=3D"color:#1155CC">hcs@colognegamelab.de</span></a></span><spa=
+n style=3D"font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;color:=
+#222222"><o:p></o:p></span></p><p class=3D"MsoNormal" style=3D"background:w=
+hite"><span style=3D"font-size:12.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:#222222"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><o:p>=
+&nbsp;</o:p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"Mso=
+Normal" style=3D"background:white"><span style=3D"color:#3B3838;mso-fareast=
+-language:DE">--<o:p></o:p></span></p><p class=3D"MsoNormal" style=3D"backg=
+round:white"><span style=3D"color:#767171;mso-fareast-language:DE"><o:p>&nb=
+sp;</o:p></span></p><p class=3D"MsoNormal" style=3D"background:white"><span=
+ style=3D"color:#3B3838;mso-fareast-language:DE">Hanns Christian Schmidt<o:=
+p></o:p></span></p><p class=3D"MsoNormal" style=3D"background:white"><span =
+style=3D"color:#3B3838;mso-fareast-language:DE">wiss. Mitarbeiter<br>Univer=
+sit=C3=A4t zu K=C3=B6ln<br>Institut f=C3=BCr Medienkultur und Theater<br>Me=
+ister-Ekkehart-Stra=C3=9Fe 11<br>50937 K=C3=B6ln<o:p></o:p></span></p><p cl=
+ass=3D"MsoNormal" style=3D"background:white"><span style=3D"color:#3B3838;m=
+so-fareast-language:DE"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal" =
+style=3D"background:white"><span style=3D"color:#3B3838;mso-fareast-languag=
+e:DE">E-Mail:&nbsp;<a href=3D"mailto:schmidt.c@uni-koeln.de" target=3D"_bla=
+nk"><span style=3D"color:#3B3838">schmidt.c@uni-koeln.de</span></a><o:p></o=
+:p></span></p><p class=3D"MsoNormal" style=3D"background:white"><span style=
+=3D"color:#3B3838;mso-fareast-language:DE">Homepage: </span><span style=3D"=
+color:#3B3838;mso-fareast-language:DE"><a href=3D"http://www.mekuwi.phil-fa=
+k.uni-koeln.de/hanns_christian_schmidt.html"><span style=3D"color:#3B3838">=
+Institut f=C3=BCr Medienkultur und Theater</span></a><o:p></o:p></span></p>=
+<p class=3D"MsoNormal" style=3D"background:white"><span style=3D"color:#3B3=
+838;mso-fareast-language:DE">Forschungsprojekt: <a href=3D"http://www.colog=
+negamelab.de/research/lds/"><span style=3D"color:#3B3838">Literalit=C3=A4t =
+des Spiel(en)s</span></a><o:p></o:p></span></p><p class=3D"MsoNormal"><o:p>=
+&nbsp;</o:p></p></div></body></html>--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+------=_NextPart_000_0027_01D50FFC.3C823880--

@@ -1,0 +1,235 @@
+Received: from BYAPR08MB4517.namprd08.prod.outlook.com (2603:10b6:a03:117::45)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0068.NAMPRD08.PROD.OUTLOOK.COM; Tue, 15 Oct 2019 05:48:08 +0000
+Received: from BN6PR08CA0059.namprd08.prod.outlook.com (2603:10b6:404:b9::21)
+ by BYAPR08MB4517.namprd08.prod.outlook.com (2603:10b6:a03:4b::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.22; Tue, 15 Oct
+ 2019 05:48:06 +0000
+Received: from SN1NAM04FT003.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::208) by BN6PR08CA0059.outlook.office365.com
+ (2603:10b6:404:b9::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2347.16 via Frontend
+ Transport; Tue, 15 Oct 2019 05:48:06 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ SN1NAM04FT003.mail.protection.outlook.com (10.152.88.174) with Microsoft SMTP
+ Server id 15.20.2347.16 via Frontend Transport; Tue, 15 Oct 2019 05:48:05
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id A0EC52E1D0E; Tue, 15 Oct 2019 01:46:47 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org A0EC52E1D0E
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1571118407;
+	bh=5ZAHX+9pf4o0qgR05oPlxWyKGvvqdFtAh1O2CHoNQZ4=;
+	h=Date:To:Subject:From:From;
+	b=krNOP3ev0GabRi2IsoELWPeg0O9zoFFsofYDjiAH0Zh6BgI0XcAFm6i5/bPzw6CaX
+	 i4kbI5PSvJqsMetyDoEnpT1aFkvoQFLVgJJXPQAlulrJ2PrSo3C+u1QEJnfa3eX/MS
+	 VFTLHoFs0BBGX5ftHTTMxV9LbmVNTHeeQPiyQHdg=
+Date: Tue, 15 Oct 2019 01:46:47 -0400
+To: foaad@calpoly.edu
+Subject: CFP: IEEE CPS: Conf on Cloud Computing and Data Centers and more
+ (Dec. 5-7, 2019, USA); Deadline: October 21
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20191015054647.A0EC52E1D0E@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Oct 2019 05:48:06.0760
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 9a85e7a5-0237-4575-c9ed-08d751334055
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BYAPR08MB4517;H:world-comp.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT003.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 9a85e7a5-0237-4575-c9ed-08d751334055
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4517:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Oct 2019 05:48:05.9559
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 9a85e7a5-0237-4575-c9ed-08d751334055
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4517
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.9304894
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?asIdt09Y96IipEICiCF8cn54sfcdlOmix5bWNSkM81LPhEspiXvp6cdld47W?=
+ =?us-ascii?Q?Zgd/gkjxNbfeS8oggjyYXy0c+Sh8gKApLa7XLpHOubyTl2BrRTYO5l09n9QW?=
+ =?us-ascii?Q?Zjl/r9CfmQm5jk7uUGFvJSwKedkW00ChF0z8k6oWQlQrEDv3Hr9oilMq6+/s?=
+ =?us-ascii?Q?umMQlPbMAvHiArgO88EOWKzPx49QdMRcHV85z5iEVZvxzA8+oHTDpzPHCKLz?=
+ =?us-ascii?Q?bfYEOM2rY1HGXhHISvELAWXc4MoMt3ILV4DjyLyauOsIQ7sawL9U0E3RsiD5?=
+ =?us-ascii?Q?OEIb7Dh/Ynxplo/e8GiEhSKvl0ftDaROLSZeprsVjuMu2LX0d1NNEnHMHs1C?=
+ =?us-ascii?Q?ImzU5dy0DHKEIzH7/e5IjUDCY6X0O6hbdt/aWTiNbP7ZJ3Q6J/c9FW3Oi1GZ?=
+ =?us-ascii?Q?NWsJNa2bFBzRpa9AMDg4l5Omim7hjFzscEzudpRLex1lLAGeG2w19gewyuzf?=
+ =?us-ascii?Q?UjpBjFKoR8hxx+h2uvk48ijIRadlSA8xtLI8XKiCUJRT5MpEqJc0nOxROZm8?=
+ =?us-ascii?Q?bC+kwKJN4RCe+3GkLkqMd3QdMuSyTs0hUX6OzJe5hWboGL9diTZx9gfW5yCj?=
+ =?us-ascii?Q?XWZG7xM09MIvGkmzrTzLrCGRnG1M5VpemgNXh1nU59OragedlHqFMexvMy6O?=
+ =?us-ascii?Q?ajqVOiCik1LLKWLOOZKRgdt1PaiN5t4fyqYWSnFlfpezFX3cpL7cJUuzySke?=
+ =?us-ascii?Q?SfrjCaSVJFHAtRq0RO2xg/CY1OtNG8subepqskGs2fyHnsuzU2i+/61jlkzV?=
+ =?us-ascii?Q?gQWLdGbY2L85WjZnAZaGl7BVT5XYQDBJ+B6yiI7k4JFeOxfC9XDBVVjD7jBg?=
+ =?us-ascii?Q?FwdrIU8B/Elzve6nmXhCTRPGQv68pUFDQ3/rN67KqQz3WwjjuIIco9n71F01?=
+ =?us-ascii?Q?wo112JEDcjwwVzFaB004vOIRnxECeRNeYTn8BGclF/MWv5SAIa64SqxWhqqd?=
+ =?us-ascii?Q?5fYPiTFvvP/lcCUK1HePsBK98RDJweu5+tCfzh94LN6RYggGb0FU5b0i9hkc?=
+ =?us-ascii?Q?tmigZI5Skv7P1Na1dr9pl2YQfBN/nd0BG/vuWZoVEvmH4eojNe3rATwkaADu?=
+ =?us-ascii?Q?N9cmk+TqYJOiVEemXFprKlPLyrD6BQNouJE0l1Mu38lZbhA9oy+CN2WJgYCf?=
+ =?us-ascii?Q?XlulF81F2mHFFYlKGo1FaQwTNYp0PZSv8ypnWZRrSPcxZ5ZCznPNmpW+OWBq?=
+ =?us-ascii?Q?kd1uso6Nk+jEfVCKqgb/pX/FNQGHmRjqQH5LvfxOE57c8ToDog8sytHK6c7P?=
+ =?us-ascii?Q?r8IR09F7VxKZ28nKAR9wpj2UopXrRDsbRjPYvgBiOHjSOlkfv+LWYqbwfYvy?=
+ =?us-ascii?Q?kOmFeZSfcN02JxAKlfs1Dg8HMSYzamKutxFvgN5/Fs/kIib9N0M0q2mQSLZa?=
+ =?us-ascii?Q?RYatbVkFkoJUjyyFwkA98eEuhM0v7zvEVZN3sezIaYWWXm+3b6OIiDn1r7Le?=
+ =?us-ascii?Q?7hmtTJlfYDw=3D?=
+MIME-Version: 1.0
+
+
+                        CALL  FOR  PAPERS
+
+     International Symposium on CLOUD COMPUTING & DATA CENTERS
+
+   https://americancse.org/events/csci2019/Symposiums/csci_iscc 
+          (CSCI-ISCC: December 5-7, 2019, Las Vegas, USA)
+
+    In Conjunction with: The 2019 International Conference on
+
+        COMPUTATIONAL SCIENCE & COMPUTATIONAL INTELLIGENCE
+             https://americancse.org/events/csci2019 
+
+                       IEEE Xplore entry:
+ https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+       Paper Submission (Extended Deadline): October 21, 2019
+
+SCOPE AND LIST OF TOPICS:
+     Topics of interest include, but are not limited to the following.
+
+     CLOUD COMPUTING:
+          Big Data Management on Cloud; SaaS, PaaS, and IaaS; SOA &
+          Cloud Computing; Green Information Technologies; Application
+          Portability; Cloud Scalability; Cloud Management & Databases;
+          Use of Cloud for High-performance Computing; Cloudsourcing;
+          Cloud Interoperability; Web-scale Computing; Data Encryption;
+          DevOps & Cloud Computing; Heterogeneous Clouds; Migrating to
+          the Cloud (Experiences & Methodologies); Virtual Private
+          Inter-Cloud; Cloud Reliability & Secure Cloud Computing;
+          Cloud Automation & Mobility; Cloud Policies & Compliance;
+          Cloud Federation; Consumption-based Billing; Cloud
+          Serviceability & Architecture; Cloud Computing & SMBs; Cloud
+          Applications; Enterprise Cloud Orchestration; Fabric
+          Computing; Cloud Development (IDEs, Methodologies, ...).
+
+     DATA CENTERS:
+          Data Center Design & Construction; Enterprise Data Storage
+          Strategies; Server Virtualization; Data Center Outsourcing
+          Services; Data Center Governance Strategies; Mainframe
+          Migration Methods; Mainframe Management Strategies; Data
+          Center Storage & Networking; SDN & other Network Strategies;
+          Co-location, Hosting & Outsourcing Management; Data Center
+          Security; Data Center Backup Strategies; Server Infrastructures
+          & Technologies and Trends; Infrastructure Management &
+          Planning; Mainframe Disaster Recovery; Mainframe Operating
+          Systems; Compliance Issues; Blade Servers & other Similar
+          Technologies; Data Center Energy Efficiency Methods; Data
+          Center Task Scheduling & Methods Including Load Management;
+          Infrastructure Convergence; Efficient Archiving; Application
+          Performance Management; Data Center Storage; Data Center
+          Networking; Hardware Strategies; Capacity Planning; Hardware
+          Virtualization, Operating-system-level Virtualization, &
+          Containers; Managing Data Center Scalability; Best Practices
+          for Data Center Operations; Data Center Budget Management;
+          Data Center Services.
+
+PUBLISHER:
+     IEEE CPS: https://www.computer.org/conferences/cps 
+     All accepted papers will be published in the proceedings
+     of the 2019 International Conference on Computational
+     Science & Computational Intelligence. Since its inception, all
+     CSCI proceedings have always been approved and included into
+     IEEE Xplore indexation/ digital-library citation index databases.
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+     https://americancse.org/events/csci2019/paper_submission 
+
+
+DEADLINES - DATES:
+
+     October 21, 2019:     EXTENDED deadline for Submission of Papers
+                           https://american-cse.org/ 
+     October 28, 2019:     Notification of acceptance (+/- 2 days)
+     November 8, 2019:     Final papers & Author Registrations
+
+     December 5-7, 2019:   The International Symposium on Cloud Computing &
+                           Data Centers (CSCI-ISCC)
+              https://americancse.org/events/csci2019/Symposiums/csci_iscc 
+                           CSCI-ISCC will be held in conjunction with other
+                           affiliated research events; for more information,
+                           see https://americancse.org/events/csci2019 
+
+
+DEMOGRAPHY HISTORY (based on 2014 through 2019 participation data):
+
+     In the past, about 42% of the attendees have been from outside
+     USA; from 59 nations. 56% of registrants have been from academia,
+     32% from industry; 11% from government agencies and research labs;
+     and 1% unknown. The conference has had participants, speakers,
+     authors affiliated with over 154 different universities; including
+     many from the top 40 ranked institutions; major IT corporations,
+     including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+     Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+     Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+     Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+     Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+     BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+     Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+     major corporations, including, Exxon Mobil, JPMorgan Chase,
+     Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+     Petroleum Group, Aerospace Electronic Technology (China), Max
+     Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+     (France), Forschungszentrum Juelich (Germany), Secured Smart
+     Electric Vehicle (Korea), ...; government research agencies and
+     national laboratories, including, NSF, NIH National Institutes of
+     Health, US Air Force (multiple research labs), NSA National Security
+     Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+     Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+     Lab, US National Cancer Institute, Swedish Defence Research Agency,
+     NIST US National Institute of Standards and Technology, U.S.
+     Geological Survey, US National Library of Medicine, US Air Force
+     (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+     Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+     Army, Korea Internet & Security Agency, Suez Canal Research Center,
+     Okinawa Bureau (Japan), Canadian Medical Protective Association,
+     Osong Medical Innovation Foundation (Korea), National Institute of
+     Informatics (Japan), ...; and three Venture Capitalists and nine
+     Intellectual Property attorneys.
+
+
+CONTACT:
+
+     Questions and inquiries should be sent to:
+     Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.

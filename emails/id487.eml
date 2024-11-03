@@ -1,0 +1,318 @@
+Received: from BN7PR08MB5170.namprd08.prod.outlook.com (2603:10b6:a03:e0::44)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0103.NAMPRD05.PROD.OUTLOOK.COM; Wed, 29 Jan 2020 03:38:02 +0000
+Received: from MWHPR08CA0056.namprd08.prod.outlook.com (2603:10b6:300:c0::30)
+ by BN7PR08MB5170.namprd08.prod.outlook.com (2603:10b6:408:26::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2665.20; Wed, 29 Jan
+ 2020 03:38:00 +0000
+Received: from BN3NAM04FT057.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::200) by MWHPR08CA0056.outlook.office365.com
+ (2603:10b6:300:c0::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2665.22 via Frontend
+ Transport; Wed, 29 Jan 2020 03:37:59 +0000
+Authentication-Results: spf=none (sender IP is 209.85.208.66)
+ smtp.mailfrom=iceeie.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=iceeie-com.20150623.gappssmtp.com;calpoly.edu; dmarc=none
+ action=none header.from=iceeie.com;compauth=pass reason=106
+Received-SPF: None (protection.outlook.com: iceeie.com does not designate
+ permitted sender hosts)
+Received: from mail-ed1-f66.google.com (209.85.208.66) by
+ BN3NAM04FT057.mail.protection.outlook.com (10.152.93.80) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2665.18 via Frontend Transport; Wed, 29 Jan 2020 03:37:59 +0000
+Received: by mail-ed1-f66.google.com with SMTP id r21so17146555edq.0
+        for <foaad@calpoly.edu>; Tue, 28 Jan 2020 19:37:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iceeie-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=qPQl7zluEzqY0mSHTIRrwJJw4zN2Fktbd3F1MkywmNk=;
+        b=jKBsO8ZOdHkCgRMro7BEULm2HgusRI24V4syF7xEf+9fY8ouDHL5s5oYhBt+JItb35
+         gUIGagSsFTP6n8a77xwRvVN9V7+5Y+GZyOH0ItkKTqeEQSHs475mTCeuQO9ENY72TnQI
+         QrXED+nblm4HfmF4UR00vyOAeVVDJJtcfyyonYOntTVBe8AbRCiJYgv5LBjNmvPIlllI
+         rIgaP/uwdxQIEOIos4QUwKL1fi8bhkzCFeGFv1Xmo29/WPRx5+zAh0uLePBq9zOq3/kS
+         7HiogUd1zfTA2u8YTksBKH4xXqaQLlXtC5TwCSO16H7k3zh9viy/BmQlzhzyuz1BUOxi
+         OS0g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=qPQl7zluEzqY0mSHTIRrwJJw4zN2Fktbd3F1MkywmNk=;
+        b=d6Rf8Kaqgd0FWtNImzzX97YZ6e0rKYIS5XrHNwGJ2tOqmk02vp+x7oSuicokjb3lND
+         GIfsml+Y3JlHljCup+1oaIl8Xls24VdXfxGRW8mt0gtrVsz2s4e1EGTJS+CHAKe0xjNG
+         L2BiGcQh7yRJqK5ydmb/DPU3ynGjw8JsfbXbhhCuZe793duZmO+GNOn49+Y6JYdnJvDm
+         yyiIzwMWq/KF1efrsfqvqIgp4OvG6F1z2IeK5rdoAOl9UWUpJ6WLCAsRxAqqEck4wCd+
+         DH3+ig+L+Yn/p04kVxuKOCkx99W1f8xUZ7XTXKikqYYW/kCLsOu3ExDuRWeNcvl/0Lwf
+         Otdw==
+X-Gm-Message-State: APjAAAWaw8UnX900sr+FSryO4UGtW4Ik8FiLmsvEIdwz99LAiRSddj4h
+	S7p9Tpufk6gNON2D+HMLiee9yTFwWfKOl9YOONbV3oDRkLrqTw==
+X-Google-Smtp-Source: APXvYqxzxSgeDQbr7BIVGqizx59KZJ3zcj3eH17LJhGTweZ5RdXt8sprE46dKonj9ePAcrk/j/7GLXSnq/fxwAdVrNs=
+X-Received: by 2002:a17:906:9618:: with SMTP id s24mr5629847ejx.254.1580269077813;
+ Tue, 28 Jan 2020 19:37:57 -0800 (PST)
+From: IntConf July <intconf@iceeie.com>
+Date: Wed, 29 Jan 2020 11:37:47 +0800
+Message-ID: <CAEMZAZvM7r6H46dj2e4QUVQ=ZCCQ-XGxgfnh8r1A7RSczFbPqA@mail.gmail.com>
+Subject: Make Oral Presentation and Participate in the International Academic
+ Conferences in May 2020 : Introducing: The Game Jam License
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="00000000000008644a059d3f11d1"
+Return-Path: intconf@iceeie.com
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Jan 2020 03:37:59.3427
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 1e4feb0e-7798-46d7-527a-08d7a46ca2f2
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132247426793457605;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.66;IPV:;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(428003)(199004)(189003)(26005)(5660300002)(55446002)(6666004)(356004)(22186003)(9686003)(6916009)(966005)(75640400001)(4006050)(246002)(58800400005)(336012)(86362001)(2160300002)(33964004)(7596002)(7636002)(8676002)(42186006)(1096003);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB5170;H:mail-ed1-f66.google.com;FPR:;SPF:None;LANG:en;PTR:mail-ed1-f66.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT057.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 1e4feb0e-7798-46d7-527a-08d7a46ca2f2
+X-MS-TrafficTypeDiagnostic: BN7PR08MB5170:
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Jan 2020 03:37:59.3407
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1e4feb0e-7798-46d7-527a-08d7a46ca2f2
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB5170
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6927874
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2665.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?OTF0cllxSU53L09DWnBVMEVyM3hIaXkvczBHOU9iVzdYVXNvajcwcjEvOXZN?=
+ =?utf-8?B?ZFR3ZjVqS3JzbVVkRUQydU5aNU4vK0ZIUFVhVmpJd0Z5UGZ1ajFHK3BBTEIz?=
+ =?utf-8?B?dm5sRTRyb1dtTFVsd1dSMkNEcWlpYWIzZXdTQ3J4QkVOZmJESHRucUZmWVdq?=
+ =?utf-8?B?Mk9ZV0xERFU4SU1GM1FTQnBsNEJnNlNOanluSjViejJVNlJCY3Z0d2VDTWhI?=
+ =?utf-8?B?d2JvM3BtWU9LTWZaN2JHK2U4U1dsTTFuQWtHc21kQ1RicEFTOTdCMGhKalBS?=
+ =?utf-8?B?YXZVNy9pVXFIbXlxY294c0tRYVZEcERMZitNNkhmT1EydTQ1V3JQdWtDVEFx?=
+ =?utf-8?B?L0N3Nnp3U3B0NG5QS2lMTEM3dkhxczE3Mk1vTHJzU1gzVDk2dFNQMzZ4bmRJ?=
+ =?utf-8?B?OUtVczJwS3R3UmxRN1JuTEY2RDJ6aEgvRVRMUTJ0eSt1Q1Vrd053MnlhalpR?=
+ =?utf-8?B?QlVGM3MyRXRoUkkyOC9XQ01XT1ZFeG1ydFBrOUxJaHAwYVBScWVvc1NxR1dm?=
+ =?utf-8?B?SnJjeFcyU0E0RjRXelBnM0p1a1RGMGRaNVV4bEVUNnhLT1JzUTJ0SlpNbzJU?=
+ =?utf-8?B?OG5DODVYbmhzYkRGRnlrWHo3MmxTZDAvTXJnOCs1NnhMaFUycXlSVXljVWhq?=
+ =?utf-8?B?Q0t0N09YVWV5LzFJM200bHY1VVVnUHplSm1WVUFGNW1qYnBsenRxbXF6Z1Fv?=
+ =?utf-8?B?ckZER0lCRHFLUFlKbTJZYjZ0bnBWaG9TS0dlODY4SWFMV09kTkNPV0hwcXh3?=
+ =?utf-8?B?cGxUUDRYTUt0QlBZVXh6NWFXb2ZEbGZsVWx5T1JOVDBwd05JUGVLS1VLNG9F?=
+ =?utf-8?B?RThhUWRWRHVYS0dkWWJKQy9HRUtPc3VYNkw0aVE5M1ZJK0hKQ3RsU3lQcGlx?=
+ =?utf-8?B?TFBQaDdoWnBHL2JiNXI1TVgzSmhsMWtuNzJFNTZxSEZKbUk0U0FzY2V5Y0FI?=
+ =?utf-8?B?VTFVem53aXZGaDE4MnlsYWFvNlUvYmhpYTAzUHIwV01oZUFTWElHa2UzdG5T?=
+ =?utf-8?B?VTdnWnRFcVZ2RXB0N2Y4SjVoODV2WWVZMnh3Umt5Z0ZSLzV4UW5yMSt5V0Fa?=
+ =?utf-8?B?MTAzOUxyamlGQ1lBZzArOFhzYVA0LzNUOVYyaldRS1pBb3huK1pVQ0drbmg4?=
+ =?utf-8?B?WmVkR1dQWWZ2Q2ZrTzljdFN5aktlSksrdnFGbUIzOWZOUWFWZDlsT3M1Qndt?=
+ =?utf-8?B?UHVTQTF5MHZlMnhrN21yZC9hK05xVS8yOWpCU0Iwdks5Y01RYmIvelIxNkdD?=
+ =?utf-8?B?ZFpsRGJ1VFEwQ01FS2FDdldTeEtCRlhhb3doTHdzOG44djM2YXE3QTMwckJq?=
+ =?utf-8?B?TVlwaEUwMDVLelFYRnZIUmJhRmVqYjRXcU44VlZ5NFZtWEQzbGc5QTVQcUN2?=
+ =?utf-8?B?UHgrY0JoNTFSbENXWHo2K2lLM0MzU1o5ZG1pTjVkcWxOSTgybHc1dUkyaEd6?=
+ =?utf-8?B?a3Y3ejUxTjV2Q1lKQ1FtaEVqQmtXNTJzb3ZPNnl3PT0=?=
+MIME-Version: 1.0
+
+--00000000000008644a059d3f11d1
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<http://www.icsspp.com/enmore>
+Dear Professor,
+We learned you have published the paper *"Introducing: The Game Jam
+License"* in *Computers and Society*. Congratulations to you.
+To enhance the communication between authors and keep pace with the
+cutting-edge research, we sincerely invite specialists and scholars to
+attend the conferencess which to be held in in Hangzhou, China in May,
+2020. Your paper will be published online in the cooperating journals once
+accepted. Original and unpublished papers are warmly welcomed to the
+conference. Abstracts are also welcomed to the conference. Authors are
+welcomed to present the abstracts in the conference. The conferences
+include topics like: Materials Science, Biochemical Engineering, Life
+Sciences, Social Sciences, Humanities, Finance, Computer Science, Data
+Science, Applied Mathematics, Natural Resources, Environment, Environmental
+Engineering, etc.
+Submitting your Full papers and abstracts to the conference
+The submission deadline is Feb. 10, 2020
+Conferences
+Learn More Conferences: http://www.icsspp.com/enmore
+
+
+2020 5th International Conference on Electrical Engineering, Mechanical
+Engineering and Automation
+Topics: Power, Electrical Machinery and Appliance, Automated Manufacturing
+Systems, Telecommunications, Friction Stir Welding, Nanotechnology, Micro
+Electro-mechanical Systems, Computational Fluid Dynamics, Automated Waste
+Management, Computer Control, Continuous Control, Automated Video
+Surveillance, etc.
+
+
+2020 5th International Conference on Civil and Environmental Engineering
+Topics: Geotechnical Engineering, Earthquake Engineering, Railway
+Engineering, Construction Surveying, Water Resources Engineering, Materials
+Science and Engineering, Environmental Technology, Air Pollution Control,
+Industrial Hygiene, Environmental Management, Waste Disposal, Environmental
+Engineering System, etc.
+
+
+2020 5th International Conference on Education and Innovation
+Topics: Curriculum Studies, Early Childhood Education, Indigenous
+Education, Vocational Education, Life-long Education, Education for
+Sustainable Development, Innovation Culture, Innovative Research, Science
+and Technology Innovation, Educational Innovation, Financial Innovation,
+Commercial Innovation, etc.
+
+
+2020 5th International Conference on Chemistry and Biochemical Engineering
+Topics: Atmospheric Chemistry, Analytical Chemistry, Agrochemistry ,
+Chemical Engineering , Theoretical Chemistry, Physical Chemistry,
+Biological Hydrogen Production, General Biology, Photobioreactor,
+Bioinorganic Chemistry, Electrochemical Energy Conversion, Industrial
+Biotechnology, etc.
+
+
+2020 5th International Conference on Public Health and Medical Sciences
+Topics: Insurance Medicine, Occupational Safety and Health, Health
+Services, Health Economics, Global Mental Health, Environmental Health,
+Pharmacology, Surgery, Internal Medicine, Immunology, Neurology, Diagnose,
+etc.
+Detailed abstract information of the previous published article (*Introduci=
+ng:
+The Game Jam License*): Since their inception at the Indie Game Jam in
+2002, a significant part of game jams has been knowledge sharing and
+showcasing ideas and work to peers. While various licensing mechanisms have
+been used for game jams throughout the years, there has never been a
+licence uniquely designed for artifacts created during a game jam. In this
+paper, we present to the community the Game Jam License (GJL) wh=E2=80=A6 =
+=E2=96=BD More
+
+--00000000000008644a059d3f11d1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">
+<br><br><div style=3D"width:100%;background:rgb(209,209,209) none repeat sc=
+roll 0% 0%;font-size:13px;font-family:Tahoma,Arial,Helvetica,sans-serif;lin=
+e-height:23px;color:rgb(51,51,51);padding:80px 0px 200px 10px"> 	<div style=
+=3D"width:840px;background:rgb(255,255,255) none repeat scroll 0% 0%"> 		<d=
+iv style=3D"padding:10px 20px;background:rgb(0,153,204) none repeat scroll =
+0% 0%"><a href=3D"http://www.icsspp.com/enmore" target=3D"_blank" style=3D"=
+width:180px;height:20px;display:inline-block"><img src=3D"http://img.icsspp=
+.com/logo/t536029239335.png" width=3D"180px" height=3D"20px"></a></div> 		<=
+div style=3D"margin:0px auto;width:800px"> 			<div style=3D"background:rgb(=
+0,153,204) none repeat scroll 0% 0%;margin:10px 0px 20px;border-radius:10px=
+;color:rgb(255,255,255);padding:10px"> 				<div style=3D"line-height:100%;p=
+adding-bottom:10px">Dear Professor,</div> 				<div style=3D"padding-bottom:=
+6px">We learned you have published the paper <i>&quot;Introducing: The Game=
+ Jam License&quot;</i> in <i>Computers and Society</i>. Congratulations to =
+you.</div> 				<div style=3D"text-align:justify">
+ 				To enhance the communication between authors and keep pace with the
+ cutting-edge research, we sincerely invite specialists and scholars to=20
+attend the conferencess which to be held in in Hangzhou, China in May,=20
+2020. Your paper will be published online in the cooperating journals=20
+once accepted. Original and unpublished papers are warmly welcomed to=20
+the conference. Abstracts are also welcomed to the conference. Authors=20
+are welcomed to present the abstracts in the conference. The conferences
+ include topics like: Materials Science, Biochemical Engineering, Life=20
+Sciences, Social Sciences, Humanities, Finance, Computer Science, Data=20
+Science, Applied Mathematics, Natural Resources, Environment,=20
+Environmental Engineering,  etc. 				</div> 			</div>  			<div style=3D"bac=
+kground:rgb(240,240,240) none repeat scroll 0% 0%"> 				<div style=3D"paddi=
+ng:15px 0px;text-align:center"> 					<div> 						<div style=3D"padding:5px =
+10px;font-size:16px;font-weight:bold;line-height:30px;color:rgb(255,255,255=
+);background:rgb(0,153,204) none repeat scroll 0% 0%;display:inline-block">=
+ 						Submitting your <span style=3D"color:rgb(249,255,1)">Full papers and=
+ abstracts</span> to the conference 						</div> 					</div> 					<div> 			=
+			<div style=3D"margin-top:10px;padding:5px 10px;font-size:16px;font-weigh=
+t:bold;line-height:30px;color:rgb(255,255,255);background:rgb(0,153,204) no=
+ne repeat scroll 0% 0%;display:inline-block"> 						The submission deadline=
+ is <span style=3D"color:rgb(249,255,1)">Feb. 10, 2020</span> 						</div> =
+					</div> 				</div> 			</div> 			<div style=3D"padding:25px 0px 0px"> 		=
+		<div style=3D"border-bottom:1px solid rgb(0,153,204)"><div style=3D"font-=
+size:16px;background:rgb(0,153,204) none repeat scroll 0% 0%;line-height:10=
+0%;color:rgb(255,255,255);padding:8px 10px;font-weight:bold;display:inline-=
+block">Conferences</div></div> 				<div style=3D"margin:10px 0px 5px">Learn=
+ More Conferences: <a href=3D"http://www.icsspp.com/enmore" style=3D"font-s=
+ize:13px;padding-top:3px;color:rgb(0,0,255);text-decoration:none;white-spac=
+e:nowrap;font-weight:bold" target=3D"_blank">http://www.icsspp.com/enmore</=
+a></div> 				<div><div style=3D"padding:10px 0px;border-bottom:1px dashed r=
+gb(204,204,204)">	<div style=3D"display:table-cell;vertical-align:top;paddi=
+ng-top:6px">		<div style=3D"width:10px;height:10px;background:rgb(51,51,51)=
+ none repeat scroll 0% 0%;border-radius:50%">&nbsp;</div>&nbsp;&nbsp;&nbsp;=
+&nbsp;	</div>	<div style=3D"display:table-cell;vertical-align:top">		<div s=
+tyle=3D"font-weight:bold">2020 5th International Conference on Electrical E=
+ngineering, Mechanical Engineering and Automation</div>		<div style=3D"text=
+-align:justify">Topics:
+ Power, Electrical Machinery and Appliance, Automated Manufacturing=20
+Systems, Telecommunications, Friction Stir Welding, Nanotechnology,=20
+Micro Electro-mechanical Systems, Computational Fluid Dynamics,=20
+Automated Waste Management, Computer Control, Continuous Control,=20
+Automated Video Surveillance,  etc.</div>	</div></div><div style=3D"padding=
+:10px 0px;border-bottom:1px dashed rgb(204,204,204)">	<div style=3D"display=
+:table-cell;vertical-align:top;padding-top:6px">		<div style=3D"width:10px;=
+height:10px;background:rgb(51,51,51) none repeat scroll 0% 0%;border-radius=
+:50%">&nbsp;</div>&nbsp;&nbsp;&nbsp;&nbsp;	</div>	<div style=3D"display:tab=
+le-cell;vertical-align:top">		<div style=3D"font-weight:bold">2020 5th Inte=
+rnational Conference on Civil and Environmental Engineering</div>		<div sty=
+le=3D"text-align:justify">Topics:
+ Geotechnical Engineering, Earthquake Engineering, Railway Engineering,=20
+Construction Surveying, Water Resources Engineering, Materials Science=20
+and Engineering, Environmental Technology, Air Pollution Control,=20
+Industrial Hygiene, Environmental Management, Waste Disposal,=20
+Environmental Engineering System,  etc.</div>	</div></div><div style=3D"pad=
+ding:10px 0px;border-bottom:1px dashed rgb(204,204,204)">	<div style=3D"dis=
+play:table-cell;vertical-align:top;padding-top:6px">		<div style=3D"width:1=
+0px;height:10px;background:rgb(51,51,51) none repeat scroll 0% 0%;border-ra=
+dius:50%">&nbsp;</div>&nbsp;&nbsp;&nbsp;&nbsp;	</div>	<div style=3D"display=
+:table-cell;vertical-align:top">		<div style=3D"font-weight:bold">2020 5th =
+International Conference on Education and Innovation</div>		<div style=3D"t=
+ext-align:justify">Topics:
+ Curriculum Studies, Early Childhood Education, Indigenous Education,=20
+Vocational Education, Life-long Education, Education for Sustainable=20
+Development, Innovation Culture, Innovative Research, Science and=20
+Technology Innovation, Educational Innovation, Financial Innovation,=20
+Commercial Innovation,  etc.</div>	</div></div><div style=3D"padding:10px 0=
+px;border-bottom:1px dashed rgb(204,204,204)">	<div style=3D"display:table-=
+cell;vertical-align:top;padding-top:6px">		<div style=3D"width:10px;height:=
+10px;background:rgb(51,51,51) none repeat scroll 0% 0%;border-radius:50%">&=
+nbsp;</div>&nbsp;&nbsp;&nbsp;&nbsp;	</div>	<div style=3D"display:table-cell=
+;vertical-align:top">		<div style=3D"font-weight:bold">2020 5th Internation=
+al Conference on Chemistry and Biochemical Engineering</div>		<div style=3D=
+"text-align:justify">Topics:
+ Atmospheric Chemistry, Analytical Chemistry, Agrochemistry , Chemical=20
+Engineering , Theoretical Chemistry, Physical Chemistry, Biological=20
+Hydrogen Production, General Biology, Photobioreactor, Bioinorganic=20
+Chemistry, Electrochemical Energy Conversion, Industrial Biotechnology,=20
+ etc.</div>	</div></div><div style=3D"padding:10px 0px;border-bottom:1px da=
+shed rgb(204,204,204)">	<div style=3D"display:table-cell;vertical-align:top=
+;padding-top:6px">		<div style=3D"width:10px;height:10px;background:rgb(51,=
+51,51) none repeat scroll 0% 0%;border-radius:50%">&nbsp;</div>&nbsp;&nbsp;=
+&nbsp;&nbsp;	</div>	<div style=3D"display:table-cell;vertical-align:top">		=
+<div style=3D"font-weight:bold">2020 5th International Conference on Public=
+ Health and Medical Sciences</div>		<div style=3D"text-align:justify">Topic=
+s:
+ Insurance Medicine, Occupational Safety and Health, Health Services,=20
+Health Economics, Global Mental Health, Environmental Health,=20
+Pharmacology, Surgery, Internal Medicine, Immunology, Neurology,=20
+Diagnose,  etc.</div>	</div></div></div> 			</div> 			<div style=3D"margin:=
+20px auto"> 				<div style=3D"margin:15px 0px 0px;background:rgb(210,231,25=
+1) none repeat scroll 0% 0%;padding:10px;text-align:justify"> 					Detailed=
+ abstract information of the previous published article (<i>Introducing: Th=
+e Game Jam License</i>):
+ Since their inception at the Indie Game Jam in 2002, a significant part
+ of game jams has been knowledge sharing and showcasing ideas and work=20
+to peers. While various licensing mechanisms have been used for game=20
+jams throughout the years, there has never been a licence uniquely=20
+designed for artifacts created during a game jam. In this paper, we=20
+present to the community the Game Jam License (GJL) wh=E2=80=A6 =E2=96=BD M=
+ore 				</div> 			</div> 			 		</div> 		<div style=3D"background:rgb(0,153,=
+204) none repeat scroll 0% 0%;height:30px">&nbsp;</div> 	</div> </div>=20
+
+</div>
+
+--00000000000008644a059d3f11d1--

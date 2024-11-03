@@ -1,0 +1,1828 @@
+Received: from BN7PR08MB4977.namprd08.prod.outlook.com (2603:10b6:a03:117::29)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0052.NAMPRD08.PROD.OUTLOOK.COM; Sun, 4 Aug 2019 15:27:28 +0000
+Received: from DM6PR08CA0065.namprd08.prod.outlook.com (2603:10b6:5:1e0::39)
+ by BN7PR08MB4977.namprd08.prod.outlook.com (2603:10b6:408:28::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.12; Sun, 4 Aug
+ 2019 15:27:25 +0000
+Received: from SN1NAM04FT050.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::201) by DM6PR08CA0065.outlook.office365.com
+ (2603:10b6:5:1e0::39) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.14 via Frontend
+ Transport; Sun, 4 Aug 2019 15:27:25 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ SN1NAM04FT050.mail.protection.outlook.com (10.152.89.157) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2136.14 via Frontend Transport; Sun, 4 Aug 2019 15:27:23 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x74FRMTl002524
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <foaad@CALPOLY.EDU>; Sun, 4 Aug 2019 18:27:22 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x74FRGCS003768
+	for <foaad@CALPOLY.EDU>; Sun, 4 Aug 2019 18:27:16 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Sun, 04 Aug 2019 18:27:16 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x74FRG58009380
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <foaad@CALPOLY.EDU>; Sun, 4 Aug 2019 18:27:16 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x749nUK8008240
+	for <foaad@CALPOLY.EDU>; Sun, 4 Aug 2019 18:27:16 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          418944 for GAMESNETWORK@LISTSERV.UTA.FI; Sun, 4 Aug 2019 18:25:28
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x74FPSTk020674 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Sun, 4 Aug 2019 18:25:28 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x74FPSfB002148 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Sun, 4 Aug 2019 18:25:28 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x74FPQFQ003331 for
+          <GAMESNETWORK@uta.fi>; Sun, 4 Aug 2019 18:25:26 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Sun, 04 Aug 2019 18:25:26
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-qk1-f180.google.com (mail-qk1-f180.google.com
+          [209.85.222.180]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x74FPOY8028208 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Sun, 4 Aug 2019 18:25:25 +0300
+Received: by mail-qk1-f180.google.com with SMTP id g18so58357465qkl.3 for
+          <GAMESNETWORK@uta.fi>; Sun, 04 Aug 2019 08:25:25 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:references:in-reply-to:from:date :message-id:subject:to;
+                         bh=BWp8r9goaM4hbTRJyJCLligLXXNQLf5AzO9FaslFADQ=;
+                         b=GIWZ1aWqLInkm+OP1AnOt2yXBhdJVD8NVi/RW4ZJoNyclszHW4t7+3hP1ogjn0cLPD
+                         MMpnqSj4x/bNpl+PfPCrvAJWN1W1TIBfnA31U9dfzAAJieZKN4c4j2T3EP9yMY7JT4z7
+                         azDiZDDSihJIqqxjs1fieaU5dTmmWv00sSpEGbAxqATwH6icOu/yfxWg8hrR2zHncttf
+                         937rKUW5iDD63CUkv8OD7OvLvGHi9/BN7v7Fh8ZFR9a2hzghAOyd/fQIeFdZ1eVB8+40
+                         WADBfMghXd7eaW6VZ4c/DmF1ZBZjsoIcb8OJAD1ZSDiUcaq/7P/OfXmVGanx1b96wjU/
+                         42Mg==
+X-Gm-Message-State: APjAAAVZjcPBN6eq/6Ff9kIk8Tqafiweh2Q7inRqowxkaNf1QOVa3b/J
+                    gAjgRf3rHcftGm10ZFLjaXhETdD2SN3pqFFOcDZJrQ==
+X-Google-Smtp-Source: APXvYqyMTcDTpDtLTkbjx625yfQ7EoYO18GCA+uIafFGZ4a+MS+Bej7O0tiHssPc0uaWoi1kQSe9RlqQO3gpETt4LYM=
+X-Received: by 2002:a37:7844:: with SMTP id
+            t65mr100717397qkc.166.1564932322934; Sun, 04 Aug 2019 08:25:22
+            -0700 (PDT)
+References: <CALMoE73KDsn8ctKxSvJ4PSr923ONSJaYQPP0sRoRZ0ja4NuwDA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000034c36f058f4c3300"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Sun, 04 Aug 2019 18:27:16 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_POLITE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1020
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CALMoE70nXXfqZU8xqretgQrnkKhnMrO11VsvnRD5qVg7OJ4mHw@mail.gmail.com>
+Date: Sun, 4 Aug 2019 16:25:11 +0100
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Feng Zhu <feng.zhu.9@GMAIL.COM>
+Subject: [GAMESNETWORK] Extension to CfP for the 13th International Conference on the Philosophy of Computer Games: The Aesthetics of Computer Games (St Petersburg, Oct 21-24)
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: "Gamesnetwork"<gamesnetwork@uta.fi>
+In-Reply-To: <CALMoE73KDsn8ctKxSvJ4PSr923ONSJaYQPP0sRoRZ0ja4NuwDA@mail.gmail.com>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork*foaad**CALPOLY*-EDU@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 04 Aug 2019 15:27:24.4557
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 829b8681-6f05-4f9b-c884-08d718f04033
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(3000300001)(286005)(176002)(199004)(189003)(171004002)(7192003)(42186006)(33964004)(446003)(336012)(11346002)(61266001)(476003)(15974865002)(43066004)(587094005)(95326003)(1015004)(71190400001)(6666004)(356004)(82202003)(66574012)(76482006)(4006050)(606006)(126002)(486006)(5070765005)(66346011)(14444005)(30864003)(8576002)(7636002)(7596002)(305945005)(561944003)(246002)(55446002)(55176004)(236005)(59536001)(498394004)(966005)(413944005)(16003)(6862004)(8676002)(146002)(7846003)(6392003)(6306002)(54206008)(73392003)(40036005)(26005)(1096003)(16586007)(106002)(75640400001)(21615005)(42882007)(53946003)(53546011)(76176011)(53386004)(559001)(579004)(569006);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4977;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT050.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 829b8681-6f05-4f9b-c884-08d718f04033
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BN7PR08MB4977;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4977:
+X-MS-Exchange-PUrlCount: 9
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 Aug 2019 15:27:23.8216
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 829b8681-6f05-4f9b-c884-08d718f04033
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4977
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.5470132
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?QzhMU0ZtMjVkVytVTkZvZjZYQkc5SHlpUTAxOXhTZFB0TGJYcUg2a0xNTXQ0?=
+ =?utf-8?B?ZVh5U1pmQXJYY1pGMXFnRmJsMVVtNDkrVmg1ZXNCLzFDanNBbTVQTWtyZm5D?=
+ =?utf-8?B?aFliZXQrOXBDZ3RsMGRxaEk1UFZBTTlKRzZzbU1XQ1ZxVllUN1c4TXNPZGMr?=
+ =?utf-8?B?YTllTU4wTUdLTks5SE5VeDB4MEhyWk5aWUwzNWV2b2dFY3lvWnM3Sk8xaVl2?=
+ =?utf-8?B?VkpQQ1k0eHowZk1sRTNtR1dnQlN6OEpNVkhYeTFkSU1wWVc0dStUV3ppWmpz?=
+ =?utf-8?B?RHh1d3FVQ0M0Y3JZNjhkWHprVFVxN2tuLzd6dExxUEswQ08vZyszSTR2S0lL?=
+ =?utf-8?B?R3B5MXFLK1I0aDN1QkJmUWlMUUxIRlh0N0dpeEtjaUZGRmZLNWFrQVVNTVo3?=
+ =?utf-8?B?NGFtK0lEa05JODFJb25aOGs0VVJaTER5RDNVOXFoTEtubzlZNzdhNTBVSmZh?=
+ =?utf-8?B?UXRRcEtnaHFDNzJiM0lBN3lQNkJFKzhtaFRmcXhSNmtlUUh4bHdURzZEOHB1?=
+ =?utf-8?B?NThwVGRSZWdsQjZlbjhzYVJJWU4xcnpBSnRkU2xVN2xxcUU4b1B5K1p6cHlY?=
+ =?utf-8?B?Y0l2b0ljbGd3RnZaZTdkVUFqRnBHcEpNVjExRFl4NXFiajZNYUVhR1EyWkxi?=
+ =?utf-8?B?UnoyL2R3bWNjUW1ib1FqSVhWYmR2Zllyalh1L1VTUnNGSEhTaGNWMWNuWDVK?=
+ =?utf-8?B?TnZpZ3pOOTQwWEIxby9uaUk3bVh5WmthMnBHdnpaV2hBNFVTUjNHWU50MllD?=
+ =?utf-8?B?UFJkL1UvZmdPTFlPOEdCWlRDMlFtSGpQYVMwUjNnZ3BnQUsyOTl2L2dWMUhI?=
+ =?utf-8?B?b1p0bklqcXo1NEVoNDUvaDJldHByVTlCOFRhZW1MVnVwR3J0elhFd1VIRU14?=
+ =?utf-8?B?bTNwcVovVlgvL1QwNGNIOW9UYkw4eUVhck9YUC9ubHhpbHd0VTFpRUlFcGZB?=
+ =?utf-8?B?dTNsMXVtcjJlUGs0eG15R1R4SVdKRUZacEFDOWpSRUhIR1VMamI2d1JHOUZ0?=
+ =?utf-8?B?ZUdudjNvV2c3UTdKT2d3ZHVpQkNYMWtRSW5EZCt0clZqeGhiVVoyS2c3OWk2?=
+ =?utf-8?B?V0JWbndrMnVqdjROYUdMTDJvY2NTTXBWdzVqVG9wY2RvRHlUc25sQU0vcS9a?=
+ =?utf-8?B?MURURDZpd0RrRkE2UzN1TXNGT3VWTmxLcjh3bkZIQkllcVdCdXFCUHlBeVVT?=
+ =?utf-8?B?aUdpb2JMUmE0Y3gvVk4yR3A2YzJxK3lYa2RYTTZxcjVwVWpmNkg4Z1NieHNW?=
+ =?utf-8?B?WVk0b3ZSTStCSGpJNy92ZmpCbUYwVkliWFZPd0tsSW9nN0RZbHkrM29uWVE3?=
+ =?utf-8?B?LzlaSmt6R01iSHhyOHl1aXhpRnZVcGp1cU92ZGRzNndPdlBhMnIxbVpxblN2?=
+ =?utf-8?B?WksydFZVbkRTSHFHT01DNHRWejM1bFd1ZUtsaTJ4ajl0Q0FSVzNIMktYTUI2?=
+ =?utf-8?B?RnBObTZZQjVMZWlSWlNUODNYczE0N1N4K0tzdkZ3PT0=?=
+MIME-Version: 1.0
+
+--00000000000034c36f058f4c3300
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear all,
+
+
+
+Following a number of requests, the submission deadline for the 13th
+International Conference on the Philosophy of Computer Games: The
+Aesthetics of Computer Games (St Petersburg State University, Oct 21-24th)
+has been extended to *Wednesday, 14th  August 2019, 23:59 BST.*  Please
+send your abstracts to: http://review.gamephilosophy.org
+
+
+
+Please note that the submission deadline for workshops and panels is *Sunda=
+y,
+25th Aug 2019, 23:59 BST. *Please email me your proposal of up to 1,000
+words (excluding references): feng.zhu@kcl.ac.uk
+
+
+
+Warm regards,
+
+
+
+Feng Zhu
+
+
+
+Program Chair
+
+
+
+Lecturer in Games and Digital Environments
+
+Department of Digital Humanities
+
+King's College London
+
+Room C0.07, Chesham Building
+
+London, WC2R 2LS
+
+On Sat, Jul 6, 2019 at 10:48 AM Feng Zhu <feng.zhu.9@gmail.com> wrote:
+
+> Dear colleagues,
+>
+>
+>
+> This is a gentle reminder that the deadline for submission to the 13th
+> International Conference on the Philosophy of Computer Games: The
+> Aesthetics of Computer Games (St Petersburg State University, Oct 21-24th=
+)
+> is in just over one month's time. If you have not submitted yet, please d=
+o
+> so until 23:59 BST, Sunday, 11th August, 2019. Please also note that this
+> version of the CFP features some information that is additional to what w=
+as
+> included the last version, such as on teleconferencing.
+>
+>
+>
+>
+>
+> *Call for papers*
+>
+>
+>
+> *The 13th International Conference on the Philosophy of Computer Games:
+> The Aesthetics of Computer Games*
+>
+>
+>
+> *Conference Committee:*
+>
+>
+>
+> Program Chair:
+> Feng Zhu (King=E2=80=99s College London)
+> feng.zhu@kcl.ac.uk
+>
+>
+>
+> Conference Chairs:
+> Alina Latypova (St Petersburg State University)
+>
+> latypova.al@gmail.com
+>
+> Konstantin Ocheretyany (St Petersburg State University)
+>
+> kocheretyany@gmail.com
+>
+>
+>
+>
+>
+> We invite submissions to the *13th International Conference on the
+> Philosophy of Computer Games, organised by the Game Philosophy Network,
+> together with the Centre for Media Philosophy and Laboratory for Computer
+> Games Research, in St Petersburg, Russia, on October 21=E2=80=9324, 2019.=
+*
+>
+>
+>
+> The theme of this year=E2=80=99s conference is =E2=80=98*The Aesthetics o=
+f Computer
+> Games=E2=80=99*. Playing games yields particular kinds of playful experie=
+nces or
+> perceptions through the senses, which can be studied with an aesthetic
+> focus, emphasising *a=C3=ADsth=C4=93sis* over *no=C3=AAsis*. Computer gam=
+es can be
+> regarded as playful media that organise our perceptions and modify our
+> sensibilities. For this conference, we welcome submissions on (but not
+> limited to) the following themes and questions:
+>
+>
+>
+> *1. Aesthetics as aesthesis* (*a=C3=ADsth=C4=93sis).* Is there an aesthet=
+ics or
+> mode of experience that is specific to computer games? How do their visua=
+l,
+> audio, and haptic aspects come together to produce distinctive experience=
+s?
+> How are =E2=80=98experience=E2=80=99 and =E2=80=98perception=E2=80=99 exp=
+lored in computer games and shaped
+> by them? Can concepts such as =E2=80=98affect=E2=80=99, =E2=80=98atmosphe=
+re=E2=80=99, and =E2=80=98rhythm=E2=80=99 be
+> productively applied to computer games? What is the role of game interfac=
+es
+> on player experience?
+>
+>
+>
+> *2. Games as art?* What are the conditions of possibility of games being
+> art? How do computer games fit into established categories or conventions
+> of aesthetics, and how do they contribute to new ones? Do games recognise=
+d
+> as having a claim to artistic status differ from mainstream games? How do
+> accounts of art based on necessary and sufficient conditions match up
+> against anti-essentialist accounts in terms of gauging the status of
+> computer games?
+>
+>
+>
+> *3. The aesthetics of gaming practices.* Are games collaboratively
+> authored? How do different kinds of play, or player-game conjunctions,
+> bring about different kinds of gaming pleasures or aesthetic experiences?=
+ How
+> do different bodies encounter computer games and what can be said about t=
+he
+> way in which gameplay experience is mediated by our bodies? Do some kinds
+> of gameplay or extra-gamic player practices have an aesthetic orientation=
+?
+> Are computer games performances?
+>
+> * 4. The ethical, political, and social dimensions of game aesthetics.*
+> What is the transformative potential of computer games and how does this
+> compare to the transformative capabilities ascribed to artworks? How do
+> aesthetic issues interconnect with ethical, social, and political ones =
+=E2=80=93
+> what is the autonomy or heteronomy of the aesthetic domain? How are taste=
+,
+> sensibility, and habit acquired with respect to gameplay and what are the
+> social implications of this?
+>
+>
+>
+> In addition to this central theme, the conference also features an open
+> category, for which we invite welcome contributions that do not fit this
+> year=E2=80=99s theme, but that nonetheless offer a valuable contribution =
+to the
+> philosophy of computer games.
+>
+>
+>
+> Submitted proposals should have a clear focus on philosophy and
+> philosophical (including media philosophical) issues in relation to
+> computer games. They should also refer to specific games rather than invo=
+ke
+> them in more general terms. *Submissions should be made in the form of
+> extended abstracts of up to 1000 words (excluding bibliography).* Please
+> indicate if you intend your paper to fit in the open category. *The
+> deadline for submissions is 23:59 BST, Sunday, 11th August, 2019. *Please
+> submit your abstract through *review.gamephilosophy.org
+> <http://review.gamephilosophy.org>*. All submitted abstracts will be
+> subject to a double-blind peer review process.
+>
+>
+>
+> Notification of accepted submissions will be sent out in late August 2019=
+.
+> A full paper draft must then be submitted by Monday, 14th October 2019 an=
+d
+> will be made available on the conference website.
+>
+>
+> *We also invite proposals for themed panels and workshops that will take
+> place on the 20th and 24th October, 2019. *Please contact the program
+> committee chair if you are interested in organising one.
+>
+>
+>
+> *We cannot provide grants or subsidies for participants. There will,
+> however, be no conference fee. *
+>
+>
+>
+> For more information about the conference please visit
+> http://gameconference.mediaphilosophy.ru/pcg2019.html and
+> gamephilosophy.org.
+>
+>
+>
+>
+>
+> *Workshops and panels*
+>
+>
+>
+> We will accept submissions for workshops and panels in all areas pertinen=
+t
+> to the philosophy of computer games. This has been a tradition of the
+> conference series, which has used this format to gauge emerging
+> philosophical issues. This year, we have a particular interest in the
+> topics of =E2=80=98diversity in computer games=E2=80=99 and =E2=80=98the =
+aesthetics of computer
+> games=E2=80=99, but workshop and panel proposals in *all *areas concernin=
+g the
+> philosophy of computer games will be considered.
+>
+>
+>
+> We have chosen to extend the submission deadline for workshops and panels
+> (not papers) to the *25th Aug 2019, 23:59 BST.*
+>
+>
+>
+> *Teleconferencing*
+>
+>
+>
+> It will be possible for a limited number of authors to present their work
+> via teleconferencing. If your submission is accepted and you wish to
+> present via teleconferencing, please inform the program chair.
+>
+>
+>
+> The proportion of papers presented in person to those presented through
+> teleconferencing has not been definitely settled and will be more
+> thoroughly discussed by the program committee at a later point. We hope t=
+o
+> be able to accept as many as is viable. If the number of requests for
+> teleconferencing exceeds the number of available places that have been
+> decided upon, we will ask you to provide details of your situation that
+> make it difficult or impossible to travel to St Petersburg. Individuals
+> that are selected to present via teleconferencing will be chosen on a
+> case-by-case basis, taking into account *their circumstances as a whole*.
+>
+>
+>
+> We strongly advise presenters who wish to make use of teleconferencing,
+> where possible, to submit their presentation as a video, which would bypa=
+ss
+> any potential connectivity issues that would threaten the presentation of
+> the paper within the allotted time frame, and to use teleconferencing onl=
+y
+> for the Q&A section.
+>
+>
+>
+> *Additional resources*
+>
+>
+>
+> Further, please note that certain additional resources, some of which may
+> be relevant for LGBT+ travellers, will be made available in the =E2=80=98=
+VISA
+> information=E2=80=99 and =E2=80=98Location=E2=80=99 section of the confer=
+ence website. We cannot,
+> however, verify the contents of all of these resources.
+>
+>
+>
+> A statement regarding the selection of the location will be issued by the
+> steering committee in the near future. This will include reflections on h=
+ow
+> as wide a variety of voices can be heard in the future on the matter of t=
+he
+> conference location.
+>
+>
+>
+>
+>
+> *Visa information*
+>
+>
+>
+> Please note that you may need to obtain a visa to enter Russia.
+>
+>
+>
+> If you need a visa you should apply for it at the Russian consulate in
+> your country or at the visa service (the most popular is VisaGlobal
+> <https://www.vfsglobal.com>). All visa services have an additional fee.
+>
+> St. Petersburg State University provides attendees with an invitation
+> letter, which helps to obtain the humanitarian visa. Normally the costs o=
+f
+> the humanitarian visa is less than the tourist or business one (for Germa=
+n
+> and Polish citizens, for instance, the humanitarian visa is free if they
+> apply for it in the consulate).
+>
+>
+>
+> The cost of visas varies from country to country. Here is a list of some
+> countries <http://gameconference.mediaphilosophy.ru/files/HVR.pdf>.
+>
+>
+>
+> All the information concerning the visa costs and the processing time
+> (normally it takes from 4 to 20 days, depending on the country) is
+> available here: https://www.vfsglobal.com. If you have any questions
+> concerning visas, do not hesitate to contact Alina Latypova (
+> latypova.al@gmail.com).
+>
+>
+>
+> Attendees from the following countries do not need to obtain a Russian
+> visa:
+>
+>
+>
+> *Azerbaijan, Armenia, Belarus, Kazakhstan, Kyrgyzstan, Moldova,
+> Tajikistan, Turkmenistan, Uzbekistan, Ukraine.*
+>
+> Citizens of the countries of the CIS (the Commonwealth of Independent
+> States) are permitted to stay in the Russian Federation for up to 90 days
+> without a visa.
+>
+>
+>
+> *Argentina, Brazil, Chile, Colombia, Israel, Nicaragua, Peru, Venezuela.*
+> Citizens of these countries are allowed to stay in the Russian Federation
+> without a visa for up to 90 days in each 180-day period, provided they wi=
+ll
+> not be involved in any commercial or work-related activities during their
+> stay.
+>
+>
+>
+> *Cuba, Montenegro, Serbia (with biometric passport), Thailand, Hong Kong
+> SAR (up to 14 days), Macao SAR.*
+> Citizens of the countries in this group can stay in the Russian Federatio=
+n
+> for up to 30 days without a visa. They are not entitled to work while in
+> Russia.
+>
+>
+>
+> *Bosnia and Herzegovina, Macedonia.*
+> Citizens of these Balkan countries can also stay in Russia without a visa
+> for up to 30 days, but must also show tourist documents (tourist
+> confirmation and tourist voucher) or an official invitation to immigratio=
+n
+> officials.
+>
+>
+>
+>
+>
+> *About*
+>
+>
+>
+> The Centre for Media Philosophy at the Institute of Philosophy, St.
+> Petersburg State University, in collaboration with the Game Philosophy
+> Network, have come together to organize a double conference on
+> philosophical issues raised by computer games.
+>
+>
+>
+> The 13th International Philosophy of Computer Games Conference, "The
+> Aesthetics of Computer Games"
+> <http://gameconference.mediaphilosophy.ru/pcg2019.html> (Oct 21-24), will
+> explore various philosophical issues in thinking about the aesthetics of
+> games and gameplay, whilst "Computer Games as Interfaces to Media Reality=
+"
+> <http://gameconference.mediaphilosophy.ru/subtitle1> (Oct 21-25) will
+> address issues that spring from considering computer games to be
+> =E2=80=9Cexperience machines=E2=80=9D for the modification of sensibility=
+, thought, and
+> imagination. Our aim is to provide a meeting place for scholars of media
+> philosophy and game philosophy in order to inspire future investigations
+> into the commonalities and differences between these approaches.
+>
+>
+>
+>
+>
+> *Conference Committee (full)*
+>
+>
+>
+> Program Committee:
+>
+>
+>
+> Alina Latypova (St Petersburg State University)
+>
+> Anita Leirfall (University of Bergen)
+>
+> Darshana Jayemanne (Abertay University)
+>
+> Feng Zhu (King=E2=80=99s College London)(chair)
+>
+> Grant Tavinor (Lincoln University)
+>
+> Hans-Joachim Backe (IT University of Copenhagen)
+>
+> John Richard Sageng (Game Philosophy Network)
+>
+> Konstantin Ocheretyany (St Petersburg State University)
+>
+> Marc Bonner (University of Cologne)
+>
+> Margarita Skomorokh (St Petersburg State University)
+>
+> Mathias Fuchs (Leuphana University of L=C3=BCneburg)
+>
+> Olli Leino (City University of Hong Kong)
+>
+> Pawel Grabarczyk (IT University of Copenhagen)
+>
+> Sebastian M=C3=B6ring (University of Potsdam)
+>
+> Sonia Fizek (Media Academy Stuttgart)
+>
+> Veli-Matti Karhulahti (University of Jyv=C3=A4skyl=C3=A4/University of Tu=
+rku)
+>
+> William Huber (Abertay University)
+>
+>
+>
+> Organizing Committee:
+>
+> Alexander Lenkevich (St Petersburg State University)
+>
+> Alina Latypova (St Petersburg State University)(chair)
+>
+> Konstantin Ocheretyany (St Petersburg State University)(chair)
+>
+> Margarita Skomorokh (St Petersburg State University)
+>
+>
+>
+>
+>
+> For additional queries, do not hesitate to email the organisers using the
+> following email address: *feng (dot) zhu (at) kcl (dot) ac (dot) uk*
+>
+>
+>
+> Warm regards,
+>
+>
+>
+> Feng Zhu
+>
+>
+>
+> Program Chair
+>
+>
+>
+> Lecturer in Games and Digital Environments
+>
+> Department of Digital Humanities
+>
+> King's College London
+>
+> Room C0.07, Chesham Building
+>
+> London, WC2R 2LS
+>
+>
+>
+>
+>
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--00000000000034c36f058f4c3300
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div dir=3D"ltr">
+<div dir=3D"ltr">
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;">Dear all,<span></span></span></p><p class=3D"MsoNormal" style=3D"=
+margin:0cm 0cm 0.0001pt;line-height:normal;font-size:11pt;font-family:&quot=
+;Calibri&quot;,&quot;sans-serif&quot;"><span style=3D"font-size:12pt;font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></s=
+pan></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height=
+:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&=
+quot;serif&quot;">Following a number of requests, the
+submission deadline for the 13th International Conference on the Philosophy=
+ of
+Computer Games: The Aesthetics of Computer Games (St Petersburg State
+University, Oct 21-24th) has been extended to <b>Wednesday, 14th&nbsp; Augu=
+st
+2019, 23:59 BST.</b>&nbsp; Please send your abstracts to: <a href=3D"http:/=
+/review.gamephilosophy.org" target=3D"_blank" id=3D"gmail-LPlnk185310" clas=
+s=3D"gmail-OWAAutoLink"><span style=3D"color:blue">http://review.gamephilos=
+ophy.org</span></a><span></span></span></p><p class=3D"MsoNormal" style=3D"=
+margin:0cm 0cm 0.0001pt;line-height:normal;font-size:11pt;font-family:&quot=
+;Calibri&quot;,&quot;sans-serif&quot;"><span style=3D"font-size:12pt;font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></s=
+pan></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height=
+:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&=
+quot;serif&quot;">Please note that<span style=3D"color:black"> the submissi=
+on deadline for workshops and panels is <b>Sunday,
+25th Aug 2019, 23:59 BST. </b>Please email me your proposal of up to 1,000 =
+words (excluding references): <a href=3D"mailto:feng.zhu@kcl.ac.uk">feng.zh=
+u@kcl.ac.uk</a></span><span></span></span></p><p class=3D"MsoNormal" style=
+=3D"margin:0cm 0cm 0.0001pt;line-height:normal;font-size:11pt;font-family:&=
+quot;Calibri&quot;,&quot;sans-serif&quot;"><span style=3D"font-size:12pt;fo=
+nt-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span=
+></span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-al=
+ign:justify;line-height:normal;font-size:11pt;font-family:&quot;Calibri&quo=
+t;,&quot;sans-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">Warm regards,<span></span></span><=
+/p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justi=
+fy;line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;=
+sans-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">&nbsp;<span></span></span></p><p class=3D"M=
+soNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;line-height:n=
+ormal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;=
+"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;">Feng Zhu<span></span></span></p><p class=3D"MsoNormal" styl=
+e=3D"margin:0cm 0cm 0.0001pt;text-align:justify;line-height:normal;font-siz=
+e:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span style=
+=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot=
+;">&nbsp;<span></span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm=
+ 0cm 0.0001pt;text-align:justify;line-height:normal;font-size:11pt;font-fam=
+ily:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span style=3D"font-size:12=
+pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">Program Chair=
+<span></span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.00=
+01pt;text-align:justify;line-height:normal;font-size:11pt;font-family:&quot=
+;Calibri&quot;,&quot;sans-serif&quot;"><span style=3D"font-size:12pt;font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;">&nbsp;<span></span></s=
+pan></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:=
+justify;line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&=
+quot;sans-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,&quot;serif&quot;">Lecturer in Games and Digital Environm=
+ents <span></span></span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm=
+ 0.0001pt;text-align:justify;line-height:normal;font-size:11pt;font-family:=
+&quot;Calibri&quot;,&quot;sans-serif&quot;"><span style=3D"font-size:12pt;f=
+ont-family:&quot;Times New Roman&quot;,&quot;serif&quot;">Department of Dig=
+ital Humanities<span></span></span></p><p class=3D"MsoNormal" style=3D"marg=
+in:0cm 0cm 0.0001pt;text-align:justify;line-height:normal;font-size:11pt;fo=
+nt-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span style=3D"font-s=
+ize:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">King's =
+College London<span></span></span></p><p class=3D"MsoNormal" style=3D"margi=
+n:0cm 0cm 0.0001pt;text-align:justify;line-height:normal;font-size:11pt;fon=
+t-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span style=3D"font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">Room C0.=
+07, Chesham Building <span></span></span></p><p class=3D"MsoNormal" style=
+=3D"margin:0cm 0cm 0.0001pt;text-align:justify;line-height:normal;font-size=
+:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span style=
+=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot=
+;">London, WC2R 2LS</span></p>
+
+</div>
+
+</div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">=
+On Sat, Jul 6, 2019 at 10:48 AM Feng Zhu &lt;<a href=3D"mailto:feng.zhu.9@g=
+mail.com">feng.zhu.9@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D=
+"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(2=
+04,204,204);padding-left:1ex"><div dir=3D"ltr"><span style=3D"font-family:&=
+quot;Calibri&quot;,sans-serif"><span style=3D"color:black"></span></span>
+<p><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:black">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-ali=
+gn:justify;line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot=
+;,&quot;sans-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;T=
+imes New Roman&quot;,&quot;serif&quot;">Dear colleagues, <span></span></spa=
+n></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">This is a gentle reminder that the deadline fo=
+r submission
+to the 13th International Conference on the Philosophy of Computer Games: T=
+he
+Aesthetics of Computer Games (St Petersburg State University, Oct 21-24th) =
+is
+in just over one month's time. If you have not submitted yet, please do so
+until 23:59 BST, Sunday, 11th August, 2019. Please also note that this vers=
+ion
+of the CFP features some information that is additional to what was include=
+d
+the last version, such as on teleconferencing. <span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">Call for papers</span></b><span style=3D"fo=
+nt-family:&quot;Times New Roman&quot;,&quot;serif&quot;"> </span><b><span s=
+tyle=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&=
+quot;"><span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">The 13th International Conference on
+the Philosophy of Computer Games: The Aesthetics of Computer Games</span></=
+b><span style=3D"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"=
+> </span><b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman=
+&quot;,&quot;serif&quot;"><span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">Conference Committee:</span></b><span style=
+=3D"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"> </span><b><=
+span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;"><span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;">Program Chair: <br>
+Feng Zhu (King=E2=80=99s College London)<br>
+</span><a style=3D"color:blue;text-decoration:underline"><span style=3D"fon=
+t-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">feng=
+.zhu@kcl.ac.uk</span></a><span style=3D"font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,&quot;serif&quot;"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;">Conference Chairs: <br>
+Alina Latypova (St Petersburg State University)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;"><a href=3D"mailto:latypova.al@gmail.com" style=3D"color:blue;text=
+-decoration:underline" target=3D"_blank">latypova.al@gmail.com<span></span>=
+</a></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Konstantin Ocheretyany (St Petersburg State Un=
+iversity)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><a href=3D"mailto:kocheretyany@gmail.com" styl=
+e=3D"color:blue;text-decoration:underline" target=3D"_blank">kocheretyany@g=
+mail.com<span></span></a></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><b><span>&nbsp;</span></b></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">We invite submissions to the <b>13th Internati=
+onal Conference on the Philosophy of Computer Games, organised
+by the Game Philosophy Network, together with the Centre for Media Philosop=
+hy
+and Laboratory for Computer Games Research, in St Petersburg, Russia, on
+October 21=E2=80=9324, 2019.</b></span><span style=3D"font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;">
+</span><b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&q=
+uot;,&quot;serif&quot;"><span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">The theme of this year=E2=80=99s conference is=
+ =E2=80=98<b>The Aesthetics of Computer Games=E2=80=99</b>. Playing games y=
+ields particular
+kinds of playful experiences or perceptions through the senses, which can b=
+e
+studied with an aesthetic focus, emphasising <i>a=C3=ADsth=C4=93sis</i> ove=
+r <i>no=C3=AAsis</i>. Computer
+games can be regarded as playful media that organise our perceptions and mo=
+dify
+our sensibilities. For this conference, we welcome submissions on (but not
+limited to) the following themes and questions:<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">1. Aesthetics as aesthesis</span></b><span =
+style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif=
+&quot;"> (</span><b><span style=3D"font-size:12pt;font-family:&quot;Times N=
+ew Roman&quot;,&quot;serif&quot;">a=C3=ADsth=C4=93sis).</span></b><span sty=
+le=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&qu=
+ot;">
+Is there an aesthetics or mode of experience that is specific to computer
+games? How do their visual, audio, and haptic aspects come together to prod=
+uce
+distinctive experiences? How are =E2=80=98experience=E2=80=99 and =E2=80=98=
+perception=E2=80=99 explored in
+computer games and shaped by them? Can concepts such as =E2=80=98affect=E2=
+=80=99, =E2=80=98atmosphere=E2=80=99,
+and =E2=80=98rhythm=E2=80=99 be productively applied to computer games? Wha=
+t is the role of
+game interfaces on player experience?<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">2. Games as art?</span></b><span style=3D"f=
+ont-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">
+What are the conditions of possibility of games being art? How do computer
+games fit into established categories or conventions of aesthetics, and how=
+ do
+they contribute to new ones? Do games recognised as having a claim to artis=
+tic
+status differ from mainstream games? How do accounts of art based on necess=
+ary
+and sufficient conditions match up against anti-essentialist accounts in te=
+rms
+of gauging the status of computer games? <span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">3. The aesthetics of gaming practices.</spa=
+n></b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;=
+,&quot;serif&quot;"> Are games collaboratively authored? How do different k=
+inds
+of play, or player-game conjunctions, bring about different kinds of gaming
+pleasures or aesthetic experiences? </span><span style=3D"font-size:12pt;fo=
+nt-family:&quot;Times New Roman&quot;,&quot;serif&quot;">How do different b=
+odies encounter
+computer games and what can be said about the way in which gameplay experie=
+nce
+is mediated by our bodies? </span><span style=3D"font-size:12pt;font-family=
+:&quot;Times New Roman&quot;,&quot;serif&quot;">Do some
+kinds of gameplay or extra-gamic player practices have an aesthetic
+orientation? Are computer games performances?<br>
+<b><br>
+4. The ethical, political, and social dimensions of game aesthetics.</b> Wh=
+at
+is the transformative potential of computer games and how does this compare=
+ to
+the transformative capabilities ascribed to artworks? How do aesthetic issu=
+es
+interconnect with ethical, social, and political ones =E2=80=93 what is the=
+ autonomy or
+heteronomy of the aesthetic domain? How are taste, sensibility, and habit
+acquired with respect to gameplay and what are the social implications of t=
+his?
+</span><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,&quot;serif&quot;"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">In addition to this central theme, the confere=
+nce also
+features an open category, for which we invite welcome contributions that d=
+o
+not fit this year=E2=80=99s theme, but that nonetheless offer a valuable co=
+ntribution
+to the philosophy of computer games.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Submitted proposals should have a clear focus =
+on philosophy
+and philosophical (including media philosophical) issues in relation to
+computer games. They should also refer to specific games rather than invoke
+them in more general terms. <b>Submissions
+should be made in the form of extended abstracts of up to 1000 words (exclu=
+ding
+bibliography).</b> Please indicate if you intend your paper to fit in the o=
+pen
+category. <b>The deadline for submissions
+is 23:59 BST, Sunday, 11th August, 2019. </b>Please submit your abstract
+through <b><a href=3D"http://review.gamephilosophy.org" target=3D"_blank">r=
+eview.gamephilosophy.org</a></b>.
+All submitted abstracts will be subject to a double-blind peer review proce=
+ss.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Notification of accepted submissions will be s=
+ent out in late
+August 2019. A full paper draft must then be submitted by Monday, 14th Octo=
+ber
+2019 and will be made available on the conference website.<span></span></sp=
+an></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><br>
+<b>We also invite proposals for themed
+panels and workshops that will take place on the 20th and 24<sup>th</sup> O=
+ctober,
+2019. </b>Please contact the program committee chair if you are interested =
+in
+organising one.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">We
+cannot provide grants or subsidies for participants. There will, however, b=
+e no
+conference fee. <span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">For more information about the conference plea=
+se visit </span><a href=3D"http://gameconference.mediaphilosophy.ru/pcg2019=
+.html" style=3D"color:blue;text-decoration:underline" target=3D"_blank"><sp=
+an style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;se=
+rif&quot;">http://gameconference.mediaphilosophy.ru/pcg2019.html</span></a>=
+<span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot=
+;serif&quot;"> and </span><a href=3D"http://gamephilosophy.org" style=3D"co=
+lor:blue;text-decoration:underline" target=3D"_blank"><span style=3D"font-s=
+ize:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:bl=
+ue">gamephilosophy.org</span></a><span style=3D"font-size:12pt;font-family:=
+&quot;Times New Roman&quot;,&quot;serif&quot;">.</span><span style=3D"font-=
+size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><span>=
+</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;;color:black">Workshops and panels<span></spa=
+n></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;;color:black">We will accept submissions for wor=
+kshops and
+panels in all areas pertinent to the philosophy of computer games. This has
+been a tradition of the conference series, which has used this format to ga=
+uge
+emerging philosophical issues. This year, we have a particular interest in =
+the
+topics of =E2=80=98diversity in computer games=E2=80=99 and =E2=80=98the ae=
+sthetics of computer games=E2=80=99,
+but workshop and panel proposals in <i>all </i>areas concerning the philoso=
+phy
+of computer games will be considered.&nbsp;</span><span style=3D"font-size:=
+12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><span></spa=
+n></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;;color:black">We have chosen to extend the submi=
+ssion deadline
+for workshops and panels (not papers) to the <b>25th Aug 2019, 23:59 BST.</=
+b></span><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&qu=
+ot;,&quot;serif&quot;"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;;color:black">Teleconferencing<span></span></=
+span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;;color:black">It will be possible for a limited =
+number of
+authors to present their work via teleconferencing. If your submission is
+accepted and you wish to present via teleconferencing, please inform the
+program chair. </span><span style=3D"font-size:12pt;font-family:&quot;Times=
+ New Roman&quot;,&quot;serif&quot;"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;;color:black">The proportion of papers presented=
+ in person to
+those presented through teleconferencing has not been definitely settled an=
+d
+will be more thoroughly discussed by the program committee at a later
+point.&nbsp;We hope to be able to accept as many as is viable. If the numbe=
+r of
+requests for teleconferencing exceeds the number of available places that h=
+ave
+been decided upon, we will ask you to provide details of your situation tha=
+t
+make it difficult or impossible to travel to St Petersburg.&nbsp;Individual=
+s
+that are selected to present via teleconferencing will be chosen on a
+case-by-case basis, taking into account <i>their circumstances as a whole</=
+i>. </span><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&=
+quot;,&quot;serif&quot;"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;;color:black">We strongly advise presenters who =
+wish to make
+use of teleconferencing, where possible, to submit their presentation as a
+video, which would bypass any potential connectivity issues that would thre=
+aten
+the presentation of the paper within the allotted time frame, and to use
+teleconferencing only for the Q&amp;A section.&nbsp;</span><span style=3D"f=
+ont-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><s=
+pan></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;;color:black">Additional resources<span></spa=
+n></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;;color:black">Further, please note that certain =
+additional
+resources, some of which may be relevant for LGBT&#43; travellers, will be =
+made
+available in the =E2=80=98VISA information=E2=80=99 and =E2=80=98Location=
+=E2=80=99 section of the conference
+website. We cannot, however, verify the contents of all of these resources.=
+ <span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;;color:black"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;;color:black">A statement regarding the selectio=
+n of the
+location will be issued by the steering committee in the near future. This =
+will
+include reflections on how as wide a variety of voices can be heard in the
+future on the matter of the conference location.</span><span style=3D"font-=
+size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><span>=
+</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">Visa
+information<span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Please note that you may need to
+obtain a visa to enter Russia.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">If you need a visa you should apply for it at =
+the Russian
+consulate in your country or at the visa service (the most popular is </spa=
+n><a href=3D"https://www.vfsglobal.com" style=3D"color:blue;text-decoration=
+:underline" target=3D"_blank"><span style=3D"font-size:12pt;font-family:&qu=
+ot;Times New Roman&quot;,&quot;serif&quot;;color:blue">VisaGlobal</span></a=
+><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quo=
+t;serif&quot;">). All
+visa services have an additional fee. <span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">St. Petersburg State University provides atten=
+dees with an
+invitation letter, which helps to obtain the humanitarian visa. Normally th=
+e
+costs of the humanitarian visa is less than the tourist or business one (fo=
+r
+German and Polish citizens, for instance, the humanitarian visa is free if =
+they
+apply for it in the consulate).<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">The cost of visas varies from country to count=
+ry. Here is a </span><a href=3D"http://gameconference.mediaphilosophy.ru/fi=
+les/HVR.pdf" style=3D"color:blue;text-decoration:underline" target=3D"_blan=
+k"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&q=
+uot;serif&quot;;color:blue">list of some countries</span></a><span style=3D=
+"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">=
+.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">All the information concerning the visa costs =
+and the
+processing time (normally it takes from 4 to 20 days, depending on the coun=
+try)
+is available here: </span><a href=3D"https://www.vfsglobal.com" style=3D"co=
+lor:blue;text-decoration:underline" target=3D"_blank"><span style=3D"font-s=
+ize:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:bl=
+ue">https://www.vfsglobal.com</span></a><span style=3D"font-size:12pt;font-=
+family:&quot;Times New Roman&quot;,&quot;serif&quot;">. If you have any que=
+stions concerning visas, do not
+hesitate to contact Alina Latypova (</span><a href=3D"mailto:latypova.al@gm=
+ail.com" style=3D"color:blue;text-decoration:underline" target=3D"_blank"><=
+span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;;color:blue">latypova.al@gmail.com</span></a><span style=3D"font=
+-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">).<sp=
+an></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;">Attendees from the following
+countries do not need to obtain a Russian visa:<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><b><=
+span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;">Azerbaijan, Armenia, Belarus,
+Kazakhstan, Kyrgyzstan, Moldova, Tajikistan, Turkmenistan, Uzbekistan, Ukra=
+ine.<span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;">Citizens of the countries of the CIS
+(the Commonwealth of Independent States) are permitted to stay in the Russi=
+an
+Federation for up to 90 days without a visa.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><b><=
+span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;">Argentina, Brazil, Chile, Colombia,
+Israel, Nicaragua, Peru, Venezuela.</span></b><span style=3D"font-size:12pt=
+;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><br>
+Citizens of these countries are allowed to stay in the Russian Federation
+without a visa for up to 90 days in each 180-day period, provided they will=
+ not
+be involved in any commercial or work-related activities during their stay.=
+<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><b><=
+span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;">Cuba, Montenegro, Serbia (with
+biometric passport), Thailand, Hong Kong SAR (up to 14 days), Macao SAR.</s=
+pan></b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quo=
+t;,&quot;serif&quot;"><br>
+Citizens of the countries in this group can stay in the Russian Federation =
+for
+up to 30 days without a visa. They are not entitled to work while in Russia=
+.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><b><=
+span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;">Bosnia and Herzegovina, Macedonia.</span></b><span style=3D"fo=
+nt-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><br=
+>
+Citizens of these Balkan countries can also stay in Russia without a visa f=
+or
+up to 30 days, but must also show tourist documents (tourist confirmation a=
+nd
+tourist voucher) or an official invitation to immigration officials.<span><=
+/span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">About<span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">The Centre for Media Philosophy at the Institu=
+te of
+Philosophy, St. Petersburg State University, in collaboration with the Game
+Philosophy Network, have come together to organize a double conference on
+philosophical issues raised by computer games.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">The 13th International Philosophy of Computer =
+Games
+Conference, </span><a href=3D"http://gameconference.mediaphilosophy.ru/pcg2=
+019.html" style=3D"color:blue;text-decoration:underline" target=3D"_blank">=
+<span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot=
+;serif&quot;;color:blue">&quot;The Aesthetics of Computer Games&quot;</span=
+></a><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,=
+&quot;serif&quot;"> (Oct 21-24), will explore various philosophical issues =
+in
+thinking about the aesthetics of games and gameplay, whilst </span><a href=
+=3D"http://gameconference.mediaphilosophy.ru/subtitle1" style=3D"color:blue=
+;text-decoration:underline" target=3D"_blank"><span style=3D"font-size:12pt=
+;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:blue">&quo=
+t;Computer Games as Interfaces to Media
+Reality&quot;</span></a><span style=3D"font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;"> (Oct 21-25) will address issues
+that spring from considering computer games to be =E2=80=9Cexperience machi=
+nes=E2=80=9D for the
+modification of sensibility, thought, and imagination. Our aim is to provid=
+e a
+meeting place for scholars of media philosophy and game philosophy in order=
+ to
+inspire future investigations into the commonalities and differences betwee=
+n
+these approaches.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><b><span style=3D"font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;">Conference Committee (full)<span></span></s=
+pan></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Program Committee:<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Alina Latypova (St Petersburg State University=
+)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Anita Leirfall (University of Bergen)<span></s=
+pan></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Darshana Jayemanne (Abertay University)<span><=
+/span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Feng Zhu (King=E2=80=99s College London)(chair=
+)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Grant Tavinor (Lincoln University)<span></span=
+></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Hans-Joachim Backe (IT University of Copenhage=
+n)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">John Richard Sageng (Game Philosophy Network)<=
+span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Konstantin Ocheretyany (St Petersburg State Un=
+iversity)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Marc Bonner (University of Cologne)<span></spa=
+n></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Margarita Skomorokh (St Petersburg State Unive=
+rsity)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Mathias Fuchs</span><span style=3D"font-family=
+:&quot;Times New Roman&quot;,&quot;serif&quot;">
+(</span><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quo=
+t;,&quot;serif&quot;">Leuphana University of L=C3=BCneburg)<span></span></s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Olli Leino (City University of Hong Kong)<span=
+></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Pawel Grabarczyk (IT University of Copenhagen)=
+<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Sebastian M=C3=B6ring (University of Potsdam)<=
+span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Sonia Fizek (Media Academy Stuttgart)<span></s=
+pan></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Veli-Matti Karhulahti (University of Jyv=C3=A4=
+skyl=C3=A4</span><span style=3D"font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;">/</span><span style=3D"font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;">University
+of Turku)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">William Huber (Abertay University)<span></span=
+></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Organizing Committee:<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Alexander Lenkevich (St Petersburg State Unive=
+rsity)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;">Alina Latypova (St Petersburg State
+University)(chair)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Konstantin Ocheretyany (St Petersburg State
+University)(chair)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Margarita Skomorokh (St Petersburg State Unive=
+rsity)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">For additional queries, do not hesitate to ema=
+il the
+organisers using the following email address: <b>feng (dot) zhu (at) kcl (d=
+ot) ac (dot) uk</b><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Warm regards,<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Feng Zhu<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Program Chair<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Lecturer in Games and Digital Environments <sp=
+an></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Department of Digital Humanities<span></span><=
+/span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">King's College London<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">Room C0.07, Chesham Building <span></span></sp=
+an></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;">London, WC2R 2LS<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;"><span style=3D"font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,&quot;serif&quot;"><span>&nbsp;</span></span></p>
+
+
+
+
+
+
+
+</div>
+</blockquote></div></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--00000000000034c36f058f4c3300--

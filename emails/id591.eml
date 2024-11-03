@@ -1,0 +1,397 @@
+Received: from BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:a03:100::25)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0012.NAMPRD08.PROD.OUTLOOK.COM; Wed, 5 Jun 2019 12:36:06 +0000
+Received: from SN4PR0801CA0016.namprd08.prod.outlook.com
+ (2603:10b6:803:29::26) by BN7PR08MB4980.namprd08.prod.outlook.com
+ (2603:10b6:408:28::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1943.22; Wed, 5 Jun
+ 2019 12:36:04 +0000
+Received: from CO1NAM04FT006.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::200) by SN4PR0801CA0016.outlook.office365.com
+ (2603:10b6:803:29::26) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1943.17 via Frontend
+ Transport; Wed, 5 Jun 2019 12:36:04 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ CO1NAM04FT006.mail.protection.outlook.com (10.152.90.104) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1943.19 via Frontend Transport; Wed, 5 Jun 2019 12:36:02 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x55CVngd006630
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Wed, 5 Jun 2019 15:31:49 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x55CVmQY018011;
+	Wed, 5 Jun 2019 15:31:48 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Wed, 05 Jun 2019 15:31:48 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x55CVmxO008663
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Wed, 5 Jun 2019 15:31:48 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x558bJET012332;
+	Wed, 5 Jun 2019 15:31:32 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          307405 for GAMESNETWORK@LISTSERV.UTA.FI; Wed, 5 Jun 2019 15:31:30
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x55CVUlc023681 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Wed, 5 Jun 2019 15:31:30 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x55CVTJu004069 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Wed, 5 Jun 2019 15:31:30 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x55CVTtp017962 for
+          <GAMESNETWORK@uta.fi>; Wed, 5 Jun 2019 15:31:29 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Wed, 05 Jun 2019 15:31:29
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-it1-f193.google.com (mail-it1-f193.google.com
+          [209.85.166.193]) by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x55CVRGJ008599 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Wed, 5 Jun 2019 15:31:28 +0300
+Received: by mail-it1-f193.google.com with SMTP id m187so3146751ite.3 for
+          <GAMESNETWORK@uta.fi>; Wed, 05 Jun 2019 05:31:28 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=olb6fLvKm1qZa26QYFUKyZycs4Czac376ZRb9lPMZJA=;
+                         b=sIjmY+Hpcszk5ICo10SHHCfOj0uS02v7QjIhjlT0qMkuxO6xae5xP2q5WbYGdCTh9Q
+                         vQefqAQPR4Oj4SAfBjJDKflKS0K2bUWpgR+BSu1n+xDoOxGh0xOI6s0QZfD+tfKc7gEa
+                         sLdZSOp5y06W8zAJfYcVejC2I18CP49ZtWKQpZ1j0xsMYXO10NV+lGer2iaJAVPQi9oT
+                         EtuTMSfLeGPk2OREl/ZvqjLWKXJgBF7ScLsoATRBi/IU4Y+sM0+0IL6yta3xawGFDngO
+                         EgXIiF3Zrfso6pL6ZPyYdRxfyrAHhR9oaypIBWW+J21xSjtwyOIbT/546mAVOPZu0Nuz
+                         bCBA==
+X-Gm-Message-State: APjAAAXXjZUcMSUAUZByPVEtFW0c5LMzAm85oWKHnwZiZABQVKUWdbbD
+                    v643JW5x33lnDnMZew3ATmbMRKlnX5JWk/oRrJsWTDJQjI8=
+X-Google-Smtp-Source: APXvYqzZWBy7HTzT7LD3BI1jilGW2zhPmhbZ2w9hz2etPrnW73cxigrbEjGqh9Pz53DGBIKASPJPo2IKubAnh1ymNJw=
+X-Received: by 2002:a24:149:: with SMTP id 70mr25594029itk.79.1559737887083;
+            Wed, 05 Jun 2019 05:31:27 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="000000000000b3d2c0058a92c6f8"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Wed, 05 Jun 2019 15:31:48 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,L_URL_SHORT_UBECOMMN,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1023
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CAC7Edr_vnbp-h3LX4ObgXJVUcGFyUNFWw08zVA77Pdye9757FQ@mail.gmail.com>
+Date: Wed, 5 Jun 2019 14:31:13 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Mattia Thibault <mattia.thibault@GMAIL.COM>
+Subject: [GAMESNETWORK] GamiFIN 2020 Call for papers
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Jun 2019 12:36:03.6349
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d42ebbf1-b74b-4828-dc64-08d6e9b25f91
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(286005)(7192003)(176002)(189003)(199004)(476003)(336012)(126002)(73392003)(6666004)(356004)(6392003)(16003)(7846003)(4006050)(53386004)(76482006)(106002)(16586007)(53376002)(53366004)(75640400001)(498394004)(236005)(6862004)(15974865002)(40036005)(26005)(6306002)(606006)(61266001)(42882007)(44832011)(84326002)(486006)(305945005)(7596002)(66346011)(33964004)(21615005)(42186006)(43066004)(55176004)(8676002)(7636002)(82202003)(146002)(966005)(55446002)(71190400001)(246002)(95326003)(1096003)(14444005)(59536001)(8576002)(225293001)(493534005);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4980;H:mxout1.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout1.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT006.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: d42ebbf1-b74b-4828-dc64-08d6e9b25f91
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BN7PR08MB4980;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4980:
+X-MS-Exchange-PUrlCount: 8
+X-MS-Oob-TLC-OOBClassifiers: OLM:4502;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jun 2019 12:36:02.8422
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d42ebbf1-b74b-4828-dc64-08d6e9b25f91
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4980
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.4543518
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1943.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944701077);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?Q3E2bkRWaDhZSUhxL3BzOENwYXBvQkhhSEkrbDlpcDREOE8wVFRMcWtGeHpO?=
+ =?utf-8?B?MGZLVWh2VlkvcHdKZEJMNzF3cjlSWmhyMkR6eVAycFhUM2NUNUE4WkFuclhM?=
+ =?utf-8?B?R2ZacHNTZVNhVytia3ZYNUZwQzhBb3VFOTA5Vkk1ZmFQckNuWUh0VDJjUWhR?=
+ =?utf-8?B?Q2lVWXlpN0lRWVo3WExLME53VXBBV3N3YytFMUI5aTlRajA2T3FYU1FRNGFt?=
+ =?utf-8?B?NldWTTl1WXpIN1hTRGRZVFFvRWNFL1J5UXM5M0kyQlJuekVVWUlWbnNjV0tG?=
+ =?utf-8?B?UjBGWTNpUVZsQ0lQaHZGNTJ1azJQd1dyOFBkQW5jOXhJVjBpaktsY3liTnlm?=
+ =?utf-8?B?WlhaclZnMWlqTmpPTk5qSDVkZ1hHcHdlREZ5WUk2NnIvOFdkQlR2bnA1Ym1r?=
+ =?utf-8?B?SUxSblRLam9hYW9ua2I1QnFTOTN1M01VTmRtSnJUSjBubWxRM2ZyWEt0NEF3?=
+ =?utf-8?B?a2hKRXdlallWOG1kdHJKVDQzN1lxTDRIdTVyZWhZSDRjQm1uWU01d01GWGpP?=
+ =?utf-8?B?VEpOa0c4QVlzZVZYWXcyY0dZN0lzYTVXd1dSRzdJdDZEZTRjSkFUN0U5Q09T?=
+ =?utf-8?B?M0xHMDJhZjgxN2QwV2M4MUVTMVpEUkhFeENibUVodExnSklTZkRTb28zTkZn?=
+ =?utf-8?B?cDhYd240cEhGUDNhQWNLZ3d2VFpXclhzT1F0V2sxbmlGdUVLK1Q5UWo2a0xp?=
+ =?utf-8?B?eGVJN3Y1VXJWcFRRcWFMTy9UeUxvcVZwQjlKek1jMEJ6RHg5bUo2M1NzSzhT?=
+ =?utf-8?B?MXpjTzlKSFNPRksxektULzZrWm56RWNnRVRCb0o4TmVoQWw5ZXVuSlB5YnBo?=
+ =?utf-8?B?bXlKb0c1K205d3AvZEJFOXRVaGJWV0RsUnF3MTJWZUtMeDR6Q0crc1NMckkw?=
+ =?utf-8?B?RGhWUWZhdldNMlJJeHFQVW1KUVJYMG4rbWVzWFhBT214THRUb3FlRDM2RCsz?=
+ =?utf-8?B?eFoyaENOeTFMdk41TW4vZlMzSExqSTFWbEQ2d0lNSnIydmlhQjRWaUEzOHp6?=
+ =?utf-8?B?bUdodW1pakswWmI1akxjVDgxLytXcDVvODZsK0VvcE1kWVF2K3pia2FoWVpa?=
+ =?utf-8?B?dHQzWXVxMmd3MjlrdVU1RmRMWUhnWHBhdm9qdEVuTHZDd2hwV0hYcHVGWGw0?=
+ =?utf-8?B?YUpodUU2OVdnNG5QeFZ6RjNtckwvRVlLZDlqRWg1cG9kMjRzTWtJMGoyd2pR?=
+ =?utf-8?B?c2VHRHNTQTJ1ZFFkUWpZdHFBaVIvK2lTaFNXTWtIRTBZYTh3Z24wQWgzeW9p?=
+ =?utf-8?B?RWkyQWNBQjh2Qng2MFZuWldnZytqNXR6WUh5d1RPMTZwZk45Y1ZBYnI5VkYr?=
+ =?utf-8?Q?xUMQ3PVlvt4vkhKZ0egWv+Cqucjuay0HqQ?=
+MIME-Version: 1.0
+
+--000000000000b3d2c0058a92c6f8
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ Hey folks!
+After the great success of the last editions, the CfP of GamiFIN 2020 is
+finally OUT!
+As one of the World=E2=80=99s leading conferences dedicated to gamification=
+,
+GamiFIN is the annual event you don=E2=80=99t want to miss. Why? We=E2=80=
+=99ll give you
+three reasons:
+1) It is a great place to present and discuss your work on gamification and
+related topics. Your research will gain visibility among like-minded
+experts and professionals, while you will have the opportunity to network
+with an open-minded, proactive community;
+2) For the second year in a row, GamiFIN will be held in the winter
+wonderland of Finnish Lapland! (Yes, that means you will likely have the
+chance to see northern lights!);
+3) GamiFIN is the first step of the =E2=80=9CGamification Track=E2=80=9D: t=
+his will allow
+you to develop your paper towards the Gamification Minitrack at HICSS and
+the special issues of excellent journals! GAMIFIN Coordinators will work
+hard to increase the predictability and rigorousness of the peer-review and
+publication process by providing a concise review continuum and discussion
+with peers (more details: http://gamifinconference.com/gamification-track/)=
+.
+See you in Levi!
+
+Paper submission deadline: October 20, 2019
+Conference Date: April 1-3, 2020
+Website: http://gamifinconference.com
+Facebook event: http://bit.ly/GamiFIN2020
+<http://gamifinconference.com/>
+Full CFP: http://gamifinconference.com/cfp2020/
+<http://gamifinconference.com/>
+
+
+-----------------------
+Mattia Thibault, Ph.D.
+Postdoc Researcher (MSCA) at Tampere University
+Member of the Gamification Group <https://www.tut.fi/Gamification/>
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--000000000000b3d2c0058a92c6f8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">
+<div>Hey folks!<br></div><div><span style=3D"font-size:11pt;font-family:Ari=
+al;color:rgb(33,33,33);background-color:rgb(255,255,255);font-weight:400;fo=
+nt-style:normal;font-variant:normal;text-decoration:none;vertical-align:bas=
+eline;white-space:pre-wrap">After the great success of the last editions, t=
+he CfP of GamiFIN 2020 is finally OUT!</span><span style=3D"font-size:11pt;=
+font-family:Arial;color:rgb(33,33,33);background-color:rgb(255,255,255);fon=
+t-weight:400;font-style:normal;font-variant:normal;text-decoration:none;ver=
+tical-align:baseline;white-space:pre-wrap"><br></span></div><div><span styl=
+e=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);background-color:=
+rgb(255,255,255);font-weight:400;font-style:normal;font-variant:normal;text=
+-decoration:none;vertical-align:baseline;white-space:pre-wrap">As one of th=
+e World=E2=80=99s leading conferences dedicated to gamification, GamiFIN is=
+ the annual event you don=E2=80=99t want to miss. Why? We=E2=80=99ll give y=
+ou three reasons:</span><span style=3D"font-size:11pt;font-family:Arial;col=
+or:rgb(33,33,33);background-color:rgb(255,255,255);font-weight:400;font-sty=
+le:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;=
+white-space:pre-wrap"></span><span style=3D"font-size:11pt;font-family:Aria=
+l;color:rgb(33,33,33);background-color:rgb(255,255,255);font-weight:400;fon=
+t-style:normal;font-variant:normal;text-decoration:none;vertical-align:base=
+line;white-space:pre-wrap"><br></span></div><div><span style=3D"font-size:1=
+1pt;font-family:Arial;color:rgb(33,33,33);background-color:rgb(255,255,255)=
+;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none=
+;vertical-align:baseline;white-space:pre-wrap">1) It is a great place to pr=
+esent and discuss your work on gamification and related topics. Your resear=
+ch will gain visibility among like-minded experts and professionals, while =
+you will have the opportunity to network with an open-minded, proactive com=
+munity;</span><span style=3D"font-size:11pt;font-family:Arial;color:rgb(33,=
+33,33);background-color:rgb(255,255,255);font-weight:400;font-style:normal;=
+font-variant:normal;text-decoration:none;vertical-align:baseline;white-spac=
+e:pre-wrap"><br></span></div><div><span style=3D"font-size:11pt;font-family=
+:Arial;color:rgb(33,33,33);background-color:rgb(255,255,255);font-weight:40=
+0;font-style:normal;font-variant:normal;text-decoration:none;vertical-align=
+:baseline;white-space:pre-wrap">2) For the second year in a row, GamiFIN wi=
+ll be held in the winter wonderland of Finnish Lapland! (Yes, that means yo=
+u will likely have the chance to see northern lights!);</span><span style=
+=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);background-color:r=
+gb(255,255,255);font-weight:400;font-style:normal;font-variant:normal;text-=
+decoration:none;vertical-align:baseline;white-space:pre-wrap"></span><span =
+style=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);background-co=
+lor:rgb(255,255,255);font-weight:400;font-style:normal;font-variant:normal;=
+text-decoration:none;vertical-align:baseline;white-space:pre-wrap"><br></sp=
+an></div><div><span style=3D"font-size:11pt;font-family:Arial;color:rgb(33,=
+33,33);background-color:rgb(255,255,255);font-weight:400;font-style:normal;=
+font-variant:normal;text-decoration:none;vertical-align:baseline;white-spac=
+e:pre-wrap">3) GamiFIN is the first step of the =E2=80=9CGamification Track=
+=E2=80=9D: this will allow you to develop your paper towards the Gamificati=
+on Minitrack at HICSS and the special issues of excellent journals! GAMIFIN=
+ Coordinators will work hard to increase the predictability and rigorousnes=
+s of the peer-review and publication process by providing a concise review =
+continuum and discussion with peers (more details:</span><a href=3D"http://=
+gamifinconference.com/gamification-track/" style=3D"text-decoration:none" t=
+arget=3D"_blank"><span style=3D"font-size:11pt;font-family:Arial;color:rgb(=
+33,33,33);background-color:rgb(255,255,255);font-weight:400;font-style:norm=
+al;font-variant:normal;text-decoration:none;vertical-align:baseline;white-s=
+pace:pre-wrap"> </span><span style=3D"font-size:11pt;font-family:Arial;colo=
+r:rgb(17,85,204);background-color:rgb(255,255,255);font-weight:400;font-sty=
+le:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;=
+white-space:pre-wrap">http://gamifinconference.com/gamification-track/</spa=
+n></a><span style=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);b=
+ackground-color:rgb(255,255,255);font-weight:400;font-style:normal;font-var=
+iant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wr=
+ap">).</span><span style=3D"font-size:11pt;font-family:Arial;color:rgb(33,3=
+3,33);background-color:rgb(255,255,255);font-weight:400;font-style:normal;f=
+ont-variant:normal;text-decoration:none;vertical-align:baseline;white-space=
+:pre-wrap"><br></span></div><div><span style=3D"font-size:11pt;font-family:=
+Arial;color:rgb(33,33,33);background-color:rgb(255,255,255);font-weight:400=
+;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:=
+baseline;white-space:pre-wrap">See you in Levi!</span><span style=3D"font-s=
+ize:11pt;font-family:Arial;color:rgb(33,33,33);background-color:rgb(255,255=
+,255);font-weight:400;font-style:normal;font-variant:normal;text-decoration=
+:none;vertical-align:baseline;white-space:pre-wrap"></span><span style=3D"f=
+ont-size:11pt;font-family:Arial;color:rgb(33,33,33);background-color:rgb(25=
+5,255,255);font-weight:400;font-style:normal;font-variant:normal;text-decor=
+ation:none;vertical-align:baseline;white-space:pre-wrap"><br></span></div><=
+div><span style=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);bac=
+kground-color:rgb(255,255,255);font-weight:400;font-style:normal;font-varia=
+nt:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap=
+"><br></span></div><div><span style=3D"font-size:11pt;font-family:Arial;col=
+or:rgb(33,33,33);background-color:rgb(255,255,255);font-weight:400;font-sty=
+le:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;=
+white-space:pre-wrap">Paper submission deadline: October 20, 2019</span><sp=
+an style=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);background=
+-color:rgb(255,255,255);font-weight:400;font-style:normal;font-variant:norm=
+al;text-decoration:none;vertical-align:baseline;white-space:pre-wrap"><br><=
+/span></div><div><span style=3D"font-size:11pt;font-family:Arial;color:rgb(=
+33,33,33);background-color:rgb(255,255,255);font-weight:400;font-style:norm=
+al;font-variant:normal;text-decoration:none;vertical-align:baseline;white-s=
+pace:pre-wrap">Conference Date: April 1-3, 2020</span><span style=3D"font-s=
+ize:11pt;font-family:Arial;color:rgb(33,33,33);background-color:rgb(255,255=
+,255);font-weight:400;font-style:normal;font-variant:normal;text-decoration=
+:none;vertical-align:baseline;white-space:pre-wrap"></span><span style=3D"f=
+ont-size:11pt;font-family:Arial;color:rgb(33,33,33);background-color:rgb(25=
+5,255,255);font-weight:400;font-style:normal;font-variant:normal;text-decor=
+ation:none;vertical-align:baseline;white-space:pre-wrap"><br></span></div><=
+div><span style=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);bac=
+kground-color:rgb(255,255,255);font-weight:400;font-style:normal;font-varia=
+nt:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap=
+">Website:</span><a href=3D"http://gamifinconference.com/" style=3D"text-de=
+coration:none" target=3D"_blank"><span style=3D"font-size:11pt;font-family:=
+Arial;color:rgb(33,33,33);background-color:rgb(255,255,255);font-weight:400=
+;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:=
+baseline;white-space:pre-wrap"> </span><span style=3D"font-size:11pt;font-f=
+amily:Arial;color:rgb(17,85,204);background-color:rgb(255,255,255);font-wei=
+ght:400;font-style:normal;font-variant:normal;text-decoration:none;vertical=
+-align:baseline;white-space:pre-wrap">http://gamifinconference.com</span><s=
+pan style=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);backgroun=
+d-color:rgb(255,255,255);font-weight:400;font-style:normal;font-variant:nor=
+mal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap"><br>=
+</span></a></div><div><a href=3D"http://gamifinconference.com/" style=3D"te=
+xt-decoration:none" target=3D"_blank"><span style=3D"font-size:11pt;font-fa=
+mily:Arial;color:rgb(33,33,33);background-color:rgb(255,255,255);font-weigh=
+t:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-a=
+lign:baseline;white-space:pre-wrap">Facebook event:</span><span style=3D"fo=
+nt-size:11pt;font-family:Arial;color:rgb(33,33,33);background-color:rgb(255=
+,255,255);font-weight:400;font-style:normal;font-variant:normal;text-decora=
+tion:none;vertical-align:baseline;white-space:pre-wrap"> </span><span style=
+=3D"font-size:11pt;font-family:Arial;color:rgb(17,85,204);background-color:=
+rgb(255,255,255);font-weight:400;font-style:normal;font-variant:normal;text=
+-decoration:underline;vertical-align:baseline;white-space:pre-wrap">http://=
+bit.ly/GamiFIN2020</span><span style=3D"font-size:11pt;font-family:Arial;co=
+lor:rgb(17,85,204);background-color:rgb(255,255,255);font-weight:400;font-s=
+tyle:normal;font-variant:normal;text-decoration:none;vertical-align:baselin=
+e;white-space:pre-wrap"> </span><span style=3D"font-size:11pt;font-family:A=
+rial;color:rgb(17,85,204);background-color:rgb(255,255,255);font-weight:400=
+;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:=
+baseline;white-space:pre-wrap"></span><span style=3D"font-size:11pt;font-fa=
+mily:Arial;color:rgb(33,33,33);background-color:rgb(255,255,255);font-weigh=
+t:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-a=
+lign:baseline;white-space:pre-wrap"><br></span></a></div><div><a href=3D"ht=
+tp://gamifinconference.com/" style=3D"text-decoration:none" target=3D"_blan=
+k"><span style=3D"font-size:11pt;font-family:Arial;color:rgb(33,33,33);back=
+ground-color:rgb(255,255,255);font-weight:400;font-style:normal;font-varian=
+t:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap"=
+>Full CFP:</span><span style=3D"font-size:11pt;font-family:Arial;color:rgb(=
+33,33,33);background-color:rgb(255,255,255);font-weight:400;font-style:norm=
+al;font-variant:normal;text-decoration:none;vertical-align:baseline;white-s=
+pace:pre-wrap"> </span><span style=3D"font-size:11pt;font-family:Arial;colo=
+r:rgb(17,85,204);background-color:rgb(255,255,255);font-weight:400;font-sty=
+le:normal;font-variant:normal;text-decoration:underline;vertical-align:base=
+line;white-space:pre-wrap">http://gamifinconference.com/cfp2020/</span></a>=
+</div><div><br></div><div><br>
+
+</div>
+
+<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
+nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div=
+ dir=3D"ltr"><div><div dir=3D"ltr"><div><div><span style=3D"font-family:ari=
+al,helvetica,sans-serif"><span style=3D"background-color:rgb(255,255,255)">=
+<font color=3D"#000000">-----------------------<br></font></span></span><sp=
+an style=3D"font-family:arial,helvetica,sans-serif"><span style=3D"backgrou=
+nd-color:rgb(255,255,255)"><font color=3D"#000000">Mattia Thibault, </font>=
+</span></span>Ph.D.<div>Postdoc Researcher (MSCA) at Tampere University<br>=
+</div><div>Member of the <span style=3D"color:rgb(11,83,148)"><a href=3D"ht=
+tps://www.tut.fi/Gamification/" target=3D"_blank">Gamification Group</a><br=
+></span></div><div><span style=3D"color:rgb(11,83,148)"></span></div><br></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--000000000000b3d2c0058a92c6f8--

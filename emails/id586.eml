@@ -1,0 +1,395 @@
+Received: from DM6PR08MB4988.namprd08.prod.outlook.com (2603:10b6:a03:d4::35)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR06CA0022.NAMPRD06.PROD.OUTLOOK.COM; Sun, 28 Jul 2019 09:45:20 +0000
+Received: from BN6PR08CA0085.namprd08.prod.outlook.com (2603:10b6:404:b6::23)
+ by DM6PR08MB4988.namprd08.prod.outlook.com (2603:10b6:5:4b::33) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2094.17; Sun, 28 Jul
+ 2019 09:45:18 +0000
+Received: from BN3NAM04FT003.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::207) by BN6PR08CA0085.outlook.office365.com
+ (2603:10b6:404:b6::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2115.15 via Frontend
+ Transport; Sun, 28 Jul 2019 09:45:17 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ BN3NAM04FT003.mail.protection.outlook.com (10.152.92.112) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2115.10 via Frontend Transport; Sun, 28 Jul 2019 09:45:16 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x6S9gEoC018662
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Sun, 28 Jul 2019 12:42:15 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x6S9gDLd024594;
+	Sun, 28 Jul 2019 12:42:13 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Sun, 28 Jul 2019 12:42:13 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x6S9gDLN021692
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Sun, 28 Jul 2019 12:42:13 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x6S9ZdKW025938;
+	Sun, 28 Jul 2019 12:41:51 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          407381 for GAMESNETWORK@LISTSERV.UTA.FI; Sun, 28 Jul 2019 12:40:21
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6S9eLYE026581 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Sun, 28 Jul 2019 12:40:21 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6S9eLLJ017306 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Sun, 28 Jul 2019 12:40:21 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6S9eKfA020400 for
+          <GAMESNETWORK@uta.fi>; Sun, 28 Jul 2019 12:40:20 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Sun, 28 Jul 2019 12:40:20
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-oi1-f170.google.com (mail-oi1-f170.google.com
+          [209.85.167.170]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x6S9eIUW018377 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Sun, 28 Jul 2019 12:40:19 +0300
+Received: by mail-oi1-f170.google.com with SMTP id m202so43280739oig.6 for
+          <GAMESNETWORK@uta.fi>; Sun, 28 Jul 2019 02:40:19 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=lGbam0K89HuRYE2I+D3kXTY6uIYGp9TEL6XSVRVC48c=;
+                         b=I80LpS0hp7mvou1GczmqUpMOpmCgBYNzOOpID7Vx0/ARhL+CgLesK+TstuLcdoYWS4
+                         l4lvfQqbD7ua3oqh32dTdvAugZ2eiq5me2QcclmVNsszSOb6d49+CGK9q5fBwsqCGPZb
+                         JMCMkNAtKss+1ULhCHVQKkXn7g1dwNeIkElB5jTWAYWZ1P6EJD0axqRFbkBvWNvT7o9p
+                         TxcdAiTLpqtPhi9yPIyR1hm1YIBpup4AnWfQX009Ye1oaSQr88BCDljlS4ejWaqdPnXF
+                         69DeqZtW3YKaSECqYjmVvFiMhwGIxtqt4/SplyNjzAUJGSDTfCyaeQ+pQM0a+SRijnEg
+                         A4kA==
+X-Gm-Message-State: APjAAAUnH7rvKGWprp2MG3kaa9syZJyZLeCfSyAo2jI+ryme408G4VQC
+                    FtZthh8Raq313YShcrSc4kZj/OrB5e0EqZFR+04qEKbl
+X-Google-Smtp-Source: APXvYqy44qTRDV93JI/Ia0HBnnub/8UHCHRnOWnml+xE5Lnq9Efo+2IycjnnvKHMLAiIFp+ZpZ5MuJ+G1k1kRLZZE8Q=
+X-Received: by 2002:aca:5106:: with SMTP id f6mr5865685oib.69.1564306817518;
+            Sun, 28 Jul 2019 02:40:17 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="0000000000002d9171058eba901e"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Sun, 28 Jul 2019 12:42:13 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_CLICKSMTHNG,L_BDY_POLITE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1019
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+Message-ID: <CAMK0-aDUGeGWYyV-C=YRbArc=-uzuRw0MzfJUKXinyfhDU8EmQ@mail.gmail.com>
+Date: Sun, 28 Jul 2019 11:39:40 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Federico Alvarez <fedealvarezi@GMAIL.COM>
+Subject: [GAMESNETWORK] Deadline for "Play, Games, Mental Health" -- The Young Academics Workshop at the Clash of Realities 2019 coming up
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 28 Jul 2019 09:45:17.1534
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ a9ef1821-3071-47a5-9d6d-08d713404c15
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(3000300001)(286005)(7192003)(176002)(199004)(189003)(1096003)(76482006)(246002)(336012)(42882007)(73392003)(476003)(126002)(14444005)(486006)(66346011)(106002)(8676002)(21615005)(66574012)(146002)(16586007)(40036005)(42186006)(82202003)(30864003)(413944005)(966005)(8576002)(5070765005)(6392003)(7636002)(75640400001)(4006050)(43066004)(6862004)(71190400001)(95326003)(356004)(6666004)(305945005)(7596002)(498394004)(606006)(16003)(59536001)(236005)(6306002)(569274001)(61266001)(33964004)(53386004)(55446002)(55176004)(26005)(7846003)(15974865002);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB4988;H:mxout1.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout1.uta.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT003.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: a9ef1821-3071-47a5-9d6d-08d713404c15
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:DM6PR08MB4988;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4988:
+X-MS-Exchange-PUrlCount: 4
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 Jul 2019 09:45:16.6535
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a9ef1821-3071-47a5-9d6d-08d713404c15
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4988
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.8023297
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZHA4Tkcvam1hanNBZ2U4UUplcTk0TXVsNEpRWmFOQjR3cHZ0TnZSMHdodHpN?=
+ =?utf-8?B?eER4NlErZ2MwSm9xWGV6TlUweUtIY2dXVnZRYkdkNUlzeG5saUdMVXY4OFBx?=
+ =?utf-8?B?czNKWFZsdkYyejlxOWUyTHp0cFNXVzBFMEhnNkdOYzQzVldINldWbXhnYVlM?=
+ =?utf-8?B?MDNBWUQzbTc2OTFTM3Y3YnYwNVhKUWJhaHd0NDJlR2h3ZW9oMi9ZWk5MeWdM?=
+ =?utf-8?B?aUEweXdLa3JpRHNiWXEvTVBTMStvRlBQaFJSaTdnSlVHbzQ4My9EK0p4V1JY?=
+ =?utf-8?B?RG42QU9vaXNCNHd1bi9EbXBhZS9lVzBUeGFzTzI2c3N3N0VWSC93d0FxS1ZS?=
+ =?utf-8?B?UEpYa0p2bkVSL2x1RnFzMG55bUtqVUFHTzJKakh5MERISGU4cWNwTnBXdW5P?=
+ =?utf-8?B?THQ1aVhiaFdRbEpBMjRvRWFUZE8rU3hyaWZwNGJoOUxJbThrVFIvamVrNDhL?=
+ =?utf-8?B?ajNvd3lGa1VRRHpoQ2pUWXZ1S2tGR25od3EzZVNJdW9VeUVjZkdyUG50RVFk?=
+ =?utf-8?B?TW01aVNrZU1lUU1FZjJoQVNYK3ZjQUQvMTltdFV5dXc3dUVkSml1TTMyUm1n?=
+ =?utf-8?B?RllYN0d3a0JtZUhzVDBVQ1BYSi9EOWhONnh1dGJaaGlsRVEzUXJkcmpMWTV6?=
+ =?utf-8?B?YVRqNG1iVXJ1cnZBQkxsclBNbTFCMGt4akpyczZlMDhaSjNQc1UvS05SOU9o?=
+ =?utf-8?B?MXljM0xMRGZyZ09iMy82eGZWSTkwVzVEOGJuSjd3MEMwVlRxOWNEVUtFcjdw?=
+ =?utf-8?B?aFpEbDNTc3didWxGL1lvVTVjSm9kaW1hTkNqSU5LMERiMnk0NmZGOFJkT0Jx?=
+ =?utf-8?B?M0JPUHkyRUZJMlpvdTU3MC9JUmpFeVNIS0ZBajRKbHM4em83RjNtWjljSU1l?=
+ =?utf-8?B?elJnSjloTFRiRmJPRDd5VUtSUEQvazFxN1BYVENQVlptRHZMZXh6TnRGWWtt?=
+ =?utf-8?B?aHA5OHRyY3MwWXQ0bTRHeGNRTnF1aFJXK1lmQ21OY3ByWktkcVFCM2NKUFlP?=
+ =?utf-8?B?S0gybHcwU0xuMFFhMmw2eWk3TVJDY00ybXVKRm9IVU5yZTF2N29rRGlsZWcy?=
+ =?utf-8?B?dEowSGY3bEhlSXpoQUtodGxVRHR0VkM4cmtjajNtR0hDTTh1bnlxUUtlMDUv?=
+ =?utf-8?B?V2ZsTC9BR1VSZ29BTGljMXFJRFAycGJqcXdzb0RrUHY3ZmNjTkdmT0pTKzIw?=
+ =?utf-8?B?dlRxaHdXRVFCMTlOby9lSkVhTFRuWVBiMC9pcERLNlA3VndDc2Zwb1Y3dFFn?=
+ =?utf-8?B?cE1nSjhDYWppUUpqWml4Q1F1bjdJdmFUOVd4VThlK2RxeXlPc0NiYmRYVU1U?=
+ =?utf-8?B?WFBocUcweDF0cmg2bFliUWJ6YTJ6L013cTUxWW5EVmNuYW9zc25TZ3B0ZU50?=
+ =?utf-8?B?UUVublVBSzZNRGcwZXdEZGpIOFJyRENybDNTZkw5Z0p6UThXWnhWdGdreXFH?=
+ =?utf-8?B?SjVQYzZBOUFwaU5hYTdnSWczaTdqVUxtaUxaUmZnPT0=?=
+MIME-Version: 1.0
+
+--0000000000002d9171058eba901e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear all,
+
+The deadline for submitting papers to the Young Academics Workshop at the
+Clash of Realities 2019 is approaching. There is time until Wednesday, July
+31.
+
+This year's workshop will focus on "Play, Games, Mental Health" and will
+count with the presence of Isabela Granic as guest scholar. You can find
+the CfP with more details below.
+
+We look forward to your submissions!
+The YAW team
+
+--
+
+Call For Papers
+
+
+*PLAY, GAMES, MENTAL HEALTH*The Young Academics Workshop at the Clash of
+Realities Conference
+
+Tuesday, November 19, 2019
+
+*Guest Scholar:* Isabela Granic (Radboud University, GEMH lab)
+*Committee:* Su-Jin Song (CGL), Michael S. Debus (ITU), Curtis Maughan
+(Vanderbilt), Federico Alvarez Igarz=C3=A1bal (IGPP)
+
+Organized by the Cologne Game Lab, TH K=C3=B6ln =E2=80=93 University of App=
+lied Sciences
+(Germany) in cooperation with IT University of Copenhagen (Denmark),
+Vanderbilt University (USA), and the Institute for Frontier Areas of
+Psychology and Mental Health (IGPP, Germany).
+
+This year, the Young Academics Workshop will explore the connection between
+mental health and the act of play, whether it is free or structured by
+rules. We want to discuss claims that play and games, or a lack thereof,
+can have a significant impact on our psychological well-being; the
+potential of play to treat psychopathologies; and the numerous technical
+and artistic ways in which play can represent or reflect a spectrum of
+psychological states, among other topics.
+
+Video games tend to be a matter of social concern, especially among parents
+and educators who often pose questions like: Are kids gaming too much? How
+much is too much? What consequences can excessive gaming have on an
+individual=E2=80=99s development? Current claims about video game addiction=
+ and
+related disorders notwithstanding, research on the effects of video games
+on mental health is still inconclusive. Despite this persisting gap in our
+knowledge, the medium is often blamed for making players antisocial,
+addicted, or depressed. At the same time, arguments for the possible
+benefits of gaming are put forward with lesser frequency. This might come
+as a surprise when we consider that many contemporary titles deal directly
+with mental health issues, such as depression (*Depression Quest*),
+grief (*That
+Dragon, Cancer*), and psychosis (*Hellblade: Senua=E2=80=99s Sacrifice*).
+
+The Young Academics Workshop=E2=80=99s aim in 2019 is to discuss mental hea=
+lth and
+play from a wide range of perspectives. Since video games are not an
+isolated phenomenon, the workshop will frame the issue broadly=E2=80=94incl=
+uding
+free play, and both analog and digital games=E2=80=94while paying attention=
+ to the
+ways in which these activities, or an absence thereof, might impact mental
+health.
+
+We are happy to announce that Isabela Granic=E2=80=94Professor and Chair of=
+ the
+Developmental Psychopathology department at Radboud University (the
+Netherlands) and director of the GEMH (Games for Emotion and Mental Health)
+Lab=E2=80=94will be joining this year=E2=80=99s workshop. Granic=E2=80=99s =
+groundbreaking work
+integrates psychological research with game design to create games to treat
+and study psychopathologies such as depression and anxiety. With her unique
+expertise, Granic will accompany us in a day of stimulating discussion and
+close the workshop with a talk.
+
+Possible submission topics *might include*, but are *not limited to*:
+
+- The impact of play in child and adolescent development
+- Video games and addiction
+- Gamification of mental health treatments
+- Digital and analog games as therapy
+- Representations of mental disorders in games and play
+- Game design as a way to cope with mental or emotional strain
+
+We welcome contributions from scholars from all academic fields and
+disciplines (psychology, media studies, art history, philosophy,
+neuroscience, play and game studies, etc.) and from game developers and
+game development students (future game artists, game designers, game
+programmers, and all other students learning to make games). As this is a
+Young Academics Workshop, we invite all those who have recently entered the
+academic world, including Bachelor, Master, and PhD students, as well as
+Postdocs.
+
+Applicants should focus on the relationship between play, games, and mental
+health from the unique perspective of their home discipline.
+
+Participants will hold 15-minute presentations followed by 15 minutes of
+discussion.
+
+Applicants should submit abstracts (no longer than 300 words) along with a
+bibliography/ludography to youngacademics@clashofrealities.com
+
+All submissions will be assessed by a peer-review committee.
+
+*IMPORTANT DATES*
+Deadline for submissions: July 31
+Notification of acceptance/rejection: September 7
+Young Academics Workshop: November 19
+Clash of Realities Conference: November 19-21
+
+*CONTACT*
+youngacademics@clashofrealities.com
+
+For more information on the Clash of Realities Conference visit
+http://www.colognegamelab.de/research/clash-of-realities-conference/
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--0000000000002d9171058eba901e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">Dear all,<div><br></div><div>The deadline for submitting pap=
+ers to the Young Academics Workshop at the Clash of Realities 2019 is appro=
+aching. There is time until Wednesday, July 31.&nbsp;</div><div><br></div><=
+div>This year's workshop will focus on &quot;Play, Games, Mental Health&quo=
+t; and will count with the presence of Isabela Granic as guest scholar. You=
+ can find the CfP with more details below.</div><div><br></div><div>We look=
+ forward to your submissions!</div><div>The YAW team<br></div><div><br></di=
+v><div>--</div><div><br></div><div><div><div>Call For Papers</div><div><br>=
+</div><div><b>PLAY, GAMES, MENTAL HEALTH<br></b>The Young Academics Worksho=
+p at the Clash of Realities Conference<br></div><div><br></div><div>Tuesday=
+, November 19, 2019<br><br></div><div><b>Guest Scholar:</b>&nbsp;Isabela Gr=
+anic (Radboud University, GEMH lab)<br><b>Committee:</b>&nbsp;Su-Jin Song (=
+CGL), Michael S. Debus (ITU), Curtis Maughan (Vanderbilt), Federico Alvarez=
+ Igarz=C3=A1bal (IGPP)<br><br></div><div>Organized by the Cologne Game Lab,=
+ TH K=C3=B6ln =E2=80=93 University of Applied Sciences (Germany) in&nbsp;co=
+operation with IT University of Copenhagen (Denmark), Vanderbilt University=
+ (USA), and the Institute for Frontier Areas of Psychology and Mental Healt=
+h (IGPP, Germany).&nbsp;&nbsp;<br></div><div><br>This year, the Young Acade=
+mics Workshop will explore the connection between mental health and the act=
+ of play, whether it is free or structured by rules. We want to discuss cla=
+ims that play and games, or a lack thereof, can have a significant impact o=
+n our psychological well-being; the potential of play to treat psychopathol=
+ogies; and the numerous technical and artistic ways in which play can repre=
+sent or reflect a spectrum of psychological states, among other topics.</di=
+v><div><br>Video games tend to be a matter of social concern, especially am=
+ong parents and educators who often pose questions like: Are kids gaming to=
+o much? How much is too much? What consequences can excessive gaming have o=
+n an individual=E2=80=99s development?&nbsp;Current claims about video game=
+ addiction and related disorders notwithstanding, research on the effects o=
+f video games on mental health is still inconclusive. Despite this persisti=
+ng gap in our knowledge, the medium is often blamed for making players anti=
+social, addicted, or depressed. At the same time, arguments for the possibl=
+e benefits of gaming are put forward with lesser frequency. This might come=
+ as a surprise when we consider that many contemporary titles deal directly=
+ with mental health issues, such as depression (<i>Depression Quest</i>), g=
+rief (<i>That Dragon, Cancer</i>), and psychosis (<i>Hellblade: Senua=E2=80=
+=99s Sacrifice</i>).</div><div><br>The Young Academics Workshop=E2=80=99s a=
+im in 2019 is to discuss mental health and play from a wide range of perspe=
+ctives. Since video games are not an isolated phenomenon, the workshop will=
+ frame the issue broadly=E2=80=94including free play, and both analog and d=
+igital games=E2=80=94while paying attention to the ways in which these acti=
+vities, or an absence thereof, might impact mental health.</div><div><br>We=
+ are happy to announce that Isabela Granic=E2=80=94Professor and Chair of t=
+he Developmental Psychopathology department at Radboud University (the Neth=
+erlands) and director of the GEMH (Games for Emotion and Mental Health) Lab=
+=E2=80=94will be joining this year=E2=80=99s workshop. Granic=E2=80=99s gro=
+undbreaking work integrates psychological research with game design to crea=
+te games to treat and study psychopathologies such as depression and anxiet=
+y. With her unique expertise, Granic will accompany us in a day of stimulat=
+ing discussion and close the workshop with a talk.</div><div><br>Possible s=
+ubmission topics&nbsp;<b>might include</b>, but are&nbsp;<b>not limited to<=
+/b>:</div><div><br>- The impact of play in child and adolescent development=
+<br>- Video games and addiction<br>- Gamification of mental health treatmen=
+ts<br>- Digital and analog games as therapy<br>- Representations of mental =
+disorders in games and play<br>- Game design as a way to cope with mental o=
+r emotional strain</div><div><br>We welcome contributions from scholars fro=
+m all academic fields and disciplines (psychology, media studies, art histo=
+ry, philosophy, neuroscience, play and game studies, etc.) and from game de=
+velopers and game development students (future game artists, game designers=
+, game programmers, and all other students learning to make games). As&nbsp=
+;this is a Young Academics Workshop, we invite all those who have recently =
+entered the academic world, including Bachelor, Master, and PhD students, a=
+s well as Postdocs.</div><div><br>Applicants should focus on the relationsh=
+ip between play, games, and mental health from the unique perspective of th=
+eir home discipline.</div><div><br>Participants will hold 15-minute present=
+ations followed by 15 minutes of discussion.<br><br></div><div>Applicants s=
+hould submit abstracts (no longer than 300 words) along with a bibliography=
+/ludography to&nbsp;<a href=3D"mailto:youngacademics@clashofrealities.com" =
+target=3D"_blank">youngacademics@clashofrealities.com</a></div><div><br>All=
+ submissions will be assessed by a peer-review committee.<br><br></div><div=
+><b>IMPORTANT DATES</b></div><div>Deadline for submissions: July 31<br>Noti=
+fication of acceptance/rejection: September 7<br>Young Academics Workshop: =
+November 19<br>Clash of Realities Conference: November 19-21</div><div><br>=
+<b>CONTACT</b><br><a href=3D"mailto:youngacademics@clashofrealities.com" ta=
+rget=3D"_blank">youngacademics@clashofrealities.com</a>&nbsp;<br></div></di=
+v><div><br></div><div>For more information on the Clash of Realities Confer=
+ence visit&nbsp;<a href=3D"http://www.colognegamelab.de/research/clash-of-r=
+ealities-conference/" target=3D"_blank">http://www.colognegamelab.de/resear=
+ch/clash-of-realities-conference/</a></div><div class=3D"gmail-yj6qo"></div=
+><div class=3D"gmail-adL"><br></div><div class=3D"gmail-adL"><br></div></di=
+v></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--0000000000002d9171058eba901e--

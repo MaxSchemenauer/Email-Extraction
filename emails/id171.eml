@@ -1,0 +1,490 @@
+Received: from SN6PR08MB3888.namprd08.prod.outlook.com (2603:10b6:a03:e0::48)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0107.NAMPRD05.PROD.OUTLOOK.COM; Tue, 24 Sep 2019 03:02:23 +0000
+Received: from BN6PR08CA0071.namprd08.prod.outlook.com (2603:10b6:404:b9::33)
+ by SN6PR08MB3888.namprd08.prod.outlook.com (2603:10b6:805:1f::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2284.18; Tue, 24 Sep
+ 2019 03:02:20 +0000
+Received: from SN1NAM04FT016.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::207) by BN6PR08CA0071.outlook.office365.com
+ (2603:10b6:404:b9::33) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2284.20 via Frontend
+ Transport; Tue, 24 Sep 2019 03:02:20 +0000
+Authentication-Results: spf=none (sender IP is 209.85.167.53)
+ smtp.mailfrom=ijlemr.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=ijlemr-com.20150623.gappssmtp.com;calpoly.edu; dmarc=none
+ action=none header.from=ijlemr.com;compauth=pass reason=106
+Received-SPF: None (protection.outlook.com: ijlemr.com does not designate
+ permitted sender hosts)
+Received: from mail-lf1-f53.google.com (209.85.167.53) by
+ SN1NAM04FT016.mail.protection.outlook.com (10.152.88.151) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.2284.25 via Frontend Transport; Tue, 24 Sep 2019 03:02:19 +0000
+Received: by mail-lf1-f53.google.com with SMTP id u3so173169lfl.10
+        for <foaad@calpoly.edu>; Mon, 23 Sep 2019 20:02:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ijlemr-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=wNmTTxk//YqDoS1RWXZJsiGOn8XjIaBq6KvZpWEgZaw=;
+        b=H7zr2RxUSGClzA60CvjQpuXNxrDOKYEXAsqOw883Ku2TffllR3RCWp+HQi7Xu/AN/i
+         LP4CMfFn6MzcRKBqCDe7kP4pFczkK0lHdtkgMQcHWKHThDaSEp+d9+c9hj+J2gN3HpOW
+         RNc3xnGmjSO0l3mGSu60rTsoozQATP1JrB8hkKrYkr2pwMn4uVWqlrZebLpExEexlGfs
+         uYBqwULLYjzWbzbUJTBjRCT1FnERFassI+mQZilMt5cXB9GN7l1bg2PertRIzfcbq/qK
+         ImLYnJ+CCctHMnmbtEwE8IJaWm+3UV2yCJmM18b6O909K0YBJYvhQlmbf0pZctwUzb64
+         MnSw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=wNmTTxk//YqDoS1RWXZJsiGOn8XjIaBq6KvZpWEgZaw=;
+        b=dybp4Te+V89ODyFjWiyNkhuKA3PwESrAOINGfnayYfcdqUSUD8Pq1YLqxg6oY2sfDi
+         fD1y8WzmpLvRINpyEmzrAzJ1mRoVU/nG0PDpgU2ovZvDR0YYKGmdNiOcXWuQD/ppkCsh
+         BBWBYbiMTAFoO+KccrYcz2FlX7fMOqOkk34UJE5Ps/mXNVOAIpwaDYKCmjHKohcs2VZa
+         mIFcVxIH4H5vUC2DvEI9CQQakDnPalrs92CRxm2jfmJdkTFxwY+kDDIM9JTn7QfdZTvc
+         C+2TUrLY7xPkw2IvwetjEMiDHta1CLIMLVIasKGTC668a0e5rYE9L4kz5omPwlampR2d
+         MOHw==
+X-Gm-Message-State: APjAAAVMLcze43S5RJme/e8lLK1ICKVwI+vBKvOptlkKxZCJkEI6cfPf
+	6y9oNwKrOMPd4zYuiSVeiYeJKldLZ8Og1ukmjSNKMlGg6JY=
+X-Google-Smtp-Source: APXvYqxrm+h7O1tutv2NbEZjNdepodqLBwKaD6SQxzFDdqOrqGfvciCxEHFUg6QkOeQCKZIXIJvNFKaT8UE+jzj1ke0=
+X-Received: by 2002:ac2:5091:: with SMTP id f17mr315326lfm.107.1569294137941;
+ Mon, 23 Sep 2019 20:02:17 -0700 (PDT)
+Received: from 776393159873 named unknown by gmailapi.google.com with
+ HTTPREST; Tue, 24 Sep 2019 04:02:17 +0100
+From: IJLEMR Editor <submission@ijlemr.com>
+Date: Tue, 24 Sep 2019 04:02:17 +0100
+Message-ID: <CAAD1xCcpaE_y6wGXpwRYP4SYGyAnfBBCtVywvBHXxy2AOPgWOg@mail.gmail.com>
+Subject: Call For Papers (Sep 2019) (Impact Factor: 2.545)
+To: foaad@calpoly.edu
+Content-Type: multipart/alternative; boundary="000000000000a3e7fb059343c37f"
+Return-Path: submission@ijlemr.com
+X-MS-Exchange-Organization-ExpirationStartTime: 24 Sep 2019 03:02:19.8921
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 79b58824-24ee-4a34-d2fb-08d7409b9d45
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132137677398942001;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.167.53;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(428003)(199004)(189003)(126002)(61266001)(498394004)(71190400001)(486006)(16586007)(86362001)(7596002)(58800400005)(2171002)(305945005)(6306002)(6916009)(476003)(2361001)(9686003)(7636002)(15003)(1096003)(606006)(336012)(14444005)(8576002)(8676002)(733005)(246002)(55446002)(356004)(5660300002)(4006050)(18926415008)(2351001)(15974865002)(33964004)(76236002)(75640400001)(236005)(66574012)(59536001)(7066003)(95476003)(95326003)(26005)(22186003)(62610400005)(225293001);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB3888;H:mail-lf1-f53.google.com;FPR:;SPF:None;LANG:en;PTR:mail-lf1-f53.google.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT016.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 79b58824-24ee-4a34-d2fb-08d7409b9d45
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600167)(711020)(4605104)(8001031)(1405096)(1407096)(1408068)(71702078);SRVR:SN6PR08MB3888;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB3888:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 Sep 2019 03:02:19.8891
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 79b58824-24ee-4a34-d2fb-08d7409b9d45
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB3888
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.5692488
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2284.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TEUrMXhaZWVVU3Q3Y1gxQUZJdThyYmxrWXBvNEJjVm9aK1F1QXZCeXhhZVdo?=
+ =?utf-8?B?UGVocmhNblNUWVJHSEUwZW9yTkxuN0loSXdma0xLMXY2YTM4SHZkOTIrcHJ4?=
+ =?utf-8?B?aG1DZlZ1OVZMMHY0NlFhYU5nNUxTcnFDaW5FRmw5aUpyalExT3g2UWh3S1ZS?=
+ =?utf-8?B?MS9LcmVqTHd1ZlhRWk9CczFmSDE4MFBUdlB1b1hNYmxYS1pCNitTUHROaDFJ?=
+ =?utf-8?B?dGpGVXpyQ2Fjby9wWVFBdXk0bGxiM2F5NGFPM25DZTBha0ZFYkIyK3hnZzNL?=
+ =?utf-8?B?RDJPeHRaWjlsVmgvTWhKVkZPV2ZJeTRYSTRoZWxyNXZvN21mVnRhUUh6VFhZ?=
+ =?utf-8?B?SEhWYWhNYVZ5R0RHRGpTSjcrR0FnOFdBQUJHekFQTU1pNSthY3Q4cUQ1c3cx?=
+ =?utf-8?B?aXVhNGV0QmQ4K2xBRzJpK2VNMGs5MmVTRngzYk9uaEVPMSs5a3VxV3Y3dGFY?=
+ =?utf-8?B?RVZxTStRbER2MXprTnVlZUtHcVMxT1pkZDdxR2N4bjFINm5Sd0ovcHVKWEl2?=
+ =?utf-8?B?cGJyUFVLWWRjdmppZW53c1VJS080RERWS1dpMjVZbG1HeUtncFFiendOS0xH?=
+ =?utf-8?B?WXA1MGIxUkJVcFJ4NGk3ZHNOcDB5SDVGMks3VEEwN1BWa0FMK2MveUtMcStX?=
+ =?utf-8?B?VkRqQURmZGFGdnhjWHREMm1RcU1uWDViOEJBeW5XTjRxRGJEMnFKR0syUFVI?=
+ =?utf-8?B?Zm9zY3MyN1Q2V1RWNnhvRHkrSnBCTWVCNFltaS9zemhvMDVudkRUTEQySC9T?=
+ =?utf-8?B?aUtkelJDZS91Z2MrZDlkdGJGZnhBNDAvdWJrRHgwaENaK3plaXdFdG02QitF?=
+ =?utf-8?B?ajRIR0dTWXFmdTIvUi9SNzZMaXFMWnFLc1p4Ty93QVNQdnF2RGdQblBqYTM5?=
+ =?utf-8?B?clFZc2kzcXVobUVsTUE2V2J6d2JFS1FLQWZ5bW1teFFpbk9nMlRUM3ZueW5j?=
+ =?utf-8?B?VUpvNXNiVVBRODB3ak15UldDbXlLNENWZ2h2WWxFSGpQL0NZZDFaZEo5N3do?=
+ =?utf-8?B?d2cyQVJSSTlLdHYraDBaSGlSTGVTaEQwdUFRQU13ZXUzVm41WmdoN1Zudjdl?=
+ =?utf-8?B?cHJNcS9adVMzU3MzK1NNZGdjVGg1dk9CRnAwV2E4bi9jWXNteWh6QlgrUG5n?=
+ =?utf-8?B?RFlsMG1wRFFmUkZNcjFpQ3ByQWw4Z0NsR1N2SEN3TGFrcjFxL2VXZVljeUJs?=
+ =?utf-8?B?WGlQYlJEWmk1NHFZREw3eVBkVUoxVTVOS0JnVmRaMVFIYnhSWEpDblhKeWln?=
+ =?utf-8?B?VDFvK1lYcENtMjh6eHdRUzJWbHREMzYzZ2xJOERORVBuUjgzRkFRYmJaYVJ6?=
+ =?utf-8?Q?Y2XuSVj+rLqNJlulKaz64u+OCAc4Iwcn+q?=
+MIME-Version: 1.0
+
+--000000000000a3e7fb059343c37f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*International Journal of Latest Engineering and Man**agement Research*
+
+
+
+*ISSN: 2455-4847*
+
+*Impact Factor: 2.545*
+
+
+*Volume 04 - Issue 09( Sep 2019)*
+
+
+
+
+
+Dear Professor / Researcher,
+
+*International Journal of Latest Engineering and Management Research*
+*(IJLEMR)* is a scholarly online, open access, peer-reviewed,
+interdisciplinary, monthly, and fully refereed journal focusing on
+theories, methods and applications in Engineering, Management, Science, &
+Technology.
+
+It is our immense pleasure to introduce International Journal of Latest
+Engineering and Management Research to cater to the publication needs of
+teachers, scientists, scholars, students and professionals. We thank all
+the forces with us, in the form of eminent advisory board and editorial
+board for all their cooperation and enthusiastic involvement in this
+blooming endeavor.
+
+We publish original research articles, review articles and technical notes.
+The journal reviews papers within 03-04 days of submission and publishes
+accepted articles on the internet immediately upon receiving the final
+versions. The Journal welcomes the submission of manuscripts that meet the
+general criteria of significance and scientific excellence. For this
+purpose we would like to ask you to contribute your excellent papers in
+engineering sciences and management relevant fields.
+
+
+
+*Why publishing with The IJLEMR?*
+
+=C3=98  IJLEMR Impact Factor is 2.545
+
+=C3=98  All articles published in the journals are open access: Universally
+accessible online without charge.
+
+=C3=98  Easy submission and peer-review makes the whole process of publishi=
+ng
+your article simple and efficient.
+
+=C3=98  High visibility for your work: Anyone with internet access can read=
+ or
+your download.
+
+=C3=98  Professional formatting and reviewing meets the standards expected =
+by
+authors and worldwide research community.
+
+=C3=98  IJLEMR index all published papers in worldwide indexing (Google Sch=
+olar,
+Ulrich Periodicals, EBSCO HOST, CSA, CAB Abstract, and DOAJ).
+
+=C3=98  IJLEMR publishes online as well as print version both.
+
+
+
+*Important Dates*
+
+*Last date of paper submission*
+
+30 Sep 2019
+
+*Author Notification*
+
+within 24 hours
+
+*Review report declaration date*
+
+Within 03-04 days
+
+*Last Date of Publication*
+
+Within 07 days after registration
+
+
+
+*Submission Process*
+
+Authors are kindly invited to submit their formatted full papers.
+
+All paper submissions will be blind peer reviewed and evaluated based on
+originality, Research content, correctness, relevance to conference and
+readability. Please read complete submission and formatting guidelines
+before submitting your paper.
+
+
+
+=C3=98  *Online Submission:* Paper Submission can be completed online at
+www.ijlemr.com/submit-paper.html
+<http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=3D5088225&l=
+=3D54e02681-982f-4a17-b2d5-c92b9979cf94&r=3Da7a1858e-601a-4457-8fe4-40a434f=
+89045>
+
+
+
+=C3=98  *Email Submission:* If you are unable to submit your manuscript usi=
+ng
+Online System, you may submit with complete details via email to
+editor@ijlemr.com <+editor@ijlemr.com>
+
+
+
+
+
+Happy Submitting!!!
+
+
+
+
+
+
+
+*With Best Regards *
+
+*IJLEMR Team *
+
+*International Journal of Latest Engineering and Management Research
+(IJLEMR) *
+
+*ISSN: 2455-4847*
+
+
+
+*You may unsubscribe
+<http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/u?u=3Da7a1858e-6=
+01a-4457-8fe4-40a434f89045>
+to stop receiving our emails.*
+
+--000000000000a3e7fb059343c37f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><p align=3D"center" style=3D"margin:0in 0in 0.0001pt;text-al=
+ign:center;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><b=
+><span style=3D"font-size:18pt;font-family:Cambria,serif;color:rgb(192,0,0)=
+">International Journal of Latest Engineering and Man</span></b><b style=3D=
+"font-size:12pt"><span style=3D"font-size:18pt;font-family:Cambria,serif;co=
+lor:rgb(192,0,0)">agement Research</span></b></p><p align=3D"center" style=
+=3D"margin:0in 0in 0.0001pt;text-align:center;font-size:12pt;font-family:&q=
+uot;Times New Roman&quot;,serif"><span style=3D"font-size:10pt;font-family:=
+Cambria,serif">&nbsp;</span></p><p align=3D"center" style=3D"margin:0in 0in=
+ 0.0001pt;text-align:center;font-size:12pt;font-family:&quot;Times New Roma=
+n&quot;,serif"><b><span style=3D"font-size:14pt;font-family:Cambria,serif;b=
+ackground:yellow">ISSN: 2455-4847</span></b></p><p align=3D"center" style=
+=3D"margin:0in 0in 0.0001pt;text-align:center;font-size:12pt;font-family:&q=
+uot;Times New Roman&quot;,serif"><b><span style=3D"font-size:14pt;font-fami=
+ly:Cambria,serif;background:yellow">Impact Factor: 2.545</span></b><b><span=
+ style=3D"font-size:14pt;font-family:Cambria,serif"></span></b></p><p align=
+=3D"center" style=3D"margin:0in 0in 0.0001pt;text-align:center;font-size:12=
+pt;font-family:&quot;Times New Roman&quot;,serif"><b><span style=3D"font-si=
+ze:14pt;font-family:Cambria,serif;background:yellow"><br></span></b></p><p =
+align=3D"center" style=3D"margin:0in 0in 0.0001pt;text-align:center;font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,serif"><b><span style=3D"fo=
+nt-size:14pt;font-family:Cambria,serif;background:yellow">Volume 04 - Issue=
+ 09( Sep 2019)</span></b></p><p style=3D"margin:0in 0in 0.0001pt;font-size:=
+12pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"font-fam=
+ily:Cambria,serif">&nbsp;</span></p><p style=3D"margin:0in 0in 0.0001pt;tex=
+t-align:justify;font-size:12pt;font-family:&quot;Times New Roman&quot;,seri=
+f"><span style=3D"font-family:Cambria,serif">&nbsp;</span></p><p style=3D"m=
+argin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">Dear=
+ Professor / Researcher,</span></p><p style=3D"margin:0in 0in 0.0001pt;text=
+-align:justify;text-indent:0.5in;font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,serif"><b><span style=3D"font-family:Cambria,serif">Internatio=
+nal Journal of Latest Engineering and Management Research</span></b><span s=
+tyle=3D"font-family:Cambria,serif">&nbsp;<b>(IJLEMR)</b>&nbsp;is a scholarl=
+y online, open access, peer-reviewed, interdisciplinary, monthly, and fully=
+ refereed journal focusing on theories, methods and applications in Enginee=
+ring, Management, Science, &amp; Technology.</span></p><p style=3D"margin:0=
+in 0in 0.0001pt;text-align:justify;text-indent:0.5in;font-size:12pt;font-fa=
+mily:&quot;Times New Roman&quot;,serif"><span style=3D"font-family:Cambria,=
+serif">It is our immense pleasure to introduce&nbsp;International Journal o=
+f Latest Engineering and Management Research&nbsp;to cater to the publicati=
+on needs of teachers, scientists, scholars, students and professionals. We =
+thank all the forces with us, in the form of eminent advisory board and edi=
+torial board for all their cooperation and enthusiastic involvement in this=
+ blooming endeavor.</span></p><p style=3D"margin:0in 0in 0.0001pt;text-alig=
+n:justify;text-indent:0.5in;font-size:12pt;font-family:&quot;Times New Roma=
+n&quot;,serif"><span style=3D"font-family:Cambria,serif">We publish origina=
+l research articles, review articles and technical notes. The journal revie=
+ws papers&nbsp;within 03-04 days&nbsp;of submission and publishes accepted =
+articles on the internet immediately upon receiving the final versions. The=
+ Journal welcomes the submission of manuscripts that meet the general crite=
+ria of significance and scientific excellence. For this purpose we would li=
+ke to ask you to contribute your excellent papers in engineering sciences a=
+nd management relevant fields.</span></p><p style=3D"margin:0in 0in 0.0001p=
+t;text-align:justify;font-size:12pt;font-family:&quot;Times New Roman&quot;=
+,serif"><span style=3D"font-family:Cambria,serif">&nbsp;</span></p><p style=
+=3D"margin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&=
+quot;Times New Roman&quot;,serif"><b><span style=3D"font-family:Cambria,ser=
+if;color:rgb(192,0,0)">Why publishing with The IJLEMR?</span></b></p><p sty=
+le=3D"margin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family=
+:&quot;Times New Roman&quot;,serif"><span style=3D"font-family:Cambria,seri=
+f">=C3=98&nbsp;&nbsp;IJLEMR Impact Factor is 2.545</span></p><p style=3D"ma=
+rgin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&quot;T=
+imes New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">=C3=
+=98&nbsp;&nbsp;All articles published in the journals&nbsp;are&nbsp;open ac=
+cess: Universally accessible online without charge.</span></p><p style=3D"m=
+argin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">=C3=
+=98&nbsp;&nbsp;Easy submission and peer-review makes the&nbsp;whole process=
+&nbsp;of publishing your article simple and efficient.</span></p><p style=
+=3D"margin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&=
+quot;Times New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif"=
+>=C3=98&nbsp;&nbsp;High visibility for your work: Anyone&nbsp;with&nbsp;int=
+ernet access can read or your download.</span></p><p style=3D"margin:0in 0i=
+n 0.0001pt;text-align:justify;font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,serif"><span style=3D"font-family:Cambria,serif">=C3=98&nbsp;&nbs=
+p;Professional formatting and reviewing meets&nbsp;the&nbsp;standards expec=
+ted by authors and&nbsp;worldwide research community.</span></p><p style=3D=
+"margin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&quo=
+t;Times New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">=
+=C3=98&nbsp;&nbsp;IJLEMR index all published papers in worldwide indexing (=
+Google Scholar, Ulrich Periodicals, EBSCO HOST, CSA, CAB Abstract, and DOAJ=
+).</span></p><p style=3D"margin:0in 0in 0.0001pt;text-align:justify;font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"font-=
+family:Cambria,serif">=C3=98&nbsp;&nbsp;IJLEMR publishes online as well as =
+print version both.&nbsp;</span></p><p style=3D"margin:0in 0in 0.0001pt;tex=
+t-align:justify;font-size:12pt;font-family:&quot;Times New Roman&quot;,seri=
+f"><span style=3D"font-family:Cambria,serif">&nbsp;</span></p><table border=
+=3D"1" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collaps=
+e;border:none"><tbody><tr><td width=3D"638" colspan=3D"2" valign=3D"top" st=
+yle=3D"font-family:arial,sans-serif;width:6.65in;border-width:1pt 1pt 3pt;b=
+order-style:solid;border-color:white;background:rgb(192,80,77);padding:0in =
+5.4pt"><p align=3D"center" style=3D"margin:0in 0in 0.0001pt;text-align:cent=
+er;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><b><span s=
+tyle=3D"font-size:14pt;font-family:Cambria,serif;color:white">Important Dat=
+es</span></b><b><span style=3D"font-family:Cambria,serif;color:white"></spa=
+n></b></p></td></tr><tr><td width=3D"319" valign=3D"top" style=3D"font-fami=
+ly:arial,sans-serif;width:239.4pt;border-top:none;border-left:1pt solid whi=
+te;border-bottom:none;border-right:3pt solid white;background:rgb(192,80,77=
+);padding:0in 5.4pt"><p style=3D"margin:0in 0in 0.0001pt;text-align:justify=
+;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><b><span sty=
+le=3D"font-family:Cambria,serif;color:white">Last date of paper submission<=
+/span></b></p></td><td width=3D"319" valign=3D"top" style=3D"font-family:ar=
+ial,sans-serif;width:239.4pt;border-top:none;border-left:none;border-bottom=
+:1pt solid white;border-right:1pt solid white;background:rgb(223,167,166);p=
+adding:0in 5.4pt"><p style=3D"margin:0in 0in 0.0001pt;text-align:justify;fo=
+nt-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"=
+font-family:Cambria,serif">30 Sep 2019</span></p></td></tr><tr><td width=3D=
+"319" valign=3D"top" style=3D"font-family:arial,sans-serif;width:239.4pt;bo=
+rder-top:1pt solid white;border-left:1pt solid white;border-bottom:none;bor=
+der-right:3pt solid white;background:rgb(192,80,77);padding:0in 5.4pt"><p s=
+tyle=3D"margin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-fami=
+ly:&quot;Times New Roman&quot;,serif"><b><span style=3D"font-family:Cambria=
+,serif;color:white">Author Notification</span></b></p></td><td width=3D"319=
+" valign=3D"top" style=3D"font-family:arial,sans-serif;width:239.4pt;border=
+-top:none;border-left:none;border-bottom:1pt solid white;border-right:1pt s=
+olid white;background:rgb(239,211,210);padding:0in 5.4pt"><p style=3D"margi=
+n:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">within 2=
+4 hours</span></p></td></tr><tr><td width=3D"319" valign=3D"top" style=3D"f=
+ont-family:arial,sans-serif;width:239.4pt;border-top:1pt solid white;border=
+-left:1pt solid white;border-bottom:none;border-right:3pt solid white;backg=
+round:rgb(192,80,77);padding:0in 5.4pt"><p style=3D"margin:0in 0in 0.0001pt=
+;text-align:justify;font-size:12pt;font-family:&quot;Times New Roman&quot;,=
+serif"><b><span style=3D"font-family:Cambria,serif;color:white">Review repo=
+rt declaration date</span></b></p></td><td width=3D"319" valign=3D"top" sty=
+le=3D"font-family:arial,sans-serif;width:239.4pt;border-top:none;border-lef=
+t:none;border-bottom:1pt solid white;border-right:1pt solid white;backgroun=
+d:rgb(223,167,166);padding:0in 5.4pt"><p style=3D"margin:0in 0in 0.0001pt;t=
+ext-align:justify;font-size:12pt;font-family:&quot;Times New Roman&quot;,se=
+rif"><span style=3D"font-family:Cambria,serif">Within 03-04 days</span></p>=
+</td></tr><tr><td width=3D"319" valign=3D"top" style=3D"font-family:arial,s=
+ans-serif;width:239.4pt;border-width:1pt 3pt 1pt 1pt;border-style:solid;bor=
+der-color:white;background:rgb(192,80,77);padding:0in 5.4pt"><p style=3D"ma=
+rgin:0in 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&quot;T=
+imes New Roman&quot;,serif"><b><span style=3D"font-family:Cambria,serif;col=
+or:white">Last Date of Publication</span></b></p></td><td width=3D"319" val=
+ign=3D"top" style=3D"font-family:arial,sans-serif;width:239.4pt;border-top:=
+none;border-left:none;border-bottom:1pt solid white;border-right:1pt solid =
+white;background:rgb(239,211,210);padding:0in 5.4pt"><p style=3D"margin:0in=
+ 0in 0.0001pt;text-align:justify;font-size:12pt;font-family:&quot;Times New=
+ Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">Within 07 day=
+s after registration</span></p></td></tr></tbody></table><p style=3D"margin=
+:0in 0in 0.0001pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,se=
+rif"><b><span style=3D"font-family:Cambria,serif;color:rgb(192,0,0)">&nbsp;=
+</span></b></p><p style=3D"margin:0in 0in 0.0001pt;font-size:12pt;font-fami=
+ly:&quot;Times New Roman&quot;,serif"><b><span style=3D"font-family:Cambria=
+,serif;color:rgb(192,0,0)">Submission Process</span></b></p><p style=3D"mar=
+gin:0in 0in 0.0001pt;font-size:12pt;font-family:&quot;Times New Roman&quot;=
+,serif"><span style=3D"font-family:Cambria,serif">Authors are kindly invite=
+d to submit their formatted full papers.</span></p><p style=3D"margin:0in 0=
+in 0.0001pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><=
+span style=3D"font-family:Cambria,serif">All paper submissions will be blin=
+d peer reviewed and evaluated based on originality, Research content, corre=
+ctness, relevance to conference and readability. Please read complete submi=
+ssion and formatting guidelines before submitting your paper.</span></p><p =
+style=3D"margin:0in 0in 0.0001pt 47.25pt;font-size:12pt;font-family:&quot;T=
+imes New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">&nbsp=
+;</span></p><p style=3D"margin:0in 0in 0.0001pt 0.25in;font-size:12pt;font-=
+family:&quot;Times New Roman&quot;,serif"><span style=3D"font-family:Wingdi=
+ngs">=C3=98<span style=3D"font-variant-numeric:normal;font-variant-east-asi=
+an:normal;font-stretch:normal;font-size:7pt;line-height:normal;font-family:=
+&quot;Times New Roman&quot;">&nbsp;&nbsp;</span></span><b><span style=3D"fo=
+nt-family:Cambria,serif">Online Submission:</span></b><span style=3D"font-f=
+amily:Cambria,serif">&nbsp;Paper Submission can be completed online at&nbsp=
+;<a href=3D"http://ec2-52-26-194-35.us-west-2.compute.amazonaws.com/x/d?c=
+=3D5088225&amp;l=3D54e02681-982f-4a17-b2d5-c92b9979cf94&amp;r=3Da7a1858e-60=
+1a-4457-8fe4-40a434f89045" target=3D"_blank"><span style=3D"color:windowtex=
+t;text-decoration-line:none">www.ijlemr.com/submit-paper.html</span></a></s=
+pan></p><p style=3D"margin:0in 0in 0.0001pt 0.25in;text-indent:2.25pt;font-=
+size:12pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"fon=
+t-family:Cambria,serif">&nbsp;</span></p><p style=3D"margin:0in 0in 0.0001p=
+t 0.25in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><spa=
+n style=3D"font-family:Wingdings">=C3=98<span style=3D"font-variant-numeric=
+:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;li=
+ne-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;</spa=
+n></span><b><span style=3D"font-family:Cambria,serif">Email Submission:</sp=
+an></b><span style=3D"font-family:Cambria,serif">&nbsp;If you are unable to=
+ submit your manuscript using Online System, you may submit with complete d=
+etails via email to&nbsp;<a href=3D"mailto:&#43;editor@ijlemr.com" target=
+=3D"_blank"><span style=3D"color:windowtext;text-decoration-line:none">edit=
+or@ijlemr.com</span></a></span></p><p style=3D"margin:0in 0in 0.0001pt;font=
+-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"fo=
+nt-family:Cambria,serif">&nbsp;</span></p><p align=3D"center" style=3D"marg=
+in:0in 0in 0.0001pt;text-align:center;font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">&nbsp;</=
+span></p><p style=3D"margin:0in 0in 0.0001pt;font-size:12pt;font-family:&qu=
+ot;Times New Roman&quot;,serif"><span style=3D"font-family:Cambria,serif">H=
+appy Submitting!!!</span></p><p style=3D"margin:0in 0in 0.0001pt;font-size:=
+12pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"font-fam=
+ily:Cambria,serif">&nbsp;</span></p><p style=3D"margin:0in 0in 0.0001pt;fon=
+t-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"f=
+ont-family:Cambria,serif">&nbsp;</span></p><p style=3D"margin:0in 0in 0.000=
+1pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><span sty=
+le=3D"font-family:Cambria,serif">&nbsp;</span></p><p style=3D"margin:0in 0i=
+n 0.0001pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><b=
+><i><span style=3D"font-family:Cambria,serif;color:rgb(192,0,0)">With Best =
+Regards&nbsp;</span></i></b></p><p style=3D"margin:0in 0in 0.0001pt;font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,serif"><b><i><span style=3D=
+"font-family:Cambria,serif;color:rgb(192,0,0)">IJLEMR Team&nbsp;</span></i>=
+</b></p><p style=3D"margin:0in 0in 0.0001pt;font-size:12pt;font-family:&quo=
+t;Times New Roman&quot;,serif"><b><i><span style=3D"font-family:Cambria,ser=
+if;color:rgb(192,0,0)">International Journal of Latest Engineering and Mana=
+gement Research (IJLEMR)&nbsp;</span></i></b></p><p style=3D"margin:0in 0in=
+ 0.0001pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><b>=
+<i><span style=3D"font-family:Cambria,serif;color:rgb(192,0,0)">ISSN: 2455-=
+4847</span></i></b></p><p style=3D"margin:0in 0in 0.0001pt;font-size:12pt;f=
+ont-family:&quot;Times New Roman&quot;,serif"><b><i><span style=3D"font-fam=
+ily:Cambria,serif;color:rgb(192,0,0)"><br></span></i></b></p><p style=3D"te=
+xt-align:center;margin:0in 0in 0.0001pt;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif"><b><i><span style=3D"font-family:Cambria,serif;c=
+olor:rgb(192,0,0)">You may <a href=3D"http://ec2-52-26-194-35.us-west-2.com=
+pute.amazonaws.com/x/u?u=3Da7a1858e-601a-4457-8fe4-40a434f89045">unsubscrib=
+e</a> to stop receiving our emails.<br></span></i></b></p><p style=3D"margi=
+n:0in 0in 0.0001pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,s=
+erif"><b><i><span style=3D"font-family:Cambria,serif;color:rgb(192,0,0)"><b=
+r></span></i></b></p></div>
+<img height=3D"0" width=3D"0" src=3D"http://ec2-52-26-194-35.us-west-2.comp=
+ute.amazonaws.com/x/o?u=3Da7a1858e-601a-4457-8fe4-40a434f89045&amp;c=3D5088=
+225">
+
+--000000000000a3e7fb059343c37f--

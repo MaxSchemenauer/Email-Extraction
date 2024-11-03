@@ -1,0 +1,899 @@
+Received: from DM6PR08MB3897.namprd08.prod.outlook.com (2603:10b6:a03:100::30)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0017.NAMPRD08.PROD.OUTLOOK.COM; Tue, 15 Oct 2019 14:04:42 +0000
+Received: from DM6PR08CA0009.namprd08.prod.outlook.com (2603:10b6:5:80::22) by
+ DM6PR08MB3897.namprd08.prod.outlook.com (2603:10b6:5:85::19) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2347.21; Tue, 15 Oct 2019 14:04:41 +0000
+Received: from SN1NAM04FT059.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::200) by DM6PR08CA0009.outlook.office365.com
+ (2603:10b6:5:80::22) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.18 via Frontend
+ Transport; Tue, 15 Oct 2019 14:04:41 +0000
+Authentication-Results: spf=pass (sender IP is 185.15.50.74)
+ smtp.mailfrom=mail.elsevier.com; calpoly.edu; dkim=pass (signature was
+ verified) header.d=mail.elsevier.com;calpoly.edu; dmarc=pass action=none
+ header.from=mail.elsevier.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of mail.elsevier.com
+ designates 185.15.50.74 as permitted sender) receiver=protection.outlook.com;
+ client-ip=185.15.50.74; helo=r74.p50.neolane.net;
+Received: from r74.p50.neolane.net (185.15.50.74) by
+ SN1NAM04FT059.mail.protection.outlook.com (10.152.89.239) with Microsoft SMTP
+ Server id 15.20.2347.16 via Frontend Transport; Tue, 15 Oct 2019 14:04:40
+ +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	s=neolane;
+	d=mail.elsevier.com;
+	h=domainkey-signature:from:subject:date:to:reply-to:mime-version:x-mailer:message-id:content-type;
+	bh=boTXlQVgRosMbv0ebfksoNOkBaZGrABFa4gYdVsfdIQ=;
+	b=Ex7RHOR6JvPdY0uT9ddE2puvamnLTNzDXnFRZYsl5G67mC7BZH2mqOHjohpu7irQkkPyWAcTM8xTKwA+jybbo8iQZStJNHJUR5p8ae38E06KQx+MplPyrqnACdgSrCGrReuuKdFRBlPzrq0xGYxhbPPxi2nwXj2MR6D4dF/KVWs=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns;
+	s=neolane;
+	d=mail.elsevier.com;
+	h=From:Subject:Date:To:Reply-To:MIME-Version:X-mailer:Message-ID:Content-Type;
+	b=f+Ey2zBUV6slB+CDw4s0a3BWH5A/Ngi4DjNL54I2IssZOpjRyY48YGMLwfVJIDbOSCwPKW0xqyY9juPmXbD0B2FHjPl/BV9Xr6maWavKogomO3qYqdkdtGimc/tEQAFFVcAWdUbShwcRrbdQCemtytUCNJ7/XoV7PTjZorhf2Pw=
+From: "Sarah Callaghan" <cellpress@mail.elsevier.com>
+Subject: Inviting your contribution to the first issue of Patterns
+Date: Tue, 15 Oct 2019 16:04:39 +0200
+To: <foaad@calpoly.edu>
+Reply-To: "Cell Press" <feedback@cell.com>
+X-mailer: nlserver, Build 6.1.1
+Message-ID: <NM62A9542A06102F923elsevier_uk@mail.elsevier.com>
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_582_97E5D384.97E5D384"
+Return-Path: elsevier@mail.elsevier.com
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Oct 2019 14:04:41.0351
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3a4b2e81-1379-4a34-c084-08d751789f83
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:185.15.50.74;IPV:NLI;CTRY:FR;EFV:NLI;SFV:SPM;SFS:(10001)(4636009)(286005)(199004)(189003)(4006050)(1096003)(8676002)(7066003)(7596002)(7636002)(246002)(106002)(36736006)(6916009)(16586007)(58800400005)(50226002)(33964004)(6486002)(6512007)(606006)(236005)(54896002)(6306002)(966005)(733005)(946001)(14444005)(2171002)(6506007)(25786009)(956004)(16003)(10126004)(18926415008)(2351001)(75640400001)(336012)(105004)(126002)(476003)(2616005)(71190400001)(19627405001)(26005)(43066004)(486006)(356004)(132500200001)(11334002);DIR:INB;SFP:;SCL:5;SRVR:DM6PR08MB3897;H:r74.p50.neolane.net;FPR:;SPF:Pass;LANG:en;PTR:r74.p50.neolane.net;A:0;MX:1;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT059.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 3a4b2e81-1379-4a34-c084-08d751789f83
+X-MS-TrafficTypeDiagnostic: DM6PR08MB3897:
+X-MS-Exchange-PUrlCount: 32
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:6;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Oct 2019 14:04:40.7409
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3a4b2e81-1379-4a34-c084-08d751789f83
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB3897
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6871019
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?WldCRWRlZmdxdHNjWU55M3Z6SHFFMGJ0eCswb28zMStCbFhWSnhGNUd0QlFV?=
+ =?utf-8?B?RDdUZFpsWGxKWkR2L3orN05XNVM2b3Bnb0txMjd4ZkZLVWR4S254UUJiQnZH?=
+ =?utf-8?B?NXlWNW9kNmFZMGI4eWZnTUFOMHd1ekNlY29GalBaMVZVZGpneVN3Y3BoUytF?=
+ =?utf-8?B?YjRIbXZyaXJ2R2dlMGNhSDhuSWdpYlBEZGVxWnpveHhpTGM5TXdRaG03V2Fp?=
+ =?utf-8?B?aWJTNmpyUDBJOUZrejQvUWN1Z2tLVSt4TEFONjB4NGxFNjhHSStDaGV2c0Ex?=
+ =?utf-8?B?bE15czR0TkxNa3NXT1JGV01lZTdsZUEzZ2t1aXM3VUFoN1NGUTFPRVVJR3BO?=
+ =?utf-8?B?OUZ5bHJ6TzdGUGZJdFlDaXVJNklQNllVMWFxb0Z5WElrUUVYWkt3eWZiYXRt?=
+ =?utf-8?B?V3hBL0RGb0txMThqZ0k4MU92UzNtU3hGaVQzakU3dm9LVnNhUXdrNXFScVFu?=
+ =?utf-8?B?OXdneFJHVHJWSUhiaG9IMmNRNnlTYXRZZkRBVk50VXBOeEUyaU8xMUJhWDY1?=
+ =?utf-8?B?MWV2WkRsT2ZkdWFpUlFjTXJhc1FwV0IvZGE1STNzTGUzSUtrbzlOSm1wb3Jy?=
+ =?utf-8?B?cVJrcVpuanB3bjgzdHBXSUtjcEgxditGUStZTkViM3FUU1UwYjlwRWxqSkZj?=
+ =?utf-8?B?QXVlRXZkUUp6aUxlL3JEZERXZTRVbHZMT2NIWDhGVG9pa1FJTHIyaS8rZ2gx?=
+ =?utf-8?B?S3Z4YVNNemxPWmNoRUxheDhuK1pEWUdvcWtoYlN4d2dtdzNScHZoYjF5cFlW?=
+ =?utf-8?B?dkRydTUxeGNJMVlCT2h1STcwaHhoYVhGSmVZL0g1NGt4TkVhMS9qL1Z4Ylli?=
+ =?utf-8?B?aWlmc2g3WlplYzNOeTBYNnJ2bmhzdXk2d2lHRGdZTk9VUkhOcFRTeTN5WGZo?=
+ =?utf-8?B?emdvVFk3SmptRWloamhOaUo5TkJjajRGSzh3dG02ZkFKdkJsUkhCRngxQzl0?=
+ =?utf-8?B?TmJiYXltdXViUm04Q0U3TWxQcG9IM3R6VStoY0tHa3VpRmppZHBRYzhGSkdX?=
+ =?utf-8?B?MWxFL0ZlWERMeU5qdFMvWmVCOXhtSk0yYmFCL25hV0Vsc2hjNjE4SXVyTlBM?=
+ =?utf-8?B?cEJCZEh3cHBvSE5iV292Y3ZFVHo0NnZrM1gwTzFEMElCd1BUNW83N2wyc0VS?=
+ =?utf-8?B?VFkzbmI3MWprbDJPMzVTTTFmU0R5Z3FBRzBtRVVqRVJ0bUxkVFJ6N3l0Q2py?=
+ =?utf-8?B?N2Q5VEQ2NlM1N20rMUUyRWxacWxycUtaZmRsenkxTXZPQnM5ZXlPU1VITVJt?=
+ =?utf-8?B?ZEJ5L0VBUFpDU25rZ045RFYzQkpGL0NLeDdRZ2xDc1R3NzdzVklNU1VabU9N?=
+ =?utf-8?B?T1FQaVdDR3VUNDNPRUJ4VXU4M3hRMTBnUGZTc29wby82V2M5Tjg3anFIQUFV?=
+ =?utf-8?B?dkNiaEtkc25USXJxaFZFZDRmTi9XY1hDU1h2aFJLd0ZJNXVsL2ZOVmVYcFB2?=
+ =?utf-8?B?WWFJVXRlU2VIT0FwZ3lVdXR3QW5SbU4wM0ljdG5NQXFSK1djL2hsMzhKWmRM?=
+ =?utf-8?B?c0FnUTVBRGNybHMxbythamxkYXJyVzZMNVEyU0pFbE5wQ0R5ditUV1BEL1Fs?=
+ =?utf-8?B?VmdKdkNwV1ZYNnlEMUpVYmxrYjBoVmJMbFY4WEwxeDBhSnNJcVkzUWtPWGxm?=
+ =?utf-8?B?dURicUdOMmk5aGJockFpTkRsNlpkMmZ5aW1hTHlnTnpCUm1FL1JIeHk2Mmlu?=
+ =?utf-8?B?a2N3SnFjUlJ2VTdhd1JNOHV3L01takxsM0s3WUFPWUl6K2VTSXlDL08wMEF5?=
+ =?utf-8?B?TEdVWUJGd0E4eUFjTXc0bXlMdUF5dzc1ZktqbzhIUWl6NkVCZ0FmM1FWV2dx?=
+ =?utf-8?B?ZUdaVEhYMGZ2T2hKOVMwZTJERzllU0N6VTFjWFdzTEY4MEc5SlpLWkd2a2xI?=
+ =?utf-8?B?MWZwQWJzYW4yTCtCMjJlQ0YxVWFvbmJmeEdQcnc3OUlTaDd6cUFUcDRwMHQx?=
+ =?utf-8?Q?VXjcvDvcF5obl00a4stpjJz58EtmPVxn?=
+MIME-Version: 1.0
+
+------=_NextPart_582_97E5D384.97E5D384
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+The science of data - Patterns is a premium open access journal from Cell Press, publishing ground-breaking original research across the full breadth of data science. Data are the foundation of all research, and all data are in scope, regardless of original domain. 
+
+Can't see this email properly?  http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40d4&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7&p1=%40hp4C0xmoZ3he87Mi86cd4LFi0t7UML5QrS89PRRNipU%3D Click here to view an online version 	
+	
+
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40d5&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Homepage 	
+	  	
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40d6&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Aims and Scope 	
+	  	
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40d7&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Submit Your Research 	
+	  	
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40d8&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7  @Patterns_CP 	
+	
+	
+
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40d9&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 	
+
+Patterns  is a new open access journal from Cell Press, publishing high-quality, ground-breaking original research across the full breadth of data science. Data are the foundation of all research, and all data are in scope, regardless of original domain. Patterns  brings together research from across domains in academia and industry to: 
+
+• 	share knowledge about how to best develop and run data science infrastructures, tools, and services 	
+
+• 	communicate solutions and best practices for data science algorithms and methodologies 	
+
+• 	discuss the human and environmental impact of decisions made using data science 	
+
+• 	develop new cross-disciplinary methods for efficient data analysis, processing, archiving, and use 	
+
+	 http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40da&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Explore Patterns 		
+	
+
+We are calling for submissions from a broad spectrum of data-intensive disciplines and research fields across academia, industry, and policy: 
+
+✔ 	Artificial Intelligence and Machine Learning 	
+
+✔ 	Big Data 	
+
+✔ 	Data Analytics and Statistics 	
+
+✔ 	Data Collection, Aggregation, and Management 	
+
+✔ 	Software and Algorithms 	
+	  	
+✔ 	Data Infrastructures, Tools, and Services 	
+
+✔ 	Data Intensive Research 	
+
+✔ 	Data Policy and Ethics 	
+
+✔ 	Informatics 	
+
+✔ 	Metadata, Semantics, and Ontologies 	
+
+  	  	
+	
+	
+
+	 http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40db&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Share your data story. Submit your paper today. 		
+	
+
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40dc&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 	Receive the inaugural issue of Patterns  directly to your inbox 
+
+	 http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40dd&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Register here 		
+	
+	
+
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40de&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Homepage 	
+	  	
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40df&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Aims and Scope 	
+	  	
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40e0&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7 Submit Your Research 	
+	  	
+ http://communications.elsevier.com/r/?id=t2a9542a0,6102f923,373f40e1&utm_campaign=STMJ_99751_CALLP_OA&utm_medium=email&utm_dgroup=99751_SCO-EXT_AB3-TSSH_SGL_ALL&utm_acid=323984814&SIS_ID=-1&dgcid=STMJ_99751_CALLP_OA&CMX_ID=&utm_in=DM588586&utm_source=AC_7  @Patterns_CP 	
+	
+	
+
+	
+
+	
+
+    This message has been sent to foaad@calpoly.edu from Elsevier Communications on behalf of Cell Press.
+   If you no longer wish to receive messages of this nature from us in the future, please click here.
+
+
+Copyright © 2019 Elsevier B.V. All rights reserved. | Elsevier Privacy Policy 
+Elsevier B.V. Registered Office: Radarweg 29, 1043 NX Amsterdam, The Netherlands. Reg. No. 33158992 – Netherlands. VAT No. NL 005033019B01.
+
+
+
+ 
+
+------=_NextPart_582_97E5D384.97E5D384
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd"><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<title>Cell Press | Patterns</title>
+
+       =20
+<body bgcolor=3D"#e3e3e3">
+<link href=3D"https://fonts.googleapis.com/css?family=3DMontserrat:300,400,=
+700" rel=3D"stylesheet">=20
+<style>
+  html, body {font-family: Helvetica, Arial, sans-serif; }
+</style>      =20
+
+   =20
+  <!-- Preview text (text which appears right after subject in certain emai=
+l clients) -->
+        <div id=3D"preview_text" style=3D"display:none!important;mso-hide:a=
+ll">The science of data - Patterns is a premium open access journal from Ce=
+ll Press, publishing ground-breaking original research across the full brea=
+dth of data science. Data are the foundation of all research, and all data =
+are in scope, regardless of original domain.</div>
+ =20
+
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" bgcolor=3D"#e3e3e3">
+<br>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0">
+  <tbody>
+    <tr>
+      <td bgcolor=3D"#ffffff"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"5">
+        <tbody>
+          <tr>
+        <td align=3D"center" valign=3D"middle" bgcolor=3D"#025889" style=3D=
+"border-bottom:1px solid #b3dadb;"><span style=3D"color:#ffffff;margin-bott=
+om: 1em; font-family:Helvetica, Arial, sans-serif;font-size:12px;line-heigh=
+t:140%;">Can't see this email properly? <a href=3D"http://communications.el=
+sevier.com/r/?id=3Dh2a9542a0,6102f923,373f40be&amp;utm_campaign=3DSTMJ_9975=
+1_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB3-TSSH_S=
+GL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99751_CALL=
+P_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7&amp;p1=3D%40=
+hp4C0xmoZ3he87Mi86cd4LFi0t7UML5QrS89PRRNipU%3D" style=3D"font-color:#b3dadb=
+;text-decoration:none"><strong><font color=3D"#b3dadb">Click here to view a=
+n online version</font></strong></a></span></td>
+          </tr>
+        </tbody>
+      </table><img src=3D"http://clients.thedesignforge.co.uk/cell_press/pa=
+tterns/CP19341/CP19341_Patterns_RegEmail_Header.jpg" width=3D"728" height=
+=3D"91" alt=3D"CRPS | Cell Press"></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"14" cells=
+pacing=3D"0">
+  <tbody>
+    <tr>
+      <td bgcolor=3D"#FFFFFF"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+        <tbody>
+          <tr>
+            <td width=3D"167"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"6">
+              <tbody>
+                <tr>
+                  <td bgcolor=3D"#025889" style=3D"font-size:12px;font-fami=
+ly:helvetica, arial, sans-serif;color:#ffffff;"><a href=3D"http://communica=
+tions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40bf&amp;utm_campaign=3DS=
+TMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB=
+3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99=
+751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" tar=
+get=3D"_blank" style=3D"text-decoration: none;"><strong><font color=3D"whit=
+e">Homepage</font></strong></a></td>
+                </tr>
+              </tbody>
+            </table></td>
+            <td width=3D"8">&nbsp;</td>
+            <td width=3D"167"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"6">
+              <tbody>
+                <tr>
+                  <td bgcolor=3D"#025889" style=3D"font-size:12px;font-fami=
+ly:helvetica, arial, sans-serif;color:#ffffff;"><a href=3D"http://communica=
+tions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c0&amp;utm_campaign=3DS=
+TMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB=
+3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99=
+751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" tar=
+get=3D"_blank" style=3D"text-decoration: none;"><strong><font color=3D"whit=
+e">Aims and Scope</font></strong></a></td>
+                </tr>
+              </tbody>
+            </table></td>
+            <td width=3D"8">&nbsp;</td>
+            <td width=3D"167"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"6">
+              <tbody>
+                <tr>
+                  <td bgcolor=3D"#025889" style=3D"font-size:12px;font-fami=
+ly:helvetica, arial, sans-serif;color:#ffffff;"><a href=3D"http://communica=
+tions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c1&amp;utm_campaign=3DS=
+TMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB=
+3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99=
+751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" tar=
+get=3D"_blank" style=3D"text-decoration: none;"><strong><font color=3D"whit=
+e">Submit Your Research</font></strong></a></td>
+                </tr>
+              </tbody>
+            </table></td>
+            <td width=3D"8">&nbsp;</td>
+            <td width=3D"167"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"6">
+              <tbody>
+                <tr>
+                  <td bgcolor=3D"#ebebeb" style=3D"font-size:12px;font-fami=
+ly:helvetica, arial, sans-serif;color:#09547d;"><a href=3D"http://communica=
+tions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c2&amp;utm_campaign=3DS=
+TMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB=
+3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99=
+751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" tar=
+get=3D"_blank" style=3D"text-decoration: none;"><strong style=3D"font-weigh=
+t:700"><font color=3D"#09547d"><img src=3D"http://clients.thedesignforge.co=
+.uk/cell_press/cellMetabolism/2019/CP19290/CP19290_CellMetabolism_twitterIc=
+on.jpg" width=3D"15" height=3D"15" alt=3D"" align=3D"absMiddle"> @Patterns_=
+CP</font></strong></a></td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" bgcolor=3D"#ffffff"><a href=3D"http://communicat=
+ions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c3&amp;utm_campaign=3DST=
+MJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB3=
+-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_997=
+51_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" targ=
+et=3D"_blank"><img src=3D"http://clients.thedesignforge.co.uk/cell_press/pa=
+tterns/CP19341/CP19341_Patterns_RegEmail_Hero01.jpg" alt=3D"The science of =
+data" title=3D"The science of data"></a></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"32" cells=
+pacing=3D"0">
+  <tbody>
+    <tr>
+      <td bgcolor=3D"#ffffff">
+      <p style=3D"font-size:16px;font-family: 'Montserrat', Gotham, helveti=
+ca, arial, sans-serif;color:#414141;"><em>Patterns</em> is a new open acces=
+s journal from Cell Press, publishing high-quality, ground-breaking origina=
+l research across the full breadth of data science. Data are the foundation=
+ of all research, and all data are in scope, regardless of original domain.=
+ <em>Patterns</em> brings together research from across domains in academia=
+ and industry to:</p>
+      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+        <tbody>
+          <tr>
+          <td width=3D"20" align=3D"left" valign=3D"top"><span style=3D"fon=
+t-size:22px;font-family: 'Montserrat', Gotham, helvetica, arial, sans-serif=
+;color:#414141;line-height:16px"><strong>=E2=80=A2</strong></span></td>
+          <td align=3D"left" valign=3D"top"><span style=3D"font-size:16px;f=
+ont-family: 'Montserrat', Gotham, helvetica, arial, sans-serif;color:#41414=
+1;">share knowledge about how to best develop and run data science infrastr=
+uctures, tools, and services</span></td>
+            </tr>
+          </tbody>
+        </table>
+      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+        <tbody>
+          <tr>
+            <td width=3D"20" align=3D"left" valign=3D"top"><span style=3D"f=
+ont-size:22px;font-family: 'Montserrat', Gotham, helvetica, arial, sans-ser=
+if;color:#414141;line-height:16px"><strong>=E2=80=A2</strong></span></td>
+            <td align=3D"left" valign=3D"top"><span style=3D"font-size:16px=
+;font-family: 'Montserrat', Gotham, helvetica, arial, sans-serif;color:#414=
+141;">communicate solutions and best practices for data science algorithms =
+and methodologies</span></td>
+            </tr>
+          </tbody>
+        </table>
+      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+        <tbody>
+          <tr>
+            <td width=3D"20" align=3D"left" valign=3D"top"><span style=3D"f=
+ont-size:22px;font-family: 'Montserrat', Gotham, helvetica, arial, sans-ser=
+if;color:#414141;line-height:16px"><strong>=E2=80=A2</strong></span></td>
+            <td align=3D"left" valign=3D"top"><span style=3D"font-size:16px=
+;font-family: 'Montserrat', Gotham, helvetica, arial, sans-serif;color:#414=
+141;">discuss the human and environmental impact of decisions made using da=
+ta science</span></td>
+            </tr>
+          </tbody>
+        </table>
+      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+        <tbody>
+          <tr>
+            <td width=3D"20" align=3D"left" valign=3D"top"><span style=3D"f=
+ont-size:22px;font-family: 'Montserrat', Gotham, helvetica, arial, sans-ser=
+if;color:#414141;line-height:16px"><strong>=E2=80=A2</strong></span></td>
+            <td align=3D"left" valign=3D"top"><span style=3D"font-size:16px=
+;font-family: 'Montserrat', Gotham, helvetica, arial, sans-serif;color:#414=
+141;">develop new cross-disciplinary methods for efficient data analysis, p=
+rocessing, archiving, and use</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        </p>
+      <table width=3D"340" border=3D"0" align=3D"center" cellpadding=3D"0" =
+cellspacing=3D"0">
+        <tbody>
+          <tr>
+            <td width=3D"13" align=3D"left" valign=3D"top" bgcolor=3D"#ffff=
+ff"><img src=3D"http://clients.thedesignforge.co.uk/cell_press/patterns/CP1=
+9341/CP19341_Patterns_RegEmail_buttonLeft.jpg" width=3D"25" height=3D"52" a=
+lt=3D"" style=3D"display:block"></td>
+            <td align=3D"center" bgcolor=3D"#2895d1"><a href=3D"http://comm=
+unications.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c4&amp;utm_campaig=
+n=3DSTMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-E=
+XT_AB3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DST=
+MJ_99751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7=
+" target=3D"_blank" style=3D"font-size:16px;font-family: 'Montserrat', Goth=
+am, helvetica, arial, sans-serif;color:#ffffff;text-decoration:none;"><stro=
+ng style=3D"font-weight:700"><font color=3D"#ffffff">Explore <em>Patterns</=
+em></font></strong></a></td>
+            <td width=3D"15" align=3D"right" valign=3D"top" bgcolor=3D"#fff=
+fff"><img src=3D"http://clients.thedesignforge.co.uk/cell_press/patterns/CP=
+19341/CP19341_Patterns_RegEmail_buttonRight.jpg" width=3D"25" height=3D"52"=
+ alt=3D"" style=3D"display:block"></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"32" cells=
+pacing=3D"0">
+  <tbody>
+    <tr>
+      <td bgcolor=3D"#f76525"><p style=3D"font-size:16px;font-family: 'Mont=
+serrat', Gotham, helvetica, arial, sans-serif;color:#ffffff;">We are callin=
+g for submissions from a broad spectrum of data-intensive disciplines and r=
+esearch fields across academia, industry, and policy:=20
+          </p>
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0">
+          <tbody>
+            <tr>
+              <td width=3D"48%" align=3D"left" valign=3D"top"><table width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                <tbody>
+                  <tr>
+                    <td width=3D"30" align=3D"left" valign=3D"top" style=3D=
+"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, sans-s=
+erif;color:#ffffff;"><strong>=E2=9C=94</strong></td>
+            <td align=3D"left" valign=3D"top"><span style=3D"font-size:16px=
+;font-family: 'Montserrat', Gotham, helvetica, arial, sans-serif;color:#fff=
+fff;font-weight:700">Artificial Intelligence and Machine Learning</span></t=
+d>
+                  </tr>
+                </tbody>
+              </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700"><strong>=E2=9C=94</strong></td>
+                      <td><span style=3D"font-size:16px;font-family: 'Monts=
+errat', Gotham, helvetica, arial, sans-serif;color:#ffffff;font-weight:700"=
+>Big Data</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700"><strong>=E2=9C=94</strong></td>
+                      <td><span style=3D"font-size:16px;font-family: 'Monts=
+errat', Gotham, helvetica, arial, sans-serif;color:#ffffff;font-weight:700"=
+>Data Analytics and Statistics</span></td>
+                    </tr>
+                  </tbody>
+            </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700"><strong>=E2=9C=94</strong></td>
+                      <td><span style=3D"font-size:16px;font-family: 'Monts=
+errat', Gotham, helvetica, arial, sans-serif;color:#ffffff;font-weight:700"=
+>Data Collection, Aggregation, and Management</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700"><strong>=E2=9C=94</strong></td>
+                      <td><span style=3D"font-size:16px;font-family: 'Monts=
+errat', Gotham, helvetica, arial, sans-serif;color:#ffffff;font-weight:700"=
+>Software and Algorithms</span></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+              <td width=3D"4%" align=3D"left" valign=3D"top">&nbsp;</td>
+              <td width=3D"48%" align=3D"left" valign=3D"top"><table width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                <tbody>
+                  <tr>
+                    <td width=3D"30" align=3D"left" valign=3D"top" style=3D=
+"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, sans-s=
+erif;color:#ffffff;"><strong>=E2=9C=94</strong></td>
+                    <td align=3D"left" valign=3D"top"><span style=3D"font-s=
+ize:16px;font-family: 'Montserrat', Gotham, helvetica, arial, sans-serif;co=
+lor:#ffffff;font-weight:700">Data Infrastructures, Tools, and Services</spa=
+n></td>
+                  </tr>
+                </tbody>
+              </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700"><strong>=E2=9C=94</strong></td>
+                      <td><span style=3D"font-size:16px;font-family: 'Monts=
+errat', Gotham, helvetica, arial, sans-serif;color:#ffffff;font-weight:700"=
+>Data Intensive Research</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700"><strong>=E2=9C=94</strong></td>
+                      <td><span style=3D"font-size:16px;font-family: 'Monts=
+errat', Gotham, helvetica, arial, sans-serif;color:#ffffff;font-weight:700"=
+>Data Policy and Ethics</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700"><strong>=E2=9C=94</strong></td>
+                      <td align=3D"left" valign=3D"top"><span style=3D"font=
+-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, sans-serif;=
+color:#ffffff;font-weight:700">Informatics</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700"><strong>=E2=9C=94</strong></td>
+                      <td><span style=3D"font-size:16px;font-family: 'Monts=
+errat', Gotham, helvetica, arial, sans-serif;color:#ffffff;font-weight:700"=
+>Metadata, Semantics, and Ontologies</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"30" align=3D"left" valign=3D"top" style=
+=3D"font-size:16px;font-family: 'Montserrat', Gotham, helvetica, arial, san=
+s-serif;color:#ffffff;font-weight:700">&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"32" cells=
+pacing=3D"0">
+  <tbody>
+    <tr>
+      <td bgcolor=3D"#ffffff"><table width=3D"528" border=3D"0" align=3D"ce=
+nter" cellpadding=3D"0" cellspacing=3D"0">
+        <tbody>
+            <tr>
+              <td width=3D"13" align=3D"left" valign=3D"top" bgcolor=3D"#ff=
+ffff"><img src=3D"http://clients.thedesignforge.co.uk/cell_press/patterns/C=
+P19341/CP19341_Patterns_RegEmail_buttonLeft.jpg" width=3D"25" height=3D"52"=
+ alt=3D"" style=3D"display:block"></td>
+              <td align=3D"center" bgcolor=3D"#2895d1"><a href=3D"http://co=
+mmunications.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c5&amp;utm_campa=
+ign=3DSTMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO=
+-EXT_AB3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3D=
+STMJ_99751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC=
+_7" target=3D"_blank" style=3D"font-size:16px;font-family: 'Montserrat', Go=
+tham, helvetica, arial, sans-serif;color:#ffffff;text-decoration:none;"><st=
+rong style=3D"font-weight:700"><font color=3D"#ffffff">Share your data stor=
+y. Submit your paper today.</font></strong></a></td>
+              <td width=3D"15" align=3D"right" valign=3D"top" bgcolor=3D"#f=
+fffff"><img src=3D"http://clients.thedesignforge.co.uk/cell_press/patterns/=
+CP19341/CP19341_Patterns_RegEmail_buttonRight.jpg" width=3D"25" height=3D"5=
+2" alt=3D"" style=3D"display:block"></td>
+            </tr>
+          </tbody>
+      </table></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"32" cells=
+pacing=3D"0">
+  <tbody>
+    <tr>
+      <td bgcolor=3D"#ffffff"><table width=3D"400" border=3D"0" align=3D"ce=
+nter" cellpadding=3D"0" cellspacing=3D"0">
+        <tbody>
+            <tr>
+              <td width=3D"190" align=3D"left" valign=3D"top"><a href=3D"ht=
+tp://communications.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c6&amp;ut=
+m_campaign=3DSTMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99=
+751_SCO-EXT_AB3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;d=
+gcid=3DSTMJ_99751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_sour=
+ce=3DAC_7" target=3D"_blank"><img src=3D"http://clients.thedesignforge.co.u=
+k/cell_press/patterns/CP19383/CP19383_Patterns_Cover.jpg" width=3D"169" hei=
+ght=3D"221" alt=3D""></a></td>
+              <td align=3D"center" valign=3D"middle"><span style=3D"font-fa=
+mily: 'Montserrat', Gotham, Helvetica, Arial, sans-serif; font-weight:300;f=
+ont-size:21px;color:#666666">Receive the inaugural issue of <em>Patterns </=
+em>directly to your inbox</span><br>
+                <br>
+                <table width=3D"170" border=3D"0" align=3D"center" cellpadd=
+ing=3D"0" cellspacing=3D"0">
+                  <tbody>
+                    <tr>
+                      <td width=3D"13" align=3D"left" valign=3D"top" bgcolo=
+r=3D"#ffffff"><img src=3D"http://clients.thedesignforge.co.uk/cell_press/pa=
+tterns/CP19383/CP19383_Patterns_ButtonLeft_orange.jpg" width=3D"21" height=
+=3D"44" alt=3D"" style=3D"display:block"></td>
+                      <td height=3D"44" align=3D"center" bgcolor=3D"#f76525=
+"><a href=3D"http://communications.elsevier.com/r/?id=3Dh2a9542a0,6102f923,=
+373f40c7&amp;utm_campaign=3DSTMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;=
+utm_dgroup=3D99751_SCO-EXT_AB3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SI=
+S_ID=3D-1&amp;dgcid=3DSTMJ_99751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM5885=
+86&amp;utm_source=3DAC_7" target=3D"_blank" style=3D"font-size:16px;font-fa=
+mily: 'Montserrat', Gotham, helvetica, arial, sans-serif;color:#ffffff;text=
+-decoration:none;"><strong style=3D"font-weight:700"><font color=3D"#ffffff=
+">Register here</font></strong></a></td>
+                      <td width=3D"15" align=3D"right" valign=3D"top" bgcol=
+or=3D"#ffffff"><img src=3D"http://clients.thedesignforge.co.uk/cell_press/p=
+atterns/CP19383/CP19383_Patterns_ButtonRight_orange.jpg" width=3D"21" heigh=
+t=3D"44" alt=3D"" style=3D"display:block"></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+      </table></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"14" cells=
+pacing=3D"0">
+  <tbody>
+    <tr>
+      <td bgcolor=3D"#FFFFFF"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+        <tbody>
+          <tr>
+            <td width=3D"167"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"6">
+              <tbody>
+                <tr>
+                  <td bgcolor=3D"#025889" style=3D"font-size:12px;font-fami=
+ly:helvetica, arial, sans-serif;color:#ffffff;"><a href=3D"http://communica=
+tions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c8&amp;utm_campaign=3DS=
+TMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB=
+3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99=
+751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" tar=
+get=3D"_blank" style=3D"text-decoration: none;"><strong><font color=3D"whit=
+e">Homepage</font></strong></a></td>
+                </tr>
+              </tbody>
+            </table></td>
+            <td width=3D"8">&nbsp;</td>
+            <td width=3D"167"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"6">
+              <tbody>
+                <tr>
+                  <td bgcolor=3D"#025889" style=3D"font-size:12px;font-fami=
+ly:helvetica, arial, sans-serif;color:#ffffff;"><a href=3D"http://communica=
+tions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40c9&amp;utm_campaign=3DS=
+TMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB=
+3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99=
+751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" tar=
+get=3D"_blank" style=3D"text-decoration: none;"><strong><font color=3D"whit=
+e">Aims and Scope</font></strong></a></td>
+                </tr>
+              </tbody>
+            </table></td>
+            <td width=3D"8">&nbsp;</td>
+            <td width=3D"167"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"6">
+              <tbody>
+                <tr>
+                  <td bgcolor=3D"#025889" style=3D"font-size:12px;font-fami=
+ly:helvetica, arial, sans-serif;color:#ffffff;"><a href=3D"http://communica=
+tions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40ca&amp;utm_campaign=3DS=
+TMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB=
+3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99=
+751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" tar=
+get=3D"_blank" style=3D"text-decoration: none;"><strong><font color=3D"whit=
+e">Submit Your Research</font></strong></a></td>
+                </tr>
+              </tbody>
+            </table></td>
+            <td width=3D"8">&nbsp;</td>
+            <td width=3D"167"><table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"6">
+              <tbody>
+                <tr>
+                  <td bgcolor=3D"#ebebeb" style=3D"font-size:12px;font-fami=
+ly:helvetica, arial, sans-serif;color:#09547d;"><a href=3D"http://communica=
+tions.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40cb&amp;utm_campaign=3DS=
+TMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB=
+3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99=
+751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" tar=
+get=3D"_blank" style=3D"text-decoration: none;"><strong style=3D"font-weigh=
+t:700"><font color=3D"#09547d"><img src=3D"http://clients.thedesignforge.co=
+.uk/cell_press/cellMetabolism/2019/CP19290/CP19290_CellMetabolism_twitterIc=
+on.jpg" width=3D"15" height=3D"15" alt=3D"" align=3D"absMiddle"> @Patterns_=
+CP</font></strong></a></td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" bgcolor=3D"#ffffff"><img src=3D"http://clients.t=
+hedesignforge.co.uk/cell_press/patterns/CP19341/CP19341_Patterns_RegEmail_H=
+ero03.jpg" alt=3D""></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" height=3D"10" border=3D"0" align=3D"center" cellpaddin=
+g=3D"5" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"left" valign=3D"top" style=3D"font-family:Helvetica, Ari=
+al, sans-serif;font-size:12px;line-height:160%;color:#505050"><!-- Office l=
+ocation information and unsubscribe links -->
+        <p id=3D"footer" style=3D"margin-bottom: 1em; ">
+           <p style=3D"TEXT-ALIGN: left; FONT-FAMILY: Arial, Helvetica, san=
+s-serif; COLOR: #999999; FONT-SIZE: 11px">
+
+ =20
+   =20
+   =20
+    This message has been sent to foaad@calpoly.edu from Elsevier Communica=
+tions on behalf of Cell Press.<br>
+   =20
+   =20
+   =20
+   =20
+=20
+
+       =20
+            If you no longer wish to receive messages of this nature from u=
+s in the future, please <a href=3D"http://communications.elsevier.com/r/?id=
+=3Dh2a9542a0,6102f923,373f40ce&amp;utm_campaign=3DSTMJ_99751_CALLP_OA&amp;u=
+tm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB3-TSSH_SGL_ALL&amp;utm_a=
+cid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99751_CALLP_OA&amp;CMX_ID=
+=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7&amp;p1=3D%405taFg9wrxFFsw%2=
+By2gLez9A%3D%3D&amp;p2=3D%40Kf5YqzSCBUtOvnfALx7AZA%3D%3D&amp;p3=3D%407XNTT8=
+lrWKFI4n3MRMfthg%3D%3D&amp;p4=3Dfeedback@cell.com&amp;p5=3D%40rzPtVoh5xlbGT=
+QWlXqc8zA%3D%3D" _label=3D"Opt-out link (Communication Type)" _type=3D"opto=
+ut">click here</a>.<br>
+       =20
+       =20
+       =20
+  =20
+   =20
+
+    Visit the <a href=3D"http://communications.elsevier.com/r/?id=3Dh2a9542=
+a0,6102f923,373f40cf&amp;utm_campaign=3DSTMJ_99751_CALLP_OA&amp;utm_medium=
+=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB3-TSSH_SGL_ALL&amp;utm_acid=3D323=
+984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99751_CALLP_OA&amp;CMX_ID=3D&amp;ut=
+m_in=3DDM588586&amp;utm_source=3DAC_7&amp;p1=3D%405taFg9wrxFFsw%2By2gLez9A%=
+3D%3D" _label=3D"Preference Center link" _type=3D"mail">Elsevier Preference=
+ Center</a> to manage more of your communication preferences with us. <br>
+   =20
+    Copyright =C2=A9 2019 <a href=3D"http://communications.elsevier.com/r/?=
+id=3Dh2a9542a0,6102f923,373f40d0&amp;utm_campaign=3DSTMJ_99751_CALLP_OA&amp=
+;utm_medium=3Demail&amp;utm_dgroup=3D99751_SCO-EXT_AB3-TSSH_SGL_ALL&amp;utm=
+_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgcid=3DSTMJ_99751_CALLP_OA&amp;CMX_I=
+D=3D&amp;utm_in=3DDM588586&amp;utm_source=3DAC_7" _label=3D"Elsevier Websit=
+e" _type=3D"mail">Elsevier B.V.</a>. All rights reserved. | <a href=3D"http=
+://communications.elsevier.com/r/?id=3Dh2a9542a0,6102f923,373f40d1&amp;utm_=
+campaign=3DSTMJ_99751_CALLP_OA&amp;utm_medium=3Demail&amp;utm_dgroup=3D9975=
+1_SCO-EXT_AB3-TSSH_SGL_ALL&amp;utm_acid=3D323984814&amp;SIS_ID=3D-1&amp;dgc=
+id=3DSTMJ_99751_CALLP_OA&amp;CMX_ID=3D&amp;utm_in=3DDM588586&amp;utm_source=
+=3DAC_7" _label=3D"Elsevier Privacy Policy" _type=3D"mail">Elsevier Privacy=
+ Policy</a> <br>
+    Elsevier B.V. Registered Office: Radarweg 29, 1043 NX Amsterdam, The Ne=
+therlands. Reg. No. 33158992 =E2=80=93 Netherlands. VAT No. NL 005033019B01=
+.<br>
+  =20
+    </p>
+    =20
+ =20
+ </p></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"728" border=3D"0" align=3D"center" cellpadding=3D"5" cellsp=
+acing=3D"0">
+  <tbody>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</td>
+    </tr>
+  </tbody>
+</table>
+<img height=3D"0" width=3D"0" alt=3D"" src=3D"http://communications.elsevie=
+r.com/r/?id=3Dh2a9542a0,6102f923,1"></body></html>
+
+------=_NextPart_582_97E5D384.97E5D384--

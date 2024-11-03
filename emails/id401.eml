@@ -1,0 +1,1261 @@
+Received: from MN2PR08MB6205.namprd08.prod.outlook.com (2603:10b6:a03:c0::23)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0010.NAMPRD05.PROD.OUTLOOK.COM; Sun, 18 Aug 2019 23:12:33 +0000
+Received: from SN4PR0801CA0013.namprd08.prod.outlook.com
+ (2603:10b6:803:29::23) by MN2PR08MB6205.namprd08.prod.outlook.com
+ (2603:10b6:208:1a1::8) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2178.16; Sun, 18 Aug
+ 2019 23:12:31 +0000
+Received: from SN1NAM04FT016.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::207) by SN4PR0801CA0013.outlook.office365.com
+ (2603:10b6:803:29::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2178.16 via Frontend
+ Transport; Sun, 18 Aug 2019 23:12:30 +0000
+Authentication-Results: spf=pass (sender IP is 144.118.38.12)
+ smtp.mailfrom=LISTS.DREXEL.EDU; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=406
+Received-SPF: Pass (protection.outlook.com: domain of LISTS.DREXEL.EDU
+ designates 144.118.38.12 as permitted sender)
+ receiver=protection.outlook.com; client-ip=144.118.38.12;
+ helo=lists.drexel.edu;
+Received: from lists.drexel.edu (144.118.38.12) by
+ SN1NAM04FT016.mail.protection.outlook.com (10.152.88.151) with Microsoft SMTP
+ Server id 15.20.2178.16 via Frontend Transport; Sun, 18 Aug 2019 23:12:30
+ +0000
+Received: from jay.irt.drexel.edu (localhost.localdomain [127.0.0.1])
+	by lists.drexel.edu (Postfix) with ESMTP id 7B22E23ECE9
+	for <foaad@CALPOLY.EDU>; Sun, 18 Aug 2019 19:12:00 -0400 (EDT)
+Received: by LISTS.DREXEL.EDU (LISTSERV-TCP/IP release 16.0) with spool id 0803
+          for BIGDATA@LISTS.DREXEL.EDU; Sun, 18 Aug 2019 19:10:00 -0400
+Approved-By: cfp.conference2016@GMAIL.COM
+Received: from smtp.mail.drexel.edu (pm1.irt.drexel.edu [144.118.29.81]) by
+          lists.drexel.edu (Postfix) with ESMTP id 353E623E1F0 for
+          <bigdata@lists.drexel.edu>; Sun, 18 Aug 2019 16:28:00 -0400 (EDT)
+Received: from smtp.mail.drexel.edu (localhost.localdomain [127.0.0.1]) by
+          smtp.mail.drexel.edu (Postfix) with SMTP id 0C3845C844F for
+          <bigdata@lists.drexel.edu>; Sun, 18 Aug 2019 16:28:00 -0400 (EDT)
+X-No-SMTP-Auth: unauthenticated sender
+Received: from mail-vs1-f47.google.com (mail-vs1-f47.google.com
+          [209.85.217.47]) (using TLSv1 with cipher AES128-SHA (128/128 bits))
+          (No client certificate requested) by smtp.mail.drexel.edu (Postfix)
+          with ESMTP id 60E435C8315 for <bigdata@lists.drexel.edu>; Sun, 18 Aug
+          2019 16:27:55 -0400 (EDT)
+Received: by mail-vs1-f47.google.com with SMTP id c7so6989941vse.11 for
+          <bigdata@lists.drexel.edu>; Sun, 18 Aug 2019 13:27:55 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=AqfPSwmQEDMM8QJoemfRKDLxu4WpF11scJ5ZMUivBZI=;
+                         b=FvIR6Hfa1Cle7E27EwJGqOvAJpr6Ev7EYmPdDHLW3sUeCSxjfBHNTn1bZbpk1PlG6k
+                         E/1yvIfbm+BcbBnknJdIsqJYm8vlNyYfanyCBA++yuwssgandIYD7Lq+oM5OcRN7GE1E
+                         D2SMG+uQd5RwD/uYTbyQAltkjm2DijrdRMgQVm2wQSkUwbwCHUolotavObu/UJTxxt9c
+                         xzbyNaosL1CRJJQf7zu6apRzAR2hS0ddxzZG/h8MQn7YYPXmjCdWhc+IScrYRG3zHJt2
+                         2tKljxqM47AWVkSuQErpg6Wlt4YEf6f8KzWxVr7f1u5dJIXOplkamE4rq8tle5Uvo/xl
+                         ZOSA==
+X-Gm-Message-State: APjAAAXdStyPE4l7AZdgZ9gpjvZZFJDzwkO7/3EMWxZN5tVBtXkGydPo
+                    9eYIab9xyC6mUxkQZS0HGtuCppn7SKx6byH4+b0bT7tBw3s=
+X-Google-Smtp-Source: APXvYqwlmVnchX8DcLzeqp4SVT4OGht/zmw9I54HtFJgrl9CqWfwrpwn+t/nxrCCJsD4hjQ1bUcZP4W3xCPQES+yXqg=
+X-Received: by 2002:a67:f710:: with SMTP id m16mr11755408vso.36.1566160074638;
+            Sun, 18 Aug 2019 13:27:54 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="000000000000e909ea05906a0eff"
+X-PerlMx-Spam: Gauge=X, Probability=10%, Report=' TO_IN_SUBJECT 0.5,
+               HTML_70_90 0.1, HTML_NO_HTTP 0.1, BODYTEXTH_SIZE_3000_MORE 0,
+               BODY_SIZE_10000_PLUS 0, CHILD_EX_X3 0, DATE_TZ_NA 0,
+               DKIM_ALIGNS 0, DKIM_SIGNATURE 0, URI_ENDS_IN_PHP 0,
+               URI_WITH_PATH_ONLY 0, WEBMAIL_SOURCE 0, __ANY_URI 0,
+               __BODY_NO_MAILTO 0, __COURIER_PHRASE 0, __CP_MEDIA_2_BODY 0,
+               __CP_MEDIA_BODY 0, __CP_URI_IN_BODY 0, __CT 0,
+               __CTYPE_HAS_BOUNDARY 0, __CTYPE_MULTIPART 0,
+               __CTYPE_MULTIPART_ALT 0, __DKIM_ALIGNS_1 0, __DKIM_ALIGNS_2 0,
+               __DQ_NEG_HEUR 0, __DQ_NEG_IP 0, __FRAUD_WEBMAIL 0,
+               __FRAUD_WEBMAIL_FROM 0, __FROM_GMAIL 0, __FUR_RDNS_GMAIL 0,
+               __HAS_FROM 0, __HAS_HTML 0, __HAS_MSGID 0, __HELO_GMAIL 0,
+               __HEX28_LC_BOUNDARY 0, __HTML_BAD_START 0, __HTML_TAG_DIV 0,
+               __HTTPS_URI 0, __INT_PROD_LOC 0, __INT_PROD_QUALITY 0,
+               __MIME_HTML 0, __MIME_TEXT_H 0, __MIME_TEXT_H1 0,
+               __MIME_TEXT_H2 0, __MIME_TEXT_P 0, __MIME_TEXT_P1 0,
+               __MIME_TEXT_P2 0, __MIME_VERSION 0, __MULTIPLE_URI_TEXT 0,
+               __RDNS_WEBMAIL 0, __SANE_MSGID 0, __SXL_FUR_TIMEOUT ,
+               __SXL_SIGV2_TIMEOUT , __SXL_SIG_TIMEOUT , __SXL_URI_TIMEOUT ,
+               __TO_IN_SUBJECT2 0, __TO_MALFORMED_2 0, __TO_NO_NAME 0,
+               __URI_IN_BODY 0, __URI_NOT_IMG 0, __URI_NO_WWW 0, __URI_NS ,
+               __URI_WITH_PATH 0, __X_GOOGLE_DKIM_SIGNATURE 0, __YOUTUBE_RCVD 0'
+Message-ID: <CAEvuEAvnkZM-nQOXnHnOF=agpAUpHi_XbkJHGr+39hm7_=Hz7g@mail.gmail.com>
+Date: Sun, 18 Aug 2019 16:27:39 -0400
+Reply-To: CFP Conference <cfp.conference2016@GMAIL.COM>
+Sender: CCI Big Data List <BIGDATA@LISTS.DREXEL.EDU>
+From: CFP Conference <cfp.conference2016@GMAIL.COM>
+Subject: IEEE BigData 2019 Last CFP , deadline: Aug 19, 2019
+To: BIGDATA@LISTS.DREXEL.EDU
+Precedence: list
+List-Help: <mailto:LISTSERV@LISTS.DREXEL.EDU?body=INFO%20BIGDATA>
+List-Unsubscribe: <mailto:BIGDATA-unsubscribe-request@LISTS.DREXEL.EDU>
+List-Subscribe: <mailto:BIGDATA-subscribe-request@LISTS.DREXEL.EDU>
+List-Owner: <mailto:BIGDATA-request@LISTS.DREXEL.EDU>
+Return-Path: owner-bigdata*foaad**CALPOLY*-EDU@LISTS.DREXEL.EDU
+X-MS-Exchange-Organization-ExpirationStartTime: 18 Aug 2019 23:12:30.8309
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ce288aa5-f15d-43da-0c1d-08d724318b7b
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:144.118.38.12;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(2980300002)(286005)(189003)(199004)(176002)(7192003)(6262002)(73392003)(4006050)(14444005)(42882007)(16350225007)(26005)(75640400001)(55176004)(2860700004)(55446002)(59536001)(2351001)(7846003)(53376002)(8576002)(75432002)(33964004)(356004)(6392003)(136015008)(53946003)(3450700001)(88552002)(498394004)(82202003)(71190400001)(236005)(16799955002)(30864003)(76482006)(6306002)(486006)(42186006)(6666004)(2361001)(7596002)(8676002)(2171002)(7636002)(16586007)(95326003)(126002)(606006)(246002)(476003)(16003)(146002)(43066004)(305945005)(336012)(34206002)(10126004)(1096003)(106002)(966005)(5070765005)(61266001)(22416003)(579004)(559001);DIR:INB;SFP:;SCL:1;SRVR:MN2PR08MB6205;H:lists.drexel.edu;FPR:;SPF:Pass;LANG:en;PTR:lists.drexel.edu;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT016.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: ce288aa5-f15d-43da-0c1d-08d724318b7b
+X-Microsoft-Antispam:
+ BCL:3;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:MN2PR08MB6205;
+X-MS-TrafficTypeDiagnostic: MN2PR08MB6205:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 Aug 2019 23:12:30.6607
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ce288aa5-f15d-43da-0c1d-08d724318b7b
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR08MB6205
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.9524415
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2178.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?V2x1Q2FFMHhnYU1RT29reE9LMFNuZDc4ak0zeHk3SHdNTGk1cWppR25TcUhp?=
+ =?utf-8?B?TDFnRURyV3h0VUU3UktjaVRKdFNpQmpMZ0l6aHNWQXZ4cTkvaVc5VzNLK1NU?=
+ =?utf-8?B?R1BHZXNGU2RpbmVYdk9NTTliL3hXSFJkNDlJODQyUVRqTWRFQVEzQjRGdm5r?=
+ =?utf-8?B?VG9tY1VuQ0ExbXJYK3VpQzhZdnZlYXIvVVo3Y1dsMmFZaWh5dDB6UU9adktN?=
+ =?utf-8?B?TWF0aC9vMGxNQ29RQ1h6QUNlMWdVNkJPRUFOSlFFSUt5eDFxblZ1STVtYklr?=
+ =?utf-8?B?Vm84VzNEUnJIVmRpa2xtVklQeXUycjhNVEpDNEFJZ2x3T2tPVW54L2lHQkZn?=
+ =?utf-8?B?UVU1QUg1U0RDTmxWTCsrai9JTGZnMm94MmZMUURjdFNMWVdNZndlMWJ0d1V6?=
+ =?utf-8?B?Ri9CTGJ1d3BmTTlxNG12ZW42WDlhSW5ieDVqM291TVhSY252TWJHWXlYWFVp?=
+ =?utf-8?B?WXBxTU1WbVJnbU1UZCs0RlJOSHIwYlU1eGRONzlpSS9zN1Y4OFZOc0lIZVd2?=
+ =?utf-8?B?VUU0amUzanVET1pYWWJoODBhMGZhbDhScnZaZXYvZGphRzcyM09ZQ2dDek9z?=
+ =?utf-8?B?OSszQjVyQitEekg3c0FycVhVa2Z6NEFYaHBKZEg1YW5rWk5YNkdXaU9VbUZ2?=
+ =?utf-8?B?dTRQQXNBa0UzSXVWN3VFeXRBKy9SY3FzalNMVjJNbzF5ZlUzcE1nN0VrRzlt?=
+ =?utf-8?B?cjc3Q3FSNGlVMDBETnhvRDZGdEhDSXFXUU1xWXh3aDdZNDc0OFgzTnJTMnlP?=
+ =?utf-8?B?dHZ4bzRoUDNkeWw2ZFRQemE4eFo2ZCsxWnE0YlJEWXhDSDJyWDQ1ampRZXlO?=
+ =?utf-8?B?SmVaUENQZ1E0QVlDSXdGRTg3RmdxY0F4aVJ2RjNIaHA4TDVNS1VMQkJabEJ1?=
+ =?utf-8?B?SGVhQ2xheVFWOCtwZlQvSytwRlBvelFtc25sQzlJaGE2L3dzNTU3VG55Nis0?=
+ =?utf-8?B?alAwVHpXcitjSWxOMEwwR1V1VzIvcmZ2YVZ6T2FYN01DdUkxZ3B3WTVXeVZp?=
+ =?utf-8?B?SFRYcGwxYklZVXBHWmJvekhWNk1qNnZHZzRHK09DT2RKZGZWZHE0OXR0MmRq?=
+ =?utf-8?B?SU1KdVBBdFdJUU50RnlYYTB5K0RuaDlYUVNWbmwvOEpzZ2gzaVY1QmtzS2RC?=
+ =?utf-8?B?R0NQVS9KVVNoeHROelhkR2ptWWx2MjBtVnJ5WlJ4czZLUW5FelZRZ24rZ3pN?=
+ =?utf-8?B?TUduMDJscU91U3d2YzNCZ3E4Y3lNTEdhTi9zNXFSY0U1d1JCWlhFcDNjM1VR?=
+ =?utf-8?B?dkhYaVpqOFVDdWN0cEMyU2UzRmJoeE9BWDBRTlBzcC9mbHgvZVFqTjNRTnYr?=
+ =?utf-8?B?TWhIaGF1c2Erd0NGSkJlMVFOd1UvbGZwUG9XVEdCK2dtMG1XWWV6a05OeUUz?=
+ =?utf-8?B?cGNqcG1sZytyTEE9PQ==?=
+MIME-Version: 1.0
+
+--000000000000e909ea05906a0eff
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Call for Papers*
+
+
+
+*2019 IEEE International Conference on Big Data (IEEE BigData 2019)*
+
+http://bigdataieee.org/BigData2019/
+
+December 10-13, 2019,  Los Angeles, CA, USA
+
+
+
+In recent years, =E2=80=9CBig Data=E2=80=9D has become a new ubiquitous ter=
+m. Big Data is
+transforming science, engineering, medicine, healthcare, finance, business,
+and ultimately our society itself. The IEEE Big Data conference series
+started in 2013 has established itself as the top tier research conference
+in Big Data.
+
+=C2=B7      The first conference IEEE Big Data 2013 had more than 400 regis=
+tered
+participants from 40 countries ( http://bigdataieee.org/BigData2013/) and
+the regular paper acceptance  rate is 17.0%.
+
+=C2=B7     The IEEE Big Data 2017 ( http://bigdataieee.org/BigData2017/ ,
+regular paper acceptance rate: 17.8%) was held in Boston, MA, Dec 11-14,
+2017 with close to 1000 registered participants from 50 countries.
+
+=C2=B7     The IEEE Big Data 2018 ( http://bigdataieee.org/BigData2018/ ,
+regular paper acceptance rate: 19.7%) was held in Seattle, WA, Dec 10-13,
+2018 with close to 1100 registered participants from 47 countries.
+
+
+
+
+
+ The 2019 IEEE International Conference on Big Data (IEEE BigData 2019)
+will continue the success of the previous IEEE Big Data conferences. It
+will provide a leading forum for disseminating the latest results in Big
+Data Research, Development, and Applications.
+
+
+
+We solicit high-quality original research papers (and significant
+work-in-progress papers) in any aspect of Big Data with emphasis on 5Vs
+(Volume, Velocity, Variety, Value and Veracity), including the Big Data
+challenges in scientific and engineering, social, sensor/IoT/IoE, and
+multimedia (audio, video, image, etc.) big data systems and applications. T=
+he
+conference adopts single-blind review policy. We expect to have a very high
+quality and exciting technical program at Seattle this year. *Example
+topics of interest includes but is not limited to the following*:
+
+
+
+1.    Big Data Science and Foundations
+
+a.    Novel Theoretical Models for Big Data
+
+b.    New Computational Models for Big Data
+
+c.    Data and Information Quality for Big Data
+
+d.    New Data Standards
+
+
+
+2.    Big Data Infrastructure
+
+a.     Cloud/Grid/Stream Computing for Big Data
+
+b.     High Performance/Parallel Computing  Platforms for Big Data
+
+c.     Autonomic Computing and Cyber-infrastructure, System Architectures,
+Design and Deployment
+
+d.     Energy-efficient Computing for Big Data
+
+e.     Programming Models and Environments for Cluster, Cloud, and Grid
+Computing to Support Big Data
+
+f.      Software Techniques and Architectures in Cloud/Grid/Stream Computin=
+g
+
+g.     Big Data Open Platforms
+
+h.     New Programming Models for Big Data beyond Hadoop/MapReduce, STORM
+
+i.      Software Systems to Support Big Data Computing
+
+
+
+3.     Big Data Management
+
+a.     Search and Mining of variety of data including scientific and
+engineering, social, sensor/IoT/IoE, and multimedia data
+
+b.     Algorithms and Systems for Big DataSearch
+
+c.     Distributed, and Peer-to-peer Search
+
+d.     Big Data Search  Architectures, Scalability and Efficiency
+
+e.     Data Acquisition, Integration, Cleaning,  and Best Practices
+
+f.      Visualization Analytics for Big Data
+
+g.     Computational Modeling and Data Integration
+
+h.     Large-scale Recommendation Systems and Social Media Systems
+
+i.      Cloud/Grid/Stream Data Mining- Big Velocity Data
+
+j.      Link and Graph Mining
+
+k.     Semantic-based Data Mining and Data Pre-processing
+
+l.      Mobility and Big Data
+
+m.   Multimedia and Multi-structured Data- Big Variety Data
+
+
+
+
+
+4.     Big Data Search and Mining
+
+a.     Social Web Search and Mining
+
+b.     Web Search
+
+c.     Algorithms and Systems for Big Data Search
+
+d.     Distributed, and Peer-to-peer Search
+
+e.     Big Data Search  Architectures, Scalability and Efficiency
+
+f.      Data Acquisition, Integration, Cleaning,  and Best Practices
+
+g.     Visualization Analytics for Big Data
+
+h.     Computational Modeling and Data Integration
+
+i.      Large-scale Recommendation Systems and Social Media Systems
+
+j.      Cloud/Grid/StreamData Mining- Big Velocity Data
+
+k.     Link and Graph Mining
+
+l.      Semantic-based Data Mining and Data Pre-processing
+
+m.   Mobility and Big Data
+
+n.    Multimedia and Multi-structured Data- Big Variety Data
+
+
+
+5.     Ethics, Privacy and Trust in Big Data Systems
+
+a.     Techniques and models for fairness and diversity
+
+b.    Experimental studies of fairness, diversity, accountability, and
+transparency
+
+c.    Techniques and models for transparency and interpretability
+
+d.    Trade-offs between transparency and privacy
+
+e.    Intrusion Detection for Gigabit Networks
+
+f.     Anomaly and APT Detection in Very Large Scale Systems
+
+g.    High Performance Cryptography
+
+h.    Visualizing Large Scale Security Data
+
+i.     Threat Detection using Big Data Analytics
+
+j.     Privacy Preserving Big Data Collection/Analytics
+
+k.    HCI Challenges for Big Data Security & Privacy
+
+l.     Trust management in IoT and other Big Data Systems
+
+
+
+
+
+6.     Hardware/OS Acceleration for Big Data
+
+a.    FPGA/CGRA/GPU accelerators for Big Data applications
+
+b.    Operating system support and runtimes for hardware accelerators
+
+c.    Programming models and platforms for accelerators
+
+d.    Domain-specific and heterogeneous architectures
+
+e.    Novel system organizations and designs
+
+f.     Computation in memory/storage/network
+
+g.    Persistent, non-volatile and emerging memory for Big Data
+
+h.    Operating system support for high-performance network architectures
+
+
+
+7.     Big Data Applications
+
+a.    Complex Big Data Applications in Science, Engineering, Medicine,
+Healthcare, Finance, Business, Law, Education, Transportation, Retailing,
+Telecommunication
+
+b.    Big Data Analytics in Small Business Enterprises (SMEs),
+
+c.    Big Data Analytics in Government, Public Sector and Society in Genera=
+l
+
+d.    Real-life Case Studies of Value Creation through Big Data Analytics
+
+e.    Big Data as a Service
+
+f.     Big Data Industry Standards
+
+g.  Experiences with Big Data Project Deployments
+
+
+
+*INDUSTRIAL Track*
+
+The Industrial Track solicits papers describing implementations of Big Data
+solutions relevant to industrial settings. The focus of industry track is
+on papers that address the practical, applied, or pragmatic or new research
+challenge issues related to the use of Big Data in industry. We accept full
+papers (up to 10 pages) and extended abstracts (2-4 pages).
+
+
+
+*Student Travel Award*
+
+IEEE Big Data 2019 will offer*student travel *to student authors (including
+post-docs)
+
+
+
+
+
+*Paper Submission:*
+
+Please submit a full-length paper (up to *10 page IEEE 2-column format*)
+through the online submission system.
+
+https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?subarea=3DB=
+igD
+
+Papers should be formatted to IEEE Computer Society Proceedings Manuscript
+Formatting Guidelines (see link to "formatting instructions" below).
+
+*Formatting Instructions*
+8.5" x 11" (DOC
+<ftp://pubftp.computer.org/press/outgoing/proceedings/instruct8.5x11x2.doc>=
+,
+PDF
+<ftp://pubftp.computer.org/press/outgoing/proceedings/instruct8.5x11x2.pdf>=
+)
+*LaTex Formatting Macros*
+<ftp://pubftp.computer.org/Press/Outgoing/proceedings/IEEE_CS_Latex8.5x11x2=
+.zip>
+
+*Important Dates:*
+
+Electronic submission of full papers: August 19, 2019
+
+Notification of paper acceptance: Oct 16, 2019
+
+Camera-ready of accepted papers: Nov 10, 2019
+
+Conference: Dec 9-12, 2019
+
+
+
+
+
+
+
+*Conference Co-Chairs:*
+
+Dr. Roger Barga, Amazon.com, USA
+
+Prof Carlo Zaniolo, UCLA, USA
+
+
+
+*Program Co-Chairs:*
+
+Dr. Chaitanya Baru, San Diego Supercomputer Center/UC San Diego, USA
+
+Dr, Jun (Luke) Huan, Baidu Big Data Lab, China
+
+Prof. Latifur Khan, University of Texas at Dallas, USA
+
+
+
+*Vice Chairs in Big Data Science and Foundations*
+
+Prof. Jingrui He, UIUC, USA
+
+Prof. Wenqing Hu, Missouri S&T University, USA
+
+
+
+*Vice Chairs in Big Data Infrastructure*
+
+Prof. Hanghang Tong, UIUC, USA
+
+Dr. Yinglong Xia, Huawei, USA
+
+
+
+*Vice Chairs in Big Data Management*
+
+Prof. Christopher Jermaine, Rice University, USA
+Prof. Zhou Yongluan, Univ. of Copenhagen, Denmark
+
+
+
+*Vice Chairs in Big Data Search and Mining*
+
+Prof. Quanquan Gu, UCLA, USA
+
+Prof. Aditya Prakash, Virginia Tech, USA
+
+
+
+*Vice Chairs in Big Data Security, Privacy and Trust*
+
+Prof. Dongwon Lee, Penn State University, USA
+
+Prof. Julia Stoyanovich,  New York University, USA
+
+
+
+*Vice Chairs in Hardware/OS Accelerating for Big Data*
+
+Prof. Sang-Woo Jun, UC Irvine, USA
+
+Prof. Harry Xu, UCLA, USA
+
+
+
+*Vice Chairs in Big Data Applications*
+
+Prof. Xia Ning, Ohio State University, USA
+
+Prof. Tim Weninger, Univ. of Notre Dame, USA
+
+
+
+*Industry and Government Program Committee Co-Chairs*
+
+Dr. Ronay Ak, NVIDIA, USA
+
+Dr. Yuanyuan Tian, IBM Almaden Research Center, USA,
+
+
+
+
+
+
+
+To subscribe to this list, the user sends an email,
+
+with blank subject line, to
+listserv@lists.drexel.edu. In the text box, the user
+types:
+
+subscribe BIGDATA
+
+To unsubscribe from a list, the user sends an email to
+listserv@lists.drexel.edu with the message
+
+
+
+signoff BIGDATA
+
+########################################################################
+
+To unsubscribe from the BIGDATA list, click the following link:
+http://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3MzE5IGZvYWFkQENBTFBPTFkuRURVIEJJR0RBVEEgIF8yC91ocvJr&c=3DSIGNOFF
+
+--000000000000e909ea05906a0eff
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><p class=3D"MsoNormal" sty=
+le=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0=
+.0001pt;font-family:&quot;Times New Roman&quot;,serif"><b><span style=3D"fo=
+nt-size:22pt">Call for Papers<span></span></span></b></p><p class=3D"MsoNor=
+mal" style=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0=
+in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><span>&nbsp;=
+</span></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0=
+);text-align:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Ro=
+man&quot;,serif"><b><span style=3D"font-size:14pt">2019 IEEE International =
+Conference on Big Data&nbsp;(IEEE BigData 2019)<span></span></span></b></p>=
+<p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-alig=
+n:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,s=
+erif"><a href=3D"http://bigdataieee.org/BigData2019/" style=3D"color:purple=
+;font-family:&quot;Times New Roman&quot;,serif;text-decoration:underline"><=
+span lang=3D"IT">http://bigdataieee.org/BigData2019/</span></a><span lang=
+=3D"IT"><span></span></span></p><p class=3D"MsoNormal" style=3D"font-size:m=
+edium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-fami=
+ly:&quot;Times New Roman&quot;,serif"><span lang=3D"IT">December 10-13, 201=
+9,&nbsp;&nbsp;Los Angeles, CA, USA<span></span></span></p><p class=3D"MsoNo=
+rmal" style=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:=
+0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><span lang=
+=3D"IT">&nbsp;</span></p><p class=3D"MsoNormal" style=3D"font-size:medium;c=
+olor:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&q=
+uot;,serif"><span style=3D"font-size:11pt">In recent years, =E2=80=9CBig Da=
+ta=E2=80=9D has become a new ubiquitous term. Big Data is transforming scie=
+nce, engineering, medicine, healthcare, finance, business, and ultimately o=
+ur society itself.&nbsp;</span><span style=3D"font-size:11pt;font-family:Ca=
+mbria,serif">The IEEE Big Data conference series started in 2013 has establ=
+ished itself as the top tier research conference in Big Data.</span><span s=
+tyle=3D"font-size:11pt;font-family:Calibri,sans-serif"></span><span style=
+=3D"font-size:11pt;font-family:Cambria,serif">&nbsp;</span><span style=3D"f=
+ont-size:11pt;font-family:Calibri,sans-serif"><span></span></span></p><p cl=
+ass=3D"gmail-MsoListParagraphCxSpFirst" style=3D"margin:0in 0in 0.0001pt 0.=
+5in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><span sty=
+le=3D"font-size:11pt;font-family:Symbol">=C2=B7<span style=3D"font-stretch:=
+normal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&q=
+uot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style=3D"font=
+-size:11pt;font-family:Cambria,serif">The first conference IEEE Big Data 20=
+13 had more&nbsp;than 400 registered participants from 40 countries (<span =
+class=3D"gmail-apple-converted-space">&nbsp;</span></span><a href=3D"http:/=
+/bigdataieee.org/BigData2013/">http://bigdataieee.org/BigData2013/</a><span=
+ class=3D"gmail-MsoHyperlink" style=3D"font-family:&quot;Times New Roman&qu=
+ot;,serif;color:blue;text-decoration:underline"><span style=3D"font-size:11=
+pt;font-family:Cambria,serif">)</span></span><span class=3D"gmail-apple-con=
+verted-space"><span style=3D"font-size:11pt;font-family:Cambria,serif">&nbs=
+p;and the&nbsp;</span></span><span style=3D"font-size:11pt;font-family:Camb=
+ria,serif">regular paper acceptance &nbsp;rate is 17.0%.</span><span style=
+=3D"font-size:11pt;font-family:Calibri,sans-serif"><span></span></span></p>=
+<p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.000=
+1pt 0.5in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><sp=
+an style=3D"font-family:Symbol;color:black">=C2=B7<span style=3D"font-stret=
+ch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roma=
+n&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style=3D"color:b=
+lack">The IEEE Big Data 2017 (<span class=3D"gmail-apple-converted-space">&=
+nbsp;</span></span><a href=3D"http://bigdataieee.org/BigData2017/">http://b=
+igdataieee.org/BigData2017/</a><span class=3D"gmail-apple-converted-space">=
+<span style=3D"color:black">&nbsp;</span></span><span style=3D"color:black"=
+>,&nbsp; regular paper acceptance rate: 17.8%) was held in Boston, MA, Dec =
+11-14, 2017 with close to 1000 registered participants from 50 countries.<s=
+pan></span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=
+=3D"margin:0in 0in 0.0001pt 0.5in;font-size:12pt;font-family:&quot;Times Ne=
+w Roman&quot;,serif"><span style=3D"font-family:Symbol">=C2=B7<span style=
+=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;=
+Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The IEEE=
+ Big Data 2018 (<span class=3D"gmail-apple-converted-space">&nbsp;</span><a=
+ href=3D"http://bigdataieee.org/BigData2018/">http://bigdataieee.org/BigDat=
+a2018/</a><span class=3D"gmail-apple-converted-space">&nbsp;</span>,&nbsp; =
+regular paper acceptance rate: 19.7%) was held in Seattle, WA, Dec 10-13, 2=
+018 with close to 1100 registered participants from 47 countries.<span></sp=
+an></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"font-size:med=
+ium;color:rgb(0,0,0);margin:0in 0in 0.0001pt 0.5in;font-family:&quot;Times =
+New Roman&quot;,serif"><span>&nbsp;</span></p><p class=3D"gmail-MsoListPara=
+graphCxSpLast" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.=
+0001pt 0.5in;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"=
+font-size:11pt;font-family:Calibri,sans-serif"><span>&nbsp;</span></span></=
+p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-al=
+ign:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;=
+,serif">&nbsp;The 2019 IEEE International Conference on Big Data (IEEE BigD=
+ata 2019) will continue the success of the previous IEEE Big Data conferenc=
+es. It will provide a leading forum for disseminating the latest results in=
+ Big Data Research, Development, and Applications.&nbsp;<span></span></p><p=
+ class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-align:=
+justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,ser=
+if"><span style=3D"font-family:Verdana,sans-serif;color:rgb(34,34,34)"><spa=
+n>&nbsp;</span></span></p><p class=3D"gmail-MsoPlainText" style=3D"color:rg=
+b(0,0,0);margin:0in 0in 0.0001pt;font-size:10.5pt;font-family:Consolas"><sp=
+an style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">W=
+e solicit high-quality original research papers (and significant work-in-pr=
+ogress papers) in any aspect of Big Data with emphasis on 5Vs (Volume, Velo=
+city, Variety, Value and Veracity), including the Big Data challenges in sc=
+ientific and engineering, social, sensor/IoT/IoE, and multimedia (audio, vi=
+deo, image, etc.) big data systems and applications.&nbsp;<span style=3D"co=
+lor:red">The conference adopts single-blind review policy</span>. We expect=
+ to have a very high quality and exciting technical program at Seattle this=
+ year.&nbsp;<b><i>Example topics of interest includes but is not limited to=
+ the following</i></b>:<span></span></span></p><p class=3D"MsoNormal" style=
+=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0=
+001pt;font-family:&quot;Times New Roman&quot;,serif"><a name=3D"_Hlk2071575=
+"><span style=3D"font-family:Verdana,sans-serif;color:rgb(34,34,34)"><span>=
+&nbsp;</span></span></a></p><p class=3D"MsoNormal" style=3D"margin:0in 0in =
+0.0001pt 0.25in;text-align:justify;font-size:12pt;font-family:&quot;Times N=
+ew Roman&quot;,serif">1.<span style=3D"font-stretch:normal;font-size:7pt;li=
+ne-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp=
+;&nbsp;</span>Big Data Science and Foundations<span></span></p><p class=3D"=
+MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;text-align:justify;font-=
+size:12pt;font-family:&quot;Times New Roman&quot;,serif">a.<span style=3D"f=
+ont-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times=
+ New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Novel Theoretical Models f=
+or Big Data<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in =
+0.0001pt 0.75in;text-align:justify;font-size:12pt;font-family:&quot;Times N=
+ew Roman&quot;,serif">b.<span style=3D"font-stretch:normal;font-size:7pt;li=
+ne-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp=
+;&nbsp;</span>New Computational Models for Big Data&nbsp;<span></span></p><=
+p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;text-align:ju=
+stify;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">c.<span=
+ style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:=
+&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Data and Inform=
+ation Quality for Big Data<span></span></p><p class=3D"MsoNormal" style=3D"=
+margin:0in 0in 0.0001pt 0.75in;text-align:justify;font-size:12pt;font-famil=
+y:&quot;Times New Roman&quot;,serif">d.<span style=3D"font-stretch:normal;f=
+ont-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&n=
+bsp;&nbsp;&nbsp;&nbsp;</span>New Data Standards<span></span></p><p class=3D=
+"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;m=
+argin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><span=
+>&nbsp;</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0=
+.25in;text-align:justify;font-size:12pt;font-family:&quot;Times New Roman&q=
+uot;,serif">2.<span style=3D"font-stretch:normal;font-size:7pt;line-height:=
+normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</s=
+pan>Big Data Infrastructure<span></span></p><p class=3D"MsoNormal" style=3D=
+"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New =
+Roman&quot;,serif">a.<span style=3D"font-stretch:normal;font-size:7pt;line-=
+height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;</span>Cloud/Grid/Stream Computing for Big Data&nbsp;<span></span=
+></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-si=
+ze:12pt;font-family:&quot;Times New Roman&quot;,serif">b.<span style=3D"fon=
+t-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times N=
+ew Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>High Performance/Paral=
+lel Computing&nbsp;&nbsp;Platforms for Big Data<span></span></p><p class=3D=
+"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-fam=
+ily:&quot;Times New Roman&quot;,serif">c.<span style=3D"font-stretch:normal=
+;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Autonomic Computing and Cyber-infrastr=
+ucture, System Architectures, Design and Deployment<span></span></p><p clas=
+s=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font=
+-family:&quot;Times New Roman&quot;,serif">d.<span style=3D"font-stretch:no=
+rmal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quo=
+t;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Energy-efficient Computing for Big=
+ Data<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001=
+pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">e.<=
+span style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-fam=
+ily:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Progr=
+amming Models and Environments for Cluster, Cloud, and Grid Computing to Su=
+pport Big Data&nbsp;<span></span></p><p class=3D"MsoNormal" style=3D"margin=
+:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&q=
+uot;,serif">f.<span style=3D"font-stretch:normal;font-size:7pt;line-height:=
+normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;</span>Software Techniques and Architectures in Cloud/Grid/Stream =
+Computing<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.=
+0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"=
+>g.<span style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font=
+-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>B=
+ig Data Open Platforms<span></span></p><p class=3D"MsoNormal" style=3D"marg=
+in:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman=
+&quot;,serif">h.<span style=3D"font-stretch:normal;font-size:7pt;line-heigh=
+t:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;</span>New Programming Models for Big Data beyond Hadoop/MapReduce, ST=
+ORM&nbsp;<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.=
+0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"=
+>i.<span style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font=
+-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</=
+span>Software Systems to Support Big Data Computing<span></span></p><p clas=
+s=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0=
+.0001pt;font-family:&quot;Times New Roman&quot;,serif"><span>&nbsp;</span><=
+/p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.25in;font-size=
+:12pt;font-family:&quot;Times New Roman&quot;,serif">3.<span style=3D"font-=
+stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Big Data Management<span=
+></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;=
+font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">a.<span style=
+=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;=
+Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Search and Mini=
+ng of variety of data including scientific and engineering, social, sensor/=
+IoT/IoE, and multimedia data<span></span></p><p class=3D"MsoNormal" style=
+=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times N=
+ew Roman&quot;,serif">b.<span style=3D"font-stretch:normal;font-size:7pt;li=
+ne-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;</span>Algorithms and Systems for Big DataSearch<span></span><=
+/p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size=
+:12pt;font-family:&quot;Times New Roman&quot;,serif">c.<span style=3D"font-=
+stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Distributed, and Peer-to=
+-peer Search<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in=
+ 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,ser=
+if">d.<span style=3D"font-stretch:normal;font-size:7pt;line-height:normal;f=
+ont-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</spa=
+n>Big Data Search&nbsp;&nbsp;Architectures, Scalability and Efficiency<span=
+></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;=
+font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">e.<span style=
+=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;=
+Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Data Acquisitio=
+n, Integration, Cleaning,&nbsp;&nbsp;and Best Practices<span></span></p><p =
+class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;=
+font-family:&quot;Times New Roman&quot;,serif">f.<span style=3D"font-stretc=
+h:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman=
+&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Visualization Analytics =
+for Big Data&nbsp;<span></span></p><p class=3D"MsoNormal" style=3D"margin:0=
+in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quo=
+t;,serif">g.<span style=3D"font-stretch:normal;font-size:7pt;line-height:no=
+rmal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;</span>Computational Modeling and Data Integration&nbsp;<span></span></p><=
+p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12p=
+t;font-family:&quot;Times New Roman&quot;,serif">h.<span style=3D"font-stre=
+tch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New Rom=
+an&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Large-scale Recommendation S=
+ystems and Social Media Systems<span></span></p><p class=3D"MsoNormal" styl=
+e=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif">i.<span style=3D"font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;</span>Cloud/Grid/Stream Data Mining- Big Velocity Data=
+<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.=
+75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">j.<span =
+style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&=
+quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Link=
+ and Graph Mining<span></span></p><p class=3D"MsoNormal" style=3D"margin:0i=
+n 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,serif">k.<span style=3D"font-stretch:normal;font-size:7pt;line-height:nor=
+mal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+</span>Semantic-based Data Mining and Data Pre-processing<span></span></p><=
+p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12p=
+t;font-family:&quot;Times New Roman&quot;,serif">l.<span style=3D"font-stre=
+tch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New Rom=
+an&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Mobility and Big Data<=
+span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.7=
+5in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">m.<span s=
+tyle=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&q=
+uot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;</span>Multimedia and Multi-st=
+ructured Data- Big Variety Data<span></span></p><p class=3D"MsoNormal" styl=
+e=3D"margin:0in 0in 0.0001pt 0.5in;font-size:medium;color:rgb(0,0,0);font-f=
+amily:&quot;Times New Roman&quot;,serif"><span>&nbsp;</span></p><p class=3D=
+"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.000=
+1pt;font-family:&quot;Times New Roman&quot;,serif"><span>&nbsp;</span></p><=
+p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.25in;font-size:12p=
+t;font-family:&quot;Times New Roman&quot;,serif">4.<span style=3D"font-stre=
+tch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New Rom=
+an&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Big Data Search and Mining<s=
+pan></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75=
+in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">a.<span st=
+yle=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&qu=
+ot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Social Web S=
+earch and Mining<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in=
+ 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;=
+,serif">b.<span style=3D"font-stretch:normal;font-size:7pt;line-height:norm=
+al;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<=
+/span>Web Search<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in=
+ 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;=
+,serif">c.<span style=3D"font-stretch:normal;font-size:7pt;line-height:norm=
+al;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<=
+/span>Algorithms and Systems for Big Data Search<span></span></p><p class=
+=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-=
+family:&quot;Times New Roman&quot;,serif">d.<span style=3D"font-stretch:nor=
+mal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot=
+;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Distributed, and Peer-to-peer Searc=
+h<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0=
+.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">e.<span=
+ style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:=
+&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Big Data =
+Search&nbsp;&nbsp;Architectures, Scalability and Efficiency<span></span></p=
+><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:1=
+2pt;font-family:&quot;Times New Roman&quot;,serif">f.<span style=3D"font-st=
+retch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New R=
+oman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Data Acquisition, In=
+tegration, Cleaning,&nbsp;&nbsp;and Best Practices<span></span></p><p class=
+=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-=
+family:&quot;Times New Roman&quot;,serif">g.<span style=3D"font-stretch:nor=
+mal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot=
+;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Visualization Analytics for Big Dat=
+a&nbsp;<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.00=
+01pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">h=
+.<span style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-f=
+amily:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Com=
+putational Modeling and Data Integration&nbsp;<span></span></p><p class=3D"=
+MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-fami=
+ly:&quot;Times New Roman&quot;,serif">i.<span style=3D"font-stretch:normal;=
+font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Large-scale Recommendation System=
+s and Social Media Systems<span></span></p><p class=3D"MsoNormal" style=3D"=
+margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New R=
+oman&quot;,serif">j.<span style=3D"font-stretch:normal;font-size:7pt;line-h=
+eight:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;</span>Cloud/Grid/StreamData Mining- Big Velocity Data<span>=
+</span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;f=
+ont-size:12pt;font-family:&quot;Times New Roman&quot;,serif">k.<span style=
+=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;=
+Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Link and Graph =
+Mining<span></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.000=
+1pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">l.=
+<span style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-fa=
+mily:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</spa=
+n>Semantic-based Data Mining and Data Pre-processing<span></span></p><p cla=
+ss=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;fon=
+t-family:&quot;Times New Roman&quot;,serif">m.<span style=3D"font-stretch:n=
+ormal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&qu=
+ot;">&nbsp;&nbsp;&nbsp;</span>Mobility and Big Data<span></span></p><p clas=
+s=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt 0.75in;text-align:justify;=
+font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">n.<span style=
+=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;=
+Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Multimedia and Multi-=
+structured Data- Big Variety Data<span></span></p><p class=3D"MsoNormal" st=
+yle=3D"margin:0in 0in 0.0001pt 0.75in;font-size:medium;color:rgb(0,0,0);tex=
+t-align:justify;font-family:&quot;Times New Roman&quot;,serif"><span>&nbsp;=
+</span></p><p class=3D"gmail-MsoListParagraphCxSpFirst" style=3D"margin:0in=
+ 0in 0.0001pt 0.25in;font-size:12pt;font-family:&quot;Times New Roman&quot;=
+,serif">5.<span style=3D"font-stretch:normal;font-size:7pt;line-height:norm=
+al;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<=
+/span><span style=3D"color:rgb(55,55,55)">Ethics, Privacy and Trust in Big =
+Data Systems</span><span></span></p><p class=3D"gmail-MsoListParagraphCxSpM=
+iddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&=
+quot;Times New Roman&quot;,serif"><span style=3D"font-size:11pt">a.<span st=
+yle=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&qu=
+ot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Techn=
+iques and models for fairness and diversity&nbsp;<span style=3D"font-size:1=
+1pt"><span></span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" =
+style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif">b.<span style=3D"font-stretch:normal;font-size:7=
+pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;=
+&nbsp;&nbsp;</span>Experimental studies of fairness, diversity, accountabil=
+ity, and transparency&nbsp;<span></span></p><p class=3D"gmail-MsoListParagr=
+aphCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-=
+family:&quot;Times New Roman&quot;,serif">c.<span style=3D"font-stretch:nor=
+mal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot=
+;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Techniques and models for transparency an=
+d interpretability&nbsp;<span></span></p><p class=3D"gmail-MsoListParagraph=
+CxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-fam=
+ily:&quot;Times New Roman&quot;,serif">d.<span style=3D"font-stretch:normal=
+;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">=
+&nbsp;&nbsp;&nbsp;&nbsp;</span>Trade-offs between transparency and privacy<=
+span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"marg=
+in:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman=
+&quot;,serif">e.<span style=3D"font-stretch:normal;font-size:7pt;line-heigh=
+t:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<=
+/span>Intrusion Detection for Gigabit Networks<span></span></p><p class=3D"=
+gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;f=
+ont-size:12pt;font-family:&quot;Times New Roman&quot;,serif">f.<span style=
+=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;=
+Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Anomaly and APT=
+ Detection in Very Large Scale Systems<span></span></p><p class=3D"gmail-Ms=
+oListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size=
+:12pt;font-family:&quot;Times New Roman&quot;,serif">g.<span style=3D"font-=
+stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span>High Performance Cryptography<=
+span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"marg=
+in:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman=
+&quot;,serif">h.<span style=3D"font-stretch:normal;font-size:7pt;line-heigh=
+t:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<=
+/span>Visualizing Large Scale Security Data<span></span></p><p class=3D"gma=
+il-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font=
+-size:12pt;font-family:&quot;Times New Roman&quot;,serif">i.<span style=3D"=
+font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Time=
+s New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Threat Detection us=
+ing Big Data Analytics<span></span></p><p class=3D"gmail-MsoListParagraphCx=
+SpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-famil=
+y:&quot;Times New Roman&quot;,serif">j.<span style=3D"font-stretch:normal;f=
+ont-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Privacy Preserving Big Data Collection/A=
+nalytics<span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" styl=
+e=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times =
+New Roman&quot;,serif">k.<span style=3D"font-stretch:normal;font-size:7pt;l=
+ine-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbs=
+p;&nbsp;</span>HCI Challenges for Big Data Security &amp; Privacy<span></sp=
+an></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0i=
+n 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,se=
+rif">l.<span style=3D"font-stretch:normal;font-size:7pt;line-height:normal;=
+font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sp=
+an>Trust management in IoT and other Big Data Systems<span></span></p><p cl=
+ass=3D"gmail-MsoListParagraphCxSpLast" style=3D"font-size:medium;color:rgb(=
+0,0,0);text-align:justify;margin:0in 0in 0.0001pt 0.5in;font-family:&quot;T=
+imes New Roman&quot;,serif"><span>&nbsp;</span></p><p class=3D"MsoNormal" s=
+tyle=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in=
+ 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><span>&nbsp;</span=
+></p><p class=3D"gmail-MsoListParagraphCxSpFirst" style=3D"margin:0in 0in 0=
+.0001pt 0.25in;text-align:justify;font-size:12pt;font-family:&quot;Times Ne=
+w Roman&quot;,serif">6.<span style=3D"font-stretch:normal;font-size:7pt;lin=
+e-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;</span>Hardware/OS&nbsp;Acceleration for Big Data<span></span><=
+/p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.=
+0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"=
+><span style=3D"font-size:11pt">a.<span style=3D"font-stretch:normal;font-s=
+ize:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&=
+nbsp;&nbsp;&nbsp;</span></span>FPGA/CGRA/GPU accelerators for Big Data appl=
+ications<span style=3D"font-size:11pt"><span></span></span></p><p class=3D"=
+gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;f=
+ont-size:12pt;font-family:&quot;Times New Roman&quot;,serif">b.<span style=
+=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;=
+Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Operating system supp=
+ort and runtimes for hardware accelerators<span></span></p><p class=3D"gmai=
+l-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font-=
+size:12pt;font-family:&quot;Times New Roman&quot;,serif">c.<span style=3D"f=
+ont-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times=
+ New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Programming models and pla=
+tforms for accelerators<span></span></p><p class=3D"gmail-MsoListParagraphC=
+xSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-fami=
+ly:&quot;Times New Roman&quot;,serif">d.<span style=3D"font-stretch:normal;=
+font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&=
+nbsp;&nbsp;&nbsp;&nbsp;</span>Domain-specific and heterogeneous architectur=
+es<span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"m=
+argin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Times New Ro=
+man&quot;,serif">e.<span style=3D"font-stretch:normal;font-size:7pt;line-he=
+ight:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbs=
+p;</span>Novel system organizations and designs<span></span></p><p class=3D=
+"gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;=
+font-size:12pt;font-family:&quot;Times New Roman&quot;,serif">f.<span style=
+=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;=
+Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Computation in =
+memory/storage/network<span></span></p><p class=3D"gmail-MsoListParagraphCx=
+SpMiddle" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-famil=
+y:&quot;Times New Roman&quot;,serif">g.<span style=3D"font-stretch:normal;f=
+ont-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&n=
+bsp;&nbsp;&nbsp;&nbsp;</span>Persistent, non-volatile and emerging memory f=
+or Big Data<span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" s=
+tyle=3D"margin:0in 0in 0.0001pt 0.75in;font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,serif">h.<span style=3D"font-stretch:normal;font-size:7p=
+t;line-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&=
+nbsp;&nbsp;</span>Operating system support for high-performance network arc=
+hitectures<span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" st=
+yle=3D"margin:0in 0in 0.0001pt 0.25in;font-size:medium;color:rgb(0,0,0);tex=
+t-align:justify;font-family:&quot;Times New Roman&quot;,serif"><span>&nbsp;=
+</span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0i=
+n 0in 0.0001pt 0.25in;text-align:justify;font-size:12pt;font-family:&quot;T=
+imes New Roman&quot;,serif">7.<span style=3D"font-stretch:normal;font-size:=
+7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;</span>Big Data Applications<span></span></p><p class=3D=
+"gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0.05in 0.75in;li=
+ne-height:15.6pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,ser=
+if"><span style=3D"color:black">a.<span style=3D"font-stretch:normal;font-s=
+ize:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;">&nbsp;&=
+nbsp;&nbsp;&nbsp;</span></span><span style=3D"color:black">Complex Big Data=
+ Applications in Science, Engineering, Medicine, Healthcare, Finance, Busin=
+ess, Law, Education, Transportation, Retailing, Telecommunication<span></sp=
+an></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"margin=
+:0in 0in 0.05in 0.75in;line-height:15.6pt;font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,serif"><span style=3D"color:black">b.<span style=3D"f=
+ont-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times=
+ New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style=3D"colo=
+r:black">Big Data Analytics in Small Business Enterprises (SMEs),<span></sp=
+an></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"margin=
+:0in 0in 0.05in 0.75in;line-height:15.6pt;font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,serif"><span style=3D"color:black">c.<span style=3D"f=
+ont-stretch:normal;font-size:7pt;line-height:normal;font-family:&quot;Times=
+ New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style=3D"colo=
+r:black">Big Data Analytics in Government, Public Sector and Society in Gen=
+eral<span></span></span></p><p class=3D"gmail-MsoListParagraphCxSpMiddle" s=
+tyle=3D"margin:0in 0in 0.05in 0.75in;line-height:15.6pt;font-size:12pt;font=
+-family:&quot;Times New Roman&quot;,serif"><span style=3D"color:black">d.<s=
+pan style=3D"font-stretch:normal;font-size:7pt;line-height:normal;font-fami=
+ly:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span=
+ style=3D"color:black">Real-life Case Studies of Value Creation through Big=
+ Data Analytics<span></span></span></p><p class=3D"gmail-MsoListParagraphCx=
+SpMiddle" style=3D"margin:0in 0in 0.05in 0.75in;line-height:15.6pt;font-siz=
+e:12pt;font-family:&quot;Times New Roman&quot;,serif"><span style=3D"color:=
+black">e.<span style=3D"font-stretch:normal;font-size:7pt;line-height:norma=
+l;font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;</span><=
+/span><span style=3D"color:black">Big Data as a Service<span></span></span>=
+</p><p class=3D"gmail-MsoListParagraphCxSpMiddle" style=3D"margin:0in 0in 0=
+.05in 0.75in;line-height:15.6pt;font-size:12pt;font-family:&quot;Times New =
+Roman&quot;,serif"><span style=3D"color:black">f.<span style=3D"font-stretc=
+h:normal;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman=
+&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style=3D"color:bl=
+ack">Big Data Industry Standards<span></span></span></p><p class=3D"gmail-M=
+soListParagraphCxSpLast" style=3D"margin:0in 0in 0.05in 0.75in;line-height:=
+15.6pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><span =
+style=3D"font-family:Verdana,sans-serif">g.<span style=3D"font-stretch:norm=
+al;font-size:7pt;line-height:normal;font-family:&quot;Times New Roman&quot;=
+">&nbsp;&nbsp;</span></span><span style=3D"color:black">Experiences with Bi=
+g Data Project Deployments</span><span style=3D"font-family:Verdana,sans-se=
+rif"><span></span></span></p><span style=3D"color:rgb(0,0,0);font-family:-w=
+ebkit-standard"></span><span style=3D"color:rgb(0,0,0);font-family:-webkit-=
+standard;font-size:medium"></span><p class=3D"MsoNormal" style=3D"font-size=
+:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-fa=
+mily:&quot;Times New Roman&quot;,serif"><span style=3D"font-family:Verdana,=
+sans-serif;color:rgb(34,34,34)"><span>&nbsp;</span></span></p><p class=3D"M=
+soNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001p=
+t;font-family:&quot;Times New Roman&quot;,serif"><b><span style=3D"font-siz=
+e:14pt">INDUSTRIAL Track<span></span></span></b></p><p class=3D"MsoNormal" =
+style=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0i=
+n 0.0001pt;font-family:&quot;Times New Roman&quot;,serif">The Industrial Tr=
+ack solicits papers describing implementations of Big Data solutions releva=
+nt to industrial settings. The focus of industry track is on papers that ad=
+dress the practical, applied, or pragmatic or new research challenge issues=
+ related to the use of Big Data in industry.&nbsp;We accept full papers (up=
+ to 10 pages) and extended abstracts (2-4 pages).<span></span></p><p class=
+=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-align:justif=
+y;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><i=
+><span style=3D"font-size:11.5pt"><span>&nbsp;</span></span></i></p><p clas=
+s=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-align:justi=
+fy;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><=
+b><span style=3D"font-size:14pt">Student Travel Award<span></span></span></=
+b></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);tex=
+t-align:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&q=
+uot;,serif">IEEE Big Data 2019 will offer<b>student travel&nbsp;</b>to stud=
+ent authors (including post-docs)&nbsp;<span></span></p><p class=3D"gmail-M=
+soListParagraph" style=3D"margin:0in 0in 0.0001pt 0.75in;font-size:medium;c=
+olor:rgb(0,0,0);text-align:justify;font-family:&quot;Times New Roman&quot;,=
+serif"><span>&nbsp;</span></p><p class=3D"MsoNormal" style=3D"font-size:med=
+ium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-family=
+:&quot;Times New Roman&quot;,serif"><b><span lang=3D"DE">&nbsp;</span></b><=
+/p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-a=
+lign:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot=
+;,serif"><b><u>Paper Submission</u>:<span></span></b></p><p class=3D"gmail-=
+default" style=3D"font-size:medium;margin-right:0in;margin-left:0in;font-fa=
+mily:&quot;Times New Roman&quot;,serif;color:black">Please submit a full-le=
+ngth paper (up to&nbsp;<b><span style=3D"color:red">10 page IEEE 2-column f=
+ormat</span></b>) through the online submission system.&nbsp;<span></span><=
+/p><p class=3D"gmail-default" style=3D"font-size:medium;margin-right:0in;ma=
+rgin-left:0in;font-family:&quot;Times New Roman&quot;,serif;color:black"><a=
+ href=3D"https://wi-lab.com/cyberchair/2019/bigdata19/scripts/submit.php?su=
+barea=3DBigD" style=3D"color:purple;font-family:&quot;Times New Roman&quot;=
+,serif;text-decoration:underline">https://wi-lab.com/cyberchair/2019/bigdat=
+a19/scripts/submit.php?subarea=3DBigD</a><span></span></p><p class=3D"gmail=
+-default" style=3D"font-size:medium;margin-right:0in;margin-left:0in;font-f=
+amily:&quot;Times New Roman&quot;,serif;color:black">Papers should be forma=
+tted to IEEE Computer Society Proceedings Manuscript Formatting Guidelines =
+(see link to &quot;formatting instructions&quot; below).<br><span style=3D"=
+font-size:9pt;font-family:Arial,sans-serif"><br></span><strong style=3D"fon=
+t-family:&quot;Times New Roman&quot;,serif">Formatting Instructions</strong=
+><br>8.5&quot; x 11&quot; (<a href=3D"ftp://pubftp.computer.org/press/outgo=
+ing/proceedings/instruct8.5x11x2.doc" style=3D"color:purple;font-family:&qu=
+ot;Times New Roman&quot;,serif;text-decoration:underline">DOC</a>,<a href=
+=3D"ftp://pubftp.computer.org/press/outgoing/proceedings/instruct8.5x11x2.p=
+df" style=3D"color:purple;font-family:&quot;Times New Roman&quot;,serif;tex=
+t-decoration:underline">PDF</a>)<br><a href=3D"ftp://pubftp.computer.org/Pr=
+ess/Outgoing/proceedings/IEEE_CS_Latex8.5x11x2.zip" style=3D"color:purple;f=
+ont-family:&quot;Times New Roman&quot;,serif;text-decoration:underline"><st=
+rong style=3D"font-family:&quot;Times New Roman&quot;,serif"><span style=3D=
+"color:rgb(0,28,81)">LaTex Formatting Macros</span></strong></a><span></spa=
+n></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);tex=
+t-align:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&q=
+uot;,serif"><b>Important Dates:</b><span></span></p><p class=3D"MsoNormal" =
+style=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0i=
+n 0.0001pt;font-family:&quot;Times New Roman&quot;,serif">Electronic submis=
+sion of full papers: August 19, 2019<span></span></p><p class=3D"MsoNormal"=
+ style=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0=
+in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif">Notification of =
+paper acceptance: Oct 16, 2019<span></span></p><p class=3D"MsoNormal" style=
+=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0=
+001pt;font-family:&quot;Times New Roman&quot;,serif">Camera-ready of accept=
+ed papers: Nov 10, 2019<span></span></p><p class=3D"MsoNormal" style=3D"fon=
+t-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;f=
+ont-family:&quot;Times New Roman&quot;,serif">Conference: Dec 9-12, 2019<sp=
+an></span></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,=
+0,0);text-align:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New=
+ Roman&quot;,serif"><span>&nbsp;</span></p><p class=3D"MsoNormal" style=3D"=
+font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001p=
+t;font-family:&quot;Times New Roman&quot;,serif"><span>&nbsp;</span></p><p =
+class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-align:j=
+ustify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,seri=
+f"><span>&nbsp;</span></p><p class=3D"MsoNormal" style=3D"font-size:medium;=
+color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-family:&qu=
+ot;Times New Roman&quot;,serif"><b><span style=3D"font-size:14pt">Conferenc=
+e Co-Chairs:</span></b><span style=3D"font-size:14pt"><span></span></span><=
+/p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin=
+:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif">Dr. Roger =
+Barga, Amazon.com, USA<span></span></p><p class=3D"MsoNormal" style=3D"font=
+-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Tim=
+es New Roman&quot;,serif">Prof Carlo Zaniolo, UCLA, USA<span></span></p><p =
+class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0=
+in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><b>&nbsp;</b></p=
+><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0=
+in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><b><span sty=
+le=3D"font-size:14pt">Program Co-Chairs:</span></b><span style=3D"font-size=
+:14pt"><span></span></span></p><p class=3D"MsoNormal" style=3D"font-size:me=
+dium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-famil=
+y:&quot;Times New Roman&quot;,serif">Dr. Chaitanya Baru, San Diego Supercom=
+puter Center/UC San Diego, USA<span></span></p><p class=3D"gmail-default" s=
+tyle=3D"margin:0in 0in 0.0001pt;font-size:medium;font-family:&quot;Times Ne=
+w Roman&quot;,serif;color:black">Dr, Jun (Luke) Huan, Baidu Big Data Lab, C=
+hina<span></span></p><p class=3D"MsoNormal" style=3D"font-size:medium;color=
+:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif">Prof. Latifur Khan, University of Texas at Dalla=
+s, USA<span></span></p><p class=3D"MsoNormal" style=3D"font-size:medium;col=
+or:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-family:&quot;=
+Times New Roman&quot;,serif"><span>&nbsp;</span></p><p class=3D"MsoNormal" =
+style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-fam=
+ily:&quot;Times New Roman&quot;,serif"><b>Vice Chairs in Big Data Science a=
+nd Foundations<span></span></b></p><p class=3D"MsoNormal" style=3D"font-siz=
+e:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times N=
+ew Roman&quot;,serif">Prof. Jingrui He, UIUC, USA<span></span></p><p class=
+=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.=
+0001pt;font-family:&quot;Times New Roman&quot;,serif">Prof. Wenqing Hu, Mis=
+souri S&amp;T University, USA<span></span></p><p class=3D"MsoNormal" style=
+=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&=
+quot;Times New Roman&quot;,serif"><span>&nbsp;</span></p><p class=3D"MsoNor=
+mal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;fon=
+t-family:&quot;Times New Roman&quot;,serif"><b>Vice Chairs in Big Data Infr=
+astructure<span></span></b></p><p class=3D"MsoNormal" style=3D"font-size:me=
+dium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New R=
+oman&quot;,serif">Prof. Hanghang Tong, UIUC, USA<span></span></p><p class=
+=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.=
+0001pt;font-family:&quot;Times New Roman&quot;,serif">Dr. Yinglong Xia, Hua=
+wei, USA<span></span></p><p class=3D"MsoNormal" style=3D"font-size:medium;c=
+olor:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&q=
+uot;,serif"><b>&nbsp;</b></p><p class=3D"MsoNormal" style=3D"font-size:medi=
+um;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New Rom=
+an&quot;,serif"><b>Vice Chairs in Big Data Management<span></span></b></p><=
+p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in=
+ 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif">Prof. Christop=
+her Jermaine, Rice University, USA<br>Prof. Zhou Yongluan, Univ. of Copenha=
+gen, Denmark<span></span></p><p class=3D"MsoNormal" style=3D"font-size:medi=
+um;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New Rom=
+an&quot;,serif"><b>&nbsp;</b></p><p class=3D"MsoNormal" style=3D"font-size:=
+medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New=
+ Roman&quot;,serif"><b>Vice Chairs in Big Data Search and Mining<span></spa=
+n></b></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0)=
+;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif">Pro=
+f. Quanquan Gu, UCLA, USA&nbsp;<span></span></p><p class=3D"MsoNormal" styl=
+e=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:=
+&quot;Times New Roman&quot;,serif">Prof. Aditya Prakash, Virginia Tech, USA=
+<span></span></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb=
+(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,ser=
+if"><b>&nbsp;</b></p><p class=3D"MsoNormal" style=3D"font-size:medium;color=
+:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;=
+,serif"><b>Vice Chairs in Big Data Security, Privacy and Trust<span></span>=
+</b></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);m=
+argin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif">Prof.=
+ Dongwon Lee, Penn State University, USA<span></span></p><p class=3D"MsoNor=
+mal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;fon=
+t-family:&quot;Times New Roman&quot;,serif">Prof. Julia Stoyanovich,&nbsp;&=
+nbsp;New York University, USA<span></span></p><p class=3D"MsoNormal" style=
+=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&=
+quot;Times New Roman&quot;,serif"><span>&nbsp;</span></p><p class=3D"MsoNor=
+mal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;fon=
+t-family:&quot;Times New Roman&quot;,serif"><b>Vice Chairs in Hardware/OS A=
+ccelerating for Big Data<span></span></b></p><p class=3D"MsoNormal" style=
+=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&=
+quot;Times New Roman&quot;,serif">Prof. Sang-Woo Jun, UC Irvine, USA<span><=
+/span></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0)=
+;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif">Pro=
+f. Harry Xu, UCLA, USA<span></span></p><p class=3D"MsoNormal" style=3D"font=
+-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Tim=
+es New Roman&quot;,serif"><span>&nbsp;</span></p><p class=3D"MsoNormal" sty=
+le=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family=
+:&quot;Times New Roman&quot;,serif"><b>Vice Chairs in Big Data Applications=
+<span></span></b></p><p class=3D"MsoNormal" style=3D"font-size:medium;color=
+:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;=
+,serif">Prof. Xia Ning, Ohio State University, USA<span></span></p><p class=
+=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.=
+0001pt;font-family:&quot;Times New Roman&quot;,serif">Prof. Tim Weninger, U=
+niv. of Notre Dame, USA<span></span></p><p class=3D"gmail-default" style=3D=
+"margin:0in 0in 0.0001pt;font-size:medium;font-family:&quot;Times New Roman=
+&quot;,serif;color:black"><span>&nbsp;</span></p><p class=3D"MsoNormal" sty=
+le=3D"font-size:medium;color:rgb(0,0,0);margin:0in 0in 0.0001pt;font-family=
+:&quot;Times New Roman&quot;,serif"><b><span style=3D"font-size:14pt">Indus=
+try and Government Program Committee Co-Chairs<span></span></span></b></p><=
+p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-align=
+:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,se=
+rif">Dr. Ronay Ak, NVIDIA, USA<span></span></p><p class=3D"MsoNormal" style=
+=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0=
+001pt;font-family:&quot;Times New Roman&quot;,serif">Dr. Yuanyuan Tian, IBM=
+ Almaden Research Center, USA,&nbsp;<span></span></p><p class=3D"MsoNormal"=
+ style=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0=
+in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><span>&nbsp;</sp=
+an></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0,0);te=
+xt-align:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New Roman&=
+quot;,serif"><span><br></span></p><p class=3D"MsoNormal" style=3D"font-size=
+:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-fa=
+mily:&quot;Times New Roman&quot;,serif"><span><br></span></p><p class=3D"Ms=
+oNormal" style=3D"font-size:medium;color:rgb(0,0,0);text-align:justify;marg=
+in:0in 0in 0.0001pt;font-family:&quot;Times New Roman&quot;,serif"><span><b=
+r></span></p><p class=3D"MsoNormal" style=3D"font-size:medium;color:rgb(0,0=
+,0);text-align:justify;margin:0in 0in 0.0001pt;font-family:&quot;Times New =
+Roman&quot;,serif"><span><br></span></p><p class=3D"MsoNormal" style=3D"mar=
+gin:0in 0in 0.0001pt;font-size:medium;text-align:justify;font-family:&quot;=
+Times New Roman&quot;,serif;color:black"><span style=3D"font-family:&quot;C=
+ourier New&quot;;font-size:10pt">To subscribe to this list, the user sends =
+an email,</span></p><p style=3D"margin:0in 0in 0.0001pt;font-size:medium;co=
+lor:rgb(0,0,0);font-family:&quot;Times New Roman&quot;,serif"><span style=
+=3D"font-size:10pt;font-family:&quot;Courier New&quot;">with blank subject =
+line, to<br><a href=3D"mailto:listserv@lists.drexel.edu" target=3D"_blank" =
+style=3D"color:rgb(149,79,114)">listserv@lists.drexel.edu</a>. In the text =
+box, the user<br>types:&nbsp;<br><br>subscribe BIGDATA<br><br>To unsubscrib=
+e from a list, the user sends an email to<br><a href=3D"mailto:listserv@lis=
+ts.drexel.edu" target=3D"_blank" style=3D"color:rgb(149,79,114)">listserv@l=
+ists.drexel.edu</a>&nbsp;with the message</span><span style=3D"font-size:10=
+pt;font-family:Verdana,sans-serif"></span></p><p style=3D"margin:0in 0in 0.=
+0001pt;font-size:medium;color:rgb(0,0,0);font-family:&quot;Times New Roman&=
+quot;,serif"><span style=3D"font-size:10pt;font-family:&quot;Courier New&qu=
+ot;">&nbsp;</span><span style=3D"font-size:10pt;font-family:Verdana,sans-se=
+rif"></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;fon=
+t-size:medium;font-family:&quot;Times New Roman&quot;,serif;color:black"><s=
+pan style=3D"font-size:10pt;font-family:&quot;Courier New&quot;">signoff&nb=
+sp;</span><span style=3D"font-family:&quot;Courier New&quot;;font-size:13.3=
+33333015441895px">BIGDATA</span></p><p class=3D"MsoNormal" style=3D"font-si=
+ze:medium;color:rgb(0,0,0);text-align:justify;margin:0in 0in 0.0001pt;font-=
+family:&quot;Times New Roman&quot;,serif"><span><br></span></p></div></div>=
+</div>
+<br>
+<hr>
+<p align=3D"center">To unsubscribe from the BIGDATA list, click the followi=
+ng link:<br>
+<a href=3D"http://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3MzE5IGZvYWFkQENB=
+TFBPTFkuRURVIEJJR0RBVEEgIF8yC91ocvJr&amp;c=3DSIGNOFF" target=3D"_blank">htt=
+p://lists.drexel.edu/cgi-bin/wa?TICKET=3DNzM3MzE5IGZvYWFkQENBTFBPTFkuRURVIE=
+JJR0RBVEEgIF8yC91ocvJr&amp;c=3DSIGNOFF</a>
+</p>
+
+--000000000000e909ea05906a0eff--

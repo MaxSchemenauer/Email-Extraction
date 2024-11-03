@@ -1,0 +1,513 @@
+Received: from DM6PR08MB5068.namprd08.prod.outlook.com (2603:10b6:a02:bc::24)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR07CA0011.NAMPRD07.PROD.OUTLOOK.COM; Mon, 9 Sep 2019 21:31:34 +0000
+Received: from MWHPR08CA0028.namprd08.prod.outlook.com (2603:10b6:301:5f::41)
+ by DM6PR08MB5068.namprd08.prod.outlook.com (2603:10b6:5:4c::31) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2241.14; Mon, 9 Sep
+ 2019 21:31:33 +0000
+Received: from CO1NAM04FT007.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::208) by MWHPR08CA0028.outlook.office365.com
+ (2603:10b6:301:5f::41) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2220.18 via Frontend
+ Transport; Mon, 9 Sep 2019 21:31:33 +0000
+Authentication-Results: spf=pass (sender IP is 140.98.200.38)
+ smtp.mailfrom=bmsmail2.ieee.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ieee.org;calpoly.edu; dmarc=pass action=none
+ header.from=ieee.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of bmsmail2.ieee.org
+ designates 140.98.200.38 as permitted sender)
+ receiver=protection.outlook.com; client-ip=140.98.200.38;
+ helo=smtppav02.ieee.org;
+Received: from smtppav02.ieee.org (140.98.200.38) by
+ CO1NAM04FT007.mail.protection.outlook.com (10.152.90.85) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2241.14 via Frontend Transport; Mon, 9 Sep 2019 21:31:32 +0000
+Received: from sblpav23.ieee.org (dct-lb-sweb-23.ieee.org [140.98.23.254])
+	by smtppav02.ieee.org (8.14.7/8.14.7) with ESMTP id x89LRNtj000795
+	for <foaad@calpoly.edu>; Mon, 9 Sep 2019 17:31:31 -0400
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtppav02.ieee.org x89LRNtj000795
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ieee.org; s=mail;
+	t=1568064691; bh=J5CHmjNzRjUjNJVrkGSm+xxH3CZAuMVlTsj/D6CP/4Q=;
+	h=To:Subject:From:Reply-To:From;
+	b=TosKl1f34N0q/1TVkgbeCvipW+/dTaPovzMoLNkmsK75ZlAAD5oUmjyIceUTI7lyq
+	 8haI4GseelXC/K/b+CBqevAX3IaM8KRdrSInc3KmkqpCmbsjk4VWs8YxZrWgQ9IbM0
+	 dnbObF11MiA6x7tWZtn0LmIVoA+3PITxbXcqjeoo=
+Date: Mon, 9 Sep 2019 17:31:31 -0400
+To: <foaad@calpoly.edu>
+Sender: "IEEE eNotice"<enotice@ieee.org>
+Subject: CFP FOR IEEE CCWC 2020, University of Nevada, Las Vegas, USA ,IEEE XPLORE PUBLICATION
+From: "IEEE eNotice"<enotice@ieee.org>
+Reply-To: no_reply_enotice@ieee.org
+Message-ID: <SEMA-CR-1-6HYDYQJ@bmsmail2.ieee.org>
+Content-Type: text/html;	charset="UTF-8"
+Content-Transfer-Encoding: Quoted-Printable
+Return-Path: SEMA-CR-1-6HYDYQJ@bmsmail2.ieee.org
+X-MS-Exchange-Organization-ExpirationStartTime: 09 Sep 2019 21:31:33.1517
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3e6e212f-1c54-42a2-0fae-08d7356d15e9
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:140.98.200.38;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(979002)(4636009)(2980300002)(209900001)(286005)(199004)(189003)(75640400001)(16003)(7636002)(10126004)(43066004)(476003)(246002)(2351001)(486006)(733005)(6392003)(26005)(6916009)(4006050)(336012)(426003)(956004)(7846003)(7066003)(7596002)(36906005)(575854001)(126002)(53386004)(23846002)(106002)(2171002)(606006)(23676004)(16799955002)(53376002)(356004)(66574012)(33656002)(8676002)(6306002)(53416004)(236005)(30864003)(50466002)(1096003)(14444005)(5820100001)(45080400002)(966005)(142933001)(15398625002)(6606295002)(969003)(989001)(999001)(1009001)(1019001);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB5068;H:smtppav02.ieee.org;FPR:;SPF:Pass;LANG:en;PTR:smtppav02.ieee.org;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT007.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 3e6e212f-1c54-42a2-0fae-08d7356d15e9
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:DM6PR08MB5068;
+X-MS-TrafficTypeDiagnostic: DM6PR08MB5068:
+X-MS-Exchange-PUrlCount: 15
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Sep 2019 21:31:32.8414
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3e6e212f-1c54-42a2-0fae-08d7356d15e9
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB5068
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6454085
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2241.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?SVg4cVZFMXNzWVBqS1A5TWVpZmdyZkVPcmZGMm5MbzRuaTlNYkl1R0RBZSsz?=
+ =?utf-8?B?RlQ1QWlkanRXc0t0MXREbkg1cWNQNFU3ODlqQUJiVyt1d1c2VGVXTVYrQnda?=
+ =?utf-8?B?bUhNVkwvaXAyQTN0WTdoVkpqdGJBb0NZREthVFBwZU9VUGsvRElGWjUrMEZK?=
+ =?utf-8?B?MFFZWW9yNDNhWkdwR3UwM2gvZmlqVnNCZ1lKWElWWFkvUG9QQ3VZc295bGFj?=
+ =?utf-8?B?SGswSGpxVG9XeFFwRS9vWWk0eDNGc1cra0FFNUNFNERVS0NmdURHUTdyeWFs?=
+ =?utf-8?B?M3E5dHMzejZwMW14KzBuRDg5cVVFNm9ZejlSZzFTZ3l5amZPS3RDWWJIK0pD?=
+ =?utf-8?B?anBSZDFNTUh5dWdkWEx3ejV0SDRQdHNhdU9JaTdlc3ZMRnVxbmk3cFlpelM4?=
+ =?utf-8?B?UDNJTTl3emZMczg0Nk94dGVXU3RQYTdaVnJYYm5nQlZsTVVTdXZXQnN3UXVU?=
+ =?utf-8?B?SWJSWG55cjB4dkdYN1dvK01wR2xLbWVHWm0xbWRTbTliVWxRU1poRUxvb01U?=
+ =?utf-8?B?cjl6YWtNdGVSeUcxaUlHb3IrNHVNekVlRmF0RXZubUlONzJKRXRaZktPSm9s?=
+ =?utf-8?B?RE5yb0R0U0hzNWhyNVBkTmlNNThJRW9ScC9ja3RydysxdnZ2VE1tdHV0cnQx?=
+ =?utf-8?B?ZjJTNzlqVDJvWGQ4a3ZBckNYN1NRcklUc2xjSzRLS2xLNW5oTlk4bS9mUWl0?=
+ =?utf-8?B?WHdXUFY4MVQ0SEFILzh3UURTYk44QTZlV2V1QkNKQTVZMlBqZVBJTGFJQ29B?=
+ =?utf-8?B?U0RKWGRwVGlkbW5qVkVkWGdsRzErSm9Xdjc3TUtLMGlRSG1veXR6b1VTYnFj?=
+ =?utf-8?B?by9lZUNMOUxmd2kzTTNHbDQ4enRQeWFnSC9CWEpGR2lPejZ0aENwRkRkNUJt?=
+ =?utf-8?B?YTY1cUpWNG4wdnhXSWdwem14YWR4SzFTblN4L202S2dCOFRPanJoK3NzMU9S?=
+ =?utf-8?B?blZoOWhNallQOWNTcVNuU3hadEh6TXR2UzJQQjI2TENudVAvaTZDckV6OVBH?=
+ =?utf-8?B?eUR6aWRCL0V6UHpTWFM3KzVPYnJCWFRmYkZvQ0hvU0RkbzRpWFpQVXhkLzJn?=
+ =?utf-8?B?K0xOTTlCemM0YzIyV2tXUjdtZkdxL21FMEZsL1krYS8wVjUrcEEyNFZ2dERZ?=
+ =?utf-8?B?bHNlTkpsWWhSbjVJOXB2eU0zRVJ2eFBIRWVSazN0SFpHdDlFR3ZWcUNoZ1ZK?=
+ =?utf-8?B?bUNEREpRWEZoSDhKMzEwSjhMSzJaRVhXRkxZT3pmKzdKTFYvVG94Yi9IUk1o?=
+ =?utf-8?B?ZEx4QzFoaXBSK3VTK0lkVHBEQ2dpQlhuOVJYVHdSMURnUEN3TGxVU09YSmlk?=
+ =?utf-8?B?WS9tTTlDWFFYc2hNaFFnZjcvSERub1o1OWFpQW9pRXhOaVF5NHl5TTZnWGgx?=
+ =?utf-8?B?VWJ4SzZRNHNxbm5iS0lBTmN6cDJmZXVlOGttQ0RENmJFdDBNQ3JaUk9KeU40?=
+ =?utf-8?B?TmZqSGZPdmpFdHhlQVFBVmgvbFE2MnB3aDhMN1dRPT0=?=
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+  <title>IEEE eNotice</title>
+
+ =20
+ =20
+  <style type=3D"text/css">
+<!--
+#entete {        text-align: center;=20
+}
+#image_centre {        text-align:center;=20
+}
+#logos {  float:right;=20
+  padding:10px;                 =20
+}
+#pied {        text-align:center;=20
+}
+#topics {        padding:5px;              =20
+}
+-->
+  </style>
+</head><body style=3D"font-family: Arial,Helvetica,sans-serif; font-size: 1=
+4px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"5" width=3D"800">
+
+  <tbody>
+    <tr>
+      <td><img alt=3D"Banner" src=3D"http://ieee-ccwc.org/wp-content/upload=
+s/2019/04/Conference-9-1.png" width=3D"640"></td>
+    </tr>
+    <tr>
+      <td>
+      <br>
+      The 10th IEEE Annual Computing and Communication Workshop and Confere=
+nce<br>
+	  (IEEE CCWC 2020)<br>
+	  University of Nevada, Las Vegas, USA<br>
+	  January 6-8, 2020<br>
+	  <br>
+	  <br>
+	  We are pleased to announce that CCWC 2020, the 10th IEEE Annual Computin=
+g=20
+	  and Communication Workshop and Conference, to be held on 6-8 January 202=
+0=20
+	  at University of Nevada, Las Vegas, USA. The conference aims to bring=20
+	  together scholars from different disciplinary backgrounds to emphasize=20
+	  dissemination of ongoing research in the fields of in Computing and=20
+	  Communication. Contributed papers are solicited describing original work=
+s=20
+	  in these fields and related technologies. The conference will include a=
+=20
+	  peer-reviewed program of technical sessions, special sessions, business=
+=20
+	  application sessions, tutorials and demonstration sessions.<br>
+	  <br>
+	  Accepted and presented papers will be submitted for publication to IEEE=
+=20
+	  Xplore=C2=AE digital library (Scopus; EiCompendex; Web of Science and Go=
+ogle=20
+	  Scholar). Click here for the conference flyer=20
+	  (http://ieee-ccwc.org/wp-content/uploads/2019/08/iemccwc-CFP.pdf)<br>
+	  <br>
+	  KEYNOTE SPEAKERS:<br>
+	  -----------------------------<br>
+	  1. Ernesto Zamora Ramos (Intel Corporation, USA)<br>
+	  2. Son Vuong (University of British Columbia Vancouver, Canada)<br>
+	  3. Lanier Watkins (Johns Hopkins University, USA)<br>
+	  4. Shahram Latifi (University of Nevada, Las Vegas, USA)<br>
+	  5. Renee Bryce(University of North Texas, USA)<br>
+	  6. Daniel Bryce(Smart Informtion Flow Technologies(SIFT), LLC, USA)<br>
+	  <br>
+	  <br>
+	  IMPORTANT DEADLINES:<br>
+	  ---------------------------<br>
+	  =E2=80=A2 Full Paper Submission: 31st October 2019<br>
+	  =E2=80=A2 Acceptance Notification: 30th November 2019<br>
+	  =E2=80=A2 Camera Ready Paper Submission: 15th December 2019<br>
+	  =E2=80=A2 Registration :15th December 2019<br>
+	  =E2=80=A2 Presentation :31st December 2019<br>
+	  =E2=80=A2 Conference Date: 6 - 8 January 2020<br>
+	  <br>
+	  <br>
+	  Conference URL:<br>
+	  --------------------<br>
+	  http://ieee-ccwc.org/<br>
+	  <br>
+	  SUBMISSION<br>
+	  ------------------------------<br>
+	  Please see our website: http://ieee-ccwc.org/submission/<br>
+	  <br>
+	  REGISTRATION<br>
+	  -------------------<br>
+	  Please see our website: http://ieee-ccwc.org/registration/<br>
+	  <br>
+	  CONTACT INFO<br>
+	  --------------------------<br>
+	  General Queries: conference@ieee-ccwc.org, secretary@ieee-ccwc.org ,=20
+	  himadri@iemcal.com,himadri@ieee.org<br>
+	  <br>
+	  CALL FOR PAPERS<br>
+	  ------------------------<br>
+	  Prospective authors are invited to submit their full paper(s)=20
+	  electronically through EDAS. Papers will be reviewed by at least three=20
+	  reviewers for technical merit and content. Accepted papers must be=20
+	  presented at the conference by one of the author(s) whose name will appe=
+ar=20
+	  in the proceedings. For further details; and information on paper=20
+	  categories; please visit our website.<br>
+	  <br>
+	  Topics and Technical areas of interest include but are not limited to th=
+e=20
+	  following:<br>
+	  <br>
+	  TRACK I: COMPUTING<br>
+	  ------------------------------------------<br>
+	  =E2=80=A2 Algorithms and Theory<br>
+	  =E2=80=A2 Artificial Intelligence and Machine Learning<br>
+	  =E2=80=A2 Autonomic and Trusted Computing<br>
+	  =E2=80=A2 Big Data, Data Management and Analytics<br>
+	  =E2=80=A2 Biomedical Computing, Bioinformatics<br>
+	  =E2=80=A2 Cloud Computing and Data Center Systems<br>
+	  =E2=80=A2 Cloud, Cluster, Grid and P2P Computing<br>
+	  =E2=80=A2 Computational Intelligence<br>
+	  =E2=80=A2 Computer Architecture and VLSI<br>
+	  =E2=80=A2 Computer Graphics, Simulation and Modeling<br>
+	  =E2=80=A2 Computing in Management Technology<br>
+	  =E2=80=A2 Concurrent data structures<br>
+	  =E2=80=A2 Concurrent, Synchronization, and transactional memory<br>
+	  =E2=80=A2 Context Awareness and Personalization<br>
+	  =E2=80=A2 Cryptography and Applied Mathematics<br>
+	  =E2=80=A2 Data Management, Exploration and Mining<br>
+	  =E2=80=A2 Digital Rights Management<br>
+	  =E2=80=A2 Digital System and Logic Design<br>
+	  =E2=80=A2 Distributed biological algorithms and bio-inspired distributed=
+=20
+	  algorithms<br>
+	  =E2=80=A2 Distributed computing issues in large scale systems such as th=
+e Internet<br>
+	  =E2=80=A2 Distributed OS and Middleware<br>
+	  =E2=80=A2 Embedded distributed systems<br>
+	  =E2=80=A2 Energy Management and Green Computing<br>
+	  =E2=80=A2 Experiments and performance evaluation of distributed systems<=
+br>
+	  =E2=80=A2 Fault Tolerance and Dependability<br>
+	  =E2=80=A2 File and Storage Systems<br>
+	  =E2=80=A2 Green Computing<br>
+	  =E2=80=A2 Local algorithms and Congestion aware algorithms<br>
+	  =E2=80=A2 Mobile and Wireless Computing<br>
+	  =E2=80=A2 Multiprocessor &amp; multi-core architectures &amp; algorithms=
+<br>
+	  =E2=80=A2 Natural Language Processing and Machine Translation<br>
+	  =E2=80=A2 Nature Inspired Computing<br>
+	  =E2=80=A2 Parallel and Distributed Algorithms<br>
+	  =E2=80=A2 Pattern Recognition and Analysis<br>
+	  =E2=80=A2 Quantum Computing<br>
+	  =E2=80=A2 Reconfigurable Computing<br>
+	  =E2=80=A2 Robotics and Machine Vision<br>
+	  =E2=80=A2 Security, Trust and Privacy<br>
+	  =E2=80=A2 Self-organization, self-stabilization, &amp; autonomic computi=
+ng<br>
+	  =E2=80=A2 Signal and Image Processing<br>
+	  =E2=80=A2 Systems and Software Engineering<br>
+	  =E2=80=A2 Ubiquitous Computing<br>
+	  <br>
+	  TRACK II: COMMUNICATION<br>
+	  -------------------------<br>
+	  Communications Software<br>
+	  =E2=80=A2 Control Systems and Applications<br>
+	  =E2=80=A2 Future Internet and Next-Generation Networking Architectures<b=
+r>
+	  =E2=80=A2 High Performance Networks and Protocols<br>
+	  =E2=80=A2 Human Computer Interaction and Interface<br>
+	  =E2=80=A2 Information Theory and Coding<br>
+	  =E2=80=A2 Internet measurement, modeling, and visualization<br>
+	  =E2=80=A2 MEMS Technologies for Communications<br>
+	  =E2=80=A2 MIMO Communications in Computer Networks<br>
+	  =E2=80=A2 Network Simulation and Emulation<br>
+	  =E2=80=A2 Optical Networks and Systems<br>
+	  =E2=80=A2 QoS and Resource Management<br>
+	  =E2=80=A2 RFID Networks and Protocols<br>
+	  =E2=80=A2 Satellite and Space Communications<br>
+	  =E2=80=A2 Sensor Networks and Embedded Systems<br>
+	  =E2=80=A2 Smart Spaces and Personal Area Networks<br>
+	  =E2=80=A2 Social Network Behaviors, Modeling, and Analysis<br>
+	  =E2=80=A2 Social Networks, Crowdsourcing, and P2P systems<br>
+	  =E2=80=A2 Software Defined Networks and Network Programming<br>
+	  =E2=80=A2 Space Surveillance Techniques<br>
+	  =E2=80=A2 Vehicular, Underground and Underwater Networks<br>
+	  =E2=80=A2 Virtual and Overlay Networks<br>
+	  =E2=80=A2 Wireless Communication<br>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  SPONSORS<br>
+	  ---------------------------<br>
+	  <br>
+	  1. IEEE USA<br>
+	  2. IEEE Region 6<br>
+	  3. University of Nevada =E2=80=93Las Vegas<br>
+	  4. IEEE region 1<br>
+	  3. Institute of Engineering &amp; Management<br>
+	  4. University of Engineering &amp; Management<br>
+	  <br>
+	  PROGRAM CHAIRS<br>
+	  -------------------------------<br>
+	  <br>
+	  General Co-Chairs<br>
+	  <br>
+	  -Evangelos A. Yfantis (University of Nevada, Las Vegas)<br>
+	  -Son Vuong (University of British Columbia)<br>
+	  -Satyajit Chakrabarti (Institute of Engineering &amp; Management)<br>
+	  <br>
+	  Technical Program Co-Chairs<br>
+	  - Wolfgang Bein (University Of Nevada, Las Vegas)<br>
+	  -Phillip Bradford (University of Connecticut, Stamford)<br>
+	  -Himadri Nath Saha(Institute of Engineering and Management)<br>
+	  <br>
+	  Finance Chair<br>
+	  <br>
+	  - Charles Rubenstein (IEEE-USA)<br>
+	  <br>
+	  Publication Chair<br>
+	  <br>
+	  -Nabeeh Kandalaft (Grand Valley State University,USA)<br>
+	  <br>
+	  Publicity Chair<br>
+	  -Hakduran Koc (University of Houston- Clear Lake)<br>
+	  -Himadri Nath Saha (Institute of Engineering and Management)<br>
+	  <br>
+	  Technical Committee Members<br>
+	  <br>
+	  -Jay Chandra (Wayne State University)<br>
+	  -Michael A. Turi (California State University)<br>
+	  -Hussain Al-Asaad (University of California)<br>
+	  -Miaoqing Huang ( University of Arkansas )<br>
+	  -PramodGovindan (University of North Florida )<br>
+	  -SelcukKose (University of South Florida)<br>
+	  -Edward John Nava (University of New Mexico)<br>
+	  -Darshika G. Perera(University of Colorado)<br>
+	  -YutengZhou(Worcester Polytechnic Institute)<br>
+	  -Adam Lewis (Athens State University)<br>
+	  -RajendranSwamidurai (Alabama State University)<br>
+	  -Steven Demurjian (University of Connecticut )<br>
+	  -Yashwant K. Malaiya (Colorado State University)<br>
+	  -Hyunju Kim (Jackson State University)<br>
+	  --Jody Paul (Metropolitan State University of Denver)<br>
+	  -Sanjay Banerjee (University of Texas, Austin)<br>
+	  -Biswajit Das (University of Nevada )<br>
+	  -Marc Cahay (University of Cincinnati)<br>
+	  -SupriyoBandyopadhyay (Virginia Commonwealth University)<br>
+	  -Zhi Chen ( University of Arkansas )<br>
+	  -HameedBadawy(New Mexico State University)<br>
+	  -ChunhuaFeng (Alabama State University)<br>
+	  -QuaziEhsanulKabirMamun (Charles Sturt University, Australia)<br>
+	  -AbhishekVerma (New Jersey City University,USA)<br>
+	  -HamidrezaChitsaz (Colorado State University)<br>
+	  -NorlyGermain (University of Rhode Island)<br>
+	  -Salvatore D. Morgera (University of South Florida)<br>
+	  -Wei Zeng (Florida International University)<br>
+	  <br>
+	  And several other spanning across the globe. Please visit=20
+	  http://ieee-ccwc.org/committees/<br>
+	  <br>
+	  <br>
+	  OTHER EVENTS ALONG WITH THE CONFERENCE<br>
+	  --------------------------------------<br>
+	  <br>
+	  1. Poster Presentation<br>
+	  2. Workshop on Data Analytics<br>
+	  3. Workshop on IoT: From Concepts to Implementation<br>
+	  4. Demonstration Session<br>
+	  <br>
+	  <br>
+	  CCWC PAPER CATEGORIES<br>
+	  ---------------------------------------------<br>
+	  <br>
+	  1. Regular Paper =E2=80=93 7 pages maximum (3 additional pages allowed b=
+ut at an=20
+	  extra charge)<br>
+	  2. Short Paper (Work-in-Progress) =E2=80=93 6 pages maximum (2 additiona=
+l pages=20
+	  allowed but at an extra charge)<br>
+	  3. Poster =E2=80=93 5 pages maximum<br>
+	  <br>
+	  <br>
+	  PAPER SUBMISSION INFO<br>
+	  -------------------------------------------<br>
+	  IEEE CCWC uses EDAS for submission.<br>
+	  Authors need to:<br>
+	  1. Create an account (if not already registered) with EDAS at=20
+	  http://edas.info<br>
+	  2. Submission link: https://edas.info/newPaper.php?c=3D25896<br>
+	  Kindly promote IEEE CCWC 2020 to interested individuals and communities =
+in=20
+	  your vicinity.<br>
+	  <br>
+	  Best regards and looking forward to seeing you at IEEE CCWC in January=20
+	  2020!<br>
+	  <br>
+	  Prof. Son Vuong<br>
+	  (University of British Columbia)<br>
+	  General Co-Chair IEEE CCWC 2020<br>
+	  <br>
+	  <br>
+	  Prof. Evangelos A. Yfantis<br>
+	  (University of Nevada, Las Vegas)<br>
+	  General Co-Chair IEEE CCWC 2020<br>
+	  <br>
+	  <br>
+	  Prof. Satyajit Chakrabarti<br>
+	  (Institute of Engineering &amp; Management)<br>
+	  General Co-Chair IEEE CCWC 2020<br>
+	  <br>
+	  <br>
+	  <br>
+	  NOTE:<br>
+	  <br>
+	  The Keynotes and plenary speakers of our previous conference were:<br>
+	  <br>
+	  Dr. Jenq-Neng Hwang (University of Washington,USA)<br>
+	  Christopher Geiger (Lockheed Martin Enterprise Sustainment Solutions,USA=
+)<br>
+	  Chiman Kwan (Signal Processing, Inc. And Applied Research Llc,USA)<br>
+	  Erwin Bellers(V-Silicon,USA)<br>
+	  Yuhan Cai (Linkedin,USA)<br>
+	  Joel Jones (Marvell Technology Group Ltd,USA)<br>
+	  Chuyen Luong (Viettel Network Technologies Center, Vietnam)<br>
+	  Russel Jacob (Jake) Baker (University Of Nevada, Las Vegas, USA)<br>
+	  Jacques Christophe Rudell (University Of Washington,Seattle, USA)<br>
+	  C.-C. Jay Kuo (University Of Southern California,USA)<br>
+	  Sarah Harris (University Of Nevada, Las Vegas, USA)<br>
+	  Georgios B. Giannakis (University Of Minnesota, USA)<br>
+	  Chuck Easttom (Capitol Technology University, USA)<br>
+	  Dr. Martin C. Carlisle ( Carnegie Mellon University,USA)<br>
+	  Dr.David Isaacson (Office Of The Director Of National Intelligence , USA=
+)<br>
+	  Dr. Robert Mitchell (MITRE, USA)<br>
+	  Dr. Pierre Larochelle (South Dakota School Of Mines &amp;Technology,USA)=
+<br>
+	  Dr. Thomas Kunz (Carleton University,Canada)<br>
+	  Dr. Nan Wang(California State University,USA)<br>
+	  Dr. Aaron E Cohen (Naval Research Laboratory,USA)<br>
+	  Dr. Hal Berghel (University Of Nevada, Las Vegas, USA)<br>
+	  Dr. Evangelos Yfantis (University Of Nevada, Las Vegas, USA)<br>
+	  Dr. Lanier Watkins (Johns Hopkins University,USA)<br>
+      <br>
+      <br>
+      </td>
+    </tr>
+      <tr>
+      <td bgcolor=3D"#069">
+      <p style=3D"font-size: x-small"><span style=3D"color: #FFFFFF">IEEE-U=
+SA: https://ieeeusa.org/<br>
+	  <br style=3D"color: #FFFFFF">
+	  <br style=3D"color: #FFFFFF">
+	  To unsubscribe from all mailings, use your IEEE Account to update your=20
+	  &quot;<a href=3D"http://bmsmail2.ieee.org:80/ctd/lu?RID=3D1-6HYDYQJ&amp;=
+CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OID=3D1-6I5YTKI&amp;CID=3D1-6I5YT=
+K9&amp;COID=3D1-6I5YTMD&amp;T=3Dhttps%3a%2f%2fwww.ieee.org%2fieee-privacypo=
+rtal%2fapp%2fibp&amp;Z=3D602f5d765327e628df087c61afdad39&amp;TN=3Dieee.org%=
+2fieee-privacyportal%2fapp%2fibp&amp;RT=3DClicked&#43;On&#43;URL"><span sty=
+le=3D"color: #FFFFFF">Communication=20
+	  Preferences</span></a>&quot; <br>
+	  <br>
+	  Unsubscribe from CCWC eNotices: <a href=3D"http://bmsmail2.ieee.org:80/c=
+td/listsub?RID=3D1-6HYDYQJ&amp;CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OI=
+D=3D1-6I5YTKI&amp;CID=3D1-6I5YTK9&amp;COID=3D1-6I5YTMD&amp;RT=3DUnsubscribe=
+&#43;from&#43;List&amp;LC=3DENU&amp;LID=3D1-UJN8XL&amp;LN=3D1&#43;Subscript=
+ion&#43;List">Unsubscribe from List</a><br>
+	  <br>
+	  Subscribe to CCWC eNotices: <a href=3D"http://bmsmail2.ieee.org:80/ctd/l=
+istsub?RID=3D1-6HYDYQJ&amp;CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OID=3D=
+1-6I5YTKI&amp;CID=3D1-6I5YTK9&amp;COID=3D1-6I5YTMD&amp;RT=3DSubscribe&#43;t=
+o&#43;List&amp;LC=3DENU&amp;LID=3D1-UJN8XL&amp;LN=3D1&#43;Subscription&#43;=
+List">Subscribe to List</a></span><br>
+	  </p>
+      </td>
+      </tr>
+	  <tr>
+      <td> <br>
+	  <br>
+	  <strong>IEEE</strong><br>
+	  445 Hoes Lane<br>
+	  Piscataway, NJ 08854 USA<br>
+	  &#43;1 800 678 4333 (toll free, US &amp; Canada)<br>
+	  &#43;1 732 981 0060 (Worldwide)<br>
+	  <br>
+	  For more information or questions regarding your IEEE membership or IEEE=
+=20
+	  Web Account, please direct your inquiries to the<span>&nbsp;</span><a hr=
+ef=3D"http://bmsmail2.ieee.org:80/ctd/lu?RID=3D1-6HYDYQJ&amp;CON=3D1-2DJZ3Z=
+E&amp;PRO=3D&amp;AID=3D&amp;OID=3D1-6I5YTKI&amp;CID=3D1-6I5YTK9&amp;COID=3D=
+1-6I5YTMD&amp;T=3Dhttps%3a%2f%2fwww.ieee.org%2fabout%2fcontact.html&amp;Z=
+=3D5879b9fce66fac1f79de1d62bec99215&amp;TN=3Dieee.org%2fabout%2fcontact.htm=
+l&amp;RT=3DClicked&#43;On&#43;URL">IEEE=20
+	  Contact Center</a>.</td>
+      </tr>
+    <tr>
+      <td> &nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</body></html>

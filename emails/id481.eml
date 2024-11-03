@@ -1,0 +1,823 @@
+Received: from BYAPR08MB5669.namprd08.prod.outlook.com (2603:10b6:a03:14b::42)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR06CA0065.NAMPRD06.PROD.OUTLOOK.COM; Sat, 28 Sep 2019 07:52:56 +0000
+Received: from SN4PR0801CA0013.namprd08.prod.outlook.com
+ (2603:10b6:803:29::23) by BYAPR08MB5669.namprd08.prod.outlook.com
+ (2603:10b6:a03:c4::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2305.20; Sat, 28 Sep
+ 2019 07:52:53 +0000
+Received: from BN3NAM04FT021.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::208) by SN4PR0801CA0013.outlook.office365.com
+ (2603:10b6:803:29::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2305.15 via Frontend
+ Transport; Sat, 28 Sep 2019 07:52:53 +0000
+Authentication-Results: spf=pass (sender IP is 106.75.8.94)
+ smtp.mailfrom=www.ceed2018.com; calpoly.edu; dkim=pass (signature was
+ verified) header.d=www.ceed2018.com;calpoly.edu; dmarc=pass action=none
+ header.from=www.ceed2018.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of www.ceed2018.com
+ designates 106.75.8.94 as permitted sender) receiver=protection.outlook.com;
+ client-ip=106.75.8.94; helo=ucmailc013.sendcloud.org;
+Received: from ucmailc013.sendcloud.org (106.75.8.94) by
+ BN3NAM04FT021.mail.protection.outlook.com (10.152.92.150) with Microsoft SMTP
+ Server id 15.20.2305.15 via Frontend Transport; Sat, 28 Sep 2019 07:52:51
+ +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=www.ceed2018.com;
+ i=@www.ceed2018.com; q=dns/txt; s=mail; t=1569657170; h=date : from :
+ to : message-id : subject : mime-version : content-type : reply-to :
+ list-unsubscribe : from;
+ bh=0u+NfQmTAaRcpL8qCgVnJpLc5TZ29sp0iGxg6CvYClQ=;
+ b=ZH1eevsxeVGI/nVtZHxV6SQYgHtGItPM+HzPIW2xOvb1XRXjKEyfYWZTcJeskStAfYTGg
+ b816VHESLw45hKTxZhzMp+SuFicCxZH2rRfMKBywxnhWUmTjgtZJzhSpfUteXq/NC2WypfC
+ 2TlyqFCDagecWn/B3G86qhYY9Ghmptc=
+Received: from sendcloud.api (Unknown [127.0.0.1]) by SendCloud Inbound Server with ESMTPA id 01A1633A-96A7-4E3E-B976-FEFED195ED8E.1 envelope-from <hccindexpaper1@yeah.net> (authenticated bits=0); Sat, 28 Sep 2019 15:52:50 +0800
+Date: Sat, 28 Sep 2019 15:52:50 +0800 (CST)
+From: Michael <hccindexpaper1@www.ceed2018.com>
+To: foaad <foaad@calpoly.edu>
+Message-ID: <1569657170428_63474_25926_6915.sc-10_9_13_218-inbound0$foaad@calpoly.edu>
+Subject: =?utf-8?q?Last_Chance--publishing_papers?=
+Content-Type: multipart/mixed; boundary="----=_Part_20312600_1877418183.1569657170407"
+REPLY-TO: Michael <hccindexpaper1@yeah.net>
+X-SENDCLOUD-UUID: 1569657170428_63474_25926_6915.sc-10_9_13_218-inbound0$foaad@calpoly.edu
+X-SENDCLOUD-LOG: 1569657170428_63474_25926_6915.sc-10_9_13_218-inbound0$foaad@calpoly.edu#foaad@calpoly.edu#183498#63474#0
+X-SMTPAPI:
+List-Unsubscribe: <http://sctrack.sc.gg/track/unsubscribe.do?p=eyJ1c2VyX2lkIjogNjM0NzQsICJ0YXNrX2lkIjogIiIsICJlbWFpbF9pZCI6ICIxNTY5NjU3MTcwNDI4XzYzNDc0XzI1OTI2XzY5MTUuc2MtMTBfOV8xM18yMTgtaW5ib3VuZDAkZm9hYWRAY2FscG9seS5lZHUiLCAic2lnbiI6ICI2ZThjYmJhMzhmNTU1ZTliZjljMGUzZTU3NGNhZDRiZCIsICJsYWJlbCI6IDAsICJyZWNlaXZlciI6ICJmb2FhZEBjYWxwb2x5LmVkdSIsICJjYXRlZ29yeV9pZCI6IDE4MzQ5OH0%3D>,<mailto:0_183498_1569657170428_63474_25926_6915.sc-10_9_13_218-inbound0@www.ceed2018.com>
+Return-Path: f82e4584-e1c4-11e9-ab0c-525400432308@www.ceed2018.com
+X-MS-Exchange-Organization-ExpirationStartTime: 28 Sep 2019 07:52:52.5491
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ e5d1c0d0-9ceb-4c67-2b52-08d743e8dd99
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:106.75.8.94;IPV:NLI;CTRY:CN;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(286005)(189003)(199004)(19627235002)(606006)(85226003)(71190400001)(2476003)(2160300002)(7049001)(6916009)(81166006)(356004)(8676002)(81156014)(336012)(126002)(486006)(2171002)(476003)(7126003)(120186005)(426003)(26005)(33964004)(58800400005)(36756003)(16003)(75640400001)(4006050)(18926415008)(106002)(6306002)(54896002)(9686003)(236005)(43066004)(1096003)(966005)(146002)(16670700002)(5024004)(21615005)(22186003)(16586007)(37006003)(733005)(101420200001)(94166001);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB5669;H:ucmailc013.sendcloud.org;FPR:;SPF:Pass;LANG:en;PTR:ErrorRetry;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT021.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: e5d1c0d0-9ceb-4c67-2b52-08d743e8dd99
+X-MS-TrafficTypeDiagnostic: BYAPR08MB5669:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:4;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 Sep 2019 07:52:51.8165
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: e5d1c0d0-9ceb-4c67-2b52-08d743e8dd99
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB5669
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.7712104
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2284.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?MjQyTlpIOEFuWFJ3dGJaaldJVGgySGtndDRVT25EamhlaHhOdWdMSmJJNUFt?=
+ =?utf-8?B?emJQVENubm1wb3NMY2Y3eDAzSzZWU1FETjJNZUU2bTZLRDdNWFdmRU15WkRp?=
+ =?utf-8?B?R3owMEVHSm95WGVNWi9Ed0xYYTFGMlBLcUhreU84bUdaYzhxOGNSRzlxb0hm?=
+ =?utf-8?B?OUF5dCtDVjFBWTBMTkVDRjBYcmcrLzAzR3A4NWVqdW9lUkl5aU1ZT3NjZDl4?=
+ =?utf-8?B?QVZsa09wWHIyN0ZtZ0NCaG1pbkcxMXAxdHZEYjZQSVJla3dRb0x0Wm1pdC9p?=
+ =?utf-8?B?VWtmUmFkdE1ETmpqVUpuNk9jRmNvMjczZ2NGd01oakppNm5WazF2Y3ViQ2NN?=
+ =?utf-8?B?N1pyai9mSzl5TFRwVDFRYWRRVmdEcGxwS2FNenVHTFVwVXNjYWJnaVFSTDB5?=
+ =?utf-8?B?QWs4S0J0QWlwV2VpSDVJMnV5SzBvcng3RjNtQksvclJCVEtFZncyZ1RzVnVV?=
+ =?utf-8?B?dEg0R256QVBPSW9OSHJKR25NZjNHRDZOTklwanBpV0hrNUZYbUk5a3VQcHo0?=
+ =?utf-8?B?K1FEM2xWbkdPQXJ1REY3M1ZRb0lmUWFYK2dXNzRCT1hta0I1NitjSkpjZFk5?=
+ =?utf-8?B?aDVCM3RkRTE0MDFldzZFaUdvVFpNcStvNjcvaHFrMkdKc1IxSDBaYlFqSmNi?=
+ =?utf-8?B?eVBFcXYxRWMycFFlSDI4a2IrSS8zNkszellZeXEwZ216dlVsT1J2c20vTHI3?=
+ =?utf-8?B?bVhiZC9GMTFTd1NDbkVqelZrMkQzYTNvVTNnZVUrR2ZyU1JQc3BiN2UvZENW?=
+ =?utf-8?B?VFN4b0RZV2dKdHZIaFAvays3eXFmUzRsZVNNeXZJNURaMFhjZ1Q1b3NLd0V0?=
+ =?utf-8?B?ajFhSHNZaHYrcHV2MnBaYjcvRHBXcXlud0JlZVIvRmh6cXlRMyt5ZHdwWmVs?=
+ =?utf-8?B?TjExa1lzT0QrcHdBTENJWnhFenZER3JPMXZDN1lpTGRZNkk4VzFQbnhkdGYx?=
+ =?utf-8?B?bjVacmtvbmRRcWNZdHBPZjNjaldldE1ub3ErVTJhOTM0TkxocTBGSEpXbWUx?=
+ =?utf-8?B?VWRZM2NBbVNaYmVyOUhScFFFVWRuVnlWOUVLd1g5OXFnajk1ZXVyWnEwZ0ly?=
+ =?utf-8?B?c2hybGVvMndoelg3eTBjaGRoV1pDTTNsbnRZVGl6aUFQYVcrTTBZano1ZUdu?=
+ =?utf-8?B?NmZFTDI3QXVxM2l3dy9vbU5mTXJFaGxzRk9ENDhsQ045YmF4SWtPMjNSRDN5?=
+ =?utf-8?B?WU9yZzFiZWQ1bHQzVHFGbnl3cnYrb0x3ZDY5RkhUTzlHQ3A2QVA0Q2drZ1lW?=
+ =?utf-8?B?cFRtZWQzRDVNQUNIS0p3SS96Q2tWUHhubS9ORkMwM0dOS2p6bS9TNXRqSnBu?=
+ =?utf-8?B?ZTcxcFVOMW51L29nYU9WeFRIN05RQk5UZjRJSU5uemcvd3hSekpnNm9jdUto?=
+ =?utf-8?B?QnE4Y3IzU1MvQVRkRU5MdnJSOVY1aEE4S3h5eGVKMUU1a00yZU56RFNpUEFy?=
+ =?utf-8?B?MEUvRnFqQ0ZZQ2JSYnJnRWl5eE1LS0wybVdSTE5BPT0=?=
+MIME-Version: 1.0
+
+------=_Part_20312600_1877418183.1569657170407
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:dt=3D"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:m=3D"http://sc=
+hemas.microsoft.com/office/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-=
+html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"ProgId" content=3D"Word.Document">
+<meta name=3D"Generator" content=3D"Microsoft Word 12">
+<meta name=3D"Originator" content=3D"Microsoft Word 12">
+<link rel=3D"File-List" href=3D"4.files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>admin</o:Author>
+  <o:LastAuthor>PC</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>86</o:TotalTime>
+  <o:Created>2019-09-16T08:00:00Z</o:Created>
+  <o:LastSaved>2019-09-16T08:00:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>459</o:Words>
+  <o:Characters>2620</o:Characters>
+  <o:Company>Microsoft</o:Company>
+  <o:Lines>21</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3073</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:KSOProductBuildVer dt:dt=3D"string">2052-11.1.0.8214</o:KSOProductBuil=
+dVer>
+ </o:CustomDocumentProperties>
+</xml><![endif]-->
+<link rel=3D"dataStoreItem" href=3D"4.files/item0001.xml" target=3D"4.files=
+/props0002.xml">
+<link rel=3D"themeData" href=3D"4.files/themedata.thmx">
+<link rel=3D"colorSchemeMapping" href=3D"4.files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 =E7=A3=85</w:DrawingGridVerticalSpacing=
+>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEve=
+ry>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val=3D"Cambria Math"/>
+   <m:brkBin m:val=3D"before"/>
+   <m:brkBinSub m:val=3D"&#45;-"/>
+   <m:smallFrac m:val=3D"off"/>
+   <m:dispDef/>
+   <m:lMargin m:val=3D"0"/>
+   <m:rMargin m:val=3D"0"/>
+   <m:defJc m:val=3D"centerGroup"/>
+   <m:wrapIndent m:val=3D"1440"/>
+   <m:intLim m:val=3D"subSup"/>
+   <m:naryLim m:val=3D"undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState=3D"false" DefUnhideWhenUsed=3D"true"
+  DefSemiHidden=3D"true" DefQFormat=3D"false" DefPriority=3D"99"
+  LatentStyleCount=3D"267">
+  <w:LsdException Locked=3D"false" Priority=3D"0" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Normal"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"heading 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 7"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 8"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 9"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 7"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 8"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 9"/>
+  <w:LsdException Locked=3D"false" Priority=3D"35" QFormat=3D"true" Name=3D=
+"caption"/>
+  <w:LsdException Locked=3D"false" Priority=3D"10" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Title"/>
+  <w:LsdException Locked=3D"false" Priority=3D"1" Name=3D"Default Paragraph=
+ Font"/>
+  <w:LsdException Locked=3D"false" Priority=3D"11" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtitle"/>
+  <w:LsdException Locked=3D"false" SemiHidden=3D"false" QFormat=3D"true"
+   Name=3D"Hyperlink"/>
+  <w:LsdException Locked=3D"false" Priority=3D"22" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Strong"/>
+  <w:LsdException Locked=3D"false" Priority=3D"20" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Emphasis"/>
+  <w:LsdException Locked=3D"false" QFormat=3D"true" Name=3D"Normal Table"/>
+  <w:LsdException Locked=3D"false" Priority=3D"59" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Table Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"19" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"21" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"31" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Reference"/>
+  <w:LsdException Locked=3D"false" Priority=3D"32" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Reference"/>
+  <w:LsdException Locked=3D"false" Priority=3D"33" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Book Title"/>
+  <w:LsdException Locked=3D"false" Priority=3D"37" Name=3D"Bibliography"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" QFormat=3D"true" Name=3D=
+"TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:=E5=AE=8B=E4=BD=93;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:"lucida Grande";
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@=E5=AE=8B=E4=BD=93";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:=E5=AE=8B=E4=BD=93;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"=E9=A1=B5=E7=9C=89 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 1.0pt 0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:=E5=AE=8B=E4=BD=93;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"=E9=A1=B5=E8=84=9A Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:=E5=AE=8B=E4=BD=93;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	mso-style-qformat:yes;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+span.Char
+	{mso-style-name:"=E9=A1=B5=E7=9C=89 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-locked:yes;
+	mso-style-link:=E9=A1=B5=E7=9C=89;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;}
+span.Char0
+	{mso-style-name:"=E9=A1=B5=E8=84=9A Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-locked:yes;
+	mso-style-link:=E9=A1=B5=E8=84=9A;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("4.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("4.files/header.htm") fcs;
+	mso-endnote-separator:url("4.files/header.htm") es;
+	mso-endnote-continuation-separator:url("4.files/header.htm") ecs;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:=E6=99=AE=E9=80=9A=E8=A1=A8=E6=A0=BC;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"7170"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"2"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=3D"ZH-CN" link=3D"blue" vlink=3D"purple" style=3D"tab-interval:2=
+1.0pt;text-justify-trim:
+punctuation">
+
+<div class=3D"WordSection1" style=3D"layout-grid:15.6pt">
+
+<p class=3D"MsoNormal"><b style=3D"mso-bidi-font-weight:normal"><span lang=
+=3D"EN-US" style=3D"mso-bidi-font-size:10.5pt;font-family:&quot;lucida Gran=
+de&quot;,&quot;serif&quot;;
+color:black">The 2nd International Conference on Contemporary Education and
+Economic Development<br>
+</span></b><span lang=3D"EN-US" style=3D"mso-bidi-font-size:10.5pt;font-fam=
+ily:&quot;lucida Grande&quot;,&quot;serif&quot;;
+color:black"><br>
+Theme: Education and Economy<br>
+<br>
+ORGANIZED by Modern International Green Culture Communication Association (=
+<span class=3D"SpellE">MIGCCA</span><span class=3D"GramE">)</span><br>
+<br>
+DATES: October 26-27, 2019<br>
+PLACE: Beijing, China<br>
+<br>
+DEADLINES:<br>
+FULL PAPERS =E2=80=93 October 20, 2019. All full-paper submissions will be =
+reviewed for
+publication in the refereed Conference Proceedings with ISBN number. The
+authors of these articles will receive their publications in person (one co=
+py
+per a registered participant will be provided free of charge).<br>
+<a name=3D"_GoBack"></a><br>
+<span class=3D"SpellE">CEED</span> 2019 is for people, who want to particip=
+ate in a
+major international forum, get published, network with colleagues from many
+countries and sharing similar or complementary interests! <br>
+<br>
+It is very pleased to announce that the Keynote Address at the <span class=
+=3D"SpellE">CEED</span> 2019 will be delivered by Prof. Dr. <span class=3D"=
+SpellE">Ubaldo</span> <span class=3D"SpellE">Comite</span>, a Professor of =
+the
+University of Calabria, Italy, and an award-winning author of many influent=
+ial
+articles in lading scholarly journals and books.<br>
+<br>
+Papers related to all areas of History of Education, Home Education,
+Alternative Assessment of Teaching, Human Resource Management and Developme=
+nt
+in Education, Anthropology of Education, Children's Psychology, Instruction=
+al
+Design, Cognitive Psychology, Interpersonal Relationships and Communication=
+,
+Comparative Education, Introduction to Education, Introduction to Special
+Education, Creative and Individualized Teaching, Law of Education,</span><s=
+pan lang=3D"EN-US"> </span><span lang=3D"EN-US" style=3D"mso-bidi-font-size=
+:10.5pt;
+font-family:&quot;lucida Grande&quot;,&quot;serif&quot;;color:black">Market=
+ing Theory and
+Applications, Consumer Behavior, Corporate Governance, Decision Sciences,
+Development Planning and Policy, Economic Methodology, Monetary Economics,
+Product Management, Supply Change Management, Welfare Economics are invited=
+ to
+this international conference, which is expected to be attended by authors =
+from
+nearly all parts of the World. People without papers can also participate i=
+n
+this conference, and they are invited to serve as session chairs or
+discussants, as well as informal contributors to the academic quality of th=
+is
+international event. <br>
+<br>
+PUBLICATION<span class=3D"GramE">:</span><br>
+<span class=3D"SpellE">DEStech</span> Publications<o:p></o:p></span></p>
+
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"mso-bidi-font-size:10.=
+5pt;
+font-family:&quot;lucida Grande&quot;,&quot;serif&quot;;color:black">Procee=
+dings series of <span class=3D"SpellE">DEStech</span> Transactions on Socia=
+l Science, Education and Human
+Science, ISSN: 2475-0042.<o:p></o:p></span></p>
+
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"mso-bidi-font-size:10.=
+5pt;
+font-family:&quot;lucida Grande&quot;,&quot;serif&quot;;color:black"><br>
+INDEXING:<o:p></o:p></span></p>
+
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"mso-bidi-font-size:10.=
+5pt;
+font-family:&quot;lucida Grande&quot;,&quot;serif&quot;;color:black">All of=
+ the papers collected
+from <span class=3D"SpellE">CEED</span> 2019 will be submitted to Web of Sc=
+ience =E2=80=93 <span class=3D"SpellE">CPCI</span> (Conference Proceedings =
+Citation Index), <span class=3D"SpellE">CNKI</span>, Scholar Google for wor=
+ldwide online citation.<o:p></o:p></span></p>
+
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"mso-bidi-font-size:10.=
+5pt;
+font-family:&quot;lucida Grande&quot;,&quot;serif&quot;;color:black"><br>
+To submit your full paper, please email it as an attachment (acceptable for=
+mats
+are .doc and .<span class=3D"SpellE">docx</span>) to </span><span lang=3D"E=
+N-US"><a href=3D"mailto:ceed2019@vip.sina.com"><span class=3D"SpellE"><span=
+ style=3D"mso-bidi-font-size:
+10.5pt;font-family:&quot;lucida Grande&quot;,&quot;serif&quot;">ceed2019@vi=
+p.sina.com</span></span></a></span><span lang=3D"EN-US" style=3D"mso-bidi-f=
+ont-size:10.5pt;font-family:&quot;lucida Grande&quot;,&quot;serif&quot;;
+color:black">. All submissions will be double blind peer-refereed by member=
+s of
+the Conference Review Committee. Authors will be notified of the review out=
+come
+within 5-7 working days after the arrival of their submissions.<br>
+<br>
+Authors, who could NOT travel to Beijing for visa or other reasons, will ha=
+ve
+the same publication opportunities.<br>
+<br>
+For inquiries, please contact the Conference Organizing Committee via </spa=
+n><span lang=3D"EN-US"><a href=3D"mailto:ceed2019@vip.sina.com"><span class=
+=3D"SpellE"><span style=3D"mso-bidi-font-size:10.5pt;font-family:&quot;luci=
+da Grande&quot;,&quot;serif&quot;">ceed2019@vip.sina.com</span></span></a><=
+/span><span lang=3D"EN-US" style=3D"mso-bidi-font-size:10.5pt;font-family:&=
+quot;lucida Grande&quot;,&quot;serif&quot;">
+<span style=3D"color:black">or visit our Website: </span></span><span lang=
+=3D"EN-US"><a href=3D"http://sctrack.sc.gg/track/click/eyJtYWlsbGlzdF9pZCI6=
+IDAsICJ0YXNrX2lkIjogIiIsICJlbWFpbF9pZCI6ICIxNTY5NjU3MTcwNDI4XzYzNDc0XzI1OTI=
+2XzY5MTUuc2MtMTBfOV8xM18yMTgtaW5ib3VuZDAkZm9hYWRAY2FscG9seS5lZHUiLCAic2lnbi=
+I6ICI4YTYwOTk3MjBhN2VjNGI4M2FiYmMxZWJkNzNjZWE3NyIsICJ1c2VyX2hlYWRlcnMiOiB7f=
+SwgImxhYmVsIjogMCwgImxpbmsiOiAiaHR0cCUzQS8vd3d3LmNlZWQyMDE5Lm9yZyIsICJ1c2Vy=
+X2lkIjogNjM0NzQsICJjYXRlZ29yeV9pZCI6IDE4MzQ5OH0=3D.html"><span class=3D"Spe=
+llE"><span style=3D"mso-bidi-font-size:
+10.5pt;font-family:&quot;lucida Grande&quot;,&quot;serif&quot;">http://www.=
+ceed2019.org</span></span></a></span><span lang=3D"EN-US" style=3D"mso-bidi=
+-font-size:10.5pt;font-family:&quot;lucida Grande&quot;,&quot;serif&quot;">=
+<span style=3D"mso-spacerun:yes">&nbsp; </span><span style=3D"color:black">=
+<span style=3D"mso-spacerun:yes">&nbsp;</span></span></span><span lang=3D"E=
+N-US" style=3D"mso-bidi-font-size:10.5pt"><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html><br><br><div style=3D"width:1px;height:0px;overflow:hidden"><img sty=
+le=3D"width:0;height:0" alt=3D"" src=3D"http://sctrack.sc.gg/track/open/eyJ=
+tYWlsbGlzdF9pZCI6IDAsICJ0YXNrX2lkIjogIiIsICJlbWFpbF9pZCI6ICIxNTY5NjU3MTcwND=
+I4XzYzNDc0XzI1OTI2XzY5MTUuc2MtMTBfOV8xM18yMTgtaW5ib3VuZDAkZm9hYWRAY2FscG9se=
+S5lZHUiLCAic2lnbiI6ICJlYzQyODMxNDEwNGM4NmEzODQ5N2QwNDM4MTBmYjJiYiIsICJ1c2Vy=
+X2hlYWRlcnMiOiB7fSwgImxhYmVsIjogMCwgInVzZXJfaWQiOiA2MzQ3NCwgImNhdGVnb3J5X2l=
+kIjogMTgzNDk4fQ=3D=3D.gif"></div>
+<div style=3D"text-align:center"><div style=3D"border-top:1px solid #ddd;wi=
+dth: 100%;max-width: 560px;display:inline-block;padding:10px"><a style=3D"d=
+isplay:inline-block;background:#ddd; border-radius:4px;padding: 3px 15px;co=
+lor:#a6a6a6;text-decoration:none;font-size:12px" href=3D"http://sctrack.sc.=
+gg/track/unsubscribe.do?p=3DeyJ1c2VyX2lkIjogNjM0NzQsICJ0YXNrX2lkIjogIiIsICJ=
+lbWFpbF9pZCI6ICIxNTY5NjU3MTcwNDI4XzYzNDc0XzI1OTI2XzY5MTUuc2MtMTBfOV8xM18yMT=
+gtaW5ib3VuZDAkZm9hYWRAY2FscG9seS5lZHUiLCAic2lnbiI6ICJkNjJjZTIyYWY0OTcxYmM4Y=
+WQ2MWU3MzQ0MTE4ZWU5MCIsICJ1c2VyX2hlYWRlcnMiOiB7fSwgImxhYmVsIjogMCwgInJlY2Vp=
+dmVyIjogImZvYWFkQGNhbHBvbHkuZWR1IiwgIm1haWxsaXN0X2lkIjogMCwgImNhdGVnb3J5X2l=
+kIjogMTgzNDk4fQ%3D%3D">=E7=82=B9=E5=87=BB=E8=BF=99=E9=87=8C=E5=8F=96=E6=B6=
+=88=E8=AE=A2=E9=98=85<br>click to unsubscribe</a></div></div>=
+
+------=_Part_20312600_1877418183.1569657170407--

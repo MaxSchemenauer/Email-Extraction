@@ -1,0 +1,290 @@
+Received: from SN6PR08MB4990.namprd08.prod.outlook.com (2603:10b6:a03:54::47)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR02CA0070.NAMPRD02.PROD.OUTLOOK.COM; Mon, 29 Apr 2019 14:31:34 +0000
+Received: from BYAPR08CA0015.namprd08.prod.outlook.com (2603:10b6:a03:100::28)
+ by SN6PR08MB4990.namprd08.prod.outlook.com (2603:10b6:805:6e::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1835.13; Mon, 29 Apr
+ 2019 14:31:32 +0000
+Received: from SN1NAM04FT026.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::205) by BYAPR08CA0015.outlook.office365.com
+ (2603:10b6:a03:100::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1835.12 via Frontend
+ Transport; Mon, 29 Apr 2019 14:31:31 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=none action=none
+ header.from=SPELDESIGN.UU.SE;compauth=softpass reason=201
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ SN1NAM04FT026.mail.protection.outlook.com (10.152.88.110) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1835.13 via Frontend Transport; Mon, 29 Apr 2019 14:31:29 +0000
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x3TEQ9FF015686
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Mon, 29 Apr 2019 17:26:09 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1])
+	by mailscan2.uta.fi (8.14.7/8.14.7) with ESMTP id x3TEQ8XA024559;
+	Mon, 29 Apr 2019 17:26:08 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan2.uta.fi (F-Secure/fsigk_smtp/550/mailscan2.uta.fi);
+ Mon, 29 Apr 2019 17:26:08 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x3TEQ8PJ004085
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Mon, 29 Apr 2019 17:26:08 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x3TBp0s4021520;
+	Mon, 29 Apr 2019 17:25:51 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          143346 for GAMESNETWORK@LISTSERV.UTA.FI; Mon, 29 Apr 2019 17:25:49
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x3TEPnK3012443 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Mon, 29 Apr 2019 17:25:49 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x3TEPnhR015644
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 17:25:49 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x3TEPm4r024491 for
+          <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 17:25:48 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Mon, 29 Apr 2019 17:25:48
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from cursor.its.uu.se (smtp-out3.uu.se [130.238.7.174]) by
+          smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x3TEPkSV022390
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=NOT) for <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 17:25:48 +0300
+Received: from e-mailfilter02.sunet.se (e-mailfilter02.sunet.se
+          [192.36.171.202]) by cursor.its.uu.se (Postfix) with ESMTP id
+          93A9B191 for <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 16:25:25 +0200
+          (CEST)
+Received: from velox.its.uu.se (velox.its.uu.se [130.238.7.74]) by
+          e-mailfilter02.sunet.se (8.14.4/8.14.4/Debian-8+deb8u2) with ESMTP id
+          x3TEPicP131584 (version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA
+          bits=256 verify=NO) for <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019
+          16:25:45 +0200
+Received: from smtp.user.uu.se (uuc-epost005.user.uu.se [130.238.3.15]) (using
+          TLSv1 with cipher AES256-SHA (256/256 bits)) (No client certificate
+          requested) by velox.its.uu.se (Postfix) with ESMTPS id D2116340AE for
+          <GAMESNETWORK@uta.fi>; Mon, 29 Apr 2019 16:25:44 +0200 (CEST)
+Received: from [192.168.10.55] (213.114.158.105) by uuc-epost005.user.uu.se
+          (130.238.3.15) with Microsoft SMTP Server (version=TLS1_2,
+          cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1713.5;
+          Mon, 29 Apr 2019 16:25:44 +0200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
+            Thunderbird/60.6.1
+Content-Type: text/plain; charset="utf-8"; format=flowed
+Content-Language: en-US
+X-Originating-IP: [213.114.158.105]
+X-ClientProxiedBy: uuc-epost002.user.uu.se (130.238.3.12) To
+                   uuc-epost005.user.uu.se (130.238.3.15)
+X-p0f-Info: os=Linux 2.6.x, link=Ethernet or modem
+X-CanIt-Archive-Cluster: PfMRe/vJWMiXwM2YIH5BVExnUnw
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.19
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Mon, 29 Apr 2019 17:26:08 +0300 (EEST)
+X-Spam-Level: xxx
+X-Spam-Report: BAYES_00,L_HDR_HAS_DKIM
+X-Spam-Status: NO ; -30
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from quoted-printable to 8bit by listserv.uta.fi id
+                      x3TEPnK2012445
+Message-ID: <9d3d4bf4-f1f7-3ff6-6c14-bb0929782915@speldesign.uu.se>
+Date: Mon, 29 Apr 2019 16:25:46 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Henrik Warpefelt <henrik.warpefelt@SPELDESIGN.UU.SE>
+Subject: [GAMESNETWORK] CFP reminder:
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Apr 2019 14:31:30.4150
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3aea9ad9-b657-4617-e1cf-08d6ccaf5ef7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(2970300002)(286005)(12213003)(199004)(189003)(7192003)(176002)(50466002)(16526019)(95636005)(956004)(15974865002)(2486003)(58126008)(77096007)(67846002)(2616005)(26005)(43066004)(486006)(44832011)(16576012)(6306002)(106002)(66574012)(476003)(16003)(336012)(76786011)(6392003)(75640400001)(4006050)(14444005)(23676004)(126002)(66346011)(7846003)(65806001)(65956001)(47776003)(356004)(74482002)(64126003)(386003)(146002)(66066001)(246002)(3846002)(305945005)(6116002)(42882007)(7596002)(1096003)(55176004)(8676002)(2870700001)(40036005)(6862004)(36756003)(53386004)(31686004)(31696002)(65826007)(966005)(7736002)(7636002)(65596001);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4990;H:mxout1.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout1.uta.fi;A:1;MX:3;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT026.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 3aea9ad9-b657-4617-e1cf-08d6ccaf5ef7
+X-Microsoft-Antispam:
+ BCL:2;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600141)(711020)(4605104)(1401320)(1421009)(71702078)(7193020);SRVR:SN6PR08MB4990;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4990:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Apr 2019 14:31:29.7883
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3aea9ad9-b657-4617-e1cf-08d6ccaf5ef7
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4990
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.5847599
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1835.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?U2lPUU5lcC8zSWEzQm90dlhUZ0JDaGxPV2JvR3Q0c2dIdlJFQ0JmL3N2WmxG?=
+ =?utf-8?B?Nm84RW5VWVlMa2FnQUtuK2c3RFFpMm8xK2lteTQ5dE1VWEd1WWdwdFZxblBm?=
+ =?utf-8?B?cTV0TU1FNW9YUk45YjJadzNyTUdTVWI4WDYzblZNQ3JIN3MyMjZKem1ITXhy?=
+ =?utf-8?B?OFk5YUYzc3NYL0RCMHBPc3hXa0FDQkpnK1FZcGUzSHdUTmtCYXdMSE8wMkVT?=
+ =?utf-8?B?QnBGOTVmems0ekpnQ1oySFdrTlh1UHBROFUza01PU0pkTGNTRnBkbnlIMGJv?=
+ =?utf-8?B?S09mczdUMWJiZ2h0ZjVoU3dXRk5mTDJPUTB2YUFCS0hJYlNDYXlZRWFaWVM5?=
+ =?utf-8?B?a2IyanJia2tNQTJSdUJTblY4dWVjY3dvVnlQYTB4VFUwYjB2NEVDanBvWk5r?=
+ =?utf-8?B?dDZRbzZGeUVCUWUzNkhDdjhUbmpYS2dCazUvcUl0c3ZLbkFwNUhVZGQ3czVK?=
+ =?utf-8?B?bTNteUc0VGVCNG1HblI5VC90NzllT1RXR3BWUG85bXUzYnR1eDc3Nm9mRHJY?=
+ =?utf-8?B?K3cxVVFNekxyM0x3NGs2OXRaekNBSFBnSjJLUFl0VnlmR3o1QnpUbzFlS1NY?=
+ =?utf-8?B?YSs1bnRtZGhNODFWcnBOMUd4RmRzU3Qxd3NBekhjbGFQZXhhUWFWaGFCazZ4?=
+ =?utf-8?B?YkR2VDNYK3o4YzVqc1d1VHpHRFVsVFRLWWpZR2owRmdKWVNybVdDNDV6eHpP?=
+ =?utf-8?B?TW5UV1NqbGJ6YktTRFExUlZUWkVBdDNUcjhrQnEvd1lDODBXbWdPQmtDT3N2?=
+ =?utf-8?B?VEpuRkRIelRqVFJLNWlKRVpJMW5tM2RVRzJ4SnNEdkRRWlNzaHFZdG0xRjAr?=
+ =?utf-8?B?NnYyY3BLZVdqeWdYMWdUWDhlKzBBWVpvY1JWOTQ1WGJVV0ZRWVgveUNYTngr?=
+ =?utf-8?B?N0dFT3BmQ0tBZWJSSGVwYnJYcyt3SHcxeXNKWUlZdUUxV0xBZUl5M2pQTWZv?=
+ =?utf-8?B?R3RVUWF5QmYxb1JMSXNsbkYwb2Y5MUF5Vm80UGx0MWY3ZVVhUGpXeXFMaTZx?=
+ =?utf-8?B?N1I2WTgzN2ZWdnpVRkFvN0NtSWkyK05yZWk3ZDJQQzNlM3UvbnhRL2dTa2JP?=
+ =?utf-8?B?REFRa1FHWjBPb1ljTU1GcnNlWk5laVVwQUdMSUd5T1E3MUVWaUplOVhPeHp4?=
+ =?utf-8?B?MWRaVDg1Wko3UVkzOFJ2ZzdVQTZzN3ZhaE5xbTJMekFuRUxNeGdUbWlCMGF5?=
+ =?utf-8?B?T21GNGxRNTNrTldlWFE4WlcxZkdCVTlmWmlpcGNXVUUzZ0pXOG1jNWxzVVNC?=
+ =?utf-8?B?N3p5eU1CaEVQUmZTNytqSGhabDFmQ3pwbVBWVFNYSjJYSVZwTXZPdlFSbVFV?=
+ =?utf-8?Q?AHuKXxKijJ/3Xx97JRdZ/AnJFsB7qLhYTm?=
+MIME-Version: 1.0
+
+Just a quick reminder that the extended deadline for The Workshop on
+User Experience of Artificial Intelligence in Games is on Friday May
+3rd! See below for CFP and links.
+
+Call for Papers to the 2019 Workshop on User Experience of Artificial
+Intelligence in Games @ FDG
+
+How do players experience Artificial Intelligence (AI) in games? How do
+they feel about the AI, and how is what the AI does communicated to the
+player? Is there interaction with the AI, and if so, who takes the lead?
+Is this a social experience, a believable one? Is the AI creative, or at
+least perceived as such? And finally, is the AI making the game
+experience better?
+AIs fill many roles in games, from companions to antagonists, from
+storytellers to architects and game testers. With all the recent focus
+and technical advances in AI this is likely to increase, and the recent
+popularity of artificial intelligence is moving AIs to the foreground of
+games. This raises many questions — and in this workshop, we want to
+look at those surrounding the player's user experience with artificial
+intelligence in its many forms.
+
+The 2019 Workshop on User Experience and Artificial Intelligence
+encompasses the intersection between UX and AI as it manifests in games.
+We wish to act as a point of interaction between researchers specialized
+within these fields, in the hope that this will help facilitate research
+that allows for the creation of more interesting and robust AI-based
+game experiences.
+This workshop aims to build a community centered on this by putting
+forward demonstrations of work in the integration of these two areas, as
+well as models and theories that can be used to create understanding
+where the areas intersect. We especially welcome demonstrations of work
+in progress or work showcasing new ideas. We are interested in realized
+prototypes, demons and applications — especially designed created to
+explore hypotheses. We are also open to philosophical and
+humanities-based approaches and provocative ideas.
+
+The workshop is co-located and organized with the 2019 Foundations of
+Digital Games (FDG) conference in San Luis Obispo, California, USA. The
+exact workshop date is TBD, but will take place sometime during the
+conference (August 26-30, 2019).
+
+Topics
+Topics include, but are not limited to:
+the believability and presentation of non-player characters
+the UX created by procedurally generated content
+the narratives woven by director AIs
+trade-offs between autonomy and control over storylines, dialogue, and
+similar
+perception and acceptance of game design assistance tools
+the presentation of AI in game design
+the perception of AI in games
+user-centric examinations of the various technologies that are used to
+construct these in-game functions
+of particular interest are studies on how we create interesting game
+experiences using AI, and how these are interpreted by players
+
+Submission guidelines
+We will accept submissions for the following:
+Papers
+Demos
+Interesting artifacts
+
+The workshop will accept submissions in the form of papers and
+demos/artifacts. Submissions will be subject to double-blind peer
+review. Each submission will receive feedback from at least two
+reviewers, as well as a meta-review. Authors of accepted submissions
+will be invited to give an oral presentation of their submission. We are
+especially interested in seeing work in progress or discussions of open
+issues within the field.
+
+Submissions must use the ACM template. Papers must be 5-8 pages long,
+excluding references. Demo/artifact submissions can be up to 2 pages
+long and must containing a link where the demo/artifact can be downloaded.
+Accepted papers will be published in the ACM Digital Library along with
+the conference proceedings of FDG 2019.
+
+Submission instructions
+All submissions should be in the PDF format, use the ACM Master
+Template, and be submitted through EasyChair.
+
+Dates
+May 3 2019 Submission deadline
+June 5 2019 Author notification
+June 20 2019 Camera Ready deadline
+
+Contact
+Please use organizers[at]uxofai.org.
+
+More info at http://uxofai.org
+
+Regards,
+Henrik Warpefelt, Christoph Salge, Harko Verhagen, Mirjam Palosaari
+Eladhari
+
+--
+Henrik Warpefelt
+Assistant Professor
+Department of Game Design, Uppsala University
+
+
+
+
+
+
+
+
+
+När du har kontakt med oss på Uppsala universitet med e-post så innebär det att vi behandlar dina personuppgifter. För att läsa mer om hur vi gör det kan du läsa här: http://www.uu.se/om-uu/dataskydd-personuppgifter/
+
+E-mailing Uppsala University means that we will process your personal data. For more information on how this is performed, please read here: http://www.uu.se/en/about-uu/data-protection-policy
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=GAMESNETWORK&A=1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html

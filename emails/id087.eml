@@ -1,0 +1,249 @@
+Received: from DM6PR08MB3963.namprd08.prod.outlook.com (2603:10b6:a03:94::18)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0041.PROD.EXCHANGELABS.COM; Mon, 14 Oct 2019 21:44:46 +0000
+Received: from BYAPR08CA0052.namprd08.prod.outlook.com (2603:10b6:a03:117::29)
+ by DM6PR08MB3963.namprd08.prod.outlook.com (2603:10b6:5:8b::26) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.19; Mon, 14 Oct
+ 2019 21:44:45 +0000
+Received: from SN1NAM04FT023.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::200) by BYAPR08CA0052.outlook.office365.com
+ (2603:10b6:a03:117::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16 via Frontend
+ Transport; Mon, 14 Oct 2019 21:44:44 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ SN1NAM04FT023.mail.protection.outlook.com (10.152.88.108) with Microsoft SMTP
+ Server id 15.20.2347.16 via Frontend Transport; Mon, 14 Oct 2019 21:44:44
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id 8D7002E1F36; Mon, 14 Oct 2019 17:43:26 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org 8D7002E1F36
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1571089406;
+	bh=Wbve9UX7TJeKQtkxIpbr7ZBL40ywqhDEa4fjaHbAGT8=;
+	h=Date:To:Subject:From:From;
+	b=WZ279euWawpduP1WGePbkfyE7nTcs+C0vv3sqvn8rt8vYcIc3NSTHmgOspuM+1m4e
+	 SffBSKUU7bydigikoBLuSQRFcIslhXBoFM+OYuP4mSkIhOPLLMhap969CAHTXEMEny
+	 1WSWBUWULD9H71xTwrGvxDTefMRjKJx0FEEmgPgw=
+Date: Mon, 14 Oct 2019 17:43:26 -0400
+To: foaad@calpoly.edu
+Subject: CFP: IEEE CPS: Conf on IoT - part of Computational Science and
+ Computational Intelligence (CSCI-ISOT'19: Dec. 5-7, 2019, USA); Deadline:
+ October 21
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20191014214326.8D7002E1F36@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 14 Oct 2019 21:44:44.5205
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3dac8965-e428-4f83-9bd1-08d750efba0f
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:DM6PR08MB3963;H:world-comp.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT023.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 3dac8965-e428-4f83-9bd1-08d750efba0f
+X-MS-TrafficTypeDiagnostic: DM6PR08MB3963:
+X-MS-Exchange-PUrlCount: 6
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 14 Oct 2019 21:44:44.4034
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3dac8965-e428-4f83-9bd1-08d750efba0f
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB3963
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.9852632
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?lRYz1hoSci+5bNPmhjXZ+K7AdePEaqkzEJFx/NyQ/ZeZ7BGK9TzqHyLWxeSC?=
+ =?us-ascii?Q?qRXz9cVhornjH8c6n1mVXMwi7jgcH2Ir6iyJvLopLmJaOWMtOkHZS7AHyGAU?=
+ =?us-ascii?Q?21j4/UBAKCX4oGApuChVvpJyTAZe7oWuhoYQ8tKgMIIPiLB5t2V3sWZBEJtB?=
+ =?us-ascii?Q?Lwpfii/P7K468CvMSTCaQlT2ilCSRXSPVPgmROu3l9t/5yQMb+VE1CQ9E4gB?=
+ =?us-ascii?Q?jGXARuiAU+fKRwfIZGKnAvSWVFoPZv6f6q2kbWzotUnFl1YzngYEXHpW8k8Q?=
+ =?us-ascii?Q?8oOL7KSKwz9S4ItjAkjwHVIL/EVpbgsNG0uEoI9T9VPsG2kYCpmnswNLRH6L?=
+ =?us-ascii?Q?iHaE0ip8QjadbhncyGCppEBkGCzKgjyiS2Scky6E3tw37aRSKUAOWG7qlV97?=
+ =?us-ascii?Q?x8agmM4+MkBIlEk771sXdatM2D4L43eQPRs2guC9qLkgvqMiVsyU/TXweUY2?=
+ =?us-ascii?Q?tG4suZtkh/Rc5H2md4euzlUxDZ/KvoBwHZ0ws7wflykVYOhChLFMBG31JYxh?=
+ =?us-ascii?Q?mMGYwpryoPRhmxyJh3zGFhqmjnJxS0UQ2x3QuFRp8fQsW5aJ3wz0mlhzo8/d?=
+ =?us-ascii?Q?aUwf5YcdmMW/i2GkKcmYRg74nEva2Khi3W50zX+NSORViWphVev20uXcnWCT?=
+ =?us-ascii?Q?Tx9Xof1olb25yzABrloV2boeI23swBV+/BLi6YAossQ38jAmXE/gr5t23JaS?=
+ =?us-ascii?Q?BSMdVqp4kwwCulvYj25hfUz8WlkxKU8JHM+xakSUgbpFXTnjo4phQ9aQJrcz?=
+ =?us-ascii?Q?f7gtZ4p2oVdDApHhSfzgTafC0LSKLcY6Hr5KQ+RG//t/mOV5D/PHo8qBBuwn?=
+ =?us-ascii?Q?bIzx83/Er66xX5gcvqlEgsCTAU0XvGnCXot7j13+dIHx2fZFZqGkFwpuvyn4?=
+ =?us-ascii?Q?aA1kSKeET7SUy8NCZ3rVUBoNffRVY4n58oYP/pmDv2ihu+pW80snA4IR74Bb?=
+ =?us-ascii?Q?dNpwErCn0IHzC/1455TVktFADX6Ik02xC1kw48NmsOXoddLrQa51k3707nl8?=
+ =?us-ascii?Q?YlRUK7EaD/gNCsdh9D1VQBFt2MvGySW79q9WRQHzkRgobr4gQ+YdduK9JqZX?=
+ =?us-ascii?Q?jbR1CsTrTV3Wb0kjsrEUG7NEZ92KMHZVesyfuGqAHMiVSGkb08UntGRq+Qxj?=
+ =?us-ascii?Q?G9mXOQb92upkbb9BHkZI3ibgF5i6evxubYKycdHjfFFH2PJD8AoS46uJ8yd8?=
+ =?us-ascii?Q?Z4caZ1bTA+byK6gnp/HiUwAQR7czt3aST0KboK6nHmdTaKA6tOpRUo92oitl?=
+ =?us-ascii?Q?LkwUCg/LuFh6kwu1qUpmhOCeC1BLktPXfTe9c0nuOrJ8zI0+6G32bF2SqM6D?=
+ =?us-ascii?Q?cX0tNuGlqLIDLATpOo+Zm95Qjt/lZliU1Cxv8hpPowI3P6SWD8Ce6neEO46/?=
+ =?us-ascii?Q?gX4askSmkdbhRJubUJcP3o88wsOMCmOgInRYSqCBq9v2gXFHB9luKCBDlhro?=
+ =?us-ascii?Q?41YCoeoI9ic=3D?=
+MIME-Version: 1.0
+
+
+                          CALL  FOR  PAPERS
+    Extended Deadline for Submission of Papers: October 21, 2019
+
+INTERNATIONAL SYMPOSIUM ON INTERNET OF THINGS & INTERNET OF EVERYTHING
+            (CSCI-ISOT: December 5-7, 2019, Las Vegas, USA)
+
+     https://americancse.org/events/csci2019/Symposiums/csci_is 
+
+                         IEEE Xplore entry:
+   https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+      In Conjunction with: The 2019 International Conference on
+         Computational Science & Computational Intelligence
+               https://americancse.org/events/csci2019 
+
+DEMOGRAPHY HISTORY (based on 2014 through 2019 participation data):
+
+     In the past, about 42% of the attendees have been from outside
+     USA; from 59 nations. 56% of registrants have been from academia,
+     32% from industry; 11% from government agencies and research labs;
+     and 1% unknown. The conference has had participants, speakers,
+     authors affiliated with over 154 different universities; including
+     many from the top 40 ranked institutions; major IT corporations,
+     including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+     Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+     Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+     Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+     Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+     BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+     Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+     major corporations, including, Exxon Mobil, JPMorgan Chase,
+     Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+     Petroleum Group, Aerospace Electronic Technology (China), Max
+     Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+     (France), Forschungszentrum Juelich (Germany), Secured Smart
+     Electric Vehicle (Korea), ...; government research agencies and
+     national laboratories, including, NSF, NIH National Institutes of
+     Health, US Air Force (multiple research labs), NSA National Security
+     Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+     Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+     Lab, US National Cancer Institute, Swedish Defence Research Agency,
+     NIST US National Institute of Standards and Technology, U.S.
+     Geological Survey, US National Library of Medicine, US Air Force
+     (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+     Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+     Army, Korea Internet & Security Agency, Suez Canal Research Center,
+     Okinawa Bureau (Japan), Canadian Medical Protective Association,
+     Osong Medical Innovation Foundation (Korea), National Institute of
+     Informatics (Japan), ...; and three Venture Capitalists and nine
+     Intellectual Property attorneys.
+
+
+SCOPE AND LIST OF TOPICS:
+     Topics of interest include, but are not limited to the following:
+
+     - Intelligent Systems for IoT
+     - Environmental Monitoring
+     - Energy Aware Systems and Efficiency
+     - Machine to Machine/Device Communications
+     - Network Design & Architecture
+     - Networking & Communication Protocols
+     - Wireless Systems & Applications
+     - Infrastructure Management
+     - IoT & e-Government, e-Commerce, e-Science & Novel Technologies
+     - IoT & Big Data
+     - Home Automation
+     - Software Architecture, Middleware, & Frameworks
+     - Services Computing
+     - Health Informatics as a Service
+     - Financial Software as a Service
+     - Business Process as a Service
+     - Natural Science as a Service
+     - Integration as a Service
+     - Large Scale Deployments
+     - Mobile Services
+     - Knowledge Management
+     - Location-awareness
+     - Security and Privacy
+     - Social Implications of IoT
+     - Technological focus for Smart Environments
+     - Smart City Case Studies
+     - Data Analysis & Visualization
+     - Architecture for secure & interactive IoT
+     - Intelligent Infrastructure & Guidance Systems
+     - Sensor Networks, Remote Diagnosis & Development
+     - Transportation Management
+     - Pattern Recognition & Recommendation Systems
+     - Green Computing
+     - Smart City & Novel Methodologies
+     - Data Processing Techniques
+     - Analytics & Statistical Methods
+     - Data Center Enabled Technologies
+     - Sensor, Wireless Technologies & APIs
+     - Networking & Social Networks
+     - IoT in Social Sciences
+     - Education & Learning
+     - Business, Finance & Management
+     - Open data: Issues, Services & Solutions
+     - Earth Science Simulation & Processing
+     - Practical Adoption of IoT & Case Studies
+     - Healthcare Services & Health Informatics
+     - Cloud, Grid & Cluster Computing
+     - Emerging IoT
+
+
+PUBLISHER:
+     IEEE CPS: https://www.computer.org/conferences/cps 
+     All accepted papers will be published in the proceedings
+     of the 2019 International Conference on Computational
+     Science & Computational Intelligence
+     ( CSCI: https://americancse.org/events/csci2019 ). Since its
+     inception, all CSCI proceedings have always been approved and
+     included into IEEE Xplore indexation/digital-library citation
+     index databases.
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+     https://americancse.org/events/csci2019/paper_submission 
+
+
+DEADLINES - DATES:
+
+     October 21, 2019:     EXTENDED deadline for Submission of Papers
+                           https://american-cse.org/ 
+     October 28, 2019:     Notification of acceptance (+/- 2 days)
+     November 8, 2019:     Final papers & Author Registrations
+
+     December 5-7, 2019:   The International Symposium on Internet of
+                           Things & Internet of Everything (CSCI-ISOT)
+               https://americancse.org/events/csci2019/Symposiums/csci_is 
+                           CSCI-ISOT will be held in conjunction with other
+                           affiliated research events; for more information,
+                           see https://americancse.org/events/csci2019 
+
+CONTACT:
+
+   Questions and inquiries should be sent to:
+   Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.

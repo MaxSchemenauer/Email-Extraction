@@ -1,0 +1,241 @@
+Received: from SN6PR08MB4208.namprd08.prod.outlook.com (2603:10b6:a03:1a0::23)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR16CA0010.NAMPRD16.PROD.OUTLOOK.COM; Wed, 2 Oct 2019 00:18:30 +0000
+Received: from SN4PR0801CA0019.namprd08.prod.outlook.com
+ (2603:10b6:803:29::29) by SN6PR08MB4208.namprd08.prod.outlook.com
+ (2603:10b6:805:2e::31) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2305.17; Wed, 2 Oct
+ 2019 00:18:30 +0000
+Received: from CO1NAM04FT043.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::200) by SN4PR0801CA0019.outlook.office365.com
+ (2603:10b6:803:29::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2305.20 via Frontend
+ Transport; Wed, 2 Oct 2019 00:18:29 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ CO1NAM04FT043.mail.protection.outlook.com (10.152.91.173) with Microsoft SMTP
+ Server id 15.20.2305.15 via Frontend Transport; Wed, 2 Oct 2019 00:18:29
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id DA04E2E10E6; Tue,  1 Oct 2019 20:17:25 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org DA04E2E10E6
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1569975445;
+	bh=esQ0upjJzUvfXXFCslOI2cPM4vFvmXp5QHgeL7NQ0uw=;
+	h=Date:To:Subject:From:From;
+	b=prdeYfq/lx5tERbiOtenIBHVoiVL+qA092NVPRXA0xqhgujEncSLKlgnSO2F22Yc1
+	 qHrdoWWvjQDUuUJRCfQ5UEg1Zja63S6tapwd/Lmb4y/EWLOazscdqg9ugxsKSt+jbE
+	 wb69Clf7svo2+ysYXBeuCocMsKyL66cswmmmv7vY=
+Date: Tue, 01 Oct 2019 20:17:25 -0400
+To: foaad@calpoly.edu
+Subject: CFP: IEEE CPS: Conf on AI, Data Science, Social Networks, Smart
+ Cities, IoT (Dec. 5-7, 2019, USA); Deadline: October 6
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20191002001725.DA04E2E10E6@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Oct 2019 00:18:29.7036
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ a7f062f8-c8ad-4fec-16c1-08d746ce0d54
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:SN6PR08MB4208;H:world-comp.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT043.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: a7f062f8-c8ad-4fec-16c1-08d746ce0d54
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4208:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Oob-TLC-OOBClassifiers: OLM:6108;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Oct 2019 00:18:29.6035
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a7f062f8-c8ad-4fec-16c1-08d746ce0d54
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4208
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.1607438
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2305.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?sgWpWJvDHd+0mnJUknk77lj9Qiza0j3gCD4VWD3KJYK7jbGgkWqzljwE75P+?=
+ =?us-ascii?Q?H19hvlEOURKWBd0tUmckiGfTe6mSlYT33jETmpSC1HxwI3JdaqSnZfoqnUV6?=
+ =?us-ascii?Q?EU4LXK7KzGyLh+p7CbfdRZQGCsCm+jevA1AhXotQgusbWJF44J9qy4PcziGK?=
+ =?us-ascii?Q?D0qK6f64RP0n9P+T1oqBLiZGELPPpeBZBxa//YRpr9p+n97cfGn611hrpCaG?=
+ =?us-ascii?Q?0eqZbVsFmWfdG7ctVzn6fToGR7Vn0HfhdNZtoPa4YI/UTbIZEFmyZdjMQK+0?=
+ =?us-ascii?Q?TVT1HXw1Fx5z9SzcCa6JmXQcw0JS5pBDIzVYPUfrI0wLSrRbUhzjyluf9QAE?=
+ =?us-ascii?Q?ORng+XBnPlVo/DwYoVlOI8cFyY84Bj7YqxsaPO6bI1i2C/yXY272mD+ljU4z?=
+ =?us-ascii?Q?YhX+y0NvtmwC3KYVk7AFRj8U7vcDIEznQT9TS9RlFWv1s+Ac9tMZEkvArMFP?=
+ =?us-ascii?Q?Uribe1ud0EnoOoIxRk2D7aEmu0QGpDkcKnQ4Qp/CbQhAa9Y5dEsamdGAdYet?=
+ =?us-ascii?Q?JqOjrW28CW/CEvwOz4B26PCUGuUnc1u/c4S1UzN7Pq+gvqg2gJ/F6gD6Le/i?=
+ =?us-ascii?Q?W0zhN5UDGgPY/Omc+kvwFyYu5fb6/xwPjdfT0qkyPikiOr1Z14JnCk6rcFFw?=
+ =?us-ascii?Q?AWm5enN/xkrEKNuw8AUWonejWByoY9pXsGDGITv/WS5sBGs4/edg/53+a134?=
+ =?us-ascii?Q?jbwaRuo8k/rSFqOLSqHB5wIpfsFBtxOp3rq8McRagAgrLQEQkTJmFVuxdo8A?=
+ =?us-ascii?Q?2RDqc0mNfi0pM7wEC/muYPecrAyoOJ1CBSEO/WqcJKtT1vqYzDti4FfMWYO+?=
+ =?us-ascii?Q?Tc2GoKB/EPqHb6AlVLD5m8jje5It571mgHwyTUrnoOteBXmW/7RoIIBTHtYS?=
+ =?us-ascii?Q?2yUFylW8TeLm0zw7iHtpLSIBaSPWdc5Gmrr8dzJAWSRq4xa8gFAXW8OZMyYG?=
+ =?us-ascii?Q?Y201RgCZ1ZdyVxm6QRPiAxrUbUypxtuLUsYjghnAOo7jBDKL3XXFQqO92oIk?=
+ =?us-ascii?Q?BQz3Xy0Kc48Eq95ZLBvOk9VOjIEoHMwkE9lygDT6Yj31Esg37ETeuH1HrJaR?=
+ =?us-ascii?Q?N8yZgkNbaZug6PSptkVbJIN/v/ewenWx4kVWPbKcO4TepML2K0lzDYt+Jnpe?=
+ =?us-ascii?Q?tg6asaZ4oJ85dIfWb5lTzLE8MvZyH30lfIH+yRJQP8OFWNs0ytdnVKOs7qI8?=
+ =?us-ascii?Q?Nk7Qsqzw+vOBECNo2cXXucWZcZKk29VnaxECZdT8MnzBWoKiI8CQwJMSSZNa?=
+ =?us-ascii?Q?X0XXbCdVhV63RqXQ0eCne4oZPq/8eJaLUVFYmw+ccEiROvTsThnPaQRZfUna?=
+ =?us-ascii?Q?ipK8y236hH9TLVaYGfg4aXmqyQ8amfjJrTspFLOa9NMU7qyS2Ackeayz/X02?=
+ =?us-ascii?Q?VyUFfYVQBU+wGiw4YxcUayNXTUuD?=
+MIME-Version: 1.0
+
+
+                          CALL  FOR  PAPERS
+              Paper Submission Deadline: October 6, 2019
+
+CSCI-ISAI: Int'l Symp. on Symposium on ARTIFICIAL INTELLIGENCE
+           https://americancse.org/events/csci2019/Symposiums/csci_isai 
+                                 +
+CSCI-ISBD: Int'l Symp. on BIG DATA & DATA SCIENCE
+           https://americancse.org/events/csci2019/Symposiums/csci_isbd 
+                                 +
+CSCI-ISNA: Int'l Symp. on SOCIAL NETWORK ANALYSIS, SOCIAL MEDIA, & MINING
+           https://americancse.org/events/csci2019/Symposiums/csci_isna 
+                                 +
+CSCI-ISSC: Int'l Symp. on SMART CITIES & SMART MOBILITY
+           https://americancse.org/events/csci2019/Symposiums/csci_issc 
+                                 +
+CSCI-ISOT: Int'l Symp. on INTERNET OF THINGS & INTERNET OF EVERYTHING
+           https://americancse.org/events/csci2019/Symposiums/csci_is 
+
+                  December 5-7, 2019, Las Vegas, USA
+
+                          IEEE Xplore entry:
+   https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+
+
+All accepted papers will be included in the proceedings of The 2019
+International Conference on Computational Science and Computational
+Intelligence (CSCI), to be published by IEEE CPS. The main objective
+of the CSCI Conference is to facilitate increased opportunities for
+cross-fertilization across research topics that overlap.
+
+
+PUBLISHER:
+
+   IEEE CPS: https://www.computer.org/conferences/cps 
+
+   Past conference proceedings can be accessed via IEEE Xplore
+   Digital Library at (each year, indexation was finalized during
+   the month of October):
+   https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+   Since its inception, all CSCI proceedings have always been approved
+   and included into IEEE Xplore indexation/digital-library citation
+   index databases (including all papers of its symposiums.)
+
+
+INVITATION:
+
+   You are invited to submit a paper for consideration. All accepted
+   papers will be published by IEEE CPS in the proceedings of The
+   2019 International Conference on Computational Science and
+   Computational Intelligence (CSCI). Extended versions of selected
+   papers of the conference will also appear in journals and edited
+   research books (Springer, Elsevier, BMC, ...) The published
+   proceedings can be accessed via web portals, IEEE CPS, other
+   Digital libraries.
+
+   CSCI'19 International Conference is composed of a number of
+   symposiums, sessions, workshops, posters and panel discussions;
+   all will be held simultaneously, same location and dates:
+   December 5-7, 2019.
+
+
+SCOPE AND LIST OF TOPICS:
+
+   For a detailed topical scope for each research track, refer to
+   the web sites that appear at the begining of this announcement.
+
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+   Type of Submissions/Papers:
+   https://americancse.org/events/csci2019/paper_categories 
+
+   Submission Instructions:
+   https://americancse.org/events/csci2019/paper_submission 
+
+
+DEADLINES - DATES:
+
+   October 6, 2019:      Submission of Papers
+                         https://american-cse.org/ 
+   October 18, 2019:     Notification of acceptance (+/- 2 days)
+   October 30, 2019:     Final papers & Author Registrations
+   December 5-7, 2019:   The 2019 International Conference on Computational
+                         Science and Computational Intelligence
+                         (CSCI'19: Las Vegas, USA)
+                         Including all its affiliated symposiums:
+                         https://americancse.org/events/csci2019 
+
+
+DEMOGRAPHY HISTORY (based on 2014 through 2019 participation data):
+
+   In the past, about 42% of the attendees have been from outside
+   USA; from 59 nations. 56% of registrants have been from academia,
+   32% from industry; 11% from government agencies and research labs;
+   and 1% unknown. The conference has had participants, speakers,
+   authors affiliated with over 154 different universities; including
+   many from the top 40 ranked institutions; major IT corporations,
+   including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+   Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+   Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+   Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+   Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+   BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+   Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+   major corporations, including, Exxon Mobil, JPMorgan Chase,
+   Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+   Petroleum Group, Aerospace Electronic Technology (China), Max
+   Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+   (France), Forschungszentrum Juelich (Germany), Secured Smart
+   Electric Vehicle (Korea), ...; government research agencies and
+   national laboratories, including, NSF, NIH National Institutes of
+   Health, US Air Force (multiple research labs), NSA National Security
+   Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+   Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+   Lab, US National Cancer Institute, Swedish Defence Research Agency,
+   NIST US National Institute of Standards and Technology, U.S.
+   Geological Survey, US National Library of Medicine, US Air Force
+   (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+   Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+   Army, Korea Internet & Security Agency, Suez Canal Research Center,
+   Okinawa Bureau (Japan), Canadian Medical Protective Association,
+   Osong Medical Innovation Foundation (Korea), National Institute of
+   Informatics (Japan), ...; and three Venture Capitalists and nine
+   Intellectual Property attorneys.
+
+
+CONTACT:
+
+   Questions and inquiries should be sent to:
+   CSCI 2019 Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.

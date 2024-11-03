@@ -1,0 +1,552 @@
+Received: from BL0PR08MB5396.namprd08.prod.outlook.com (2603:10b6:a03:1f4::34)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR20CA0021.NAMPRD20.PROD.OUTLOOK.COM; Thu, 12 Dec 2019 16:42:38 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=UlRgiKn7w2Uik1Gutsj60qjSehOQGHSfgR78JFslDlt4tVPYXklPsGx2Gahqw5uz+F3AeZh3FVqJElV+jBPPAZORvOQd8LhsayQRh+9sfslxGwfxsqFlTA6I/5Y7xC+rsJ9po0IztleZjL5ddgc4KndNccn6d1hs4nGgUWA3G+bPUG3UX6rtYq1EW+2onBZEwKRTqQYk0ch4an4Zyj5+uHYQH38x21Q1RxpM2XE7VTngpqHwWUcHP598fIQxRd+ioVOhucUkpEtgWNA5CqGVV81TjZqdoV35JNLlDOykjLFZYLADlWv3D4NrKS7LIxNNdyuJe8H/DOdsw2lSQIQapg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=EMeNj4UQ+l4RwI8EbulMveMjqlAL+GSGhp7e2GyYIxY=;
+ b=FabqEmbOdBniZheNwy3ImSs/Z0zw+1wkCqV41hUZBMxfiZT2mci0YKnCVpm2I+I5E2+Y85qIWKaHWWIF1tF2dNZ4wlWv+2LVN2oFpLRcfSvvXGRc123GoxBs3rT0lRIMvlP57U3IjJV9RdsQv2az5aMvthkm4zJ4CB6PsV0SD9wt74dGXkE4x1deK2zcF7OeWQhuIt3UZ1yJl2JdcOs8cqIP9KiVElO9NU8z8C3nLgrf59gegYR1WYDxloZx0e2LAnDniSr7te/yi8yuZzygbGAqfU9noU8B3t0XobrKu0NZG1Y4HdnukKZE6sF/aYn3AgKfcL9gJONTnQzWOAjt+g==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 193.166.164.158) smtp.rcpttodomain=calpoly.edu smtp.mailfrom=lists.tuni.fi;
+ dmarc=fail (p=none sp=none pct=100) action=none header.from=univie.ac.at;
+ dkim=fail (signature did not verify) header.d=tuni.onmicrosoft.com; dkim=fail
+ (signature did not verify) header.d=univie.ac.at; arc=fail (47)
+Received: from SN1PR12CA0097.namprd12.prod.outlook.com (2603:10b6:802:21::32)
+ by BL0PR08MB5396.namprd08.prod.outlook.com (2603:10b6:208:5a::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2495.21; Thu, 12 Dec
+ 2019 16:42:35 +0000
+Received: from BN3NAM04FT009.eop-NAM04.prod.protection.outlook.com
+ (2603:10b6:802:21:cafe::7e) by SN1PR12CA0097.outlook.office365.com
+ (2603:10b6:802:21::32) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2538.17 via Frontend
+ Transport; Thu, 12 Dec 2019 16:42:35 +0000
+Authentication-Results: spf=pass (sender IP is 193.166.164.158)
+ smtp.mailfrom=lists.tuni.fi; calpoly.edu; dkim=fail (signature did not
+ verify) header.d=tuni.onmicrosoft.com;calpoly.edu; dmarc=fail action=none
+ header.from=univie.ac.at;compauth=softpass reason=201
+Received-SPF: Pass (protection.outlook.com: domain of lists.tuni.fi designates
+ 193.166.164.158 as permitted sender) receiver=protection.outlook.com;
+ client-ip=193.166.164.158; helo=smtp1.tuni.fi;
+Received: from smtp1.tuni.fi (193.166.164.158) by
+ BN3NAM04FT009.mail.protection.outlook.com (10.152.92.126) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2538.14 via Frontend Transport; Thu, 12 Dec 2019 16:42:34 +0000
+Received: from lists.tuni.fi (lists.tuni.fi [193.166.164.155])
+	by smtp1.tuni.fi (Postfix) with ESMTP id 225F7808FD;
+	Thu, 12 Dec 2019 18:42:32 +0200 (EET)
+Received: from lists.tuni.fi (localhost [127.0.0.1])
+	by lists.tuni.fi (Postfix) with ESMTP id 09D3D238E;
+	Thu, 12 Dec 2019 18:42:32 +0200 (EET)
+X-Original-To: gamesnetwork@listrelay.tuni.fi
+Delivered-To: gamesnetwork@listrelay.tuni.fi
+Received: from EUR03-VE1-obe.outbound.protection.outlook.com
+ (mail-eopbgr50117.outbound.protection.outlook.com [40.107.5.117])
+ by lists.tuni.fi (Postfix) with ESMTP id CCA0CE64
+ for <gamesnetwork@listrelay.tuni.fi>; Thu, 12 Dec 2019 09:31:33 +0200 (EET)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=APtCdTLqnY8Wg6jhqwFztTfuKaSu604oainbYtg3GjBiRl2Ok5MDE8VWui0kq2n4IjRIwbDfIEwdCAbAtjhYCB2hhgnlcFtSC5j7EDFeymor7awwpQZAWpplQX74cWjLL4ajAH8CpcOCmCvCcjghWJm7c5P3GjpwabrAITAqx0kYFXPHlvqeEu9RTyVF5HjaFrgNAaWl5DylCN6OY+PisZ8x++jZKqSxKuAFdObo+UgDHwIsKtO95QXgr1fr9k/qRpF4jxpTyUdyWdmqjDAVP8nOhmdvibFBwjZEo6JNM/15z1AHYk8jq03uJ1YDtI8An0xeOvsEseMxo1yBVeo47Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=B/HKVK2aeFgO9/qpVcZv9hwzwgA3u7p4QP9ALlNp2UA=;
+ b=e+2BYCqM4jwr5TyibicrvQJ8che+iGntgZ1el3YYlwsbLLljtsaGTqFR7teEfF5N89BPT6XTkBU4EYP6DN5vvu+JK3k8qtAkUuDnLzKsRuZ97iyhTmehESoO9RO0QO0h/1XzwHj6sdVV5NivorvShE46W0hMO8Z5jepz/11bQ4oMK9DoD+gim1gCX2gpKFPYN/TBIvBdkeZ8eWU0euAyTAKdYFB1ZJ5swZWQTMWMtOS6u1bzUw22O3Igee0z1bwitYpmCIx1KMs2yCLQ5Uss4FkSQpFLvELIgOI8W0XcS1SRZEdGB8lrFgmlAVgdxJ/Y9SSIxqaqTPvX8Nf9rZTT6w==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=tuni.onmicrosoft.com; 
+ s=selector2-tuni-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=B/HKVK2aeFgO9/qpVcZv9hwzwgA3u7p4QP9ALlNp2UA=;
+ b=LroyrWYHREH4P1/nmM5zfM18ucU/wruc1jbg3qdNPDbHBSOYooBX4n0plpiCmfflpJDsGRbZvAlLItaweSHaXCoGm0Lyxa1uXEgGRsxEdWA0mSlP2ta1Nv7IMvC+sxi+BoRz7hajVuFV0LIrzCV0gCPhpPnPZ4cz/fIop1153jI=
+Resent-From: <gamesnetwork@lists.tuni.fi>
+Received: from VI1PR0802CA0036.eurprd08.prod.outlook.com
+ (2603:10a6:800:a9::22) by AM6PR08MB3287.eurprd08.prod.outlook.com
+ (2603:10a6:209:41::18) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2538.15; Thu, 12 Dec
+ 2019 07:31:32 +0000
+Received: from HE1EUR04FT045.eop-eur04.prod.protection.outlook.com
+ (2a01:111:f400:7e0d::209) by VI1PR0802CA0036.outlook.office365.com
+ (2603:10a6:800:a9::22) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2538.15 via Frontend
+ Transport; Thu, 12 Dec 2019 07:31:32 +0000
+Authentication-Results-Original: spf=none (sender IP is 131.130.3.115)
+ smtp.mailfrom=univie.ac.at; lists.tuni.fi; dkim=pass (signature was verified)
+ header.d=univie.ac.at;lists.tuni.fi; dmarc=pass action=none
+ header.from=univie.ac.at;compauth=pass reason=100
+Received-SPF: None (protection.outlook.com: univie.ac.at does not designate
+ permitted sender hosts)
+Received: from grace.univie.ac.at (131.130.3.115) by
+ HE1EUR04FT045.mail.protection.outlook.com (10.152.26.183) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2538.14 via Frontend Transport; Thu, 12 Dec 2019 07:31:32 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=univie.ac.at; s=rev2; h=To:Date:Message-Id:Subject:Mime-Version:
+ Content-Type:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=B/HKVK2aeFgO9/qpVcZv9hwzwgA3u7p4QP9ALlNp2UA=; b=eqlJZnikV3DsSc+SCgsumFv0hj
+ FDO8F9lOzsI9IJKHMxwy9IepwQw2Ne4CB9PRsFFue0P37VEUom3fqTOwOgr24VQWMomSmBb0As8ZY
+ AIZPCU5UCNN4Bwe7cnzy7+ScIeJyEhguhjJpurFyhBerVhEEATRbQLMsz7gct/pwI0R4=;
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+ by grace.univie.ac.at with esmtps (TLS1.3:TLS_AES_256_GCM_SHA384:256)
+ (Exim 4.93) (envelope-from <fares.kayali@univie.ac.at>)
+ id 1ifIwd-0004xU-DV
+ for gamesnetwork@lists.tuni.fi; Thu, 12 Dec 2019 08:31:31 +0100
+Received: from 80-108-29-43.cable.dynamic.surfer.at ([80.108.29.43]
+ helo=[192.168.1.220])
+ by justin.univie.ac.at with esmtpsa (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+ (Exim 4.93) (envelope-from <fares.kayali@univie.ac.at>)
+ id 1ifIwd-0004CQ-8a
+ for gamesnetwork@lists.tuni.fi; Thu, 12 Dec 2019 08:31:31 +0100
+From: Fares Kayali <fares.kayali@univie.ac.at>
+Message-Id: <52263976-7DC7-45A8-8E6D-B01A1A4017C1@univie.ac.at>
+Date: Thu, 12 Dec 2019 08:31:30 +0100
+To: gamesnetwork@lists.tuni.fi
+X-Mailer: Apple Mail (2.3445.104.11)
+X-Univie-Virus-Scan: scanned by ClamAV on justin.univie.ac.at
+X-EOPAttributedMessage: 1
+X-Forefront-Antispam-Report-Untrusted: CIP:131.130.3.115; IPV:NLI; CTRY:AT;
+ EFV:NLI; SFV:NSPM;
+ SFS:(10019020)(136003)(396003)(376002)(346002)(39860400002)(428003)(286005)(13624006)(199004)(189003)(2906002)(356004)(8676002)(246002)(33964004)(34206002)(966005)(7596002)(316002)(70586007)(2616005)(498600001)(86362001)(9786002)(786003)(956004)(68406010)(4743002)(44832011)(26005)(36756003)(6966003)(30864003)(336012)(33656002)(426003)(7636002)(66630200001);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:AM6PR08MB3287; H:grace.univie.ac.at; FPR:;
+ SPF:None; LANG:en; PTR:grace.univie.ac.at; A:1; MX:1; 
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: e4877cca-0c72-4172-826f-08d77f224a47
+X-MS-TrafficTypeDiagnostic: AM6PR08MB3287:|AM6PR08MB3287:|BL0PR08MB5396:
+X-LD-Processed: fa6944af-cc7c-4cd8-9154-c01132798910,ExtFwd
+X-MS-Exchange-Transport-Forked: True
+X-Microsoft-Antispam-PRVS: <AM6PR08MB328745BCB8F91C2E24B1FE1EBF550@AM6PR08MB3287.eurprd08.prod.outlook.com>
+X-MS-Oob-TLC-OOBClassifiers: OLM:4941;OLM:4714;
+X-Forefront-PRVS: 0249EFCB0B
+X-MS-Exchange-SenderADCheck: 0
+X-Microsoft-Antispam-Untrusted: BCL:5;
+X-Microsoft-Antispam-Message-Info-Original:
+ HcEji3eCjHApwlc75crsqGv549zK0+G1rPenAZKywtaqt6og4vbNvgoLzqw0J4F5zqD78w7Fv0JIGMaoLlnRuuj9EstVySWeCsb1hyKzJ/wUy5fzj1VMfmtcgLs4Z4UpIUbcByISNNUMXAxj9hvRLFf7TtCuXf5HdghJkqmIXhFLiIAJ6asxypGh3t8Q3BaOWtUMYeXO/3jPCskUhEYXQ7rSc/46iGaBcENOHMW0WpT25tzfjkQgLgau0K9l68EpqNdWOnLFoU2zVYL5jc5qqFb7BYmcsTiU0fPq0BKeNsK0Q0wac/OMmiV9KqU1bhgqBqShLYvfomC5jotuyKWZyoIa3ZVs/jNBEQoaiqG8fTAroY/xUhaWfdNnzAVnnOrbMU53lbnhNk7fN2pCLuMG9wpi3HFl9d4QAqsrLSlAq5tbF0Jrh2n+QmpnHdMZh47tPl/MKNhHNurv4O2CdGBO2+7FBKWIoPw3Ish52RWkYrIv7loRdZpqeQw9xVW9g55IpB0Q/SIMSAtQGAvfngOHvl7elYOiqPwZdhRbakU8KBuDMitE//UgFfyYgoF4OchoGqhcZ6v07nE/xYS2XKXJ/rvbvsKXL+JFmYMVWs6xvb5PXHLMd0b7Eitz9HQ53FM+
+X-ExternalRecipientOutboundConnectors: fa6944af-cc7c-4cd8-9154-c01132798910
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM6PR08MB3287
+X-Mailman-Approved-At: Thu, 12 Dec 2019 18:42:30 +0200
+Subject: [Gamesnetwork] CfP iLRN 2020 Special Track on Playful Immersive
+	Learning Experiences
+X-BeenThere: gamesnetwork@lists.tuni.fi
+X-Mailman-Version: 2.1.15
+Precedence: list
+List-Id: <gamesnetwork.lists.tuni.fi>
+List-Unsubscribe: <https://lists.tuni.fi/mailman/options/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=unsubscribe>
+List-Archive: <https://lists.tuni.fi/mailman/private/gamesnetwork/>
+List-Post: <mailto:gamesnetwork@lists.tuni.fi>
+List-Help: <mailto:gamesnetwork-request@lists.tuni.fi?subject=help>
+List-Subscribe: <https://lists.tuni.fi/mailman/listinfo/gamesnetwork>,
+ <mailto:gamesnetwork-request@lists.tuni.fi?subject=subscribe>
+Content-Type: multipart/mixed; boundary="===============1137729343302269140=="
+Errors-To: gamesnetwork-bounces@lists.tuni.fi
+Sender: "Gamesnetwork" <gamesnetwork-bounces@lists.tuni.fi>
+Resent-Message-Id: <20191212164232.09D3D238E@lists.tuni.fi>
+Resent-Date: Thu, 12 Dec 2019 18:42:32 +0200 (EET)
+Return-Path: gamesnetwork-bounces@lists.tuni.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Dec 2019 16:42:34.8030
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ e4877cca-0c72-4172-826f-08d77f224a47
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ BN3NAM04FT009.eop-NAM04.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:193.166.164.158;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(4636009)(286005)(176002)(189003)(199004)(13624006)(6262002)(44144004)(966005)(36756003)(44832011)(336012)(1096003)(2616005)(956004)(426003)(9786002)(4006050)(34206002)(33964004)(42882007)(6966003)(8636004)(26005)(19810500001)(36906005)(30864003)(7636002)(2160300002)(7596002)(16670700002)(33656002)(7846003)(63766006)(75640400001)(9036002)(246002)(66630200001);DIR:INB;SFP:;SCL:1;SRVR:BL0PR08MB5396;H:smtp1.tuni.fi;FPR:;SPF:Pass;LANG:en;PTR:smtp1.tuni.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT009.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 8b36ab1a-c50f-4248-bc5f-08d77ed54f5c
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Dec 2019 16:42:34.4297
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: e4877cca-0c72-4172-826f-08d77f224a47
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL0PR08MB5396
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.1517715
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2538.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?YWY1MVlqS3NyNDlySGJodkRXTURuQjJTM2RVSXI2OURQWmF6NG8ySGtuUlpm?=
+ =?utf-8?B?c0JPQkZPT3dGek1xTjBYaGtqM2ZuNTdoUFV3QVhjOFVONlh2VnFtZVpiTUQz?=
+ =?utf-8?B?aCtzUmlwdndOSDRBMzlXV1FtZXJBczJ6TGdDVzJabHYvSzlCRnNtLzh2NUFj?=
+ =?utf-8?B?RTVBU2pmVld2NmVOM2VRa0luZ25VZ2M0RllMVWh5KzNVQ0c0YkVVVTAwNDNS?=
+ =?utf-8?B?clQ3VVJPNHVUdkhYWFdwRFUvaEhKZ0I1a2FlYWdEVWQyN1Rxb1QyR2l3ejI1?=
+ =?utf-8?B?Nm84QWlhMDBWZWFoNmVPY0s2NndaOWIwUUIrRTR0anhob2k2K0lUZnRIaloz?=
+ =?utf-8?B?djNUOFVZWlkwQjBBTTl6N1IwNzlpZzE0aDRXSGNMUDMxNnNBM1BVd1plTlhp?=
+ =?utf-8?B?UDQ1WEw3S0ptbDVQemVtRG1NOHdPMzIrRUd6MHJROXdnOCtkTDlrNzdicFQ2?=
+ =?utf-8?B?TUdyQURaU2VYMGhiVmN2NFZ3bWNaY3lFY2d4d2RqVElDT3l2NXF2TXpyMEpo?=
+ =?utf-8?B?Qm0vWmFteVkraG9HMktaOHRUa3F2SzhnSTZNMFVFQjZWVWVSUkpFK1ZwVTdi?=
+ =?utf-8?B?VHRycnlSbDB6d1dINnd0SUtNM0ptdHZzd0Fic01JR3lMbE1ZMlBPZ0owaWp5?=
+ =?utf-8?B?SFU2NDFLdjJ0dldmQWhLZSt2UndUN1NCQTZyck0zaW5BZDc2ZTd6TGsxVEY2?=
+ =?utf-8?B?RXJ5djgrUTY1a3RhWkMwTUlrUnZMT010cGdwRlpTUHI2Vndoa2VhN3BuWWRO?=
+ =?utf-8?B?VHZBYWFtWnVaMmNBSG9RajJkWkllR3pXMnZQMk10TGdXWnNPcEdNTzNORUph?=
+ =?utf-8?B?Qy93d3V5a2NXRGRvZkUwQU5nbnFCMzVkMnY4cW9CSzlFdysvNHZNZGZrZkVP?=
+ =?utf-8?B?OFpZaElwT09KeFZrVXpPSEdMMWdsbERUMDlQbTNnZFIrcmtYSEFVUzhZMWZv?=
+ =?utf-8?B?d2g4cGZVR2Z3SmZLNWZWNEZpbFNoazRmYThUMUpwQVBGTVFTaUdpV1B2Z28z?=
+ =?utf-8?B?VUZrdXdtVW85bkRHS1Vac1hmeFVwb2hhOVZENlVyTlBCTTdKVjZ0VWpUOEhn?=
+ =?utf-8?B?Y09LTFo2elZlZVMreE1qbXk0VWt4QnBVUWJsU3JRS2R0UjAreFhFR2hlbDdw?=
+ =?utf-8?B?dGNTUFpXSzZyU2xjVWJIV3d5QTdDZXFyS3hNSFRqVXRXVlRacW1kTUJxcG1x?=
+ =?utf-8?B?WTFyL1RSN0RKNllmVjBEalFvZ3RZVUxET2ZkcUFqdTBKUUhDU0czUnRYRU9h?=
+ =?utf-8?B?UDVBY3ZSc3Q4Ui9kaHJCOVFPVmtTRmExcFFqV0VoZkxtKzdPdXZGdjY4amVD?=
+ =?utf-8?B?OStCNTBSMHpXTC9MZndaTFVvWStKZ1FWdDdKNU5NY1JjT3ZLV2RmZVpMdTYx?=
+ =?utf-8?B?STc4L096QTZneXlYSWNIMmpjQXRjbk1tNk5XVE9VcTNZVmtkYjFyd2lEaEty?=
+ =?utf-8?B?UXN3Vm9TRHQ1OVBENSt2V2FiQlcrSDIvNXcrbVFXUmpqM0xtM2c5T2p1RUw5?=
+ =?utf-8?B?NlNNU2l2a09PZnZ6czlPNkZ0T1MvQ2tzRm5WcU5PVktTZ0tSWW9MWEYrejJr?=
+ =?utf-8?B?dENCWmM3OUZIWlBsaGZ2ZnkxclNRajRrNXV5eFEzOWpQMExOYWNEYlplamRE?=
+ =?utf-8?B?aHJ5eUFQRTlOZDlFZlR5ZG9vWVVTcnc9PQ==?=
+MIME-Version: 1.0
+
+--===============1137729343302269140==
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_DB8E9BAF-FF1B-4AE9-9DCC-720B0059A11C"
+
+--Apple-Mail=_DB8E9BAF-FF1B-4AE9-9DCC-720B0059A11C
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+*=
+**************************************************************************=
+*********************
+VENUE
+
+iLRN 2020: 6th International Conference of the Immersive Learning =
+Research Network
+
+June 21=E2=80=9325, 2020, San Luis Obispo, California, USA
+
+Technically co-sponsored by the IEEE Education Society,
+with proceedings to be submitted for inclusion in IEEE Xplore=C2=AE
+
+Conference theme: =E2=80=9CVision 20/20: Hindsight, Insight, and =
+Foresight in XR and Immersive Learning=E2=80=9D
+
+The Immersive Learning Research Network (iLRN) is a burgeoning global =
+network of researchers and practitioners collaborating to develop the =
+scientific, technical, and applied potential of immersive learning. Its =
+annual conference is the premier scholarly event focusing on advances in =
+the use of virtual reality (VR), augmented reality (AR), mixed reality =
+(MR), and other extended reality (XR) technologies to support learners =
+and learning. Leading scholars and professionals operating in formal =
+education settings as well as those representing diverse industry =
+sectors will converge on the historic and picturesque coastal city of =
+San Luis Obispo, California for iLRN 2020, where they will share their =
+research findings, experiences, and insights; network and establish =
+partnerships to envision and shape the future of XR and immersive =
+technologies for learning; and contribute to the emerging scholarly =
+knowledge base on how these technologies can be used to create =
+experiences that educ!
+ate, engage, and excite learners.
+
+Conference website: http://immersivelrn.org/ilrn2020
+
+=
+**************************************************************************=
+**********************
+CALL FOR PAPERS
+
+Special Track on Playful Immersive Learning Experiences=20
+
+Playfulness has always been one of the core traits of good learning =
+experiences, in particular facilitating types of learning such as =
+explorative learning, trial and error, inquiry-based learning, learning =
+by doing and more. Combining immersive technology with playful and =
+game-based learning approaches can help to build spaces for learning =
+that are realistic and believable yet invite learners to experiment =
+without considering success or failure. Further flow experiences are =
+highly related to both good learning experiences and challenging play, =
+and playful learning in immersive environments can ideally deepen and =
+prolong flow experiences. As advances in VR and AR technology converge =
+with the wide availability of sensors, digital fabrication devices and =
+wearables at the consumer level, playful learning experiences =
+increasingly become available to schools and wider section of the =
+population. At the same time creation, extension and adaptation of these =
+experiences has become more widely and openly available.
+Consequently the aim of this track is to shed light on how playful =
+immersive learning experiences can be designed and make use of these =
+novel technological developments, how transfer of knowledge works with =
+these environments, how they can be developed to allow for appropriation =
+and adaptation, and how and if they succeed in triggering learning =
+experiences.
+
+List of Topics:=E2=80=8B
+	=E2=80=A2 Explorative design studies of playful immersive =
+learning experiences =20
+	=E2=80=A2 Creating and studying AR and VR learning games=20
+	=E2=80=A2 User Studies of how players interact with playful =
+immersive learning experiences
+	=E2=80=A2 Incorporating digital fabrication and wearables in VR =
+and AR applications and games
+	=E2=80=A2 Validation studies of learning gains and transfer =
+using playful immersive learning experiences
+	=E2=80=A2 Using playful immersive learning experiences in =
+educational settings=20
+	=E2=80=A2 Using playful immersive learning experiences in health =
+care
+	=E2=80=A2 Using playful immersive learning experiences for =
+self-measurement, introspection and personal growth
+	=E2=80=A2 User-generated content, appropriation and adaptation =
+of playful immersive learning experiences
+	=E2=80=A2 Ethical considerations and critical studies for =
+creating and applying playful immersive learning experiences
+
+=
+**************************************************************************=
+**********************
+SESSSION TYPES & SESSION FORMATS=20
+
+Refereed papers for proceedings:
+- Full or short paper for oral presentation
+- Short or work-in-progress paper for poster presentation
+
+=
+**************************************************************************=
+**********************
+IMPORTANT DATES
+
+- Main submission deadline*: 2020-01-06
+- Main-round notifications: 2020-03-23
+- Camera-ready papers (Main): 2020-04-06
+- Late submission deadline*: 2020-03-30
+- Late-round notifications: 2020-04-27
+- Camera-ready papers (Late): 2020-05-11
+- Conference: 2020-06-21 to 2020-06-25
+
+*Full and short papers can only be submitted in the main round.
+
+=
+**************************************************************************=
+**********************
+PUBLICATION & INDEXING
+
+Accepted and registered papers presented at iLRN 2020 will be published =
+in the conference proceedings and submitted to the IEEE Xplore=C2=AE =
+digital library. IEEE makes Xplore content available to its abstracting =
+& indexing partners, including Elsevier (Scopus, Ei Compendex) and =
+Clarivate Analytics (CPCI - part of Web of Science).
+
+=
+**************************************************************************=
+**********************
+CONTACT
+
+fares.kayali@univie.ac.at
+
+
+
+
+
+Prof. Fares Kayali
+Professor of Digital Education and Learning
+
+University of Vienna
+Centre for Teacher Education
+http://lehrerinnenbildung.univie.ac.at/en/ =
+<http://lehrerinnenbildung.univie.ac.at/en/>
+Porzellangasse 4
+1090 Vienna, Austria
++43 1 4277 60050
+fares.kayali@univie.ac.at <mailto:fares.kayali@univie.ac.at>
+http://piglab.org/fares <http://www.piglab.org/fares/>
+
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_DB8E9BAF-FF1B-4AE9-9DCC-720B0059A11C
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; line-b=
+reak: after-white-space;" class=3D"">**************************************=
+**********************************************************<br class=3D"">VE=
+NUE<br class=3D""><br class=3D""><div class=3D"">iLRN 2020: 6th Internation=
+al Conference of the Immersive Learning Research Network<br class=3D""><br =
+class=3D"">June 21=E2=80=9325, 2020, San Luis Obispo, California, USA<br cl=
+ass=3D""><br class=3D"">Technically co-sponsored by the IEEE Education Soci=
+ety,<br class=3D"">with proceedings to be submitted for inclusion in IEEE X=
+plore=C2=AE<br class=3D""><br class=3D"">Conference theme: =E2=80=9CVision =
+20/20: Hindsight, Insight, and Foresight in XR and Immersive Learning=E2=80=
+=9D<br class=3D""><br class=3D""><div class=3D"">The Immersive Learning Res=
+earch Network (iLRN) is a burgeoning global network of researchers and prac=
+titioners collaborating to develop the scientific, technical, and&nbsp;appl=
+ied potential of immersive learning. Its annual conference is the premier s=
+cholarly event focusing on advances in the use of virtual reality (VR), aug=
+mented reality&nbsp;(AR), mixed reality (MR), and other extended reality (X=
+R) technologies to support learners and learning. Leading scholars and prof=
+essionals operating in formal education&nbsp;settings as well as those repr=
+esenting diverse industry sectors will converge on the historic and picture=
+sque coastal city of San Luis Obispo, California for iLRN 2020,&nbsp;where =
+they will share their research findings, experiences, and insights; network=
+ and establish partnerships to envision and shape the future of XR and imme=
+rsive&nbsp;technologies for learning; and contribute to the emerging schola=
+rly knowledge base on how these technologies can be used to create experien=
+ces that educ!<br class=3D"">ate, engage, and excite learners.</div><div cl=
+ass=3D""><br class=3D""></div><div class=3D"">Conference website:&nbsp;<a h=
+ref=3D"http://immersivelrn.org/ilrn2020" class=3D"">http://immersivelrn.org=
+/ilrn2020</a><br class=3D""></div><div class=3D""><br class=3D""></div><div=
+ class=3D"">***************************************************************=
+*********************************<br class=3D"">CALL FOR PAPERS<br class=3D=
+""><br class=3D""></div><div class=3D"">Special Track on Playful Immersive =
+Learning Experiences&nbsp;</div><div class=3D""><br class=3D""></div><div c=
+lass=3D"">Playfulness has always been one of the core traits of good learni=
+ng experiences, in particular facilitating types of learning such as explor=
+ative learning, trial and error, inquiry-based learning, learning by&nbsp;d=
+oing and more. Combining immersive technology with playful and game-based l=
+earning approaches can help to build spaces for learning that are realistic=
+ and believable yet invite learners to experiment&nbsp;without considering =
+success or failure. Further flow experiences are highly related to both goo=
+d learning experiences and challenging play, and playful learning in immers=
+ive environments can ideally&nbsp;deepen and prolong flow experiences. As a=
+dvances in VR and AR technology converge with the wide availability of sens=
+ors, digital fabrication devices and wearables at the consumer level, playf=
+ul learning&nbsp;experiences increasingly become available to schools and w=
+ider section of the population. At the same time creation, extension and ad=
+aptation of these experiences has become more widely and openly&nbsp;availa=
+ble.<br class=3D"">Consequently the aim of this track is to shed light on h=
+ow playful immersive learning experiences can be designed and make use of t=
+hese novel technological developments, how transfer of knowledge works&nbsp=
+;with these environments, how they can be developed to allow for appropriat=
+ion and adaptation, and how and if they succeed in triggering learning expe=
+riences.<br class=3D""><br class=3D"">List of Topics:=E2=80=8B<br class=3D"=
+"><div class=3D""><span class=3D"Apple-tab-span" style=3D"white-space: pre;=
+">	</span>=E2=80=A2 Explorative design studies of playful immersive learnin=
+g experiences&nbsp;&nbsp;<br class=3D""></div><div class=3D""><span class=
+=3D"Apple-tab-span" style=3D"white-space: pre;">	</span>=E2=80=A2 Creating =
+and studying AR and VR learning games&nbsp;<br class=3D""></div><div class=
+=3D""><span class=3D"Apple-tab-span" style=3D"white-space: pre;">	</span>=
+=E2=80=A2 User Studies of how players interact with playful immersive learn=
+ing experiences<br class=3D""></div><div class=3D""><span class=3D"Apple-ta=
+b-span" style=3D"white-space: pre;">	</span>=E2=80=A2 Incorporating digital=
+ fabrication and wearables in VR and AR applications and games<br class=3D"=
+"></div><div class=3D""><span class=3D"Apple-tab-span" style=3D"white-space=
+: pre;">	</span>=E2=80=A2 Validation studies of learning gains and transfer=
+ using playful immersive learning experiences<br class=3D""></div><div clas=
+s=3D""><span class=3D"Apple-tab-span" style=3D"white-space: pre;">	</span>=
+=E2=80=A2 Using playful immersive learning experiences in educational setti=
+ngs&nbsp;<br class=3D""></div><div class=3D""><span class=3D"Apple-tab-span=
+" style=3D"white-space: pre;">	</span>=E2=80=A2 Using playful immersive lea=
+rning experiences in health care<br class=3D""></div><div class=3D""><span =
+class=3D"Apple-tab-span" style=3D"white-space: pre;">	</span>=E2=80=A2 Usin=
+g playful immersive learning experiences for self-measurement, introspectio=
+n and personal growth<br class=3D""></div><div class=3D""><span class=3D"Ap=
+ple-tab-span" style=3D"white-space: pre;">	</span>=E2=80=A2 User-generated =
+content, appropriation and adaptation of playful immersive learning experie=
+nces<br class=3D""></div><div class=3D""><span class=3D"Apple-tab-span" sty=
+le=3D"white-space: pre;">	</span>=E2=80=A2 Ethical considerations and criti=
+cal studies for creating and applying playful immersive learning experience=
+s</div></div><div class=3D""><br class=3D"">*******************************=
+*****************************************************************<br class=
+=3D"">SESSSION TYPES &amp; SESSION FORMATS&nbsp;<br class=3D""><br class=3D=
+"">Refereed papers for proceedings:<br class=3D"">- Full or short paper for=
+ oral presentation<br class=3D"">- Short or work-in-progress paper for post=
+er presentation<br class=3D""><br class=3D"">******************************=
+******************************************************************<br class=
+=3D"">IMPORTANT DATES<br class=3D""><br class=3D"">- Main submission deadli=
+ne*: 2020-01-06<br class=3D"">- Main-round notifications: 2020-03-23<br cla=
+ss=3D"">- Camera-ready papers (Main): 2020-04-06<br class=3D"">- Late submi=
+ssion deadline*: 2020-03-30<br class=3D"">- Late-round notifications: 2020-=
+04-27<br class=3D"">- Camera-ready papers (Late): 2020-05-11<br class=3D"">=
+- Conference: 2020-06-21 to 2020-06-25<br class=3D""><br class=3D"">*Full a=
+nd short papers can only be submitted in the main round.</div><div class=3D=
+""><br class=3D"">*********************************************************=
+***************************************<br class=3D"">PUBLICATION &amp; IND=
+EXING<br class=3D""><br class=3D"">Accepted and registered papers presented=
+ at iLRN 2020 will be published in the conference proceedings and submitted=
+ to the IEEE Xplore=C2=AE digital library. IEEE makes&nbsp;Xplore content a=
+vailable to its abstracting &amp; indexing partners, including Elsevier (Sc=
+opus, Ei Compendex) and Clarivate Analytics (CPCI - part of Web of Science)=
+.<br class=3D""><br class=3D"">********************************************=
+****************************************************<br class=3D"">CONTACT<=
+/div><div class=3D""><br class=3D""></div><div class=3D""><a href=3D"mailto=
+:fares.kayali@univie.ac.at" class=3D"">fares.kayali@univie.ac.at</a><br cla=
+ss=3D""><br class=3D""></div></div><div class=3D""><div dir=3D"auto" style=
+=3D"word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-whit=
+e-space;" class=3D""><div dir=3D"auto" style=3D"word-wrap: break-word; -web=
+kit-nbsp-mode: space; line-break: after-white-space;" class=3D""><div dir=
+=3D"auto" style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; line-br=
+eak: after-white-space;" class=3D""><div><br class=3D"Apple-interchange-new=
+line"></div></div></div></div><br class=3D"Apple-interchange-newline"><br c=
+lass=3D"Apple-interchange-newline"></div><br class=3D""><div class=3D""><di=
+v dir=3D"auto" style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; li=
+ne-break: after-white-space;" class=3D""><div dir=3D"auto" style=3D"word-wr=
+ap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" c=
+lass=3D""><div dir=3D"auto" style=3D"word-wrap: break-word; -webkit-nbsp-mo=
+de: space; line-break: after-white-space;" class=3D""><div dir=3D"auto" sty=
+le=3D"word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-wh=
+ite-space;" class=3D""><div dir=3D"auto" style=3D"word-wrap: break-word; -w=
+ebkit-nbsp-mode: space; line-break: after-white-space;" class=3D""><div dir=
+=3D"auto" style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; line-br=
+eak: after-white-space;" class=3D""><div dir=3D"auto" style=3D"word-wrap: b=
+reak-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=
+=3D""><div dir=3D"auto" style=3D"word-wrap: break-word; -webkit-nbsp-mode: =
+space; line-break: after-white-space;" class=3D""><b style=3D"orphans: 2; w=
+idows: 2; font-family: &quot;Minion Pro&quot;;" class=3D"">Prof. Fares Kaya=
+li</b><br class=3D""><div class=3D""><div style=3D"word-wrap: break-word; -=
+webkit-nbsp-mode: space; line-break: after-white-space;" class=3D""><div st=
+yle=3D"word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-w=
+hite-space;" class=3D""><div style=3D"word-wrap: break-word; -webkit-nbsp-m=
+ode: space; line-break: after-white-space;" class=3D""><div style=3D"word-w=
+rap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" =
+class=3D""><div style=3D"orphans: 2; widows: 2;" class=3D""><div style=3D"w=
+ord-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-spa=
+ce;" class=3D""><div style=3D"word-wrap: break-word; -webkit-nbsp-mode: spa=
+ce; line-break: after-white-space;" class=3D""><div style=3D"word-wrap: bre=
+ak-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=3D=
+""><div class=3D""><div class=3D""><font face=3D"Minion Pro" class=3D"">Pro=
+fessor of Digital Education and Learning</font></div><div class=3D""><span =
+style=3D"font-family: &quot;Minion Pro&quot;;" class=3D""><br class=3D""></=
+span></div><div class=3D""><font face=3D"Minion Pro" class=3D"">University =
+of Vienna</font></div><div class=3D""><font face=3D"Minion Pro" class=3D"">=
+Centre for Teacher Education</font></div><div class=3D""><a href=3D"http://=
+lehrerinnenbildung.univie.ac.at/en/" class=3D""><font face=3D"MinionPro-Reg=
+ular" class=3D"">http://lehrerinnenbildung.univie.ac.at/en/</font></a></div=
+><div class=3D""><span style=3D"font-family: &quot;Minion Pro&quot;;" class=
+=3D"">Porzellangasse 4</span></div></div><div class=3D""><span style=3D"fon=
+t-family: &quot;Minion Pro&quot;;" class=3D"">1090 Vienna, Austria</span></=
+div><div class=3D""><span style=3D"font-family: &quot;Minion Pro&quot;;" cl=
+ass=3D"">&#43;43 1 4277 60050</span></div><div class=3D""><a href=3D"mailto=
+:fares.kayali@univie.ac.at" class=3D""><font face=3D"MinionPro-Regular" cla=
+ss=3D"">fares.kayali@univie.ac.at</font></a></div><div class=3D""><a href=
+=3D"http://www.piglab.org/fares/" class=3D""><font face=3D"MinionPro-Regula=
+r" class=3D"">http://piglab.org/fares</font></a></div><div class=3D""><font=
+ class=3D"Apple-style-span" face=3D"'Minion Pro'"><br class=3D""></font></d=
+iv></div></div></div></div></div></div></div></div></div><br class=3D"Apple=
+-interchange-newline"></div></div><br class=3D"Apple-interchange-newline"><=
+/div><br class=3D"Apple-interchange-newline"></div><br class=3D"Apple-inter=
+change-newline"></div><br class=3D"Apple-interchange-newline"></div><br cla=
+ss=3D"Apple-interchange-newline"></div><br class=3D"Apple-interchange-newli=
+ne"></div><br class=3D"Apple-interchange-newline"><br class=3D"Apple-interc=
+hange-newline"></div></body></html>=
+
+--Apple-Mail=_DB8E9BAF-FF1B-4AE9-9DCC-720B0059A11C--
+
+--===============1137729343302269140==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Gamesnetwork@lists.tuni.fi is discussion list of DiGRA, the Digital Games Research Association. You can unsubscribe, edit your subscription address, etc. at the web interface:
+https://lists.tuni.fi/mailman/listinfo/gamesnetwork
+--===============1137729343302269140==--

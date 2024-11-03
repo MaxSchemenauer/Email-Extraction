@@ -1,0 +1,524 @@
+Received: from SN6PR08MB4990.namprd08.prod.outlook.com (2603:10b6:a03:54::30)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR02CA0053.NAMPRD02.PROD.OUTLOOK.COM; Thu, 8 Aug 2019 08:46:33 +0000
+Received: from BYAPR08CA0015.namprd08.prod.outlook.com (2603:10b6:a03:100::28)
+ by SN6PR08MB4990.namprd08.prod.outlook.com (2603:10b6:805:6e::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.14; Thu, 8 Aug
+ 2019 08:46:31 +0000
+Received: from BN3NAM04FT043.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::202) by BYAPR08CA0015.outlook.office365.com
+ (2603:10b6:a03:100::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.16 via Frontend
+ Transport; Thu, 8 Aug 2019 08:46:31 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.217.67)
+ smtp.mailfrom=gmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=gmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.217.67 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.217.67; helo=mail-vs1-f67.google.com;
+Received: from mail-vs1-f67.google.com (209.85.217.67) by
+ BN3NAM04FT043.mail.protection.outlook.com (10.152.93.79) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2157.15 via Frontend Transport; Thu, 8 Aug 2019 08:46:30 +0000
+Received: by mail-vs1-f67.google.com with SMTP id 190so62537356vsf.9
+        for <foaad@calpoly.edu>; Thu, 08 Aug 2019 01:46:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=ZzXGSfBbm1y353Ie89gbL4yK0SNcmxPUslJ4E+IFkBs=;
+        b=rE9NGs6FB3Hjer9UyXI4F9xtmNKciyLJVdBs3CFcJC65Xe/NphqFC4l4JWlAc6X8BR
+         kq5ocC2TuYu4Gqp6LG2s7+qpg7YVVEB4BnmBOO2kkyp3Ccl8kd2WPl4gB/tI+5741FNP
+         yPVNFyb4SPGOjFFOsaPJ2MCjCEaMEwu8ARwfee7/lFcUivqhdBzpEJnZ/uTnf7DLaf0K
+         zS4/0q3S+i6g2LTwmrwuf+yYOeovFo8Gy0AXiuKFUkfpW166bi7xlsuEqQl+pEuu9rA6
+         Hx1aebKdl2iKm7AGLKZ6UAzZZCaaqQit8DZjlI2rVGmHA5tMpoWPfBTpnMlhRwS8TmlD
+         90jQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=ZzXGSfBbm1y353Ie89gbL4yK0SNcmxPUslJ4E+IFkBs=;
+        b=a5SuugmlXKF4591Q3HeVU6TJ9jQj/rs46MS1bt/gSe0hPTabAj/awkEG1pkCpZ6M/X
+         7hvpEEGN2qQ71WdGf3DhFw0Xrb3YwLw4X1f62P40s4jadtzey0BlFYIOVZeKcMqoyAxI
+         LP8XSUiQfww7lU3HBovOaTbu/pDUoq2ae0SSTg05jI3j54zT0miYkGK6H3DODJl7M1bR
+         Rl/aacFFPaCKpRshBclSdx1FF1ojFD7QWcdoiN/h3wZK8ae6LAPf/ZiOkWMGpx+wuvbO
+         Yxk/lhL+6FHhWqJ/DD8F61UFG/BYFjic40+493o9WKSyrdMq+DThDDpKIipVSG7cFJTy
+         6bYA==
+X-Gm-Message-State: APjAAAVlB8BZumW/GPzm8+TUslN6zI53E/X+BM1UOWZBwdGeZHKvKKGv
+	Goa/qzvHs0nR6Tuqu2w/wRB5ZN0mdqqb5rCeVF4=
+X-Google-Smtp-Source: APXvYqxXStR/1fnL7+4FhjddnSvn2AlgKTyOlg2E7fUWrf/9dOv2yd2KDoV7A+NfAfbE2RJAc8iiXV8q+Fi2GmFXrLg=
+X-Received: by 2002:a67:ed87:: with SMTP id d7mr9074060vsp.130.1565253990262;
+ Thu, 08 Aug 2019 01:46:30 -0700 (PDT)
+References: <CAJdm=FnJ5=7YUmpJ1mg_jfHePc7E1ABrXMpk_TqkT-VV8xbk2Q@mail.gmail.com>
+ <CAGfuA1iZ6gpq43TtVLV-sjmDXTfeiAU6n1+B5rdMCp2QTt4qEw@mail.gmail.com>
+In-Reply-To: <CAGfuA1iZ6gpq43TtVLV-sjmDXTfeiAU6n1+B5rdMCp2QTt4qEw@mail.gmail.com>
+From: ICCSP 18 <iccsp2k18@gmail.com>
+Date: Thu, 8 Aug 2019 02:16:20 +0530
+Message-ID: <CAFaBNku0=+keLnvS02p+BnN8RY236ZDa-RM3m9ufj1EuLqq1vw@mail.gmail.com>
+Subject: Call for papers :: ICCSP20
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="00000000000012ad06058f9718af"
+Bcc: foaad@calpoly.edu
+Return-Path: iccsp2k18@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 08 Aug 2019 08:46:30.8120
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 2f25559a-78a8-4b90-ddd6-08d71bdce8c3
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132097275908150054;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.217.67;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001)(4636009)(2980300002)(189003)(199004)(486006)(8676002)(84556003)(58800400005)(14444005)(4006050)(1096003)(7636002)(498394004)(10126004)(82202003)(86362001)(881003)(42186006)(61266001)(26005)(5660300002)(95326003)(22186003)(7596002)(236005)(476003)(356004)(76176011)(2160300002)(76482006)(106002)(75640400001)(446003)(6666004)(16586007)(59536001)(8576002)(6306002)(11346002)(16003)(71190400001)(246002)(336012)(53346004)(73392003)(33964004)(606006)(305945005)(55446002)(126002)(109986005)(130430200001);DIR:INB;SFP:;SCL:5;SRVR:SN6PR08MB4990;H:mail-vs1-f67.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-vs1-f67.google.com;MX:1;A:1;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT043.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 2f25559a-78a8-4b90-ddd6-08d71bdce8c3
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:SN6PR08MB4990;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4990:
+X-MS-Exchange-PUrlCount: 14
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 5
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 Aug 2019 08:46:30.7999
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 2f25559a-78a8-4b90-ddd6-08d71bdce8c3
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4990
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8776952
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750119)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZE5uUERRNTJsZndEbmFEV045aERldWd1dWlKbFlqeVZOUmg4ZW5aaWE5QVZL?=
+ =?utf-8?B?ak1ocEJVYXlsUHhtSnhIVjJuK2JEaG92OVlDQyt2cHlFS3hOS0hrRUlxNmlv?=
+ =?utf-8?B?R0hEMnhTdHJ5b2kwd1ptMEtMWjZwVlgvTS9HRkRWMUlXMk9NdHh5VmdxVWxX?=
+ =?utf-8?B?MkR5R2trVWF2bEdhUkFaVkdEdlJKbFRuajc1V0ZDdWUwNGltR3RrL1V1TTY2?=
+ =?utf-8?B?dU5OK2xCZmJUOFJheCtmMWNheDBORk0rKzhKcFpkYWFzYnRwdEJDMmRSSmNu?=
+ =?utf-8?B?TzZUMSt5eENXRTB5NGRFUzZDMEFKNEdoczFuaFpmMXFqb013eWFmOHlETUxu?=
+ =?utf-8?B?RnZETkZoMzdNRWxqc252bmg4dFFaQVJ2Nk5EcCtZcUlmb1NkNzRFNWdwRW81?=
+ =?utf-8?B?NndGS09HeStHYlpVNWErUFR0YVNMTy9JN08yUkFrSC81RlRJTHp4U2RVS09s?=
+ =?utf-8?B?TDZNb04xbGZPNldxc3YwS21tcy9CQzZQdVRndnZGWlZOWS9ZcCtWc0FoeEFR?=
+ =?utf-8?B?U0krRjRYcHp0M1lVQjYvaEYzTG04VUw3ZDFZWDRnNFB4TU5SUlY2bGxidGdN?=
+ =?utf-8?B?ZzNVOUFOcHhVcm9FL2VtMFRpcGNueFQ5bkp6cS9ndDRQOUorZjQraUFRUVBG?=
+ =?utf-8?B?eHRHN3FQYVVXRzcrbzVUMGM0WThpTGYvZUxlci9OYkZNUVdJT2h0ZTFIRm45?=
+ =?utf-8?B?Y0NQVDBqT1I3RUpBNFJrTWZZUjVoeU4xUDA0TGx3MDl4dWpRMkZPSTRxUnpu?=
+ =?utf-8?B?VmlOODBGMW1ZZUJjaHRVLzlHeVpjSVZaYmpDZ0pUSmVrU1pzK2lEMWNGZ2l1?=
+ =?utf-8?B?QVVvWjNSbkZDY255M2owczlDZzhhcTlvdENaY1pCejlzN3l2TXZMWUszTndi?=
+ =?utf-8?B?cDJpT3JIaTZoemFjU2VRZFNUdmN2QWQ5NDBUbm1pS3Z3dVdNUXVrK2hsSXlB?=
+ =?utf-8?B?cVVjK0NXYzdLeEYySnl0cnRPaDhlMDYyU25oa1k2VHpTN0JLaFJ1UXNEZW1T?=
+ =?utf-8?B?TG0xbjhoWnF3NUh0dElFa3Z4ZC81SUQ5Q0NNSXU1WUw3eUM3RGZWWE9VQUNQ?=
+ =?utf-8?B?WFZJemZianJrL0diTnFTNXNJYlhCbkxiSDlvYVptS0ZDTHhGUGxJMy9ubUN5?=
+ =?utf-8?B?SVRuYXZRRTRUbWRuT0JWeGQvT3NhanI3R2hkODh5cUtTYUg2WnVBUjZJeFh4?=
+ =?utf-8?B?Y21xbUZNa3RzbEZ5MEpnQlQvVFIyLzFEZENEMzRTYVRNOWlhZkQ4OG5LcUZO?=
+ =?utf-8?B?Tng0eVZMZjZyLzZvSzhJbXViY1JIT0IrZmI5NFV6aHNzb2x6M1J5aXU4amJq?=
+ =?utf-8?B?UkxHcFM4dmpBbGVvVzlJS2JBbmFNN2lxTmhNOEJqbUZ3ZWpUSHlRaWVFUnJ6?=
+ =?utf-8?B?VllVUmVPb1EzSFFUOEcwL0U1alhNSVhXZGxLQndzZUFrOXpDek1yV21Ob2NU?=
+ =?utf-8?B?RFRhUllBSEFzQjNucjFyQjFkaklHNmY2UjR4SG1OK2QzTzJndnAzVXFnalk0?=
+ =?utf-8?B?Z1BMRHQrSWNJR3VXLzkzVThBb2d1VkMzdXJPbHA5dHdwTkNQZGdCWE9La29W?=
+ =?utf-8?B?Nlo2S1RVYy9FakdTSWlYTTYrZG5tY1JCc3VqSk1Na3JGZGVmY3NxY1RZZVlq?=
+ =?utf-8?B?M1EzdkxYWFdGYXA3aW9hc09aMyswc3BPMERtUm9GUHU2NFNSSkVVWGtDMk01?=
+ =?utf-8?B?NSt2ZU9QL3VESDJvK2ZrODRoaHVhbDFqelhGbk05UlExbHA3Vk1JaHFrbGE2?=
+ =?utf-8?B?QkdRNk53bGZDUnBnNks2aE1BZmFUTVNCT1pua3NtRDQrQkJxbDY5TGtQWkk0?=
+ =?utf-8?B?eG1oU3hteGNNMEtOUndtdkUzeWJoZC9sb0pZTzZxK0lsNEdnelpGR0Jwbk5J?=
+ =?utf-8?B?ZENNUGE5a01zTlZhSlVKRS9hV0NOWDI0bytRZ3QyaXc2ZlE9PQ==?=
+MIME-Version: 1.0
+
+--00000000000012ad06058f9718af
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Call For Paper *| 9th **IEEE** ICCSP 2020 in India | Elsevier*
+
+
+Dear all
+
+          The 9th INTERNATIONAL CONFERENCE ON COMMUNICATION AND SIGNAL
+PROCESSING
+<https://conferences.ieee.org/conferences_events/conferences/conferencedeta=
+ils/48568>will
+be held on *April 9th =E2=80=9311th*, *2020* in Melmaruvathur, India. The g=
+oal of
+this conference is to bring together researchers from academia and
+practitioners from different industries to share ideas, problems, and
+solutions.
+
+*Paper Submission Deadline: **09 Sep, 2019*
+
+
+
+SubmitYour Paper Now! <https://easychair.org/conferences/?conf=3Diccsp20>
+
+
+
+Submitted papers will be peer-reviewed and the accepted papers and posters
+will be published by *IEEE* which is indexed by *Scopus.* Furthermore, the
+selected papers will be published in the special issues of
+prestigious international journals after further revision.
+
+
+
+ICCSP2020 Homepage <http://www.iccsp-apec.com/%20> | ICCSP2020 Call for
+Paper <http://www.iccsp-apec.com/call-for-papers/>
+
+
+
+*Important Conference Deadlines*
+
+
+Last Date for Paper Submission =E2=80=93 *09 Sep, 2019*
+
+Intimation of Papers =E2=80=93 *03 Dec, 2019*
+
+Last Date for Camera Ready Paper and Registration =E2=80=93 *17 Dec, 2019*
+Conference date: *April 9th =E2=80=93 11th, 2020*
+
+
+
+Past Events IEEE website <http://www.iccsp-apec.com/gallery/>
+
+
+
+*Click here to view*
+<https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D5733985> -
+*ICCSP2011.*
+
+*Click here to view*
+<https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D6203332> -
+*ICCSP2012.*
+
+*Click here to view*
+<https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D6571718> -
+*ICCSP2013.*
+
+*Click here to view*
+<https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D6937465> -
+*ICCSP2014.*
+
+*Click here to view*
+<https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D7309521>* -=
+ *
+*ICCSP2015.*
+
+*Click here to view*
+<https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D7736795>* -=
+ *
+*ICCSP2016.*
+
+*Click here to view*
+<https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D8269242>* -=
+ *
+*ICCSP2017.*
+
+*Click here to view*
+<https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D8501332>* -=
+ *
+*ICCSP2018.*
+
+*Click here to view *
+<https://ieeexplore.ieee.org/xpl/conhome/8688513/proceeding>*- **ICCSP2019.=
+*
+
+
+
+
+
+
+
+*-- With Regards,*
+
+*Convenor,*
+
+*IEEE ICCSP'20.*
+
+*APEC,*
+
+*INDIA.*
+
+--00000000000012ad06058f9718af
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D=
+"gmail_attr"><br></div><br><br><div dir=3D"ltr"><div class=3D"gmail_quote">=
+<div dir=3D"ltr"><p class=3D"MsoNormal" align=3D"center" style=3D"margin:0c=
+m 0cm 0.0001pt;text-align:center;line-height:normal;font-size:11pt;font-fam=
+ily:Calibri,sans-serif"><span style=3D"font-size:20pt;font-family:&quot;Tim=
+es New Roman&quot;,serif;color:rgb(80,0,80);background:red">Call For Paper&=
+nbsp;</span><b><span style=3D"font-size:20pt;font-family:&quot;Baskerville =
+Old Face&quot;,serif;color:rgb(80,0,80);background:rgb(250,191,143)">| 9<su=
+p>th</sup>&nbsp;</span></b><b><span style=3D"font-size:20pt;font-family:&qu=
+ot;Times New Roman&quot;,serif;color:rgb(80,0,80);background:rgb(250,191,14=
+3)">IEEE</span></b><b><span style=3D"font-size:20pt;font-family:&quot;Baske=
+rville Old Face&quot;,serif;color:rgb(80,0,80);background:rgb(250,191,143)"=
+>&nbsp;ICCSP 2020 in India |&nbsp;Elsevier</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:Calibri,sans-serif"><span sty=
+le=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:rg=
+b(80,0,80)"><br>
+</span><span style=3D"font-size:13.5pt;font-family:&quot;Times New Roman&qu=
+ot;,serif;color:rgb(80,0,80)">Dear all</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:Calibri,sans-serif"><span sty=
+le=3D"font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif;color:=
+rgb(80,0,80)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T=
+he&nbsp;</span><a href=3D"https://conferences.ieee.org/conferences_events/c=
+onferences/conferencedetails/48568" style=3D"color:blue" target=3D"_blank">=
+9th&nbsp;INTERNATIONAL CONFERENCE ON COMMUNICATION AND SIGNAL PROCESSING&nb=
+sp;</a><span style=3D"font-size:13.5pt;font-family:&quot;Times New Roman&qu=
+ot;,serif;color:rgb(80,0,80)">will be held
+on&nbsp;<b><span style=3D"background:yellow">April 9<sup>th&nbsp;</sup>=E2=
+=80=9311<sup>th</sup></span></b><span style=3D"background:yellow">,&nbsp;<b=
+>2020</b></span>&nbsp;in Melmaruvathur,
+India. The goal of this&nbsp;conference&nbsp;is to bring together researche=
+rs
+from academia and practitioners from different industries to share ideas,
+problems, and solutions.</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:Calibri,sans-serif"><b><span =
+style=3D"font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif;col=
+or:rgb(33,88,104)">Paper Submission Deadline:&nbsp;</span></b><b><span styl=
+e=3D"font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif;color:r=
+ed;background:yellow">09 Sep, 2019</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;text-align:justify;line=
+-height:normal;font-size:11pt;font-family:Calibri,sans-serif">&nbsp;</p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://easychair=
+.org/conferences/?conf=3Diccsp20" style=3D"color:blue" target=3D"_blank"><s=
+pan style=3D"font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif=
+;color:rgb(17,85,204);background:rgb(238,238,238)">SubmitYour Paper Now!</s=
+pan></a></p>
+
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0cm 0cm 0.0001pt;tex=
+t-align:right;line-height:normal;font-size:11pt;font-family:Calibri,sans-se=
+rif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,=
+serif;color:rgb(80,0,80)">&nbsp;&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:Calibri,sans-serif"><span sty=
+le=3D"font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif;color:=
+rgb(80,0,80)">Submitted papers will be peer-reviewed and the accepted paper=
+s and
+posters will be published by&nbsp;<b>IEEE</b>&nbsp;which is indexed by&nbsp=
+;<b>Scopus.</b>&nbsp;Furthermore,
+the selected papers will be published in the special issues of
+prestigious&nbsp;international&nbsp;journals after further revision.</span>=
+</p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;text-align:justify;=
+line-height:normal;font-size:11pt;font-family:Calibri,sans-serif"><span sty=
+le=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:rg=
+b(80,0,80)">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"http://www.iccsp-=
+apec.com/%20" style=3D"color:blue" target=3D"_blank"><span style=3D"font-si=
+ze:13.5pt;font-family:&quot;Times New Roman&quot;,serif;color:rgb(17,85,204=
+);background:rgb(238,238,238)">ICCSP2020
+Homepage</span></a><span style=3D"font-size:13.5pt;font-family:&quot;Times =
+New Roman&quot;,serif;color:rgb(80,0,80);background:rgb(238,238,238)">&nbsp=
+;|&nbsp;</span><a href=3D"http://www.iccsp-apec.com/call-for-papers/" style=
+=3D"color:blue" target=3D"_blank"><span style=3D"font-size:13.5pt;font-fami=
+ly:&quot;Times New Roman&quot;,serif;color:rgb(17,85,204);background:rgb(23=
+8,238,238)">ICCSP2020
+Call for Paper</span></a></p>
+
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0cm 0cm 0.0001pt;tex=
+t-align:right;line-height:normal;font-size:11pt;font-family:Calibri,sans-se=
+rif"><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,=
+serif;color:rgb(80,0,80)">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><b><span style=3D"font-size:=
+13.5pt;font-family:&quot;Times New Roman&quot;,serif;color:rgb(80,0,80)">Im=
+portant&nbsp;Conference&nbsp;Deadlines</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:12p=
+t;font-family:&quot;Times New Roman&quot;,serif;color:rgb(80,0,80)"><br>
+</span><span style=3D"font-size:13.5pt;font-family:&quot;Times New Roman&qu=
+ot;,serif;color:rgb(80,0,80)">Last Date for Paper Submission =E2=80=93&nbsp=
+;</span><b><span style=3D"font-size:13.5pt;font-family:&quot;Times New Roma=
+n&quot;,serif;color:red">09<sup> </sup>Sep, 2019</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:13.=
+5pt;font-family:&quot;Times New Roman&quot;,serif;color:rgb(80,0,80)">Intim=
+ation of Papers =E2=80=93&nbsp;</span><b><span style=3D"font-size:13.5pt;fo=
+nt-family:&quot;Times New Roman&quot;,serif;color:red">03<sup> </sup>Dec, 2=
+019</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:13.=
+5pt;font-family:Arial,sans-serif;color:rgb(80,0,80)">Last Date for Camera R=
+eady Paper and Registration =E2=80=93&nbsp;</span><b><span style=3D"font-si=
+ze:13.5pt;font-family:Arial,sans-serif;color:red">17<sup> </sup>Dec, 2019</=
+span></b><span style=3D"font-size:12pt;font-family:Arial,sans-serif;color:r=
+gb(80,0,80)"><br>
+</span><span style=3D"font-size:13.5pt;font-family:Arial,sans-serif;color:r=
+gb(80,0,80)">Conference&nbsp;date:&nbsp;</span><b><span style=3D"font-size:=
+13.5pt;font-family:Arial,sans-serif;color:red">April 9<sup>th</sup> =E2=80=
+=93 11<sup>th</sup>,
+2020</span></b></p>
+
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin:0cm 0cm 0.0001pt;tex=
+t-align:right;line-height:normal;font-size:11pt;font-family:Calibri,sans-se=
+rif"><span style=3D"font-size:12pt;font-family:Arial,sans-serif;color:rgb(8=
+0,0,80)">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"http://www.iccsp-=
+apec.com/gallery/" style=3D"color:blue" target=3D"_blank"><span style=3D"fo=
+nt-size:14pt;font-family:Arial,sans-serif;color:rgb(17,85,204);background:r=
+gb(238,238,238)">Past
+Events IEEE website</span></a></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"margin:0cm 0cm 0.0001pt;te=
+xt-align:center;line-height:normal;font-size:11pt;font-family:Calibri,sans-=
+serif"><span style=3D"font-size:9.5pt;font-family:Arial,sans-serif;color:rg=
+b(80,0,80)">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D5733985" style=3D"color:blue=
+" target=3D"_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(17,85,204)">Click here to view</span></b>=
+</a><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,s=
+erif;color:rgb(80,0,80)">&nbsp;-&nbsp;</span><b><span style=3D"font-size:12=
+pt;font-family:&quot;Times New Roman&quot;,serif;color:red">ICCSP2011.</spa=
+n></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D6203332" style=3D"color:blue=
+" target=3D"_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(17,85,204)">Click here to view</span></b>=
+</a><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,s=
+erif;color:rgb(80,0,80)">&nbsp;-&nbsp;</span><b><span style=3D"font-size:12=
+pt;font-family:&quot;Times New Roman&quot;,serif;color:red">ICCSP2012.</spa=
+n></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D6571718" style=3D"color:blue=
+" target=3D"_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(17,85,204)">Click here to view</span></b>=
+</a><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,s=
+erif;color:rgb(80,0,80)">&nbsp;-&nbsp;</span><b><span style=3D"font-size:12=
+pt;font-family:&quot;Times New Roman&quot;,serif;color:red">ICCSP2013.</spa=
+n></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D6937465" style=3D"color:blue=
+" target=3D"_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(17,85,204)">Click here to view</span></b>=
+</a><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,s=
+erif">&nbsp;-&nbsp;</span><b><span style=3D"font-size:12pt;font-family:&quo=
+t;Times New Roman&quot;,serif;color:red">ICCSP2014.</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D7309521" style=3D"color:blue=
+" target=3D"_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(17,85,204)">Click here to view</span></b>=
+</a><b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,serif;color:rgb(17,85,204)">&nbsp;-&nbsp;</span></b><b><span style=3D"fon=
+t-size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:red">ICCSP2=
+015.</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D7736795" style=3D"color:blue=
+" target=3D"_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(17,85,204)">Click here to view</span></b>=
+</a><b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,serif;color:rgb(17,85,204)">&nbsp;-&nbsp;</span></b><b><span style=3D"fon=
+t-size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:red">ICCSP2=
+016.</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D8269242" style=3D"color:blue=
+" target=3D"_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(17,85,204)">Click here to view</span></b>=
+</a><b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,serif;color:rgb(17,85,204)">&nbsp;-&nbsp;</span></b><b><span style=3D"fon=
+t-size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:red">ICCSP2=
+017.</span></b><b><span style=3D"font-size:9.5pt;font-family:&quot;Times Ne=
+w Roman&quot;,serif">&nbsp;</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/mostRecentIssue.jsp?punumber=3D8501332" style=3D"color:blue=
+" target=3D"_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:rgb(17,85,204)">Click here to view</span></b>=
+</a><b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,serif;color:rgb(17,85,204)">&nbsp;-&nbsp;</span></b><b><span style=3D"fon=
+t-size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:red">ICCSP2=
+018.</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif"><a href=3D"https://ieeexplo=
+re.ieee.org/xpl/conhome/8688513/proceeding" style=3D"color:blue" target=3D"=
+_blank"><b><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&=
+quot;,serif">Click here to view&nbsp;</span></b></a><b><span style=3D"font-=
+size:12pt;font-family:&quot;Times New Roman&quot;,serif;color:rgb(17,85,204=
+)">-&nbsp;</span></b><b><span style=3D"font-size:12pt;font-family:&quot;Tim=
+es New Roman&quot;,serif;color:red">ICCSP2019.</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt=
+;font-size:11pt;font-family:Calibri,sans-serif">&nbsp;</p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:12p=
+t;font-family:Arial,sans-serif">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-size:12p=
+t;font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><b><span style=3D"font-size:=
+9.5pt;font-family:&quot;Times New Roman&quot;,serif;color:rgb(80,0,80)">-- =
+With Regards,</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><b><span style=3D"font-size:=
+9.5pt;font-family:&quot;Times New Roman&quot;,serif;color:rgb(80,0,80)">Con=
+venor,</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><b><span style=3D"font-size:=
+9.5pt;font-family:&quot;Times New Roman&quot;,serif;color:rgb(80,0,80)">IEE=
+E ICCSP'20<u>.</u></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:Calibri,sans-serif"><b><u><span style=3D"font-si=
+ze:9.5pt;font-family:&quot;Times New Roman&quot;,serif;color:rgb(80,0,80)">=
+APEC,</span></u></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,sans-serif"><b><u><span style=3D"font-size:9.5=
+pt;line-height:115%;font-family:&quot;Times New Roman&quot;,serif;color:rgb=
+(80,0,80)">INDIA.</span></u></b><span style=3D"font-size:12pt;line-height:1=
+15%;font-family:Arial,sans-serif;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial">&nbsp; &nbsp;&nbsp;</span></p></div>
+</div><br clear=3D"all"><div><br></div><br></div>
+</div><br clear=3D"all"><div><br></div></div>
+
+--00000000000012ad06058f9718af--

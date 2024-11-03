@@ -1,0 +1,706 @@
+Received: from SN6PR08MB4992.namprd08.prod.outlook.com (2603:10b6:a02:a8::14)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR03CA0001.NAMPRD03.PROD.OUTLOOK.COM; Tue, 30 Jul 2019 16:54:04 +0000
+Received: from DM5PR08CA0033.namprd08.prod.outlook.com (2603:10b6:4:60::22) by
+ SN6PR08MB4992.namprd08.prod.outlook.com (2603:10b6:805:6e::29) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2115.15; Tue, 30 Jul 2019 16:54:01 +0000
+Received: from CO1NAM04FT057.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::207) by DM5PR08CA0033.outlook.office365.com
+ (2603:10b6:4:60::22) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2136.12 via Frontend
+ Transport; Tue, 30 Jul 2019 16:54:01 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ CO1NAM04FT057.mail.protection.outlook.com (10.152.91.172) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2115.10 via Frontend Transport; Tue, 30 Jul 2019 16:53:59 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x6UGnniG024597
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Tue, 30 Jul 2019 19:49:49 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x6UGnkTh017464;
+	Tue, 30 Jul 2019 19:49:46 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Tue, 30 Jul 2019 19:49:46 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x6UGnkCB031511
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Tue, 30 Jul 2019 19:49:46 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x6UCtcct018617;
+	Tue, 30 Jul 2019 19:49:30 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          411081 for GAMESNETWORK@LISTSERV.UTA.FI; Tue, 30 Jul 2019 19:49:30
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6UGnUSK018178 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Tue, 30 Jul 2019 19:49:30 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x6UGnT7m027433
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@uta.fi>; Tue, 30 Jul 2019 19:49:30 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x6UGnSLZ031202 for
+          <GAMESNETWORK@uta.fi>; Tue, 30 Jul 2019 19:49:28 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Tue, 30 Jul 2019 19:49:28
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-wr1-f43.google.com (mail-wr1-f43.google.com
+          [209.85.221.43]) by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x6UGnR8x005929 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Tue, 30 Jul 2019 19:49:28 +0300
+Received: by mail-wr1-f43.google.com with SMTP id n9so66643862wru.0 for
+          <GAMESNETWORK@uta.fi>; Tue, 30 Jul 2019 09:49:27 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:from:content-transfer-encoding:mime-version:date
+                         :subject:message-id:references:in-reply-to:to;
+                         bh=jMiaV4/leGHpBBs8WENXlIirH3Vc6VJb0qS4BgpI/yE=;
+                         b=KnOrbL0tt9bR3YTl2zKriqD6vqMrQhoPQ160or6T+crlrUYOwpBzCVzf4B2PCBOCGv
+                         JRKxAxh9BlDemGvhZ2zf5nZ2Amb9IaEL2b3Z3kMtwoD45Xhi3k1FW8Vfgh8dS7YvTYJp
+                         tm/w/R94cDLsTau1rMl80Yg+9fH680PoNyZ9EQz1uPf2cOTcvZrvSgOGAAEnrZ7xXvGo
+                         J6E61qocajH5DMenysPa3k8LvsS0LoNUe0Qul+OTY8xWlGhBLWRHHBn8dgTN+Jxf1blT
+                         Ho93wAoU1xpayuzBiMYOxNleBq4e3L6aSqSdsA3dhWogVgldJ2q4iDvT9Em2u5OtGv7K
+                         TBAw==
+X-Gm-Message-State: APjAAAVC6+o97CKLYuIVQ3IJDE7ECtAnF3yaXqUQEhdgY3AYVyvp6onX
+                    SKD1rcGOEbicPwu6U8hGjGC3cCym
+X-Google-Smtp-Source: APXvYqyZdB7GTilhL5Gz9/7uTHYXy899usd6moHtrnTIWo8bHzJniCqhuLUF2W0CuQud1H2u7tm4Hg==
+X-Received: by 2002:adf:8bd1:: with SMTP id w17mr135582105wra.50.1564505367060;
+            Tue, 30 Jul 2019 09:49:27 -0700 (PDT)
+Received: from [10.121.48.231] ([31.4.178.137]) by smtp.gmail.com with ESMTPSA
+          id w67sm83940742wma.24.2019.07.30.09.49.25 for <GAMESNETWORK@uta.fi>
+          (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+          Tue, 30 Jul 2019 09:49:26 -0700 (PDT)
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail-98D06BCE-E9B6-48A3-B14F-B3FA4FEFB0CB"
+Content-Transfer-Encoding: 7bit
+References: <66152ec85cfa49efa51f04611c7d17a2@utwente.nl>
+            <6704d9295c7247679320f1a538278aa5@utwente.nl>
+X-Mailer: iPhone Mail (16F203)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Tue, 30 Jul 2019 19:49:46 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1022
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <11B391EC-5423-460E-9F24-6630EC09F379@gmail.com>
+Date: Tue, 30 Jul 2019 18:49:24 +0200
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Susana Ruiz <susiruiz@GMAIL.COM>
+Subject: Re: [GAMESNETWORK] Call for Papers: Animals and the City workshop at ACI2019
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+In-Reply-To: <6704d9295c7247679320f1a538278aa5@utwente.nl>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Jul 2019 16:54:00.5307
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3d6ea8bc-3b4f-440e-ff04-08d7150e853c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(3000300001)(286005)(7192003)(176002)(23753001)(189003)(199004)(60626007)(42882007)(26005)(106002)(6862004)(76482006)(71190400001)(6246003)(33656002)(59536001)(9886003)(229853002)(53386004)(110306002)(606006)(966005)(7636002)(55176004)(55446002)(61266001)(230700001)(790700001)(246002)(8676002)(30864003)(956004)(60616004)(40036005)(15974865002)(356004)(11346002)(446003)(2616005)(476003)(14444005)(426003)(66574012)(236005)(1096003)(146002)(50226002)(7846003)(7596002)(486006)(54896002)(73392003)(36756003)(43066004)(95326003)(336012)(6306002)(126002)(82202003)(21615005)(4006050)(53546011)(33964004)(66346011)(76176011)(16003)(19627235002)(75640400001)(6392003)(225293001);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4992;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT057.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 3d6ea8bc-3b4f-440e-ff04-08d7150e853c
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:SN6PR08MB4992;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4992:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Jul 2019 16:53:59.7671
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3d6ea8bc-3b4f-440e-ff04-08d7150e853c
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4992
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.4774109
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2115.005
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZG02UzJ4enJDL0U4djhvVzU5Ylozd2JBN2ZKUlRwaGRCcy9xM1B1UVVZWTRP?=
+ =?utf-8?B?akRJcUhjSTNhLzhCamNlMHQ4Slc3ZVpmWmFDdllLdHprc3lpZWVsUGU5NGlv?=
+ =?utf-8?B?TWJJUXlrUXhZaXF0Ri9qeFhUdGp2a3BnOXZOZWo1b1FZa1dZUWpVS0NOVGV3?=
+ =?utf-8?B?VForYSs4OW91SHA0R0R1MG1UaVIrL2lBWFZhZE0vUWErYUtHTFlhYjJGajEr?=
+ =?utf-8?B?U3FuUzNDNjdFQWkwTXVxSlEzZldlUkh4QnFweTF6a3YrWHNZQmZza0FmcFI2?=
+ =?utf-8?B?dVpKV3Z0bm9iMDNodEk2cWVYUFM1cDVNeGJqaUJUV3VZY2c5T2UwQXdFSVdr?=
+ =?utf-8?B?MFhTQVFpRU5UUUVaY1RCV1VSMTNkMytZbWpZY1dpdUVIb3ord0owTlozbndB?=
+ =?utf-8?B?NlRkei9WcENCandhaE53MWZFenFUVTRuVk5XY2N3TlFWdnpBT3FqUS9ocmZm?=
+ =?utf-8?B?emtCcGVZWEZuOXo2ZUQyUW5EdTE5NTVLc1AzN3ZYdWc4VHBMSGNuVDJ1dWtI?=
+ =?utf-8?B?Y0VQYURGdzRaUlNRYU1ZS3BSZTAxZEFCR2NSY2N2MzdEL1lWTDdiK2daMzVP?=
+ =?utf-8?B?QjdQZnJJazM2UGVUWUhITDdaQ0VvMmRhSnZ3a0VYanVUQnlYZWN1Qk9qRWFN?=
+ =?utf-8?B?cXloYWFyc1ArMUo4TkExMnIwNURaVFdIZUI5c0M2NnhxMHFNMFhKaEt5djRC?=
+ =?utf-8?B?V3hEaDJUTm45dk9BN1JaelpJTThMY2ZRQk9zTG9OOTdzUG85N0Q2eUFyU2V2?=
+ =?utf-8?B?S2t3L2hFTUE0WUMzQWVNS3pzWVV2cGdrbmFKdzVpMW1lZ0tVNU15bGhud3Ru?=
+ =?utf-8?B?WHp4WWJCTWI4Y1dSYWkveTBXaWVZRVFtU3ZOendCaXQyc29OaWNZYXVKbGwv?=
+ =?utf-8?B?Q2Rmb0J3TzVlV0M3QVNUeDgrVk1EbzBlUUZlNlF6N2M3NjZIU3hGMFJQeEVw?=
+ =?utf-8?B?N2ZLaDA1VGR2cVdYVWQ5Q3dQVkFVN09oelBweFVZY0R4Y25aMFh3aGxHVmlQ?=
+ =?utf-8?B?R2xwa3ZjTHRYRnJUenlWUHRiYjhFMU9IZ1JBWGR4YjAwQmplQ0hjRzQ2Rmlo?=
+ =?utf-8?B?OGtvb1FySGdQMXdkbWZvR0ZaUFp5MFgxS3diNGFiRHhBc2c4VkxMMk5LaDlS?=
+ =?utf-8?B?OXpOZVd4VmZSb0tzaytQSklrby8wUitXWTI4VFIvRjViTkNxUzZDcjZGK2tt?=
+ =?utf-8?B?bUxuN3ArKzhJOGFjb0ZOVzA4Q2lPS0hFcm9TMVhUaWlTREZsMTJJY3ZZdDY5?=
+ =?utf-8?B?Yld0em1BZ2YvVWdidTdWTU9rbnQ0MFZueUxkZlhodUovYVNlSHNJVzNXdGFt?=
+ =?utf-8?B?UGpGck12Yy9UZ0pxUXo4RHM2R0Z2U0I4OUlGRWxmZ1Y2clZsUW4yM1FjUVB2?=
+ =?utf-8?B?Umw4SnBBczRyNzdGRlMreFNwYnQxSWpmTGh3RnZVRklad2NtWU1wcENWQ0w2?=
+ =?utf-8?B?MUtYbWp0ODlFQVJCU0hualhpZ3phNnU0MkgvbmdJTDVQbDJqNjNydkdwcFVy?=
+ =?utf-8?Q?62kDjI=3D?=
+MIME-Version: 1.0
+
+--Apple-Mail-98D06BCE-E9B6-48A3-B14F-B3FA4FEFB0CB
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Or your game...?
+
+Sent from my iPhone
+
+> On Jul 30, 2019, at 3:25 PM, Anton Nijholt <a.nijholt@utwente.nl> wrote:
+>=20
+> Animals and the (Playable) City: A Critical Perspective
+> A Workshop held as part of the Sixth International Conference on Animal-Co=
+mputer Interaction (ACI 2019)=20
+> 12 November 2019, Haifa, Israel
+> =20
+> https://sites.google.com/view/animalsandthecity/home
+> =20
+> Submission Deadline: 27 September 2019
+> =20
+> Call for Participation
+> Cities by their very nature are human creations in the sense that they are=
+ built to support human habitation and to represent the image of the communi=
+ties that build them.  However, from their very beginning cities have also s=
+erved as a home to a variety of animals from the domesticated pets and lives=
+tock that formed an integral part of many households to the feral and wild a=
+nimals who have found the urban environment with its novel structures, infra=
+structures, activities and food stuffs to be rife with opportunities that co=
+uld be harnessed to their needs.
+> =20
+> Although cities are utilitarian creations, they invite and celebrate play.=
+  On the one hand, play can be seen in the colours and contours of the city a=
+s its architects and residents play with form and matter to give the streets=
+ and structures their shape, identity and meaning.  On the other, play can b=
+e seen in the various playful behaviours exhibited by the denizens of the ci=
+ty from the odd pedestrian humming and skipping along the street through the=
+ audacious practitioner of parkour jumping from one building to the next to t=
+he multitude of games played in and around the parks and playgrounds that do=
+t the city.  Thus, the utilitarian yet playful nature of the city goes hand i=
+n hand with the purposeful and playful nature of its inhabitants who go abou=
+t their days seeking to fulfil both their physical needs and their playful n=
+ature and offers a host of opportunities for the evolution of new behaviours=
+ and sustainable co-habitation.
+> =20
+> Recent advances in microelectronics and the connectivity offered by the in=
+ternet have led to the development of =E2=80=9Csmart cities=E2=80=9D in whic=
+h arrays of sensors and actuators are used to monitor and control urban infr=
+astructure with a higher level of efficiency and =E2=80=9Cplayable cities=E2=
+=80=9D in which these devices are employed in the creation of novel interact=
+ions and playful experiences within the city.  These advances and the notion=
+s of the smart and the playable city offer the means through which we can ex=
+plore new opportunities for human and animal habitation and co-existence wit=
+hin the city as well as raise new challenges and concerns about privacy, con=
+trol, distraction and duplicity.
+> =20
+> In this workshop we seek to delve into what it means to be a non-human ani=
+mal in the city and how digital technology and the notions of play can play a=
+ part in supporting, enhancing and advancing non-human animal life in the ci=
+ty. We invite researchers and practitioners to submit idea, concept, specula=
+tive, work in progress or position papers related to theoretical, methodolog=
+ical, technological or practical aspects of these questions with the aim of f=
+urthering the discussion and setting the stage for future collaboration.  To=
+pics of interest include, but are not limited to:
+> =20
+> =E2=80=A2  Critical perspectives on non-human animals and/in the city, be t=
+hey companions, strays, pests or wild encroachers
+> =E2=80=A2 Supporting service animals such as guide dogs in the city
+> =E2=80=A2 =E2=80=9Csmart=E2=80=9D cities and =E2=80=9Csmart=E2=80=9D anima=
+ls =E2=80=93 sensor-based interactions with animals in the city
+> =E2=80=A2 The smart and playful city as a digital playground for human and=
+ non-human animals
+> =E2=80=A2 The Internet of Animals in the smart city
+> =E2=80=A2 Policing the polis =E2=80=93 tracking and controlling animals in=
+ the city and their access to and through it. =20
+> =20
+> Papers which may be up to 10 pages long (excluding references) in the CHI E=
+xtended Abstract formatshould be submitted as a PDF file via easychair by 27=
+th September 2019.=20
+> =20
+> All submissions will undergo a double-blind peer review process and theref=
+ore and all identifying information about authors needs to  be removed from t=
+he submitted manuscripts.  Papers will be selected based on their quality an=
+d relevance to the workshop.  Accepted submissions will be published as part=
+ of the conference proceedings.  At least one author of each accepted positi=
+on paper must attend the workshop and must register for both the workshop an=
+d for at least one day of the ACI 2019 conference.
+> =20
+> Organizers
+> =20
+> Yoram Chisik
+> Yoram Chisik is a digital media researcher, information technology catalys=
+t and thinker of errant thoughts. His research explores the nature and meani=
+ng of technological interactions in the digital age. Prior to engaging in an=
+ academic career he worked as a Geographical Information Science (GIS) consu=
+ltant advising government agencies and corporations on the potential and app=
+lication of GIS technology and developing GIS based software solutions. Chis=
+ik is a past chair of the Advances in Computer Entertainment Technologies (A=
+CE) conference that hosted the first conference on Animal Computer Interacti=
+on in 2014 and Intetain which hosted a series of workshops on playable citie=
+s, an associate editor of the specialty section Human-media Interaction of Fron=
+tiers and an adjunct lecturer at the Rhine-Waal University of Applied Scienc=
+es.
+> =20
+> Mattia Thibault
+> Mattia Thibault is a member of the Gamification Group at the University of=
+ Tampere. He holds a PhD in Semiotics and Media from Turin University, and h=
+as been visiting researcher at Tartu University, The Strong Museum of Play, a=
+nd Helsinki University. His research interests revolve around the semiotics o=
+f play, toys, the cultural relevance of games and gamification. He is curren=
+tly ER of the project ReClaim (Marie Sklodowska Curie IF), dealing with urba=
+n gamification and playable cities.
+> =20
+> Anton Nijholt=20
+> Anton Nijholt has interest in human-computer interaction, entertainment co=
+mputing, affective computing, humor research and brain-computer interfacing.=
+ He is authors of hundreds of research papers in these areas. He has been pr=
+ogram chair or general chair of many international conferences and workshops=
+ devoted to these topics. Nijholt is chief-editor of the specialty section H=
+uman-media Interaction of Frontiers in Psychology and he is series editor of=
+ the Springer Book Series on Gaming Media and Social Effects. Nijholt is edi=
+tor of the 2016 book: Playable Cities: The City as a Digital Playground and t=
+he 2019 book Making Smart Cities More Playable. Exploring Playable Cities.
+> =20
+> Heli V=C3=A4=C3=A4t=C3=A4j=C3=A4=20
+> Heli V=C3=A4=C3=A4t=C3=A4j=C3=A4 studies animal-computer interaction, user=
+ experience, and application of new media technologies to different contexts=
+. She is also an expert in animal training and welfare. She acts actively as=
+ a program chair and member in a number of conferences and has chaired sever=
+al scientific and practical workshops. She has authored over 70 peer-reviewe=
+d publications. She works at Tampere University as a postdoctoral researcher=
+.
+> =20
+> Further Information
+> For further information or questions contact Yoram Chisik at ychisik@gmail=
+.com
+> =20
+> https://sites.google.com/view/animalsandthecity/home
+> =20
+> =20
+> -- Gamesnetwork, discussion list of Digital Games Research Association, ww=
+w.digra.org Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSER=
+V@UTA.FI from your subscribed email account. Web interface to subscribe and m=
+anage your subscription: https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&A=3D1 . The list archive is available online at: https://listserv.uta.=
+fi/archives/gamesnetwork.html
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--Apple-Mail-98D06BCE-E9B6-48A3-B14F-B3FA4FEFB0CB
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body dir=3D"auto">Or your game...?<br><br><div id=3D"AppleMailSignatu=
+re" dir=3D"ltr">Sent from my iPhone</div><div dir=3D"ltr"><br>On Jul 30, 20=
+19, at 3:25 PM, Anton Nijholt &lt;<a href=3D"mailto:a.nijholt@utwente.nl">a=
+.nijholt@utwente.nl</a>&gt; wrote:<br><br></div><blockquote type=3D"cite"><=
+div dir=3D"ltr">
+
+
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.E-mailStijl18
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.E-mailStijl19
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.E-mailStijl20
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+
+
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color=
+:black">Animals and the (Playable) City: A Critical Perspective<o:p></o:p><=
+/span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"EN-GB" style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,s=
+ans-serif;color:black">A Workshop held as part of the Sixth International C=
+onference on Animal-Computer Interaction (<a href=3D"http://www.aciconf.org=
+/aci2019"><span style=3D"color:#954F72">ACI
+ 2019</span></a>)&nbsp;</span><span style=3D"font-size:13.5pt;font-family:&=
+quot;Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"EN-GB" style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,s=
+ans-serif;color:black">12 November 2019, Haifa, Israel</span><span style=3D=
+"font-size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black"=
+><o:p></o:p></span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"EN-GB" style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,s=
+ans-serif;color:black">&nbsp;</span><span style=3D"font-size:13.5pt;font-fa=
+mily:&quot;Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"EN-GB" style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,s=
+ans-serif;color:black"><a href=3D"https://sites.google.com/view/animalsandt=
+hecity/home"><span style=3D"color:#954F72">https://sites.google.com/view/an=
+imalsandthecity/home</span></a></span><span style=3D"font-size:13.5pt;font-=
+family:&quot;Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"EN-GB" style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,s=
+ans-serif;color:black">&nbsp;</span><span style=3D"font-size:13.5pt;font-fa=
+mily:&quot;Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"EN-GB" style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,s=
+ans-serif;color:black">Submission Deadline: 27 September 2019</span><span s=
+tyle=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color=
+:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"EN-GB" style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,s=
+ans-serif;color:black">&nbsp;</span><span style=3D"font-size:13.5pt;font-fa=
+mily:&quot;Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Call =
+for Participation</span></b><span style=3D"font-size:13.5pt;font-family:&qu=
+ot;Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Cities b=
+y their very nature are human creations in the sense that they are built to=
+ support human habitation and to represent the image
+ of the communities that build them.&nbsp; However, from their very beginni=
+ng cities have also served as a home to a variety of animals from the domes=
+ticated pets and livestock that formed an integral part of many households =
+to the feral and wild animals who have
+ found the urban environment with its novel structures, infrastructures, ac=
+tivities and food stuffs to be rife with opportunities that could be harnes=
+sed to their needs.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Although=
+ cities are utilitarian creations, they invite and celebrate play.&nbsp; On=
+ the one hand, play can be seen in the colours and contours
+ of the city as its architects and residents play with form and matter to g=
+ive the streets and structures their shape, identity and meaning.&nbsp; On =
+the other, play can be seen in the various playful behaviours exhibited by =
+the denizens of the city from the odd
+ pedestrian humming and skipping along the street through the audacious pra=
+ctitioner of parkour jumping from one building to the next to the multitude=
+ of games played in and around the parks and playgrounds that dot the city.=
+&nbsp; Thus, the utilitarian yet playful
+ nature of the city goes hand in hand with the purposeful and playful natur=
+e of its inhabitants who go about their days seeking to fulfil both their p=
+hysical needs and their playful nature and offers a host of opportunities f=
+or the evolution of new behaviours
+ and sustainable co-habitation.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Recent a=
+dvances in microelectronics and the connectivity offered by the internet ha=
+ve led to the development of =E2=80=9Csmart cities=E2=80=9D in which
+ arrays of sensors and actuators are used to monitor and control urban infr=
+astructure with a higher level of efficiency and =E2=80=9Cplayable cities=
+=E2=80=9D in which these devices are employed in the creation of novel inte=
+ractions and playful experiences within the city.&nbsp;
+ These advances and the notions of the smart and the playable city offer th=
+e means through which we can explore new opportunities for human and animal=
+ habitation and co-existence within the city as well as raise new challenge=
+s and concerns about privacy, control,
+ distraction and duplicity.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black"><o:p>&nb=
+sp;</o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">In this =
+workshop we seek to delve into what it means to be a non-human animal in th=
+e city and how digital technology and the notions
+ of play can play a part in supporting, enhancing and advancing non-human a=
+nimal life in the city. We invite researchers and practitioners to submit i=
+dea, concept, speculative, work in progress or position papers related to t=
+heoretical, methodological, technological
+ or practical aspects of these questions with the aim of furthering the dis=
+cussion and setting the stage for future collaboration.&nbsp; Topics of int=
+erest include, but are not limited to:<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">=E2=80=
+=A2 &nbsp;Critical perspectives on non-human animals and/in the city, be th=
+ey companions, strays, pests or wild encroachers<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">=E2=80=
+=A2 Supporting service animals such as guide dogs in the city<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">=E2=80=
+=A2 =E2=80=9Csmart=E2=80=9D cities and =E2=80=9Csmart=E2=80=9D animals =E2=
+=80=93 sensor-based interactions with animals in the city<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">=E2=80=
+=A2 The smart and playful city as a digital playground for human and non-hu=
+man animals<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">=E2=80=
+=A2 The Internet of Animals in the smart city<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">=E2=80=
+=A2 Policing the polis =E2=80=93 tracking and controlling animals in the ci=
+ty and their access to and through it. &nbsp;<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Papers w=
+hich may be up to 10 pages long (excluding references) in the&nbsp;<a href=
+=3D"https://chi2020.acm.org/authors/chi-proceedings-format/"><span style=3D=
+"color:#954F72">CHI
+ Extended Abstract format</span></a>should be submitted as a PDF file via&n=
+bsp;<a href=3D"https://easychair.org/conferences/?conf=3Dapc2019"><span sty=
+le=3D"color:#954F72">easychair</span></a>&nbsp;by 27th September 2019.&nbsp=
+;<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">All subm=
+issions will undergo a double-blind peer review process and therefore and a=
+ll identifying information about authors needs to
+ be removed from the submitted manuscripts.&nbsp; Papers will be selected b=
+ased on their quality and relevance to the workshop.&nbsp; Accepted submiss=
+ions will be published as part of the conference proceedings.&nbsp; At leas=
+t one author of each accepted position paper must
+ attend the workshop and must register for both the workshop and for at lea=
+st one day of the&nbsp;<a href=3D"http://www.aciconf.org/aci2019"><span sty=
+le=3D"color:#954F72">ACI 2019 conference</span></a>.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Organ=
+izers</span></b><span style=3D"font-size:13.5pt;font-family:&quot;Helvetica=
+&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp=
+;</span></b><span style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quo=
+t;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Yoram=
+ Chisik</span></b><span style=3D"font-size:13.5pt;font-family:&quot;Helveti=
+ca&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Yoram Ch=
+isik is a digital media researcher, information technology catalyst and thi=
+nker of errant thoughts. His research explores the
+ nature and meaning of technological interactions in the digital age. Prior=
+ to engaging in an academic career he worked as a Geographical Information =
+Science (GIS) consultant advising government agencies and corporations on t=
+he potential and application of
+ GIS technology and developing GIS based software solutions. Chisik is a pa=
+st chair of the Advances in Computer Entertainment Technologies (ACE) confe=
+rence that hosted the first conference on Animal Computer Interaction in 20=
+14 and Intetain which hosted a series
+ of workshops on playable cities, an associate editor of the specialty sect=
+ion Human-media Interaction of Frontiers and an adjunct lecturer at the Rhi=
+ne-Waal University of Applied Sciences.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Matti=
+a Thibault</span></b><span style=3D"font-size:13.5pt;font-family:&quot;Helv=
+etica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Mattia T=
+hibault is a member of the Gamification Group at the University of Tampere.=
+ He holds a PhD in Semiotics and Media from Turin
+ University, and has been visiting researcher at Tartu University, The Stro=
+ng Museum of Play, and Helsinki University. His research interests revolve =
+around the semiotics of play, toys, the cultural relevance of games and gam=
+ification. He is currently ER of
+ the project ReClaim (Marie Sklodowska Curie IF), dealing with urban gamifi=
+cation and playable cities.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Anton=
+ Nijholt&nbsp;</span></b><span style=3D"font-size:13.5pt;font-family:&quot;=
+Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Anton Ni=
+jholt has interest in human-computer interaction, entertainment computing, =
+affective computing, humor research and brain-computer
+ interfacing. He is authors of hundreds of research papers in these areas. =
+He has been program chair or general chair of many international conference=
+s and workshops devoted to these topics. Nijholt is chief-editor of the spe=
+cialty section Human-media Interaction
+ of Frontiers in Psychology and he is series editor of the Springer Book Se=
+ries on Gaming Media and Social Effects. Nijholt is editor of the 2016 book=
+: Playable Cities: The City as a Digital Playground</span><span style=3D"fo=
+nt-size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif">
+ and the 2019 book Making Smart Cities More Playable. Exploring Playable Ci=
+ties<span style=3D"color:black">.<o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Heli =
+V=C3=A4=C3=A4t=C3=A4j=C3=A4&nbsp;</span></b><span style=3D"font-size:13.5pt=
+;font-family:&quot;Helvetica&quot;,sans-serif;color:black"><o:p></o:p></spa=
+n></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Heli V=
+=C3=A4=C3=A4t=C3=A4j=C3=A4 studies animal-computer interaction, user experi=
+ence, and application of new media technologies to different contexts.
+ She is also an expert in animal training and welfare. She acts actively as=
+ a program chair and member in a number of conferences and has chaired seve=
+ral scientific and practical workshops. She has authored over 70 peer-revie=
+wed publications. She works at Tampere
+ University as a postdoctoral researcher.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">Furth=
+er Information</span></b><span style=3D"font-size:13.5pt;font-family:&quot;=
+Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">For furt=
+her information or questions contact Yoram Chisik at&nbsp;<a href=3D"mailto=
+:ychisik@gmail.com"><span style=3D"color:#954F72">ychisik@gmail.com</span><=
+/a><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:black">&nbsp;<o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"EN-GB" style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,s=
+ans-serif;color:black"><a href=3D"https://sites.google.com/view/animalsandt=
+hecity/home"><span style=3D"color:#954F72">https://sites.google.com/view/an=
+imalsandthecity/home</span></a></span><span style=3D"font-size:13.5pt;font-=
+family:&quot;Helvetica&quot;,sans-serif;color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color=
+:black">&nbsp;<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:13.5pt;font-family:&quot;Helvetica&quot;,sans-serif"><o:p>&nbsp;</o:p></s=
+pan></p>
+</div>
+
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+</div></blockquote></body></html>--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--Apple-Mail-98D06BCE-E9B6-48A3-B14F-B3FA4FEFB0CB--

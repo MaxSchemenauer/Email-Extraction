@@ -1,0 +1,156 @@
+Received: from BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:a03:c0::23)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR05CA0010.NAMPRD05.PROD.OUTLOOK.COM; Fri, 19 Jul 2019 11:17:00 +0000
+Received: from SN6PR08CA0004.namprd08.prod.outlook.com (2603:10b6:805:66::17)
+ by BN7PR08MB4980.namprd08.prod.outlook.com (2603:10b6:408:28::30) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2073.14; Fri, 19 Jul
+ 2019 11:16:59 +0000
+Received: from CO1NAM04FT026.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::205) by SN6PR08CA0004.outlook.office365.com
+ (2603:10b6:805:66::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2094.14 via Frontend
+ Transport; Fri, 19 Jul 2019 11:16:58 +0000
+Authentication-Results: spf=pass (sender IP is 192.185.145.82)
+ smtp.mailfrom=cogitatiopress.com; calpoly.edu; dkim=pass (signature was
+ verified) header.d=cogitatiopress.com;calpoly.edu; dmarc=bestguesspass
+ action=none header.from=cogitatiopress.com;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of cogitatiopress.com
+ designates 192.185.145.82 as permitted sender)
+ receiver=protection.outlook.com; client-ip=192.185.145.82;
+ helo=gateway33.websitewelcome.com;
+Received: from gateway33.websitewelcome.com (192.185.145.82) by
+ CO1NAM04FT026.mail.protection.outlook.com (10.152.90.124) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2052.18 via Frontend Transport; Fri, 19 Jul 2019 11:16:58 +0000
+Received: from cm16.websitewelcome.com (cm16.websitewelcome.com [100.42.49.19])
+	by gateway33.websitewelcome.com (Postfix) with ESMTP id 78A63B7419
+	for <foaad@calpoly.edu>; Fri, 19 Jul 2019 06:16:57 -0500 (CDT)
+Received: from gator4037.hostgator.com ([192.185.4.48])
+	by cmsmtp with SMTP
+	id oQsjhGOKk4FKpoQsjhS98a; Fri, 19 Jul 2019 06:16:57 -0500
+X-Authority-Reason: nr=8
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=cogitatiopress.com; s=default; h=Content-Transfer-Encoding:Content-Type:
+	MIME-Version:Date:Message-ID:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=FhKSGcCpXLW9nyzXL/5G+w9Hajpo42M/F0pWrhtjMRw=; b=Wte8fcohHmXtUNVXEJc9dMF8qS
+	WF3gnD2Svu7RcEkTlJJ8gZHS7MaURqn0x6yRpU4cYlHSm+3wl83tlutzlp84NGNd0GmxwXoSIgQl4
+	w1AbD8ToGUlt1Dz5xSm4suCU4NszLwAJG4DvgLEtKMahwgEqgJXrYSo35iOiUbsgsT5M=;
+Received: from bl11-252-102.dsl.telepac.pt ([85.244.252.102]:54756 helo=[192.168.1.48])
+	by gator4037.hostgator.com with esmtpsa (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.92)
+	(envelope-from <mac@cogitatiopress.com>)
+	id 1hoQsj-001KK2-2o
+	for foaad@calpoly.edu; Fri, 19 Jul 2019 06:16:57 -0500
+From: Media and Communication <mac@cogitatiopress.com>
+To: foaad@calpoly.edu
+Subject: Call for Papers - Computational Approaches to Media Entertainment
+ Research (abstracts by 1-15 November 2019)
+Message-ID: <179dea12-42e0-4f8b-4402-be86ca314677@cogitatiopress.com>
+Date: Fri, 19 Jul 2019 12:16:54 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+X-Antivirus: AVG (VPS 190719-0, 07/19/2019), Outbound message
+X-Antivirus-Status: Clean
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - gator4037.hostgator.com
+X-AntiAbuse: Original Domain - calpoly.edu
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - cogitatiopress.com
+X-BWhitelist: no
+X-Source-IP: 85.244.252.102
+X-Source-L: No
+X-Exim-ID: 1hoQsj-001KK2-2o
+X-Source:
+X-Source-Args:
+X-Source-Dir:
+X-Source-Sender: bl11-252-102.dsl.telepac.pt ([192.168.1.48]) [85.244.252.102]:54756
+X-Source-Auth: mac@cogitatiopress.com
+X-Email-Count: 86
+X-Source-Cap: bm1sZjtubWxmO2dhdG9yNDAzNy5ob3N0Z2F0b3IuY29t
+X-Local-Domain: yes
+Return-Path: mac@cogitatiopress.com
+X-MS-Exchange-Organization-ExpirationStartTime: 19 Jul 2019 11:16:58.3572
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 680c21ed-2729-4b8e-f5d8-08d70c3a9d56
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:192.185.145.82;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(286005)(199004)(189003)(14444005)(6666004)(2171002)(47776003)(356004)(486006)(106002)(65956001)(45086001)(476003)(2616005)(16003)(19273905006)(36756003)(2870700001)(65806001)(126002)(58126008)(6306002)(1096003)(6966003)(67846002)(14006002)(50466002)(31686004)(966005)(9786002)(64126003)(7596002)(65826007)(305945005)(15974865002)(4006050)(7636002)(956004)(75640400001)(86362001)(26005)(336012)(31696002)(413944005)(8676002)(23676004)(246002)(2361001)(6916009)(2351001)(225293001)(563064011);DIR:INB;SFP:;SCL:1;SRVR:BN7PR08MB4980;H:gateway33.websitewelcome.com;FPR:;SPF:Pass;LANG:en;PTR:gateway33.websitewelcome.com;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT026.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 680c21ed-2729-4b8e-f5d8-08d70c3a9d56
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1414054)(71702078);SRVR:BN7PR08MB4980;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4980:
+X-MS-Exchange-PUrlCount: 3
+X-MS-Oob-TLC-OOBClassifiers: OLM:9508;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 19 Jul 2019 11:16:58.1981
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 680c21ed-2729-4b8e-f5d8-08d70c3a9d56
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4980
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6395496
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2094.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944504077)(944702077);
+X-Microsoft-Antispam-Message-Info:
+	IViV1s1suqvFsuJbPFKJO0J2N8xlY6vTkLxSmPxZPat/hw3tYSwTQVJOTsiSYuy+Va5GYEz242UytUvXu5IKsHp8osKm1b6sEPbxZKFn0QdSqWdHRWqd8h8rBb8P2y+iVuzbDehVhrma2jG2w/aWSTfbR76/1dfeBTg6xaIWtdQB8skJYAxKXEXzKzIFVLp1I1qCptRyX8AbJAoRhAdph4EJbmoMVKkus06dV3+DfEPdTpP2Mu0K6aV5ciXPde+4McShoLeivZYs+lKit/e5wCaXTVnHKvWXCSiBS/XmX/tQEk2G8uGJj5SY6qj7ghOUUVnXDJy2D7U6sNjR1jhJEZt3AZ/NMy9JkGk66w3eQzd60IjN61vmQYmv+syM6IdbFqFqwdTLD5tZ74S0Fu4j35kHDIzjPa6ndDCrlrv9Wq2EUMgjt3szHbxkhJcVyfkGWhH7Oh+ylnelo5bxNz2oA7RTvJ0qTvCzlkrFqNK5PBgXmfaDEi/m7xwudcgLDV4eh04BVLd9Jumlrw+rU8cq8AnKMp2OSXzxzbRrKQT5DW0Biw+xJEy3CHnjPD4KrAw7V36rRZ/TSPJOo3vzt7fm2rcm+SGmf45iUrqWoXgHnJi1ZBGVI5eRdH3Wul2dUATqiWkGzp49dgweY4goqPQBId9cOdIzmYn0awLWmwcMxDyyWZB2jhfvmJGurhPINFY8sUhXApVf0DZtm66L8HJtT/y3MnstqjdwgbYwAv1wXSQ1g3SPxt2JjBf/mT2NMdv91Ovv9QeFzIfcXGTbO7QZXb7IXcPDv0ZbFvDJCpnFdui+8Z7PGtsJcwkCu2kbZf18kJZIl4U6BNPz6S5WrRtYamW6yQn4ZNfqlEKw27SQejUv3XO+v5jPJmoW/eSB/zEUiAsW8OHLTRQwVKB4dEYGBA==
+MIME-Version: 1.0
+
+Dear Foaad Khosmood,
+
+Media and Communication, an internationally peer-reviewed journal 
+indexed in the Web of Science and Scopus (CiteScore: 1.43), is welcoming 
+research papers for a thematic issue on "Computational Approaches to 
+Media Entertainment Research".
+
+Editors: Johannes Breuer (GESIS—Leibniz Institute for the Social 
+Sciences, Germany), Tim Wulf (LMU Munich, Germany) and M. Rohangis 
+Mohseni (TU Ilmenau, Germany)
+
+Submission of Abstracts: 1-15 November 2019
+Submission of Full Papers: 15-30 March 2020
+Publication of the Issue: July/September 2020
+
+https://www.cogitatiopress.com/mediaandcommunication/pages/view/nextissues#MediaEntertainment
+
+As we believe that this issue fits your research interests, would you be 
+interested in submitting an article?
+
+All articles published in this issue will be free to download by any 
+reader anywhere in the world. To cover its costs, the journal has an 
+article processing charge of EUR 900 per published paper, but this is a 
+cost that we do not wish authors to personally cover. We advise all 
+interested authors to check with their universities if an open access 
+fund is available. Authors affiliated with Cogitatio's Institutional 
+Members do not incur any publication fees: 
+http://www.cogitatiopress.com/mediaandcommunication/pages/view/institutionalmembers
+
+I thank you for your attention and look forward to knowing if you are 
+interested in submitting an abstract to this issue.
+
+Best regards,
+Raquel
+
+Raquel Silva
+Media and Communication
+Cogitatio Press
+1070-129 Lisbon, Portugal
+www.cogitatiopress.com/mediaandcommunication
+

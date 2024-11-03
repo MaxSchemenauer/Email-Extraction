@@ -1,0 +1,253 @@
+Received: from DM6PR08MB4986.namprd08.prod.outlook.com (2603:10b6:a03:1e0::24)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BY5PR03CA0014.NAMPRD03.PROD.OUTLOOK.COM; Mon, 27 Jan 2020 06:36:25 +0000
+Received: from CH2PR08CA0018.namprd08.prod.outlook.com (2603:10b6:610:5a::28)
+ by DM6PR08MB4986.namprd08.prod.outlook.com (2603:10b6:5:4f::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2665.20; Mon, 27 Jan
+ 2020 06:36:19 +0000
+Received: from SN1NAM04FT023.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::205) by CH2PR08CA0018.outlook.office365.com
+ (2603:10b6:610:5a::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2665.22 via Frontend
+ Transport; Mon, 27 Jan 2020 06:36:19 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.161.68)
+ smtp.mailfrom=gmail.com; calpoly.edu; dkim=pass (signature was verified)
+ header.d=gmail.com;calpoly.edu; dmarc=pass action=none
+ header.from=gmail.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.161.68 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.161.68; helo=mail-yw1-f68.google.com;
+Received: from mail-yw1-f68.google.com (209.85.161.68) by
+ SN1NAM04FT023.mail.protection.outlook.com (10.152.88.108) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2665.18 via Frontend Transport; Mon, 27 Jan 2020 06:36:19 +0000
+Received: by mail-yw1-f68.google.com with SMTP id l22so4276154ywc.8;
+        Sun, 26 Jan 2020 22:36:18 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=PbC48gaTXH9KG19ebaNj0WvgypWdfD2oYPUPeaqI7uc=;
+        b=VzQ8Z+za534Gt6QnBt2+XVbqSgMFllUpcRQL7mqL++Sssu2URiA4/5uWTWAnko62bm
+         47o5+9IM39c6AIkDaSW1pNrvFIhKobOMmSOH/zW5XUkwt3MA59I0BlqlVLX48xp8bpDP
+         4w/fwcFcdBMaoIiFo+49pMkTETDCZJHHO9d1yU/JF4QUfQY81M5HGImm+LD2FSnH1ZZN
+         l2VM0jHuiDQDwvvGS3CgYyr1B4dhkn7JxUthieLdOp58NMB4WG27Hr85TGYYTLZfDe+Y
+         WAwfh16hh0V9KL4/9fuYTmvCVQIzrOHX6KsuS8jAlZ0jgH5+4VpIb/teZYRDDXxQFfJj
+         nQeA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=PbC48gaTXH9KG19ebaNj0WvgypWdfD2oYPUPeaqI7uc=;
+        b=Lsvl71r7vq+2O4xPwshZSF+3GdmSHwKWjeMlouKgNo7qn0fjkt9WR7h70ejEUm4qZM
+         YsMZ6JtZgiKISHCJvVYusTQG/pvJnsFxpPi8zPnnLme0QFGd+PW1A4lWHcE30SVIFSix
+         6rIjowyTNST6flqoNfYJoWg/321/cdjzIsABIIwX+vlswICkyDK/DG2EiMC6SSRgsyjG
+         FzLvXkCuRm2N2kEo1deNFEZhdmfLtIXtpbYt2sVs/974GjFULgXwWziFvhB1fqTa8ilw
+         wX+oo74nl634Vp6oDstL3CnvECoqz1QNE7d7n3kPq9jaw4JXzotoiggg602dpKHE55I4
+         vwLQ==
+X-Gm-Message-State: APjAAAWzaWevNM1a/Puw06jHfuLEJo9rEV2VNTdDail096mBRTJ7JyWE
+	oc0JntZmXiQgqQ9Js+I+iJ3n32EPYi13vcP3ysQ=
+X-Google-Smtp-Source: APXvYqzM7+BMJAWVIN9MxkLjdWnc3TXDqijmBOw8W5HdkvsfYDhBCnBYypzc8Do5Iadqk+haPZ4HvVgy1arKRp1p3Jc=
+X-Received: by 2002:a81:37d3:: with SMTP id e202mr10988695ywa.292.1580106978141;
+ Sun, 26 Jan 2020 22:36:18 -0800 (PST)
+From: Heather Howell <hrhvision@gmail.com>
+Date: Sun, 26 Jan 2020 22:29:13 -0800
+Message-ID: <CACZ6H+51XGYoSkAs1-wkXm+hWTHGYqmTX10jyvM6G5y0Lex+Qg@mail.gmail.com>
+Subject: URGENT UPDATE - GreenForce Conference 2-2-2020
+To: gbohr@calpoly.edu, jnavar18@calpoly.edu, kdmain@calpoly.edu, 
+	pverma@calpoly.edu, dsmitche@calpoly.edu, dclague@calpoly.edu, 
+	sdross@calpoly.edu, nderbidge@calpoly.edu, jlmcdowe@calpoly.edu, 
+	ctorresb@calpoly.edu, gfiegel@calpoly.edu, lababcoc@calpoly.edu, 
+	daskay@calpoly.edu, kclark28@calpoly.edu, lcoffman@calpoly.edu, 
+	jlehr@calpoly.edu, tklein01@calpoly.edu, hglanz@calpoly.edu, 
+	denotter@calpoly.edu, mkeller@calpoly.edu, knmcgart@calpoly.edu, 
+	ynelson@calpoly.edu, wpreston@calpoly.edu, kdaldric@calpoly.edu, 
+	grees@calpoly.edu, erker@calpoly.edu, ddgillet@calpoly.edu, 
+	amaccarl@calpoly.edu, mgoldenb@calpoly.edu, bruttenb@calpoly.edu, 
+	susnyder@calpoly.edu, "Peter V. Schwartz" <pschwart@calpoly.edu>, eelghand@calpoly.edu, 
+	foaad@calpoly.edu, estauffe@calpoly.edu, blondon@calpoly.edu, 
+	rflores@calpoly.edu, apande@calpoly.edu, cwhite31@calpoly.edu, 
+	gbdurham@calpoly.edu, kpilolla@calpoly.edu, hsharris@calpoly.edu, 
+	jdenbow@calpoly.edu, nrajakar@calpoly.edu, acandrew@calpoly.edu, 
+	mhorney@calpoly.edu, taufik@calpoly.edu, jmalber@calpoly.edu, 
+	roulton@calpoly.edu, nmacdoug@calpoly.edu, ewbarret@calpoly.edu, 
+	lbjohnst@calpoly.edu, rccobb@calpoly.edu, tthatche@calpoly.edu, 
+	remberle@calpoly.edu, lweisenberg@omsslo.com, 
+	Jodi Tellier <lionjodi1@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000023ac92059d1953c9"
+Return-Path: hrhvision@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 27 Jan 2020 06:36:19.0694
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 3058047f-16d4-4d80-8bde-08d7a2f337a7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Matching-Connectors:
+ 132245805790724387;();(588ffefd-61cc-4a1e-29ac-08d5f2008534)
+X-Forefront-Antispam-Report:
+ CIP:209.85.161.68;IPV:;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(10001)(4636009)(189003)(199004)(58800400005)(4006050)(246002)(75640400001)(5660300002)(450100002)(1096003)(55446002)(336012)(356004)(6666004)(7636002)(7596002)(7416002)(1191002)(73392003)(26005)(42186006)(8676002)(76482006)(2160300002)(110136005)(82202003)(33964004)(86362001)(6636002)(921003)(1121003)(4623004);DIR:INB;SFP:;SCL:1;SRVR:DM6PR08MB4986;H:mail-yw1-f68.google.com;FPR:;SPF:Pass;LANG:en;PTR:mail-yw1-f68.google.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT023.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 3058047f-16d4-4d80-8bde-08d7a2f337a7
+X-MS-TrafficTypeDiagnostic: DM6PR08MB4986:
+X-LD-Processed: 1b0d02db-fc9e-4495-9537-1d379cca2ae7,ExtFwd
+X-MS-Exchange-Transport-Forked: True
+X-MS-Oob-TLC-OOBClassifiers: OLM:1284;
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 27 Jan 2020 06:36:19.0414
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3058047f-16d4-4d80-8bde-08d7a2f337a7
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR08MB4986
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:06.5190746
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2665.015
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UHR5Y05Rdlh2c25uN0YraEJ4SXRzeDlzaU56SDJ4OEl1K3N0WnN2YTZxMDd1?=
+ =?utf-8?B?a3Z0eUlLVU8vUTZzYmZKQlBvR21Jd0xIUWtJREVrTzJVa3RJMnljdXg3VGpU?=
+ =?utf-8?B?TXNJcHVPZEJDN3VLYjVmQk12dzBQUUR3UFZacTN4M0FHM0E3M1RTeWpING9Z?=
+ =?utf-8?B?K09NZUQ0R2ZjaDVzN1BCUlVxYTFTSlBydGwzSW1VdjhrOGFnTE5MNXF4YW1N?=
+ =?utf-8?B?RmpZcEordjAxdFFHZnBRc0haaVlLMStPMDdFMVRBNlNVOWdzWnQrRi9VQ1Bm?=
+ =?utf-8?B?RnUvdWVWL1B1Mkh2UlVWVXpteHRYQ1JnVXJad0pDc2dlTU9kMUtXVW9nRTRZ?=
+ =?utf-8?B?ZFN3WVUyUm0xUlZDODlZWUo0YVFSMllrdzJuOEEySXBGYUZ5cXZ6M2VRMWMw?=
+ =?utf-8?B?RlpQYW0zNDVQY0xFSWRrdkFRWW95b25meHNmRDRrVWU0bDRRcG5YSy9Ebkxw?=
+ =?utf-8?B?cVJPaW1ybG9xaHBjeGs2SXU5NjJUWGJydkJGb3JQZlpZR1JlbDFrbnpGTmhx?=
+ =?utf-8?B?R3Mza0hPY1JJdGVsUENZM3FvTXJ6a1JwSWxkUGQxSWJBSTMweG1HNS9wV0tv?=
+ =?utf-8?B?bXhtQUVnOHZJSDl6M29nbkROdlZsR3pXTnJrSVV6MFBmV1NXWU1jekRzeWZV?=
+ =?utf-8?B?aFU0eTdRWDE5eU91NzV0Y3BoOS81U3gvVXoyWFJIT1dQU3cyMnp4SlVVUEdI?=
+ =?utf-8?B?U29Tek9UelVyRHpjaUJ2OXMvczV5RlY0aksyUzRITGdJL2Q3TUN3NWg4dStO?=
+ =?utf-8?B?TUdUUEVEcmhlcFdvWDV4NHJBTFZhNVdueHpIYkVRdnNOMnkwUDNJYjVvaXpL?=
+ =?utf-8?B?d05wZmVrUTN0THRQTHRSaWpUbXhBZURadDh3ZWRibWlpYnA5dDlEblQ0MEpW?=
+ =?utf-8?B?U0JlSnZqUmJpUi82cWwxWVdXUzlDVGVNeWYwWWZuaHdBVkxidnJqNU95OWc4?=
+ =?utf-8?B?TWk0dkxwWkxaaWRPZWUvOTZ1SzFXWi9qZmdUcFFvbW5tVmNFMkF4OGZmazVz?=
+ =?utf-8?B?SFlsVnRFVzQxMmVVbDBJaFY2cFl5WTZRNER1ak93bElHeEJZcjZJVmpROVZu?=
+ =?utf-8?B?dU5LYStHRkNsckFJY3pQZE9xQi9MUmdUdTU0WGI5U2pEWXBRc1NFVzVSTndU?=
+ =?utf-8?B?Z2hFUFlsL0hZZS9Telh3bHdBc0hFSElEdWJrV3NTQmpsTkNFYUlNZy9NVTNN?=
+ =?utf-8?B?Um5CbkdBRWZNWURYS0FSdFJCYWd3Z2hxZXdDSjVOcWd4VFEvWlBMUFBIbnVv?=
+ =?utf-8?B?NldtMG0xMENzRWlNNktIcERMV3krSEZFekVjWVV5K3BKTytYb3RvRFBudFFp?=
+ =?utf-8?B?RWV5bkVzR09rWnhBRjhJVXFqSEhOS2tBWVU2dnJ1WlpheFZ5NjhjaFY1SFRV?=
+ =?utf-8?B?REFGdU51Q0NPTzdqejl4S1RkM1RQZmtpaVZjN3lBUGl5dEQxU1ByaDdJa010?=
+ =?utf-8?B?STNuZU1iSjI4dnV0REVmYWlJNkZBOFRxQlJVcFFTd2tac3U3dXlHTTg3cXBL?=
+ =?utf-8?B?bTR2TFZBVS9HYkMrRHcxMVhMc0RPVjBRWE1lRzVXSVE3eHNVWVd5b1B4Qm1h?=
+ =?utf-8?B?NjAxSlhFbllkaGZGbVpjTWpTL3hoYVByVllSWmYrZ2FiNVRzcmtiaDRjOTh6?=
+ =?utf-8?Q?35yTNbpOM9TDQfHJqwR6Apx7KTlzAcG/M1VYWS8Ij3Gc=3D?=
+MIME-Version: 1.0
+
+--00000000000023ac92059d1953c9
+Content-Type: text/plain; charset="UTF-8"
+
+Greetings fellow Environmentalists!
+An URGENT reminder that *You are Invited!* to the first *GreenForce
+Collaborative* *Event*, specifically for *Environmental Leaders and
+Influencers* in the Community & our Tri-County Village.
+
+It's *only a week* until the GreenForce Conference takes over the
+Botanical Gardens, at Rancho El Chorro,
+in a WAVE of GREEN Creativity and Determination!
+
+WILL YOU BE THERE? Will YOU be on the list of INITIAL GreenForce Supporters
+and Influencers? *WE HOPE SO! *
+Our Community and the Planet NEED YOUR ENERGY, IDEAS & CAN-DO SPIRIT!
+
+If you have *already Registered*, we ask that you *complete **the Pre-Event
+Survey* by *Thursday, Jan.29* at this link ;
+GreenForce Pre-Event Survey <https://www.surveymonkey.com/r/XFV2LJM>
+ Username: Greenforce   Password: 805conference
+
+The *Survey's ONLY purpose* and *use *is to guide the day's Collaboration
+to YOUR Strengths & Interests.
+
+If you have *NOT YET REGISTERED*, Please do *by Jan.29th*, at this
+link; GreenForce
+Conference Registration <http://slobg/calendar-of-events/greenforce>.
+Seating is limited. *Scholarships Available! PLEASE SHARE WITH YOUR
+STUDENTS, We want them at the table !*
+
+then *complete the survey* at this link;
+GreenForce Pre-Event Survey <https://www.surveymonkey.com/r/XFV2LJM>
+ Username: Greenforce   Password: 805conference
+
+THIS BEGINS A NEW DECADE AND ERA OF VISION, COLLABORATION, AND SHARED
+ACTION TO SAVE THE PLANET.
+We are INVITING YOU to be a Part of the Change we MUST HAVE, FROM TODAY
+GOING FORWARD.
+In Solidarity,
+
+Heather Howell, Stacey Hunt, & Chenda Lor,
+Sierra Club,        Ecologistics      SLO Botanical Garden
+Volunteers & GreenForce Organizers
+(805)234-5644 c
+
+-- 
+*Heather Howell*
+(805)234-5644
+
+--00000000000023ac92059d1953c9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-size:large"><div =
+class=3D"gmail_default" style=3D"font-size:small">Greetings fellow Environm=
+entalists!</div><div class=3D"gmail_default" style=3D"font-size:small">An U=
+RGENT reminder that&nbsp;<b>You are Invited!</b>&nbsp;to the first&nbsp;<b>=
+GreenForce Collaborative</b>&nbsp;<b>Event</b>, specifically for&nbsp;<b>En=
+vironmental Leaders and Influencers</b>&nbsp;in the Community &amp; our Tri=
+-County Village.&nbsp;<br></div><div class=3D"gmail_default" style=3D"font-=
+size:small"><div class=3D"gmail_default"><br></div><div class=3D"gmail_defa=
+ult">It's&nbsp;<b>only a week</b>&nbsp;until the GreenForce Conference take=
+s over the Botanical&nbsp;Gardens, at Rancho El Chorro,&nbsp;</div><div cla=
+ss=3D"gmail_default">in a WAVE of GREEN Creativity and Determination!&nbsp;=
+</div><div class=3D"gmail_default"><br></div><div class=3D"gmail_default">W=
+ILL YOU BE THERE? Will YOU be on the list of INITIAL GreenForce Supporters =
+and Influencers?&nbsp;<b>WE HOPE SO!&nbsp;</b><br></div><div class=3D"gmail=
+_default"><font size=3D"4">Our Community and the Planet</font>&nbsp;NEED YO=
+UR ENERGY, IDEAS &amp; CAN-DO SPIRIT!</div><div class=3D"gmail_default"><br=
+></div><div class=3D"gmail_default">If you have&nbsp;<b>already Registered<=
+/b>, we ask that you&nbsp;<b>complete&nbsp;</b><b>the Pre-Event Survey</b>&=
+nbsp;by&nbsp;<b>Thursday, Jan.29</b>&nbsp;at this link ;&nbsp;</div><div cl=
+ass=3D"gmail_default"><a href=3D"https://www.surveymonkey.com/r/XFV2LJM" ta=
+rget=3D"_blank">GreenForce Pre-Event Survey</a>&nbsp; &nbsp;Username: Green=
+force&nbsp; &nbsp;Password: 805conference</div><div class=3D"gmail_default"=
+><br></div><div class=3D"gmail_default">The&nbsp;<b>Survey's ONLY purpose</=
+b>&nbsp;and <b>use&nbsp;</b>is to guide the day's Collaboration to YOUR Str=
+engths &amp; Interests.&nbsp;</div><div class=3D"gmail_default"><br></div><=
+div class=3D"gmail_default">If you have&nbsp;<b>NOT YET REGISTERED</b>, Ple=
+ase do&nbsp;<b>by Jan.29th</b>, at this link;&nbsp;<a href=3D"http://slobg/=
+calendar-of-events/greenforce" target=3D"_blank">GreenForce Conference Regi=
+stration</a>.&nbsp;&nbsp;</div><div class=3D"gmail_default">Seating is limi=
+ted.&nbsp;<b>Scholarships Available! PLEASE SHARE WITH YOUR STUDENTS, We wa=
+nt them at the table !</b></div><div class=3D"gmail_default"><br></div><div=
+ class=3D"gmail_default">then <b>complete the survey</b> at this link;<br><=
+/div><div><div class=3D"gmail_default" style=3D"font-size:large"><a href=3D=
+"https://www.surveymonkey.com/r/XFV2LJM" target=3D"_blank" style=3D"font-si=
+ze:small">GreenForce Pre-Event Survey</a><span style=3D"font-size:small">&n=
+bsp; &nbsp;Username: Greenforce&nbsp; &nbsp;Password: 805conference</span><=
+/div><div class=3D"gmail_default" style=3D"font-size:large"><span style=3D"=
+font-size:small"><br></span></div><div class=3D"gmail_default"><font size=
+=3D"4">THIS BEGINS A NEW DECADE AND ERA OF VISION, COLLABORATION,&nbsp;AND =
+SHARED ACTION TO SAVE THE PLANET.&nbsp;&nbsp;&nbsp;<br></font></div><div cl=
+ass=3D"gmail_default"><font size=3D"4">We are INVITING YOU to be a Part of =
+the Change we MUST HAVE, FROM TODAY GOING FORWARD.</font>&nbsp;<br></div><d=
+iv class=3D"gmail_default">In Solidarity,&nbsp;</div><div class=3D"gmail_de=
+fault"><br></div><div class=3D"gmail_default">Heather Howell, Stacey Hunt, =
+&amp; Chenda Lor,&nbsp;</div><div class=3D"gmail_default">Sierra Club,&nbsp=
+; &nbsp; &nbsp; &nbsp; Ecologistics&nbsp; &nbsp; &nbsp; SLO Botanical Garde=
+n</div><div class=3D"gmail_default">Volunteers &amp; GreenForce Organizers<=
+/div></div><div dir=3D"ltr"><div dir=3D"ltr"><div><font face=3D"comic sans =
+ms, sans-serif">(805)234-5644<span class=3D"gmail_default" style=3D"font-si=
+ze:large">&nbsp;c</span></font></div></div></div></div></div><div><br></div=
+>-- <br><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_=
+signature"><div dir=3D"ltr"><font face=3D"comic sans ms, sans-serif"><i><b>=
+Heather Howell</b></i></font><div><font face=3D"comic sans ms, sans-serif">=
+(805)234-5644</font></div></div></div></div>
+
+--00000000000023ac92059d1953c9--

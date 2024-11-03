@@ -1,0 +1,374 @@
+Received: from BN7PR08MB4979.namprd08.prod.outlook.com (2603:10b6:5:174::27)
+ by DM6PR08MB4986.namprd08.prod.outlook.com with HTTPS via
+ DM6PR21CA0017.NAMPRD21.PROD.OUTLOOK.COM; Fri, 14 Jun 2019 02:33:29 +0000
+Received: from MWHPR08CA0027.namprd08.prod.outlook.com (2603:10b6:301:5f::40)
+ by BN7PR08MB4979.namprd08.prod.outlook.com (2603:10b6:408:28::29) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1987.11; Fri, 14 Jun
+ 2019 02:33:26 +0000
+Received: from BN3NAM04FT052.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::207) by MWHPR08CA0027.outlook.office365.com
+ (2603:10b6:301:5f::40) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1965.15 via Frontend
+ Transport; Fri, 14 Jun 2019 02:33:26 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ BN3NAM04FT052.mail.protection.outlook.com (10.152.92.241) with Microsoft SMTP
+ Server id 15.20.1987.11 via Frontend Transport; Fri, 14 Jun 2019 02:33:25
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id 6A4452E1411; Thu, 13 Jun 2019 22:24:03 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org 6A4452E1411
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1560479043;
+	bh=mebcy6l2KGv9FJh0oX4Us/XLJt2pmU+qnMbdN2KQahM=;
+	h=Date:To:Subject:From:From;
+	b=PAblBHD5uOymhMhmWNfQz+hNHhUWghvShiG8rsbmMcPLVTd8GUXQHP2/2w7GEavb+
+	 pObEZhYtEKAnkXdZftDew8Z55QqPNpYFhXsnIR5gPiBgNfwNQ9Kkt+/bvNDAAxkBZ9
+	 Yeix8nHORG2v61lKkXchpXuGlyzjJ8ekySCkW5fw=
+Date: Thu, 13 Jun 2019 22:24:03 -0400
+To: foaad@calpoly.edu
+Subject: Call For Papers: ABET + Int'l Conf on Frontiers in Education: CS
+ & CE (FECS: July 29 - August 1, 2019; Las Vegas): Deadline: June 20
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Message-ID: <20190614022403.6A4452E1411@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 14 Jun 2019 02:33:25.8353
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 30cb6786-f769-4908-3e77-08d6f070ad8f
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:;EFV:NLI;SFV:SPM;SFS:(10001)(199004)(189003)(106002)(1076003)(8676002)(40036005)(26005)(6266002)(50466002)(2171002)(7636002)(1096003)(2351001)(97876018)(36756003)(2361001)(14444005)(305945005)(86362001)(75640400001)(42882007)(97756001)(53376002)(4006050)(6916009)(45080400002)(126002)(486006)(33656002)(30864003)(246002)(5660300002)(230700001)(476003)(569274001)(52956003)(336012)(70486001)(15974865002)(47776003)(356004)(6306002)(46406003)(9686003)(103686004)(23726003)(16003)(58126008)(966005)(42186006)(8266002)(66630200001);DIR:INB;SFP:;SCL:5;SRVR:BN7PR08MB4979;H:world-comp.org;FPR:;SPF:Pass;LANG:en;PTR:mail.world-comp.org;A:1;MX:1;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT052.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 30cb6786-f769-4908-3e77-08d6f070ad8f
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(4709080)(8001031)(1414054)(71702078);SRVR:BN7PR08MB4979;
+X-MS-TrafficTypeDiagnostic: BN7PR08MB4979:
+X-MS-Exchange-PUrlCount: 15
+X-MS-Oob-TLC-OOBClassifiers: OLM:6430;
+X-MS-Exchange-Organization-SCL: 5
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 14 Jun 2019 02:33:25.6772
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 30cb6786-f769-4908-3e77-08d6f070ad8f
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN7PR08MB4979
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.0227647
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1987.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?mUS8XoqRNxCHmsPExSgCGv7GKoPJmBBJArDFXVAiSNuz4x9wcSITK10wbm38?=
+ =?us-ascii?Q?9VDbbith9AnQz3/9Jm/K211R5wTsjIdVAl4ExSxqRaUkoyx8RF2RpMn05cPE?=
+ =?us-ascii?Q?MD1GTL4nnWA8Lped+r189AdXufamGtlSCqJY9D7LGwSy82N5RyyZ+NRSSBlI?=
+ =?us-ascii?Q?5IMj/AnNYNjqMgOWDEZ2W1QkKJZbCA7zT0hA3IgpyYi5ClxBkZC0k6dLj0hQ?=
+ =?us-ascii?Q?ggYOv5jinDGyD7jEO5wiJLm4qe7AAVBDpYyxvxdMkZ9Xi/c2WINDIvcux/rs?=
+ =?us-ascii?Q?35SMwoFpW2YmKRMYm0MocCw0jrFofvk4t3M4IpjFSRQuR+INrSl1B6oCqqtk?=
+ =?us-ascii?Q?eGUobX9WCpc99Dw3++BlvJVkRd/M2NhMSzCaq8a0ZuOiWIPqRJ7SP9kza0D7?=
+ =?us-ascii?Q?GSbO0Yu7CCoi5rT2GoCYiZrv6BPlrRcDCXRWORnzW0qtOVGB/LuwLLWgEawg?=
+ =?us-ascii?Q?15oR3Xwh4QIovgte+emqbvPxkeA6R+Ie+D/m4A7l7t4h3++u8zjFionbWsdx?=
+ =?us-ascii?Q?a7q5zByxrNFsKE6gmLHbAz0KU3xXRrenwYBXEsbjpTSy4Xwb9mB2163vEHyA?=
+ =?us-ascii?Q?678qlSIQe/Z0KDm09Q/DAhv4+3lBJJjTKM8pOKjEtadXv7S/2ADD/ZAoti2Q?=
+ =?us-ascii?Q?u9e29LBPomRryyhmBvC9cPbROqYHHYnmxbo3q8AsPDMEeNey8E9RtMuhHUOS?=
+ =?us-ascii?Q?XCY+TJTI4bN1Fjq5L01/+uUrYDNMuLnyPZYxeuBFpA2NefJ95ut654lBcALP?=
+ =?us-ascii?Q?+4IjmjE5jzHiHdzFVh+v1qP6a7eJO1zxsGCmfNFjiD3fmf206EXpRrmJf/xS?=
+ =?us-ascii?Q?N8ZQ4vlrvD9b2AXLc6kYLVKLdugwSevJ046m/ZK70e7uaDPOdZKu/jfGrX4q?=
+ =?us-ascii?Q?lidu4hDG64kaYiV4x20xfNBsZtM9J1mOjBEMXr0g3giykFskCGFXlJ090R7N?=
+ =?us-ascii?Q?RaCsVmyGT7zdF3+progIb7tT1kobM+Oquj7XY7+F2ufZ9WE0xjOSHAN/xdW8?=
+ =?us-ascii?Q?0KdTVjW17Pu9WcWgPc6z9a2Rwrk/oef4MEaIpypT24ZeF4W+cp6btpCgWyy8?=
+ =?us-ascii?Q?tSO4IYP2HtkP/e4bo4xXgR31pHSUvRR3yZ3LmjJVKIXKJMn/QzlaGMpD+vjW?=
+ =?us-ascii?Q?eGL8UeKqF5wUKiJt7RTTHupkhdbEv91JrqYiBlPWyPtO40ENk+l7LSde6DFl?=
+ =?us-ascii?Q?nnv80Wz5sxSItN2PKmlsKbCJyQ+m9gSZ1kaJLMc+cvCYS0m+sdR/Fkwaihoy?=
+ =?us-ascii?Q?DziBRSGqcuUeZffbvDDMy9qHoBJyBnWsjzC4ZJMQDKUW7wTFI/RgWUg3GHbr?=
+ =?us-ascii?Q?PTxm5UD4r98RCyGmoTTqsoXuf51qIht/fKCL+sdPrGrwhQ=3D=3D?=
+MIME-Version: 1.0
+
+
+                         CALL  FOR  PAPERS
+
+         Paper Submission Deadline (EXTENDED): June 20, 2019
+
+     The 15th International Conference on Frontiers in Education:
+         Computer Science and Computer Engineering (FECS'19)
+
+         (Includes a number of tutorials & tracks about ABET)
+      https://americancse.org/events/csce2019/conferences/fecs19 
+
+         July 29 - August 1, 2019, Luxor (MGM), Las Vegas, USA
+               https://americancse.org/events/csce2019 
+
+Registration: https://americancse.org/events/csce2019/registration 
+
+SCOPE: TOPICS OF INTEREST INCLUDE, BUT ARE NOT LIMITED TO, THE FOLLOWING:
+
+   - ABET Accreditation and assessment
+   - ABET experiences and good practices
+   - Student recruitment and retention methods
+   - Promoting multi-disciplinary initiatives - impact on curriculum
+   - Capstone research projects: examples and case studies
+   - Distance learning; methods, technologies and assessment
+   - Innovative degree programs and certificates
+   - Innovative uses of technology in the classroom
+   - Collaborative learning
+   - Learning models and learning from mistakes
+   - Computer and web-based software for instruction
+   - Ethics in computer science and engineering
+   - Incorporating writing into CS and CE curriculum
+   - Preparing graduates for academia
+   - Preparing graduates for industry
+   - Partnerships with industry and government
+   - Team projects and case studies
+   - Undergraduate research experiences
+   - Student observation and mentoring strategies
+   - Advising methods
+   - Evaluation strategies (professors, students, ...)
+   - Transition to graduate studies
+   - Integrating gender and culture issues into computer science and
+     engineering curriculum
+   - The balance between course-work and research
+   - Issues related to the choice of first programming language
+   - Debugging tools and learning
+   - Projects, software engineering, programming issues, and
+     laboratory practices
+   - Virtual laboratories
+   - Computer science and computer engineering curriculum
+   - Active learning tools
+   - Undergraduates as teaching assistants
+   - Funding opportunities for curriculum development and studies
+   - Pilot studies
+   - STEM (Science, Technology, Engineering & Mathematics) initiatives
+   - Teaching methods
+   - Recruiting methods to attract graduate students
+   - Proposed methods for ranking CS and CE departments
+   - The role of visualization and animation in education
+   - Academic dishonesty in a high-tech environment
+   - Experiences in the formation of Department Advisory Board
+   - Factors that lead to success in CS and CE
+   - Software Engineering for Embedded Systems in Education
+
+
+FOREWORD:
+
+   All accepted papers will be published in printed conference books
+   (proceedings) - with unique international ISBN number and will
+   also be made available online. Extended papers of all accepted
+   papers will also be considered for publicaton in journals (indexed
+   by Scopus, ACM DL, Ei Compendex, SCI, ISI, ...; publishers include:
+   Springer, Elsevier, IEEE, ...).
+
+   We anticipate having between 1,000 and 2,000 participants in the
+   Congress that FECS'19 is part of. The congress includes 20 tracks
+   ( https://www.americancse.org/events/csce2019 ) composed of: 122
+   technical, research, and panel sessions as well as a number of
+   keynote lectures and tutorials; all will be held simultaneously,
+   same location and dates: July 29 - August 1, 2019. Last year,
+   the Congress had attracted speakers/authors and participants
+   affiliated with over 169 different universities (including many
+   from the top 50 ranked institutions), major IT corporations
+   (including: Microsoft, Google, Apple, SAP, Facebook, Oracle, Amazon,
+   Yahoo, Samsung, IBM, Ebay, GE, Siemens, Philips, Ericsson, BAE
+   Systems, Hitachi, NTT, ...), major corporations (including: Exxon
+   Mobil, Johnson & Johnson, JPMorgan Chase, PetroChina, GlaxoSmithKline,
+   HSBC, Airbus, Boeing, Hyundai, ...), government research agencies
+   (NSF, NIH, DoE, US Air Force, NSA National Security Agency, ...), US
+   national laboratories (including, NASA, ANL, LLNL, Sandia, ORNL,
+   Lawrence Berkeley National Lab, Los Alamos National Lab, National
+   Cancer Institute, NIST, ...), and a number of Venture Capitalists as
+   well as distinguished speakers discussing Intellectual Property
+   issues. Last year, 55% of attendees were from academia, 24% from
+   industry; 20% from government and funding agencies; and 1% unknown.
+   About half of the attendees were from outside USA; from 72 nations.
+   The event is among the top five largest international annual gathering
+   of researchers in computer science, computer engineering and applied
+   computing. To get a feeling about the conferences' atmosphere, see
+   some delegates photos available at (over 2,000 photos):
+   http://photos.ucmss.com/ 
+
+
+KEYNOTE LECTURES AND TUTORIALS:
+
+   There will be between 10 and 15 Keynote lectures and Invited Talks;
+   speakers include world-renowned scientists and educators. Featured
+   Keynote Speakers in recent years have included:
+
+   - Prof. David A. Patterson (pioneer, architecture, UC Berkeley)
+   - Prof. Ian Foster (known as Father of Grid Computing; U. of Chicago & ANL)
+   - The Late Prof. John H. Holland (known as Father of Genetic Algorithms;
+     U. of Michigan)
+   - Prof. Barry Vercoe (Founding member of MIT Media Lab, MIT)
+   - Prof. John Koza (known as Father of Genetic Programming; Stanford U.)
+   - Prof. Lotfi A. Zadeh (Father of Fuzzy Logic, UC Berkeley)
+   - Dr. Firouz Naderi (former Head of NASA Mars Exploration Program;
+     former Administrator and/or Director of Jet Propulsion Lab,
+     CalTech/NASA; NASA's JPL Solar System Exploration
+   - Dr. K. Eric Drexler (known as Father of Nanotechnology)
+   - Prof. Ruzena Bajcsy (pioneer, VR, UC Berkeley)
+   - Prof. Viktor K. Prasanna (pioneer, U. of Southern California)
+   - Dr. Jose L. Munoz (NSF Program Director and CTO of NSF Office of
+     Cyberinfrastructure)
+   - Prof. David Lorge Parnas (pioneer of software engineering)
+   - Prof. Eugene H. Spafford (Executive Director, CERIAS and Professor,
+     Purdue University)
+   - Prof. Haym Hirsh (Dean, Cornell University & former NSF admin)
+   - Prof. Alfred Inselberg (Tel Aviv U, Israel; Senior Fellow, San Diego
+     Supercomputing Center; Inventor of the multidimensional system of
+     Parallel Coordinates and author of textbook)
+   - Prof. H. J. Siegel (Abell Endowed Chair Distinguished Professor of ECE
+     and Professor of CS; Director, CSU Information Science and Technology
+     Center (ISTeC), Colorado State University, Colorado, USA)
+   - Prof. Amit Sheth (LexisNexis Eminent Scholar; Founder/Executive Director,
+     Ohio Center of Excellence in Knowledge-enabled Computing (Kno.e.sis))
+   - Dr. Leonid I. Perlovsky (Harvard University and CEO LP Information Tech)
+   - Dr. James A. Crowder (Chief Engineer, Raytheon Intelligence)
+   - Prof. Diego Galar (Director & Pro-Vice-Chancellor, Lulea University of
+     Technology, Sweden)
+   - Prof. Michael J. Flynn (Stanford U.; known for Flynn's taxonomy)
+   - and over 190 other distinguished speakers.
+
+
+INVITATION:
+
+   You are invited to submit a "LATE BREAKING PAPER", "POSITION PAPER", or
+   "ABSTRACT/POSTER PAPER" for consideration. All accepted papers will be
+   published in printed conference books/proceedings (with unique
+   international ISBN number) and will also be made available online. The
+   proceedings will be imprinted by the American Council on Science and
+   Education, and distributed/published by CSREA (Computer Science Research,
+   Education, and Applications Press). The books will be processed for
+   indexation in science databases, including EBSCO (www.ebsco.com), one
+   of the largest subject index systems, and all other EBSCO affiliated
+   science indexation databases. ACM Digital Library is also including the
+   titles into its databases as well as ProQuest indexing databases and
+   others. In addition, like prior years, extended versions of selected
+   papers (about 40%) of the conference will appear in journals and edited
+   research books; publishers include, Springer, Elsevier, BMC, and others.
+   Each book in each series will be subject to Elsevier and Springer
+   science indexing products (which includes: Scopus, www.info.scopus.com;
+   SCI Compendex, Engineering Village, www.ei.org; EMBASE, www.info.embase.com;
+   and others). See the web link below for a small subset of such
+   publications: (some of these books and journal special issues have
+   already received the top 25% downloads in their respective fields and/or
+   identified as "Highly Accessed" by publishers and/or science citation
+   index trackers.)
+
+   https://americancse.org/events/csce2019/books-journal-special-issues 
+   https://americancse.org/events/csce2019/publication 
+
+SUBMISSION OF PAPERS:
+
+   In response to this announcement, authors are given the opportunity to
+   submit their papers for evaluation in one of the following three paper
+   categories:
+
+   1. LATE BREAKING PAPERS: describe late-breaking/recent developments in
+      the field. The maximum number of pages is 7. Please write the
+      following on the first page of your submission "name of conference:
+      LATE BREAKING PAPER". If accepted, The length of the final/Camera-
+      Ready paper will be limited to 7 (two-column IEEE style) pages and
+      the author will be given the opportunity to present the paper in a
+      formal session.
+
+   2. POSITION PAPERS: enable discussions on emerging topics without the
+      experimentation normally present in an academic paper. Commonly,
+      such papers will substantiate the opinions or positions put forward
+      with evidence from an extensive objective discussion of the topic.
+      The maximum number of pages is 4. Please write the following on the
+      first page of your submission "name of conference: POSITION PAPER".
+      If accepted, The length of the final/Camera-Ready paper will be
+      limited to 4 (two-column IEEE style) pages and the author will be
+      given the opportunity to present the paper in a formal session.
+
+   3. ABSTRACT/POSTER PAPERS: describe research roadmaps (similar to PhD
+      plan or PhD prospectus). The maximum number of pages is 2. Please
+      write the following on the first page of your submission "name of
+      conference: ABSTRACT/POSTER PAPER". If accepted, The length of the
+      final/Camera-Ready paper will be limited to 2 (two-column IEEE
+      style) pages and the author will be given the opportunity to
+      present the paper in a discussion/poster session.
+
+   Prospective authors are invited to submit their papers by uploading
+   them to the evaluation web site at:  https://american-cse.org/ 
+   Submissions must be uploaded by the due date (see IMPORTANT DATES) and
+   must be in either MS doc or pdf formats. All reasonable typesetting
+   formats are acceptable. Later, the authors of accepted papers will be
+   asked to follow a particular typesetting format to prepare their final
+   papers for publication which conform to the two-column IEEE style
+   format - see:
+   https://www.ieee.org/conferences_events/conferences/publishing/templates.html 
+   The first page of the paper should include:
+
+   - Title of the paper
+   - Name, affiliation, postal address, and email address of each author
+     (identify the name of the Contact Author)
+   - Abstract (between 100 and 120 words)
+   - A maximum of 5 topical keywords that would best represent the work
+     described in the paper
+   - Write the type of the submission as "LATE BREAKING PAPERS",
+     "POSITION PAPERS", or "ABSTRACT/POSTER PAPERS".
+   - The actual text of the paper can start from the first page (space
+     permitting).
+   Submissions are to be uploaded to the submission/evaluation web site
+   portal at http://american-cse.org/ 
+
+   Each paper will be peer-reviewed by at least two experts in the field
+   for originality, significance, clarity, impact, and soundness.
+
+
+IMPORTANT DATES:
+
+   June 20, 2019:   Submission of papers: https://american-cse.org/ 
+                    - LATE BREAKING PAPERS (maximum of 7 pages);
+                    - POSITION PAPERS (maximum of 4 pages);
+                    - ABSTRACT/POSTER PAPERS (maximum of 2 pages)
+                    The sooner, a submission is received, the earlier,
+                    the status report (notification) will be sent out.
+
+   June 27, 2019:   Notification of acceptance (+/- two days)
+
+   July 07, 2019:   Registration due
+                    https://americancse.org/events/csce2019/registration 
+
+   July 20, 2019:   Final Camera-Ready paper due
+                    The final papers should be uploaded to the publication
+                    portal - the url of Publication Portal appears in the
+                    notification of acceptance that such authors will receive.
+
+   July 29 - August 1, 2019:
+                    The 15th International Conference on Frontiers in Education:
+                    Computer Science & Computer Engineering (FECS'19)
+                    https://americancse.org/events/csce2019/conferences/fecs19 
+                    Including affiliated federated/joint conferences
+                    https://www.americancse.org/events/csce2019 
+
+
+LOCATION:
+   Luxor in Las Vegas (renovated)
+   https://www.luxor.com/en/entertainment.html 
+
+CONTACT:
+   Questions and inquiries should be sent to:
+   CSCE'19 Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.
+

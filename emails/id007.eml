@@ -1,0 +1,682 @@
+Received: from BYAPR08MB6087.namprd08.prod.outlook.com (2603:10b6:408:c0::40)
+ by BN8PR08MB6196.namprd08.prod.outlook.com with HTTPS via
+ BN8PR15CA0027.NAMPRD15.PROD.OUTLOOK.COM; Tue, 29 Oct 2019 11:13:40 +0000
+Received: from SN6PR08CA0033.namprd08.prod.outlook.com (2603:10b6:805:66::46)
+ by BYAPR08MB6087.namprd08.prod.outlook.com (2603:10b6:a03:c4::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2387.20; Tue, 29 Oct
+ 2019 11:13:39 +0000
+Received: from CO1NAM04FT062.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::203) by SN6PR08CA0033.outlook.office365.com
+ (2603:10b6:805:66::46) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2387.23 via Frontend
+ Transport; Tue, 29 Oct 2019 11:13:38 +0000
+Authentication-Results: spf=pass (sender IP is 166.78.71.176)
+ smtp.mailfrom=mail03.mg7.newsleopard.com; calpoly.edu; dkim=pass (signature
+ was verified) header.d=mail03.mg7.newsleopard.com;calpoly.edu; dmarc=none
+ action=none header.from=isfas.org;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of
+ mail03.mg7.newsleopard.com designates 166.78.71.176 as permitted sender)
+ receiver=protection.outlook.com; client-ip=166.78.71.176;
+ helo=mail03.mg7.newsleopard.com;
+Received: from mail03.mg7.newsleopard.com (166.78.71.176) by
+ CO1NAM04FT062.mail.protection.outlook.com (10.152.91.165) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2387.20 via Frontend Transport; Tue, 29 Oct 2019 11:13:37 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mail03.mg7.newsleopard.com;
+ q=dns/txt; s=mailo; t=1572347618; h=Content-Type: Mime-Version:
+ Subject: From: To: Sender: List-Unsubscribe: Message-Id: Date;
+ bh=7XWTYwxssd2msRGN7uR7kCQqzexPZ1cL+YzM2BfDc5w=; b=KmFw9jeMSEZhQYP/NHahfvidkxvBiuPUkldjZ1X6httPvoaQW7VXWK1wlDIWcI9nZ++lczkH
+ INiDGa2dzs/zVpUkeb8HBhBHfGaS/OxF+WIb4/+gvW+9ncgg0buWfaq2napG/EnxyYmc0pye
+ RlSZqcxYNROqOH7JjmKercDQkwY=
+X-Mailgun-Sending-Ip: 166.78.71.176
+X-Mailgun-Sid: WyIzZDlmNSIsICJmb2FhZEBjYWxwb2x5LmVkdSIsICJhNTZjMDQiXQ==
+Received: by luna.mailgun.net with HTTP; Tue, 29 Oct 2019 11:13:34 +0000
+Date: Tue, 29 Oct 2019 11:13:34 +0000
+Message-Id: <20191029111334.1.95E5CA2F46A0810C@mail03.mg7.newsleopard.com>
+List-Unsubscribe: <https://app.newsleopard.com/assets/page/unsubscribe-page-en.html?e=unsubscribe&y1=0&y2=402823df6dfecd44016e11c7a29801f8&y3=f5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0&appHost=https://edm.mail03.mg7.newsleopard.com>
+Sender: Taipei Conference Alert <isfas@isfas.org>
+X-Mailgun-Dkim: true
+To: foaad <foaad@calpoly.edu>
+From: Taipei Conference Alert <isfas@isfas.org>
+Subject: =?utf-8?q?2020_AI_Conference_=EF=BD=9CHighlight_Speech_ft=2E_Sma?=
+ =?utf-8?q?rt_Healthcare_Leader?=
+Content-Type: multipart/alternative; boundary="025fc748ff7749b5ac06d68bbbb55974"
+Return-Path: bounce+d1a397.a56c04-foaad=calpoly.edu@mail03.mg7.newsleopard.com
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Oct 2019 11:13:38.6531
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ f9411916-8ef7-4609-0789-08d75c610c71
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:166.78.71.176;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BYAPR08MB6087;H:mail03.mg7.newsleopard.com;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT062.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: f9411916-8ef7-4609-0789-08d75c610c71
+X-MS-TrafficTypeDiagnostic: BYAPR08MB6087:
+X-MS-Exchange-PUrlCount: 14
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:4;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Oct 2019 11:13:37.7684
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: f9411916-8ef7-4609-0789-08d75c610c71
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB6087
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5252388
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2387.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944504077)(944702077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?MEdaOXhVb2NneXNOMHhERHBsY055RnRid0F1eDR4QnVNWTdUN2lHbHdqTVNx?=
+ =?utf-8?B?clRaWVZ0SStQVlV1MmJlazlTVWxmZTVjblhVTVNFaG5CNFUyQ3RHRzBsOXB1?=
+ =?utf-8?B?R3ZzYlIvNGNteU41dk1Dd1VnSE02aTZOZ3h6UldpUEllRG9kaGxMbHJLOHZH?=
+ =?utf-8?B?NUZEVTBrQWNKQXZ5ZmROWjh0aG5DSVNpZ2hSZDBTR0dSdWJ5YW41dUZUV1Y5?=
+ =?utf-8?B?b2NyUlV0NHdjVCs5TmtZZE5PMm5xZE9JcmNHV1NLNGhwQjlDcElKMkVQNWhY?=
+ =?utf-8?B?amZmdWhRWm1Gcy80Mjg4MzhERk9OaG5CK0tZL3JjYUxudHVuMWNmLzdRTzE4?=
+ =?utf-8?B?ZEwvUXlHQ1ZhcURyR0NOeENRN1Bic1k5bmlicHhPL1dFaVcyeGRxd0hMY0dq?=
+ =?utf-8?B?TGs0NjRPUlJzVDhFUXJFTFR1L05xNlowcXg3VEZvT0x6U0pocEJCeWFJK1Rz?=
+ =?utf-8?B?eFlBRitWdlBYUkNVRjd4TWQwMDRhY0FUeSt6NlJqa3hUZjBKTlc2ZXhrMVBU?=
+ =?utf-8?B?aUVCYStmQnJ1RDBWdjFGV1NXYUwyQ0JpYUdaQUVkNitGTGFBOVhoRm1DUUk2?=
+ =?utf-8?B?ZEI5ZVIrc2xGZERuM2kwenovbjRoWi9rTk9OZi9oZGRxWTQ4KzNMZldIemxJ?=
+ =?utf-8?B?THFYUjVCVXdHMXd0R0dsY1BsWHpiSy9zcm9JRm9aWFZhU1dDTkJmaE8vSmx2?=
+ =?utf-8?B?NnpPZWh3M0hJUXJrT3JMSHJBTW8vdlY0SEdMOGZUMnBoNWhFamdkYnRQa0lD?=
+ =?utf-8?B?Y1FoY25odVdNaWVUYVNrekU0bFA1b0lPaVEvR1VuK1d6dG5ZZXc2NG8rblc2?=
+ =?utf-8?B?Qmlobngxa3BVZEl6U0dDUHhoQTBRZUhyL0FINzBmQU9VWmxEazQ1d3lYa0RN?=
+ =?utf-8?B?U0VtcWR2Mk5Zd04rWkEyZU92cm9jRERueEx2Um8xNEtxUk9yODNKOXo2dzE4?=
+ =?utf-8?B?TmlkU1Q0bmxSb0ZNeWgyOG5iMFdIYlVJVkpoL0R1WE02aE44NXc3ZFhPTjho?=
+ =?utf-8?B?K3R4WldwSEJqazRpclFTYTZqOGQ0Um9lUENvMTVzRFpJWE4waVpXY29idGhv?=
+ =?utf-8?B?KytRbkI0by9PTzdZVkpCUGRMbU9WT216dUQwTXNVOC9mZWtPelB6T0pONzJU?=
+ =?utf-8?B?b3lHRHl2VDAwNjJTcGN1akdSS1RkNHlKVWhQM1JmbTNtREo0TXh0cmg3OXFw?=
+ =?utf-8?B?N2IyRjJPOEtxVVVPOGUzdXRVeVoyYURiWGVwejJTVnRoMHpxT1cyWldrdTZT?=
+ =?utf-8?B?bWVNNWl6VlpxNVJsTGh2dWdicnZHaDNIYzBMS3ZLWEF0RW1CRmxnbVBtMWg2?=
+ =?utf-8?B?QnNaVmJ0Zkw2TEtLOVl6VzRYRkdTaEtWek1EaitxWDNqUDNBZVN2azQxTmNy?=
+ =?utf-8?B?OGliQkp4QjR0QllNWHdEd3E0Q0FmZGNSMjVGbC9yajhpbGlaZmx1TTZOd21H?=
+ =?utf-8?B?dUtlRVZ3MmJiMVZCNXA0NnVvbXBPaDJOdWRoVUV6dlhFc05NZWM5bk1PYnUr?=
+ =?utf-8?B?WVRCc2hFQzkycWFSeTVGakRFQ1dMRjVnWncyWE1Xa1Q1OEdxNjhUMHE4SlNF?=
+ =?utf-8?B?d0F3WERoT2ZXaTd2emlpeTRLWXZvNVJuS2lnNm1lOEdZOVl3YjBpOTNId2cx?=
+ =?utf-8?B?Y2s0TEMvRFB4SlNlaFV6M3I0S1Z3YkVCWk4xMWhxNXpXdnF3dXRhNXJYRW9h?=
+ =?utf-8?B?WDNaMmtNZFN3RWJoZUk5Y3BLYW9uN0pvM2VvbVR4Y1VaR0pxc2Z0Ynp0R2pq?=
+ =?utf-8?B?WXYxRGNhUmFDOHFxUzFNdHFoc3UrZmtJeG5aQkZDbmxFWnppcjJCamtBTHd0?=
+ =?utf-8?B?Nkt1RlJuS1lja2QxdFNpelFDNmg1YjhFTkY5MnNXNG44cTdPNlJhbzVwUUpl?=
+ =?utf-8?B?U2RQWm1MN2tISmZhRFZqRW5oSGtmTHRpMm96Sk5XeVJLbkt1eGovR2doTUUx?=
+ =?utf-8?B?NWxaa1ozay9jSXF6VkhXcWI1K2Z0NTkzQ2hqS2l1UEM4VmgwUjErWDlQcit2?=
+ =?utf-8?Q?6GwNNdsUn6H2ufNCTGnYKQncP8jXpk=3D?=
+MIME-Version: 1.0
+
+--025fc748ff7749b5ac06d68bbbb55974
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+2020 AI Conference =EF=BD=9CHighlight Speech ft. Smart Healthcare Leader* {=
+ text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust:=
+ 100%; -webkit-text-size-adjust: 100%; }
+    html { height: 100%; width: 100%; }
+
+    body { height: 100% !important; margin: 0 !important; padding: 0 !impor=
+tant; width: 100% !important; mso-line-height-rule: exactly; }
+    div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; }
+  @media only screen and (max-width:600px) {
+      .row, .row__row { display: block; }
+      .row__column, .column-filler { display: block; box-sizing: border-box=
+; float: left; }
+      .col-50 { display: block; width: 100% !important; padding-left: 0 !im=
+portant; padding-right: 0 !important; }
+      .mobile-bottom-m { margin-bottom: 40px; }
+      .cBlock--spacingLR { padding-left: 16px !important; padding-right: 16=
+px !important; }
+      .img_block { width: 100% !important; }
+    }
+  2020 AI & INNOVANow Calling for Papers!Artificial Intelligence is based o=
+n the research of fundamental and applied sciences. Through the evolution o=
+f information and engineering, it has gradually penetrated and changed not =
+only our lives but our work style, which has resulted in bringing new exper=
+iences and convenience. And yet we=E2=80=99re facing with an unprecedented =
+challenge and a crisis of privacy.=C2=A0An agenda, such diversified and int=
+erdisciplinary, ACEAI and the 8th ISFAS are honored to release the call und=
+er the theme =E2=80=9CEngineering and Information=E2=80=9D and =E2=80=9CFun=
+damental & Applied Sciences=E2=80=9D. We bring together interested parties =
+from academia, consultancy and the public and private sectors in the beauti=
+ful city of Taipei.Highlight SpeechJohnson HuangSmart HealthcareFounder and=
+ General Manager of AdvMedsJohnson Huang is a serial entrepreneur who has w=
+on many awards of entrepreneurial competitions. With years of experience in=
+ the development and promotion of medical systems, he has participated in t=
+he national electronic medical record program, served as an IT consultant f=
+or hospitals and NGOs, and has been developing AIDS electronic information =
+systems in Africa for several years.Topics=E2=97=8F Artificial Intelligence=
+=E2=97=8F 5G=E2=97=8F Blockchain=E2=97=8F Internet of Things=E2=97=8F Engin=
+eering=E2=97=8F Information=E2=97=8F=C2=A0Fundamental Sciences=E2=97=8F App=
+lied SciencesSubmit NowMark your Calendar=E2=97=8F Submission Deadline: Feb=
+ruary 05, 2020=E2=97=8F Notification of Acceptance: From February 19, 2020=
+=E2=97=8F Registration Deadline: March 30, 2020=E2=97=8F Conference Date =
+=E2=80=93 June 01 -=C2=A004, 2020Contact & InquiriesACEAI
+        For more questions of Engineering and Information, please contactac=
+eai@aceai.orgISFAS
+        For more questions of Fundamental and Applied Scinces, please conta=
+ctisfas@isfas.org =20
+
+    You are currently subscribed to our list with the following address: fo=
+aad@calpoly.edu. If you no longer want to receive our emails, you can click=
+ unsubscribe.
+ =20
+ =20
+
+
+
+
+      Email delivery powered by =E9=9B=BB=E5=AD=90=E8=B1=B9 NewsLeopard.
+   =20
+
+
+
+
+--025fc748ff7749b5ac06d68bbbb55974
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>2020 AI Conference =EF=BD=9CHighlight Speech ft. Smart Healthcare Lead=
+er</title><meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=
+=3D"viewport"><meta name=3D"x-apple-disable-message-reformatting"><!--[if !=
+mso]><!--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<!=
+[endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o=
+:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endi=
+f]--><style>* { text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-te=
+xt-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    html { height: 100%; width: 100%; }
+
+    body { height: 100% !important; margin: 0 !important; padding: 0 !impor=
+tant; width: 100% !important; mso-line-height-rule: exactly; }
+    div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; }
+  </style><!--[if gte mso 9]><style type=3D"text/css">li { text-indent: -1e=
+m; }
+    table td { border-collapse: collapse; }
+  </style><![endif]--><style>@media only screen and (max-width:600px) {
+      .row, .row__row { display: block; }
+      .row__column, .column-filler { display: block; box-sizing: border-box=
+; float: left; }
+      .col-50 { display: block; width: 100% !important; padding-left: 0 !im=
+portant; padding-right: 0 !important; }
+      .mobile-bottom-m { margin-bottom: 40px; }
+      .cBlock--spacingLR { padding-left: 16px !important; padding-right: 16=
+px !important; }
+      .img_block { width: 100% !important; }
+    }
+  </style></head><body class=3D"body cLayout--bgColor" style=3D"background-=
+color: #f5f5f5; margin: 0; width: 100%;"><table align=3D"center" width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"center" width=3D"100%" style=3D"padding-left:10px;padding-right:10px;pa=
+dding-top:50px;padding-bottom:50px" bgcolor=3D"#f5f5f5"><!--[if !mso]><!---=
+-><div style=3D"margin:0 auto;width:100%;max-width:640px;border:"><!-- <![e=
+ndif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin=
+:0 auto;width:100%;max-width:640px;border:"><tr><td><![endif]--><table bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%=
+"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]=
+><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![end=
+if]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0=
+ auto;width:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D=
+"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-l=
+eft:32px;padding-right:32px;padding-top:24px;padding-bottom:12px"><table al=
+ign=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0"><tbody><tr><td align=3D"center" valign=3D"top" width=3D"100%" style=3D"=
+padding-top:0px;padding-bottom:0px"><a href=3D"https://edm.mail03.mg7.newsl=
+eopard.com/t/c?l=3D402823df6dfecd44016e11c7a29801f8&amp;s=3D0&amp;y1=3D0&am=
+p;y2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d0020c6d=
+d1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"padding:=
+0px;text-decoration:none;display:inline-block"><img border=3D"0" width=3D"5=
+76" src=3D"https://s3.amazonaws.com/prod-newsleopard-upload-img/40283a666ae=
+37d89016af889e284020a/2019-10-28-08-32-05-aceaiisfasbannver.png" style=3D"d=
+isplay:block;max-width:100%"></a></td></tr></tbody></table></td></tr></tbod=
+y></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!-=
+---></div><!-- <![endif]--></td></tr></tbody></table><table border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><t=
+r><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><di=
+v style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![endif]--><!--[=
+if mso | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;width=
+:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" va=
+lign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;=
+padding-right:32px;padding-top:2px;padding-bottom:13px"><table width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D=
+"center"><h1 style=3D"color:#004e89;font-size:28px;font-weight:normal;font-=
+family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Micro=
+soft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;padding:0;margin=
+:0;line-height:1.4;text-decoration:none;display:inline-block"><a href=3D"ht=
+tps://edm.mail03.mg7.newsleopard.com/t/c?l=3D402823df6dfecd44016e11c7a29801=
+f8&amp;s=3D1&amp;y1=3D0&amp;y2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3D=
+f5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D=
+"_blank" style=3D"padding:0px;text-decoration:none;display:inline-block"><s=
+pan class=3D"a__text" style=3D"color:#004e89;text-decoration:none;font-fami=
+ly:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft=
+ JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif">2020 AI &amp; INNOV=
+A</span></a></h1></td></tr></tbody></table></td></tr></tbody></table><!--[i=
+f mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <=
+![endif]--></td></tr></tbody></table><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"l=
+eft" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margi=
+n:0 auto;width:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><ta=
+ble role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td>=
+<![endif]--><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=
+=3D"100%" bgcolor=3D"#e5e5e5" style=3D"padding-left:32px;padding-right:32px=
+;padding-top:10px;padding-bottom:16px"><table width=3D"100%" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><h1 styl=
+e=3D"color:#004e89;font-size:25px;font-weight:bold;font-family:'PingFang TC=
+','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Hel=
+vetica Neue',Helvetica,Arial,sans-serif;padding:0;margin:0;line-height:1.4;=
+text-decoration:none;display:inline-block"><a href=3D"https://edm.mail03.mg=
+7.newsleopard.com/t/c?l=3D402823df6dfecd44016e11c7a29801f8&amp;s=3D2&amp;y1=
+=3D0&amp;y2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d=
+0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"p=
+adding:0px;text-decoration:none;display:inline-block"><span class=3D"a__tex=
+t" style=3D"color:#004e89;text-decoration:none;font-family:'PingFang TC','=
+=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvet=
+ica Neue',Helvetica,Arial,sans-serif">Now Calling for Papers!</span></a></h=
+1></td></tr></tbody></table></td></tr></tbody></table><!--[if mso | IE]></t=
+d></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td=
+></tr></tbody></table><table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"=
+top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:=
+100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table role=3D"pre=
+sentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center=
+" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--><ta=
+ble align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcol=
+or=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padding-top:10=
+px;padding-bottom:12px"><table align=3D"center" width=3D"100%" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top" width=3D=
+"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=
+=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans=
+-serif;font-size:16px;font-weight:normal;color:#666666;line-height:1.5;marg=
+in:0"><div>Artificial Intelligence is based on the research of fundamental =
+and applied sciences. Through the evolution of information and engineering,=
+ it has gradually penetrated and changed not only our lives but our work st=
+yle, which has resulted in bringing new experiences and convenience. And ye=
+t we=E2=80=99re facing with an unprecedented challenge and a crisis of priv=
+acy.</div><div>&nbsp;</div><div>An agenda, such diversified and interdiscip=
+linary, ACEAI and the 8th ISFAS are honored to release the call under the t=
+heme =E2=80=9C<strong>Engineering and Information</strong>=E2=80=9D and =E2=
+=80=9C<strong>Fundamental &amp; Applied Sciences</strong>=E2=80=9D. We brin=
+g together interested parties from academia, consultancy and the public and=
+ private sectors in the beautiful city of Taipei.</div></td></tr></tbody></=
+table></td></tr></tbody></table><!--[if mso | IE]></td></tr></table><![endi=
+f]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></table>=
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" wi=
+dth=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!=
+--[if !mso]><!----><div style=3D"margin:0 auto;width:100%;max-width:640px">=
+<!-- <![endif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=
+=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table align=3D"center" =
+width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>=
+<td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"e5e5e5" style=
+=3D"padding-left:32px;padding-right:32px;padding-top:8px;padding-bottom:13p=
+x"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><=
+tbody><tr><td align=3D"center"><h1 style=3D"color:#333333;font-size:20px;fo=
+nt-weight:normal;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=
+=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans=
+-serif;padding:0;margin:0;line-height:1.4;text-decoration:none;display:inli=
+ne-block"><a href=3D"https://edm.mail03.mg7.newsleopard.com/t/c?l=3D402823d=
+f6dfecd44016e11c7a29801f8&amp;s=3D3&amp;y1=3D0&amp;y2=3D402823df6dfecd44016=
+e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5=
+db0f4b8748b0" target=3D"_blank" style=3D"padding:0px;text-decoration:none;d=
+isplay:inline-block"><span class=3D"a__text" style=3D"color:#333333;text-de=
+coration:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=
+=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-se=
+rif">Highlight Speech</span></a></h1></td></tr></tbody></table></td></tr></=
+tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]=
+><!----></div><!-- <![endif]--></td></tr></tbody></table><table border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbod=
+y><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----=
+><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![endif]--><=
+!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;w=
+idth:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" =
+valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32p=
+x;padding-right:32px;padding-top:24px;padding-bottom:24px"><table class=3D"=
+row" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" role=
+=3D"presentation" align=3D"center" style=3D"table-layout:fixed"><tbody><tr =
+class=3D"row__row"><td class=3D"row__column col-50 mobile-bottom-m" align=
+=3D"left" valign=3D"top" width=3D"50" style=3D"width:50%;padding-left:0px;p=
+adding-right:16px"><table align=3D"center" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" valign=3D"t=
+op" width=3D"100%" style=3D"padding-top:0px;padding-bottom:0px"><a href=3D"=
+https://edm.mail03.mg7.newsleopard.com/t/c?l=3D402823df6dfecd44016e11c7a298=
+01f8&amp;s=3D4&amp;y1=3D0&amp;y2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=
+=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=
+=3D"_blank" style=3D"padding:0px;text-decoration:none;display:inline-block"=
+><img border=3D"0" width=3D"272" src=3D"https://s3.amazonaws.com/prod-newsl=
+eopard-upload-img/40283a666ae37d89016af889e284020a/2019-10-28-08-42-40-keyn=
+ote&#43;speech2pic.jpg" style=3D"display:block;max-width:100%"></a></td></t=
+r></tbody></table></td><td class=3D"row__column col-50" align=3D"left" vali=
+gn=3D"top" width=3D"50" style=3D"width:50%;padding-left:16px;padding-right:=
+0px"><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tbody><tr><td valign=3D"top" width=3D"100%" style=3D"fon=
+t-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Mic=
+rosoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px=
+;font-weight:normal;color:#666666;line-height:1.5;margin:0;padding-bottom:2=
+4px"><div><br></div><div><br></div><div><br></div><div><strong style=3D"col=
+or: rgb(23, 55, 94);">Johnson Huang</strong></div><div><br></div><div>Smart=
+ Healthcare</div><div>Founder and General Manager of AdvMeds</div></td></tr=
+></tbody></table></td></tr></tbody></table></td></tr></tbody></table><!--[i=
+f mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <=
+![endif]--></td></tr></tbody></table><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"l=
+eft" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margi=
+n:0 auto;width:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><ta=
+ble role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td>=
+<![endif]--><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=
+=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px=
+;padding-top:1px;padding-bottom:24px"><table align=3D"center" width=3D"100%=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D=
+"top" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=
+=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetic=
+a,Arial,sans-serif;font-size:16px;font-weight:normal;color:#666666;line-hei=
+ght:1.5;margin:0"><div>Johnson Huang is a serial entrepreneur who has won m=
+any awards of entrepreneurial competitions. With years of experience in the=
+ development and promotion of medical systems, he has participated in the n=
+ational electronic medical record program, served as an IT consultant for h=
+ospitals and NGOs, and has been developing AIDS electronic information syst=
+ems in Africa for several years.</div></td></tr></tbody></table></td></tr><=
+/tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso=
+]><!----></div><!-- <![endif]--></td></tr></tbody></table><table border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbo=
+dy><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!---=
+-><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![endif]-->=
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;=
+width:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100%" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left"=
+ valign=3D"top" width=3D"100%" bgcolor=3D"e5e5e5" style=3D"padding-left:32p=
+x;padding-right:32px;padding-top:7px;padding-bottom:10px"><table width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"center"><h1 style=3D"color:#333333;font-size:22px;font-weight:normal;fo=
+nt-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Mi=
+crosoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;padding:0;mar=
+gin:0;line-height:1.4;text-decoration:none;display:inline-block"><a href=3D=
+"https://edm.mail03.mg7.newsleopard.com/t/c?l=3D402823df6dfecd44016e11c7a29=
+801f8&amp;s=3D5&amp;y1=3D0&amp;y2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=
+=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=
+=3D"_blank" style=3D"padding:0px;text-decoration:none;display:inline-block"=
+><span class=3D"a__text" style=3D"color:#333333;text-decoration:none;font-f=
+amily:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Micros=
+oft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif">Topics</span></a=
+></h1></td></tr></tbody></table></td></tr></tbody></table><!--[if mso | IE]=
+></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]-->=
+</td></tr></tbody></table><table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" valign=
+=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;wi=
+dth:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table role=3D=
+"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"ce=
+nter" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--=
+><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%" b=
+gcolor=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padding-to=
+p:24px;padding-bottom:11px"><table class=3D"row" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" role=3D"presentation" align=3D"cent=
+er" style=3D"table-layout:fixed"><tbody><tr class=3D"row__row"><td class=3D=
+"row__column col-50 mobile-bottom-m" align=3D"left" valign=3D"top" width=3D=
+"50" style=3D"width:50%;padding-left:0px;padding-right:16px"><table align=
+=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+><tbody><tr><td align=3D"center" valign=3D"top" width=3D"100%" style=3D"pad=
+ding-top:0px;padding-bottom:0px"><a href=3D"https://edm.mail03.mg7.newsleop=
+ard.com/t/c?l=3D402823df6dfecd44016e11c7a29801f8&amp;s=3D6&amp;y1=3D0&amp;y=
+2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d0020c6dd1d=
+e932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"padding:0px=
+;text-decoration:none;display:inline-block"><img border=3D"0" width=3D"272"=
+ src=3D"https://s3.amazonaws.com/prod-newsleopard-upload-img/40283a666ae37d=
+89016af889e284020a/2019-10-28-09-06-11-hot_robot-1920x1200.jpg" style=3D"di=
+splay:block;max-width:100%"></a></td></tr></tbody></table></td><td class=3D=
+"row__column col-50" align=3D"left" valign=3D"top" width=3D"50" style=3D"wi=
+dth:50%;padding-left:16px;padding-right:0px"><table align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td v=
+align=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=
+=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue'=
+,Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;color:#666666=
+;line-height:1.5;margin:0;padding-bottom:24px"><div>=E2=97=8F Artificial In=
+telligence</div><div>=E2=97=8F 5G</div><div>=E2=97=8F Blockchain</div><div>=
+=E2=97=8F Internet of Things</div><div>=E2=97=8F Engineering</div><div>=E2=
+=97=8F Information</div><div>=E2=97=8F&nbsp;Fundamental Sciences</div><div>=
+=E2=97=8F Applied Sciences</div></td></tr></tbody></table></td></tr></tbody=
+></table></td></tr></tbody></table><!--[if mso | IE]></td></tr></table><![e=
+ndif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></tab=
+le><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"=
+ width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"=
+><!--[if !mso]><!----><div style=3D"margin:0 auto;width:100%;max-width:640p=
+x"><!-- <![endif]--><!--[if mso | IE]><table role=3D"presentation" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table align=3D"cent=
+er" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody>=
+<tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" st=
+yle=3D"padding-left:32px;padding-right:32px;padding-top:0px;padding-bottom:=
+24px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td align=3D"center"><table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0"><tbody><tr><!--[if mso | IE]><td align=3D"center"  style=3D"=
+border:2px solid #fca311;color:#fca311;padding-top:8px;padding-bottom:8px;p=
+adding-left:60px;padding-right:60px"><![endif]--><!--[if !mso]><!----><td a=
+lign=3D"center" style=3D"border-radius:4px;border:2px solid #fca311"><!-- <=
+![endif]--><a class=3D"dnd-button" href=3D"https://edm.mail03.mg7.newsleopa=
+rd.com/t/c?l=3D402823df6dfecd44016e11c7a29801f8&amp;s=3D7&amp;y1=3D0&amp;y2=
+=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de=
+932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"color:#fca31=
+1;border-radius:4px;display:inline-block;text-decoration:none;font-size:16p=
+x;font-weight:bold;letter-spacing:1px;padding-top:8px;padding-bottom:8px;pa=
+dding-left:60px;padding-right:60px"><span class=3D"a__text" style=3D"color:=
+#fca311;text-decoration:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=
+=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetic=
+a,Arial,sans-serif">Submit Now</span></a></td></tr></tbody></table></td></t=
+r></tbody></table></td></tr></tbody></table><!--[if mso | IE]></td></tr></t=
+able><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tb=
+ody></table><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" wid=
+th=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:100%;max=
+-width:640px"><!-- <![endif]--><!--[if mso | IE]><table role=3D"presentatio=
+n" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=
+=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table ali=
+gn=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"e=
+5e5e5" style=3D"padding-left:32px;padding-right:32px;padding-top:8px;paddin=
+g-bottom:11px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0"><tbody><tr><td align=3D"center"><h1 style=3D"color:#333333;font-=
+size:20px;font-weight:normal;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=
+=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetic=
+a,Arial,sans-serif;padding:0;margin:0;line-height:1.4;text-decoration:none;=
+display:inline-block"><a href=3D"https://edm.mail03.mg7.newsleopard.com/t/c=
+?l=3D402823df6dfecd44016e11c7a29801f8&amp;s=3D8&amp;y1=3D0&amp;y2=3D402823d=
+f6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad7=
+8da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"padding:0px;text-decor=
+ation:none;display:inline-block"><span class=3D"a__text" style=3D"color:#33=
+3333;text-decoration:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=
+=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,A=
+rial,sans-serif">Mark your Calendar</span></a></h1></td></tr></tbody></tabl=
+e></td></tr></tbody></table><!--[if mso | IE]></td></tr></table><![endif]--=
+><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></table><tab=
+le border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=
+=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[=
+if !mso]><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-=
+- <![endif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"=
+margin:0 auto;width:640px"><tr><td><![endif]--><table align=3D"center" widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td =
+align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"p=
+adding-left:32px;padding-right:32px;padding-top:15px;padding-bottom:0px"><t=
+able align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0"><tbody><tr><td valign=3D"top" width=3D"100%" style=3D"font-famil=
+y:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft =
+JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-w=
+eight:normal;color:#666666;line-height:1.5;margin:0"><div>=E2=97=8F Submiss=
+ion Deadline: <strong>February 05, 2020</strong></div><div>=E2=97=8F Notifi=
+cation of Acceptance: From February 19, 2020</div><div>=E2=97=8F Registrati=
+on Deadline: March 30, 2020</div><div>=E2=97=8F Conference Date =E2=80=93 J=
+une 01 -&nbsp;04, 2020</div></td></tr></tbody></table></td></tr></tbody></t=
+able><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!----><=
+/div><!-- <![endif]--></td></tr></tbody></table><table border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td=
+ align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div sty=
+le=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![endif]--><!--[if ms=
+o | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640p=
+x"><tr><td><![endif]--><table align=3D"center" width=3D"100%" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D=
+"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padding=
+-right:32px;padding-top:5px;padding-bottom:11px"><table border=3D"0" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"wid=
+th:100%;padding:0"><tbody><tr><td align=3D"center" valign=3D"top" width=3D"=
+100%" height=3D"1" bgcolor=3D"#dddddd" style=3D"line-height:0;min-height:0"=
+><img style=3D"display:block" border=3D"0" width=3D"1" height=3D"1" src=3D"=
+https://s3.amazonaws.com/prod-newsleopard-upload-img/40286ac0673dc98b01673e=
+753a880000/2019-05-23-08-02-04-one-pixcel-transparent.png"></td></tr></tbod=
+y></table></td></tr></tbody></table><!--[if mso | IE]></td></tr></table><![=
+endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></ta=
+ble><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center=
+" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%=
+"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:100%;max-width:640=
+px"><!-- <![endif]--><!--[if mso | IE]><table role=3D"presentation" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table align=3D"cent=
+er" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody>=
+<tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" st=
+yle=3D"padding-left:32px;padding-right:32px;padding-top:5px;padding-bottom:=
+0px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+><tbody><tr><td align=3D"center"><h1 style=3D"color:#333333;font-size:18px;=
+font-weight:normal;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=
+=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,s=
+ans-serif;padding:0;margin:0;line-height:1.4;text-decoration:none;display:i=
+nline-block"><a href=3D"https://edm.mail03.mg7.newsleopard.com/t/c?l=3D4028=
+23df6dfecd44016e11c7a29801f8&amp;s=3D9&amp;y1=3D0&amp;y2=3D402823df6dfecd44=
+016e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad16=
+3d5db0f4b8748b0" target=3D"_blank" style=3D"padding:0px;text-decoration:non=
+e;display:inline-block"><span class=3D"a__text" style=3D"color:#333333;text=
+-decoration:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=
+=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans=
+-serif">Contact &amp; Inquiries</span></a></h1></td></tr></tbody></table></=
+td></tr></tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><!-=
+-[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></table><table b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"1=
+00%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !m=
+so]><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![=
+endif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margi=
+n:0 auto;width:640px"><tr><td><![endif]--><table align=3D"center" width=3D"=
+100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff" style=3D"paddin=
+g-left:32px;padding-right:32px;padding-top:24px;padding-bottom:24px"><table=
+ class=3D"row" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"10=
+0%" role=3D"presentation" align=3D"center" style=3D"table-layout:fixed"><tb=
+ody><tr class=3D"row__row"><td class=3D"row__column col-50 mobile-bottom-m"=
+ align=3D"left" valign=3D"top" width=3D"50" style=3D"width:50%;padding-left=
+:0px;padding-right:16px"><table align=3D"center" width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=
+=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=
+=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helve=
+tica,Arial,sans-serif;font-size:14px;font-weight:normal;color:#f39733;line-=
+height:1.4;margin:0;letter-spacing:1px;padding-top:4px;padding-bottom:8px">=
+ACEAI
+        </td></tr></tbody></table><table align=3D"center" width=3D"100%" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top=
+" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=
+=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,A=
+rial,sans-serif;font-size:16px;font-weight:normal;color:#666666;line-height=
+:1.5;margin:0;padding-bottom:24px"><div>For more questions of Engineering a=
+nd Information, please contact<a href=3D"https://edm.mail03.mg7.newsleopard=
+.com/t/c?l=3D402823df6dfecd44016e11c7a29801f8&amp;s=3D10&amp;y1=3D0&amp;y2=
+=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de=
+932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"color: rgb(2=
+7, 166, 225); text-decoration: none; display: inline-block;"><span class=3D=
+"a__text" style=3D"text-decoration: none; font-family: 'PingFang TC', '=E5=
+=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94', 'Microsoft JhengHei', 'Helveti=
+ca Neue', Helvetica, Arial, sans-serif;">aceai@aceai.org</span></a></div></=
+td></tr></tbody></table></td><td class=3D"row__column col-50" align=3D"left=
+" valign=3D"top" width=3D"50" style=3D"width:50%;padding-left:16px;padding-=
+right:0px"><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=
+=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=
+=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,s=
+ans-serif;font-size:14px;font-weight:normal;color:#f39733;line-height:1.4;m=
+argin:0;letter-spacing:1px;padding-top:4px;padding-bottom:8px">ISFAS
+        </td></tr></tbody></table><table align=3D"center" width=3D"100%" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top=
+" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=
+=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,A=
+rial,sans-serif;font-size:16px;font-weight:normal;color:#666666;line-height=
+:1.5;margin:0;padding-bottom:24px"><div>For more questions of Fundamental a=
+nd Applied Scinces, please contact<a href=3D"https://edm.mail03.mg7.newsleo=
+pard.com/t/c?l=3D402823df6dfecd44016e11c7a29801f8&amp;s=3D11&amp;y1=3D0&amp=
+;y2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d456d7531d0020c6dd=
+1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"color: rg=
+b(27, 166, 225); text-decoration: none; display: inline-block;"><span class=
+=3D"a__text" style=3D"text-decoration: none; font-family: 'PingFang TC', '=
+=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94', 'Microsoft JhengHei', 'Helv=
+etica Neue', Helvetica, Arial, sans-serif;">isfas@isfas.org</span></a></div=
+></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></ta=
+ble><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!----></=
+div><!-- <![endif]--></td></tr></tbody></table><!--[if mso | IE]></td></tr>=
+</table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr><=
+/tbody></table><table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%"> <tbody> <tr>
+  <td align=3D"center" style=3D"font-size: 13px;font-size:13px;font-family:=
+ 'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft J=
+hengHei','Helvetica Neue',Helvetica,Arial,sans-serif;color:#666;border-top:=
+1px solid #ddd;padding-top:16px;text-align:center;line-height:1.5" valign=
+=3D"middle" width=3D"100%">
+    You are currently subscribed to our list with the following address: <s=
+pan style=3D"color: #666;font-weight: bold">foaad@calpoly.edu</span>. If yo=
+u no longer want to receive our emails, you can click <a href=3D"/" style=
+=3D"color: #3f7dbd;text-decoration:none;display: inline-block;"><span class=
+=3D"a__text" style=3D"text-decoration: none;color: #3f7dbd;"><a href=3D"htt=
+ps://app.newsleopard.com/assets/page/unsubscribe-page-en.html?e=3Dunsubscri=
+be&amp;y1=3D0&amp;y2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d=
+456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0&amp;appHost=3Dhttps:=
+//edm.mail03.mg7.newsleopard.com">unsubscribe</a></span></a>.
+  </td>
+</tr> </tbody> </table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%">
+  <tbody>
+  <tr>
+    <td align=3D"center" style=3D"font-size: 13px;font-size:13px;font-famil=
+y: 'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft=
+ JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;color:#666;padding-t=
+op:4px;padding-bottom:24px;text-align:center;line-height:1.5" valign=3D"mid=
+dle" width=3D"100%">
+      Email delivery powered by <a href=3D"https://newsleopard.com/?utm_sou=
+rce=3Dedm&amp;utm_medium=3Demail&amp;utm_campaign=3Dfooter&amp;utm_content=
+=3Dpowerby" style=3D"color: #3f7dbd;text-decoration:none;"><span class=3D"a=
+__text" style=3D"text-decoration: none;color: #3f7dbd;">=E9=9B=BB=E5=AD=90=
+=E8=B1=B9 NewsLeopard</span></a>.
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body></html><img src=3D"https://edm.mail03.mg7.newsleopard.com/t/s?e=3Dop=
+en&amp;y1=3D0&amp;y2=3D402823df6dfecd44016e11c7a29801f8&amp;y3=3Df5dca31e4d=
+456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" alt=3D"">=
+
+--025fc748ff7749b5ac06d68bbbb55974--

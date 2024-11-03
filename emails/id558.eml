@@ -1,0 +1,598 @@
+Received: from MWHPR08MB3390.namprd08.prod.outlook.com (2603:10b6:a02:80::35)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR01CA0022.PROD.EXCHANGELABS.COM; Tue, 22 Oct 2019 10:43:19 +0000
+Received: from MWHPR08CA0057.namprd08.prod.outlook.com (2603:10b6:300:c0::31)
+ by MWHPR08MB3390.namprd08.prod.outlook.com (2603:10b6:301:65::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.17; Tue, 22 Oct
+ 2019 10:43:16 +0000
+Received: from CO1NAM04FT009.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4d::200) by MWHPR08CA0057.outlook.office365.com
+ (2603:10b6:300:c0::31) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2367.21 via Frontend
+ Transport; Tue, 22 Oct 2019 10:43:16 +0000
+Authentication-Results: spf=pass (sender IP is 166.78.71.176)
+ smtp.mailfrom=mail03.mg7.newsleopard.com; calpoly.edu; dkim=pass (signature
+ was verified) header.d=mail03.mg7.newsleopard.com;calpoly.edu; dmarc=none
+ action=none header.from=iseas.org;compauth=none reason=404
+Received-SPF: Pass (protection.outlook.com: domain of
+ mail03.mg7.newsleopard.com designates 166.78.71.176 as permitted sender)
+ receiver=protection.outlook.com; client-ip=166.78.71.176;
+ helo=mail03.mg7.newsleopard.com;
+Received: from mail03.mg7.newsleopard.com (166.78.71.176) by
+ CO1NAM04FT009.mail.protection.outlook.com (10.152.90.137) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2367.16 via Frontend Transport; Tue, 22 Oct 2019 10:43:16 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mail03.mg7.newsleopard.com;
+ q=dns/txt; s=mailo; t=1571740996; h=Content-Type: Mime-Version:
+ Subject: From: To: Sender: List-Unsubscribe: Message-Id: Date;
+ bh=zs3wR7fSdqzZWJfwUIVRbKkoF2JJ+hx0+IIT8obnqNE=; b=MJDVcRNDustaf+xTDIG2yazt1SepNXXDHTAOBAUiLXnTWCKv02Tymq4+JGUMYdx6AVmsss82
+ GEpHYCjah5Qp3PD/9j2zdDeG177oImR/oNBQ1GMspwj6H3KXILkl4DQIyj4ajws5Wb6M7yWY
+ ZTCFck/kehFlxl0ctoeUxEBgjNQ=
+X-Mailgun-Sending-Ip: 166.78.71.176
+X-Mailgun-Sid: WyIzZDlmNSIsICJmb2FhZEBjYWxwb2x5LmVkdSIsICJhNTZjMDQiXQ==
+Received: by luna.mailgun.net with HTTP; Tue, 22 Oct 2019 10:43:15 +0000
+Date: Tue, 22 Oct 2019 10:43:15 +0000
+Message-Id: <20191022104315.1.29B615E727C40FCC@mail03.mg7.newsleopard.com>
+List-Unsubscribe: <https://app.newsleopard.com/assets/page/unsubscribe-page-en.html?e=unsubscribe&y1=0&y2=4028c2306ddde9e7016df2a3ad850276&y3=f5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0&appHost=https://edm.mail03.mg7.newsleopard.com>
+Sender: Okinawa Conference <iseas@iseas.org>
+X-Mailgun-Dkim: true
+To: foaad <foaad@calpoly.edu>
+From: Okinawa Conference <iseas@iseas.org>
+Subject: Welcome to Okinawa in June 2020
+Content-Type: multipart/alternative; boundary="63b86b01f51f40c2a3bb62598fcc145d"
+Return-Path: bounce+d1a397.a56c04-foaad=calpoly.edu@mail03.mg7.newsleopard.com
+X-MS-Exchange-Organization-ExpirationStartTime: 22 Oct 2019 10:43:16.5159
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 40a734b6-386b-427f-b4b2-08d756dca578
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:166.78.71.176;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:MWHPR08MB3390;H:mail03.mg7.newsleopard.com;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ CO1NAM04FT009.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 40a734b6-386b-427f-b4b2-08d756dca578
+X-MS-TrafficTypeDiagnostic: MWHPR08MB3390:
+X-MS-Exchange-PUrlCount: 15
+X-MS-Oob-TLC-OOBClassifiers: OLM:7691;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Oct 2019 10:43:16.1816
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 40a734b6-386b-427f-b4b2-08d756dca578
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MWHPR08MB3390
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8736792
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2367.016
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZmVQWTdLTloySTc2djhvdCtzY3FBOTNHa0J1cUMwU2F3U3hscWVWMU10bXVw?=
+ =?utf-8?B?UklVT3MrU0dkaUxQcVlMU1VoYTlEM2plczJUNHJsSFhrU1BoOUx5WEpkTFN0?=
+ =?utf-8?B?YkYrU3JITTZSZTkwS0tNN0hKWVMwdjdHZkc5Q1BKVC90SWl6Yk9TVURyWW9K?=
+ =?utf-8?B?VXhlbGUyT0dpUmFaTWY3bFRJSmFEdjFaQ0Y5alVKR2hzRUpCRzdjaTB3YXN1?=
+ =?utf-8?B?aThXZk44NDdBWm92b2IzbkNCT1hubk1vQmoxTXhxTXF6aEtvcWdFOU5RYXcy?=
+ =?utf-8?B?aVZXZ216S0hORmRqV0cwQVJwc05pSlBqbC9ISmJCNFBvWkhyV3hrdEh1ZTJF?=
+ =?utf-8?B?QkxQU2Frb3ZSMlpLUC9nK1NDVVRDanZIenAvNHBteElhcFh6L09SS1MwSVJi?=
+ =?utf-8?B?NE1sTXNXSHNYSVFJbklEWVNwTWZMd1FKb2lESUE3QmFmL0lkRlp4S2ZOb1Zm?=
+ =?utf-8?B?ZXdmSFh3M1dYS3N6UExud0dLOU9rVFlpeVkzS1B4NGZRcFpBS0RzanJTSERU?=
+ =?utf-8?B?Vll3U04yUWhYYWxoUG03VmhPQjl2dHRCaEkxR1p6Wlpsc1lCdWhleHB4Mkdu?=
+ =?utf-8?B?SklTRlRFYkgyS3h1KzZWbU5VU3JzQ1VjVzM4RW55M3loWlZGTEhzU296UWpM?=
+ =?utf-8?B?R1BZdm1MRnVORGN1WEdFNGRoSDB3L1dKNVdpYklWRkVycVF0VE8rK21taDBm?=
+ =?utf-8?B?aFgwTnc2VmtwdVNqczRpM0hzZW1NS2xnN1FDS1ZISWFPbTRHbUpCRFZ1RFNz?=
+ =?utf-8?B?Q0pyaHdLc3YxZGExQWxEQmxPRUtqc2FlSlhtdnlneENxTjYrTWw0UDk2OFNl?=
+ =?utf-8?B?amladWtwNjFWbHVLWmFISFU1OUFEOXcvRmRQRTJFZGxqWlZNUS8zVXljbW9o?=
+ =?utf-8?B?UTBGQlhMRGlqSGFidVZ6OXhSYk9ZU3JDbFFaT3Vic3dNeG85MGFBUXFZcWNw?=
+ =?utf-8?B?QmZaZmR5WWVweUtiYmN1S3BUaFFqNUlZRzBuOE0waWR0RVVVZ2xlK2FvZXc4?=
+ =?utf-8?B?TURTYUNDVStMUmtaM21EOUpBL1JtUitGUXFFRmhwOVBKR2h6VzN0WlB5anQz?=
+ =?utf-8?B?azRSanBjOFJzK1VERGs2MDRjaDA4NFJOWnN0dEtOSi8wNlE1RThXeDB4c1NH?=
+ =?utf-8?B?V0RuQmliendrbHlzQmplUnFzbGlsMlhtRlAzWmNFeFRHRmJ4dFZTdXdHbWJk?=
+ =?utf-8?B?MVFGdjllYkFKamM2bkJvOU1sWURMU2dFbHNxSUljeVI1bDFZT25CK0JZVVh4?=
+ =?utf-8?B?V0lkdmJlUHZCbmRUV1lVTER3VGkrSWVhajd4ekhzdzNPQWhieEtOWFVwaUlx?=
+ =?utf-8?B?ZmFCN3RUNWJ0QjUyMUNyNGVBQVZsSXZhMSt0QTZhUGlUUE9pSUtBSm50anJz?=
+ =?utf-8?B?RHk2S1JJUExGMzJOVUlxaGh2U08zTGVPenUrdlRCVkJ2aUd1VVpaQkdiNytT?=
+ =?utf-8?B?WEVvd1hLcDk3eXFuUjRhd0VvMm9SVm16RHhhT25HK2xXaVJxYWFQT0Y4TTJ5?=
+ =?utf-8?B?RGltcWdJWGlzS2orVWh4R05LSnROMkNDWm9hZ0VlK3RFN011ZFUzc2VZRFZr?=
+ =?utf-8?B?ejRoUDZGVTF6WXlUMmdDYWNkN09HTFlsTHJDWDc5YXpZTzRmZk13bUxKOWtR?=
+ =?utf-8?B?QUh2Rk9XYk1aZTYrYlZ5RWo2VDJVK1B0TnBNeFQxRFVSYU1nSWlDNHNHRFo3?=
+ =?utf-8?B?RUllQTczTHRHRlkvclA1NUxMamRYeWlYTGdaZ2RDK1F4dUZuZDdDQ21TeDdI?=
+ =?utf-8?B?eEpCdURVSVdxcU5nMXdQZTE2cnZqN2s2c1k3YmNuUXoyREs4Y2N3cmUxUllu?=
+ =?utf-8?B?b1FUNjdpdkJOL2Q0R1V2YlpmTlI3UTRBL2RBTjdkRnNHZWdVTmszNlZiNmVl?=
+ =?utf-8?B?VTNBMCtycmlsVzk1VkZIb2Jaa1dXS1ExZ0lHNG16MDFsMEhiS3U3QzFMNFV3?=
+ =?utf-8?B?dFZycUN0R1ZnckQ4SGJsSUx6OFhuVFFVOUVtL2xFNURvaWNXMzFOVlI0ZFRh?=
+ =?utf-8?B?ZDdwZ05uRStjUnRJejNON29kb252Umh1eEZ4d2ZjbW5wYVlGeTZmbkt2K0hY?=
+ =?utf-8?Q?4oYX+K?=
+MIME-Version: 1.0
+
+--63b86b01f51f40c2a3bb62598fcc145d
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Welcome to Okinawa in June 2020* { text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; -moz-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    html { height: 100%; width: 100%; }
+
+    body { height: 100% !important; margin: 0 !important; padding: 0 !impor=
+tant; width: 100% !important; mso-line-height-rule: exactly; }
+    div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; }
+  @media only screen and (max-width:600px) {
+      .row, .row__row { display: block; }
+      .row__column, .column-filler { display: block; box-sizing: border-box=
+; float: left; }
+      .col-50 { display: block; width: 100% !important; padding-left: 0 !im=
+portant; padding-right: 0 !important; }
+      .mobile-bottom-m { margin-bottom: 40px; }
+      .cBlock--spacingLR { padding-left: 16px !important; padding-right: 16=
+px !important; }
+      .img_block { width: 100% !important; }
+    }
+  June 23 =E2=80=93 25, 2020
+        Okinawa, JapanTHEME: Green Environment & Sustainable DevelopmentGla=
+d to welcome Mr. Carl BastianWe are honored to invite=C2=A0Mr.=C2=A0Carl Ba=
+stian=C2=A0to join us being our local host and introducing the charming=C2=
+=A0of Okinawa.Mr. Carl is the Managing Director of the Ryukyu World Office =
+Ltd. a consulting firm providing language, manpower and operational solutio=
+ns to Hotels & Resorts as well as being an event production agent for numer=
+ous military entities for the past 6 years.=C2=A0TRACKSAlong with the fast =
+development of climate change issues, environmental awareness, and consensu=
+s in environmental sustainability, we should effort in pursuing sustainable=
+ development as well as its outlook on the future. As part of the same plan=
+et, it is the responsibility of each individual and nation to protect the g=
+lobal environment.Click Here to Submit Paper!Conference VenueMercure Okinaw=
+a NahaADD=EF=BC=9A 3 Chome-3-19 Tsubogawa, Naha, Okinawa 900-0025 JapanTEL=
+=EF=BC=9A +81 98-855-7111Visit Our Website: http://iseas.orgEmail Us to: is=
+eas@iseas.org
+         =20
+
+    You are currently subscribed to our list with the following address: fo=
+aad@calpoly.edu. If you no longer want to receive our emails, you can click=
+ unsubscribe.
+ =20
+ =20
+
+
+
+
+      Email delivery powered by =E9=9B=BB=E5=AD=90=E8=B1=B9 NewsLeopard.
+   =20
+
+
+
+
+--63b86b01f51f40c2a3bb62598fcc145d
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Welcome to Okinawa in June 2020</title><meta content=3D"width=3Ddevice=
+-width, initial-scale=3D1.0" name=3D"viewport"><meta name=3D"x-apple-disabl=
+e-message-reformatting"><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compati=
+ble" content=3D"IE=3Dedge"><!--<![endif]--><!--[if gte mso 9]><xml><o:Offic=
+eDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:Off=
+iceDocumentSettings></xml><![endif]--><style>* { text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%; }
+    html { height: 100%; width: 100%; }
+
+    body { height: 100% !important; margin: 0 !important; padding: 0 !impor=
+tant; width: 100% !important; mso-line-height-rule: exactly; }
+    div[style*=3D"margin: 16px 0"] { margin: 0 !important; }
+
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; }
+  </style><!--[if gte mso 9]><style type=3D"text/css">li { text-indent: -1e=
+m; }
+    table td { border-collapse: collapse; }
+  </style><![endif]--><style>@media only screen and (max-width:600px) {
+      .row, .row__row { display: block; }
+      .row__column, .column-filler { display: block; box-sizing: border-box=
+; float: left; }
+      .col-50 { display: block; width: 100% !important; padding-left: 0 !im=
+portant; padding-right: 0 !important; }
+      .mobile-bottom-m { margin-bottom: 40px; }
+      .cBlock--spacingLR { padding-left: 16px !important; padding-right: 16=
+px !important; }
+      .img_block { width: 100% !important; }
+    }
+  </style></head><body class=3D"body cLayout--bgColor" style=3D"background-=
+color: #f5f5f5; margin: 0; width: 100%;"><table align=3D"center" width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"center" width=3D"100%" style=3D"padding-left:10px;padding-right:10px;pa=
+dding-top:50px;padding-bottom:50px" bgcolor=3D"#f5f5f5"><!--[if !mso]><!---=
+-><div style=3D"margin:0 auto;width:100%;max-width:640px;border:"><!-- <![e=
+ndif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin=
+:0 auto;width:100%;max-width:640px;border:"><tr><td><![endif]--><table bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%=
+"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]=
+><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![end=
+if]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0=
+ auto;width:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D=
+"left" valign=3D"top" width=3D"100%" bgcolor=3D"#dff1f7" style=3D"padding-l=
+eft:0px;padding-right:0px;padding-top:24px;padding-bottom:0px"><table align=
+=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+><tbody><tr><td align=3D"center" valign=3D"top" width=3D"100%" style=3D"pad=
+ding-top:0px;padding-bottom:0px"><a href=3D"https://edm.mail03.mg7.newsleop=
+ard.com/t/c?l=3D4028c2306ddde9e7016df2a3ad850276&amp;s=3D0&amp;y1=3D0&amp;y=
+2=3D4028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dca31e4d456d7531d0020c6dd1d=
+e932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"padding:0px=
+;text-decoration:none;display:inline-block"><img border=3D"0" width=3D"640"=
+ src=3D"https://s3.amazonaws.com/prod-newsleopard-upload-img/40283a666ae37d=
+89016af889e284020a/2019-10-22-08-15-44-iseas1.jpg" style=3D"display:block;m=
+ax-width:100%"></a></td></tr></tbody></table></td></tr></tbody></table><!--=
+[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!--=
+ <![endif]--></td></tr></tbody></table><table border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D=
+"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"mar=
+gin:0 auto;width:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><=
+table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><t=
+d><![endif]--><table align=3D"center" width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" wid=
+th=3D"100%" bgcolor=3D"#DFF1F7" style=3D"padding-left:32px;padding-right:32=
+px;padding-top:8px;padding-bottom:0px"><table align=3D"center" width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D=
+"left" valign=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC','=
+=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvet=
+ica Neue',Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;color:=
+#7E995A;line-height:1.4;margin:0;letter-spacing:1px;padding-top:4px;padding=
+-bottom:4px">June 23 =E2=80=93 25, 2020
+        </td></tr></tbody></table><table width=3D"100%" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" style=3D"paddin=
+g-top:4px;padding-bottom:4px"><h1 style=3D"color:#7E995A;font-size:14px;fon=
+t-weight:bold;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=
+=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-se=
+rif;padding:0;margin:0;line-height:1.4;text-decoration:none;display:inline-=
+block"><a href=3D"https://edm.mail03.mg7.newsleopard.com/t/c?l=3D4028c2306d=
+dde9e7016df2a3ad850276&amp;s=3D1&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2=
+a3ad850276&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0=
+f4b8748b0" target=3D"_blank" style=3D"padding:0px;text-decoration:none;disp=
+lay:inline-block"><span class=3D"a__text" style=3D"color:#7E995A;text-decor=
+ation:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=
+=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif=
+">Okinawa, Japan</span></a></h1></td></tr></tbody></table></td></tr></tbody=
+></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!--=
+--></div><!-- <![endif]--></td></tr></tbody></table><table border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr=
+><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div=
+ style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![endif]--><!--[i=
+f mso | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;width:=
+640px"><tr><td><![endif]--><table align=3D"center" width=3D"100%" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valig=
+n=3D"top" width=3D"100%" bgcolor=3D"#dff1f7" style=3D"padding-left:32px;pad=
+ding-right:32px;padding-top:18px;padding-bottom:9px"><table width=3D"100%" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"le=
+ft"><h1 style=3D"color:#7e995a;font-size:21px;font-weight:bold;font-family:=
+'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft Jh=
+engHei','Helvetica Neue',Helvetica,Arial,sans-serif;padding:0;margin:0;line=
+-height:1.4;text-decoration:none;display:inline-block"><a href=3D"https://e=
+dm.mail03.mg7.newsleopard.com/t/c?l=3D4028c2306ddde9e7016df2a3ad850276&amp;=
+s=3D2&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dca31=
+e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank=
+" style=3D"padding:0px;text-decoration:none;display:inline-block"><span cla=
+ss=3D"a__text" style=3D"color:#7e995a;text-decoration:none;font-family:'Pin=
+gFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengH=
+ei','Helvetica Neue',Helvetica,Arial,sans-serif">THEME: Green Environment &=
+amp; Sustainable Development</span></a></h1></td></tr></tbody></table></td>=
+</tr></tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[i=
+f !mso]><!----></div><!-- <![endif]--></td></tr></tbody></table><table bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%=
+"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]=
+><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![end=
+if]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0=
+ auto;width:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D=
+"left" valign=3D"top" width=3D"100%" bgcolor=3D"#dff1f7" style=3D"padding-l=
+eft:32px;padding-right:32px;padding-top:18px;padding-bottom:0px"><table wid=
+th=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td=
+ align=3D"left"><h1 style=3D"color:#25426b;font-size:20px;font-weight:bold;=
+font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','=
+Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;padding:0;m=
+argin:0;line-height:1.4;text-decoration:none;display:inline-block"><a href=
+=3D"https://edm.mail03.mg7.newsleopard.com/t/c?l=3D4028c2306ddde9e7016df2a3=
+ad850276&amp;s=3D3&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3ad850276&amp=
+;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" tar=
+get=3D"_blank" style=3D"padding:0px;text-decoration:none;display:inline-blo=
+ck"><span class=3D"a__text" style=3D"color:#25426b;text-decoration:none;fon=
+t-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Mic=
+rosoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif">Glad to welco=
+me Mr. Carl Bastian</span></a></h1></td></tr></tbody></table></td></tr></tb=
+ody></table><!--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><=
+!----></div><!-- <![endif]--></td></tr></tbody></table><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody>=
+<tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><=
+div style=3D"margin:0 auto;width:100%;max-width:640px"><!-- <![endif]--><!-=
+-[if mso | IE]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;wid=
+th:640px"><tr><td><![endif]--><table align=3D"center" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" va=
+lign=3D"top" width=3D"100%" bgcolor=3D"#dff1f7" style=3D"padding-left:32px;=
+padding-right:32px;padding-top:19px;padding-bottom:24px"><table class=3D"ro=
+w" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" role=3D"=
+presentation" align=3D"center" style=3D"table-layout:fixed"><tbody><tr clas=
+s=3D"row__row"><td class=3D"row__column col-50 mobile-bottom-m" align=3D"le=
+ft" valign=3D"top" width=3D"50" style=3D"width:50%;padding-left:0px;padding=
+-right:16px"><table align=3D"center" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" wi=
+dth=3D"100%" style=3D"padding-top:0px;padding-bottom:0px"><a href=3D"https:=
+//edm.mail03.mg7.newsleopard.com/t/c?l=3D4028c2306ddde9e7016df2a3ad850276&a=
+mp;s=3D4&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dc=
+a31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_bl=
+ank" style=3D"padding:0px;text-decoration:none;display:inline-block"><img b=
+order=3D"0" width=3D"272" src=3D"https://s3.amazonaws.com/prod-newsleopard-=
+upload-img/40283a666ae37d89016af889e284020a/2019-10-22-08-17-33-iseas2.jpg"=
+ style=3D"display:block;max-width:100%"></a></td></tr></tbody></table></td>=
+<td class=3D"row__column col-50" align=3D"left" valign=3D"top" width=3D"50"=
+ style=3D"width:50%;padding-left:16px;padding-right:0px"><table align=3D"ce=
+nter" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbod=
+y><tr><td valign=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC',=
+'=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helve=
+tica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;col=
+or:#666666;line-height:1.5;margin:0;padding-bottom:24px"><div><span style=
+=3D"color: black; font-size: 14px;">We are honored to invite&nbsp;</span><s=
+trong style=3D"color: black; font-size: 14px;">Mr.&nbsp;Carl Bastian</stron=
+g><span style=3D"color: rgb(51, 51, 51); font-size: 14px;">&nbsp;to join us=
+ being our local host and introducing the charming&nbsp;of Okinawa.</span><=
+/div><div><br></div><div><span style=3D"color: rgb(51, 51, 51); font-size: =
+14px;">Mr. Carl is the Managing Director of the Ryukyu World Office Ltd. a =
+consulting firm providing language, manpower and operational solutions to H=
+otels &amp; Resorts as well as being an event production agent for numerous=
+ military entities for the past 6 years.&nbsp;</span><span style=3D"font-si=
+ze: 14px;"></span></div></td></tr></tbody></table></td></tr></tbody></table=
+></td></tr></tbody></table><!--[if mso | IE]></td></tr></table><![endif]-->=
+<!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></table><tabl=
+e border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=
+=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%"><!--[=
+if !mso]><!----><div style=3D"margin:0 auto;width:100%;max-width:640px"><!-=
+- <![endif]--><!--[if mso | IE]><table role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" style=3D"=
+margin:0 auto;width:640px"><tr><td><![endif]--><table align=3D"center" widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td =
+align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#fffef3" style=3D"p=
+adding-left:32px;padding-right:32px;padding-top:15px;padding-bottom:15px"><=
+table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbod=
+y><tr><td align=3D"center"><h1 style=3D"color:#7e995a;font-size:28px;font-w=
+eight:bold;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=
+=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif=
+;padding:0;margin:0;line-height:1.4;text-decoration:none;display:inline-blo=
+ck"><a href=3D"https://edm.mail03.mg7.newsleopard.com/t/c?l=3D4028c2306ddde=
+9e7016df2a3ad850276&amp;s=3D5&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3a=
+d850276&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b=
+8748b0" target=3D"_blank" style=3D"padding:0px;text-decoration:none;display=
+:inline-block"><span class=3D"a__text" style=3D"color:#7e995a;text-decorati=
+on:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=
+=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif">T=
+RACKS</span></a></h1></td></tr></tbody></table></td></tr></tbody></table><!=
+--[if mso | IE]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!=
+-- <![endif]--></td></tr></tbody></table><table border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=
+=3D"left" valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"=
+margin:0 auto;width:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE=
+]><table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" width=3D"640" style=3D"margin:0 auto;width:640px"><=
+tr><td><![endif]--><table align=3D"center" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top=
+" width=3D"100%" bgcolor=3D"#fffef3" style=3D"padding-left:32px;padding-rig=
+ht:32px;padding-top:6px;padding-bottom:0px"><table class=3D"row" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" role=3D"presentation"=
+ align=3D"center" style=3D"table-layout:fixed"><tbody><tr class=3D"row__row=
+"><td class=3D"row__column col-50 mobile-bottom-m" align=3D"left" valign=3D=
+"top" width=3D"50" style=3D"width:50%;padding-left:0px;padding-right:16px">=
+<table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" width=3D"100%" =
+style=3D"padding-top:0px;padding-bottom:0px"><a href=3D"https://edm.mail03.=
+mg7.newsleopard.com/t/c?l=3D4028c2306ddde9e7016df2a3ad850276&amp;s=3D6&amp;=
+y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dca31e4d456d753=
+1d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D=
+"padding:0px;text-decoration:none;display:inline-block"><img border=3D"0" w=
+idth=3D"272" src=3D"https://s3.amazonaws.com/prod-newsleopard-upload-img/40=
+283a666ae37d89016af889e284020a/2019-10-22-08-20-12-iseas3.jpg" style=3D"dis=
+play:block;max-width:100%"></a></td></tr></tbody></table></td><td class=3D"=
+row__column col-50" align=3D"left" valign=3D"top" width=3D"50" style=3D"wid=
+th:50%;padding-left:16px;padding-right:0px"><table align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td v=
+align=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC','=E5=BE=AE=
+=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue'=
+,Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;color:#666666=
+;line-height:1.5;margin:0;padding-bottom:24px"><div><span style=3D"font-siz=
+e: 13px;">Along with the fast development of climate change issues, environ=
+mental awareness, and consensus in environmental sustainability, we should =
+effort in pursuing sustainable development as well as its outlook on the fu=
+ture. As part of the same planet, it is the responsibility of each individu=
+al and nation to protect the global environment.</span></div></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table><!--[if mso=
+ | IE]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![end=
+if]--></td></tr></tbody></table><table border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" =
+valign=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 a=
+uto;width:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table r=
+ole=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![en=
+dif]--><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"1=
+00%" bgcolor=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padd=
+ing-top:0px;padding-bottom:0px"><table align=3D"center" width=3D"100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center=
+" valign=3D"top" width=3D"100%" style=3D"padding-top:0px;padding-bottom:0px=
+"><a href=3D"https://edm.mail03.mg7.newsleopard.com/t/c?l=3D4028c2306ddde9e=
+7016df2a3ad850276&amp;s=3D7&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3ad8=
+50276&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b87=
+48b0" target=3D"_blank" style=3D"padding:0px;text-decoration:none;display:i=
+nline-block"><img border=3D"0" width=3D"576" src=3D"https://s3.amazonaws.co=
+m/prod-newsleopard-upload-img/40283a666ae37d89016af889e284020a/2019-10-22-0=
+8-21-48-iseas4.jpg" style=3D"display:block;max-width:100%"></a></td></tr></=
+tbody></table></td></tr></tbody></table><!--[if mso | IE]></td></tr></table=
+><![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody>=
+</table><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"ce=
+nter" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"=
+100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:100%;max-width=
+:640px"><!-- <![endif]--><!--[if mso | IE]><table role=3D"presentation" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640=
+" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table align=3D"c=
+enter" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbo=
+dy><tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#ffffff"=
+ style=3D"padding-left:32px;padding-right:32px;padding-top:24px;padding-bot=
+tom:24px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody><tr><td align=3D"center"><table border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><!--[if mso | IE]><td align=3D"center" bgcol=
+or=3D"#B7D185" style=3D"color:#7673B3;padding-top:10px;padding-bottom:10px;=
+padding-left:60px;padding-right:60px"><![endif]--><!--[if !mso]><!----><td =
+align=3D"center" bgcolor=3D"#B7D185" style=3D"border-radius:4px"><!-- <![en=
+dif]--><a class=3D"dnd-button" href=3D"https://edm.mail03.mg7.newsleopard.c=
+om/t/c?l=3D4028c2306ddde9e7016df2a3ad850276&amp;s=3D8&amp;y1=3D0&amp;y2=3D4=
+028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a=
+2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"color:#7673B3;bo=
+rder-radius:4px;display:inline-block;text-decoration:none;font-size:16px;fo=
+nt-weight:bold;letter-spacing:1px;padding-top:10px;padding-bottom:10px;padd=
+ing-left:60px;padding-right:60px"><span class=3D"a__text" style=3D"color:#7=
+673B3;text-decoration:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=
+=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,A=
+rial,sans-serif">Click Here to Submit Paper!</span></a></td></tr></tbody></=
+table></td></tr></tbody></table></td></tr></tbody></table><!--[if mso | IE]=
+></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]-->=
+</td></tr></tbody></table><table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" width=3D"100%"><tbody><tr><td align=3D"left" valign=
+=3D"top" width=3D"100%"><!--[if !mso]><!----><div style=3D"margin:0 auto;wi=
+dth:100%;max-width:640px"><!-- <![endif]--><!--[if mso | IE]><table role=3D=
+"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"ce=
+nter" width=3D"640" style=3D"margin:0 auto;width:640px"><tr><td><![endif]--=
+><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"100%" b=
+gcolor=3D"#ffffff" style=3D"padding-left:32px;padding-right:32px;padding-to=
+p:10px;padding-bottom:10px"><table class=3D"row" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" role=3D"presentation" align=3D"cent=
+er" style=3D"table-layout:fixed"><tbody><tr class=3D"row__row"><td class=3D=
+"row__column col-50 mobile-bottom-m" align=3D"left" valign=3D"top" width=3D=
+"50" style=3D"width:50%;padding-left:0px;padding-right:16px"><table align=
+=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+><tbody><tr><td align=3D"center" valign=3D"top" width=3D"100%" style=3D"pad=
+ding-top:0px;padding-bottom:0px"><a href=3D"https://edm.mail03.mg7.newsleop=
+ard.com/t/c?l=3D4028c2306ddde9e7016df2a3ad850276&amp;s=3D9&amp;y1=3D0&amp;y=
+2=3D4028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dca31e4d456d7531d0020c6dd1d=
+e932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_blank" style=3D"padding:0px=
+;text-decoration:none;display:inline-block"><img border=3D"0" width=3D"272"=
+ src=3D"https://s3.amazonaws.com/prod-newsleopard-upload-img/40283a666ae37d=
+89016af889e284020a/2019-10-22-08-23-24-iseas5.jpg" style=3D"display:block;m=
+ax-width:100%"></a></td></tr></tbody></table></td><td class=3D"row__column =
+col-50" align=3D"left" valign=3D"top" width=3D"50" style=3D"width:50%;paddi=
+ng-left:16px;padding-right:0px"><table width=3D"100%" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" style=3D"padding-=
+top:4px;padding-bottom:8px"><h1 style=3D"color:#333333;font-size:24px;font-=
+weight:bold;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=
+=E9=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif=
+;padding:0;margin:0;line-height:1.4;text-decoration:none;display:inline-blo=
+ck"><a href=3D"https://edm.mail03.mg7.newsleopard.com/t/c?l=3D4028c2306ddde=
+9e7016df2a3ad850276&amp;s=3D10&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3=
+ad850276&amp;y3=3Df5dca31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4=
+b8748b0" target=3D"_blank" style=3D"padding:0px;text-decoration:none;displa=
+y:inline-block"><span class=3D"a__text" style=3D"color:#333333;text-decorat=
+ion:none;font-family:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=
+=AB=94','Microsoft JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif">C=
+onference Venue</span></a></h1></td></tr></tbody></table><table align=3D"ce=
+nter" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbod=
+y><tr><td valign=3D"top" width=3D"100%" style=3D"font-family:'PingFang TC',=
+'=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft JhengHei','Helve=
+tica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;col=
+or:#666666;line-height:1.5;margin:0;padding-bottom:24px"><div><strong style=
+=3D"font-size: 18px; color: rgb(0, 102, 0);">Mercure Okinawa Naha</strong><=
+/div><div><strong style=3D"font-size: 13px; color: rgb(51, 51, 51);">ADD=EF=
+=BC=9A 3 Chome-3-19 Tsubogawa, Naha, Okinawa 900-0025 Japan</strong></div><=
+div><strong style=3D"font-size: 13px; color: rgb(51, 51, 51);">TEL=EF=BC=9A=
+ &#43;81 98-855-7111</strong></div></td></tr></tbody></table></td></tr></tb=
+ody></table></td></tr></tbody></table><!--[if mso | IE]></td></tr></table><=
+![endif]--><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></=
+table><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" width=3D"100%"><tbody><tr><td align=3D"left" valign=3D"top" width=3D"10=
+0%"><!--[if !mso]><!----><div style=3D"margin:0 auto;width:100%;max-width:6=
+40px"><!-- <![endif]--><!--[if mso | IE]><table role=3D"presentation" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"640" =
+style=3D"margin:0 auto;width:640px"><tr><td><![endif]--><table align=3D"cen=
+ter" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody=
+><tr><td align=3D"left" valign=3D"top" width=3D"100%" bgcolor=3D"#DFF1F7" s=
+tyle=3D"padding-left:32px;padding-right:32px;padding-top:24px;padding-botto=
+m:24px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0"><tbody><tr><td align=3D"center" style=3D"padding-top:4px;padding-bottom=
+:4px"><h1 style=3D"color:#25426B;font-size:18px;font-weight:bold;font-famil=
+y:'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft =
+JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;padding:0;margin:0;li=
+ne-height:1.4;text-decoration:none;display:inline-block"><a href=3D"https:/=
+/edm.mail03.mg7.newsleopard.com/t/c?l=3D4028c2306ddde9e7016df2a3ad850276&am=
+p;s=3D11&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dc=
+a31e4d456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" target=3D"_bl=
+ank" style=3D"padding:0px;text-decoration:none;display:inline-block"><span =
+class=3D"a__text" style=3D"color:#25426B;text-decoration:none;font-family:'=
+PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft Jhe=
+ngHei','Helvetica Neue',Helvetica,Arial,sans-serif">Visit Our Website: http=
+://iseas.org</span></a></h1></td></tr></tbody></table><table align=3D"cente=
+r" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><=
+tr><td align=3D"center" valign=3D"top" width=3D"100%" style=3D"font-family:=
+'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft Jh=
+engHei','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;font-wei=
+ght:bold;color:#25426B;line-height:1.4;margin:0;letter-spacing:1px;padding-=
+top:4px;padding-bottom:4px">Email Us to: iseas@iseas.org
+        </td></tr></tbody></table></td></tr></tbody></table><!--[if mso | I=
+E]></td></tr></table><![endif]--><!--[if !mso]><!----></div><!-- <![endif]-=
+-></td></tr></tbody></table><!--[if mso | IE]></td></tr></table><![endif]--=
+><!--[if !mso]><!----></div><!-- <![endif]--></td></tr></tbody></table><tab=
+le align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%"> <tbody> <tr>
+  <td align=3D"center" style=3D"font-size: 13px;font-size:13px;font-family:=
+ 'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft J=
+hengHei','Helvetica Neue',Helvetica,Arial,sans-serif;color:#666;border-top:=
+1px solid #ddd;padding-top:16px;text-align:center;line-height:1.5" valign=
+=3D"middle" width=3D"100%">
+    You are currently subscribed to our list with the following address: <s=
+pan style=3D"color: #666;font-weight: bold">foaad@calpoly.edu</span>. If yo=
+u no longer want to receive our emails, you can click <a href=3D"/" style=
+=3D"color: #3f7dbd;text-decoration:none;display: inline-block;"><span class=
+=3D"a__text" style=3D"text-decoration: none;color: #3f7dbd;"><a href=3D"htt=
+ps://app.newsleopard.com/assets/page/unsubscribe-page-en.html?e=3Dunsubscri=
+be&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dca31e4d=
+456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0&amp;appHost=3Dhttps:=
+//edm.mail03.mg7.newsleopard.com">unsubscribe</a></span></a>.
+  </td>
+</tr> </tbody> </table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%">
+  <tbody>
+  <tr>
+    <td align=3D"center" style=3D"font-size: 13px;font-size:13px;font-famil=
+y: 'PingFang TC','=E5=BE=AE=E8=BB=9F=E6=AD=A3=E9=BB=91=E9=AB=94','Microsoft=
+ JhengHei','Helvetica Neue',Helvetica,Arial,sans-serif;color:#666;padding-t=
+op:4px;padding-bottom:24px;text-align:center;line-height:1.5" valign=3D"mid=
+dle" width=3D"100%">
+      Email delivery powered by <a href=3D"https://newsleopard.com/?utm_sou=
+rce=3Dedm&amp;utm_medium=3Demail&amp;utm_campaign=3Dfooter&amp;utm_content=
+=3Dpowerby" style=3D"color: #3f7dbd;text-decoration:none;"><span class=3D"a=
+__text" style=3D"text-decoration: none;color: #3f7dbd;">=E9=9B=BB=E5=AD=90=
+=E8=B1=B9 NewsLeopard</span></a>.
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body></html><img src=3D"https://edm.mail03.mg7.newsleopard.com/t/s?e=3Dop=
+en&amp;y1=3D0&amp;y2=3D4028c2306ddde9e7016df2a3ad850276&amp;y3=3Df5dca31e4d=
+456d7531d0020c6dd1de932a2aaad78da0bad163d5db0f4b8748b0" alt=3D"">=
+
+--63b86b01f51f40c2a3bb62598fcc145d--

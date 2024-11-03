@@ -1,0 +1,334 @@
+Received: from DM5PR08MB3450.namprd08.prod.outlook.com (2603:10b6:a02:ee::16)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR02CA0003.NAMPRD02.PROD.OUTLOOK.COM; Sun, 13 Oct 2019 20:21:42 +0000
+Received: from CH2PR08CA0013.namprd08.prod.outlook.com (2603:10b6:610:5a::23)
+ by DM5PR08MB3450.namprd08.prod.outlook.com (2603:10b6:4:69::34) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.21; Sun, 13 Oct
+ 2019 20:21:40 +0000
+Received: from SN1NAM04FT046.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::205) by CH2PR08CA0013.outlook.office365.com
+ (2603:10b6:610:5a::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2284.18 via Frontend
+ Transport; Sun, 13 Oct 2019 20:21:40 +0000
+Authentication-Results: spf=pass (sender IP is 198.57.215.225)
+ smtp.mailfrom=world-comp.org; calpoly.edu; dkim=pass (signature was verified)
+ header.d=world-comp.org;calpoly.edu; dmarc=bestguesspass action=none
+ header.from=world-comp.org;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of world-comp.org
+ designates 198.57.215.225 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.57.215.225;
+ helo=world-comp.org;
+Received: from world-comp.org (198.57.215.225) by
+ SN1NAM04FT046.mail.protection.outlook.com (10.152.89.118) with Microsoft SMTP
+ Server id 15.20.2347.16 via Frontend Transport; Sun, 13 Oct 2019 20:21:40
+ +0000
+Received: by world-comp.org (Postfix, from userid 510)
+	id B31B42E2079; Sun, 13 Oct 2019 16:20:23 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 world-comp.org B31B42E2079
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=world-comp.org;
+	s=default; t=1570998023;
+	bh=VyKibByX0SpCga1/8ComhNG1d124gzaWPtLDXdnb0jw=;
+	h=Date:To:Subject:From:From;
+	b=SHUiohSEUW0ySxNvogQQ1SJ9cCU88rDteM8rogJaeUja/f4wzDfoVCTVIfUK0PDb1
+	 Lv7biMrYztzS3HMuQKkYqR8FkhgM4fPRO+quUZhdQRAz3fPkgEv8u+RuKgUlATyawm
+	 C5GZyBEOOT06UkooM8V4aW57cMvMP9BfCAwph0CA=
+Date: Sun, 13 Oct 2019 16:20:23 -0400
+To: foaad@calpoly.edu
+Subject: CFP: IEEE CPS: International Conference - Internet of Things and
+ Smart Cities and Smart Mobility (Dec. 5-7, 2019, USA); Deadline: October 21
+User-Agent: Heirloom mailx 12.4 7/29/08
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20191013202023.B31B42E2079@world-comp.org>
+From: sc@world-comp.org (Steering Committee)
+Return-Path: sc@world-comp.org
+X-MS-Exchange-Organization-ExpirationStartTime: 13 Oct 2019 20:21:40.5072
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 042961b3-18fd-455d-c83f-08d7501af4f1
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:198.57.215.225;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:DM5PR08MB3450;H:world-comp.org;FPR:;SPF:None;LANG:en;CAT:SPM;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT046.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 042961b3-18fd-455d-c83f-08d7501af4f1
+X-MS-TrafficTypeDiagnostic: DM5PR08MB3450:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 13 Oct 2019 20:21:40.3871
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 042961b3-18fd-455d-c83f-08d7501af4f1
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM5PR08MB3450
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.1155796
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?nhcxgU3s22Cz6CaIJHED3Nt43a4yOoaVEHI1qCwg3e2zbUI7ZDtlZsXH63eC?=
+ =?us-ascii?Q?q+t/LCu6CpfAA78WXb+RY3ZeK70HdEFvu5QHlLRLnk4JbUcauj4Qi265RCqA?=
+ =?us-ascii?Q?rGVfjthab7candzV6EQm3+ES/w9WbkZfjREycmJPsteWjFEZk7MmbKHwFgNT?=
+ =?us-ascii?Q?k+XS8gl689LZUUqbDvEjSCmEw2W/bIL3O+5lwxrkqIwBhmdaos9Zm7dSB6/0?=
+ =?us-ascii?Q?sWvJfkFke7s2CMtBrB8hskX3xTelYwtHGj9oYfK2y06nUPP23YEZwF1rH61B?=
+ =?us-ascii?Q?rQGqXpFCmxpB5c48Qj74RHeEK9x70kfNFNn7uuv331k93belMjGJ4J/25XsT?=
+ =?us-ascii?Q?d7HKoEvxUMYPxUwYM5dZ3tRvq/mVoGEt6YwkBsLBsHD2OzH5gFV8n1Q5d3Gs?=
+ =?us-ascii?Q?ylbyPd3SYegphiYLj0gpcumW2Sb0Ij/tjj4XAHtJKbH14uD0Gb1YXhbjHELl?=
+ =?us-ascii?Q?Ny3UA0KMsgV1/NepInRoek6OusVBzMYDKB4iI4Ou12EYW2z/Hs9w6+rUqFzJ?=
+ =?us-ascii?Q?x8VjOVBjbyOmim+MzQv2K6ZoTTtQi126EhMY114T5iWnyveW56CgGAEWaVx7?=
+ =?us-ascii?Q?VyU7oSPihcy9OKwuz3JLhPqAbm9SFAl1OLnECOjU2kg+nDpFvzXwEbIEBKBf?=
+ =?us-ascii?Q?RrT1DOnTZrp25/zUDWDp6/i7QVDjh3hPwwWRRVQxbiUxL1GBf1RFKXlIuwQU?=
+ =?us-ascii?Q?ha/ZseQHuLNpdIJWhP0hQrCc2qY0GUpZ7zoHESqhTa9NOMdcK2Q5cRyW6sr+?=
+ =?us-ascii?Q?tuwKxzjeCR2GAbKrVLhVL1qs8ezw1T6qMstA076NdGHAlyD5Kr97r02yLbZf?=
+ =?us-ascii?Q?zywPhXtI81O4UhFZwGqO1ksGkSSeRmIrxFHq3QXQhAu6UniJDCaliWR0PvqE?=
+ =?us-ascii?Q?uItKIaDLn6loFBV6QzbPWrB+QvKuf+cprK9kS2fOaMrl5pS+7Z7Dqty8LyXF?=
+ =?us-ascii?Q?AVy1uK9gnYxU7rd4Yc9S38/wNVcX1qfdJFGrNiZPOXGe0WCFGxx1VdKifYHz?=
+ =?us-ascii?Q?sAcj9WByOQbadlaSmm/a6zt13xmeEZ52vfRNewcmlgmgdWtOzOTAZgu9eSWS?=
+ =?us-ascii?Q?9M3GQ71BR15eYp+HnjIqh7Q+QwLYXsMohG1tXH9SCjzEXpB4GIo0dHnUDu3Z?=
+ =?us-ascii?Q?MERmZNvb23/8qwi9AEP2Xf76oMGH5GrN4gHrAn2EXBiW6XU8HfYey3kMAdAC?=
+ =?us-ascii?Q?XI5D5pWMAOzyIBBKAowm7gPsP+8WprCjGJXYwO770o5HkEnsl6FXg2ynU+Ub?=
+ =?us-ascii?Q?upyI0M8M4CxisplhJ7YjG4dYFWWszJBVkig88i6FKKyj6aLod5G1iTI3tQJT?=
+ =?us-ascii?Q?1bDiKxI99qFZ/qaBtVe7n1N9bQiwGJca0h6gRx90tXY+iRLbIIzb5cAt5uH+?=
+ =?us-ascii?Q?MX2YVwqKeAkdhKZ4z6VjwGdZdqKyxIQhY6dI+JkDgOXoeE+MiCtJO4A8PD4N?=
+ =?us-ascii?Q?VJ4XNCoVJMs=3D?=
+MIME-Version: 1.0
+
+
+                          CALL  FOR  PAPERS
+    Extended Deadline for Submission of Papers: October 21, 2019
+
+
+International Symposium on INTERNET OF THINGS & INTERNET OF EVERYTHING
+                              CSCI-ISOT
+     https://americancse.org/events/csci2019/Symposiums/csci_is 
+
+                                 AND
+
+      International Symposium on SMART CITIES & SMART MOBILITY
+                              CSCI-ISSC
+    https://americancse.org/events/csci2019/Symposiums/csci_issc 
+
+
+
+               CSCI: December 5-7, 2019, Las Vegas, USA
+               https://americancse.org/events/csci2019 
+
+IEEE Xplore entry:
+     https://ieeexplore.ieee.org/xpl/conhome/1803739/all-proceedings 
+
+ *********************************************************************
+
+
+
+SCOPE AND LIST OF TOPICS:
+     Topics of interest include, but are not limited to the following:
+
+     CSCI-ISOT RESEARCH TRACKS: (INTERNET OF THINGS)
+
+     - Intelligent Systems for IoT
+     - Environmental Monitoring
+     - Energy Aware Systems and Efficiency
+     - Machine to Machine/Device Communications
+     - Network Design & Architecture
+     - Networking & Communication Protocols
+     - Wireless Systems & Applications
+     - Infrastructure Management
+     - IoT & e-Government, e-Commerce, e-Science & Novel Technologies
+     - IoT & Big Data
+     - Home Automation
+     - Software Architecture, Middleware, & Frameworks
+     - Services Computing
+     - Health Informatics as a Service
+     - Financial Software as a Service
+     - Business Process as a Service
+     - Natural Science as a Service
+     - Integration as a Service
+     - Large Scale Deployments
+     - Mobile Services
+     - Knowledge Management
+     - Location-awareness
+     - Security and Privacy
+     - Social Implications of IoT
+     - Technological focus for Smart Environments
+     - Smart City Case Studies
+     - Data Analysis & Visualization
+     - Architecture for secure & interactive IoT
+     - Intelligent Infrastructure & Guidance Systems
+     - Sensor Networks, Remote Diagnosis & Development
+     - Transportation Management
+     - Pattern Recognition & Recommendation Systems
+     - Green Computing
+     - Smart City & Novel Methodologies
+     - Data Processing Techniques
+     - Analytics & Statistical Methods
+     - Data Center Enabled Technologies
+     - Sensor, Wireless Technologies & APIs
+     - Networking & Social Networks
+     - IoT in Social Sciences
+     - Education & Learning
+     - Business, Finance & Management
+     - Open data: Issues, Services & Solutions
+     - Earth Science Simulation & Processing
+     - Practical Adoption of IoT & Case Studies
+     - Healthcare Services & Health Informatics
+     - Cloud, Grid & Cluster Computing
+     - Emerging IoT
+
+     CSCI-ISSC RESEARCH TRACKS: (SMART CITIES & SMART MOBILITY)
+
+     Prologue: A smart city utilizes different types and different
+     kinds of electronic data collection sensors to supply information
+     which is used to manage assets and optimize the use of resources
+     for the good of citizens. Typically, data is collected from
+     devices and assets that is analyzed to monitor and manage
+     transportation systems, power grids, water supply networks, waste
+     management, law enforcement, information systems, schools,
+     libraries, hospitals, and other services. An important component
+     of a smart city infrastructure is smart mobility. Smart Mobility
+     focuses mainly on challenges that relate to transportation. Some
+     consider a successful Smart Mobility framework to offer modes of
+     transportation alongside or even instead of personal gas-powered
+     vehicles. Considering the above broad description, the topical
+     scope of CSCI-ISSC is given below. The list of topics is by no
+     means meant to be exhaustive.
+
+        Smart Cities:
+        - Algorithms
+        - City Infrastructures
+        - Communication Frameworks
+        - Big Data Analytics
+        - Health care
+        - Security
+        - Internet of Things
+        - Smart Grid
+        - Inclusive and Sharing Cities
+        - Sustainable Buildings
+        - Efficient Energy utilization
+        - Video Monitoring Systems
+        - Automation, Robotics, and Control
+        - Applications
+
+        Smart Mobility:
+        - Methodologies that help keep cities moving
+        - Traffic Management and Engineering
+        - Smart Public Transportation
+        - Self-Driving Vehicles
+        - Communication Logistics
+        - Parking Management Systems
+        - Cyber-Physical systems and Devices
+        - Economy of Smart Mobility
+        - Governance of Smart Mobility
+        - Cloud Computing Utilization
+        - Coordination Strategies
+
+
+PUBLISHER:
+     IEEE CPS: https://www.computer.org/conferences/cps 
+     All accepted papers will be published in the proceedings of the
+     2019 International Conference on Computational Science &
+     Computational Intelligence. Since its inception, all CSCI
+     proceedings have always been approved and included into IEEE
+     Xplore indexation, digital-library citation index databases.
+
+INSTRUCTIONS FOR SUBMISSION OF PAPERS FOR EVALUATION:
+
+   https://americancse.org/events/csci2019/paper_submission 
+
+TYPE OF SUBMISSIONS/PAPERS:
+
+  - Full/Regular Research Papers (maximum of 6 pages):
+    Regular Research Papers should provide detail original research
+    contributions. They must report new research results that
+    represent a contribution to the field; sufficient details and
+    support for the results and conclusions should also be provided.
+    The work presented in regular papers are expected to be at a
+    stage of maturity that with some additional work can be published
+    as journal papers.
+
+  - Short Papers (maximum of 4 pages):
+    Short papers report on ongoing research projects. They should
+    provide overall research methodologies with some results. The
+    work presented in short papers are expected to be at a stage of
+    maturity that with some additional work can be published as
+    regular papers.
+
+  - Poster Papers (maximum of 2 pages):
+    Poster papers report on ongoing research projects that are still
+    in their infancy (i.e., at very early stages). Such papers tend
+    to provide research methodologies without yet concrete results.
+
+
+DEADLINES - DATES:
+
+   October 21, 2019:     EXTENDED deadline for Submission of Papers
+                         https://american-cse.org/ 
+   October 28, 2019:     Notification of acceptance (+/- 2 days)
+   November 8, 2019:     Final papers & Author Registrations
+
+   December 5-7, 2019:   International Symposium on Internet of Things
+                         & Internet of Everything (CSCI-ISOT):
+            https://americancse.org/events/csci2019/Symposiums/csci_is 
+                         AND
+                         International Symposium on Smart Cities &
+                         Smart Mobility (CSCI-ISSC):
+            https://americancse.org/events/csci2019/Symposiums/csci_issc 
+                         together with all other affiliated research
+                         events; for more information, see
+                         https://americancse.org/events/csci2019 
+
+
+DEMOGRAPHY HISTORY (based on 2014 through 2019 participation data):
+
+   In the past, about 42% of the attendees have been from outside
+   USA; from 59 nations. 56% of registrants have been from academia,
+   32% from industry; 11% from government agencies and research labs;
+   and 1% unknown. The conference has had participants, speakers,
+   authors affiliated with over 154 different universities; including
+   many from the top 40 ranked institutions; major IT corporations,
+   including, Microsoft, Accenture, Google, Apple, Facebook, Oracle,
+   Amazon, Samsung Electronics, IBM, GE, BAE Systems, Hitachi, NTT,
+   Intel Corp, BTS Software Solutions, NetApp, Algorkorea Co.,
+   Paris Saclay, ElderSafe Technologies Inc., METRON (France),
+   Fraunhofer IKTS (Germany), Wipro Technologies, VNIIEF (Russia),
+   BTU Cottbus-Senftenberg (Germany), Synchrone Technologies (France),
+   Bosch Software Systems (Germany), Tata Consultancy Services, ...;
+   major corporations, including, Exxon Mobil, JPMorgan Chase,
+   Raytheon, PetroChina, GlaxoSmithKline, BCL Technologies, CERENA
+   Petroleum Group, Aerospace Electronic Technology (China), Max
+   Planck - Genetics (Germany), Tigard Research Institute, ENGIE
+   (France), Forschungszentrum Juelich (Germany), Secured Smart
+   Electric Vehicle (Korea), ...; government research agencies and
+   national laboratories, including, NSF, NIH National Institutes of
+   Health, US Air Force (multiple research labs), NSA National Security
+   Agency, Pacific Northwest National Lab, NASA, LLNL, Lawrence
+   Berkeley National Lab, Los Alamos National Lab, Cold Spring Harbor
+   Lab, US National Cancer Institute, Swedish Defence Research Agency,
+   NIST US National Institute of Standards and Technology, U.S.
+   Geological Survey, US National Library of Medicine, US Air Force
+   (multiple research labs), SPAWAR Systems Center Pacific, China NSF,
+   Russian Academy of Sciences, US Navy, Hasso Plattner Institute, US
+   Army, Korea Internet & Security Agency, Suez Canal Research Center,
+   Okinawa Bureau (Japan), Canadian Medical Protective Association,
+   Osong Medical Innovation Foundation (Korea), National Institute of
+   Informatics (Japan), ...; and three Venture Capitalists and nine
+   Intellectual Property attorneys.
+
+
+CONTACT:
+
+   Questions and inquiries should be sent to:
+   Conference Secretariat: cs@american-cse.org 
+
+Unsubscribe Instructions:
+   To opt-out, please reply with "unsubscribe" & provide the email address
+   you wish to be excluded from the listserv.

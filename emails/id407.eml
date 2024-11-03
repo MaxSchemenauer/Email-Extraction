@@ -1,0 +1,364 @@
+Received: from MN2PR08MB6205.namprd08.prod.outlook.com (2603:10b6:a03:54::30)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR02CA0053.NAMPRD02.PROD.OUTLOOK.COM; Mon, 26 Aug 2019 17:51:53 +0000
+Received: from CH2PR08CA0010.namprd08.prod.outlook.com (2603:10b6:610:5a::20)
+ by MN2PR08MB6205.namprd08.prod.outlook.com (2603:10b6:208:1a1::8) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2199.21; Mon, 26 Aug
+ 2019 17:51:50 +0000
+Received: from SN1NAM04FT053.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::206) by CH2PR08CA0010.outlook.office365.com
+ (2603:10b6:610:5a::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2199.17 via Frontend
+ Transport; Mon, 26 Aug 2019 17:51:50 +0000
+Authentication-Results: spf=pass (sender IP is 140.98.200.39)
+ smtp.mailfrom=bmsmail2.ieee.org; calpoly.edu; dkim=pass (signature was
+ verified) header.d=ieee.org;calpoly.edu; dmarc=pass action=none
+ header.from=ieee.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of bmsmail2.ieee.org
+ designates 140.98.200.39 as permitted sender)
+ receiver=protection.outlook.com; client-ip=140.98.200.39;
+ helo=smtppav03.ieee.org;
+Received: from smtppav03.ieee.org (140.98.200.39) by
+ SN1NAM04FT053.mail.protection.outlook.com (10.152.88.241) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2199.13 via Frontend Transport; Mon, 26 Aug 2019 17:51:49 +0000
+Received: from smtppav02.ieee.org (dct-lb-sweb-23.ieee.org [140.98.23.254])
+	by smtppav03.ieee.org (8.14.7/8.14.7) with ESMTP id x7QHpnLb000640
+	for <foaad@calpoly.edu>; Mon, 26 Aug 2019 13:51:49 -0400
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtppav03.ieee.org x7QHpnLb000640
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ieee.org; s=mail;
+	t=1566841909; bh=hCysODN/y+O/2hYHHILWuiw+IjHLrjjuLTlyayC7Do0=;
+	h=Date:To:Subject:From:Reply-To:From;
+	b=xtTKJwpX4L+YEquWkWyim1KsqZcPPOQR6LNjBzjpA/O0rKEyLDsSrkqTJZWVQSMxt
+	 HDlbXqySD4Fr1Hx62/XNmU6yP4nDJF2OK82tf9urK5Hit1i4tWeo8VDfcqWYppxPtE
+	 rZGfxL0j7jBJvVxWkwkZ3R+e9esHzPfPZFb//Wa8=
+Received: from sblpav23.ieee.org (dct-lb-sweb-23.ieee.org [140.98.23.254])
+	by smtppav02.ieee.org (8.14.7/8.14.7) with ESMTP id x7QHkD66018195
+	for <foaad@calpoly.edu>; Mon, 26 Aug 2019 13:51:48 -0400
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtppav02.ieee.org x7QHkD66018195
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ieee.org; s=mail;
+	t=1566841909; bh=hCysODN/y+O/2hYHHILWuiw+IjHLrjjuLTlyayC7Do0=;
+	h=To:Subject:From:Reply-To:From;
+	b=zLl/z2r4ReGDI1IuCHYi7eCMktaPv9lAXnNLsfHMbX+5DJFq/FPMZZCnDdMOiSzZ3
+	 W8XX8hnBhtFSCGj++b5l1T+pacq0P2nakyOF1KuxWpNKM4wER5iv99iAY35cEr0/IA
+	 kvj39SXdtZDkw0brS7UI02os8TwvBm3FEcShsQJQ=
+Date: Mon, 26 Aug 2019 13:51:48 -0400
+To: <foaad@calpoly.edu>
+Sender: "IEEE eNotice"<enotice@ieee.org>
+Subject: IEEE ISTAS 2019 (Boston, 15 - 16 November) - Call for Papers 23 August
+From: "IEEE eNotice"<enotice@ieee.org>
+Reply-To: no_reply_enotice@ieee.org
+Message-ID: <SEMA-CR-1-6H8OV96@bmsmail2.ieee.org>
+Content-Type: text/html;	charset="UTF-8"
+Content-Transfer-Encoding: Quoted-Printable
+Return-Path: SEMA-CR-1-6H8OV96@bmsmail2.ieee.org
+X-MS-Exchange-Organization-ExpirationStartTime: 26 Aug 2019 17:51:50.0454
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 21a0d094-5949-4ba7-2f55-08d72a4e1262
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:140.98.200.39;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(2980300002)(286005)(189003)(199004)(33656002)(336012)(75640400001)(4006050)(606006)(325944009)(356004)(14444005)(413944005)(966005)(23846002)(5820100001)(43066004)(50466002)(7596002)(7636002)(26005)(53416004)(486006)(476003)(126002)(956004)(575854001)(6306002)(733005)(236005)(246002)(2351001)(1096003)(23676004)(2171002)(8676002)(6916009)(36906005)(6392003)(7846003)(106002)(16003)(426003)(7066003)(225293001)(15398625002);DIR:INB;SFP:;SCL:1;SRVR:MN2PR08MB6205;H:smtppav03.ieee.org;FPR:;SPF:Pass;LANG:en;PTR:smtppav03.ieee.org;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT053.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 21a0d094-5949-4ba7-2f55-08d72a4e1262
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600166)(711020)(4605104)(4709080)(8001031)(1402095)(71702078);SRVR:MN2PR08MB6205;
+X-MS-TrafficTypeDiagnostic: MN2PR08MB6205:
+X-MS-Exchange-PUrlCount: 12
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Aug 2019 17:51:49.8403
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 21a0d094-5949-4ba7-2f55-08d72a4e1262
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR08MB6205
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.4730235
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2199.015
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TkpMdlFnc0d0TWRwcGFEdE1jMm14bkJta3FoMmczZmNCTlVsNGVNbUFCK09w?=
+ =?utf-8?B?ZnJxcHFGZzZqUE92eWxxNnpCdjBKVkZKOVlrbTlDQVlpTXB4U2N5N3gwNHJN?=
+ =?utf-8?B?andZc3JEcURaMlcyNm5MK2RCUWdBazBBU2dCWEt1T0NHdWF4dWFudVRjNE4v?=
+ =?utf-8?B?Rk9lcmRzbktRYXZtaDRsai8vSERSYUk2TnBOMWtUMGdYSXJOaVJFRHF4a1Q5?=
+ =?utf-8?B?cHJheDFUVGRRWUdBRTJGZnF1bm4zZkxhOHZSR0RSTk5yQi9QNmlCRjc3YTJD?=
+ =?utf-8?B?eUZycG8rd1J0QzN1WmhpYXQ5bG1lSnJWcUlOUWpENmh4eWRQd3VKWEhWcitG?=
+ =?utf-8?B?S3UzTXROWUpCbkJ4WFJPUjlRTU16UitNaks2MWcrQ0lxU3lkb05OajZlZzF0?=
+ =?utf-8?B?azQ1S0Q2RzR6RHd2QXVYcjBnamVNWlpNZ3RITHNtRytVMStTYURzWHBndURr?=
+ =?utf-8?B?eUhtTllDWXU0SXJZcDVHM0VQdGNVMzdITGZ3dDFTZVAzaWsyQnh3UktwN3RP?=
+ =?utf-8?B?M1licTM0bEV6NlhLV2x3clNLL3FNYlJMUXh3eDlPLzVvZWxzbkpaSEtMdFRn?=
+ =?utf-8?B?aGloL2E0Y09IeEFxeStQbzV1MUlqTXBiY0tMMEZTdFlxa0svbEluT2xsSDZj?=
+ =?utf-8?B?a1FxaTRGL0g0K05OZEFzelMzcUhxcmJaSldFWWtpaUx5RXVoQVNETHRvUjNz?=
+ =?utf-8?B?andWenppQWsxNFZqMzNwLzA5K3JoMDl2Y0JScDIrdHVkMXJvZDFBeEhzYUJs?=
+ =?utf-8?B?cTczMkF3c0RqWGxwSFd6S0FYbHJ6S3dmeEp4UXBsUkVqdlV5SlE3eW9VZFgv?=
+ =?utf-8?B?b2Q5a0lUYWxNN29XZDNIYXNFYmcvUm1yMXFVcExNU05VYXJHZGlhU2xMTjBL?=
+ =?utf-8?B?QWFIWkN5cHhNbkR2UzQ2bzlJVmZOaDhpcGRUSHhWcFBieDdSREJ1VDhpWGlk?=
+ =?utf-8?B?NThoZU5MdTF2ckRsRzdESk5KWi9XWHJNcTJUT3Byc3FUK1ZPWnlONjhreGlr?=
+ =?utf-8?B?NE1qaDEreU9ya0xUN3JuSExTZ1UwemNjbVJuUFlOSHRUTi9HSk0zemRjMS9K?=
+ =?utf-8?B?UktlTVRxU2RiNzREU3gzN2tnSkdCZE1ROW9YUmUwQ1JSMzU5dTBTMS96UUc0?=
+ =?utf-8?B?WnpBTTJuKzAycEZTU253akZsc2R0OUdCUlAwNTBkQnhyd0M4dGtabEhES1lv?=
+ =?utf-8?B?THRTZWJZQ0pLTXFWUlVCNWRuVG4yUmMvd2hUNnNCMDJYcW4vTmVuaUUvNlkr?=
+ =?utf-8?B?LytJZm1mdUhybExoOGh0T05NUzIrclNtc2NlRUwvWnlJS1doR3dxQVhLdVZa?=
+ =?utf-8?B?OGVzVkxJZG9hUm82NmptUGpRWTREckYzRDBSeUlDTDgxbHMvcHp5RUNtb1B6?=
+ =?utf-8?Q?yqJz9rxV8eLoKjYkeiOh3fcZNLRti8DY=3D?=
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+  <title>IEEE eNotice</title>
+
+ =20
+ =20
+  <style type=3D"text/css">
+<!--
+#entete {        text-align: center;=20
+}
+#image_centre {        text-align:center;=20
+}
+#logos {  float:right;=20
+  padding:10px;                 =20
+}
+#pied {        text-align:center;=20
+}
+#topics {        padding:5px;              =20
+}
+-->
+  </style>
+</head><body style=3D"font-family: Arial,Helvetica,sans-serif; font-size: 1=
+4px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"5" width=3D"800">
+
+  <tbody>
+    <tr>
+      <td><img alt=3D"Banner" src=3D"https://technologyandsociety.org/wp-co=
+ntent/uploads/ieee-ssit-logo.png"></td>
+    </tr>
+    <tr>
+      <td>
+      <p><br>
+	  Dear Colleagues,<br>
+	  <br>
+	  I would appreciate wide circulation of the IEEE ISTAS 2019 Call for Pape=
+rs=20
+	  (Deadline 30 August) to ensure a strong response.<br>
+	  <br>
+	  IEEE international Symposium on Technology and Society 2019<br>
+	  (Boston, 15 =E2=80=93 16 November)<br>
+	  https://attend.ieee.org/istas-2019/calls-for-papers/<br>
+	  <br>
+	  The IEEE Society for Social Implications of Technology (SSIT) invites yo=
+u=20
+	  to participate in its flagship event, the 2019 IEEE International=20
+	  Symposium on Technology and Society (ISTAS). IEEE ISTAS 2019 takes place=
+=20
+	  15- 16 November in Boston MA, hosted by the School of Engineering of Tuf=
+ts=20
+	  University, on its Medford Campus.<br>
+	  <br>
+	  IEEE ISTAS is an interdisciplinary forum for engineers and policy makers=
+,=20
+	  entrepreneurs and educators, philosophers and researchers, social=20
+	  scientists and technologists, practitioners and polymaths to collaborate=
+,=20
+	  exchange experiences, and discuss the social, cultural, ethical, economi=
+c=20
+	  and environmental implications of technology.<br>
+	  <br>
+	  Technical Co-Sponsors for IEEE ISTAS 2019 include IEEE-USA, Region 1 =E2=
+=80=93=20
+	  Northeastern USA, IEEE Boston Section, IEEE Standards Association, IEEE=
+=20
+	  Industrial Electronics Society, IEEE Reliability Society and IEEE=20
+	  Technology and Engineering Management Society. IEEE HAC is a support=20
+	  organisation.<br>
+	  <br>
+	  Keynotes<br>
+	  This year=E2=80=99s program includes Tom Coughlin (President, IEEE-USA) =
+and Babak=20
+	  Dastgheib-Beheshti, IEEE Region 1 Director.<br>
+	  <br>
+	  Plenary Panels<br>
+	  IEEE Division VI Society Presidents will share interdisciplinary insight=
+s=20
+	  and discuss collaboration opportunities.<br>
+	  <br>
+	  IEEE SSIT Standards Committee and IEEE Standards Association will share=
+=20
+	  insights into Creating Ethically Informed Standards.<br>
+	  <br>
+	  Call for Papers<br>
+	  The Call for Papers closes on Friday 23 August.=20
+	  https://attend.ieee.org/istas-2019/calls-for-papers/<br>
+	  <br>
+	  Paper submissions will follow a single stage review and acceptance=20
+	  process, should align with at least one of the topics listed below, be=20
+	  4000 =E2=80=93 5000 words max. on up to 6 pages, and comply with the IEE=
+E format=20
+	  and specifications as described in the ISTAS 2019 Paper Template.<br>
+	  <br>
+	  Author and co-author details should only be added in the online submissi=
+on=20
+	  form. No author details should be included in the pdf uploaded.<br>
+	  <br>
+	  We welcome proposals for papers, discussion panels and workshop sessions=
+=20
+	  focused on the relationship between technology, sustainable development=
+=20
+	  and social issues ranging from the economic and ethical to the cultural=
+=20
+	  and environmental.<br>
+	  <br>
+	  All papers must be original and not simultaneously submitted to another=
+=20
+	  conference or journal.<br>
+	  <br>
+	  Conference Themes include (but are not limited to)<br>
+	  =E2=80=A2 Sustainable Development (including ICT4D) and Humanitarian Tec=
+hnology<br>
+	  o Technological and Social Innovation supporting the UN SDGs, including=
+=20
+	  eAgriculture, eEducation, Energy and eHealth<br>
+	  o Collaborative Open Innovation and Multi-Stakeholder Co-Design<br>
+	  <br>
+	  =E2=80=A2 Ethics/Human Values<br>
+	  o Socio-Cultural Differences<br>
+	  o Ethical Standards, Autonomous Vehicles and Artificial Intelligence<br>
+	  o Ethical Use of Big Data, Blockchain, Human Genome Editing, IoT,=20
+	  Neurotechnology &amp; Open Data<br>
+	  o Balancing Personalisation with Personal Privacy<br>
+	  o Balancing National Security with Personal Privacy<br>
+	  <br>
+	  =E2=80=A2 Universal Access<br>
+	  o Digital Literacy and 21st Century Skills<br>
+	  o Current Challenges in Technology Policy<br>
+	  <br>
+	  =E2=80=A2 Societal Impacts (including traditionally disadvantaged commun=
+ities,=20
+	  e.g. indigenous peoples, women, youth, elderly and differently abled)<br=
+>
+	  <br>
+	  =E2=80=A2 Protecting the Planet<br>
+	  o Green Technology<br>
+	  o GEOValue<br>
+	  o Climate and Environment<br>
+	  o Sustainable Technologies<br>
+	  <br>
+	  A paper will only be published in the Conference Proceedings if the auth=
+or=20
+	  or a co-author registers for the Conference and presents the results=20
+	  during the event. Any author or co-author can only present one paper in=
+=20
+	  the program.<br>
+	  <br>
+	  Papers accepted for the Conference Proceedings and presented during the=
+=20
+	  conference by their author or co-author will be submitted for publicatio=
+n=20
+	  in IEEE Xplore.<br>
+	  <br>
+	  Workshop/Panel Submissions - Deadline 30 August<br>
+	  2 page panel and workshop submissions for a 90 minute parallel session=20
+	  should be sent by email to secretariat.istas@gmail.com up to 30 August.<=
+br>
+	  <br>
+	  Please outline the objectives, alignment with conference theme, presente=
+rs=20
+	  with short abstract and expected impact. There must be a minimum of thre=
+e=20
+	  presenters confirmed for each session, who are not also presenting paper=
+s.<br>
+	  <br>
+	  Please note that each presenter must register for the conference.<br>
+	  <br>
+	  We look forward to receiving your submissions. Please forward the call f=
+or=20
+	  papers to relevant colleagues and mailing lists.<br>
+	  <br>
+	  Best wishes,<br>
+	  <br>
+	  Paul<br>
+	  ------------------------<br>
+	  Prof. Paul M Cunningham<br>
+	  Conference Chair, IEEE ISTAS 2019<br>
+	  Director, IST-Africa Institute<br>
+	  President &amp; CEO, IIMC International Information Management Corporati=
+on Ltd<br>
+	  Candidate for IEEE Division VI Delegate-Elect/Director-Elect<br>
+	  Past President and VP Conferences, IEEE Society on Social Implications o=
+f=20
+	  Technology<br>
+	  Past-Chair, IEEE Humanitarian Activities Committee</p>
+	  <p></p>
+      </td>
+    </tr>
+      <tr>
+      <td bgcolor=3D"#069">
+      <p style=3D"font-size: x-small"><span style=3D"color: #FFFFFF">IEEE=20
+	  Reliability Society: https://rs.ieee.org/<br>
+	  IEEE IEEE Society on Social Implications of Technology:=20
+	  https://technologyandsociety.org/<br>
+	  IEEE TEMS: http://www.ieee-tems.org/<br>
+	  IEEE USA: https://ieeeusa.org/<br>
+	  <br style=3D"color: #FFFFFF">
+	  <br style=3D"color: #FFFFFF">
+	  To unsubscribe from all mailings, use your IEEE Account to update your=20
+	  &quot;<a href=3D"http://bmsmail2.ieee.org:80/ctd/lu?RID=3D1-6H8OV96&amp;=
+CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OID=3D1-6H428RQ&amp;CID=3D1-6H428=
+RH&amp;COID=3D1-6H8GKBS&amp;T=3Dhttps%3a%2f%2fwww.ieee.org%2fieee-privacypo=
+rtal%2fapp%2fibp&amp;Z=3D602f5d765327e628df087c61afdad39&amp;TN=3Dieee.org%=
+2fieee-privacyportal%2fapp%2fibp&amp;RT=3DClicked&#43;On&#43;URL"><span sty=
+le=3D"color: #FFFFFF">Communication=20
+	  Preferences</span></a>&quot; <br>
+	  <br>
+	  Unsubscribe from ISTAS eNotices: <a href=3D"http://bmsmail2.ieee.org:80/=
+ctd/listsub?RID=3D1-6H8OV96&amp;CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;O=
+ID=3D1-6H428RQ&amp;CID=3D1-6H428RH&amp;COID=3D1-6H8GKBS&amp;RT=3DUnsubscrib=
+e&#43;from&#43;List&amp;LC=3DENU&amp;LID=3D1-UJN8XL&amp;LN=3D1&#43;Subscrip=
+tion&#43;List">Unsubscribe from List</a><br>
+	  <br>
+	  Subscribe to ISTAS eNotices: <a href=3D"http://bmsmail2.ieee.org:80/ctd/=
+listsub?RID=3D1-6H8OV96&amp;CON=3D1-2DJZ3ZE&amp;PRO=3D&amp;AID=3D&amp;OID=
+=3D1-6H428RQ&amp;CID=3D1-6H428RH&amp;COID=3D1-6H8GKBS&amp;RT=3DSubscribe&#4=
+3;to&#43;List&amp;LC=3DENU&amp;LID=3D1-UJN8XL&amp;LN=3D1&#43;Subscription&#=
+43;List">Subscribe to List</a></span><br>
+	  </p>
+      </td>
+      </tr>
+	  <tr>
+      <td> <br>
+	  <br>
+	  <strong>IEEE</strong><br>
+	  445 Hoes Lane<br>
+	  Piscataway, NJ 08854 USA<br>
+	  &#43;1 800 678 4333 (toll free, US &amp; Canada)<br>
+	  &#43;1 732 981 0060 (Worldwide)<br>
+	  <br>
+	  For more information or questions regarding your IEEE membership or IEEE=
+=20
+	  Web Account, please direct your inquiries to the<span>&nbsp;</span><a hr=
+ef=3D"http://bmsmail2.ieee.org:80/ctd/lu?RID=3D1-6H8OV96&amp;CON=3D1-2DJZ3Z=
+E&amp;PRO=3D&amp;AID=3D&amp;OID=3D1-6H428RQ&amp;CID=3D1-6H428RH&amp;COID=3D=
+1-6H8GKBS&amp;T=3Dhttps%3a%2f%2fwww.ieee.org%2fabout%2fcontact.html&amp;Z=
+=3D5879b9fce66fac1f79de1d62bec99215&amp;TN=3Dieee.org%2fabout%2fcontact.htm=
+l&amp;RT=3DClicked&#43;On&#43;URL">IEEE=20
+	  Contact Center</a>.</td>
+      </tr>
+    <tr>
+      <td> &nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</body></html>

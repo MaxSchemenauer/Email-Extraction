@@ -1,0 +1,372 @@
+Received: from SN6PR08MB4990.namprd08.prod.outlook.com (2603:10b6:a03:100::33)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR08CA0020.NAMPRD08.PROD.OUTLOOK.COM; Tue, 28 May 2019 07:18:04 +0000
+Received: from SN6PR08CA0001.namprd08.prod.outlook.com (2603:10b6:805:66::14)
+ by SN6PR08MB4990.namprd08.prod.outlook.com (2603:10b6:805:6e::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1922.16; Tue, 28 May
+ 2019 07:17:57 +0000
+Received: from SN1NAM04FT047.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::207) by SN6PR08CA0001.outlook.office365.com
+ (2603:10b6:805:66::14) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1922.15 via Frontend
+ Transport; Tue, 28 May 2019 07:17:57 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ SN1NAM04FT047.mail.protection.outlook.com (10.152.89.225) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1922.16 via Frontend Transport; Tue, 28 May 2019 07:17:55 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x4S7DuNV004904
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Tue, 28 May 2019 10:13:56 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x4S7DtW0016501;
+	Tue, 28 May 2019 10:13:55 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Tue, 28 May 2019 10:13:55 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x4S7Dsxe001608
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Tue, 28 May 2019 10:13:54 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x4S0xcsx030196;
+	Tue, 28 May 2019 10:13:42 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          278382 for GAMESNETWORK@LISTSERV.UTA.FI; Tue, 28 May 2019 10:13:40
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4S7Degl017912 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Tue, 28 May 2019 10:13:40 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x4S7Dejt004870
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@uta.fi>; Tue, 28 May 2019 10:13:40 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x4S7DcpC031262 for
+          <GAMESNETWORK@uta.fi>; Tue, 28 May 2019 10:13:38 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Tue, 28 May 2019 10:13:38
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-oi1-f173.google.com (mail-oi1-f173.google.com
+          [209.85.167.173]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x4S7DbbY001451 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Tue, 28 May 2019 10:13:38 +0300
+Received: by mail-oi1-f173.google.com with SMTP id v2so13463365oie.6 for
+          <GAMESNETWORK@uta.fi>; Tue, 28 May 2019 00:13:38 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=3IV+KE9csqljzHUyKDlmIh8qUBzROb5PWQUDb9OLJ8E=;
+                         b=YyeX/mVYIH4/XR35sAzEaZNK6qXPul7RWmNTsUGlMdf3ziaGOEzbf7coiwmzlNpbVy
+                         N0vDUXGAmW3Tvf0BxlN+FLNowgaVBvTfksh7TXmgRF0FQi5rrv7PALg6Fop0B/S6dFvz
+                         uKrH+XdGlYJ7yshoVMjdwE39EtjT2Tdu2AutsVpuQdjLnYLtp9ompJJx4JyTVciuWVlP
+                         7dMfmNbOXCmbUMhWEcvy8y6HGF9Zud+Ih0ocburp0HyGWzHkW3o275SVBvHieK8eMUSu
+                         bXxr5RL39ajYojrAKzTMGBvvXL60cs64OwBUt4ils1DHVoFJ8zBUQrc7UEX8+D+yT0ih
+                         WyQA==
+X-Gm-Message-State: APjAAAVb6g4tRYmiboP5wW97nGZlHX6ZAIH3r1cVrOa7+Vsfsjtsr/vi
+                    /2VcnwUFBCXaImBLcIahZb8AU4i4Wzu6W7LSX3cHmAMRsIU=
+X-Google-Smtp-Source: APXvYqxkeLsBqvsVYq2g/ipSH5R3bN8pGHmEpjU2WDYOs1yh4xAdZ2dcbuBrvyikNZk//eypgiHQct93ACjPZwt2xzg=
+X-Received: by 2002:aca:af8d:: with SMTP id y135mr1852430oie.3.1559027616435;
+            Tue, 28 May 2019 00:13:36 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="00000000000045d0490589ed6731"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Tue, 28 May 2019 10:13:55 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_POLITE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,T_KAM_HTML_FONT_INVALID,URIBL_BLOCKED,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1020
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CAMdFa6tOASHpSSN3B4wxTW=bEtjZdz6G-t5Sm_dn0Qx2ahsWNg@mail.gmail.com>
+Date: Tue, 28 May 2019 14:13:28 +0700
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Mahli-Ann Butt <mahli.ann.butt@GMAIL.COM>
+Subject: [GAMESNETWORK] Reminder: CFP DiGRA 2019 =?UTF-8?Q?=E2=80=98Diversity_Workshop=3A_Social_Justice_Tactics_in_Tod?= =?UTF-8?Q?ay=E2=80=99s_LudoMix=E2=80=99?=
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 28 May 2019 07:17:56.4857
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 8c624212-cdc7-4743-0a75-08d6e33c9b70
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(3000300001)(12213003)(189003)(199004)(176002)(7192003)(87572001)(146002)(73392003)(16003)(1096003)(43066004)(966005)(413944005)(16799955002)(59536001)(305945005)(7596002)(7636002)(53386004)(14444005)(95326003)(15974865002)(6862004)(246002)(6666004)(356004)(8576002)(71190400001)(40036005)(33964004)(7846003)(75640400001)(476003)(126002)(6392003)(26005)(55176004)(498394004)(5660300002)(61266001)(42186006)(16586007)(5070765005)(21615005)(236005)(7066003)(6306002)(66346011)(606006)(336012)(84326002)(106002)(42882007)(76482006)(55446002)(4006050)(347745004)(82202003)(517774005)(1617600016)(486006)(15398625002);DIR:INB;SFP:;SCL:1;SRVR:SN6PR08MB4990;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT047.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: FlexTransport
+X-MS-Office365-Filtering-Correlation-Id: 8c624212-cdc7-4743-0a75-08d6e33c9b70
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:SN6PR08MB4990;
+X-MS-TrafficTypeDiagnostic: SN6PR08MB4990:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Oob-TLC-OOBClassifiers: OLM:8882;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 May 2019 07:17:55.8590
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 8c624212-cdc7-4743-0a75-08d6e33c9b70
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR08MB4990
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:09.0148761
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1922.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cFZ6QzJWbmdEUzcvcWhnZktrZTVudnYxSnR1UUZYdHM3cWk2QVg2Sm14R2Rl?=
+ =?utf-8?B?UUxLSEFQcURJbEUzWkN5dlVEZmdySUt1dWwzSjlvRHFuVElSM29XN0hqZkUw?=
+ =?utf-8?B?MEJaZ3E0ZzA2WkxjOWE3Yjl5OW9ydVM0TkpFYk1xdU1SMXVzUWdQQnpibmxW?=
+ =?utf-8?B?Ym8vOGxhL0xGT2h2d3VoV3pkcWY4M3BkYjFRSUJxZ0VqSXRaQkZsVDVYN1I0?=
+ =?utf-8?B?aXdvZHlyY1VBVWpOaFJhU1NPRFFkMnVEQ2VOcitsTUNEVVFyQWZHbDNKQlBO?=
+ =?utf-8?B?K2dnTTY5WlpobTJKMldnRFpLNy9aRk9EQVV1MUIrTGUrVXBBTXJlZTlpYStT?=
+ =?utf-8?B?dzJrMzRqQ3NDZ0NFaGFJNjF6OGIralNXdmlaTi9zY0Q3cGFYNW8weDZzaWp1?=
+ =?utf-8?B?OUs3MmVjdEl2UzhQSytBUlR2blNYK2FDTXhCcmVGNlNXVmhyeUFsQlBXakl5?=
+ =?utf-8?B?SkRLdDRBZ2ZZeUIrU0ZZK2krT0orV09RVTR2YXk1MVNKWnNhVWlrK2NrMHV1?=
+ =?utf-8?B?em5ZNGFmOUczdkxUbVVwaUNLVE85Y2ZoZUVvRjRpSHY3bEhGckVVRVJucjZt?=
+ =?utf-8?B?WFBkNXRPK2JlU1EwNzc3U3E3Q3JObzFEcDNLcFduOWlDSDMzUDZVL01SVjEx?=
+ =?utf-8?B?QjlaekVnZzFDZ2tYem9reWhtdDlYQTVGWFBKK25MSytJckwzMXd5NDJleVpE?=
+ =?utf-8?B?MjZqV1pxRW1IMHJxTVVUc2VjMTlEKzNqTVZ5ZmRjT2U3UmJaQmRNR3BQa2ds?=
+ =?utf-8?B?ODRhNkZIYnhwYjY0NWVGc1VzdFppTWd5NzhmK1ZpUzZTVmRyczNuL0RqMG5G?=
+ =?utf-8?B?T0RyYWZCV3JaV1hTMHNUVGsydi9YbkNqSC9jNUY5T014YWNjbXJTR1Z0ZnB6?=
+ =?utf-8?B?eG5kdER4bkJ6NGhqd0NUNEdZaklHVGZpYmJKZWVIRnh0Q3VXZUxQejRSRkNj?=
+ =?utf-8?B?WWh3b2ZtL2t1MTI2OFA4c2g5MktkMmhSZVpldjEvUVVPWXUyOWJEQmU3ZTcw?=
+ =?utf-8?B?YXBURXI3aXR2RllwOG53SUlrcnViV2Njc1Z1bHg2QUtDYlp6U2tKS0pOUGpJ?=
+ =?utf-8?B?enJEQ3VTbm8wOStDYWNCSGpETHNBR0kxVUlwUEx2NVBHeC9LWTJycEYwTzY4?=
+ =?utf-8?B?dlRXZkYxZDdxTE1SeHZUY3lqNXJmNk5JTUhxQXdTbElheXI4MThNdjZmNGtZ?=
+ =?utf-8?B?SkdmQUFyRFhHVU9uTzlCSmlrVUhmQ2JzU2FQRUJJL2hMZGZndVhaVTBZVE1V?=
+ =?utf-8?B?N3dqTTVVcEt6Tjg0QXd2SExwdVVjTXdKaHZ1TTgyZHR4bDVGbExKWDgrK1dC?=
+ =?utf-8?B?T0Q3Tk9uUldXaWJQS1I5bnVCcHhzUXgzRnp4UmxFWGFKMEhvTmxPNWdndUQr?=
+ =?utf-8?B?U3JOQ3AwUGNabWQ3dlBwRytnNFVTek94Yko0dzZ1cWZLenZiV3l1RENwUlM5?=
+ =?utf-8?B?VHlSc0lRVnlCbTRkZFNkcUdzQ0djVzBvOG5ScDJaQ0YvSmxjRnJ5aEVNNVZQ?=
+ =?utf-8?B?c3MrSCtNelJNZ1l5eWdQT3cxRk1LN0VnbURtZFowWldab0ZaeWZTNVE3VEQ1?=
+ =?utf-8?B?bktZeDdQRWU0cEdXQ2dlUE90Wi82OWV3K3lvL0hqZ0lJaFFPZ2VSKzZycUZ5?=
+ =?utf-8?Q?1FCGyGWmFjrOT3jV58FXWss1ehqhbuQk6WRlF0Lrwh5E=3D?=
+MIME-Version: 1.0
+
+--00000000000045d0490589ed6731
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear colleagues,
+
+This is a friendly reminder that the upcoming deadline for the DiGRA 2019
+=E2=80=98Diversity Workshop: Social Justice Tactics in Today=E2=80=99s Ludo=
+Mix=E2=80=99.
+
+Please follow the link for our full call for papers:
+http://www.digra2019.org/wp-content/uploads/2019/04/DiGRA_Diversity_Worksho=
+p_2019_CfP.pdf
+
+Please send your extended abstract of 1000 words (excluding references) to
+Mahli-Ann Butt and Darshana Jayemanne at digradiversityworkshop@gmail.com
+by June 1, 23:59 AEST.
+
+
+Please note that this is an open paper format and you are not required to
+use the DiGRA template for extended abstracts. Abstracts will be subject to
+peer-review by the DiGRA Diversity Working Group.
+
+
+Notifications of acceptance will be sent to participants on June 22.
+Camera-ready abstracts for the workshop are expected by July 15.
+
+Participation in the workshop is open to everyone!
+
+Important Dates:
+
+Extended Abstract Deadline: June 1, 23:59 AEST.
+
+Notice of Acceptance: June 22
+
+Camera Ready Abstracts: July 15
+
+Workshop Date: August 6
+
+On behalf of the DiGRA Diversity Working Group,
+--=20
+Best wishes,
+Mahli-Ann Butt
+sydney.academia.edu/MahliAnnButt
+Editor-in-Chief, *Press Start Journal
+<https://press-start.gla.ac.uk/index.php/press-start>*
+Diversity Officer, DiGRA <http://www.digra.org/>
+Doctoral Candidate, MECO
+<https://sydney.edu.au/arts/staff/profiles/mahli-ann.butt.655.php>, Univers=
+ity
+of Sydney
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--00000000000045d0490589ed6731
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><span id=3D"gmail-docs-internal-guid-067bab84-7fff-d859-165a=
+-90287749ac98"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;marg=
+in-bottom:0pt"><span style=3D"font-size:11pt;font-family:Arial;color:rgb(0,=
+0,0);background-color:transparent;font-variant-numeric:normal;font-variant-=
+east-asian:normal;vertical-align:baseline;white-space:pre-wrap">Dear collea=
+gues,</span><span style=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0=
+);background-color:transparent;font-variant-numeric:normal;font-variant-eas=
+t-asian:normal;vertical-align:baseline;white-space:pre-wrap"><br></span><sp=
+an style=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);background-co=
+lor:transparent;font-variant-numeric:normal;font-variant-east-asian:normal;=
+vertical-align:baseline;white-space:pre-wrap"><br></span><span style=3D"fon=
+t-size:11pt;font-family:Arial;color:rgb(0,0,0);background-color:transparent=
+;font-variant-numeric:normal;font-variant-east-asian:normal;vertical-align:=
+baseline;white-space:pre-wrap">This is a friendly reminder that the upcomin=
+g deadline for the DiGRA 2019 =E2=80=98Diversity Workshop: Social Justice T=
+actics in Today=E2=80=99s LudoMix=E2=80=99.</span><span style=3D"font-size:=
+11pt;font-family:Arial;color:rgb(0,0,0);background-color:transparent;font-v=
+ariant-numeric:normal;font-variant-east-asian:normal;vertical-align:baselin=
+e;white-space:pre-wrap"><br></span><span style=3D"font-size:11pt;font-famil=
+y:Arial;color:rgb(0,0,0);background-color:transparent;font-variant-numeric:=
+normal;font-variant-east-asian:normal;vertical-align:baseline;white-space:p=
+re-wrap"><br></span><span style=3D"font-size:11pt;font-family:Arial;color:r=
+gb(0,0,0);background-color:transparent;font-variant-numeric:normal;font-var=
+iant-east-asian:normal;vertical-align:baseline;white-space:pre-wrap">Please=
+ follow the link for our full call for papers: </span><a href=3D"http://www=
+.digra2019.org/wp-content/uploads/2019/04/DiGRA_Diversity_Workshop_2019_CfP=
+.pdf" style=3D"text-decoration-line:none"><span style=3D"font-size:11pt;fon=
+t-family:Arial;background-color:transparent;font-variant-numeric:normal;fon=
+t-variant-east-asian:normal;text-decoration-line:underline;vertical-align:b=
+aseline;white-space:pre-wrap">http://www.digra2019.org/wp-content/uploads/2=
+019/04/DiGRA_Diversity_Workshop_2019_CfP.pdf</span></a></p><br><p dir=3D"lt=
+r" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);background-color:tran=
+sparent;font-variant-numeric:normal;font-variant-east-asian:normal;vertical=
+-align:baseline;white-space:pre-wrap">Please send your extended abstract of=
+ 1000 words (excluding references) to Mahli-Ann Butt </span><span style=3D"=
+background-color:transparent;font-variant-numeric:normal;font-variant-east-=
+asian:normal;font-size:11pt;font-family:Arial;color:rgb(0,0,0);vertical-ali=
+gn:baseline;white-space:pre-wrap">and Darshana Jayemanne at </span><span st=
+yle=3D"background-color:transparent;font-variant-numeric:normal;font-varian=
+t-east-asian:normal;font-size:11pt;font-family:Arial;color:rgb(0,0,0);font-=
+weight:700;vertical-align:baseline;white-space:pre-wrap"><a href=3D"mailto:=
+digradiversityworkshop@gmail.com">digradiversityworkshop@gmail.com</a></spa=
+n><span style=3D"background-color:transparent;font-variant-numeric:normal;f=
+ont-variant-east-asian:normal;font-size:11pt;font-family:Arial;color:rgb(0,=
+0,0);vertical-align:baseline;white-space:pre-wrap"> by </span><span style=
+=3D"background-color:transparent;font-variant-numeric:normal;font-variant-e=
+ast-asian:normal;font-size:11pt;font-family:Arial;color:rgb(0,0,0);font-wei=
+ght:700;vertical-align:baseline;white-space:pre-wrap">June 1</span><span st=
+yle=3D"background-color:transparent;font-variant-numeric:normal;font-varian=
+t-east-asian:normal;font-size:11pt;font-family:Arial;color:rgb(0,0,0);verti=
+cal-align:baseline;white-space:pre-wrap">, 23:59 AEST.</span></p><p dir=3D"=
+ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span styl=
+e=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);background-color:tra=
+nsparent;font-variant-numeric:normal;font-variant-east-asian:normal;vertica=
+l-align:baseline;white-space:pre-wrap"><br></span><span style=3D"font-size:=
+11pt;font-family:Arial;color:rgb(0,0,0);background-color:transparent;font-v=
+ariant-numeric:normal;font-variant-east-asian:normal;vertical-align:baselin=
+e;white-space:pre-wrap">Please note that this is an open paper format and y=
+ou are not required to use the DiGRA template for extended abstracts. Abstr=
+acts will be subject to peer-review by the DiGRA Diversity Working Group.</=
+span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bot=
+tom:0pt"><span style=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);b=
+ackground-color:transparent;font-variant-numeric:normal;font-variant-east-a=
+sian:normal;vertical-align:baseline;white-space:pre-wrap"><br></span><span =
+style=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);background-color=
+:transparent;font-variant-numeric:normal;font-variant-east-asian:normal;ver=
+tical-align:baseline;white-space:pre-wrap">Notifications of acceptance will=
+ be sent to participants on June 22. Camera-ready abstracts for the worksho=
+p are expected by July 15.</span></p><br><p dir=3D"ltr" style=3D"line-heigh=
+t:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:11pt;font=
+-family:Arial;color:rgb(0,0,0);background-color:transparent;font-variant-nu=
+meric:normal;font-variant-east-asian:normal;vertical-align:baseline;white-s=
+pace:pre-wrap">Participation in the workshop is open to everyone!</span></p=
+><br><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:=
+0pt"><span style=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);backg=
+round-color:transparent;font-weight:700;font-variant-numeric:normal;font-va=
+riant-east-asian:normal;vertical-align:baseline;white-space:pre-wrap">Impor=
+tant Dates:</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0=
+pt;margin-bottom:0pt"><span style=3D"font-size:11pt;font-family:Arial;color=
+:rgb(0,0,0);background-color:transparent;font-variant-numeric:normal;font-v=
+ariant-east-asian:normal;vertical-align:baseline;white-space:pre-wrap">Exte=
+nded Abstract Deadline: </span><span style=3D"font-size:11pt;font-family:Ar=
+ial;color:rgb(0,0,0);background-color:transparent;font-weight:700;font-vari=
+ant-numeric:normal;font-variant-east-asian:normal;vertical-align:baseline;w=
+hite-space:pre-wrap">June 1</span><span style=3D"font-size:11pt;font-family=
+:Arial;color:rgb(0,0,0);background-color:transparent;font-variant-numeric:n=
+ormal;font-variant-east-asian:normal;vertical-align:baseline;white-space:pr=
+e-wrap">, 23:59 AEST.</span></p><p dir=3D"ltr" style=3D"line-height:1.38;ma=
+rgin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:11pt;font-family:A=
+rial;color:rgb(0,0,0);background-color:transparent;font-variant-numeric:nor=
+mal;font-variant-east-asian:normal;vertical-align:baseline;white-space:pre-=
+wrap">Notice of Acceptance: June 22</span></p><p dir=3D"ltr" style=3D"line-=
+height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:11pt=
+;font-family:Arial;color:rgb(0,0,0);background-color:transparent;font-varia=
+nt-numeric:normal;font-variant-east-asian:normal;vertical-align:baseline;wh=
+ite-space:pre-wrap">Camera Ready Abstracts: July 15</span></p><p dir=3D"ltr=
+" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);background-color:tran=
+sparent;font-variant-numeric:normal;font-variant-east-asian:normal;vertical=
+-align:baseline;white-space:pre-wrap">Workshop Date: August 6</span></p><br=
+></span><div>On behalf of the DiGRA Diversity Working Group,</div>-- <br><d=
+iv dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"=
+><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr" s=
+tyle=3D"color:rgb(136,136,136)"><div dir=3D"ltr"><div dir=3D"ltr"><div><fon=
+t face=3D"arial, helvetica, sans-serif">Best wishes,</font></div><div><font=
+ face=3D"arial, helvetica, sans-serif">Mahli-Ann Butt<br></font><a href=3D"=
+https://sydney.academia.edu/MahliAnnButt" style=3D"color:rgb(17,85,204)" ta=
+rget=3D"_blank"><font face=3D"arial, helvetica, sans-serif">sydney.academia=
+.edu/MahliAnnButt</font></a>&nbsp;&nbsp;<font face=3D"arial, helvetica, san=
+s-serif"><br></font><span style=3D"font-family:arial,helvetica,sans-serif">=
+Editor-in-Chief,</span>&nbsp;<font face=3D"arial, helvetica, sans-serif"><i=
+><a href=3D"https://press-start.gla.ac.uk/index.php/press-start" style=3D"c=
+olor:rgb(17,85,204)" target=3D"_blank">Press Start Journal</a></i></font></=
+div><div><span style=3D"font-family:arial,helvetica,sans-serif">Diversity O=
+fficer,&nbsp;</span><font face=3D"arial, helvetica, sans-serif"><a href=3D"=
+http://www.digra.org/" style=3D"color:rgb(17,85,204)" target=3D"_blank">DiG=
+RA</a></font></div><div><font face=3D"arial, helvetica, sans-serif">Doctora=
+l Candidate,&nbsp;<a href=3D"https://sydney.edu.au/arts/staff/profiles/mahl=
+i-ann.butt.655.php" style=3D"color:rgb(17,85,204)" target=3D"_blank">MECO</=
+a>,&nbsp;</font><span style=3D"font-family:arial,helvetica,sans-serif">Univ=
+ersity of Sydney</span></div></div></div></div></div></div></div></div></di=
+v></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--00000000000045d0490589ed6731--

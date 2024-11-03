@@ -1,0 +1,439 @@
+Received: from BY5PR08MB6294.namprd08.prod.outlook.com (2603:10b6:a03:40::16)
+ by BY5PR08MB6198.namprd08.prod.outlook.com with HTTPS via
+ BYAPR04CA0003.NAMPRD04.PROD.OUTLOOK.COM; Fri, 11 Oct 2019 12:30:33 +0000
+Received: from CY4PR08CA0043.namprd08.prod.outlook.com (2603:10b6:903:151::29)
+ by BY5PR08MB6294.namprd08.prod.outlook.com (2603:10b6:a03:1eb::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.16; Fri, 11 Oct
+ 2019 12:30:31 +0000
+Received: from SN1NAM04FT011.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4c::205) by CY4PR08CA0043.outlook.office365.com
+ (2603:10b6:903:151::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2347.17 via Frontend
+ Transport; Fri, 11 Oct 2019 12:30:31 +0000
+Authentication-Results: spf=pass (sender IP is 168.245.124.4)
+ smtp.mailfrom=sendgrid.net; calpoly.edu; dkim=pass (signature was verified)
+ header.d=sendgrid.net;calpoly.edu; dmarc=none action=none
+ header.from=athenianmeeting.com;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of sendgrid.net designates
+ 168.245.124.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=168.245.124.4; helo=xvfrtchq.outbound-mail.sendgrid.net;
+Received: from xvfrtchq.outbound-mail.sendgrid.net (168.245.124.4) by
+ SN1NAM04FT011.mail.protection.outlook.com (10.152.88.104) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2347.16 via Frontend Transport; Fri, 11 Oct 2019 12:30:31 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.net; 
+	h=content-type:from:mime-version:reply-to:to:subject:list-unsubscribe; 
+	s=smtpapi; bh=ZrRhfQpYFjxfjwYFPp2qrR5iHOM=; b=fVoEhYnQeFG++qdINJ
+	by3I0JQ50DqDWlstzQBtretjyJSVKkDiM9AwSHOjRFcFdl4ejGw7jK/mqvb32xUt
+	goP70ezFas8Tdz2fe+ldvBGBP1l2eawHEJj4quVtDFLhf+YuujrSLewvCOrsnv4F
+	8vt/fU/lGTbmBEAJhC9jpDRew=
+Received: by filter0147p3mdw1.sendgrid.net with SMTP id filter0147p3mdw1-16694-5DA06136-4B
+        2019-10-11 11:02:14.316477471 +0000 UTC m=+132165.754534908
+Received: from MTI4NzQ5OTg (ec2-35-174-203-189.compute-1.amazonaws.com [35.174.203.189])
+	by ismtpd0056p1iad1.sendgrid.net (SG) with HTTP id FnXUmE7-RGKJW9kEBEgNtQ
+	Fri, 11 Oct 2019 11:02:14.292 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=7f770473b2f36d86eaf2617ddf34ae529f437078eb63febc346cdb97e0be
+Date: Fri, 11 Oct 2019 11:02:30 +0000 (UTC)
+From: "Dr Gregory T. Papanikos" <atiner@athenianmeeting.com>
+Reply-To: atiner@athenianmeeting.com
+To: foaad@calpoly.edu
+Message-ID: <FnXUmE7-RGKJW9kEBEgNtQ@ismtpd0056p1iad1.sendgrid.net>
+Subject: 2020 Computer Conference Athens Greece (Reminder)
+List-Unsubscribe: <mailto:unsubscribe@sendgrid.net?subject=https://u12874998.ct.sendgrid.net/wf/unsubscribe*q*upn=7zRxtiYDTGBGqDWlp0jwu-2FeuS-2FFLYAlhcXQufkROEAWrOHcbcaF7Pu1l7EqL3GGj50wMHkjEqpOyu2-2BaOFRLITuWoZ-2BeOZafMgDhaOsdRW4ll0H7gbTLOoxTIUUpCBal3o0LLmo-2BbEv1JgoNpAf755XTQe8ASYqxE1nF-2FR157bR8140z0wVzjA1RQWNl9JExrcp-2B3QPpxPNB1hk4g1XGhbgGQlv2fMX96JyeVSo0NAEimBBZSccMK6-2BvO2lLbF2vr2q5B3KgsGwausfRWz43T68jZPYrrsr6u3OMrv5oUsQFDNfUb0hyW4ovZFSXPzl362Savk1fKorkDgN7KUhRjO4P-2Fo-2FfuXq-2Fez5JSOpCeHUXbQhX0AWB1BRSbReJLluQocxJnkj9KhmVzmXJJYWBgBquZeBhw97nAnb7i-2Bb3Yz-2FFnaSU5wuExT3GZrEyQa5d47xigPYyUWoQXm6pDUVJGfglW1Y7VrxhI9NU4biQVCeqUvPhv8U25zTuKh-2BTbIp0i8ZjJ9lwZGxNOHpbeh3qK2b1FpWxpdOzIPmf7-2BKe3PqToZ4MnCF2ZJMBmFrwVwvDOCebeg9mCIAXBqlMS0-2FrwD6lWBnWtM0FgrYIqg-2FiZDZaYvTpQBccsIPWWNHnl1mI>
+X-SG-EID: 7hD2CnSvqiJDLto7n5DrawagaUNn6UdwaXUXEKlUI5knpFCKrGsgAhDqs4Li0PYZ361A0B39r1oRvw
+ hXzD9tLDApdokK81n1gMojfogKbWUDIRYueGv6rz+IAyyOAaiseDZiJpgD1rp0EysHG3vqIu4iId0x
+ TiBLex6leEX5xzqTEHP+ZGMljRIbCcZQKEFhIodf/quWru4yfKNJNnxxr6f3h0ezxgeJuuCurNb8fX
+ B+7mQPSqUyhslFoPImugNM
+X-SG-ID: mtyTPPLCA7Tot5V2M8OAQjyUAcq74ScifO0U8iQhxuLjfTTYA4Ch48oadvI6bScibQ7ghHnLULR+84
+ PbG1gi0cyNyleP4agJmGZDlUwhSY7Oi4191kW4ZgEFFmpyWcmj6NtpAGhyYZapAGflWXFc34Pqz3xY
+ 8XxmDstUUxkWSL1+nqBq2JlQ1AiaRhHO2Ji1POamYvgEu3AnXmqhzEYPnTCsoW+GRFAq4GugSP3f0Z
+ G7h4fM2iRxb4o+PThRlxCn+IWEZk52SSHJ/+2Y3OAD8A11PxqONKi/V06BpMurnbC0EDpoBoxu7WW+
+ t+5GgpEDI3Rr7+UfXWSMPZfUmhE9dg1S6HvglbZ9YGBXQ6zZ11bC1JaSmntRXF7xhUNBkew+YIAPgV
+ K3xX5lzZTCliv+H3cwvKK+xT/ix5hcCho/I5w=
+Return-Path: bounces+12874998-c626-foaad=calpoly.edu@sendgrid.net
+X-MS-Exchange-Organization-ExpirationStartTime: 11 Oct 2019 12:30:31.4876
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 7ebb6ec3-beef-40dd-3667-08d74e46ce78
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:168.245.124.4;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(10001);DIR:INB;SFP:;SCL:5;SRVR:BY5PR08MB6294;H:xvfrtchq.outbound-mail.sendgrid.net;FPR:;SPF:None;LANG:en;CAT:SPOOF;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT011.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 7ebb6ec3-beef-40dd-3667-08d74e46ce78
+X-MS-TrafficTypeDiagnostic: BY5PR08MB6294:
+X-MS-Exchange-PUrlCount: 2
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 6
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 11 Oct 2019 12:30:31.3795
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7ebb6ec3-beef-40dd-3667-08d74e46ce78
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY5PR08MB6294
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6198041
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2347.014
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:1;ex:0;auth:0;dest:J;ENG:(20160513016)(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?U0FZVjl0T0RjbEowcDdnemNqSWRKTUtxVmJkRUFIalMvT21TQVNpMzBReVg5?=
+ =?utf-8?B?QlhxT3d6MktLb283VUpHNFUveFFpcFdmTUc1eWdJTUlBOE1tUnpDNkNhWWV0?=
+ =?utf-8?B?TmpFa3F5OWdERUJhMWl2d1hKS3psemNMU1BBUzRCMmtRcURSMmZtQll2TlNj?=
+ =?utf-8?B?N2ZGZGZ5Vk1oQmtOSUlpdS80WWNKVUVlQTNjMW0vTDBjU1RwUWdUNWRjUk81?=
+ =?utf-8?B?aVlHWUhyNC9yS2ljeXFCSUI1ZEhxU2o0VHl5UXlJOEhEVWVCckJma3lqVTVB?=
+ =?utf-8?B?bWpMbEc2cU8zVS9jRmNUcWE1dlBUSnpSNXpvdUlhVlFsK3JGdlk4bndvVUps?=
+ =?utf-8?B?MzdhbWdRV1ZObXF4KzhSdWFQUGNIUHBkaFJ3UkxKT3hjbER4OEJMRXEyazU3?=
+ =?utf-8?B?cVBzUG9ZamRUd0RHTUMrNVdOS216bEZJWEJObFkxM0s5VTNERVREN09LQzUy?=
+ =?utf-8?B?SWNybUxmakVsNFdGbGNQWVhCVCtJcjFuZkJHOE15QTNFOGE2NEhIeEVKbkdk?=
+ =?utf-8?B?SFJHTzJDczRvZ0tvdDA0R1hiY2h3NDhLV2Q5eGZqNGpFMUFlM2pGMHIyNWo5?=
+ =?utf-8?B?ejQvdjRaTm1rbUl6RkpoM3JoRytHcitFdE83WnlGM1IybTN5elgwRmlzbVow?=
+ =?utf-8?B?V2JVMlErcjhVRlltaWNWbmJLcVcrNCtSbTRRdW8xRFBzcFcyMUpqNFZzVlIw?=
+ =?utf-8?B?OUpzbXVmeUZNbWNlV01CbkM5L3lNUGV6VmlRMmcrOUV5MW4rRnM4OVFYbjdF?=
+ =?utf-8?B?aTVuWk1iSVV1L2Z6Q0pRMkxXUnF2S1l5Q1AxVVNvWVphbTNrQzdrN1djdWl3?=
+ =?utf-8?B?TlFIQTBIVUc4ZDNUKzVyNDZScERsV0tNYVg0c1dCbU1wZHJielFyVW9xdE5p?=
+ =?utf-8?B?aUIyRlJmd0h5RmlQQzNsbUJhampQOWRRT1NpRlJ0WFlkL28waEYyRzRDWjN3?=
+ =?utf-8?B?RG9RbGRycFMxVE5sblBpOEp3N0dSdDk3TDNkWUhaWmJsWHU4bWtWZm11bGwy?=
+ =?utf-8?B?a0pjZTRoL1liVDV6dTBtZUlTZnQ4YlBHS0F1V2NqbjF5RmpZNUxmbmpWL0tE?=
+ =?utf-8?B?elovZXJ0WS9EV1RBSzVWdENiS2Y3YzE3NmU1VmM5TXByeS92OUN4d2U1eVU4?=
+ =?utf-8?B?c09kSjZML01zVDZvRHNTT3hiVWovTDRDYUhPYkFEbXJmN2VjeVJUK3pydDFN?=
+ =?utf-8?B?bWFJZ0JuRmMzM0FuSUtMOHl1ZGgzenZKc2NZVit4ODJGV0g4Sk5LS0U5RXgr?=
+ =?utf-8?B?NlBBZkxuNGtrRTBaNnVBQy9jbEx3SU9iSjdEbEsrS2ZrZXlJZWFFenF5M2Fi?=
+ =?utf-8?B?Q2RZWXpuT3J5UlpKVzJ3VmZyNEVtRDNBOVRteFM4NEdCRStqRXBDSGFpaUw2?=
+ =?utf-8?B?RWY4dkFtNkV5Z2tTaVVIWGRDT0ZqNG8yOTNlc0pub1ZSZFhKZ3VJdGdxWko4?=
+ =?utf-8?B?dEtxeGNRRktwZnZEWDk1bklVNUZYVXZkNTFOMG9PNHdJaWRuVHNkc3pqMXVV?=
+ =?utf-8?B?M0NaQ21qdWJzb3Y1M1B2d2RTT01WbEEweWNQd0R5Q3RBWW51QVQ5SjhUUGJM?=
+ =?utf-8?B?QlI3NzJycnB4Tmg0aTh2U2o3c1dESHpyeFFhcUdkd0daUXoyRFVBQllEYm9V?=
+ =?utf-8?B?cjZCZWVBMWJSSFEyYjlZNllYenQ3U2huZHZIWk5jelVoaVJBd2pHc29DWnc4?=
+ =?utf-8?B?Z29sK3hPTkZwcm1SeEc3WlhQYVhvUFdhNnk1SndQdG5NcnFEbGp4Sm05TlJN?=
+ =?utf-8?B?RXV1TXdraGVhM3NpeER4dVZGdWxPMENBUjY2YVlpYUpiandGK0t6NHg1Q1dQ?=
+ =?utf-8?B?QUc1VldlLy9nMUZYUitXQStta0V5NGdUTkhoeDBUZ2Q0NHdXS3puRW1YWE5x?=
+ =?utf-8?B?Y2hvdEZYQkUyY2hiTWR2d0lFNGFveWdmQ1c1aFh5Y21iVDFpbGhzS3BXcEdw?=
+ =?utf-8?B?RmJMOFJQVHhZaS8rL3NIU2cvb1ZMS0ltOXh0OVFWaW5rMndqb0V3RnFGUWlk?=
+ =?utf-8?B?OTdTaDRmT0lLcE8wU0RBVmlmWEhhS0lIczdCaWlienlxdjk4TU05K2krUHdD?=
+ =?utf-8?B?VG1XeStmL1ZNei9Ib1V0dVJMMmgzUWkvY0tnbTRnS3FwMjkzY3F6YzF1WEdH?=
+ =?utf-8?B?cFNvQWRzVERhVkc5WmZCbnJmaVpLbks2OE9LTVdDQkVUc1ptM0IybktOMVdD?=
+ =?utf-8?B?Zmw3dEZsNDlVbjNsSnE2SDAyMXZ2TzIzekdGMUtmT3IrOUlERGxianlJSG9J?=
+ =?utf-8?B?dEpweUNYRkp0MGo2d2RlZjhCZFJpTjJhRnF4RHNzbHNnSStqZXk1d2M1SlBS?=
+ =?utf-8?B?WjNlMis3eGdCZjB3L2pZNW4wZkVLMk1qb2ZwOURoV1VOMXJ2aS8ySzBmSEt1?=
+ =?utf-8?B?bTRRVXhNZEpkY0htRGFiQVRucTQ0d2ErbkNSL2hRZzE0YWRBUUdkbHlFNm81?=
+ =?utf-8?B?YmtBWHB5YW5ieEpla2tXVDhoYmNnNDZWYmltMUMxQTQ0OEFQRlRNc3B5UVhz?=
+ =?utf-8?B?QjdiMGRISUZEV0xlVEJxWEM3WElJNFRkYmRKZFZRWGR3PT0=?=
+MIME-Version: 1.0
+
+--7f770473b2f36d86eaf2617ddf34ae529f437078eb63febc346cdb97e0be
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+2020 Computer Conference Athens Greece (Reminder)
+
+Dear Colleague,
+
+I would like to remind you that the *abstract submission deadline* for part=
+icipation at the *16th Annual International Conference on Information Techn=
+ology & Computer Science* , *18-21 May 2020, Athens, Greece* , is this comi=
+ng Monday, *14 October 2019*. If you need more information, please let me k=
+now, and our administration will send it to you, including the link to the =
+website, and abstract submission form.
+
+My best regards,
+Gregory
+____________________________________________________________
+*Dr. Gregory T. Papanikos*
+President, ATINER
+Honorary Professor, University of Stirling, UK
+Professor, MLC Management & Law College of Ljubljana, Slovenia
+
+Dr Gregory T. Papanikos
+
+Athens Conference , Athens , 10671
+
+Unsubscribe (  https://u12874998.ct.sendgrid.net/wf/unsubscribe?upn=3D7zRxt=
+iYDTGBGqDWlp0jwu-2FeuS-2FFLYAlhcXQufkROEAWrOHcbcaF7Pu1l7EqL3GGj50wMHkjEqpOy=
+u2-2BaOFRLITuWoZ-2BeOZafMgDhaOsdRW4ll0H7gbTLOoxTIUUpCBal3o0LLmo-2BbEv1JgoNp=
+Af755XTQe8ASYqxE1nF-2FR157bR8140z0wVzjA1RQWNl9JExrcp-2B3QPpxPNB1hk4g1XGhbgG=
+Qlv2fMX96JyeVSo0NAEimBBZSccMK6-2BvO2lLbF2vr2q5B3KgsGwausfRWz43T68jZPYrrsr6u=
+3OMrv5oUsQFDNfUb0hyW4ovZFSXPzl362Savk1fKorkDgN7KUhRjO4P-2Fo-2FfuXq-2Fez5JSO=
+pCeHUXbQhX0AWB1BRSbReJLluQocxJnkj9KhmVzmXJJYWBgBquZeBhw97nAnb7i-2Bb3Yz-2FFn=
+aSU5wuExT3GZrEyQa5d47xigPYyUWoQXm6pDUVJGeT0Nkby3C63Oh1rx3DNaSYb-2BozgG43rNf=
+AiwsoJ5T06u8cyLBtowvZ8ac4YYzKJVaU9fiLWtNr1SL8camZ5l5vdqVyfMEYRcfK-2BRvgSbdT=
+VyJZDQYCUCPEInr76VhRq-2FAGWlmzMM4uBf4AGWWtL91SZ8QuszGxCg6PM8tefKvzV  )=
+
+--7f770473b2f36d86eaf2617ddf34ae529f437078eb63febc346cdb97e0be
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html data-editor-version=3D"2" class=3D"=
+sg-campaigns" xmlns=3D"http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1, minimum-scale=3D1, maximum-scale=3D1">
+      <!--[if !mso]><!-->
+      <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">
+      <!--<![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+  <style type=3D"text/css">
+    body {width: 600px;margin: 0 auto;}
+    table {border-collapse: collapse;}
+    table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+    img {-ms-interpolation-mode: bicubic;}
+  </style>
+<![endif]-->
+      <style type=3D"text/css">
+    body, p, div {
+      font-family: arial,helvetica,sans-serif;
+      font-size: 14px;
+    }
+    body {
+      color: #000000;
+    }
+    body a {
+      color: #1188E6;
+      text-decoration: none;
+    }
+    p { margin: 0; padding: 0; }
+    table.wrapper {
+      width:100% !important;
+      table-layout: fixed;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    img.max-width {
+      max-width: 100% !important;
+    }
+    .column.of-2 {
+      width: 50%;
+    }
+    .column.of-3 {
+      width: 33.333%;
+    }
+    .column.of-4 {
+      width: 25%;
+    }
+    @media screen and (max-width:480px) {
+      .preheader .rightColumnContent,
+      .footer .rightColumnContent {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent div,
+      .preheader .rightColumnContent span,
+      .footer .rightColumnContent div,
+      .footer .rightColumnContent span {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent,
+      .preheader .leftColumnContent {
+        font-size: 80% !important;
+        padding: 5px 0;
+      }
+      table.wrapper-mobile {
+        width: 100% !important;
+        table-layout: fixed;
+      }
+      img.max-width {
+        height: auto !important;
+        max-width: 100% !important;
+      }
+      a.bulletproof-button {
+        display: block !important;
+        width: auto !important;
+        font-size: 80%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .columns {
+        width: 100% !important;
+      }
+      .column {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  </style>
+      <!--user entered Head Start--><!--End Head user entered-->
+    </head>
+    <body>
+      <center class=3D"wrapper" data-link-color=3D"#1188E6" data-body-style=
+=3D"font-size:14px; font-family:arial,helvetica,sans-serif; color:#000000; =
+background-color:#FFFFFF;">
+        <div class=3D"webkit">
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%" class=3D"wrapper" bgcolor=3D"#FFFFFF">
+            <tbody><tr>
+              <td valign=3D"top" bgcolor=3D"#FFFFFF" width=3D"100%">
+                <table width=3D"100%" role=3D"content-container" class=3D"o=
+uter" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                  <tbody><tr>
+                    <td width=3D"100%">
+                      <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                        <tbody><tr>
+                          <td>
+                            <!--[if mso]>
+    <center>
+    <table><tr><td width=3D"600">
+  <![endif]-->
+                                    <table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%; max-width:600px;" alig=
+n=3D"center">
+                                      <tbody><tr>
+                                        <td role=3D"modules-container" styl=
+e=3D"padding:0px 0px 0px 0px; color:#000000; text-align:left;" bgcolor=3D"#=
+FFFFFF" width=3D"100%" align=3D"left"><table class=3D"module preheader preh=
+eader-hide" role=3D"module" data-type=3D"preheader" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"display: none !important;=
+ mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height:=
+ 0; width: 0;">
+    <tbody><tr>
+      <td role=3D"module-content">
+        <p>2020 Computer Conference Athens Greece (Reminder)</p>
+      </td>
+    </tr>
+  </tbody></table><table class=3D"module" role=3D"module" data-type=3D"text=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"=
+table-layout: fixed;" data-muid=3D"defff444-bd35-4b0d-9010-4f1364edaf21">
+    <tbody>
+      <tr>
+        <td style=3D"padding:18px 0px 18px 0px; line-height:22px; text-alig=
+n:inherit;" height=3D"100%" valign=3D"top" bgcolor=3D"" role=3D"module-cont=
+ent"><div><div style=3D"font-family: inherit; text-align: justify"><span st=
+yle=3D"color: #202020; font-size: 14px; font-family: times new roman,times,=
+serif">Dear Colleague,</span><span style=3D"font-size: 14px; font-family: t=
+imes new roman,times,serif"><br>
+&nbsp;</span></div>
+<div style=3D"font-family: inherit; text-align: justify"><span style=3D"col=
+or: #202020; font-size: 14px; font-family: times new roman,times,serif">I w=
+ould like to remind you that the </span><span style=3D"color: #202020; font=
+-size: 14px; font-family: times new roman,times,serif"><strong>abstract sub=
+mission deadline</strong></span><span style=3D"font-size: 14px; font-family=
+: times new roman,times,serif"> for participation at the </span><span style=
+=3D"font-size: 14px; font-family: times new roman,times,serif"><strong>16th=
+ Annual International Conference on Information Technology &amp; Computer S=
+cience</strong></span><span style=3D"color: #202020; font-size: 14px; font-=
+family: times new roman,times,serif">, </span><span style=3D"color: #202020=
+; font-size: 14px; font-family: times new roman,times,serif"><strong>18-21 =
+May 2020, Athens, Greece</strong></span><span style=3D"color: #202020; font=
+-size: 14px; font-family: times new roman,times,serif">, is this coming Mon=
+day,</span><span style=3D"color: #202020; font-size: 14px; font-family: tim=
+es new roman,times,serif"><strong> 14 October 2019</strong></span><span sty=
+le=3D"color: #202020; font-size: 14px; font-family: times new roman,times,s=
+erif">. If you need more information, please let me know, and our administr=
+ation will send it to you, including the link to the website, and abstract =
+submission form.</span><span style=3D"font-size: 14px; font-family: times n=
+ew roman,times,serif"><br>
+<br>
+</span><span style=3D"color: #202020; font-size: 14px; font-family: times n=
+ew roman,times,serif">My best regards,&nbsp;</span><span style=3D"font-size=
+: 14px; font-family: times new roman,times,serif"><br>
+</span><span style=3D"color: #202020; font-size: 14px; font-family: times n=
+ew roman,times,serif">Gregory&nbsp;</span><span style=3D"font-size: 14px; f=
+ont-family: times new roman,times,serif"><br>
+</span><span style=3D"color: #202020; font-size: 14px; font-family: times n=
+ew roman,times,serif">_____________________________________________________=
+_______&nbsp;</span><span style=3D"font-size: 14px; font-family: times new =
+roman,times,serif"><br>
+</span><span style=3D"color: #202020; font-size: 14px; font-family: times n=
+ew roman,times,serif"><strong>Dr. Gregory T. Papanikos&nbsp;</strong></span=
+><span style=3D"font-size: 14px; font-family: times new roman,times,serif">=
+<br>
+</span><span style=3D"color: #202020; font-size: 14px; font-family: times n=
+ew roman,times,serif">President, ATINER&nbsp;</span><span style=3D"font-siz=
+e: 14px; font-family: times new roman,times,serif"><br>
+</span><span style=3D"color: #202020; font-size: 14px; font-family: times n=
+ew roman,times,serif">Honorary Professor, University of Stirling, UK</span>=
+<span style=3D"font-size: 14px; font-family: times new roman,times,serif"><=
+br>
+</span><span style=3D"color: #202020; font-size: 14px; font-family: times n=
+ew roman,times,serif">Professor, MLC Management &amp; Law College of Ljublj=
+ana, Slovenia</span><span style=3D"font-size: 14px; font-family: times new =
+roman,times,serif">&nbsp;</span></div><div></div></div></td>
+      </tr>
+    </tbody>
+  </table><div data-role=3D"module-unsubscribe" class=3D"module" role=3D"mo=
+dule" data-type=3D"unsubscribe" style=3D"color:#444444; font-size:12px; lin=
+e-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid=
+=3D"4e838cf3-9892-4a6d-94d6-170e474d21e5">
+                                            <div class=3D"Unsubscribe--addr=
+essLine"><p class=3D"Unsubscribe--senderName" style=3D"font-size:12px; line=
+-height:20px;">Dr Gregory T. Papanikos</p><p style=3D"font-size:12px; line-=
+height:20px;"><span class=3D"Unsubscribe--senderAddress">Athens Conference<=
+/span>, <span class=3D"Unsubscribe--senderCity">Athens</span>, <span class=
+=3D"Unsubscribe--senderState"></span> <span class=3D"Unsubscribe--senderZip=
+">10671</span></p></div>
+                                            <p style=3D"font-size:12px; lin=
+e-height:20px;"><a class=3D"Unsubscribe--unsubscribeLink" href=3D" https://=
+u12874998.ct.sendgrid.net/wf/unsubscribe?upn=3D7zRxtiYDTGBGqDWlp0jwu-2FeuS-=
+2FFLYAlhcXQufkROEAWrOHcbcaF7Pu1l7EqL3GGj50wMHkjEqpOyu2-2BaOFRLITuWoZ-2BeOZa=
+fMgDhaOsdRW4ll0H7gbTLOoxTIUUpCBal3o0LLmo-2BbEv1JgoNpAf755XTQe8ASYqxE1nF-2FR=
+157bR8140z0wVzjA1RQWNl9JExrcp-2B3QPpxPNB1hk4g1XGhbgGQlv2fMX96JyeVSo0NAEimBB=
+ZSccMK6-2BvO2lLbF2vr2q5B3KgsGwausfRWz43T68jZPYrrsr6u3OMrv5oUsQFDNfUb0hyW4ov=
+ZFSXPzl362Savk1fKorkDgN7KUhRjO4P-2Fo-2FfuXq-2Fez5JSOpCeHUXbQhX0AWB1BRSbReJL=
+luQocxJnkj9KhmVzmXJJYWBgBquZeBhw97nAnb7i-2Bb3Yz-2FFnaSU5wuExT3GZrEyQa5d47xi=
+gPYyUWoQXm6pDUVJGX7-2FAYtbAAWsBmlXg9VSws8q-2F5Q2BP8RFyh8rK0c-2FhOY6rZAsjigo=
+ZjXbFOL1DrTCcyFrfmClenSMHeYTfvoHEfaUdOHLsVbzqz8NjVU-2FgnwbJN6W3s0ukAPqX4IGt=
+vnpZr9P0IzyC-2FZFK01zPG-2Fh91-2Bjwyp5V44eG-2BYV7iaqUj9 " target=3D"_blank" =
+style=3D"">Unsubscribe</a></p>
+                                          </div></td>
+                                      </tr>
+                                    </tbody></table>
+                                    <!--[if mso]>
+                                  </td>
+                                </tr>
+                              </table>
+                            </center>
+                            <![endif]-->
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+        </div>
+      </center>
+   =20
+ =20
+
+<img src=3D"https://u12874998.ct.sendgrid.net/wf/open?upn=3D7zRxtiYDTGBGqDW=
+lp0jwu-2FeuS-2FFLYAlhcXQufkROEAWrOHcbcaF7Pu1l7EqL3GGj50wMHkjEqpOyu2-2BaOFRL=
+ITuWoZ-2BeOZafMgDhaOsdRW4ll0H7gbTLOoxTIUUpCBal3o0LLmo-2BbEv1JgoNpAf755XTQe8=
+ASYqxE1nF-2FR157bR8140z0wVzjA1RQWNl9JExrcp-2B3QPpxPNB1hk4g1XGhbgGQlv2fMX96J=
+yeVSo0NAEimBBZSccMK6-2BvO2lLbF2vr2q5B3KgsGwausfRWz43T68jZPYrrsr6u3OMrv5oUsQ=
+FDNfUb0hyW4ovZFSXPzl362Savk1fKorkDgN7KUhRjO4P-2Fo-2FfuXq-2Fez5JSOpCeHUXbQhX=
+0AWB1BRSbReJLluQocxJnkj9KhmVzmXJJYWBgBquZeBhw97nAnb7i-2Bb3Yz-2FFnaSU5wuExT3=
+GZrEyQa5d47xigPYyUWoQXm6pDUVJGRPwZu2PKfnMYxyPqElsdXj5rkQiwMngOZzqSLzVSU-2Fd=
+-2Bv715ZJTnPIXTTJsk-2BcLYQgWvmOndpcNQKZCzcsYUbIykqwBzGVA9wy8SlkBNsZ4AIWTl3a=
+X4fsfYm3TGdG1Mb-2FuXqJ3-2FGPnV08-2FPTFEGg8AkRDUn89tURC9BqifpS44" alt=3D"" w=
+idth=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1=
+px !important;border-width:0 !important;margin-top:0 !important;margin-bott=
+om:0 !important;margin-right:0 !important;margin-left:0 !important;padding-=
+top:0 !important;padding-bottom:0 !important;padding-right:0 !important;pad=
+ding-left:0 !important;">
+</body></html>
+
+--7f770473b2f36d86eaf2617ddf34ae529f437078eb63febc346cdb97e0be--

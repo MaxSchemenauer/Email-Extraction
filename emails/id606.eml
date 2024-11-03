@@ -1,0 +1,1164 @@
+Received: from BYAPR08MB4981.namprd08.prod.outlook.com (2603:10b6:a03:114::16)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR21CA0006.NAMPRD21.PROD.OUTLOOK.COM; Tue, 25 Jun 2019 07:23:25 +0000
+Received: from DM3PR08CA0023.namprd08.prod.outlook.com (2603:10b6:0:52::33) by
+ BYAPR08MB4981.namprd08.prod.outlook.com (2603:10b6:a03:6a::26) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2008.16; Tue, 25 Jun 2019 07:23:22 +0000
+Received: from BN3NAM04FT037.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::202) by DM3PR08CA0023.outlook.office365.com
+ (2603:10b6:0:52::33) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2008.16 via Frontend
+ Transport; Tue, 25 Jun 2019 07:23:22 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.20)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=none action=none
+ header.from=JVWRESEARCH.ORG;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.20 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.20; helo=mxout2.uta.fi;
+Received: from mxout2.uta.fi (153.1.7.20) by
+ BN3NAM04FT037.mail.protection.outlook.com (10.152.92.196) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2008.13 via Frontend Transport; Tue, 25 Jun 2019 07:23:21 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout2.uta.fi (8.14.7/8.14.7) with ESMTP id x5P7JZlF003208
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Tue, 25 Jun 2019 10:19:35 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x5P7JYSD013683;
+	Tue, 25 Jun 2019 10:19:34 +0300
+Received: from smtp2.uta.fi (153.1.7.18)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Tue, 25 Jun 2019 10:19:34 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id x5P7JYHN013286
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+	Tue, 25 Jun 2019 10:19:34 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x5P54VSx022212;
+	Tue, 25 Jun 2019 10:19:16 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          366682 for GAMESNETWORK@LISTSERV.UTA.FI; Tue, 25 Jun 2019 10:19:14
+          +0300
+Received: from mxout1.uta.fi (mxout1.uta.fi [153.1.7.4]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x5P7JD3A012260 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Tue, 25 Jun 2019 10:19:13 +0300
+Received: from mailscan2.uta.fi (mailscan2.uta.fi [153.1.7.19]) by
+          mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x5P7JD1f001646
+          (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256
+          verify=OK) for <GAMESNETWORK@uta.fi>; Tue, 25 Jun 2019 10:19:13 +0300
+Received: from mailscan2.uta.fi (localhost [127.0.0.1]) by mailscan2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x5P7JC8G028966 for
+          <GAMESNETWORK@uta.fi>; Tue, 25 Jun 2019 10:19:12 +0300
+Received: from smtp2.uta.fi (153.1.7.18) by mailscan2.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan2.uta.fi); Tue, 25 Jun 2019 10:19:12
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan2.uta.fi)
+Received: from mail-lj1-f193.google.com (mail-lj1-f193.google.com
+          [209.85.208.193]) by smtp2.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x5P7JCZf013028 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Tue, 25 Jun 2019 10:19:12 +0300
+Received: by mail-lj1-f193.google.com with SMTP id i21so15149266ljj.3 for
+          <GAMESNETWORK@uta.fi>; Tue, 25 Jun 2019 00:19:12 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:references:in-reply-to:from:date :message-id:subject:to;
+                         bh=rCoWDeklVvTzFE8h+iVqyIeHFPSkdT93T77SLIG49M8=;
+                         b=ABKedM1gVYHeyP6nOiCI6OWPN0PZGyoFOCAR7Ip4Dvwz3baDqyBV9lqXm9Wo52cfco
+                         fVtpIhmtwHlWf2TlPlR13OABpyzzyg7I9EJwJtQA3we5eWVu5jz5lUhq9NoOzVXlSc8Y
+                         SG6NM8r7eMk6UOZFHbEExGKzCIST9tkPpe6DNcGHV9Bhxy6BeioAbQZCktkFRUPmTsRD
+                         0KXp2PmVu9tPEG+tvKiBiDDIDkLkq+8KFpxls5dZ0EwOtHxjHLqar3ddtvh6xEM7hORR
+                         ujY4nQ0uotVp08S2oFLr/lWN27JUHFNVi1/JBgPosqyTzOQfzDW0MEJZEl7Qp2K7G9Aa
+                         OPOA==
+X-Gm-Message-State: APjAAAWMJ5sKZsqhRj1ib+Y0jtRGU+vtNNuMVojLzpEE1ZDYVmt+z16S
+                    BZ1BBLqEkzErUi4h6HAjUyj5jsIonQ0J8LVc/dXRXdK9
+X-Google-Smtp-Source: APXvYqwYqBCJSU034Fnjux6+/jf0kzXmlFAGkn4OVfCZT/dI30V+f7xEOFSgj6Lx1MsO5Ky56P+J05S93kKD0YrBZP4=
+X-Received: by 2002:a2e:2b57:: with SMTP id q84mr37114293lje.105.1561447150933;
+            Tue, 25 Jun 2019 00:19:10 -0700 (PDT)
+References: <de4fa2a435382cb1fa67cb708.c8c8aef851.20190624155820.903e195c3d.e97d5a79@mail119.atl261.mcdlv.net>
+            <CAG4GRUumZQ=PDMff=ivUmniWJh7qTFOLBdgKrxKM=WV5SquUuA@mail.gmail.com>
+            <CACW_s1hsPJU-7G5Bj3ZoY=n+9w31OUXGqyjcws6auFE9Gdke4g@mail.gmail.com>
+            <CACW_s1jcSPor32beOsoCAPAWwQ-jc5H6uY3iayQVk1z3ghah-Q@mail.gmail.com>
+            <CACW_s1jA1fhvWpBWX-gwzpHgvq2PL2wZ2jL2CO-zXrh+p=xM8g@mail.gmail.com>
+            <CACW_s1joRztYo+gaAM5+X0-5j+M79912xxYxCR9AiQx=gz6OaQ@mail.gmail.com>
+            <CACW_s1jSBFJA87Gd4p_bFen-XhFBYdJ3z9+xTjtiq2j5Oi2e1Q@mail.gmail.com>
+            <CACW_s1ifFg6HxDjZhweQO+ZaXQh=NHubp-3jLqTUFZmnQyaZUw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000c4b817058c20bec7"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp2.uta.fi [153.1.7.18]); Tue, 25 Jun 2019 10:19:34 +0300 (EEST)
+X-Spam-Level: x------
+X-Spam-Report: AWL,BAYES_00,HTML_MESSAGE,L_BDY_SMALL_FONT1,L_BDY_TRGTBLNK,L_HDR_HAS_DKIM,L_HDR_MIMEB_HEX,L_URL_SPAM1,L_URL_TRACKING,URIBL_BLOCKED
+X-Spam-Status: NO ; -16
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CACW_s1hOcBQwTLr=C6sowvUDwzVOrrLQP8+s7R6dh5V6LibMaA@mail.gmail.com>
+Date: Tue, 25 Jun 2019 10:18:57 +0300
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: The Journal for Virtual Worlds Research <Tzafnat.Shpak@JVWRESEARCH.ORG>
+Subject: [GAMESNETWORK] [JVWR] Quick Turnaround CfP Assembled 2019
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+In-Reply-To: <CACW_s1ifFg6HxDjZhweQO+ZaXQh=NHubp-3jLqTUFZmnQyaZUw@mail.gmail.com>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 25 Jun 2019 07:23:21.7602
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 746b550d-7447-4cc4-fda9-08d6f93e00e1
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.20;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(10001)(3000300001)(199004)(189003)(7192003)(176002)(52024003)(486006)(236005)(246002)(43066004)(61266001)(9686003)(18926415008)(606006)(8676002)(14444005)(8576002)(336012)(4006050)(76236002)(6666004)(5140100006)(498394004)(356004)(6306002)(19627405001)(21615005)(75640400001)(476003)(71190400001)(95326003)(16586007)(53946003)(106002)(7596002)(305945005)(42186006)(11346002)(59536001)(446003)(126002)(15974865002)(16003)(61726006)(33964004)(1096003)(16799955002)(7636002)(105004)(6862004)(53386004)(55176004)(66574012)(55446002)(42882007)(7846003)(6392003)(966005)(26005)(76176011)(40036005)(5660300002)(146002)(66346011)(733005)(1997600015)(579004);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4981;H:mxout2.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout2.uta.fi;A:1;MX:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT037.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 746b550d-7447-4cc4-fda9-08d6f93e00e1
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4981;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4981:
+X-MS-Exchange-PUrlCount: 26
+X-MS-Oob-TLC-OOBClassifiers: OLM:8273;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 25 Jun 2019 07:23:21.2468
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 746b550d-7447-4cc4-fda9-08d6f93e00e1
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4981
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.9034937
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2008.006
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UDIxVmZuZkNpSjd2QS9YZjdVUkRIdGliY0dRZHFXWXRCdS9Cd2xJVWF5cHJs?=
+ =?utf-8?B?aHM0eC9vUDdILzRXTkU0dHNlRG9seTZXRjRKWXpnVS84bkZXT3ZWNms2THdk?=
+ =?utf-8?B?UkxnN25lUzNGRGFMM1BvV0Q2WkpIZmo0djRBUkJDbWxUdHBmNWtMVW1uWW01?=
+ =?utf-8?B?OWRBZWxYZWNxeFozbHJhUEJKRGJYOXBqUStBbXF0WENrWmd5d3V0ZFZ6K0dY?=
+ =?utf-8?B?Unh2L0dIS1FSRDY5YUhGZFJ6emx3bkNiZWVYK1NEdVhETFVtVGRjUUxwbkJJ?=
+ =?utf-8?B?MTZTWDV0Vi84bEVFdEozWER4NVdwUWkwSlpaWDJiRVNjVXkxRlRCWkZIaTdl?=
+ =?utf-8?B?L2IrQlFKOWtoNEhuR2FOVzlhcWw3bSsrMis5bGdUZmN1bzhNNXNoeEpBUzBz?=
+ =?utf-8?B?WDgzYUVyZkVQTExBTUovc1IrMmM2c1Foc05YQ0VLb09YRmEyaVpoSVdpK0Vj?=
+ =?utf-8?B?UEd2NkQ4VFJxQ1ZkR0dQOG1wSzNTOEUwM1R5U29hQzdjSzl6MXVsc1d4RE1x?=
+ =?utf-8?B?cWlzbExtZ0tBdEhQT0VNd0l1ME9mbWt6b09sWmlhZGtoYjQyRmFhbkVOUCtP?=
+ =?utf-8?B?Rm5lNEQ0UTM1VnNCWDQvSXlBWjZ1c2N0MHhiYWcyMmZmWTBwUk5Ndmdma1ZW?=
+ =?utf-8?B?WnpoL0tTdDRzalJPRVNOWXVmVStiMzkxeCtDS0tDUzZSQUhGT09VUG80WHhJ?=
+ =?utf-8?B?QktHY0J4MzFIMFI2RURVbEtQSk80UFdCZEZleS9IdmpYNldld0Q1SXk3dmg2?=
+ =?utf-8?B?VU9RVG5HT0cyM0JmYUdZQlo1V3R3MklBZHI5aVRlZlZpUUM0MXJCTzRsTStJ?=
+ =?utf-8?B?OGI0RUc2TWZSbEllcG1Bbnp1UUcvYmdVTzhDc1d5UnY2NlQ0RjNaUGtJVHhw?=
+ =?utf-8?B?VXpYRGlyaU0zR1NIbjZRcExtU1loaFo4SVZ0T0Q3dm1kNVFvN0FMTldJS1B3?=
+ =?utf-8?B?ejFEL3VTV201RFdqa3RlYkV4TSs1emsySlloUUgxc1RkSjZydW1SMklSeklG?=
+ =?utf-8?B?bm9GL2VHYlJaWnZaR2ZDbHcvaVE2dzV6YXdPdmVKOGg4dGNwVG51RlUvY1lp?=
+ =?utf-8?B?M05EMVhWVXd4bXk4Y1VIdTNhd1crU01WYW4zdTBTdGtqa283VG5YdnkzeE9p?=
+ =?utf-8?B?eGUyZHdUZ2hvY2VsNEUzcVEveXRLS2tBcU1qZlkrZnpyMU9uKzgycm51dVRY?=
+ =?utf-8?B?ZFJ0WUk2QnI1Rkx4cjRRZHA1UmUzUkFKeEFWTWlmczJYdTVoV3c5czE2cDNp?=
+ =?utf-8?B?b0JySm9RTURueFBhNHlVRElqano4L1JXdFJ6L0JvUEw3VFA0UFJqREd0MHA1?=
+ =?utf-8?B?QXgxNWpyU2JNaWYwaFVMZFhuZjE1WTM1WUVNWEJLZmYrRWhvMERHYVo2ZWRr?=
+ =?utf-8?B?bnBSalBua2hlUmFEbE9kRFZ3Y0czK2h1c1dZYVVrc25Ndk5yNlY2am9GQVFR?=
+ =?utf-8?B?LzdxUytYNlZzcEwrY0E0N0lzWlRKY29BT2xzZkxwYlNmL21KdGxla3BOR3dW?=
+ =?utf-8?B?QzJCN2owY0trcVh1VXhaWHhFeUQ1bmYxL3JodTBEdFJuVWhGTE9PUjJENG5w?=
+ =?utf-8?B?NVcyVFo5UHMzV2RuWjdMem14MXBTTzhmNjduODBuU1krSythMVhOOWNpNGY5?=
+ =?utf-8?B?WWx4NTRWTlM0aTdLN25xVTZtUXVKVncrVWZMV1RWcVJtQ1FkMkpwV0NLSzVW?=
+ =?utf-8?Q?G8O5HaG0sLmr9Ck37mBm?=
+MIME-Version: 1.0
+
+--000000000000c4b817058c20bec7
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+A quick turnaround of papers: Oct. 2019 decision and Dec. 2019 publication.
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D5c635f3ea1&e=3Dc8c8aef851>
+JVWR
+CfP Assembled 2019
+View this email in your browser
+<https://mailchi.mp/a1945d27454b/jvwr-quick-turnaround-cfp-assembled2019?e=
+=3Dc8c8aef851>
+*A Quick Turnaround Call for Papers - Assembled 2019 issue*
+
+
+June 24, 2019
+JVWR Call for Papers
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3Dc3dcfe6b35&e=3Dc8c8aef851>
+
+This is a good opportunity for authors for a quick turnaround of papers
+with *October *2019 *decisions* and *December *2019 *publication*.
+
+Issue Editors
+
+*Angie Cox*, Trident University International (Prime)
+*Miao Feng*, NORC at the University of Chicago
+*Felipe Nunes*, Antonio Meneghetti Faculdade, Brazil
+*Jason Coley*, Rensselaer Polytechnic Institute, Troy NY
+
+*Motivation and Scope*
+
+The 2019 Assembled issue is part of the special JVWR Assembled series - a
+place for various papers, on the topic of the journal, collected during the
+year and published, usually, once a year.
+
+*Submission Instructions*
+Authors are invited to submit original scholarly papers of 3000-5000 words
+including footnotes, references, and appendices. Interested authors should
+submit a *full paper* by the deadline indicated below. All submissions
+should be made via the JVWR publishing system (see
+https://jvwr.net/for-authors/). All submissions will be peer reviewed.
+Accepted papers will be published online in Volume 12, Number 3 (2019) of
+the Journal.
+*Deadlines and Timetable*
+
+
+*September 1, 2019*: Authors submit full paper
+*September 7, 2019*: Editors initial decision
+*October 1, 2019*: Editors final decision
+*November 1, 2019*: Authors submit final revision
+*November 25, 2019*: Camera-ready
+*December 2019*: Publication
+
+Possible topics include:
+
+   - 3D fun
+   - Mini robots
+   - Social networks that change our mind
+   - Artificial limbs
+   - New forms of hardware
+   - Augmented and mixed environments
+   - Wearable
+   - User generated content
+   - 3D printing
+   - Visual data streaming
+   - Immersive technologies
+   - Shopping from home
+   - Projections of the real
+   - Wireless people
+   - Portable friends
+   - The Internet of Things
+   - Virtual currencies
+   - E-readers
+   - =E2=80=A6
+   - And more
+
+  See past Assembled issues
+Assembled 2018 (2)
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D35b81e16cf&e=3Dc8c8aef851>
+
+Assembled 2018 (1)
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3Df56f44944f&e=3Dc8c8aef851>
+
+Assembled 2017
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3Dfee37c1c8a&e=3Dc8c8aef851>
+
+Assembled 2016 (2)
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D05539efcef&e=3Dc8c8aef851>
+
+Assembled 2016 (1)
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3Dea95668192&e=3Dc8c8aef851>
+
+Assembled 2015
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D66bf3ff23b&e=3Dc8c8aef851>
+
+Assembled 2014
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3Defd04695ef&e=3Dc8c8aef851>
+
+Assembled 2013
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D17e5701b39&e=3Dc8c8aef851>
+
+Assembled 2012
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3Da4e88594fd&e=3Dc8c8aef851>
+
+Assembled 2011
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D1f06d94ff9&e=3Dc8c8aef851>
+
+Assembled 2010
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D43e9d60869&e=3Dc8c8aef851>
+
+*Further Information*
+The Journal of Virtual Worlds Research (https://jvwr.net
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3Dbba84e9e77&e=3Dc8c8aef851>)
+is an online, open access academic journal that engages a wide spectrum of
+scholarship and welcomes contributions from the various disciplines and
+approaches that intersect with virtual worlds research. Virtual worlds
+ignite a continuously evolving area of study that spans multiple
+disciplines and the JVWR editorial team looks forward to engaging a wide
+range of creative and scholarly research.
+
+Please contact: info@jvwresearch.org
+
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3Dc4d04b3e18&e=3Dc8c8aef851>
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D68cf639cbb&e=3Dc8c8aef851>
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D198832e6ef&e=3Dc8c8aef851>
+<https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708=
+&id=3D2ca9695083&e=3Dc8c8aef851>
+*Copyright =C2=A9 2019 Journal of Virtual Worlds Research, All rights reser=
+ved.*
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--000000000000c4b817058c20bec7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_a=
+ttr"><br></div><div dir=3D"ltr"><div><div dir=3D"ltr" class=3D"m_-434934817=
+3605327621gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"l=
+tr"><br></div></div></div><div class=3D"gmail_quote"><div dir=3D"ltr"><div =
+class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=
+=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_qu=
+ote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div clas=
+s=3D"gmail_quote"><u></u>
+
+   =20
+       =20
+       =20
+       =20
+       =20
+       =20
+       =20
+
+   =20
+    <div style=3D"height:100%;margin:0;padding:0;width:100%;background-colo=
+r:#fafafa"><div><div></div><div></div></div>
+       =20
+        <span class=3D"m_-4349348173605327621m_2485019642964066964m_9823669=
+96515444252m_-2523512652927639052m_4899888765695353017m_-741958949003188504=
+1m_2716712096675209163m_7044150592635301590mcnPreviewText" style=3D"display=
+:none;font-size:0px;line-height:0px;max-height:0px;max-width:0px;opacity:0;=
+overflow:hidden">A quick turnaround of papers: Oct. 2019 decision and Dec. =
+2019 publication.</span>
+       =20
+        <center>
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"100%" width=3D"100%" id=3D"m_-4349348173605327621m_2485=
+019642964066964m_982366996515444252m_-2523512652927639052m_4899888765695353=
+017m_-7419589490031885041m_2716712096675209163m_7044150592635301590bodyTabl=
+e" style=3D"border-collapse:collapse;height:100%;margin:0;padding:0;width:1=
+00%;background-color:#fafafa">
+                <tbody><tr>
+                    <td align=3D"center" valign=3D"top" id=3D"m_-4349348173=
+605327621m_2485019642964066964m_982366996515444252m_-2523512652927639052m_4=
+899888765695353017m_-7419589490031885041m_2716712096675209163m_704415059263=
+5301590bodyCell" style=3D"height:100%;margin:0;padding:10px;width:100%;bord=
+er-top:0">
+                       =20
+                       =20
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" class=3D"m_-4349348173605327621m_2485019642964066964m=
+_982366996515444252m_-2523512652927639052m_4899888765695353017m_-7419589490=
+031885041m_2716712096675209163m_7044150592635301590templateContainer" style=
+=3D"border-collapse:collapse;border:0;max-width:600px!important">
+                            <tbody><tr>
+                                <td valign=3D"top" id=3D"m_-434934817360532=
+7621m_2485019642964066964m_982366996515444252m_-2523512652927639052m_489988=
+8765695353017m_-7419589490031885041m_2716712096675209163m_70441505926353015=
+90templatePreheader" style=3D"background:#fafafa none no-repeat center/cove=
+r;background-color:#fafafa;background-image:none;background-repeat:no-repea=
+t;background-position:center;background-size:cover;border-top:0;border-bott=
+om:0;padding-top:9px;padding-bottom:9px"><table class=3D"m_-434934817360532=
+7621m_2485019642964066964m_982366996515444252m_-2523512652927639052m_489988=
+8765695353017m_-7419589490031885041m_2716712096675209163m_70441505926353015=
+90mcnTextBlock" style=3D"min-width:100%;border-collapse:collapse" width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"m_-4349348173605327621m_2485019642964066964m_9823669965=
+15444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_=
+2716712096675209163m_7044150592635301590mcnTextBlockOuter">
+        <tr>
+            <td class=3D"m_-4349348173605327621m_2485019642964066964m_98236=
+6996515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885=
+041m_2716712096675209163m_7044150592635301590mcnTextBlockInner" style=3D"pa=
+dding-top:9px" valign=3D"top">
+              =09
+		=09
+			=09
+                <table style=3D"max-width:390px;border-collapse:collapse" c=
+lass=3D"m_-4349348173605327621m_2485019642964066964m_982366996515444252m_-2=
+523512652927639052m_4899888765695353017m_-7419589490031885041m_271671209667=
+5209163m_7044150592635301590mcnTextContentContainer" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">
+                    <tbody><tr>
+
+                        <td class=3D"m_-4349348173605327621m_24850196429640=
+66964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-7419=
+589490031885041m_2716712096675209163m_7044150592635301590mcnTextContent" st=
+yle=3D"padding-top:0;padding-left:18px;padding-bottom:9px;padding-right:18p=
+x;word-break:break-word;color:#656565;font-family:Helvetica;font-size:12px;=
+line-height:150%;text-align:left" valign=3D"top">
+
+                            <a href=3D"https://jvwr.us2.list-manage.com/tra=
+ck/click?u=3Dde4fa2a435382cb1fa67cb708&amp;id=3D5c635f3ea1&amp;e=3Dc8c8aef8=
+51" style=3D"color:#656565;font-weight:normal;text-decoration:underline" ta=
+rget=3D"_blank"><img src=3D"https://gallery.mailchimp.com/de4fa2a435382cb1f=
+a67cb708/images/2aec6320-d4fd-4899-8c83-39b371ff9cab.jpg" style=3D"border:0=
+px;width:40px;height:56px;margin:0px;outline:none;text-decoration:none" wid=
+th=3D"40" height=3D"56" align=3D"none"></a>&nbsp;JVWR CfP Assembled 2019
+                        </td>
+                    </tr>
+                </tbody></table>
+			=09
+
+			=09
+                <table style=3D"max-width:210px;border-collapse:collapse" c=
+lass=3D"m_-4349348173605327621m_2485019642964066964m_982366996515444252m_-2=
+523512652927639052m_4899888765695353017m_-7419589490031885041m_271671209667=
+5209163m_7044150592635301590mcnTextContentContainer" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">
+                    <tbody><tr>
+
+                        <td class=3D"m_-4349348173605327621m_24850196429640=
+66964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-7419=
+589490031885041m_2716712096675209163m_7044150592635301590mcnTextContent" st=
+yle=3D"padding-top:0;padding-left:18px;padding-bottom:9px;padding-right:18p=
+x;word-break:break-word;color:#656565;font-family:Helvetica;font-size:12px;=
+line-height:150%;text-align:left" valign=3D"top">
+
+                            <a href=3D"https://mailchi.mp/a1945d27454b/jvwr=
+-quick-turnaround-cfp-assembled2019?e=3Dc8c8aef851" style=3D"color:#656565;=
+font-weight:normal;text-decoration:underline" target=3D"_blank">View this e=
+mail in your browser</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+			=09
+
+			=09
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                            </tr>
+                            <tr>
+                                <td valign=3D"top" id=3D"m_-434934817360532=
+7621m_2485019642964066964m_982366996515444252m_-2523512652927639052m_489988=
+8765695353017m_-7419589490031885041m_2716712096675209163m_70441505926353015=
+90templateHeader" style=3D"background:#ffffff none no-repeat center/cover;b=
+ackground-color:#ffffff;background-image:none;background-repeat:no-repeat;b=
+ackground-position:center;background-size:cover;border-top:0;border-bottom:=
+0;padding-top:0;padding-bottom:0"><table class=3D"m_-4349348173605327621m_2=
+485019642964066964m_982366996515444252m_-2523512652927639052m_4899888765695=
+353017m_-7419589490031885041m_2716712096675209163m_7044150592635301590mcnIm=
+ageBlock" style=3D"min-width:100%;border-collapse:collapse" width=3D"100%" =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"m_-4349348173605327621m_2485019642964066964m_9823669965=
+15444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_=
+2716712096675209163m_7044150592635301590mcnImageBlockOuter">
+            <tr>
+                <td style=3D"padding:9px" class=3D"m_-4349348173605327621m_=
+2485019642964066964m_982366996515444252m_-2523512652927639052m_489988876569=
+5353017m_-7419589490031885041m_2716712096675209163m_7044150592635301590mcnI=
+mageBlockInner" valign=3D"top">
+                    <table class=3D"m_-4349348173605327621m_248501964296406=
+6964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-74195=
+89490031885041m_2716712096675209163m_7044150592635301590mcnImageContentCont=
+ainer" style=3D"min-width:100%;border-collapse:collapse" width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">
+                        <tbody><tr>
+                            <td class=3D"m_-4349348173605327621m_2485019642=
+964066964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-=
+7419589490031885041m_2716712096675209163m_7044150592635301590mcnImageConten=
+t" style=3D"padding-right:9px;padding-left:9px;padding-top:0;padding-bottom=
+:0;text-align:center" valign=3D"top">
+
+
+                                        <img alt=3D"" src=3D"https://galler=
+y.mailchimp.com/de4fa2a435382cb1fa67cb708/images/e5459355-0757-40fc-93e2-ee=
+8687575db4.png" style=3D"max-width:1000px;padding-bottom:0;display:inline!i=
+mportant;vertical-align:bottom;border:0;height:auto;outline:none;text-decor=
+ation:none" class=3D"m_-4349348173605327621m_2485019642964066964m_982366996=
+515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m=
+_2716712096675209163m_7044150592635301590mcnImage" width=3D"564" align=3D"m=
+iddle">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table></td>
+                            </tr>
+                            <tr>
+                                <td valign=3D"top">
+                                    <table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"m_-43493481736053276=
+21m_2485019642964066964m_982366996515444252m_-2523512652927639052m_48998887=
+65695353017m_-7419589490031885041m_2716712096675209163m_7044150592635301590=
+templateColumns" style=3D"border-collapse:collapse;background-color:#ffffff=
+;border-top:0;border-bottom:0;padding-top:0;padding-bottom:9px">
+                                        <tbody><tr>
+                                            <td valign=3D"top">
+                                               =20
+                                                <table align=3D"left" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"400" id=3D"m_-43493481=
+73605327621m_2485019642964066964m_982366996515444252m_-2523512652927639052m=
+_4899888765695353017m_-7419589490031885041m_2716712096675209163m_7044150592=
+635301590templateBody" style=3D"border-collapse:collapse;background-color:#=
+ffffff;border-top:0;border-bottom:0;padding-top:0;padding-bottom:9px">
+                                                    <tbody><tr>
+                                                        <td><table class=3D=
+"m_-4349348173605327621m_2485019642964066964m_982366996515444252m_-25235126=
+52927639052m_4899888765695353017m_-7419589490031885041m_2716712096675209163=
+m_7044150592635301590mcnTextBlock" style=3D"min-width:100%;border-collapse:=
+collapse" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"m_-4349348173605327621m_2485019642964066964m_9823669965=
+15444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_=
+2716712096675209163m_7044150592635301590mcnTextBlockOuter">
+        <tr>
+            <td class=3D"m_-4349348173605327621m_2485019642964066964m_98236=
+6996515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885=
+041m_2716712096675209163m_7044150592635301590mcnTextBlockInner" style=3D"pa=
+dding-top:9px" valign=3D"top">
+              =09
+		=09
+			=09
+                <table style=3D"max-width:100%;min-width:100%;border-collap=
+se:collapse" class=3D"m_-4349348173605327621m_2485019642964066964m_98236699=
+6515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041=
+m_2716712096675209163m_7044150592635301590mcnTextContentContainer" width=3D=
+"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left">
+                    <tbody><tr>
+
+                        <td class=3D"m_-4349348173605327621m_24850196429640=
+66964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-7419=
+589490031885041m_2716712096675209163m_7044150592635301590mcnTextContent" st=
+yle=3D"padding-top:0;padding-right:18px;padding-bottom:9px;padding-left:18p=
+x;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;=
+line-height:150%;text-align:left" valign=3D"top">
+
+                            <h1 class=3D"m_-4349348173605327621m_2485019642=
+964066964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-=
+7419589490031885041m_2716712096675209163m_7044150592635301590null" style=3D=
+"display:block;margin:0;padding:0;color:#202020;font-family:Helvetica;font-=
+size:26px;font-style:normal;font-weight:bold;line-height:125%;letter-spacin=
+g:normal;text-align:left"><strong>A Quick Turnaround Call for Papers - Asse=
+mbled 2019 issue</strong></h1>
+
+<p style=3D"margin:10px 0;padding:0;color:#202020;font-family:Helvetica;fon=
+t-size:16px;line-height:150%;text-align:left"><br>
+<span>June 24, 2019<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3Dc3dcfe6b35&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">JVWR Call fo=
+r Papers</a></span><br>
+<br>
+This is a good opportunity for authors for a quick turnaround of papers wit=
+h <strong>October </strong>2019 <strong>decisions</strong> and <strong>Dece=
+mber </strong>2019 <strong>publication</strong>.<br>
+&nbsp;</p>
+
+<h3 class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544425=
+2m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716712=
+096675209163m_7044150592635301590null" style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:20px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left">Is=
+sue Editors</h3>
+
+<p style=3D"margin:10px 0;padding:0;color:#202020;font-family:Helvetica;fon=
+t-size:16px;line-height:150%;text-align:left"><strong>Angie Cox</strong>, T=
+rident University International (Prime)<br>
+<strong>Miao Feng</strong>, NORC at the University of Chicago<br>
+<strong>Felipe Nunes</strong>, Antonio Meneghetti Faculdade, Brazil<br>
+<strong>Jason Coley</strong>, Rensselaer Polytechnic Institute, Troy NY<br>
+&nbsp;</p>
+
+<h2 class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544425=
+2m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716712=
+096675209163m_7044150592635301590null" style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:22px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left"><s=
+trong>Motivation and Scope</strong></h2>
+
+<p style=3D"margin:10px 0;padding:0;color:#202020;font-family:Helvetica;fon=
+t-size:16px;line-height:150%;text-align:left">The 2019 Assembled issue is p=
+art of the special JVWR Assembled series - a place for various papers, on t=
+he topic of the journal, collected during the year and published, usually, =
+once a year.<br>
+&nbsp;</p>
+
+<h2 class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544425=
+2m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716712=
+096675209163m_7044150592635301590null" style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:22px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left"><s=
+trong>Submission Instructions</strong></h2>
+<br>
+<span>Authors are invited to submit original scholarly papers of 3000-5000 =
+words including footnotes, references, and appendices. Interested authors s=
+hould submit a <strong>full paper</strong> by the deadline indicated below.=
+ All submissions should be made via the JVWR publishing system (see </span>=
+<a href=3D"https://jvwr.net/for-authors/" target=3D"_blank">https://jvwr.ne=
+t/for-authors/</a><span>). All submissions will be peer reviewed. Accepted =
+papers will be published online in Volume 12, Number 3 (2019) of the Journa=
+l.</span>
+
+<h2 class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544425=
+2m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716712=
+096675209163m_7044150592635301590null" style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:22px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left"><b=
+r>
+<strong>Deadlines and Timetable</strong></h2>
+
+<p style=3D"margin:10px 0;padding:0;color:#202020;font-family:Helvetica;fon=
+t-size:16px;line-height:150%;text-align:left"><br>
+<strong>September 1, 2019</strong>: Authors submit full paper<br>
+<strong>September 7, 2019</strong>: Editors initial decision<br>
+<strong>October 1, 2019</strong>: Editors final decision<br>
+<strong>November 1, 2019</strong>: Authors submit final revision<br>
+<strong>November 25, 2019</strong>: Camera-ready<br>
+<strong>December 2019</strong>: Publication<br>
+&nbsp;</p>
+
+<h2 class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544425=
+2m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716712=
+096675209163m_7044150592635301590null" style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:22px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left">Po=
+ssible topics include:</h2>
+
+<ul>
+	<li>3D fun</li>
+	<li>Mini robots</li>
+	<li>Social networks that change our mind</li>
+	<li>Artificial limbs</li>
+	<li>New forms of hardware</li>
+	<li>Augmented and mixed environments</li>
+	<li>Wearable</li>
+	<li>User generated content</li>
+	<li>3D printing</li>
+	<li>Visual data streaming</li>
+	<li>Immersive technologies</li>
+	<li>Shopping from home</li>
+	<li>Projections of the real</li>
+	<li>Wireless people</li>
+	<li>Portable friends</li>
+	<li>The Internet of Things</li>
+	<li>Virtual currencies</li>
+	<li>E-readers</li>
+	<li>=E2=80=A6</li>
+	<li>And more</li>
+</ul>
+&nbsp;
+
+<h2 class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544425=
+2m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716712=
+096675209163m_7044150592635301590null" style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:22px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left">Se=
+e past Assembled issues</h2>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3D35b81e16cf&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+18 (2)</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3Df56f44944f&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+18 (1)</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3Dfee37c1c8a&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+17</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3D05539efcef&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+16 (2)</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3Dea95668192&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+16 (1)</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3D66bf3ff23b&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+15</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3Defd04695ef&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+14</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3D17e5701b39&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+13</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3Da4e88594fd&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+12</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3D1f06d94ff9&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+11</a><br>
+<br>
+<a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2a435382cb=
+1fa67cb708&amp;id=3D43e9d60869&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;f=
+ont-weight:normal;text-decoration:underline" target=3D"_blank">Assembled 20=
+10</a><br>
+&nbsp;
+<h3 class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544425=
+2m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716712=
+096675209163m_7044150592635301590null" style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:20px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left"><b=
+r>
+<strong>Further Information</strong></h3>
+<br>
+<span>The Journal of Virtual Worlds Research (<a href=3D"https://jvwr.us2.l=
+ist-manage.com/track/click?u=3Dde4fa2a435382cb1fa67cb708&amp;id=3Dbba84e9e7=
+7&amp;e=3Dc8c8aef851" style=3D"color:#2baadf;font-weight:normal;text-decora=
+tion:underline" target=3D"_blank">https://jvwr.net</a>) is an online, open =
+access academic journal that engages a wide spectrum of scholarship and wel=
+comes contributions from the various disciplines and approaches that inters=
+ect with virtual worlds research. Virtual worlds ignite a continuously evol=
+ving area of study that spans multiple disciplines and the JVWR editorial t=
+eam looks forward to engaging a wide range of creative and scholarly resear=
+ch.</span><br>
+<br>
+Please contact: <a href=3D"mailto:info@jvwresearch.org" target=3D"_blank">i=
+nfo@jvwresearch.org</a><br>
+&nbsp;
+                        </td>
+                    </tr>
+                </tbody></table>
+			=09
+
+			=09
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                                    </tr>
+                                                </tbody></table>
+                                               =20
+                                                <table align=3D"left" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"200" id=3D"m_-43493481=
+73605327621m_2485019642964066964m_982366996515444252m_-2523512652927639052m=
+_4899888765695353017m_-7419589490031885041m_2716712096675209163m_7044150592=
+635301590templateSidebar" style=3D"border-collapse:collapse;background-colo=
+r:#ffffff;border-top:0;border-bottom:0;padding-top:0;padding-bottom:9px">
+                                                    <tbody><tr>
+                                                        <td valign=3D"top">=
+<table class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544=
+4252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716=
+712096675209163m_7044150592635301590mcnImageCardBlock" width=3D"100%" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"border-collapse:collap=
+se">
+    <tbody class=3D"m_-4349348173605327621m_2485019642964066964m_9823669965=
+15444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_=
+2716712096675209163m_7044150592635301590mcnImageCardBlockOuter">
+        <tr>
+            <td class=3D"m_-4349348173605327621m_2485019642964066964m_98236=
+6996515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885=
+041m_2716712096675209163m_7044150592635301590mcnImageCardBlockInner" style=
+=3D"padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px=
+" valign=3D"top">
+
+<table class=3D"m_-4349348173605327621m_2485019642964066964m_98236699651544=
+4252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_2716=
+712096675209163m_7044150592635301590mcnImageCardBottomContent" style=3D"bac=
+kground-color:#404040;border-collapse:collapse" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" align=3D"right">
+    <tbody><tr>
+        <td class=3D"m_-4349348173605327621m_2485019642964066964m_982366996=
+515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m=
+_2716712096675209163m_7044150592635301590mcnImageCardBottomImageContent" st=
+yle=3D"padding-top:0px;padding-right:0px;padding-bottom:0;padding-left:0px"=
+ valign=3D"top" align=3D"left">
+
+
+            <a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4=
+fa2a435382cb1fa67cb708&amp;id=3Dc4d04b3e18&amp;e=3Dc8c8aef851" title=3D"" t=
+arget=3D"_blank">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/de4fa2a43538=
+2cb1fa67cb708/images/2aec6320-d4fd-4899-8c83-39b371ff9cab.jpg" style=3D"max=
+-width:230px;border:0;height:auto;outline:none;text-decoration:none;vertica=
+l-align:bottom" class=3D"m_-4349348173605327621m_2485019642964066964m_98236=
+6996515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885=
+041m_2716712096675209163m_7044150592635301590mcnImage" width=3D"164">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"m_-4349348173605327621m_2485019642964066964m_982366996=
+515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m=
+_2716712096675209163m_7044150592635301590mcnTextContent" style=3D"padding:9=
+px 18px;color:#f2f2f2;font-family:Helvetica;font-size:14px;font-weight:norm=
+al;text-align:center;word-break:break-word;line-height:150%" width=3D"146" =
+valign=3D"top">
+
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                                    </tr>
+                                                </tbody></table>
+                                               =20
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign=3D"top" id=3D"m_-434934817360532=
+7621m_2485019642964066964m_982366996515444252m_-2523512652927639052m_489988=
+8765695353017m_-7419589490031885041m_2716712096675209163m_70441505926353015=
+90templateFooter" style=3D"background:#fafafa none no-repeat center/cover;b=
+ackground-color:#fafafa;background-image:none;background-repeat:no-repeat;b=
+ackground-position:center;background-size:cover;border-top:2px solid #eaeae=
+a;border-bottom:0;padding-top:9px;padding-bottom:9px"><table class=3D"m_-43=
+49348173605327621m_2485019642964066964m_982366996515444252m_-25235126529276=
+39052m_4899888765695353017m_-7419589490031885041m_2716712096675209163m_7044=
+150592635301590mcnFollowBlock" style=3D"min-width:100%;border-collapse:coll=
+apse" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"m_-4349348173605327621m_2485019642964066964m_9823669965=
+15444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_=
+2716712096675209163m_7044150592635301590mcnFollowBlockOuter">
+        <tr>
+            <td style=3D"padding:9px" class=3D"m_-4349348173605327621m_2485=
+019642964066964m_982366996515444252m_-2523512652927639052m_4899888765695353=
+017m_-7419589490031885041m_2716712096675209163m_7044150592635301590mcnFollo=
+wBlockInner" valign=3D"top" align=3D"center">
+                <table class=3D"m_-4349348173605327621m_2485019642964066964=
+m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-741958949=
+0031885041m_2716712096675209163m_7044150592635301590mcnFollowContentContain=
+er" style=3D"min-width:100%;border-collapse:collapse" width=3D"100%" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody><tr>
+        <td style=3D"padding-left:9px;padding-right:9px" align=3D"center">
+            <table style=3D"min-width:100%;border-collapse:collapse" class=
+=3D"m_-4349348173605327621m_2485019642964066964m_982366996515444252m_-25235=
+12652927639052m_4899888765695353017m_-7419589490031885041m_2716712096675209=
+163m_7044150592635301590mcnFollowContent" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0">
+                <tbody><tr>
+                    <td style=3D"padding-top:9px;padding-right:9px;padding-=
+left:9px" valign=3D"top" align=3D"center">
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" align=3D"center" style=3D"border-collapse:collapse">
+                            <tbody><tr>
+                                <td valign=3D"top" align=3D"center">
+                                   =20
+
+                                       =20
+
+
+                                            <table style=3D"display:inline;=
+border-collapse:collapse" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+align=3D"left">
+                                                <tbody><tr>
+                                                    <td style=3D"padding-ri=
+ght:10px;padding-bottom:9px" class=3D"m_-4349348173605327621m_2485019642964=
+066964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-741=
+9589490031885041m_2716712096675209163m_7044150592635301590mcnFollowContentI=
+temContainer" valign=3D"top">
+                                                        <table class=3D"m_-=
+4349348173605327621m_2485019642964066964m_982366996515444252m_-252351265292=
+7639052m_4899888765695353017m_-7419589490031885041m_2716712096675209163m_70=
+44150592635301590mcnFollowContentItem" width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" style=3D"border-collapse:collapse">
+                                                            <tbody><tr>
+                                                                <td style=
+=3D"padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:9px"=
+ valign=3D"middle" align=3D"left">
+                                                                    <table =
+width=3D"" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left" =
+style=3D"border-collapse:collapse">
+                                                                        <tb=
+ody><tr>
+
+                                                                           =
+     <td class=3D"m_-4349348173605327621m_2485019642964066964m_982366996515=
+444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_27=
+16712096675209163m_7044150592635301590mcnFollowIconContent" width=3D"24" va=
+lign=3D"middle" align=3D"center">
+                                                                           =
+         <a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2=
+a435382cb1fa67cb708&amp;id=3D68cf639cbb&amp;e=3Dc8c8aef851" target=3D"_blan=
+k"><img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/color=
+-twitter-48.png" style=3D"display:block;border:0;height:auto;outline:none;t=
+ext-decoration:none" width=3D"24" height=3D"24"></a>
+                                                                           =
+     </td>
+
+
+                                                                        </t=
+r>
+                                                                    </tbody=
+></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                       =20
+
+                                       =20
+
+
+                                            <table style=3D"display:inline;=
+border-collapse:collapse" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+align=3D"left">
+                                                <tbody><tr>
+                                                    <td style=3D"padding-ri=
+ght:10px;padding-bottom:9px" class=3D"m_-4349348173605327621m_2485019642964=
+066964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-741=
+9589490031885041m_2716712096675209163m_7044150592635301590mcnFollowContentI=
+temContainer" valign=3D"top">
+                                                        <table class=3D"m_-=
+4349348173605327621m_2485019642964066964m_982366996515444252m_-252351265292=
+7639052m_4899888765695353017m_-7419589490031885041m_2716712096675209163m_70=
+44150592635301590mcnFollowContentItem" width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" style=3D"border-collapse:collapse">
+                                                            <tbody><tr>
+                                                                <td style=
+=3D"padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:9px"=
+ valign=3D"middle" align=3D"left">
+                                                                    <table =
+width=3D"" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left" =
+style=3D"border-collapse:collapse">
+                                                                        <tb=
+ody><tr>
+
+                                                                           =
+     <td class=3D"m_-4349348173605327621m_2485019642964066964m_982366996515=
+444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_27=
+16712096675209163m_7044150592635301590mcnFollowIconContent" width=3D"24" va=
+lign=3D"middle" align=3D"center">
+                                                                           =
+         <a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2=
+a435382cb1fa67cb708&amp;id=3D198832e6ef&amp;e=3Dc8c8aef851" target=3D"_blan=
+k"><img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/color=
+-facebook-48.png" style=3D"display:block;border:0;height:auto;outline:none;=
+text-decoration:none" width=3D"24" height=3D"24"></a>
+                                                                           =
+     </td>
+
+
+                                                                        </t=
+r>
+                                                                    </tbody=
+></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                       =20
+
+                                       =20
+
+
+                                            <table style=3D"display:inline;=
+border-collapse:collapse" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+align=3D"left">
+                                                <tbody><tr>
+                                                    <td style=3D"padding-ri=
+ght:0;padding-bottom:9px" class=3D"m_-4349348173605327621m_2485019642964066=
+964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-741958=
+9490031885041m_2716712096675209163m_7044150592635301590mcnFollowContentItem=
+Container" valign=3D"top">
+                                                        <table class=3D"m_-=
+4349348173605327621m_2485019642964066964m_982366996515444252m_-252351265292=
+7639052m_4899888765695353017m_-7419589490031885041m_2716712096675209163m_70=
+44150592635301590mcnFollowContentItem" width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" style=3D"border-collapse:collapse">
+                                                            <tbody><tr>
+                                                                <td style=
+=3D"padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:9px"=
+ valign=3D"middle" align=3D"left">
+                                                                    <table =
+width=3D"" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left" =
+style=3D"border-collapse:collapse">
+                                                                        <tb=
+ody><tr>
+
+                                                                           =
+     <td class=3D"m_-4349348173605327621m_2485019642964066964m_982366996515=
+444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_27=
+16712096675209163m_7044150592635301590mcnFollowIconContent" width=3D"24" va=
+lign=3D"middle" align=3D"center">
+                                                                           =
+         <a href=3D"https://jvwr.us2.list-manage.com/track/click?u=3Dde4fa2=
+a435382cb1fa67cb708&amp;id=3D2ca9695083&amp;e=3Dc8c8aef851" target=3D"_blan=
+k"><img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/color=
+-link-48.png" style=3D"display:block;border:0;height:auto;outline:none;text=
+-decoration:none" width=3D"24" height=3D"24"></a>
+                                                                           =
+     </td>
+
+
+                                                                        </t=
+r>
+                                                                    </tbody=
+></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                       =20
+
+                                   =20
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"m_-4349348173605327621m_2485019642964066964m_982366=
+996515444252m_-2523512652927639052m_4899888765695353017m_-74195894900318850=
+41m_2716712096675209163m_7044150592635301590mcnDividerBlock" style=3D"min-w=
+idth:100%;border-collapse:collapse;table-layout:fixed!important" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+    <tbody class=3D"m_-4349348173605327621m_2485019642964066964m_9823669965=
+15444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_=
+2716712096675209163m_7044150592635301590mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"m_-4349348173605327621m_2485019642964066964m_98236=
+6996515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885=
+041m_2716712096675209163m_7044150592635301590mcnDividerBlockInner" style=3D=
+"min-width:100%;padding:10px 18px 25px">
+                <table class=3D"m_-4349348173605327621m_2485019642964066964=
+m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-741958949=
+0031885041m_2716712096675209163m_7044150592635301590mcnDividerContent" styl=
+e=3D"min-width:100%;border-top:2px solid #eeeeee;border-collapse:collapse" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"m_-4349348173605327621m_2485019642964066964m_982366=
+996515444252m_-2523512652927639052m_4899888765695353017m_-74195894900318850=
+41m_2716712096675209163m_7044150592635301590mcnTextBlock" style=3D"min-widt=
+h:100%;border-collapse:collapse" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">
+    <tbody class=3D"m_-4349348173605327621m_2485019642964066964m_9823669965=
+15444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885041m_=
+2716712096675209163m_7044150592635301590mcnTextBlockOuter">
+        <tr>
+            <td class=3D"m_-4349348173605327621m_2485019642964066964m_98236=
+6996515444252m_-2523512652927639052m_4899888765695353017m_-7419589490031885=
+041m_2716712096675209163m_7044150592635301590mcnTextBlockInner" valign=3D"t=
+op">
+
+                <table style=3D"min-width:100%;border-collapse:collapse" cl=
+ass=3D"m_-4349348173605327621m_2485019642964066964m_982366996515444252m_-25=
+23512652927639052m_4899888765695353017m_-7419589490031885041m_2716712096675=
+209163m_7044150592635301590mcnTextContentContainer" align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                    <tbody><tr>
+
+                        <td class=3D"m_-4349348173605327621m_24850196429640=
+66964m_982366996515444252m_-2523512652927639052m_4899888765695353017m_-7419=
+589490031885041m_2716712096675209163m_7044150592635301590mcnTextContent" st=
+yle=3D"padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:1=
+8px;word-break:break-word;color:#656565;font-family:Helvetica;font-size:12p=
+x;line-height:150%;text-align:center" valign=3D"top">
+
+                            <em>Copyright =C2=A9 2019 Journal of Virtual Wo=
+rlds Research, All rights reserved.</em>
+<br><br></td></tr></tbody></table></td></tr></tbody></table></td>
+                            </tr>
+                        </tbody></table>
+                       =20
+                       =20
+                    </td>
+                </tr>
+            </tbody></table>
+        </center>
+    <img src=3D"https://jvwr.us2.list-manage.com/track/open.php?u=3Dde4fa2a=
+435382cb1fa67cb708&amp;id=3D903e195c3d&amp;e=3Dc8c8aef851" height=3D"1" wid=
+th=3D"1"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--000000000000c4b817058c20bec7--

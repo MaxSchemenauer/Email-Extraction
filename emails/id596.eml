@@ -1,0 +1,470 @@
+Received: from BYAPR08MB4984.namprd08.prod.outlook.com (2603:10b6:a03:12b::20)
+ by BYAPR08MB4981.namprd08.prod.outlook.com with HTTPS via
+ BYAPR07CA0079.NAMPRD07.PROD.OUTLOOK.COM; Mon, 1 Jul 2019 07:33:34 +0000
+Received: from MWHPR08CA0011.namprd08.prod.outlook.com (2603:10b6:301:5f::24)
+ by BYAPR08MB4984.namprd08.prod.outlook.com (2603:10b6:a03:6a::29) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2032.20; Mon, 1 Jul
+ 2019 07:33:30 +0000
+Received: from BN3NAM04FT040.eop-NAM04.prod.protection.outlook.com
+ (2a01:111:f400:7e4e::205) by MWHPR08CA0011.outlook.office365.com
+ (2603:10b6:301:5f::24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2032.20 via Frontend
+ Transport; Mon, 1 Jul 2019 07:33:30 +0000
+Authentication-Results: spf=pass (sender IP is 153.1.7.4)
+ smtp.mailfrom=uta.fi; CALPOLY.EDU; dkim=none (message not signed)
+ header.d=none;CALPOLY.EDU; dmarc=fail action=none
+ header.from=GMAIL.COM;compauth=fail reason=001
+Received-SPF: Pass (protection.outlook.com: domain of uta.fi designates
+ 153.1.7.4 as permitted sender) receiver=protection.outlook.com;
+ client-ip=153.1.7.4; helo=mxout1.uta.fi;
+Received: from mxout1.uta.fi (153.1.7.4) by
+ BN3NAM04FT040.mail.protection.outlook.com (10.152.93.24) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2032.15 via Frontend Transport; Mon, 1 Jul 2019 07:33:29 +0000
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3])
+	by mxout1.uta.fi (8.14.7/8.14.7) with ESMTP id x617XRZp024259
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <foaad@CALPOLY.EDU>; Mon, 1 Jul 2019 10:33:27 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1])
+	by mailscan1.uta.fi (8.14.7/8.14.7) with ESMTP id x617XQN1014654
+	for <foaad@CALPOLY.EDU>; Mon, 1 Jul 2019 10:33:26 +0300
+Received: from smtp1.uta.fi (153.1.7.2)
+ by mailscan1.uta.fi (F-Secure/fsigk_smtp/550/mailscan1.uta.fi);
+ Mon, 01 Jul 2019 10:33:26 +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from listserv.uta.fi (listserv.uta.fi [153.1.6.81])
+	by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id x617XQpZ005369
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <foaad@CALPOLY.EDU>; Mon, 1 Jul 2019 10:33:26 +0300
+Received: from listserv.uta.fi (localhost [127.0.0.1])
+	by listserv.uta.fi (8.14.7/8.14.7) with ESMTP id x6157JOe016559
+	for <foaad@CALPOLY.EDU>; Mon, 1 Jul 2019 10:33:26 +0300
+Received: by LISTSERV.UTA.FI (LISTSERV-TCP/IP release 16.5) with spool id
+          380586 for GAMESNETWORK@LISTSERV.UTA.FI; Mon, 1 Jul 2019 10:31:39
+          +0300
+Received: from mxout2.uta.fi (mxout2.uta.fi [153.1.7.20]) by listserv.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x617Vd9B003775 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT) for
+          <gamesnetwork@listserv.uta.fi>; Mon, 1 Jul 2019 10:31:39 +0300
+Received: from mailscan1.uta.fi (mailscan1.uta.fi [153.1.7.3]) by mxout2.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x617VdXo025681 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK) for
+          <GAMESNETWORK@uta.fi>; Mon, 1 Jul 2019 10:31:39 +0300
+Received: from mailscan1.uta.fi (localhost [127.0.0.1]) by mailscan1.uta.fi
+          (8.14.7/8.14.7) with ESMTP id x617VcpB012371 for
+          <GAMESNETWORK@uta.fi>; Mon, 1 Jul 2019 10:31:38 +0300
+Received: from smtp1.uta.fi (153.1.7.2) by mailscan1.uta.fi
+          (F-Secure/fsigk_smtp/550/mailscan1.uta.fi); Mon, 01 Jul 2019 10:31:38
+          +0300 (EEST)
+X-Virus-Status: clean(F-Secure/fsigk_smtp/550/mailscan1.uta.fi)
+Received: from mail-ot1-f46.google.com (mail-ot1-f46.google.com
+          [209.85.210.46]) by smtp1.uta.fi (8.14.7/8.14.7) with ESMTP id
+          x617VaMT002106 (version=TLSv1/SSLv3
+          cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT) for
+          <GAMESNETWORK@uta.fi>; Mon, 1 Jul 2019 10:31:37 +0300
+Received: by mail-ot1-f46.google.com with SMTP id o101so12159600ota.8 for
+          <GAMESNETWORK@uta.fi>; Mon, 01 Jul 2019 00:31:37 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+                         s=20161025;
+                         h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+                         bh=8pTqtmyupOGinB0mwjOCiNR86r2PERdQPBXQj4vmDkA=;
+                         b=htWRSMymubrePrpAl89QfEZFxq4Ot1QZIC6Txs+rAl9CIl8Y3sYJGjo8BLHQ8ykUi9
+                         agQ6VuiVO1sIjdjVsjDxAYLnHl2D8vnREXyMxTuGwjGi77TeA4jZcFtcHeUU9Z/4dPrw
+                         Rwd4M6A0rEhNM4K1yOBkK2LkyLDxCmTKjAXZqw87Jz5uHgdkSh1TgnFmSISQBs2qc2sX
+                         zfRwtTpnUL1iuqzpMkYv63+LHbVmN50r1zQZmioj4vTNAEZITiDkuKB9FW3KZm4xPwph
+                         YQAEXbGZ75P8mO6RfAd5fC0aOfrdOar/sGdmSLHy3RHbuZjpfD/pZOYCICp9vWMZvwR9
+                         LHFQ==
+X-Gm-Message-State: APjAAAVsmFygJfl+jC7LV6cg2tDXrDC0Z2dgTMSW5IjouFVCZl+ur3Fa
+                    /u95AGl72ZA4xj6D8BuoZPeWQRBvc29g0zEnjicsZbbrpcU=
+X-Google-Smtp-Source: APXvYqz/il/vS19uUrV8l8fezftN8LtCJwQAd2mqgOJydLFKutx57OjL6j4exakSLePYXf+GDVyjb9obnbmjpekKUu4=
+X-Received: by 2002:a9d:4b8d:: with SMTP id k13mr2155267otf.61.1561966295564;
+            Mon, 01 Jul 2019 00:31:35 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="00000000000032c724058c999ef6"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.6.2 (smtp1.uta.fi [153.1.7.2]); Mon, 01 Jul 2019 10:33:26 +0300 (EEST)
+X-Spam-Level: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+X-Spam-Report: AWL,BAYES_00,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,L_BDY_POLITE,L_BDY_TRGTBLNK,L_GOOGLE_APPS_MSG,L_HDR_MIMEB_HEX,MAILING_LIST_MULTI,MIME_QP_LONG_LINE,USER_IN_WHITELIST
+X-Spam-Status: NO ; -1021
+X-Scanned-By: MIMEDefang 2.84 on 153.1.7.3
+Message-ID: <CAMdFa6vW3J6QX5b58Y8LkA5Pe2CuASZrOj_rLwpa-Z4oZeUbPw@mail.gmail.com>
+Date: Mon, 1 Jul 2019 17:31:26 +1000
+Reply-To: Games Research Network <GAMESNETWORK@uta.fi>
+Sender: Games Research Network <GAMESNETWORK@uta.fi>
+From: Mahli-Ann Butt <mahli.ann.butt@GMAIL.COM>
+Subject: [GAMESNETWORK] Press Start Journal: Open CfP July 2019
+Comments: To: Gamesnetwork <gamesnetwork@uta.fi>
+To: Gamesnetwork <gamesnetwork@uta.fi>
+Precedence: list
+List-Help: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>,
+           <mailto:LISTSERV@LISTSERV.UTA.FI?body=INFO%20GAMESNETWORK>
+List-Unsubscribe: <mailto:GAMESNETWORK-unsubscribe-request@LISTSERV.UTA.FI>
+List-Subscribe: <mailto:GAMESNETWORK-subscribe-request@LISTSERV.UTA.FI>
+List-Owner: <mailto:GAMESNETWORK-request@LISTSERV.UTA.FI>
+List-Archive: <https://listserv.uta.fi/cgi-bin/wa?LIST=GAMESNETWORK>
+Return-Path: owner-gamesnetwork*foaad**CALPOLY*-EDU@uta.fi
+X-MS-Exchange-Organization-ExpirationStartTime: 01 Jul 2019 07:33:29.7935
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ c33a1b4e-f721-40d6-00cb-08d6fdf669c7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1b0d02db-fc9e-4495-9537-1d379cca2ae7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:153.1.7.4;IPV:NLI;CTRY:FI;EFV:NLI;SFV:NSPM;SFS:(4636009)(3000300001)(189003)(199004)(7192003)(176002)(73392003)(336012)(606006)(55176004)(55446002)(76482006)(53386004)(42882007)(5660300002)(75640400001)(59536001)(7636002)(95326003)(347745004)(106002)(42186006)(246002)(40036005)(6306002)(43066004)(16003)(6862004)(146002)(966005)(236005)(413944005)(6392003)(7846003)(33964004)(476003)(4006050)(126002)(1096003)(66346011)(26005)(356004)(498394004)(7066003)(71190400001)(6666004)(15974865002)(21615005)(82202003)(61266001)(8576002)(8676002)(1617600016)(16799955002)(7596002)(305945005)(14444005)(16586007)(486006);DIR:INB;SFP:;SCL:1;SRVR:BYAPR08MB4984;H:mxout1.uta.fi;FPR:;SPF:Pass;LANG:en;PTR:mxout1.uta.fi;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ BN3NAM04FT040.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: c33a1b4e-f721-40d6-00cb-08d6fdf669c7
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600148)(711020)(4605104)(71702078);SRVR:BYAPR08MB4984;
+X-MS-TrafficTypeDiagnostic: BYAPR08MB4984:
+X-MS-Exchange-PUrlCount: 11
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-MS-Exchange-Organization-SCL: 1
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 Jul 2019 07:33:29.2266
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: c33a1b4e-f721-40d6-00cb-08d6fdf669c7
+X-MS-Exchange-CrossTenant-Id: 1b0d02db-fc9e-4495-9537-1d379cca2ae7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR08MB4984
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.2050792
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2032.008
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;ex:0;auth:0;dest:C;OFR:CustomRules;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?RXBQMlFMUU9IOFdQb25VMnJETVcyZHQzYUh3RnpyMGtJWXdGOU02Rm83MlQ5?=
+ =?utf-8?B?SWkxUTdCUVd1SERUa2JicXNHUjhPYWMzTEtKZ0diT25xalhGd3FMMUtzMmNP?=
+ =?utf-8?B?a3JZYXFZTkJpTjBpelZyaWJ3ajlTcHBCODRhdzBEOVZXVE5VcVZCRG5RVGlR?=
+ =?utf-8?B?My9HbEpieTdyZGpjTnJQcnpjZk5qS2JhakYrc3RkV2QrSmc4MGNsclY5UmMr?=
+ =?utf-8?B?eTd0emR1RDhja240b3EreTllb05KQXdQMDJPZklvNjRodExCajJFeWpGRndx?=
+ =?utf-8?B?M2R5R1VTUDNta1dVUkJLaldHNVgvT0djVmhPMnhFRGRzZUxNaVFNZkFBcHNl?=
+ =?utf-8?B?V1Ria3BhMS96NXlleHE2RmF5QVpmLzgrVTRkbEk4K3d3REZYY1BxbVJTREQv?=
+ =?utf-8?B?b1hlVnR5aHVpRzN2NVllM1kydThTc1JTQlpiaE4xd0E1S1MyUHdvallQaHg2?=
+ =?utf-8?B?VkZ6MXNIaUNiSDNURlE4bmpFTFNIQWZSOHdLN00rNFpoV2lrWko3WVZOeUsr?=
+ =?utf-8?B?UjdOT0o1alVWTW9lVXdSdTVrNW9GR1JWM3JPRHhXNDdUbzFybVpMTFg3V1pK?=
+ =?utf-8?B?aHY5RTVrNmw1UmV1WDBpRHdkYXJhNllRdnh2bjVKTFRKN0ROSm4xZVRMbVdM?=
+ =?utf-8?B?QVhRTG5BWGRKMXJmUTRkNWVJSjlYVXJHTEszdnM4NzZobkxSbTJJRGs0aWY2?=
+ =?utf-8?B?UTMvcEt4N2Rubk43bHQzUG9OQStHbHJCTmJKS2JZVDV3YTZUbWV1UVRpMnNE?=
+ =?utf-8?B?T1V5ZFF6V0FVSFNwNk1Edy8rQ0w0ME1Wb29zc0JaL1duR1dFK1pQaUVubXor?=
+ =?utf-8?B?N1E1MEdpZFV6OWdsb0JOSmhMZUdWVitGa0pFNDliZFFvbXhJS3kvbUNCVzFM?=
+ =?utf-8?B?NGJUYmJ6RUZQM1BHa2FBS0tDQ0dia0JFVndvMUJXOU9maDl2b3V0MXhUQXF2?=
+ =?utf-8?B?bXEvbG42bXdPVDdWVS81MHhXNm1sK2RZa2oyZWtFemNkUU1SSzNBNGN3TGp5?=
+ =?utf-8?B?YnpqS09mVzRJeXdkaDRsN1I3eWNpZnVhRmQ0dldSK1ZIZ2M5V3FtbFlqUU1M?=
+ =?utf-8?B?TGs5cDB3VUkySFFvdk5kTEZuMVNiT1BrdzF5bCtvZjFSbnhIQjlaL0RtclVp?=
+ =?utf-8?B?MnVKU0pTWjFjQ3VOVTIvdlpVUDlkcnBVSFNic2JWcWJocVV1TFUya2pKaGMr?=
+ =?utf-8?B?Y0wwZ3ozM1RlU05wU25tVS80V2VpRExUZDhnTitaQ0FNdDBNenQ2UG9GNDF3?=
+ =?utf-8?B?WStTRk5OV0x0TTE2T056VC9ycTR6ZDVyRUhRdDJ1cHVnUG5seDRtQXFDM0FD?=
+ =?utf-8?B?UDlySHJIallMbG5qR1h0ODBGRTQ1K2M2LzZDRXlLV3BzU2tZNGRPejB0RUpN?=
+ =?utf-8?B?NEgwU3VUR0ppVFJnNElGdGt0NTlhanRpaWN1OGVzckxuRUZHL2dJU3NYbkx2?=
+ =?utf-8?B?a1l5bXRrNEphTmxvcG5xN1hmWHFIK0U3ZEVFRElyVno3Z0JVRGlBSnN6ZERF?=
+ =?utf-8?B?M2JhYVJwOG1uWXpUeTg2YzNISXJYOUJwTjRHR3pOd1NrQURETjQ5NDhNQlk4?=
+ =?utf-8?B?bG42QTV5cW1jdU9qQzFYWUQvVHoyd0hzdlRCcEpndWVYb0FPSDR5SzlmSkVG?=
+ =?utf-8?Q?D0euerUZQza5wIN0nQD7ArFKGZezv0fnm+pz+/9/tsy0=3D?=
+MIME-Version: 1.0
+
+--00000000000032c724058c999ef6
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear colleagues,
+
+The Editorial Board of *Press Start Journal* invites submissions to our
+upcoming issue.
+https://press-start.gla.ac.uk/index.php/press-start/announcement/view/21
+
+*Press Start* is an open peer-reviewed game studies journal interested in
+the work produced by current students and recent graduates working in
+research related to this broad field.
+
+For our next issue we will be continuing our rolling (no deadlines) open
+call for submissions for full papers. Research articles are expected to be
+between 3000 and 5000 words in length, but there are opportunities for
+submitting shorter or longer pieces of work (up to 8000 words including
+references=E2=80=94note that submissions that are over 8000 words will not =
+be
+considered).
+
+In addition to rolling submissions, we will be initiating a streamlined
+submission process. The process will include more feedback and open
+communication between editors, reviewers, and authors. This includes
+feedback on the abstracts, as they are an important part of academic
+writing that is often overlooked.
+
+For this issue, *Press Start* will accept abstract proposals (250-500
+words) by July 19, 2019. Abstracts will be given feedback from the
+editorial board by August 2. Revised abstracts are due by August 16.
+
+Accepted abstracts will be announced August 30, with full papers (3000-5000
+words, 8000 max.) due for peer-review by November 1. Those who did not go
+through the abstract feedback process are still welcome to submit full
+papers to be peer-reviewed for the next issue.
+
+Peer-review is due by November 22, revisions are due by December 13. The
+second round of peer-review is due December 27. Publication of the issue is
+planned for January, 2020. Please note that these dates are estimates, but
+we will try our best to stick to this schedule.
+
+To recap:
+
+July 19th: 250-500 word abstracts due
+
+August 2nd: feedback sent out
+
+August 16th: revised abstracts due
+
+August 30th: accepted abstracts announced
+
+November 1st: full papers due (8000 word maximum)
+
+November 22nd: reviews sent out to authors
+
+December 13th: revisions due (followed by a second round if necessary)
+
+January 2020: planned publication
+
+We hope that the more structured approach will streamline the journey
+between submission and publication, foster more mentorship, and ensure that
+students=E2=80=99 work will be published in a timely manner and in its best
+possible form.
+
+Full details of the editorial process and our guidelines can be found on
+the journal website:
+press-start.gla.ac.uk/index.php/press-start/about/submissions
+
+If you have any questions, please post it on the Facebook group
+(www.facebook.com/groups/
+PressStartJournal/ <http://www.facebook.com/groups/PressStartJournal/>),
+where a member of our friendly and knowledgeable Editorial Board will get
+back to you, or email the editor-in-chief directly (
+editor.press.start@gmail.com <eic.press.start@gmail.com>).
+
+As a student-run journal with an international editorial board, we
+encourage non-native English speakers to submit their work. The Editorial
+Board will, to the best of our capacity, help those submitting to meet the
+editorial guidelines for the journal and a good standard of academic
+English. For translations of our open call for papers:
+https://tinyurl.com/yblfxkk4
+
+Kind regards,
+
+The Editorial Board of Press Start.
+
+
+--=20
+Best wishes,
+Mahli-Ann Butt
+sydney.academia.edu/MahliAnnButt
+Editor-in-Chief, *Press Start Journal
+<https://press-start.gla.ac.uk/index.php/press-start>*
+Diversity Officer, DiGRA <http://www.digra.org/>
+Doctoral Candidate, MECO
+<https://sydney.edu.au/arts/staff/profiles/mahli-ann.butt.655.php>, Univers=
+ity
+of Sydney
+
+--
+Gamesnetwork, discussion list of Digital Games Research Association, www.digra.org
+Note: to unsubscribe, send "UNSUBSCRIBE GAMESNETWORK" to LISTSERV@UTA.FI from
+your subscribed email account. Web interface to subscribe and manage your subscription:
+https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&A=3D1 .
+The list archive is available online at: https://listserv.uta.fi/archives/gamesnetwork.html
+
+--00000000000032c724058c999ef6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div><p style=3D"box-sizing:border-box;line-height:25px;marg=
+in:0px 0px 20px;color:rgba(0,0,0,0.87);font-family:&quot;Noto Sans&quot;,-a=
+pple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubun=
+tu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif;font-size:14px">Dear col=
+leagues,<br><br>The Editorial Board of&nbsp;<em style=3D"box-sizing:border-=
+box">Press Start Journal</em>&nbsp;invites submissions to our upcoming issu=
+e.<br><span style=3D"box-sizing:border-box"><a href=3D"https://press-start.=
+gla.ac.uk/index.php/press-start/announcement/view/21" style=3D"font-family:=
+Arial,Helvetica,sans-serif;font-size:small">https://press-start.gla.ac.uk/i=
+ndex.php/press-start/announcement/view/21</a><span style=3D"color:rgb(34,34=
+,34);font-family:Arial,Helvetica,sans-serif;font-size:small">&nbsp;&nbsp;</=
+span>&nbsp;<br><i><br>Press Start</i></span>&nbsp;is an open peer-reviewed =
+game studies journal interested in the work produced by&nbsp;<span style=3D=
+"box-sizing:border-box;font-weight:bolder">current students and recent grad=
+uates</span>&nbsp;working in research related to this broad field.</p><p st=
+yle=3D"box-sizing:border-box;line-height:25px;margin:20px 0px;color:rgba(0,=
+0,0,0.87);font-family:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFon=
+t,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica =
+Neue&quot;,sans-serif;font-size:14px">For our next issue we will be continu=
+ing our rolling (no deadlines) open call for submissions for full papers. R=
+esearch articles are expected to be between 3000 and 5000 words in length, =
+but there are opportunities for submitting shorter or longer pieces of work=
+ (up to 8000 words including references=E2=80=94note that submissions that =
+are over 8000 words will not be considered).</p><p style=3D"box-sizing:bord=
+er-box;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-family:=
+&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;=
+,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif;=
+font-size:14px">In addition to rolling submissions, we will be initiating a=
+ streamlined submission process. The process will include more feedback and=
+ open communication between editors, reviewers, and authors. This includes =
+feedback on the abstracts, as they are an important part of academic writin=
+g that is often overlooked.</p><p style=3D"box-sizing:border-box;line-heigh=
+t:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-family:&quot;Noto Sans&q=
+uot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-Sa=
+ns,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif;font-size:14px">F=
+or this issue,&nbsp;<em style=3D"box-sizing:border-box">Press Start</em>&nb=
+sp;will accept abstract proposals (250-500 words) by&nbsp;<span style=3D"bo=
+x-sizing:border-box;font-weight:bolder">July 19, 2019</span>. Abstracts wil=
+l be given feedback from the editorial board by&nbsp;<span style=3D"box-siz=
+ing:border-box;font-weight:bolder">August 2</span>. Revised abstracts are d=
+ue by&nbsp;<span style=3D"box-sizing:border-box;font-weight:bolder">August =
+16</span>.</p><p style=3D"box-sizing:border-box;line-height:25px;margin:20p=
+x 0px;color:rgba(0,0,0,0.87);font-family:&quot;Noto Sans&quot;,-apple-syste=
+m,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantare=
+ll,&quot;Helvetica Neue&quot;,sans-serif;font-size:14px">Accepted abstracts=
+ will be announced&nbsp;<span style=3D"box-sizing:border-box;font-weight:bo=
+lder">August 30</span>, with full papers (3000-5000 words, 8000 max.) due f=
+or peer-review by&nbsp;<span style=3D"box-sizing:border-box;font-weight:bol=
+der">November 1</span>. Those who did not go through the abstract feedback =
+process are still welcome to submit full papers to be peer-reviewed for the=
+ next issue.</p><p style=3D"box-sizing:border-box;line-height:25px;margin:2=
+0px 0px;color:rgba(0,0,0,0.87);font-family:&quot;Noto Sans&quot;,-apple-sys=
+tem,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Canta=
+rell,&quot;Helvetica Neue&quot;,sans-serif;font-size:14px">Peer-review is d=
+ue by&nbsp;<span style=3D"box-sizing:border-box;font-weight:bolder">Novembe=
+r 22</span>, revisions are due by&nbsp;<span style=3D"box-sizing:border-box=
+;font-weight:bolder">December 13</span>. The second round of peer-review is=
+ due&nbsp;<span style=3D"box-sizing:border-box;font-weight:bolder">December=
+ 27</span>. Publication of the issue is planned for&nbsp;<span style=3D"box=
+-sizing:border-box;font-weight:bolder">January, 2020</span>. Please note th=
+at these dates are estimates, but we will try our best to stick to this sch=
+edule.</p><p style=3D"box-sizing:border-box;line-height:25px;margin:20px 0p=
+x;color:rgba(0,0,0,0.87);font-family:&quot;Noto Sans&quot;,-apple-system,Bl=
+inkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&=
+quot;Helvetica Neue&quot;,sans-serif;font-size:14px"><span style=3D"box-siz=
+ing:border-box;font-weight:bolder">To recap:</span></p><p style=3D"box-sizi=
+ng:border-box;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-=
+family:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe U=
+I&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans=
+-serif;font-size:14px"><span style=3D"box-sizing:border-box;font-weight:bol=
+der">July 19th:</span>&nbsp;250-500 word abstracts due</p><p style=3D"box-s=
+izing:border-box;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87);fo=
+nt-family:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Sego=
+e UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,s=
+ans-serif;font-size:14px"><span style=3D"box-sizing:border-box;font-weight:=
+bolder">August 2nd:</span>&nbsp;feedback sent out</p><p style=3D"box-sizing=
+:border-box;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-fa=
+mily:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&=
+quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-s=
+erif;font-size:14px"><span style=3D"box-sizing:border-box;font-weight:bolde=
+r">August 16th:</span>&nbsp;revised abstracts due</p><p style=3D"box-sizing=
+:border-box;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-fa=
+mily:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&=
+quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-s=
+erif;font-size:14px"><span style=3D"box-sizing:border-box;font-weight:bolde=
+r">August 30th:</span>&nbsp;accepted abstracts announced</p><p style=3D"box=
+-sizing:border-box;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87);=
+font-family:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Se=
+goe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;=
+,sans-serif;font-size:14px"><span style=3D"box-sizing:border-box;font-weigh=
+t:bolder">November 1st:&nbsp;</span>full papers due (8000 word maximum)</p>=
+<p style=3D"box-sizing:border-box;line-height:25px;margin:20px 0px;color:rg=
+ba(0,0,0,0.87);font-family:&quot;Noto Sans&quot;,-apple-system,BlinkMacSyst=
+emFont,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helve=
+tica Neue&quot;,sans-serif;font-size:14px"><span style=3D"box-sizing:border=
+-box;font-weight:bolder">November 22nd:</span>&nbsp;reviews sent out to aut=
+hors</p><p style=3D"box-sizing:border-box;line-height:25px;margin:20px 0px;=
+color:rgba(0,0,0,0.87);font-family:&quot;Noto Sans&quot;,-apple-system,Blin=
+kMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&qu=
+ot;Helvetica Neue&quot;,sans-serif;font-size:14px"><span style=3D"box-sizin=
+g:border-box;font-weight:bolder">December 13th:&nbsp;</span>revisions due (=
+followed by a second round if necessary)</p><p style=3D"box-sizing:border-b=
+ox;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-family:&quo=
+t;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Rob=
+oto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif;font=
+-size:14px"><span style=3D"box-sizing:border-box;font-weight:bolder">Januar=
+y 2020:</span>&nbsp;planned publication&nbsp;</p><p style=3D"box-sizing:bor=
+der-box;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-family=
+:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot=
+;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif=
+;font-size:14px">We hope that the more structured approach will streamline =
+the journey between submission and publication, foster more mentorship, and=
+ ensure that students=E2=80=99 work will be published in a timely manner an=
+d in its best possible form.</p><p style=3D"box-sizing:border-box;line-heig=
+ht:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-family:&quot;Noto Sans&=
+quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-S=
+ans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif;font-size:14px">=
+Full details of the editorial process and our guidelines can be found on th=
+e journal website:&nbsp;<a href=3D"https://press-start.gla.ac.uk/index.php/=
+press-start/about/submissions" style=3D"box-sizing:border-box;background-co=
+lor:transparent;color:rgb(128,128,128)">press-start.gla.ac.uk/index.php/pre=
+ss-start/about/submissions</a></p><p style=3D"box-sizing:border-box;line-he=
+ight:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-family:&quot;Noto San=
+s&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen=
+-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif;font-size:14px=
+">If you have any questions, please post it on the Facebook group (<a href=
+=3D"http://www.facebook.com/groups/PressStartJournal/" style=3D"box-sizing:=
+border-box;background-color:transparent;color:rgb(128,128,128)">www.faceboo=
+k.com/groups/ PressStartJournal/</a>), where a member of our friendly and k=
+nowledgeable Editorial Board will get back to you, or email the editor-in-c=
+hief directly (<a href=3D"mailto:eic.press.start@gmail.com" style=3D"box-si=
+zing:border-box;background-color:transparent;color:rgb(128,128,128)">editor=
+.press.start@gmail.com</a>).</p><p style=3D"box-sizing:border-box;line-heig=
+ht:25px;margin:20px 0px;color:rgba(0,0,0,0.87);font-family:&quot;Noto Sans&=
+quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-S=
+ans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif;font-size:14px">=
+As a student-run journal with an international editorial board, we encourag=
+e non-native English speakers to submit their work. The Editorial Board wil=
+l, to the best of our capacity, help those submitting to meet the editorial=
+ guidelines for the journal and a good standard of academic English. For tr=
+anslations of our open call for papers:&nbsp;<a href=3D"https://tinyurl.com=
+/yblfxkk4" style=3D"box-sizing:border-box;background-color:transparent;colo=
+r:rgb(128,128,128)">https://tinyurl.com/yblfxkk4</a>&nbsp;</p><p style=3D"b=
+ox-sizing:border-box;line-height:25px;margin:20px 0px;color:rgba(0,0,0,0.87=
+);font-family:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;=
+Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quo=
+t;,sans-serif;font-size:14px">Kind regards,</p><p style=3D"box-sizing:borde=
+r-box;line-height:25px;margin:20px 0px 0px;color:rgba(0,0,0,0.87);font-fami=
+ly:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&qu=
+ot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-ser=
+if;font-size:14px">The Editorial Board of Press Start.</p><p style=3D"box-s=
+izing:border-box;line-height:25px;margin:20px 0px 0px;color:rgba(0,0,0,0.87=
+);font-family:&quot;Noto Sans&quot;,-apple-system,BlinkMacSystemFont,&quot;=
+Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quo=
+t;,sans-serif;font-size:14px"><br></p></div>-- <br><div dir=3D"ltr" class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr" style=3D"color:rgb(13=
+6,136,136)"><div dir=3D"ltr"><div dir=3D"ltr"><div><font face=3D"arial, hel=
+vetica, sans-serif">Best wishes,</font></div><div><font face=3D"arial, helv=
+etica, sans-serif">Mahli-Ann Butt<br></font><a href=3D"https://sydney.acade=
+mia.edu/MahliAnnButt" style=3D"color:rgb(17,85,204)" target=3D"_blank"><fon=
+t face=3D"arial, helvetica, sans-serif">sydney.academia.edu/MahliAnnButt</f=
+ont></a>&nbsp;&nbsp;<font face=3D"arial, helvetica, sans-serif"><br></font>=
+<span style=3D"font-family:arial,helvetica,sans-serif">Editor-in-Chief,</sp=
+an>&nbsp;<font face=3D"arial, helvetica, sans-serif"><i><a href=3D"https://=
+press-start.gla.ac.uk/index.php/press-start" style=3D"color:rgb(17,85,204)"=
+ target=3D"_blank">Press Start Journal</a></i></font></div><div><span style=
+=3D"font-family:arial,helvetica,sans-serif">Diversity Officer,&nbsp;</span>=
+<font face=3D"arial, helvetica, sans-serif"><a href=3D"http://www.digra.org=
+/" style=3D"color:rgb(17,85,204)" target=3D"_blank">DiGRA</a></font></div><=
+div><font face=3D"arial, helvetica, sans-serif">Doctoral Candidate,&nbsp;<a=
+ href=3D"https://sydney.edu.au/arts/staff/profiles/mahli-ann.butt.655.php" =
+style=3D"color:rgb(17,85,204)" target=3D"_blank">MECO</a>,&nbsp;</font><spa=
+n style=3D"font-family:arial,helvetica,sans-serif">University of Sydney</sp=
+an></div></div></div></div></div></div></div></div></div></div>
+--
+Gamesnetwork, discussion list of Digital Games Research Association, <a hre=
+f=3D"http://www.digra.org" target=3D"_blank">www.digra.org</a>
+Note: to unsubscribe, send &quot;UNSUBSCRIBE GAMESNETWORK&quot; to <a href=
+=3D"mailto:LISTSERV@UTA.FI">LISTSERV@UTA.FI</a> from
+your subscribed email account. Web interface to subscribe and manage your s=
+ubscription:
+<a href=3D"https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNETWORK&amp;A=
+=3D1" target=3D"_blank">https://listserv.uta.fi/cgi-bin/wa?SUBED1=3DGAMESNE=
+TWORK&amp;A=3D1</a> .
+The list archive is available online at: <a href=3D"https://listserv.uta.fi=
+/archives/gamesnetwork.html" target=3D"_blank">https://listserv.uta.fi/arch=
+ives/gamesnetwork.html</a>
+
+--00000000000032c724058c999ef6--
